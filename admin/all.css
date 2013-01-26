@@ -1,0 +1,15 @@
+@charset "utf-8";
+.all {
+}
+.menu {
+	height:500px;
+	width: 30%;
+	background:#03F;
+	position:absolute;
+}
+.conten{
+	height:800px;
+	width:70%;
+	background:#F93;
+	margin-left:30%;
+}
