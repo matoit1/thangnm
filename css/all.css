@@ -1,4 +1,4 @@
-﻿/* CSS Document */
+/* CSS Document */
 *{ margin:0; padding:0;}
 #nen{ background:#E1E1FF;
 }
@@ -23,14 +23,26 @@ a:visited{color:brown; text-decoration:none}
 a:hover{color:black; text-decoration:underline}
 a:active{color:red; font-weight:bold}
 */
-.clock{
-	margin:130px 5px 5px 5px;
+.like{
+	border-radius: 10px;
+	margin:120px 5px 5px 5px;
 	width:90px;
-	height:350px;
+	height:200px;
 	position: fixed;
 	z-index: 2;
-	border:1px solid #000000;
+	background:#808080 ;
 }
+
+.lienhe{
+	border-radius: 10px;
+	margin:330px 5px 5px 5px;
+	width:90px;
+	height:90px;
+	position: fixed;
+	z-index: 2;
+	background:#808080 ;
+}
+
 #khung{
 	z-index: 11;
 	margin:0px auto;
@@ -54,13 +66,6 @@ a:active{color:red; font-weight:bold}
 	padding:1px 0px;
 	position: fixed;
 	z-index:1000;
-}
-
-demo{
-	list-style:none;
-	float:right;
-	color:#000000;
-	font-size:18px;
 }
 
 #menu ul{
@@ -348,3 +353,65 @@ tr,td{border:1px black solid;}
 }
 
 .clr{clear:both;}
+
+* {
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Popup
+a#show-popup {
+	margin:20px 0 0 20px;
+	float:left;
+	text-decoration:none;
+}
+*/
+div#popup-bg {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:99;
+	background:#000;
+	display:none;
+}
+
+div#popup {
+	width:520px;
+	height:500px;
+	border:solid 4px #000000;
+	z-index:999;
+	display:none;
+	background:#FFF;
+}
+
+div#popup-header {
+	position:relative;
+	float:left;
+	width:520px;
+	line-height:30px;
+	font-size:20px;
+	background:#000;
+	color:#FF0;
+	cursor:move;
+}
+
+span#popup-close {
+	cursor:pointer;
+	color:#FFF;
+	font-size:12px;
+	position:absolute;
+	top:-2px;
+	right:10px;
+	z-index:9999;
+}
+
+div#popup-content {
+	margin:20px 20px 20px 20px;
+	width:520px;
+	padding:5px;
+}
