@@ -362,12 +362,12 @@ tr,td{border:1px black solid;}
 
 
 
-/* Popup*/
+/* Popup
 a#show-popup {
 	margin:20px 0 0 20px;
 	float:left;
 	text-decoration:none;
-}
+}*/
 
 div#popup-bg {
 	position:absolute;
