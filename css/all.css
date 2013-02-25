@@ -5,16 +5,16 @@
 
 a {
   color : blue;
-    text-decoration : none;  /* thêm màu cho liên kết */
+    text-decoration : none;  /* thĂªm mĂ u cho liĂªn káº¿t */
 }
 
 a:hover, a:focus, a:active {
-  color : red; /* xác định màu liên kết khi di chuột qua (hover), khi đưa chuột vào (focus), và khi đã bấm chuột (active) */
-  text-decoration : underline; /* làm cho mất dòng gách chân khi di chuột qua */
+  color : red; /* xĂ¡c Ä‘á»‹nh mĂ u liĂªn káº¿t khi di chuá»™t qua (hover), khi Ä‘Æ°a chuá»™t vĂ o (focus), vĂ  khi Ä‘Ă£ báº¥m chuá»™t (active) */
+  text-decoration : underline; /* lĂ m cho máº¥t dĂ²ng gĂ¡ch chĂ¢n khi di chuá»™t qua */
 }
 
 a:focus, a:active {
-  color : blue; /* xác định lại màu cho liên kết focus và active */
+  color : blue; /* xĂ¡c Ä‘á»‹nh láº¡i mĂ u cho liĂªn káº¿t focus vĂ  active */
   text-decoration : underline;
 }
 /*
@@ -23,28 +23,34 @@ a:visited{color:brown; text-decoration:none}
 a:hover{color:black; text-decoration:underline}
 a:active{color:red; font-weight:bold}
 */
+
+.visit{
+	margin:120px 5px 5px 0px;
+	width:90px;
+	height:100px;
+	position: fixed;
+}
+
 .like{
 	border-radius: 10px;
-	margin:120px 5px 5px 5px;
+	margin:190px 5px 5px 10px;
 	width:90px;
 	height:200px;
 	position: fixed;
-	z-index: 2;
 	background:#808080 ;
 }
 
 .lienhe{
 	border-radius: 10px;
-	margin:330px 5px 5px 5px;
+	margin:400px 5px 5px 10px;
 	width:90px;
-	height:90px;
+	height:80px;
 	position: fixed;
-	z-index: 2;
 	background:#808080 ;
 }
 
 #khung{
-	z-index: 11;
+	z-index: inherit;
 	margin:0px auto;
 	width:1024px;
 	border:2px solid #000000;
@@ -143,7 +149,7 @@ a:active{color:red; font-weight:bold}
 	width:280px;
 	background:#FFFFFF;
 	border:1px solid #000000;
-	min-height:965px;
+	min-height:1050px;
 	float:right;
 }
 
