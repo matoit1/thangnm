@@ -1,0 +1,6 @@
+.divStepVNGameFrame {position:relative;}
+.divStepVNGameFrame .bird {position:absolute;height:40px;width:40px;z-index:2;}
+.divStepVNGameFrame .cloud {position:absolute;height:24px;width:24px;z-index:1;}
+.divStepVNGameFrame .hole {width:200px;height:200px;position:absolute;background:url(hole.png) no-repeat center center;display:none;}
+.divStepVNGameFrame .point {position:absolute;font-size:50px;font-weight:bold;font-family:Arial;}
+.divStepVNGameFrame .result {position:absolute;font-size:15px;font-weight:bold;font-family:Tahoma;}
