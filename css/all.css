@@ -23,6 +23,12 @@ a:visited{color:brown; text-decoration:none}
 a:hover{color:black; text-decoration:underline}
 a:active{color:red; font-weight:bold}
 */
+.vd1{
+  margin:120px 5px 5px 0px;
+	width:90px;
+	height:270px;
+	position: fixed;
+}
 
 .visit{
 	margin:120px 5px 5px 0px;
