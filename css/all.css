@@ -23,7 +23,7 @@ a:visited{color:brown; text-decoration:none}
 a:hover{color:black; text-decoration:underline}
 a:active{color:red; font-weight:bold}
 */
-.vd1{
+.test{
   margin:120px 5px 5px 0px;
 	width:90px;
 	height:270px;
@@ -31,27 +31,21 @@ a:active{color:red; font-weight:bold}
 }
 
 .visit{
-	margin:120px 5px 5px 0px;
 	width:90px;
 	height:100px;
-	position: fixed;
 }
 
 .like{
 	border-radius: 10px;
-	margin:190px 5px 5px 10px;
 	width:90px;
 	height:200px;
-	position: fixed;
 	background:#808080 ;
 }
 
 .lienhe{
 	border-radius: 10px;
-	margin:400px 5px 5px 10px;
 	width:90px;
 	height:80px;
-	position: fixed;
 	background:#808080 ;
 }
 
