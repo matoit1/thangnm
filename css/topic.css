@@ -316,7 +316,7 @@ a:active{color:red; font-weight:bold}
 
 .tronghoptin{
 	width:720px;
-	height:240px;
+	height:500px;
 }
 
 .anhhoptin{
@@ -431,5 +431,5 @@ div#popup-content {
   SCROLLING: no;
   NAME: iframe_left;
 	width: 280px;
-  height: 1050px
+  height: 1050px;
 }
