@@ -421,3 +421,12 @@ div#popup-content {
 	width:520px;
 	padding:5px;
 }
+
+
+#conten-left
+{ ALIGN: LEFT;
+  SCROLLING: no;
+  NAME: iframe_left;
+	width: 280px;
+  height: 1050px
+}
