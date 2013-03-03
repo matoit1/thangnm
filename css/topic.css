@@ -27,6 +27,7 @@ a:active{color:red; font-weight:bold}
 	width:150px;
 	height:800px;
 	position: fixed;
+  padding:0px 0px;
 }
 
 .visit{
