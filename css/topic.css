@@ -24,15 +24,15 @@ a:hover{color:black; text-decoration:underline}
 a:active{color:red; font-weight:bold}
 */
 .test{
-  margin:120px 5px 5px 0px;
 	width:150px;
-	height:410px;
+	height:800px;
 	position: fixed;
 }
 
 .visit{
 	width:90px;
 	height:100px;
+  border:0px;
 }
 
 .like{
