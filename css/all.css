@@ -51,8 +51,7 @@ a:active{color:red; font-weight:bold}
 
 .ngancach{
     border-radius: 3px;
-    border:2px solid #FF9900; 
-    SPACING:3px;
+    border:2px solid ##C0C0C0;
 }
 
 #khung{
