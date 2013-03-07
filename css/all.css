@@ -50,8 +50,8 @@ a:active{color:red; font-weight:bold}
 }
 
 .ngancach{
-    border-radius: 10px;
-    border:2px solid #000000;
+    border-radius: 3px;
+    border:2px solid #FF9900;
 }
 
 #khung{
