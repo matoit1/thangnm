@@ -34,15 +34,15 @@ a:active{color:red; font-weight:bold}
 .like{
 	border-radius: 10px;
 	margin:170px 5px 5px 10px;
-	width:110px;
-	height:200px;
+	width:90px;
+	height:270px;
 	position: fixed;
 	background:#808080 ;
 }
 
 .lienhe{
 	border-radius: 10px;
-	margin:400px 5px 5px 10px;
+	margin:450px 5px 5px 10px;
 	width:90px;
 	height:80px;
 	position: fixed;
