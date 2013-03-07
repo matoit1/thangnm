@@ -24,6 +24,13 @@ a:hover{color:black; text-decoration:underline}
 a:active{color:red; font-weight:bold}
 */
 
+.test{
+        width:150px;
+        height:800px;
+        position: fixed;
+  padding:0px 0px;
+}
+
 .visit{
 	margin:100px 5px 5px 0px;
 	width:90px;
