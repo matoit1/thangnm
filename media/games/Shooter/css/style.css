@@ -1,0 +1,14 @@
+body
+{
+	background-image:url('http://a.imageshack.us/img826/176/h15hs201224.jpg');
+	text-align:		center;
+	padding:		20px;
+	color:			#575757;
+	font:			30px Arial,Helvetica,sans-serif;
+}
+
+canvas
+{
+	border:			1px solid black;
+	cursor:			none;
+}
