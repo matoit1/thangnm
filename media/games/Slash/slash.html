@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		<title>Slash!</title>		
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="css/design-slash.css" rel="stylesheet" type="text/css" media="screen, handheld, tv, projection" />        
+		<link rel="shortcut icon" href="img\game\bomb.png"/>
+		<!-- jQuery and game -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="js/bundle-cmp.js"></script>   		
+	</head>
+	<body background="http://a.imageshack.us/img194/3008/84050714.jpg">		
+		<noscript>
+			This game requires Javascript. Please enable Javascript in your browser settings to play.
+		</noscript>	
+		<center>
+		<div>
+			<img src="http://a.imageshack.us/img248/4001/fruitkiller.png"/>
+			<object width="1" height="1"><param name="movie" value="http://www.nhaccuatui.com/m/7JfDc53Acd" /><param name="autoplay" value="true"/><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="flashvars" value="&autostart=true" /><embed src="http://www.nhaccuatui.com/m/7JfDc53Acd" quality="high" wmode="transparent" type="application/x-shockwave-flash" flashvars="&autostart=true" width="1" height="1"></embed></object>
+		</div>
+		<br/><br/><br/>
+		<div id="content">									
+			<section>				
+				<div id="initialGameContainer">
+					<div id="gameContainer">
+					
+						<canvas id="fruitDemo" width="500" height="400">
+							<!-- Fallback content -->
+							<div id="nocanvas">
+								Your web browser doesn't handle canvas or Javascript isn't enabled. 								
+							</div>
+						</canvas>					
+					</div>
+				</div>					
+				<a href="#" id="highlight" title="Turn off the lights" onclick="highlight('fruitDemo')"><img src="img/web/light.png" alt="Light off" /></a>
+				<br/>
+				<!--<div id="log"></div>-->
+				
+				<script type="text/javascript">		
+					try{
+						fruitDemo();
+					}catch(e){
+						trace('Error during game startup : '+e);
+					}
+				</script>
+			</section>		
+		</div>
+		</center>
+		<br/><br/><br/>
+		<div>
+			<center>
+				<a href="Assmin Shooter.html" target="_blank">Assmin Shooter 2D </a> || <a href="marioSE.html" target="_blank">Super Mario SE: Defeat Assmin </a> || <a href="game.html" target="_blank">Head Score</a> || <a href="angryassmin.html" target="_blank">Angry Assmin</a> || <a href="http://www.facebook.com/Rainy.vn" target="_blank">My FaceBook</a><br/><br/>  
+				<br/><br/><br/>
+				<!-- hitwebcounter Code START -->
+				<a href="http://www.hitwebcounter.com/" target="_blank">
+				<img src="http://hitwebcounter.com/counter/counter.php?page=4663553&style=0001&nbdigits=5&type=page&initCount=0" title="" Alt=""   border="0" >
+				</a>
+			</center>	
+		</div>			
+	</body>
+</html>
