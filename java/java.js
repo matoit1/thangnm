@@ -37,3 +37,5 @@ $(document).ready(function(){
 		return false;
 	});
 });
+
+function displaymessage(){alert("Error 991992:  Chức năng này đang được xây dựng. Mời bạn quay lại sau!");}
