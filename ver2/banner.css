@@ -1,0 +1,21 @@
+﻿/* CSS Document */
+.logo
+{
+	display:block;
+	float:left;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+}
+.logo img
+{
+	display:block;
+	float:left;
+	overflow:hidden;
+	margin:-9px -9px;
+	padding:auto 0px;
+}
+.advright {display:block;clear:right;overflow:hidden;margin:0 10px 0px 0px;padding:0;width:200px;}
+.advright .title {display:block;clear:left;overflow:hidden;margin:0;padding:4px 0;background:url(img/bg_tit_advright.jpg) repeat-x left center;}
+.advright .title span {background:#FFF;color:#ccc;font-size:12px;font-weight:bold;padding:10px;float:left;}
+.advright img {max-width:206px;margin:4px auto;padding:0}
