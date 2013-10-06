@@ -40,6 +40,15 @@ namespace ThangNMjsc.Admin.Edit {
         protected global::System.Web.UI.WebControls.Panel panelEdit;
         
         /// <summary>
+        /// lblPay_ID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPay_ID;
+        
+        /// <summary>
         /// txtPay_ID control.
         /// </summary>
         /// <remarks>

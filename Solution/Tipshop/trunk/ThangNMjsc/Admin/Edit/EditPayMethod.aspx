@@ -8,7 +8,7 @@
         <asp:Panel ID="panelEdit" runat="server">
             <table>
                 <tr>
-                    <td>ID: </td>
+                    <td><asp:Label ID="lblPay_ID" runat="server" Text="Mã Thanh toán: "></asp:Label></td>
                     <td><asp:TextBox ID="txtPay_ID" runat="server" Enabled="false" class="text"></asp:TextBox></td>
                     <td></td>
                 </tr>
