@@ -103,6 +103,15 @@ namespace ThangNMjsc.Admin.Edit {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
+        /// lblProducts_ID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProducts_ID;
+        
+        /// <summary>
         /// txtProducts_ID control.
         /// </summary>
         /// <remarks>
@@ -218,6 +227,15 @@ namespace ThangNMjsc.Admin.Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProducts_Video;
+        
+        /// <summary>
+        /// lblProducts_LastUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProducts_LastUpdate;
         
         /// <summary>
         /// txtProducts_LastUpdate control.

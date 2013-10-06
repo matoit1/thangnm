@@ -15,7 +15,7 @@
         <asp:Panel ID="Panel1" runat="server">
             <table>
                 <tr>
-                    <td>Mã Sản phẩm: </td>
+                    <td><asp:Label ID="lblProducts_ID" runat="server" Text="Mã Sản phẩm: "></asp:Label></td>
                     <td><asp:TextBox ID="txtProducts_ID" runat="server" Enabled="false" class="number"></asp:TextBox></td>
                     <td></td>
                 </tr>
@@ -80,10 +80,11 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td>Cập nhật lần cuối: </td>
+                    <td><asp:Label ID="lblProducts_LastUpdate" runat="server" Text="Cập nhật lần cuối: "></asp:Label></td>
                     <td><asp:TextBox ID="txtProducts_LastUpdate" runat="server" Enabled="false" class="date"></asp:TextBox></td>
                     <td></td>
                 </tr>
+                
                 <tr>
                     <td>Trạng thái kích hoạt:</td>
                     <td><asp:CheckBox ID="chkProducts_Visible" runat="server" />&nbsp;&nbsp;&nbsp;&nbsp; Đã kích hoạt</td>
