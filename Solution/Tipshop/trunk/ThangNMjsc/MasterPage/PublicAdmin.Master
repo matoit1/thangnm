@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PublicAdmin.Master.cs"
+    Inherits="ThangNMjsc.MasterPage.Admin" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Admin Control Panel - ThangNM Joint Stock Company</title>
+    <link href="../favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="Vietnamese, English" />
+    <meta name="description" content="Admin Control Panel - ThangNM Joint Stock Company" />
+    <meta name="language" content="Vietnamese, English" />
+    <meta name="keywords" content="ThangNM, Admin Control Panel - ThangNM Joint Stock Company, Manager, thang.991992@gmail.com" />
+    <meta name="robots" content="index ,follow" />
+    <link rel="author" href="https://plus.google.com/109664385150832451485" />
+    <meta name="copyright" content=" © 2013 Copyright ThangNM ™" />
+    <!-- CSS & JavaScript -->
+    <link href="../Css/Admin/admin.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/public.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/Admin/menucss3.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="cphHead_Admin" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+        <div id="header">
+<%--            <div id="logo">
+                <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/Default.aspx"><asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.gif" AlternateText="logo ThangNM Joint Stock Company"/></asp:HyperLink>
+            </div>
+            <!-- End #logo -->
+            <h4>Joint Stock Company</h4>--%>
+            <div id="menu">
+			    <ul id="css3menu1" class="topmenu">
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Admin/Default.aspx"><img src="../Css/Admin/blue_circle - home2.png" alt="Trang chủ" />Trang chủ</asp:HyperLink></li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Admin/Products.aspx"><img src="../Css/Admin/blue_circle - home2.png" alt="Quản lý Sản phẩm" />Quản lý Sản phẩm</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/Admin/GroupProducts.aspx">Nhóm Sản phẩm</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/Admin/Products.aspx">Sản phẩm</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">Thêm sản phẩm mới</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/Admin/Products.aspx"><img src="../Css/Admin/blue_circle - star.png" alt="Quản Hóa đơn" />Quản Hóa đơn</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/Admin/PayMethod.aspx">Phương thức thanh toán</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Admin/NewOrders.aspx">Hóa đơn chưa xử lý</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="~/Admin/Orders.aspx">Hóa đơn đã xử lý</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/Admin/Staff.aspx"><img src="../Css/Admin/blue_circle - info.png" alt="Quản lý Tài khoản" />Quản lý Tài khoản</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="~/Admin/Staff.aspx">Nhân viên</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="~/Admin/Customer.aspx">Khách hàng</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/Admin/NewSupport.aspx"><img src="../Css/Admin/blue_circle - ok.png" alt="Quản lý Hỗ trợ" />Quản lý Hỗ trợ</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">Hỗ trợ chưa được xử lý</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="~/Admin/Support.aspx">Hỗ trợ đã được xử lý</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/Admin/Setting.aspx"><img src="../Css/Admin/blue_circle - home2.png" alt="Cài đặt" />Cài đặt</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink36" runat="server" NavigateUrl="~/Admin/Setting.aspx">Cài đặt</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="~/Admin/Database.aspx">Backup & Restore</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="welcome">
+                <div class="imgAvatar"><asp:Image ID="imgAvatar" runat="server" Width= "50px" Height="50px" /></div>
+                <div class="Text"><asp:HyperLink ID="hpEditAccount" runat="server"><asp:Label ID="lblWelcome" runat="server" Text="Label"></asp:Label></asp:HyperLink><asp:LinkButton ID="LinkButton1" runat="server" OnClick="lbtnLogout_Click" Width="30px" CausesValidation="False">[Thoát]</asp:LinkButton></div>
+            </div>
+        </div>
+        <!-- End #header -->
+        <div id="content">
+            <div id="primary">
+                <asp:ContentPlaceHolder ID="cphMainContent_Admin" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <!-- End #primary -->
+        </div>
+        <!-- End #content -->
+        <div class="clear"></div>
+            <!-- End #clear -->
+        <div id="footer-container">
+            <div id="footer">
+                <div class="copy">
+                    <p> Project management <a href="http://www.fis.com.vn">FPT Information System</a><br />
+                    Le Thanh Hai & Hoang Quang Huy</p>
+                </div>
+                <div class="service">
+                    <p><a href="../Admin/Default.aspx">Admin</a> | <a href="../Default.aspx">Product</a> |<a href="../Customer/Default.aspx">Customer</a></p>
+                </div>
+                <div class="share">
+                    <p>&copy; 2013 Designed by <a href="https://plus.google.com/109664385150832451485">ThangNM</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- End #footer -->
+    </div>
+    <!-- End #header -->
+    </form>
+</body>
+</html>

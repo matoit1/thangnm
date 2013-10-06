@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PublicCustomer.master.cs" Inherits="ThangNMjsc.MasterPage.PublicCustomer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Customer Control Panel - ThangNM Joint Stock Company</title>
+    <link href="../favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="Vietnamese, English"/>
+	<meta name="description" content="Customer Control Panel - ThangNM Joint Stock Company" />
+	<meta name="language" content="Vietnamese, English"/>
+	<meta name="keywords" content="ThangNM, Customer Control Panel, ThangNM Joint Stock Company, Customer, thang.991992@gmail.com"/>
+    <meta name="robots" content="index ,follow" />
+    <link rel="author" href="https://plus.google.com/109664385150832451485"/>
+    <meta name="copyright" content=" © 2013 Copyright ThangNM ™"/>
+    <!-- CSS & JavaScript -->
+    <link href="../Css/Customer/customer.css" rel="stylesheet" type="text/css"/>
+    <link href="../Css/public.css" rel="stylesheet" type="text/css"/>
+    <!-- Head Private -->
+    <asp:ContentPlaceHolder ID="cphHead_Customer" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+        <div id="header">
+            <div id="menu">
+			    <ul id="navMenu">
+                    <li><a href="../Default.aspx">Trang chủ</a></li>
+				    <li><a href="../Customer/Profile.aspx">Thông tin cá nhân</a></li>
+                    <li><a href="../Customer/WaittingOrders.aspx">Đơn hàng &darr;</a>
+                        <ul>
+                            <li><a href="../Customer/FinishOrders.aspx">Đơn hàng đang chờ xử lý</a></li>
+                            <li><a href="../Customer/WaittingOrders.aspx">Đơn hàng đã xử lý</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../Customer/NewSupport.aspx">Hỗ trợ &darr;</a>
+                        <ul>
+                            <li><a href="../Customer/NewSupport.aspx">Viết Hỗ trợ mới</a></li>
+                            <li><a href="../Customer/WaittingSupport.aspx">Hỗ trợ chưa được xử lý</a></li>
+                            <li><a href="../Customer/FinishSupport.aspx">Hỗ trợ đã được xử lý</a></li>
+                        </ul>
+                    </li>
+			    </ul>
+            </div>
+            <div class="welcome">
+                <div class="imgAvatar"><asp:Image ID="imgAvatar" runat="server" Width= "50px" Height="50px" /></div>
+                <div class="Text"><asp:HyperLink ID="hpEditAccount" runat="server"><asp:Label ID="lblWelcome" runat="server" Text="Label"></asp:Label></asp:HyperLink><asp:LinkButton ID="LinkButton1" runat="server" OnClick="lbtnLogout_Click" Width="30px" CausesValidation="False">[Thoát]</asp:LinkButton></div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="sidebar">
+                <div id="logo">
+                    <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/Default.aspx"><asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.gif" AlternateText="logo ThangNM Joint Stock Company"/></asp:HyperLink>
+                </div>
+                <!-- End #logo -->
+                <h4>Joint Stock Company</h4>
+                <div id="navBar">
+                    <ul class="mainNav" >
+                        <li><a href="../Customer/Profile.aspx">Thông tin cá nhân</a></li>
+                        <li><a href="../Customer/WaittingOrders.aspx">Đơn hàng<span>&raquo; &nbsp; &nbsp; &nbsp;</span></a>
+                            <ul>
+                                <li><a href="../Customer/FinishOrders.aspx">Đơn hàng đang chờ xử lý</a></li>
+                                <li><a href="../Customer/WaittingOrders.aspx">Đơn hàng đã xử lý</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../Customer/NewSupport.aspx">Hỗ trợ<span>&raquo; &nbsp; &nbsp; &nbsp;</span></a>
+                            <ul>
+                                <li><a href="../Customer/NewSupport.aspx">Viết Hỗ trợ mới</a></li>
+                                <li><a href="../Customer/WaittingSupport.aspx">Hỗ trợ chưa được xử lý</a></li>
+                                <li><a href="../Customer/FinishSupport.aspx">Hỗ trợ đã được xử lý</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End #sidebar -->
+            <div id="primary">
+                <asp:ContentPlaceHolder ID="cphMainContent_Customer" runat="server"></asp:ContentPlaceHolder>
+            </div><!-- End #primary -->
+        </div><!-- End #content -->
+        <div class="clear"></div><!-- End #clear -->
+        <div id="footer">
+            <div>
+                <ul>
+                    <li><a href="../Admin/Default.aspx">Admin</a></li>
+                    <li><a href="../Default.aspx">Product</a></li>
+                    <li><a href="../Customer/Default.aspx">Customer</a></li>
+                </ul><br /><br />
+                <strong> Help - Support: Le Thanh Hai & Hoang Quang Huy</strong><span>&copy; 2013 Designed by ThangNM</span>
+            </div>
+        </div><!-- End #footer -->
+    </div><!-- End #header -->
+    <!-- Body Private -->
+    </form>
+</body>
+</html>
