@@ -5,7 +5,7 @@
 #header {background-image:url('bg_header.png');}
 
 /******   content Settings    ****/
-#content {background-color:white; min-height:700px;}
+#content {background-color:white; min-height:700px; padding: 20px 20px 20px 20px}
 
 /******   Sidebar Settings    ****/
 #sidebar {float:left; width:200px; height:auto; background-color:#D9EE97; min-height:700px;}
@@ -28,7 +28,7 @@
 #sidebar div#navBar li:hover ul, li:hover li:hover ul {display:block;}
 
 /******  primary Settings    ****/
-#primary {font-size:0.7em; float:right; width:820px; border-width:5px; height:auto;}
+#primary {font-size:0.7em; float:left; width:auto; border-width:5px; height:auto; padding: 20px 0px 0px 20px }
 #primary #welcome img {float:left; margin-right:5px;}
 #primary #welcome h1 {color:#3f3f3f; text-transform:uppercase; font-size:0.7em; font-weight:normal; padding-top:20px;}
 #primary #welcome span {font-size:1.5em; color:#c23903; border-left:2px solid #c23903; padding-left:20px;}
@@ -43,3 +43,4 @@
 #footer .service{display:inline; float:left; padding-top:18px; text-align: center; width: 393px; outline:medium-none; margin:0;}
 #footer .share{display:inline; float:left; margin-top: 2px; text-align: right; width: 250px; outline:medium-none; padding:0;}
 #footer a{display:inline;}
+#menu{padding-top: 7px}

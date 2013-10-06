@@ -13,59 +13,89 @@
         <asp:RegularExpressionValidator ControlToValidate="txtProducts_Price" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Giá bán phải là 1 số VD: 10000" ValidationExpression="([0-9])*" Display="None"></asp:RegularExpressionValidator>
         <asp:RegularExpressionValidator ControlToValidate="txtProducts_Sale" ID="RegularExpressionValidator2" runat="server" ErrorMessage="Giá khuyến mại phải là 1 số VD: 10000" ValidationExpression="([0-9])*" Display="None"></asp:RegularExpressionValidator>
         <asp:Panel ID="Panel1" runat="server">
-            <p><asp:Label ID="lblProducts_ID" runat="server" Text="Mã Sản phẩm: "></asp:Label>
-                    <asp:TextBox ID="txtProducts_ID" runat="server" Enabled="false" class="number"></asp:TextBox><br />
-            </p>
-            <p><asp:Label ID="Label2" runat="server" Text="Nhóm Sản phẩm: "></asp:Label>
-                    <asp:DropDownList ID="dropProducts_Group" runat="server" class="dropbox"></asp:DropDownList><br />
-            </p>
-            <p><asp:Label ID="Label11" runat="server" Text="Tên Sản phẩm: "></asp:Label>
-                    <asp:TextBox ID="txtProducts_Name" runat="server" class="text"></asp:TextBox><br />
-            </p>
-            <p><asp:Label ID="Label12" runat="server" Text="Giá bán Sản phẩm: "></asp:Label>
-                    <asp:TextBox ID="txtProducts_Price" runat="server" class="number"></asp:TextBox><br />
-            </p>
-            <p><asp:Label ID="Label13" runat="server" Text="Giá khuyến mại: "></asp:Label>
-                    <asp:TextBox ID="txtProducts_Sale" runat="server" class="number"></asp:TextBox><br />
-            </p>
-            <p><asp:Label ID="Label14" runat="server" Text="Thuế giá trị gia tăng (VAT):  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></asp:Label>
-                    <asp:CheckBox ID="chkProducts_VAT" runat="server" /><asp:Label ID="Label3" runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp; Đã bao gồm VAT"></asp:Label>
-            </p>
-            <p><asp:Label ID="Label51" runat="server" Text="Mô tả cho Sản phẩm: "></asp:Label>
-                <CKEditor:CKEditorControl ID="txtProducts_Description" runat="server" CssClass="ck"></CKEditor:CKEditorControl>
-            </p>
-            <p><asp:Label ID="Label4" runat="server" Text="Thông tin Sản phẩm: "></asp:Label>
-                <CKEditor:CKEditorControl ID="txtProducts_Info" runat="server" CssClass="ck"></CKEditor:CKEditorControl>
-            </p>
-            <p><asp:Label ID="Label52" runat="server" Text="Xuất xứ: "></asp:Label>
-                    <asp:TextBox ID="txtProducts_Origin" runat="server" class="text"></asp:TextBox><br />
-            </p>
-            <p>
-                <asp:Label ID="Label6" runat="server" Text="Đính kèm ảnh 1:"></asp:Label>
-                    <asp:TextBox ID="txtProducts_Image1" runat="server" class="text"></asp:TextBox><br />
-            </p>
-            <p>
-                <asp:Label ID="Label7" runat="server" Text="Đính kèm ảnh 2:"></asp:Label>
-                    <asp:TextBox ID="txtProducts_Image2" runat="server" class="text"></asp:TextBox><br />
-            </p>
-            <p>
-                <asp:Label ID="Label8" runat="server" Text="Đính kèm ảnh 3:"></asp:Label>
-                    <asp:TextBox ID="txtProducts_Image3" runat="server"  class="text"></asp:TextBox><br />
-            </p>
-            <p>
-                <asp:Label ID="Label15" runat="server" Text="Đính kèm ảnh 4:"></asp:Label>
-                    <asp:TextBox ID="txtProducts_Video" runat="server" class="text"></asp:TextBox><br />
-            </p>
-            <p><asp:Label ID="lblProducts_LastUpdate" runat="server" Text="Cập nhật lần cuối: "></asp:Label>
-                    <asp:TextBox ID="txtProducts_LastUpdate" runat="server" Enabled="false" class="date"></asp:TextBox><br />
-            </p>
-            <p><asp:Label ID="Label16" runat="server" Text="Trạng thái kích hoạt: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></asp:Label>
-                <asp:CheckBox ID="chkProducts_Visible" runat="server" /><asp:Label ID="Label17" runat="server" Text="&nbsp;&nbsp;&nbsp;&nbsp; Đã kích hoạt"></asp:Label>
-            </p>
-            <center>
-                <asp:Button ID="btnAdd" runat="server" Text="Thêm" OnClick="btnAdd_Click"/>
-                <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click"/>
-            </center>
+            <table>
+                <tr>
+                    <td>Mã Sản phẩm: </td>
+                    <td><asp:TextBox ID="txtProducts_ID" runat="server" Enabled="false" class="number"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nhóm Sản phẩm: </td>
+                    <td><asp:DropDownList ID="dropProducts_Group" runat="server" class="dropbox"></asp:DropDownList></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tên Sản phẩm: </td>
+                    <td><asp:TextBox ID="txtProducts_Name" runat="server" class="text"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Giá bán Sản phẩm: </td>
+                    <td><asp:TextBox ID="txtProducts_Price" runat="server" class="number"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Giá khuyến mại: </td>
+                    <td><asp:TextBox ID="txtProducts_Sale" runat="server" class="number"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Thuế giá trị gia tăng (VAT):</td>
+                    <td><asp:CheckBox ID="chkProducts_VAT" runat="server" />&nbsp;&nbsp;&nbsp;&nbsp; Đã bao gồm VAT</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mô tả cho Sản phẩm: </td>
+                    <td><CKEditor:CKEditorControl ID="txtProducts_Description" runat="server" CssClass="ck"></CKEditor:CKEditorControl></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Thông tin Sản phẩm: </td>
+                    <td><CKEditor:CKEditorControl ID="txtProducts_Info" runat="server" CssClass="ck"></CKEditor:CKEditorControl></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Xuất xứ: </td>
+                    <td><asp:TextBox ID="txtProducts_Origin" runat="server" class="text"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Đính kèm ảnh 1:</td>
+                    <td><asp:TextBox ID="txtProducts_Image1" runat="server" class="text"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Đính kèm ảnh 2:</td>
+                    <td><asp:TextBox ID="txtProducts_Image2" runat="server" class="text"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Đính kèm ảnh 3:</td>
+                    <td><asp:TextBox ID="txtProducts_Image3" runat="server"  class="text"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Đính kèm video:</td>
+                    <td><asp:TextBox ID="txtProducts_Video" runat="server" class="text"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Cập nhật lần cuối: </td>
+                    <td><asp:TextBox ID="txtProducts_LastUpdate" runat="server" Enabled="false" class="date"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Trạng thái kích hoạt:</td>
+                    <td><asp:CheckBox ID="chkProducts_Visible" runat="server" />&nbsp;&nbsp;&nbsp;&nbsp; Đã kích hoạt</td>
+                    <td></td>
+                </tr>
+                <tr><td><br /></td><td><br /></td><td><br /></td></tr>
+                <tr>
+                    <td></td>
+                    <td><asp:Button ID="btnAdd" runat="server" Text="Thêm" OnClick="btnAdd_Click"/><asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click"/></td>
+                    <td></td>
+                </tr>
+            </table>
         </asp:Panel>
     </div>
 </asp:Content>
