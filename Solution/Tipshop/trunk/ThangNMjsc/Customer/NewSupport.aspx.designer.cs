@@ -22,15 +22,6 @@ namespace ThangNMjsc.Customer {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// HyperLink1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
-        
-        /// <summary>
         /// Label12 control.
         /// </summary>
         /// <remarks>
@@ -40,13 +31,13 @@ namespace ThangNMjsc.Customer {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// Label11 control.
+        /// HyperLink1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
         
         /// <summary>
         /// txtAccounts_Username control.
@@ -58,15 +49,6 @@ namespace ThangNMjsc.Customer {
         protected global::System.Web.UI.WebControls.TextBox txtAccounts_Username;
         
         /// <summary>
-        /// Label9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
-        
-        /// <summary>
         /// txtAccounts_FullName control.
         /// </summary>
         /// <remarks>
@@ -74,15 +56,6 @@ namespace ThangNMjsc.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAccounts_FullName;
-        
-        /// <summary>
-        /// Label10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
         /// txtAccounts_Email control.
@@ -94,15 +67,6 @@ namespace ThangNMjsc.Customer {
         protected global::System.Web.UI.WebControls.TextBox txtAccounts_Email;
         
         /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
         /// txtAccounts_PhoneNumber control.
         /// </summary>
         /// <remarks>
@@ -110,15 +74,6 @@ namespace ThangNMjsc.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAccounts_PhoneNumber;
-        
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// txtSupports_Type control.
@@ -139,15 +94,6 @@ namespace ThangNMjsc.Customer {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
         /// dropProducts_Group control.
         /// </summary>
         /// <remarks>
@@ -157,15 +103,6 @@ namespace ThangNMjsc.Customer {
         protected global::System.Web.UI.WebControls.DropDownList dropProducts_Group;
         
         /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-        
-        /// <summary>
         /// dropProducts control.
         /// </summary>
         /// <remarks>
@@ -173,15 +110,6 @@ namespace ThangNMjsc.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList dropProducts;
-        
-        /// <summary>
-        /// Label5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
         /// txtAnswers_Content control.

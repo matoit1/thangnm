@@ -33,7 +33,6 @@ namespace ThangNMjsc.Admin.Edit
                 btnRegister.Visible = false;
                 btnUpdate.Visible = true;
                 lblTitle.Text = "Sửa thông tin tài khoản";
-                ValidationSummary1.HeaderText = "Sửa thông tin tài khoản lỗi: ";
                 loadAccounts_Permission();
                 if (Request.QueryString["Accounts_Username"] != null)
                 {
@@ -66,7 +65,6 @@ namespace ThangNMjsc.Admin.Edit
                     btnUpdate.Visible = false;
                     txtAccounts_RegisterDate.Text = Convert.ToString(DateTime.Today.ToShortDateString());
                     lblTitle.Text = "Thêm tài khoản mới";
-                    ValidationSummary1.HeaderText = "Thêm tài khoản lỗi: ";
                 }
 
             }

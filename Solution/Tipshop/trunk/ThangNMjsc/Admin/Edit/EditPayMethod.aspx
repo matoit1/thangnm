@@ -6,17 +6,29 @@
         <p><asp:Label ID="Label14" runat="server"></asp:Label><br />
         </p>
         <asp:Panel ID="panelEdit" runat="server">
-            <p><asp:Label ID="lblPay_ID" runat="server" Text="ID: "></asp:Label>
-                <asp:TextBox ID="txtPay_ID" runat="server" Enabled="false" class="text"></asp:TextBox><br />
-                <asp:RequiredFieldValidator ControlToValidate="txtPay_Name" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn chưa nhập tên phương thức thanh toán"></asp:RequiredFieldValidator><br />
-                <asp:Label ID="Label11" runat="server" Text="Tên loại thanh toán: "></asp:Label>
-                <asp:TextBox ID="txtPay_Name" runat="server" class="text"></asp:TextBox><br />
-                <asp:CheckBox ID="ChkPay_Visible" runat="server" Text="Trạng thái kích hoạt" class="checkbox" /><br />
-            </p>
-            <span style="margin-left: 250px;">
-                <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click"/>
-                <asp:Button ID="btnAdd" runat="server" Text="Thêm mới" OnClick="btnAdd_Click"/>
-            </span>
+            <table>
+                <tr>
+                    <td>ID: </td>
+                    <td><asp:TextBox ID="txtPay_ID" runat="server" Enabled="false" class="text"></asp:TextBox></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tên loại thanh toán: </td>
+                    <td><asp:TextBox ID="txtPay_Name" runat="server" class="text"></asp:TextBox></td>
+                    <td><asp:RequiredFieldValidator ControlToValidate="txtPay_Name" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Bạn chưa nhập tên phương thức thanh toán"></asp:RequiredFieldValidator></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><asp:CheckBox ID="ChkPay_Visible" runat="server" Text="Trạng thái kích hoạt" class="checkbox" /></td>
+                    <td></td>
+                </tr>
+                <tr><td><br /></td><td><br /></td><td><br /></td></tr>
+                <tr>
+                    <td></td>
+                    <td><asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" OnClick="btnUpdate_Click"/><asp:Button ID="btnAdd" runat="server" Text="Thêm mới" OnClick="btnAdd_Click"/></td>
+                    <td></td>
+                </tr>
+            </table>
         </asp:Panel>
     </div>
 </asp:Content>

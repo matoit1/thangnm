@@ -40,15 +40,6 @@ namespace ThangNMjsc.Admin.Edit {
         protected global::System.Web.UI.WebControls.Panel panelEdit;
         
         /// <summary>
-        /// lblPay_ID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPay_ID;
-        
-        /// <summary>
         /// txtPay_ID control.
         /// </summary>
         /// <remarks>
@@ -58,24 +49,6 @@ namespace ThangNMjsc.Admin.Edit {
         protected global::System.Web.UI.WebControls.TextBox txtPay_ID;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
-        /// Label11 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
-        
-        /// <summary>
         /// txtPay_Name control.
         /// </summary>
         /// <remarks>
@@ -83,6 +56,15 @@ namespace ThangNMjsc.Admin.Edit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPay_Name;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// ChkPay_Visible control.
