@@ -1,0 +1,111 @@
+﻿/******  Settings    ****/
+html,body,div,span,h1,h2,h3,h4,strong,ol,ul,li {margin:0; padding:0; border:0; outline:0; vertical-align: baseline; font-size:13px;}
+body {font-family:Times New Roman; line-height:1.5;}
+ol,ul {list-style:none;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a img {border:none;}
+.clear {clear:both;}
+
+/******   header Settings    ****/
+#header {width:auto; height:80px; color:#CC66FF; z-index:1000; font-size:14px;}
+#header a {color: #CC66FF;}
+#header .welcome {float:right; margin-right: 20px }
+#header .welcome .imgAvatar {float:left; padding-top: 8px }
+#header .welcome .Text {margin-left:55px}
+
+
+/******  navMenu Settings    ****/
+#navMenu {font-size:18px;}
+#navMenu, #navMenu ul {list-style:none; position:relative; line-height:1.5em; z-index:100000;}
+#navMenu a:link, #navMenu a:active, #navMenu a:visited {display:block; padding:0px 5px; border:1px solid #3883cc; color:white; text-decoration:none; background:#3883cc;}
+#navMenu a:hover {background:#fff; color:#333;}
+#navMenu li {float:left; position:relative;}
+#navMenu ul {position:absolute; width:12em; display:none;}
+#navMenu li ul a {width:15em; float:left;}
+#navMenu ul ul {top:auto;}
+#navMenu li ul ul {left:12em; margin:0px 0 0 4px;}
+#navMenu li:hover ul ul, #navMenu li:hover ul ul ul, #navMenu li:hover ul ul ul ul {display:none;}
+#navMenu li:hover ul, #navMenu li li:hover ul, #navMenu li li li:hover ul, #navMenu li li li li:hover ul {display:block;}
+
+/****** Setting Tittle ****/
+.tieude {Font-Size:20px; font-weight:bold; Color:#9933CC; text-align: center;}
+
+/****** Setting Link ****/
+.buttom {background-color:#CC99FF;}
+.buttom a {font-style:oblique; color:red;}
+
+/****** Gridview Setting ****/
+.mGrid { width: 100%; background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+.mGrid td { padding: 2px; border: solid 1px #c1c1c1; color: #717171; }
+.mGrid th { padding: 4px 2px; color: #fff; background: #424242 url(../images/grd_head.png) repeat-x top; border-left: solid 1px #525252; font-size: 0.9em; }
+.mGrid .alt { background: #fcfcfc url(../images/grd_alt.png) repeat-x top; }
+.mGrid .pgr {background: #424242 url(../images/grd_pgr.png) repeat-x top; }
+.mGrid .pgr table { margin: 5px 0; }
+.mGrid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }
+.mGrid .pgr a { color: #666; text-decoration: none; }
+.mGrid .pgr a:hover { color: #000; text-decoration: none; }
+.mGrid .GridItemNumber{text-align: right}
+.mGrid .GridItemText{text-align: left}
+.mGrid .GridItemLink{text-align: center}
+.mGrid .GridItemDate{text-align: center}
+
+/****** search Setting ****/
+.search {width: 800px; background-color:#E9FAB3 ; padding: 10px 10px 10px 10px;}
+.search .left{position: absolute; width: 330px; margin-left:50px;}
+.search .right{width: 330px; margin-left:450px; padding-top:1px;}
+.search .textboxmain{width:300px; height: 14px}
+.search .left .textbox{width:150px; height: 14px; padding-top: 5px; float: right;}
+.search .right .textbox{width:150px; height: 14px; padding-top: 5px; float: right;}
+.search p{font-style:italic;}
+.search a{display: inline;}
+
+/****** input Setting ****/
+.input{margin-left:300px; width: 700px; line-height:25px;}
+.input .title{ Font-Size:20px; text-align: left; font-weight:bold; Color:#9933CC;}
+.input .date{text-align:left; height:20px; Width:300px; float:right; margin-right: 250px;}
+.input .number{text-align:left; height:20px; Width:300px; float:right; margin-right: 250px;}
+.input .text{text-align:left; height:20px; Width:300px; float:right; margin-right: 250px;}
+.input .textMultiLine{Height:130px; Width:300px; text-align:left; float:right; margin-right: 250px;}
+.input .dropbox{text-align:left; height:26px; Width:306px; float:right; margin-right: 250px;}
+.input .checkbox{float:right; margin-right: 336px;}
+.input img{position: absolute; margin-left: 500px;}
+
+
+/****** Repeater Setting ****/
+.styleRepeater .client{width:700px; float:left; height:auto;}
+.styleRepeater .client .avatar{position: absolute; width: 100px;}
+.styleRepeater .client .content{border: 1px outset red; margin-left: 110px; padding: 5px 5px 5px 5px; width: 577px; background-color:#CC9999;}
+.styleRepeater .client .content .username{font-weight:bold; font-size: 14px; color:#660066;}
+.styleRepeater .client .content .chat{font-weight:lighter; font-size: 13px;}
+.styleRepeater .client .content .datetime{font-style:italic; font-size: 11px; color:#3300FF;}
+.styleRepeater .admin{Width:700px; float:right; height:auto;}
+.styleRepeater .admin .avatar{width:100px; float:right;}
+.styleRepeater .admin .content{border: 1px outset red; padding: 5px 5px 5px 5px; width: 577px; background-color:#9999FF;}
+.styleRepeater .admin .content .username{font-weight:bold; font-size: 14px; color:#CC0099;}
+.styleRepeater .admin .content .chat{font-weight:lighter; font-size: 13px;}
+.styleRepeater .admin .content .datetime{font-style:italic; font-size: 11px; color:#3300FF;}
+.titleSupport .type{Font-Size:20px; Color:#9933CC;font-weight:bold;}
+.titleSupport .content{font-weight:bold; font-size: 14px; color:Orange}
+
+/****** notification Setting ****/
+.notificationError{color:#FF3366; font-weight: bold;}
+.textboxError{background-color:#FF3366;}
+.notificationSuccessful{color:#33FF33; font-weight: bold;}
+.textboxSuccessful{background-color:#33FF33;}
+
+/* Social Settings */
+.social {padding:50px 0px; width:350px; margin:0 auto;}
+.social-slide {height:48px; width:48px; float:left; margin:0px 5px; -webkit-transition:all ease 0.3s; -moz-transition:all ease 0.3s; -o-transition:all ease 0.3s; -ms-transition:all ease 0.3s; transition:all ease 0.3s;}
+.social-slide:hover {background-position: 0px -48px;}
+.twitter-hover {background-image: url(Product/theme/twitter-hover.png);}
+.facebook-hover {background-image: url(Product/theme/facebook-hover.png);}
+.google-hover {background-image: url(Product/theme/google-hover.png);}
+.pinterest-hover {background-image: url(Product/theme/pinterest-hover.png);}
+.tumblr-hover {background-image: url(Product/theme/tumblr-hover.png);}
+.instagram-hover {background-image: url(Product/theme/instagram-hover.png);}
+
+/******  .post-item Settings    ****/
+.post-item {float:left; width:220px; margin:0px 10px 30px;}
+.post-item span {color: #c23903;}
+.item{height: 100px;width: 100px;}
