@@ -1090,6 +1090,8 @@
     <Content Include="Test\Url.aspx" />
     <Content Include="Test\Valid.aspx" />
     <Content Include="Test\XMLAdv.xml" />
+    <Content Include="ThangNMjsc.csproj.user" />
+    <Content Include="ThangNMjsc.Publish.xml" />
     <Content Include="Topic.aspx" />
     <Content Include="Test\url\Default.aspx" />
     <Content Include="Test\url\Web1.aspx" />
@@ -1913,6 +1915,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mobile\Mobile.Master" />
+    <None Include="ThangNMjsc.idc" />
     <None Include="Uploads\Bao_Gia.xls" />
     <None Include="Test\App_WebReferences\APInlcheckorder\public_api.discomap" />
     <None Include="Test\App_WebReferences\APInlcheckorder\public_api.wsdl" />
