@@ -51,8 +51,8 @@
 					    </div>
 				    </div>
                 </li>
-                <li  class="topmenu"><asp:HyperLink ID="HyperLink3" runat="server" title="Giới thiệu" NavigateUrl="~/Info/ThangNMjsc.aspx" style="height:27px;line-height:27px;"><span><img src="src/blue-wordpress.png" alt="">Giới thiệu</span></asp:HyperLink></li>
-			    <li class="topmenu"><a href="https://plus.google.com/u/0/109664385150832451485" title="Product info" style="height:27px;line-height:27px;"><span><img src="src/blue-info2.png" alt="">Sản phẩm</span></a>
+                <li  class="topmenu"><asp:HyperLink ID="HyperLink3" runat="server" title="Giới thiệu" NavigateUrl="~/Info/ThangNMjsc.aspx" style="height:27px;line-height:27px;"><img src="src/blue-wordpress.png" alt="">Giới thiệu</asp:HyperLink></li>
+			    <li class="topmenu"><a href="https://plus.google.com/u/0/109664385150832451485" title="Product info" style="height:27px;line-height:27px;"><img src="src/blue-info2.png" alt="">Sản phẩm</a>
 				    <div class="submenu" style="width:145px;"><div class="column"><ul>
                         <asp:Repeater ID="rpListParentProduct1" runat="server" OnItemDataBound="rpListParentProduct_ItemDataBound">
                             <ItemTemplate>
