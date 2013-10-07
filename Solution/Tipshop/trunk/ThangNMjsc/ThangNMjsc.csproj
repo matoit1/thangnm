@@ -1091,8 +1091,8 @@
     <Content Include="Test\Valid.aspx" />
     <Content Include="Test\XMLAdv.xml" />
     <Content Include="Topic.aspx" />
-    <Content Include="url\Default.aspx" />
-    <Content Include="url\Web1.aspx" />
+    <Content Include="Test\url\Default.aspx" />
+    <Content Include="Test\url\Web1.aspx" />
     <Content Include="UserControls\LoginUC.ascx" />
     <Content Include="UserControls\OrdersDetailUC.ascx" />
     <Content Include="UserControls\SearchProductUC.ascx" />
@@ -1692,11 +1692,11 @@
     <Compile Include="Topic.aspx.designer.cs">
       <DependentUpon>Topic.aspx</DependentUpon>
     </Compile>
-    <Compile Include="url\Default.aspx.cs">
+    <Compile Include="Test\url\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="url\Default.aspx.designer.cs">
+    <Compile Include="Test\url\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test\Master.Master.cs">
@@ -1706,11 +1706,11 @@
     <Compile Include="Test\Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
     </Compile>
-    <Compile Include="url\Web1.aspx.cs">
+    <Compile Include="Test\url\Web1.aspx.cs">
       <DependentUpon>Web1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="url\Web1.aspx.designer.cs">
+    <Compile Include="Test\url\Web1.aspx.designer.cs">
       <DependentUpon>Web1.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\LoginUC.ascx.cs">
