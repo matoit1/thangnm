@@ -73,7 +73,7 @@
                 <li class="topmenu"><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Topic.aspx" title="Bài viết" style="height:27px;line-height:27px;"><img src="src/blue-document2.png" alt="">Bài viết</asp:HyperLink></li>
 			    <li class="topmenu"><asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/Info/Ship.aspx" title="Ship hàng" style="height:27px;line-height:27px;"><img src="src/blue-star.png" alt="">Ship hàng</asp:HyperLink></li>
                 <li class="topmenu"><asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="~/Info/Contact.aspx" title="Liên hệ" style="height:27px;line-height:27px;"><img src="src/blue-question.png" alt="">Liên hệ</asp:HyperLink></li>
-                <li class="topmenu"><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Uploads/Bao_Gia.xls" title="Download Báo giá" style="height:27px;line-height:27px;"><img src="src/blue-save.png" alt="">Download Báo giá</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Uploads/Bao_Gia.xls" title="Download Báo giá" style="height:27px;line-height:27px;"><img src="src/blue-save.png" alt="">Tải báo giá</asp:HyperLink></li>
 		    </ul>
         </div>
         <div id="content"><!-- Begin #content -->
