@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PublicCustomer.master.cs" Inherits="ThangNMjsc.MasterPage.PublicCustomer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Customer Control Panel - ThangNM Joint Stock Company</title>
+    <link href="../favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="Vietnamese, English"/>
+	<meta name="description" content="Customer Control Panel - ThangNM Joint Stock Company" />
+	<meta name="language" content="Vietnamese, English"/>
+	<meta name="keywords" content="ThangNM, Customer Control Panel, ThangNM Joint Stock Company, Customer, thang.991992@gmail.com"/>
+    <meta name="robots" content="index ,follow" />
+    <link rel="author" href="https://plus.google.com/109664385150832451485"/>
+    <meta name="copyright" content=" © 2013 Copyright ThangNM ™"/>
+    <!-- CSS & JavaScript -->
+    <link href="../Css/Admin/admin.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/public.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/Admin/menucss3.css" rel="stylesheet" type="text/css" />
+    <!-- Head Private -->
+    <asp:ContentPlaceHolder ID="cphHead_Customer" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+        <div id="header">
+            <div id="menu">
+                <ul id="css3menu1" class="topmenu">
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Customer/Default.aspx"><img src="../Css/Admin/blue_circle - home2.png" alt="Trang chủ" />Trang chủ</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Customer/Profile.aspx">Thông tin cá nhân</asp:HyperLink></li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Customer/WaittingOrders.aspx">Đơn hàng</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Customer/WaittingOrders.aspx">3.1 Đơn hàng đang chờ xử lý</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Customer/FinishOrders.aspx">3.2 Đơn hàng đã xử lý</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/Customer/NewSupport.aspx">Hỗ trợ</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Customer/WaittingSupport.aspx">4.1 Hỗ trợ đang chờ xử lý</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="~/Customer/FinishSupport.aspx">4.2 Hỗ trợ đã được xử lý</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/Customer/NewSupport.aspx">4.3 Viết Hỗ trợ mới</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                </ul>
+
+<%--			    <ul id="navMenu">
+                    <li><a href="../Default.aspx">Trang chủ</a></li>
+				    <li><a href="../Customer/Profile.aspx">Thông tin cá nhân</a></li>
+                    <li><a href="../Customer/WaittingOrders.aspx">Đơn hàng &darr;</a>
+                        <ul>
+                            <li><a href="../Customer/FinishOrders.aspx">Đơn hàng đang chờ xử lý</a></li>
+                            <li><a href="../Customer/WaittingOrders.aspx">Đơn hàng đã xử lý</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../Customer/NewSupport.aspx">Hỗ trợ &darr;</a>
+                        <ul>
+                            <li><a href="../Customer/NewSupport.aspx">Viết Hỗ trợ mới</a></li>
+                            <li><a href="../Customer/WaittingSupport.aspx">Hỗ trợ chưa được xử lý</a></li>
+                            <li><a href="../Customer/FinishSupport.aspx">Hỗ trợ đã được xử lý</a></li>
+                        </ul>
+                    </li>
+			    </ul>--%>
+            </div>
+            <div class="welcome">
+                <div class="imgAvatar"><asp:Image ID="imgAvatar" runat="server" Width= "50px" Height="50px" /></div>
+                <div class="Text"><asp:HyperLink ID="hpEditAccount" runat="server"><asp:Label ID="lblWelcome" runat="server" Text="Label"></asp:Label></asp:HyperLink><asp:LinkButton ID="LinkButton1" runat="server" OnClick="lbtnLogout_Click" Width="30px" CausesValidation="False">[Thoát]</asp:LinkButton></div>
+            </div>
+        </div>
+        <div id="content">
+                <asp:ContentPlaceHolder ID="cphMainContent_Customer" runat="server"></asp:ContentPlaceHolder>
+        </div><!-- End #content -->
+        <div class="clear"></div><!-- End #clear -->
+        <div id="footer-container">
+            <div id="footer">
+                <div class="copy">
+                    <p> Project Management <a href="http://www.fis.com.vn">FPT Information System</a><br />
+                    Le Hai Thanh & Hoang Quang Huy</p>
+                </div>
+                <div class="service">
+                    <p><a href="../Admin/Default.aspx">Admin</a> | <a href="../Default.aspx">Product</a> |<a href="../Customer/Default.aspx">Customer</a></p>
+                </div>
+                <div class="share">
+                    <p>&copy; 2013 Designed by <a href="https://plus.google.com/109664385150832451485">ThangNM</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- End #header -->
+    <!-- Body Private -->
+    </form>
+</body>
+</html>

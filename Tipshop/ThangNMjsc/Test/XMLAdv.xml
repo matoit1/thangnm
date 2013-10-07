@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Images/Advertising/ads1.jpg</ImageUrl>
+    <NavigateUrl>http://it.site44.com</NavigateUrl>
+    <AlternateText>Diễn đàn CNTT - Forum IT</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>Diễn đàn CNTT</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images/Advertising/ads2.jpg</ImageUrl>
+    <NavigateUrl>http://it.site44.com</NavigateUrl>
+    <AlternateText>Diễn đàn CNTT - Forum IT</AlternateText>
+    <Impressions>50</Impressions>
+    <Keyword>Forum IT</Keyword>
+  </Ad>
+</Advertisements>

@@ -1,0 +1,236 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PublicProduct.master.cs" Inherits="ThangNMjsc.MasterPage.PublicProduct" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Product - ThangNM Joint Stock Company</title>
+    <link href="../favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Product - ThangNM Joint Stock Company" />
+	<meta name="language" content="Vietnamese, English"/>
+    <link rel="author" href="https://plus.google.com/109664385150832451485"/>
+    <meta name="copyright" content=" © 2013 Copyright ThangNM ™"/>
+    <!-- Head Private -->
+    <asp:ContentPlaceHolder ID="cphHead_Product" runat="server"></asp:ContentPlaceHolder>
+    <!-- CSS & JavaScript -->
+    <link href="../Css/Product/product.css" rel="stylesheet" type="text/css"/>
+    <link href="../Css/public.css" rel="stylesheet" type="text/css"/>
+    <link href="../Css/Product/ZoomImage.css" rel="stylesheet" type="text/css"/>
+    <link href="../Css/Product/Chat.css" rel="stylesheet" type="text/css"/>
+    <link href="../Css/Product/MenuCSS3.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="../Scripts/chat.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="bar">&nbsp;</div>
+    <div id="wrapper"><!-- Begin #wrapper -->
+        <div id="header">
+            <div id="logo"><!-- Begin #logo -->
+                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/logo.gif" />
+            </div><!-- End #logo -->
+
+            <asp:Panel ID="panelInfoAccount" runat="server">
+            <div id="infoAccount"><!-- Begin #infoAccount -->
+                <div class="imgAvatar"><asp:Image ID="imgAvatar" runat="server" Width= "50px" Height="50px" /></div>
+                <div class="Text"><asp:HyperLink ID="hpEditAccount" runat="server"><asp:Label ID="lblWelcome" runat="server" Text="Unknow"></asp:Label></asp:HyperLink><br />
+                    <asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click" Width="30px" CausesValidation="False">[Thoát]</asp:LinkButton></div>
+            </div><!-- End #infoAccount -->
+            </asp:Panel>
+        </div>
+        <div id="menu"><!-- Begin #menu -->
+            <ul id="css3menu1" class="topmenu">
+			    <li class="topmenu"><asp:HyperLink ID="HyperLink8" NavigateUrl="~/Default.aspx" runat="server" title="Trang chủ" style="height:27px;line-height:27px;"><img src="src/blue-home.png" alt="">Trang chủ</asp:HyperLink>
+                    <div class="submenu" style="width:145px;">
+					    <div class="column">
+						    <ul>
+							    <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/Info/Terms.aspx" runat="server"><img src="src/blue-star.png" alt="">Điều khoản</asp:HyperLink></li>
+						        <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/Info/Link.aspx" runat="server"><img src="src/blue-star.png" alt="">Liên kết Website</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Sitemap.aspx"><img src="src/blue-star.png" alt="">Bản đồ Website</asp:HyperLink></li>
+						    </ul>
+					    </div>
+				    </div>
+                </li>
+                <li  class="topmenu"><asp:HyperLink ID="HyperLink3" runat="server" title="Giới thiệu" NavigateUrl="~/Info/ThangNMjsc.aspx" style="height:27px;line-height:27px;"><span><img src="src/blue-wordpress.png" alt="">Giới thiệu</span></asp:HyperLink></li>
+			    <li class="topmenu"><a href="https://plus.google.com/u/0/109664385150832451485" title="Product info" style="height:27px;line-height:27px;"><span><img src="src/blue-info2.png" alt="">Sản phẩm</span></a>
+				    <div class="submenu" style="width:145px;"><div class="column"><ul>
+                        <asp:Repeater ID="rpListParentProduct1" runat="server" OnItemDataBound="rpListParentProduct_ItemDataBound">
+                            <ItemTemplate>
+                                <li><asp:HyperLink ID="hplParent" runat="server" NavigateUrl='<%#"~/Group.aspx?Products_ID="+Eval("Products_ID")%>'><img src="src/blue-star.png" alt=""><%#Eval("Products_Name")%></asp:HyperLink>
+                                    <asp:Repeater ID="rpListChildProduct" runat="server">
+                                        <HeaderTemplate><div class="submenu"><div class="column"><ul></HeaderTemplate>
+                                        <ItemTemplate>
+                                            <li><asp:HyperLink ID="hplParent" runat="server" NavigateUrl='<%#"~/Group.aspx?Products_ID="+Eval("Products_ID")+"&Products_Parent="+Eval("Products_Parent")%>'><img src="src/blue-card4.png" alt=""><%#Eval("Products_Name")%></asp:HyperLink></li>
+                                        </ItemTemplate>
+                                        <FooterTemplate></ul></div></div></FooterTemplate>
+                                    </asp:Repeater>
+                                </li>
+                                <asp:HiddenField ID="hrID" runat="server" Value='<%#Eval("Products_ID")%>' /> <!-- cai nay de luu ID cua danh muc cap cha  -->
+                            </ItemTemplate>
+                        </asp:Repeater>
+			        </ul></div></div>
+			    </li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Topic.aspx" title="Bài viết" style="height:27px;line-height:27px;"><img src="src/blue-document2.png" alt="">Bài viết</asp:HyperLink></li>
+			    <li class="topmenu"><asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/Info/Ship.aspx" title="Ship hàng" style="height:27px;line-height:27px;"><img src="src/blue-star.png" alt="">Ship hàng</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="~/Info/Contact.aspx" title="Liên hệ" style="height:27px;line-height:27px;"><img src="src/blue-question.png" alt="">Liên hệ</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Uploads/Bao_Gia.xls" title="Download Báo giá" style="height:27px;line-height:27px;"><img src="src/blue-save.png" alt="">Download Báo giá</asp:HyperLink></li>
+		    </ul>
+        </div>
+        <div id="content"><!-- Begin #content -->
+            <div id="sidebar"><!-- Begin #sidebar -->
+                <asp:Panel ID="panelLogin" runat="server" DefaultButton="btnLogin">
+                <div id="login"><!-- Begin #login -->
+                    <table>
+                        <tr><td></td><td><asp:Label ID="lblMsg" runat="server"></asp:Label></td></tr>
+                        <tr><td>Tài khoản:</td><td><asp:TextBox ID="txtAccounts_Username" runat="server"></asp:TextBox></td></tr>
+                        <tr><td></td><td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="chưa nhập tài khoản" ControlToValidate="txtAccounts_Username"></asp:RequiredFieldValidator></td></tr>
+                        <tr><td>Mật khẩu:</td><td><asp:TextBox ID="txtAccounts_Password" runat="server" TextMode="Password"></asp:TextBox></td></tr>
+                        <tr><td></td><td><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="chưa nhập mật khẩu" ControlToValidate="txtAccounts_Password"></asp:RequiredFieldValidator></td></tr>
+                        <tr><td colspan="2"><asp:CheckBox ID="chkRememberMe" runat="server" Text="Ghi nhớ tài khoản"/></td></tr>
+                        <tr><td></td><td><asp:Button ID="btnLogin" runat="server" Text="Đăng nhập" onclick="btnLogin_Click" /></td></tr>
+                    </table><hr />
+                    <asp:HyperLink ID="hplForgotPassword" runat="server" NavigateUrl="~/Accounts/ForgotPassword.aspx">Quên mật khẩu/ tài khoản?</asp:HyperLink>
+                    <asp:HyperLink ID="hplRegister" runat="server" NavigateUrl="~/Accounts/Register.aspx">Tạo tài khoản mới.</asp:HyperLink>
+                </div><div class="clear"></div><!-- End #login -->
+                </asp:Panel>
+                <div id="navBar">
+                    <asp:Repeater ID="rpListParentProduct" runat="server" OnItemDataBound="rpListParentProduct_ItemDataBound">
+                        <HeaderTemplate><ul class="mainNav"></HeaderTemplate>
+                        <ItemTemplate>
+                            <li><asp:HyperLink ID="hplParent" runat="server" NavigateUrl='<%#"~/Group.aspx?Products_ID="+Eval("Products_ID")%>'><%#Eval("Products_Name")%></asp:HyperLink>
+                                <ul><asp:Repeater ID="rpListChildProduct" runat="server">
+                                        <ItemTemplate><li><asp:HyperLink ID="hplParent" runat="server" NavigateUrl='<%#"~/Group.aspx?Products_ID="+Eval("Products_ID")+"&Products_Parent="+Eval("Products_Parent")%>'><%#Eval("Products_Name")%></asp:HyperLink></li></ItemTemplate>
+                                </asp:Repeater></ul>
+                            </li>
+                            <asp:HiddenField ID="hrID" runat="server" Value='<%#Eval("Products_ID")%>' /><!-- cai nay de luu ID cua danh muc cap cha  -->
+                        </ItemTemplate>
+                        <FooterTemplate></ul></FooterTemplate>
+                    </asp:Repeater>
+                </div>
+                <div class="formmedium"><!-- Begin Search Advand -->
+                    <h2>Tìm kiếm nâng cao</h2>
+                    <br /><asp:TextBox ID="txtProducts_Name" runat="server" Width="210px" Height="20px"></asp:TextBox>
+                    <asp:Button ID="btnSearch" runat="server" Height="30px" OnClick="btnSearch_Click" Text="Search" CausesValidation="False"/>
+                </div><!-- End Search Advand -->
+                <div class="formmedium"><!-- Begin Support Online -->
+                    <h2>Hỗ trợ trực tuyến</h2>
+                    <center>
+                        <img alt="Đường dây nóng" src="../Css/Product/theme/hotline.jpg" />
+                        <a href="ymsgr:sendim?thang_991992&m=Hỗ trợ từ ThangNMjsc"><img src='http://opi.yahoo.com/online?u=thang_991992&m=g&t=17' title="Hỗ trợ qua YM!" width="50px" height="50px" alt="Hỗ trợ qua YM!"/></a>
+                        <a href="Skype:thang_991992?chat"><img src="http://mystatus.skype.com/balloon/thang_991992" title="Hỗ trợ qua Skype" width="120" height="30" alt="Hỗ trợ qua Skype"/></a>
+                        <a href="mailto:thang.991992@gmail.com"><img src="../Css/Product/theme/email.jpg" title="Hỗ trợ qua Email" width="50" height="50" alt="Hỗ trợ qua Email"/></a>
+                    </center>
+                </div><!-- End Support Online -->
+                <div class="formlarge"><!-- Begin New Product -->
+                    <h2>Sản phẩm mới</h2>
+                    <asp:DataList ID="dtlNewProduct" runat="server" RepeatColumns="1" DataKeyField="Products_ID" OnItemCommand="dtlNewProduct_ItemCommand">
+                    <ItemTemplate>
+                        <table>
+                        <tr><td rowspan="4" style="width: 100px"><asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("Products_Image1")%>' /></td>
+                        </tr>
+                        <tr><td style="width: 157px; height: 21px; text-align: left;">
+                                <asp:Label ID="Label1" runat="server" Text="Mã SP: " Font-Bold="true"></asp:Label>
+                                <asp:Label ID="lblProducts_ID" runat="server" Text='<%#Eval("Products_ID") %>'></asp:Label><br />
+                                <asp:Label ID="Label2" runat="server" Text="Tên SP: " Font-Bold="true"></asp:Label>
+                                <asp:Label ID="lblProducts_Name" runat="server" Text='<%#Eval("Products_Name") %>'></asp:Label>
+                                <asp:Label ID="Label4" runat="server" Text="Giá bán: " Font-Bold="true"></asp:Label>
+                                <asp:Label ID="lblProducts_Price" runat="server" Text='<%#Eval("Products_Price") %> '></asp:Label>
+                            </td>
+                        </tr>
+                        <tr><td style="width: 157px"><asp:ImageButton ID="ImageButton2" runat="server"  ImageUrl="~/Images/icon_chitiet.gif" CommandName="Detail" CausesValidation="False"/></td></tr>
+                    </table>
+                    </ItemTemplate>
+                    </asp:DataList>
+                </div><!-- End New Product -->
+                <div class="formmedium"><!-- Begin Box Fanpage Facebook -->
+                    <h2>Fanpage Facebook</h2>
+			        <div id="fb-root"></div>
+			        <script>			    (function (d, s, id) {
+			                var js, fjs = d.getElementsByTagName(s)[0];
+			                if (d.getElementById(id)) return;
+			                js = d.createElement(s); js.id = id;
+			                js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
+			                fjs.parentNode.insertBefore(js, fjs);
+			            } (document, 'script', 'facebook-jssdk'));
+			        </script>
+			        <div class="fb-like-box" data-href="http://fb.com/share2everyone" data-width="220" data-show-faces="true" data-stream="false" data-header="false"></div>
+                </div><!-- End Box Fanpage Facebook -->
+                <div class="formtiny"><!-- Begin visit website-->
+                    <h2>Thống kê truy cập</h2>
+                    <script type="text/javascript">
+                        document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));
+		            </script>
+		            <a href="http://it.site44.com" target="_blank" title="Diễn đàn CNTT - Forum IT" >
+			            <script  type="text/javascript" >
+			                try {
+			                    Histats.start(1, 2238242, 4, 485, 112, 61, "00011011");
+			                    Histats.track_hits();
+			                } catch (err) { };
+			            </script>
+		            </a>
+                </div><!-- End visit website -->
+                <div class="formtiny"><!-- Begin Link Website-Blog -->
+                    <h2>Liên kết Website-Blog</h2>
+                    <marquee direction="up" scrolldelay="30" scrollamount="1" truespeed onmouseover=this.stop() onmouseout=this.start() behavior="scroll" height="67px">
+						<asp:Label ID="lblLink" runat="server"></asp:Label></marquee>
+                </div><!-- End Link Website-Blog -->
+            </div><!-- End #sidebar -->
+            <div id="primary">
+                <asp:ContentPlaceHolder ID="cphMainContent_Product" runat="server"></asp:ContentPlaceHolder>
+            </div><!-- End #primary -->
+
+        </div><!-- End #content -->
+        <div class="clear"></div><!-- End #clear -->
+        <div id="footer">
+            <div id="footer-contact">
+                <h3>Contact & Feedback</h3>
+                <form id="footer-contact-form" action="" name="footer-contact-form">
+                    <asp:TextBox ID="txtAccounts_FullName" runat="server"></asp:TextBox><br />
+                    <asp:TextBox ID="txtAccounts_Email" runat="server"></asp:TextBox><br />
+                    <asp:TextBox ID="txtSupports_Content" runat="server" TextMode="MultiLine" Width="200px" Height="80px" ></asp:TextBox>
+                    <asp:Button ID="btnContact" runat="server" style="width: 50px; height:50px; opacity:0; float: right; margin-top:50px; cursor:pointer;" onclick="btnContact_Click" CausesValidation="False"/>
+                </form>
+            </div>
+            <div id="footer-usage">
+                <ul class="social">
+                    <a href="http://fb.com/share2everyone" target="_blank"><li class="facebook-hover social-slide"></li></a>
+                    <a href="https://twitter.com/thang_991992" target="_blank"><li class="twitter-hover social-slide"></li></a>
+                    <a href="https://plus.google.com/u/0/109664385150832451485" target="_blank"><li class="google-hover social-slide"></li></a>
+                    <a href="#" target="_blank"><li class="pinterest-hover social-slide"></li></a>
+                    <a href="#" target="_blank"><li class="instagram-hover social-slide"></li></a>
+                    <a href="#" target="_blank"><li class="tumblr-hover social-slide"></li></a>
+                </ul>
+            </div>
+            <div id="footer-copyright">
+                <p style="display:inline;">
+                    <asp:LinkButton ID="lbtnDesktop_Layout" runat="server" onclick="lbtnDesktop_Layout_Click">Desktop</asp:LinkButton> | 
+                    <asp:LinkButton ID="lbtnMobile_Layout" runat="server" onclick="lbtnMobile_Layout_Click">Mobile</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2013 Designed by ThangNM
+                </p>
+            </div>
+            <div id="footer-sitemap">
+                <h3>Sitemap</h3>
+                <ul>
+                    <li><a title="Home" href="../Default.aspx">Home</a></li>
+                    <li><a title="Admin" href="../Admin/Default.aspx">Admin</a></li>
+                    <li><a title="Product" href="../Default.aspx">Product</a></li>
+                    <li><a title="Customer" href="../Customer/Default.aspx">Customer</a></li>
+                    <li><a title="About me" href="../Info/ThangNMjsc.aspx">About Me</a></li>
+                    <li><a title="Contact me" href="../Info/Contact.aspx">Contact Me</a></li>
+                </ul>
+            </div>
+        </div><!-- End #footer -->
+    </div><!-- End #wrapper -->
+    <div class="chat" 
+        style="display: block; bottom: 0px; text-decoration: underline;" id="chat-box">
+		<script id="sid0010000033775916850">(function () { function async_load() { s.id = "cid0010000033775916850"; s.src = 'http://st.chatango.com/js/gz/emb.js'; s.style.cssText = "width:220px;height:322px;"; s.async = true; s.text = '{"handle":"thangnm","styles":{"b":60,"f":50,"l":"999999","p":"11","q":"999999","r":100,"s":1,"v":0,"w":0,"aa":1}}'; var ss = document.getElementsByTagName('script'); for (var i = 0, l = ss.length; i < l; i++) { if (ss[i].id == 'sid0010000033775916850') { ss[i].id += '_'; ss[i].parentNode.insertBefore(s, ss[i]); break; } } } var s = document.createElement('script'); if (s.async == undefined) { if (window.addEventListener) { addEventListener('load', async_load, false); } else if (window.attachEvent) { attachEvent('onload', async_load); } } else { async_load(); } })();</script>
+	</div>
+	<div class="chat-box" onclick="clickx()" style="bottom: 322px;" id="taskx">
+		<img alt="chat" src="../images/-PAXP-deijE.gif" class="chat-img" height="1px" width="1px"/>
+		Diễn đàn CNTT - Forum IT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&darr;&darr;&darr; &nbsp;&nbsp;&nbsp;X
+		<div class="notification" style="display:none" id="notif"> 2</div>
+		<div style="display: block;" title="Close" class="close" id="close"></div>
+	</div>
+    </form>
+</body>
+</html>

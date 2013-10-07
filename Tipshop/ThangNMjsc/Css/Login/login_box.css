@@ -1,0 +1,9 @@
+﻿.login-box {width:360px; height:360px; padding:35px 60px 60px; color:#ebebeb; font:12px Arial, Helvetica, sans-serif; background:url(login-box-backg.png) no-repeat left top; margin:0 auto;}
+.error {color:Red; font-weight:bold;}
+successful {color:Green; font-weight:bold;}
+span {color:Red; font-weight:bold;}
+.button3D {position:relative; color:#000033; text-decoration:none; background-color:#DB5705; width:auto; padding:10px; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px; -webkit-box-shadow:0px 6px 0px rgba(219,31,5,1), 0px 6px 25px rgba(0,0,0,.7); -moz-box-shadow:0px 6px 0px rgba(219,31,5,1), 0px 6px 25px rgba(0,0,0,.7); box-shadow:0px 0px 0px rgba(219,31,5,1), 0px 6px 25px rgba(0,0,0,.7); text-align:center; -webkit-transition:all .1s ease; -moz-transition:all .1s ease; -ms-transition:all .1s ease; -o-transition:all .1s ease;  transition:all .1s ease;}
+.button3D:active {-webkit-box-shadow:0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); -moz-box-shadow:0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); box-shadow:0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9); position:relative; top: 6px;}
+.button3D:hover{color:#4F4F4F; text-decoration:none;}
+a{color: #CC6666; text-decoration:none; font-weight:bold;}
+a:hover{color: #FF9966; text-decoration: underline; font-weight:bold;}
