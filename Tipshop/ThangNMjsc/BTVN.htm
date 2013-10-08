@@ -16,7 +16,8 @@
             else{Gender = "Nữ";}
             if (chkAgree.checked) { Agree = "Đồng ý!"; }
             else { Agree = "Không Đồng ý!"; }
-            txtContent.innerHTML = "Tên đăng nhập: " + txtUsername.value + "\r\n" +
+            txtContent.innerHTML = "Họ và Tên: " + txtLastName.value + " " + txtMiddleName.value + " " + txtFirstName.value + "\r\n" +
+                                    "Tên đăng nhập: " + txtUsername.value + "\r\n" +
                                     "Mật khẩu: " + txtPassword.value + "\r\n" +
                                     "Email: " + txtEmail.value + "\r\n" +
                                     "Ngày sinh: " + slDay.value + "/" +
@@ -90,6 +91,18 @@
             txtContent.innerHTML = "Điều khoản: " + Agree;
         }
 
+        function txtLastName_onchange() {
+            txtContent.innerHTML = "Họ: " + txtLastName.value;
+        }
+
+        function txtMiddleName_onchange() {
+            txtContent.innerHTML = "Đệm: " + txtMiddleName.value;
+        }
+
+        function txtFirstName_onchange() {
+            txtContent.innerHTML = "Tên: " + txtFirstName.value;
+        }
+
 // ]]>
     </script>
 </head>
@@ -98,10 +111,19 @@
     <ul class="info">
         <li>Giáo viên hướng dẫn: Thái Thanh Tùng</li>
         <li>Sinh viên thực hiện: Nguyễn Mạnh Thắng</li>
+        <li>E-Mail: <a href="mailto:thang.991992@gmal.com">thang.991992@gmail.com</a></li>
         <li>Lớp chính khóa: 10B3</li>
         <li>Lớp chuyên ngành: Mạng</li>
     </ul>
     <table class="example" cellpadding= "5px">
+        <tr>
+            <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Họ: &nbsp;&nbsp;<input id="txtLastName" type="text" size="8" value="Nguyễn" onchange="return txtLastName_onchange()" /> 
+                Đệm: &nbsp;&nbsp;<input id="txtMiddleName" type="text" size="8" value="Mạnh" onchange="return txtMiddleName_onchange()" />
+                Tên: &nbsp;&nbsp;<input id="txtFirstName" type="text" size="8" value="Thắng" onchange="return txtFirstName_onchange()" />
+            </td>
+            <td style="color: Red">*</td>
+        </tr>
         <tr>
             <td>Tên đăng nhập</td>
             <td><input id="txtUsername" type="text" class="textbox" title="(10 -> 25 ký tự)" onchange="return txtUsername_onchange()" /></td>
@@ -211,11 +233,7 @@
         </tr>
         <tr>
             <td>Nội dung bạn đã nhập</td>
-            <td><textarea id="txtContent" cols="30" rows="6" disabled="disabled" >Create by ThangNM &#10; http://fb.com/thang.991992 </textarea></td>
-        </tr>
-        <tr>
-            <td><br /></td>
-            <td><br /></td>
+            <td><textarea id="txtContent" cols="30" rows="7" disabled="disabled" >Create by ThangNM &#10; http://fb.com/thang.991992 </textarea></td>
         </tr>
         <tr>
             <td></td>
