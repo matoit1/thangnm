@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using BusinessObject;
 
 namespace nguyenmanhthang.Admin
 {
@@ -22,50 +23,26 @@ namespace nguyenmanhthang.Admin
             {
                 string Accounts_Username = txtAccounts_Username.Text;
                 string Accounts_Password = Encrypt.Crypt(txtAccounts_Password.Text);
-                DataSet temp = AccountsBO.setLoginAccounts(Accounts_Username, Accounts_Password);
+                DataSet temp = AccountsBO.setAccounts_Login(Accounts_Username, Accounts_Password);
                 if (temp.Tables[0].Rows.Count > 0)
                 {
-                    if (Convert.ToInt32(temp.Tables[0].Rows[0]["Accounts_Permission"]) > 0)
+                    Response.Cookies["administrator"].Value = Accounts_Username;
+                    if (chkRememberMe.Checked == true)
                     {
-                        Response.Cookies["administrator"].Value = Accounts_Username;
-                        if (chkRememberMe.Checked == true)
-                        {
-                            Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(10);
-                        }
-                        else
-                        {
-                            Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(1);
-                        }
-                        string url1 = (String)Session["url1"];
-                        if (Session["url1"] == null)
-                        {
-                            Response.Redirect("../Admin/Default.aspx");
-                        }
-                        else
-                        {
-                            Response.Redirect(url1);
-                        }
+                        Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(10);
                     }
                     else
                     {
-                        Response.Cookies["client"].Value = Accounts_Username;
-                        if (chkRememberMe.Checked == true)
-                        {
-                            Response.Cookies["client"].Expires = DateTime.Now.AddDays(10);
-                        }
-                        else
-                        {
-                            Response.Cookies["client"].Expires = DateTime.Now.AddDays(1);
-                        }
-                        string url2 = (String)Session["url2"];
-                        if (Session["url2"] == null)
-                        {
-                            Response.Redirect("../Customer/Default.aspx");
-                        }
-                        else
-                        {
-                            Response.Redirect(url2);
-                        }
+                        Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(1);
+                    }
+                    string url1 = (String)Session["url1"];
+                    if (Session["url1"] == null)
+                    {
+                        Response.Redirect("../Admin/Default.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect(url1);
                     }
                 }
                 else
