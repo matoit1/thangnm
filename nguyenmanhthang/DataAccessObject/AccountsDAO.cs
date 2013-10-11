@@ -35,5 +35,29 @@ namespace DataAccessObject
             }
         }
         // End Login Admin
+
+
+        //Begin Get DataSet Accounts by Username
+        public static DataSet getAccountsbyUsername(string Accounts_Username)
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("getAccountsbyUsername", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Accounts_Username", Accounts_Username));
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(ds);
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    return ds;
+                }
+            }
+        }
+        //End Get Accounts by Username
     }
 }
