@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataAccessObject
 {
-    class AccountsDAO
+    public class AccountsDAO
     {
     }
 }
