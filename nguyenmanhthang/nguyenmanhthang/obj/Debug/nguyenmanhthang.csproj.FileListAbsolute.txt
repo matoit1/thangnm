@@ -1,0 +1,5 @@
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\bin\nguyenmanhthang.dll
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\bin\nguyenmanhthang.pdb
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\obj\Debug\nguyenmanhthang.dll
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\obj\Debug\nguyenmanhthang.pdb
