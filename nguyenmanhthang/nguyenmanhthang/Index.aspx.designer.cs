@@ -11,7 +11,7 @@ namespace nguyenmanhthang
 {
 
 
-    public partial class Default
+    public partial class _Default
     {
 
         /// <summary>
