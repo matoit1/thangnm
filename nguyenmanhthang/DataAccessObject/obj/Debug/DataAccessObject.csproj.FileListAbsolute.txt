@@ -1,0 +1,7 @@
+D:\Project_ASP.NET\nguyenmanhthang\DataAccessObject\bin\Debug\DataAccessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\DataAccessObject\bin\Debug\DataAccessObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\DataAccessObject\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\nguyenmanhthang\DataAccessObject\obj\Debug\DataAccessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\DataAccessObject\obj\Debug\DataAccessObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\DataAccessObject\bin\Debug\EntityObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\DataAccessObject\bin\Debug\EntityObject.pdb

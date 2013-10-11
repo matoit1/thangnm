@@ -3,3 +3,7 @@ D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\bin\nguyenmanhthang.pdb
 D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\obj\Debug\ResolveAssemblyReference.cache
 D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\obj\Debug\nguyenmanhthang.dll
 D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\obj\Debug\nguyenmanhthang.pdb
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\bin\BusinessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\bin\DataAccessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\bin\BusinessObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\nguyenmanhthang\bin\DataAccessObject.pdb

@@ -1,0 +1,7 @@
+D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\BusinessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\BusinessObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\BusinessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\BusinessObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\DataAccessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\DataAccessObject.pdb
