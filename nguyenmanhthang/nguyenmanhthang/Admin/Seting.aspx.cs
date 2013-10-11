@@ -5,15 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace nguyenmanhthang
+namespace nguyenmanhthang.Admin
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class Seting : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-            }
+
         }
     }
 }

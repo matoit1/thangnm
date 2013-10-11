@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace nguyenmanhthang
+namespace nguyenmanhthang.Info
 {
 
 
-    public partial class Index
+    public partial class Gioi_thieu
     {
 
         /// <summary>

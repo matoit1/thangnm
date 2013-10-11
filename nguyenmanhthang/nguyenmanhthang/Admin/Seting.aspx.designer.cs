@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace nguyenmanhthang
+namespace nguyenmanhthang.Admin
 {
 
 
-    public partial class Index
+    public partial class Seting
     {
 
         /// <summary>
