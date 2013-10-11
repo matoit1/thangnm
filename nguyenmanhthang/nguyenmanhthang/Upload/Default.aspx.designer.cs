@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace nguyenmanhthang
+namespace nguyenmanhthang.Upload
 {
 
 
-    public partial class Index
+    public partial class Default
     {
 
         /// <summary>

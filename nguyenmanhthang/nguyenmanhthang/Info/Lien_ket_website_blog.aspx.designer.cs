@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace nguyenmanhthang
+namespace nguyenmanhthang.Info
 {
 
 
-    public partial class Index
+    public partial class Lien_ket_website_blog
     {
 
         /// <summary>
