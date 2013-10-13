@@ -49,10 +49,59 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Alert.aspx" />
+    <Content Include="Admin\Basic_Styles.aspx" />
+    <Content Include="Admin\Content_Manager.aspx" />
+    <Content Include="Admin\CSS\ie.css" />
+    <Content Include="Admin\CSS\layout.css" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Images\breadcrumb_divider.png" />
+    <Content Include="Admin\Images\btn_submit.png" />
+    <Content Include="Admin\Images\btn_submit_2.png" />
+    <Content Include="Admin\Images\btn_view_site.png" />
+    <Content Include="Admin\Images\header_bg.png" />
+    <Content Include="Admin\Images\header_shadow.png" />
+    <Content Include="Admin\Images\icn_add_user.png" />
+    <Content Include="Admin\Images\icn_alert_error.png" />
+    <Content Include="Admin\Images\icn_alert_info.png" />
+    <Content Include="Admin\Images\icn_alert_success.png" />
+    <Content Include="Admin\Images\icn_alert_warning.png" />
+    <Content Include="Admin\Images\icn_audio.png" />
+    <Content Include="Admin\Images\icn_categories.png" />
+    <Content Include="Admin\Images\icn_edit.png" />
+    <Content Include="Admin\Images\icn_edit_article.png" />
+    <Content Include="Admin\Images\icn_folder.png" />
+    <Content Include="Admin\Images\icn_jump_back.png" />
+    <Content Include="Admin\Images\icn_logout.png" />
+    <Content Include="Admin\Images\icn_new_article.png" />
+    <Content Include="Admin\Images\icn_photo.png" />
+    <Content Include="Admin\Images\icn_profile.png" />
+    <Content Include="Admin\Images\icn_search.png" />
+    <Content Include="Admin\Images\icn_security.png" />
+    <Content Include="Admin\Images\icn_settings.png" />
+    <Content Include="Admin\Images\icn_tags.png" />
+    <Content Include="Admin\Images\icn_trash.png" />
+    <Content Include="Admin\Images\icn_user.png" />
+    <Content Include="Admin\Images\icn_video.png" />
+    <Content Include="Admin\Images\icn_view_users.png" />
+    <Content Include="Admin\Images\module_footer_bg.png" />
+    <Content Include="Admin\Images\post_message.png" />
+    <Content Include="Admin\Images\secondary_bar.png" />
+    <Content Include="Admin\Images\secondary_bar_shadow.png" />
+    <Content Include="Admin\Images\sidebar.png" />
+    <Content Include="Admin\Images\sidebar_divider.png" />
+    <Content Include="Admin\Images\sidebar_shadow.png" />
+    <Content Include="Admin\Images\table_sorter_header.png" />
+    <Content Include="Admin\index.html" />
+    <Content Include="Admin\JS\hideshow.js" />
+    <Content Include="Admin\JS\jquery-1.5.2.min.js" />
+    <Content Include="Admin\JS\jquery.equalHeight.js" />
+    <Content Include="Admin\JS\jquery.tablesorter.min.js" />
     <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Messages.aspx" />
     <Content Include="Admin\NewTopic.aspx" />
-    <Content Include="Admin\Seting.aspx" />
+    <Content Include="Admin\Setting.aspx" />
+    <Content Include="Admin\Stats.aspx" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\CHANGES.html" />
     <Content Include="ckeditor\ckeditor.js" />
@@ -901,6 +950,27 @@
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Alert.aspx.cs">
+      <DependentUpon>Alert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Alert.aspx.designer.cs">
+      <DependentUpon>Alert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Basic_Styles.aspx.cs">
+      <DependentUpon>Basic_Styles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Basic_Styles.aspx.designer.cs">
+      <DependentUpon>Basic_Styles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Content_Manager.aspx.cs">
+      <DependentUpon>Content_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Content_Manager.aspx.designer.cs">
+      <DependentUpon>Content_Manager.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -915,6 +985,13 @@
     <Compile Include="Admin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Messages.aspx.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Messages.aspx.designer.cs">
+      <DependentUpon>Messages.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\NewTopic.aspx.cs">
       <DependentUpon>NewTopic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -922,12 +999,19 @@
     <Compile Include="Admin\NewTopic.aspx.designer.cs">
       <DependentUpon>NewTopic.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Seting.aspx.cs">
-      <DependentUpon>Seting.aspx</DependentUpon>
+    <Compile Include="Admin\Setting.aspx.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Seting.aspx.designer.cs">
-      <DependentUpon>Seting.aspx</DependentUpon>
+    <Compile Include="Admin\Setting.aspx.designer.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Stats.aspx.cs">
+      <DependentUpon>Stats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Stats.aspx.designer.cs">
+      <DependentUpon>Stats.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace nguyenmanhthang.Admin
 {
-    public partial class Seting : System.Web.UI.Page
+    public partial class Stats : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -1,16 +1,40 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewTopic.aspx.cs" Inherits="nguyenmanhthang.Admin.NewTopic" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewTopic.aspx.cs" Inherits="nguyenmanhthang.Admin.NewTopic" MasterPageFile="~/Admin/Admin.Master" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody_Admin" runat="server">
+    <div class="clear"></div>
+    <article class="module width_full">
+		<header><h3>Post New Article</h3></header>
+		<div class="module_content">
+				<fieldset>
+					<label>Post Title</label>
+					<input type="text">
+				</fieldset>
+				<fieldset>
+					<label>Content</label>
+					<textarea rows="12"></textarea>
+				</fieldset>
+				<fieldset style="width:48%; float:left; margin-right: 3%;"> <!-- to make two field float next to one another, adjust values accordingly -->
+					<label>Category</label>
+					<select style="width:92%;">
+						<option>Articles</option>
+						<option>Tutorials</option>
+						<option>Freebies</option>
+					</select>
+				</fieldset>
+				<fieldset style="width:48%; float:left;"> <!-- to make two field float next to one another, adjust values accordingly -->
+					<label>Tags</label>
+					<input type="text" style="width:92%;">
+				</fieldset><div class="clear"></div>
+		</div>
+		<footer>
+			<div class="submit_link">
+				<select>
+					<option>Lưu vào nháp</option>
+					<option>Xuất bản</option>
+				</select>
+				<input type="submit" value="Publish" class="alt_btn">
+				<input type="submit" value="Reset">
+			</div>
+		</footer>
+	</article><!-- end of post new article -->
+</asp:Content>

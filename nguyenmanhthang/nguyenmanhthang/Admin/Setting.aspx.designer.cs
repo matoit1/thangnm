@@ -10,6 +10,6 @@
 namespace nguyenmanhthang.Admin {
     
     
-    public partial class Default {
+    public partial class Setting {
     }
 }

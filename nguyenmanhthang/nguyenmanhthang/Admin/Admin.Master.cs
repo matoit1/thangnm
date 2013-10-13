@@ -13,29 +13,29 @@ namespace nguyenmanhthang.Admin
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                if (Request.Cookies["administrator"] == null)
-                {
-                    Session["url1"] = Request.Url.AbsolutePath;
-                    Response.Redirect("~/Accounts/Login.aspx");
-                }
-                DataSet ds = AccountsBO.getAccountsbyUsername(Request.Cookies["administrator"].Value);
-                imgAvatar.ImageUrl = ds.Tables[0].Rows[0]["Accounts_LinkAvatar"].ToString(); ;
-                lblWelcome.Text = "   Hi, " + ds.Tables[0].Rows[0]["Accounts_Fullname"].ToString(); ;// xuất lời chào.
-                hpEditAccount.NavigateUrl = "~/Admin/Edit/EditAccounts.aspx?Accounts_Username=" + Request.Cookies["administrator"].Value;
-            }
-            catch
-            {
-                Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
-                Response.Redirect("~/Accounts/Login.aspx");
-            }
+            //try
+            //{
+            //    if (Request.Cookies["administrator"] == null)
+            //    {
+            //        Session["url1"] = Request.Url.AbsolutePath;
+            //        Response.Redirect("~/Accounts/Login.aspx");
+            //    }
+            //    DataSet ds = AccountsBO.getAccountsbyUsername(Request.Cookies["administrator"].Value);
+            //    imgAvatar.ImageUrl = ds.Tables[0].Rows[0]["Accounts_LinkAvatar"].ToString(); ;
+            //    lblWelcome.Text = "   Hi, " + ds.Tables[0].Rows[0]["Accounts_Fullname"].ToString(); ;// xuất lời chào.
+            //    hpEditAccount.NavigateUrl = "~/Admin/Edit/EditAccounts.aspx?Accounts_Username=" + Request.Cookies["administrator"].Value;
+            //}
+            //catch
+            //{
+            //    Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
+            //    Response.Redirect("~/Accounts/Login.aspx");
+            //}
         }
 
-        protected void lbtnLogout_Click(object sender, EventArgs e)
-        {
-            Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
-            Response.Redirect(Request.Url.AbsolutePath);
-        }
+        //protected void lbtnLogout_Click(object sender, EventArgs e)
+        //{
+        //    Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
+        //    Response.Redirect(Request.Url.AbsolutePath);
+        //}
     }
 }
