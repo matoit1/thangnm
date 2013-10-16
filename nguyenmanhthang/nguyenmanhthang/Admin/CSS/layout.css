@@ -33,13 +33,13 @@ text-decoration: underline;
 
 /* Header */
 
-header#header {
+#header {
 height: 55px;
 width: 100%;
 background: #222222 url(../images/header_bg.png) repeat-x;
 }
 
-header#header h1.site_title, header#header h2.section_title {
+#header h1.site_title, h2.section_title {
 float: left;
 margin: 0;
 font-size: 22px;
@@ -54,12 +54,12 @@ color: #fff;
 text-shadow: 0 -1px 0 #000;
 }
 
-header#header h1.site_title a {
+#header h1.site_title a {
 color: #fff;
 text-decoration: none;
 }
 
-header#header h2.section_title {
+#header h2.section_title {
 text-align: center;
 text-indent: 4.5%;
 width: 68%;
@@ -89,13 +89,13 @@ background-position: 0 -27px;
 
 /* Secondary Header Bar */
 
-section#secondary_bar {
+#secondary_bar {
 height: 38px;
 width: 100%;
 background: #F1F1F4 url(../images/secondary_bar.png) repeat-x;
 }
 
-section#secondary_bar .user {
+#secondary_bar .user {
 float: left;
 width: 23%;
 height: 38px;
@@ -136,14 +136,14 @@ background: url(../images/icn_logout.png) center no-repeat;
 
 /* Breadcrumbs */
 
-section#secondary_bar .breadcrumbs_container {
+#secondary_bar .breadcrumbs_container {
 float: left;
 width: 77%;
 background: url(../images/secondary_bar_shadow.png) no-repeat left top;
 height: 38px;
 }
 
-article.breadcrumbs {
+.breadcrumbs {
 float: left;
 padding: 0 10px;
 border: 1px solid #ccc;
@@ -192,7 +192,7 @@ margin: 0 5px;
 
 /* Sidebar */
 
-aside#sidebar {
+#sidebar {
 width: 23%;
 background: #E0E0E3 url(../images/sidebar.png) repeat;
 float: left;
@@ -353,7 +353,7 @@ text-decoration: none;
 text-decoration: underline;
 }
 
-#sidebar footer {
+#sidebar #footer {
 margin-top: 20%;
 }
 
@@ -361,7 +361,7 @@ margin-top: 20%;
 /* Main Content */
 
 
-section#main {
+#main {
 width: 77%;
 min-height: 500px;
 background: url(../images/sidebar_shadow.png) repeat-y left top;
@@ -396,7 +396,7 @@ width: 90%;
 float: left;
 }
 
-.module header {
+.module .header {
 height: 38px;
 width: 100%;
 background: #F1F1F4 url(../images/secondary_bar.png) repeat-x;
@@ -405,7 +405,7 @@ background: #F1F1F4 url(../images/secondary_bar.png) repeat-x;
 border-top-left-radius: 5px; border-top-right-radius: 5px;
 }
 
-.module footer {
+.module #footer {
 height: 32px;
 width: 100%;
 border-top: 1px solid #9CA1B0;
@@ -683,7 +683,7 @@ overflow-y: scroll;
 
 /* New/Edit Article Module */
 
-fieldset {
+.module_content .fieldset {
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
@@ -693,7 +693,7 @@ padding: 1% 0%;
 margin: 10px 0;
 }
 
-fieldset label {
+.module_content p {
 display: block;
 float: left;
 width: 200px;
@@ -706,7 +706,7 @@ margin: -5px 0 5px 0;
 text-transform: uppercase;
 }
 
-fieldset input[type=text] {
+.module_content input[type=text] {
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
@@ -725,7 +725,7 @@ width: 96%;
 margin: 0 10px;
 }
 
-fieldset input[type=text]:focus {
+.module_content input[type=text]:focus {
 outline: none;
 border: 1px solid #77BACE;
 -webkit-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
@@ -733,7 +733,7 @@ border: 1px solid #77BACE;
 box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
 }
 
-fieldset select {
+.module_content select {
 width: 96%;
 margin: 0 10px;
 border: 1px solid #bbb;
@@ -741,7 +741,7 @@ height: 20px;
 color: #666666;
 }
 
-fieldset textarea {
+.module_content textarea {
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
@@ -759,7 +759,7 @@ width: 96%;
 margin: 0 10px;
 }
 
-fieldset textarea:focus {
+.module_content textarea:focus {
 outline: none;
 border: 1px solid #77BACE;
 -webkit-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;

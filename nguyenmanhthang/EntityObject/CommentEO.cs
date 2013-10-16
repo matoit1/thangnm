@@ -7,23 +7,24 @@ namespace EntityObject
 {
     public class CommentEO
     {
-        private int _Comment_ID;
-        private int _Topic_ID;
+        private Int64 _Comment_ID;
+        private Int64 _Topic_ID;
         private string _Comment_Name;
         private string _Comment_Email;
         private string _Comment_Website;
         private string _Comment_Content;
+        private bool _Comment_Status;
         private DateTime _Comment_LastUpdate;
 
         // 1. Xay dung cac phuong thuc set, get cho Comment_ID
-        public int Comment_ID
+        public Int64 Comment_ID
         {
             get { return this._Comment_ID; }
             set { this._Comment_ID = value; }
         }
 
         // 2. Xay dung cac phuong thuc set, get cho Topic_ID
-        public int Topic_ID
+        public Int64 Topic_ID
         {
             get { return this._Topic_ID; }
             set { this._Topic_ID = value; }
@@ -57,7 +58,14 @@ namespace EntityObject
             set { this._Comment_Content = value; }
         }
 
-        // 7. Xay dung cac phuong thuc set, get cho Comment_LastUpdate
+        // 7. Xay dung cac phuong thuc set, get cho Comment_Status
+        public bool Comment_Status
+        {
+            get { return this._Comment_Status; }
+            set { this._Comment_Status = value; }
+        }
+
+        // 8. Xay dung cac phuong thuc set, get cho Comment_LastUpdate
         public DateTime Comment_LastUpdate
         {
             get { return this._Comment_LastUpdate; }

@@ -49,66 +49,68 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <header id="header">
-		<hgroup>
+    <div id="header">
+		<div>
 			<h1 class="site_title"><a href="index.html">Website Admin</a></h1>
 			<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><a href="http://nguyenmanhthang.tk">View Site</a></div>
-		</hgroup>
-	</header> <!-- end of header bar -->
+		</div>
+	</div> <!-- end of header bar -->
 	
-	<section id="secondary_bar">
+	<div id="secondary_bar">
 		<div class="user">
 			<p>John Doe (<a href="#">3 Messages</a>)</p>
 			<!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
 		</div>
 		<div class="breadcrumbs_container">
-			<article class="breadcrumbs"><a href="index.html">Website Admin</a> <div class="breadcrumb_divider"></div> <a class="current">Dashboard</a></article>
+			<div class="breadcrumbs"><a href="index.html">Website Admin</a> <div class="breadcrumb_divider"></div> <a class="current">Dashboard</a></div>
 		</div>
-	</section><!-- end of secondary bar -->
+	</div><!-- end of secondary bar -->
 	
-	<aside id="sidebar" class="column">
-		<form class="quick_search">
+	<div id="sidebar" class="column">
+<%--		<form class="quick_search">
 			<input type="text" value="Quick Search" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
-		</form>
+		</form>--%>
 		<hr/>
 		<h3>Quản lý Nội dung</h3>
 		<ul class="toggle">
-			<li class="icn_new_article"><asp:HyperLink ID="hplNewTopic" NavigateUrl="~/Admin/NewTopic.aspx" runat="server">Bài viết mới</asp:HyperLink></li>
-			<li class="icn_edit_article"><a href="~/Admin/NewTopic.aspx?Edit=True">Sửa bài viết</a></li>
-			<li class="icn_categories"><a href="#">Thể loại</a></li>
-			<li class="icn_tags"><a href="#">Thẻ</a></li>
+			<li class="icn_new_article"><asp:HyperLink ID="hplNewTopic" NavigateUrl="~/Admin/New_Topic.aspx" runat="server">Bài viết mới</asp:HyperLink></li>
+			<li class="icn_edit_article"><asp:HyperLink ID="HyperLink2" NavigateUrl="~/Admin/New_Topic.aspx?Edit=True" runat="server">Sửa bài viết</asp:HyperLink></li>
+			<li class="icn_categories"><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Admin/Category.aspx" runat="server">Thể loại</asp:HyperLink></li>
+			<li class="icn_tags"><asp:HyperLink ID="HyperLink12" NavigateUrl="~/Admin/Category.aspx" runat="server">Thẻ</asp:HyperLink></li>
 		</ul>
 		<h3>Quản lý Tài khoản</h3>
 		<ul class="toggle">
-			<li class="icn_add_user"><a href="#">Thêm tài khoản mới</a></li>
-			<li class="icn_view_users"><a href="#">Quản lý Tài khoản</a></li>
-			<li class="icn_profile"><a href="#">Thông tin tài khoản của bạn</a></li>
+			<li class="icn_add_user"><asp:HyperLink ID="HyperLink4" NavigateUrl="~/Admin/Users.aspx?Active=1" runat="server">Thêm tài khoản mới</asp:HyperLink></li>
+			<li class="icn_view_users"><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Admin/Users.aspx?Active=1" runat="server">Quản lý Tài khoản</asp:HyperLink></li>
+			<li class="icn_profile"><asp:HyperLink ID="HyperLink6" NavigateUrl="~/Admin/Users.aspx?Active=1" runat="server">Thông tin tài khoản của bạn</asp:HyperLink></li>
 		</ul>
 		<h3>Quản lý Đa phương tiện</h3>
 		<ul class="toggle">
-			<li class="icn_folder"><a href="#">Quản lý File</a></li>
-			<li class="icn_photo"><a href="#">Ảnh</a></li>
-			<li class="icn_audio"><a href="#">Nhạc</a></li>
-			<li class="icn_video"><a href="#">Video</a></li>
+			<li class="icn_folder"><asp:HyperLink ID="HyperLink7" NavigateUrl="~/Admin/File_Manager.aspx" runat="server">Quản lý File</asp:HyperLink></li>
+			<li class="icn_photo"><asp:HyperLink ID="HyperLink8" NavigateUrl="~/Admin/File_Manager.aspx" runat="server">Ảnh</asp:HyperLink></li>
+			<li class="icn_audio"><asp:HyperLink ID="HyperLink9" NavigateUrl="~/Admin/File_Manager.aspx" runat="server">Nhạc</asp:HyperLink></li>
+			<li class="icn_video"><asp:HyperLink ID="HyperLink10" NavigateUrl="~/Admin/File_Manager.aspx" runat="server">Video</asp:HyperLink></li>
 		</ul>
 		<h3>Quản lý Trang Admin</h3>
 		<ul class="toggle">
 			<li class="icn_settings"><asp:HyperLink ID="HyperLink1" NavigateUrl="~/Admin/Setting.aspx" runat="server">Tùy chọn</asp:HyperLink></li>
-			<li class="icn_security"><a href="#">Bảo mật</a></li>
-			<li class="icn_jump_back"><a href="#">Đăng xuất</a></li>
+			<li class="icn_security"><asp:HyperLink ID="HyperLink11" NavigateUrl="~/Admin/Security.aspx" runat="server">Bảo mật</asp:HyperLink></li>
+			<li class="icn_jump_back"><asp:LinkButton ID="lbtnLogout" runat="server" 
+                    onclick="lbtnLogout_Click">Đăng xuất</asp:LinkButton></li>
 		</ul>
 		
-		<footer>
+		<div class="footer">
 			<hr />
 			<p><strong>Copyright &copy; 2013 ThangNM</strong></p>
             <p>Project Management <a href="http://www.fis.com.vn" title="FPT Information System"> FPT Information System</a></p>
 			<p>Le Hai Thanh & Hoang Quang Huy</p>
-		</footer>
-	</aside><!-- end of sidebar -->
+            <br /><br /><br />
+		</div>
+	</div><!-- end of sidebar -->
 	
-	<section id="main" class="column">
+	<div id="main" class="column">
 		<asp:ContentPlaceHolder ID="cphBody_Admin" runat="server"></asp:ContentPlaceHolder>
-	</section>
+	</div>
     </form>
 </body>
 </html>
