@@ -683,7 +683,7 @@ overflow-y: scroll;
 
 /* New/Edit Article Module */
 
-.module_content .fieldset {
+fieldset {
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
