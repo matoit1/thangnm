@@ -7,17 +7,18 @@ namespace EntityObject
 {
     public class TopicEO
     {
-        private int _Topic_ID;
+        private Int64 _Topic_ID;
         private int _Topic_Author;
         private string _Topic_Title;
         private string _Topic_Category;
         private string _Topic_Tag;
         private string _Topic_Content;
         private int _Topic_Visit;
+        private bool _Topic_Status;
         private DateTime _Topic_LastUpdate;
 
         // 1. Xay dung cac phuong thuc set, get cho Topic_ID
-        public int Topic_ID
+        public Int64 Topic_ID
         {
             get { return this._Topic_ID; }
             set { this._Topic_ID = value; }
@@ -65,7 +66,14 @@ namespace EntityObject
             set { this._Topic_Visit = value; }
         }
 
-        // 8. Xay dung cac phuong thuc set, get cho _Topic_LastUpdate
+        // 8. Xay dung cac phuong thuc set, get cho Topic_Status
+        public bool Topic_Status
+        {
+            get { return this._Topic_Status; }
+            set { this._Topic_Status = value; }
+        }
+
+        // 9. Xay dung cac phuong thuc set, get cho _Topic_LastUpdate
         public DateTime Topic_LastUpdate
         {
             get { return this._Topic_LastUpdate; }

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace nguyenmanhthang.Admin
+namespace nguyenmanhthang
 {
-    public partial class NewTopic : System.Web.UI.Page
+    public partial class Security : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

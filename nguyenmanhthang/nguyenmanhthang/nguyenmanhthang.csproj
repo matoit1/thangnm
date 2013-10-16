@@ -33,6 +33,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.28318, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.2.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder, Version=2.0.2.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="DevNET.URLRewriter, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\DevNET.URLRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="FCAP.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c562d3c78ff4d26e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FCAP.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -55,6 +74,7 @@
     <Content Include="Admin\CSS\ie.css" />
     <Content Include="Admin\CSS\layout.css" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\File_Manager.aspx" />
     <Content Include="Admin\Images\breadcrumb_divider.png" />
     <Content Include="Admin\Images\btn_submit.png" />
     <Content Include="Admin\Images\btn_submit_2.png" />
@@ -99,9 +119,11 @@
     <Content Include="Admin\JS\jquery.tablesorter.min.js" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\Messages.aspx" />
-    <Content Include="Admin\NewTopic.aspx" />
+    <Content Include="Admin\New_Topic.aspx" />
     <Content Include="Admin\Setting.aspx" />
     <Content Include="Admin\Stats.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Admin\Category.aspx" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\CHANGES.html" />
     <Content Include="ckeditor\ckeditor.js" />
@@ -927,10 +949,17 @@
     <Content Include="Info\Gioi_thieu.aspx" />
     <Content Include="Info\Lien_ket_website_blog.aspx" />
     <Content Include="Info\Sitemap.aspx" />
+    <Content Include="Library\AjaxControlToolkit.dll" />
+    <Content Include="Library\CKEditor.NET.dll" />
+    <Content Include="Library\CKFinder.dll" />
+    <Content Include="Library\DevNET.URLRewriter.dll" />
+    <Content Include="Library\FCAP.Controls.dll" />
+    <Content Include="Library\Microsoft.Sharepoint.Sandbox.dll" />
     <Content Include="PhanMem\Default.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Admin\Security.aspx" />
     <Content Include="ThuThuat\Default.aspx" />
     <Content Include="UngDungOnline\Default.aspx" />
     <Content Include="Upload\Default.aspx" />
@@ -978,6 +1007,13 @@
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\File_Manager.aspx.cs">
+      <DependentUpon>File_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\File_Manager.aspx.designer.cs">
+      <DependentUpon>File_Manager.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -992,12 +1028,12 @@
     <Compile Include="Admin\Messages.aspx.designer.cs">
       <DependentUpon>Messages.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\NewTopic.aspx.cs">
-      <DependentUpon>NewTopic.aspx</DependentUpon>
+    <Compile Include="Admin\New_Topic.aspx.cs">
+      <DependentUpon>New_Topic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\NewTopic.aspx.designer.cs">
-      <DependentUpon>NewTopic.aspx</DependentUpon>
+    <Compile Include="Admin\New_Topic.aspx.designer.cs">
+      <DependentUpon>New_Topic.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Setting.aspx.cs">
       <DependentUpon>Setting.aspx</DependentUpon>
@@ -1012,6 +1048,20 @@
     </Compile>
     <Compile Include="Admin\Stats.aspx.designer.cs">
       <DependentUpon>Stats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -1093,6 +1143,13 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin\Security.aspx.cs">
+      <DependentUpon>Security.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Security.aspx.designer.cs">
+      <DependentUpon>Security.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ThuThuat\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

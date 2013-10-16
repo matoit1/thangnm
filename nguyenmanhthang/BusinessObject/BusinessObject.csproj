@@ -40,12 +40,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountsBO.cs" />
+    <Compile Include="CommentBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TopicBO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessObject\DataAccessObject.csproj">
       <Project>{E2CADB93-ACB9-42FB-A1B5-AAC01F9614F5}</Project>
       <Name>DataAccessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityObject\EntityObject.csproj">
+      <Project>{D32F71A4-174D-4E87-8CED-8CB2E6E0D4D3}</Project>
+      <Name>EntityObject</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

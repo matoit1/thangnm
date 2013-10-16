@@ -32,10 +32,10 @@ namespace nguyenmanhthang.Admin
             //}
         }
 
-        //protected void lbtnLogout_Click(object sender, EventArgs e)
-        //{
-        //    Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
-        //    Response.Redirect(Request.Url.AbsolutePath);
-        //}
+        protected void lbtnLogout_Click(object sender, EventArgs e)
+        {
+            Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
+            Response.Redirect(Request.Url.AbsolutePath);
+        }
     }
 }
