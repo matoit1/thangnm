@@ -1,16 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="File_Manager.aspx.cs" Inherits="nguyenmanhthang.Admin.File_Manager" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="File_Manager.aspx.cs" Inherits="nguyenmanhthang.Admin.File_Manager" MasterPageFile="~/Admin/Admin.Master" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody_Admin" runat="server">
+    <h4 class="alert_info">Welcome to the free MediaLoot admin panel template, this could be an informative message.</h4>
+	<h4 class="alert_warning">A Warning Alert</h4>
+	<h4 class="alert_error">An Error Message</h4>
+	<h4 class="alert_success">A Success Message</h4>
+	<div class="spacer"></div>
+</asp:Content>

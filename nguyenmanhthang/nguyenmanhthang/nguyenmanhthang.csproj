@@ -112,7 +112,6 @@
     <Content Include="Admin\Images\sidebar_divider.png" />
     <Content Include="Admin\Images\sidebar_shadow.png" />
     <Content Include="Admin\Images\table_sorter_header.png" />
-    <Content Include="Admin\index.html" />
     <Content Include="Admin\JS\hideshow.js" />
     <Content Include="Admin\JS\jquery-1.5.2.min.js" />
     <Content Include="Admin\JS\jquery.equalHeight.js" />
@@ -939,6 +938,7 @@
     <Content Include="Css\Product\ZoomImage.css" />
     <Content Include="Css\public.css" />
     <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
     <Content Include="GiaiTri\Default.aspx" />
     <Content Include="HocTap\Default.aspx" />
     <Content Include="Images\logo.gif" />
