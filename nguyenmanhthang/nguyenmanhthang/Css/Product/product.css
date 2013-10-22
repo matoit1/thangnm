@@ -1,11 +1,11 @@
 /******  Settings    ****/
-body {background:url("theme/bg_footer.jpg") no-repeat scroll center bottom transparent;}
+body{ background-color:#F7F7F7;}
 
 /******   wrapper Settings    ****/
-#wrapper {margin:-1px auto; width:1030px;}
+#wrapper {margin:-1px auto; width:1030px; background-color:#FFFFFF;}
 
 /******   header Settings    ****/
-#bar {line-height:32px; background:#3883cc; position:absolute; width:100%; margin-top:80px;}
+#bar {line-height:50px; background:#3E3E3E; position:absolute; width:100%; margin-top:80px; z-index: 0}
 #header {height:80px;}
 #logo {float:left; text-align:center; width:250px; position:absolute;}
 #search {margin-left:300px; float:left; width:450px; position:absolute;}
@@ -15,7 +15,7 @@ body {background:url("theme/bg_footer.jpg") no-repeat scroll center bottom trans
 #infoAccount .Text {margin-left:5px; padding-top:8px; display:inline}
 
 /******  content Settings    ****/
-#content {margin-top:30px; min-height:1892px; border-right:1px ridge seagreen; background-color:#FFCCFF;}
+#content {margin-top:50px; min-height:1892px;}
 
 /*  Login Settings    */
 #login {border:2px ridge red; margin:5px 5px 5px 5px; padding:5px 5px 5px 5px; width:224px; height:225px;}
@@ -56,19 +56,12 @@ body {background:url("theme/bg_footer.jpg") no-repeat scroll center bottom trans
 #primary #welcome {width:735px; padding:5px 5px 5px 5px;}
 
 /******  footer Settings    ****/
-#footer {height:450px; position:relative;}
-#footer div {position:absolute;}
-#footer a {color:#24445A}
-#footer h3 {color:#404040; font-size:14pt; margin:0 0 8px; text-align:left;}
-#footer ol,ul {list-style:none outside none;}
-#footer #footer-contact {left:100px; top:25px; width:369px;}
-#footer-contact input[type="text"] {-moz-border-bottom-colors:none; -moz-border-left-colors:none; -moz-border-right-colors:none; -moz-border-top-colors:none; background-color:transparent; border-color:-moz-use-text-color -moz-use-text-color #542910; border-image:none; border-style:none none dashed; border-width:medium medium 1px; color:#542910; margin:0 0 5px; width:250px;}
-#footer-contact textarea {background-color:transparent; border:medium none; color:#542910; font-family:inherit;overflow:hidden;}
-#footer-usage {left:100px; top:200px; width:400px;}
-#footer-copyright {color:#505050; font-size:9pt; left:100px; top:390px;}
-#footer-copyright img {margin:0 0 -2px;}
-#footer-sitemap {left:874px; text-align:right; top:25px;}
-#footer-sitemap li {margin:8px 0 0;}
+#footer-container {bottom:0; clear:both; left:0; min-width:1024px; width:100%; margin:0; outline:medium none; color:#135181; position:static; padding-bottom:0px; background:url("bg_footer_container.png") repeat-x scroll 0 33px transparent;}
+#footer {overflow:hidden; height:60px; clear:left; color:#FFFFFF; margin:0 auto; width:924px; outline:medium none; text-align:left; font-size:11px; padding:212px 50px 15px 50px; background:url("bg_footer.png")  no-repeat scroll center top transparent;}
+#footer .copy{display:inline; float:left; margin: 5px 0 0 0px; width: 280px; outline:medium-none; padding:0;}
+#footer .service{display:inline; float:left; padding-top:18px; text-align: center; width: 393px; outline:medium-none; margin:0;}
+#footer .share{display:inline; float:left; margin-top: 2px; text-align: right; width: 250px; outline:medium-none; padding:0;}
+#footer a{display:inline;}
 
 /*  cart Settings    */
 #cart {width:200px; height:200px;}
@@ -77,3 +70,20 @@ body {background:url("theme/bg_footer.jpg") no-repeat scroll center bottom trans
 .slideshow {position:absolute; padding:10px;}
 .detail {margin-left:400px; font-size:13px;}
 .detail strong {font-size:16px; color:#cc0099; text-align:center;}
+
+.menu
+{
+    margin-left: auto;
+    margin-right: auto;
+    width:1024px;
+}
+
+.menu .menuleft
+{
+    float:left;
+}
+
+.menu .menuright
+{
+    float:right;
+}

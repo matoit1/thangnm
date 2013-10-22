@@ -202,7 +202,7 @@ namespace DataAccessObject
         }
 
         // 8. Accounts_SelectListbyAccounts_Username
-        public static DataSet Accounts_SelectListbyAccounts_Username(AccountsEO _AccountsEO)
+        public static DataSet Accounts_SelectInfoByAccounts_Username(AccountsEO _AccountsEO)
         {
             DataSet ds = null;
             using (SqlConnection conn = Connection.getConnection())
@@ -210,7 +210,7 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectListbyAccounts_Username", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectInfoByAccounts_Username", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
                     ds = new DataSet();
@@ -242,6 +242,31 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Email", _AccountsEO.Accounts_Email));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Permission", _AccountsEO.Accounts_Permission));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Address", _AccountsEO.Accounts_Address));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
+        // 10. Accounts_GetAccounts_IDbyAccounts_Username
+        public static DataSet Accounts_GetAccounts_IDbyAccounts_Username(AccountsEO _AccountsEO)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_GetAccounts_IDbyAccounts_Username", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

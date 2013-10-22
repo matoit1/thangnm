@@ -11,11 +11,12 @@ namespace BusinessObject
     public class TopicBO
     {
         // 1. Topic_Insert
-        public static bool Comment_Insert(int Topic_Author, string Topic_Title, string Topic_Category, string Topic_Tag, string Topic_Content, int Topic_Visit, bool Topic_Status)
+        public static bool Topic_Insert(int Topic_Author, string Topic_Title, string Topic_LinkImage, string Topic_Category, string Topic_Tag, string Topic_Content, int Topic_Visit, bool Topic_Status)
         {
             TopicEO _TopicEO = new TopicEO();
             _TopicEO.Topic_Author = Topic_Author;
             _TopicEO.Topic_Title = Topic_Title;
+            _TopicEO.Topic_LinkImage = Topic_LinkImage;
             _TopicEO.Topic_Category = Topic_Category;
             _TopicEO.Topic_Tag = Topic_Tag;
             _TopicEO.Topic_Content = Topic_Content;
@@ -84,6 +85,26 @@ namespace BusinessObject
             _TopicEO.Topic_ID = Topic_ID;
             DataSet ds = TopicDAO.Topic_getTopicbyTopic_ID(_TopicEO);
             return ds;
+        }
+
+        // 7. Topic_SelectListToShow
+        public static DataSet Topic_SelectListToShow(bool Topic_Status, int Quantity)
+        {
+            TopicEO _TopicEO = new TopicEO();
+            _TopicEO.Topic_Status = Topic_Status;
+            DataSet ds = TopicDAO.Topic_SelectListToShow(_TopicEO, Quantity);
+            return ds;
+        }
+
+        // 8. Topic_ASC_Visit
+        public static bool Topic_ASC_Visit(Int64 Topic_ID)
+        {
+            TopicEO _TopicEO = new TopicEO();
+            _TopicEO.Topic_ID = Topic_ID;
+            if (TopicDAO.Topic_ASC_Visit(_TopicEO))
+                return true;
+            else
+                return false;
         }
     }
 }

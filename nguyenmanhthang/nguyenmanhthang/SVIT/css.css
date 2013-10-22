@@ -1,0 +1,99 @@
+﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td
+{
+    margin:0;
+    padding:0;
+}
+
+div, p, table, td, tr
+{
+    vertical-align:top;
+}
+
+*, .textbox, textarea, select
+{
+    border-radius: 0 0 0 0;
+}
+
+.topheader
+{
+    background-color: #464646;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    height: 40px;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    text-transform: none;
+    top: 0;
+    vertical-align: top;
+    width: 100%;
+    z-index: 999;
+}
+
+.topheader .inner {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+.topheader .inner .topleftmenu {
+    display: inline-block;
+    float: left;
+}
+
+.topheader .inner .topleftmenu a {
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #121212;
+}
+
+.topheader .inner .toprightmenu {
+    color: #FFFFFF;
+    float: right;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    text-align: right;
+}
+
+.topheader .inner .toprightmenu .username {
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #121212;
+}
+
+.clear {
+    border: 0 none;
+    clear: both;
+    display: block;
+    height: 0;
+    line-height: 0;
+}
+
+body 
+{
+    background: url("http://sinhvienit.net/forum/skin/SinhVienIT.Net-IT_Pro-Ver4/images/main-bg.gif") repeat scroll 0 0 #121212;
+    font: Arial,Helvetica,sans-serif;
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    color:#3E3E3E;
+    font-size:13px;
+    line-height:1.23;
+    min-width:650px;
+    width:auto;
+    
+}

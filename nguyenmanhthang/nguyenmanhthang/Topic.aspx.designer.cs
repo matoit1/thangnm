@@ -7,81 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace nguyenmanhthang.Admin {
+namespace nguyenmanhthang {
     
     
-    public partial class Default {
+    public partial class Topic {
         
         /// <summary>
-        /// lblMessage control.
+        /// pnlDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Panel pnlDetail;
         
         /// <summary>
-        /// txtTopic_Title control.
+        /// rptInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Title;
+        protected global::System.Web.UI.WebControls.Repeater rptInfo;
         
         /// <summary>
-        /// txtTopic_Content control.
+        /// rptTag control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CKEditor.NET.CKEditorControl txtTopic_Content;
+        protected global::System.Web.UI.WebControls.Repeater rptTag;
         
         /// <summary>
-        /// txtTopic_LinkImage control.
+        /// pnlComment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_LinkImage;
+        protected global::System.Web.UI.WebControls.Panel pnlComment;
         
         /// <summary>
-        /// ddlTopic_Category control.
+        /// pnlAll control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Category;
+        protected global::System.Web.UI.WebControls.Panel pnlAll;
         
         /// <summary>
-        /// txtTopic_Tag control.
+        /// lblMore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Tag;
+        protected global::System.Web.UI.WebControls.Label lblMore;
         
         /// <summary>
-        /// ddlTopic_Status control.
+        /// rptTopic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Status;
-        
-        /// <summary>
-        /// btnPublish control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPublish;
+        protected global::System.Web.UI.WebControls.Repeater rptTopic;
     }
 }
