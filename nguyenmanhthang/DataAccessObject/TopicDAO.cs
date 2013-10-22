@@ -22,6 +22,7 @@ namespace DataAccessObject
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Topic_Author", _TopicEO.Topic_Author));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Title", _TopicEO.Topic_Title));
+                    cmd.Parameters.Add(new SqlParameter("@Topic_LinkImage", _TopicEO.Topic_LinkImage));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Category", _TopicEO.Topic_Category));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Tag", _TopicEO.Topic_Tag));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Content", _TopicEO.Topic_Content));
@@ -162,6 +163,55 @@ namespace DataAccessObject
                 {
                     conn.Close();
                     return ds;
+                }
+            }
+        }
+
+        // 7. Topic_SelectListToShow
+        public static DataSet Topic_SelectListToShow(TopicEO _TopicEO, int Quantity)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("Topic_SelectListToShow", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Topic_Status", _TopicEO.Topic_Status));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Quantity", Quantity));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
+        // 8. Topic_ASC_Visit
+        public static bool Topic_ASC_Visit(TopicEO _TopicEO)
+        {
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("Topic_ASC_Visit", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Topic_ID", _TopicEO.Topic_ID));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
                 }
             }
         }

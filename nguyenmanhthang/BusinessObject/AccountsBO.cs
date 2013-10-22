@@ -113,12 +113,12 @@ namespace BusinessObject
                 return false;
         }
 
-        // 8. Accounts_SelectListbyAccounts_Username
-        public static DataSet Accounts_SelectListbyAccounts_Username(string Accounts_Username)
+        // 8. Accounts_SelectInfoByAccounts_Username
+        public static DataSet Accounts_SelectInfoByAccounts_Username(string Accounts_Username)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
-            DataSet ds = AccountsDAO.Accounts_SelectListbyAccounts_Username(_AccountsEO);
+            DataSet ds = AccountsDAO.Accounts_SelectInfoByAccounts_Username(_AccountsEO);
             return ds;
         }
 
@@ -135,6 +135,13 @@ namespace BusinessObject
             return ds;
         }
 
-
+        // 10. Accounts_GetAccounts_IDbyAccounts_Username
+        public static DataSet Accounts_GetAccounts_IDbyAccounts_Username(string Accounts_Username)
+        {
+            AccountsEO _AccountsEO = new AccountsEO();
+            _AccountsEO.Accounts_Username = Accounts_Username;
+            DataSet ds = AccountsDAO.Accounts_SearchAccounts(_AccountsEO);
+            return ds;
+        }
     }
 }

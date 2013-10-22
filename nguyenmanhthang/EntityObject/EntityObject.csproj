@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AccountsEO.cs" />
     <Compile Include="CommentEO.cs" />
+    <Compile Include="Common.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TopicEO.cs" />
   </ItemGroup>

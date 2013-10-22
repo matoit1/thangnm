@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody_Admin" runat="server">
     <asp:MultiView ID="mtvUsers" runat="server">
         <asp:View ID="vListUsers" runat="server">
-            <asp:Label ID="lblListTitle" runat="server" Text="Danh sách các tài khoản" class="alert_info"></asp:Label>
+            <asp:Label ID="lblListTitle" runat="server" Text="Danh sách các tài khoản" class="alert_title"></asp:Label>
             <cc1:GridViewExt ID="grvListUser" runat="server" CssClass="mGrid" AutoGenerateCheckBoxColumn="True" AutoGenerateColumns="False"
                 FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="15" DataKeyNames="Accounts_Username"
                 classCheckedRow="" classHoverRow="" ColumnShowOnclick="" EnableModelValidation="True"

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="nguyenmanhthang.Default1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.Master.cs" Inherits="nguyenmanhthang.DefaultMaster" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -15,136 +15,235 @@
     <link rel="author" href="https://plus.google.com/109664385150832451485" />
     <meta name="copyright" content=" © 2013 Copyright ThangNM ™" />
     <!-- CSS & JavaScript -->
-    <link href="../Css/Admin/admin.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/Product/product.css" rel="stylesheet" type="text/css" />
     <link href="../Css/public.css" rel="stylesheet" type="text/css" />
     <link href="../Css/Admin/menucss3.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="wrapper">
-        <div id="header">
-            <div id="menu">
-			    <ul id="css3menu1" class="topmenu">
-                    <li class="toproot"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx"><img src="../Css/Admin/blue_circle - home2.png" alt="Trang chủ" />Trang chủ</asp:HyperLink>
-                        <ul>
-                            <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Info/Tac_gia.aspx">1.1 Tác giả</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Info/Gioi_thieu.aspx">1.2 Giới thiệu</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Info/Dieu_khoan.aspx">1.3 Điều khoản</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Info/Lien_ket_website_blog.aspx">1.4 Liên kết</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Info/Sitemap.aspx">1.5 Sitemap</asp:HyperLink></li>
-                        </ul>
-                    </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Admin/Products.aspx">Học tập</asp:HyperLink>
-                        <ul>
-                            <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/Admin/GroupProducts.aspx">2.1 Lập trình</asp:HyperLink>
-                                <ul>
-                                    <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/Admin/GroupProducts.aspx">2.1.1 Visual Basic</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/Admin/Products.aspx">2.1.2 C/C++/Visual C++</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.1.3 Assembly</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/Admin/Products.aspx">2.1.4 Java</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.1.5 Pascal</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.1.6 SQL/ Access</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.1.7 ASP.NET</asp:HyperLink></li>
-                                </ul>
-                            </li>
-                            <li><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/Admin/Products.aspx">2.2 Thiết kế - Đồ họa</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.3 Công nghệ mạng</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.4 Mobile</asp:HyperLink></li>
-                        </ul>
-                    </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/Admin/Products.aspx">Phần mềm</asp:HyperLink>
-                        <ul>
-                            <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/Admin/PayMethod.aspx">3.1 Hệ điều hành</asp:HyperLink>
-                                <ul>
-                                    <li><asp:HyperLink ID="HyperLink70" runat="server" NavigateUrl="~/Admin/Database.aspx">3.1.1 Windows</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink71" runat="server" NavigateUrl="~/Admin/Setting.aspx">3.1.2 Linux</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink72" runat="server" NavigateUrl="~/Admin/Database.aspx">3.1.3 Ubuntu</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink73" runat="server" NavigateUrl="~/Admin/Database.aspx">3.1.4 Khác ...</asp:HyperLink></li>
-                                </ul>
-                            </li>
-                            <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Admin/NewOrders.aspx">3.2 Bảo mật</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="~/Admin/Orders.aspx">3.3 Văn phòng</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/Admin/PayMethod.aspx">3.1 Portable</asp:HyperLink></li>
-                        </ul>
-                    </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/Admin/Staff.aspx">Thủ thuật</asp:HyperLink>
-                        <ul>
-                            <li><asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="~/Admin/Staff.aspx">4.1 Máy tính</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="~/Admin/Staff.aspx">4.2 Website</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="~/Admin/Customer.aspx">4.3 Facebook</asp:HyperLink>
-                                <ul>
-                                    <li><asp:HyperLink ID="HyperLink67" runat="server" NavigateUrl="~/Admin/Database.aspx">4.3.1 Hướng dẫn vào Facebook</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink68" runat="server" NavigateUrl="~/Admin/Setting.aspx">4.3.2 Auto like Facebook</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink69" runat="server" NavigateUrl="~/Admin/Database.aspx">4.3.3 Facebook Smile Chat</asp:HyperLink></li>
-                                </ul>
-                            </li>
-                            <li><asp:HyperLink ID="HyperLink41" runat="server" NavigateUrl="~/Admin/Staff.aspx">4.4 Yahoo</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink42" runat="server" NavigateUrl="~/Admin/Customer.aspx">4.5 Khác...</asp:HyperLink></li>
-                        </ul>
-                    </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">Giải trí</asp:HyperLink>
-                        <ul>
-                            <li><asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">5.1 Game</asp:HyperLink>
-                                <ul>
-                                    <li><asp:HyperLink ID="HyperLink64" runat="server" NavigateUrl="~/Admin/Database.aspx">5.1.1 Chơi game Online</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink65" runat="server" NavigateUrl="~/Admin/Setting.aspx">5.1.2 Tải game Offline PC</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink66" runat="server" NavigateUrl="~/Admin/Database.aspx">5.1.3 Tải game Mobile</asp:HyperLink></li>
-                                </ul>
-                            </li>
-                            <li><asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="~/Admin/Support.aspx">5.2 TV Online</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">5.3 Xem phim</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Admin/Support.aspx">5.4 Nghe nhạc</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink45" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">5.5 Nghe Radio</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="~/Admin/Support.aspx">5.6 Sách - Truyện</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">5.7 Ảnh động</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="~/Admin/Support.aspx">5.8 Dọa ma</asp:HyperLink></li>
-                        </ul>
-                    </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/Admin/Setting.aspx">Ứng dụng Online</asp:HyperLink>
-                        <ul>
-                            <li><asp:HyperLink ID="HyperLink36" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.1 Chat Room</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="~/Admin/Database.aspx">6.2 Photoshop</asp:HyperLink>
-                                <ul>
-                                    <li><asp:HyperLink ID="HyperLink55" runat="server" NavigateUrl="~/Admin/Database.aspx">6.2.1 Photoshop</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink54" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.2.2 Chỉnh sửa ảnh</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink56" runat="server" NavigateUrl="~/Admin/Database.aspx">6.2.3 Hiệu ứng ảnh</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink57" runat="server" NavigateUrl="~/Admin/Database.aspx">6.2.4 Ghép khung ảnh</asp:HyperLink></li>
-                                </ul>
-                            </li>
-                            <li><asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="~/Admin/Database.aspx">6.3 Ghép khung ảnh</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.4 Chuyển định dạng file</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="~/Admin/Database.aspx">6.5 Quét virus</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6 Download Driver</asp:HyperLink>
-                                <ul>
-                                    <li><asp:HyperLink ID="HyperLink58" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.1 Asus</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink59" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6.2 Acer</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink60" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.3 Dell</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink61" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.4 Toshhiba</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink62" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.5 Sony</asp:HyperLink></li>
-                                    <li><asp:HyperLink ID="HyperLink63" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.6 HP</asp:HyperLink></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Admin/Setting.aspx">Upload</asp:HyperLink>
-                        <ul>
-                            <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Admin/Setting.aspx">7.1 Server 1 Dropbox</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Admin/Database.aspx">7.2 Server 2 Dropbox</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="~/Admin/Database.aspx">7.2 Server 3 Upfile.vn</asp:HyperLink></li>
-                        </ul>
-                    </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Admin/Setting.aspx">Liên hệ</asp:HyperLink></li>
+    <div id="bar">
+        <div class="menu">
+            <div class="menuleft">
+            <ul id="css3menu1" class="topmenu">
+                <li class="toproot"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx"><img src="../Css/Admin/blue_circle - home2.png" alt="Trang chủ" />Trang chủ</asp:HyperLink>
+                    <ul>
+                        <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Info/Tac_gia.aspx">1.1 Tác giả</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Info/Gioi_thieu.aspx">1.2 Giới thiệu</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Info/Dieu_khoan.aspx">1.3 Điều khoản</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Info/Lien_ket_website_blog.aspx">1.4 Liên kết</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Sitemap.xml">1.5 Sitemap</asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li class="toproot"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Admin/Products.aspx">Học tập</asp:HyperLink>
+                    <ul>
+                        <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/Admin/GroupProducts.aspx">2.1 Lập trình</asp:HyperLink>
+                            <ul>
+                                <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/Admin/GroupProducts.aspx">2.1.1 Visual Basic</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/Admin/Products.aspx">2.1.2 C/C++/Visual C++</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.1.3 Assembly</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/Admin/Products.aspx">2.1.4 Java</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.1.5 Pascal</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.1.6 SQL/ Access</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.1.7 ASP.NET</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/Admin/Products.aspx">2.2 Thiết kế - Đồ họa</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.3 Công nghệ mạng</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/Edit/EditProducts.aspx">2.4 Mobile</asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li class="toproot"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/Admin/Products.aspx">Phần mềm</asp:HyperLink>
+                    <ul>
+                        <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/Admin/PayMethod.aspx">3.1 Hệ điều hành</asp:HyperLink>
+                            <ul>
+                                <li><asp:HyperLink ID="HyperLink70" runat="server" NavigateUrl="~/Admin/Database.aspx">3.1.1 Windows</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink71" runat="server" NavigateUrl="~/Admin/Setting.aspx">3.1.2 Linux</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink72" runat="server" NavigateUrl="~/Admin/Database.aspx">3.1.3 Ubuntu</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink73" runat="server" NavigateUrl="~/Admin/Database.aspx">3.1.4 Khác ...</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Admin/NewOrders.aspx">3.2 Bảo mật</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="~/Admin/Orders.aspx">3.3 Văn phòng</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/Admin/PayMethod.aspx">3.1 Portable</asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li class="toproot"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/Admin/Staff.aspx">Thủ thuật</asp:HyperLink>
+                    <ul>
+                        <li><asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="~/Admin/Staff.aspx">4.1 Máy tính</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="~/Admin/Staff.aspx">4.2 Website</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="~/Admin/Customer.aspx">4.3 Facebook</asp:HyperLink>
+                            <ul>
+                                <li><asp:HyperLink ID="HyperLink67" runat="server" NavigateUrl="~/Admin/Database.aspx">4.3.1 Hướng dẫn vào Facebook</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink68" runat="server" NavigateUrl="~/Admin/Setting.aspx">4.3.2 Auto like Facebook</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink69" runat="server" NavigateUrl="~/Admin/Database.aspx">4.3.3 Facebook Smile Chat</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li><asp:HyperLink ID="HyperLink41" runat="server" NavigateUrl="~/Admin/Staff.aspx">4.4 Yahoo</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink42" runat="server" NavigateUrl="~/Admin/Customer.aspx">4.5 Khác...</asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li class="toproot"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">Giải trí</asp:HyperLink>
+                    <ul>
+                        <li><asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">5.1 Game</asp:HyperLink>
+                            <ul>
+                                <li><asp:HyperLink ID="HyperLink64" runat="server" NavigateUrl="~/Admin/Database.aspx">5.1.1 Chơi game Online</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink65" runat="server" NavigateUrl="~/Admin/Setting.aspx">5.1.2 Tải game Offline PC</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink66" runat="server" NavigateUrl="~/Admin/Database.aspx">5.1.3 Tải game Mobile</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li><asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="~/Admin/Support.aspx">5.2 TV Online</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">5.3 Xem phim</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Admin/Support.aspx">5.4 Nghe nhạc</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink45" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">5.5 Nghe Radio</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="~/Admin/Support.aspx">5.6 Sách - Truyện</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="~/Admin/NewSupport.aspx">5.7 Ảnh động</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="~/Admin/Support.aspx">5.8 Dọa ma</asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li class="toproot"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/Admin/Setting.aspx">Ứng dụng</asp:HyperLink>
+                    <ul>
+                        <li><asp:HyperLink ID="HyperLink36" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.1 Chat Room</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="~/Admin/Database.aspx">6.2 Photoshop</asp:HyperLink>
+                            <ul>
+                                <li><asp:HyperLink ID="HyperLink55" runat="server" NavigateUrl="~/Admin/Database.aspx">6.2.1 Photoshop</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink54" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.2.2 Chỉnh sửa ảnh</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink56" runat="server" NavigateUrl="~/Admin/Database.aspx">6.2.3 Hiệu ứng ảnh</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink57" runat="server" NavigateUrl="~/Admin/Database.aspx">6.2.4 Ghép khung ảnh</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li><asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="~/Admin/Database.aspx">6.3 Ghép khung ảnh</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.4 Chuyển định dạng file</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="~/Admin/Database.aspx">6.5 Quét virus</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6 Download Driver</asp:HyperLink>
+                            <ul>
+                                <li><asp:HyperLink ID="HyperLink58" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.1 Asus</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink59" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6.2 Acer</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink60" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.3 Dell</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink61" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.4 Toshhiba</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink62" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.5 Sony</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink63" runat="server" NavigateUrl="~/Admin/Database.aspx">6.6.6 HP</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toproot"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Admin/Setting.aspx">Upload</asp:HyperLink>
+                    <ul>
+                        <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Admin/Setting.aspx">7.1 Server 1 Dropbox</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Admin/Database.aspx">7.2 Server 2 Dropbox</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="~/Admin/Database.aspx">7.2 Server 3 Upfile.vn</asp:HyperLink></li>
+                    </ul>
+                </li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Admin/Setting.aspx">Liên hệ</asp:HyperLink></li>
+            </ul>
+            </div>
+            <div class="menuright">
+                <ul id="css3menu1" class="topmenu">
+                    <li class="toproot"><asp:HyperLink ID="HyperLink38" runat="server" NavigateUrl="~/Default.aspx">Đăng nhập</asp:HyperLink></li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink39" runat="server" NavigateUrl="~/Default.aspx">Đăng ký</asp:HyperLink></li>
                 </ul>
             </div>
-            <%--<div class="welcome">
-                <div class="imgAvatar"><asp:Image ID="imgAvatar" runat="server" Width= "50px" Height="50px" /></div>
-                <div class="Text"><asp:HyperLink ID="hpEditAccount" runat="server"><asp:Label ID="lblWelcome" runat="server" Text="Label"></asp:Label></asp:HyperLink><asp:LinkButton ID="LinkButton1" runat="server" OnClick="lbtnLogout_Click" Width="30px" CausesValidation="False">[Thoát]</asp:LinkButton></div>
-            </div>--%>
         </div>
-        <!-- End #header -->
+    </div>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo"><!-- Begin #logo -->
+               <%-- <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/logo.gif" />--%>
+            </div><!-- End #logo -->
+
+            <asp:Panel ID="panelInfoAccount" runat="server">
+            <div id="infoAccount"><!-- Begin #infoAccount -->
+                <div class="imgAvatar"><asp:Image ID="imgAvatar" runat="server" Width= "50px" Height="50px" /></div>
+                <div class="Text"><asp:HyperLink ID="hpEditAccount" runat="server"><asp:Label ID="lblWelcome" runat="server" Text="Unknow"></asp:Label></asp:HyperLink><br />
+                    <asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click" Width="30px" CausesValidation="False">[Thoát]</asp:LinkButton></div>
+            </div><!-- End #infoAccount -->
+            </asp:Panel>
+        </div>
         <div id="content">
+            <div id="sidebar"><!-- Begin #sidebar -->
+                <%--<asp:Panel ID="panelLogin" runat="server">
+                <div id="login"><!-- Begin #login -->
+                    <table>
+                        <tr><td></td><td><asp:Label ID="lblMsg" runat="server"></asp:Label></td></tr>
+                        <tr><td>Tài khoản:</td><td><asp:TextBox ID="txtAccounts_Username" runat="server"></asp:TextBox></td></tr>
+                        <tr><td></td><td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="chưa nhập tài khoản" ControlToValidate="txtAccounts_Username"></asp:RequiredFieldValidator></td></tr>
+                        <tr><td>Mật khẩu:</td><td><asp:TextBox ID="txtAccounts_Password" runat="server" TextMode="Password"></asp:TextBox></td></tr>
+                        <tr><td></td><td><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="chưa nhập mật khẩu" ControlToValidate="txtAccounts_Password"></asp:RequiredFieldValidator></td></tr>
+                        <tr><td colspan="2"><asp:CheckBox ID="chkRememberMe" runat="server" Text="Ghi nhớ tài khoản"/></td></tr>
+                        <tr><td></td><td><asp:Button ID="btnLogin" runat="server" Text="Đăng nhập" onclick="btnLogin_Click" /></td></tr>
+                    </table><hr />
+                    <asp:HyperLink ID="hplForgotPassword" runat="server" NavigateUrl="~/Accounts/ForgotPassword.aspx">Quên mật khẩu/ tài khoản?</asp:HyperLink>
+                    <asp:HyperLink ID="hplRegister" runat="server" NavigateUrl="~/Accounts/Register.aspx">Tạo tài khoản mới.</asp:HyperLink>
+                </div><div class="clear"></div><!-- End #login -->
+                </asp:Panel>--%>
+                <div id="navBar">
+                    
+                </div>
+                <div class="formmedium"><!-- Begin Search Advand -->
+                    <h2>Tìm kiếm nâng cao</h2>
+                    <br /><asp:TextBox ID="txtProducts_Name" runat="server" Width="210px" Height="20px"></asp:TextBox>
+                    <asp:Button ID="btnSearch" runat="server" Height="30px" OnClick="btnSearch_Click" Text="Search" CausesValidation="False"/>
+                </div><!-- End Search Advand -->
+                <div class="formmedium"><!-- Begin Support Online -->
+                    <h2>Hỗ trợ trực tuyến</h2>
+                    <center>
+                        <img alt="Đường dây nóng" src="../Css/Product/theme/hotline.jpg" />
+                        <a href="ymsgr:sendim?thang_991992&m=Hỗ trợ từ ThangNMjsc"><img src='http://opi.yahoo.com/online?u=thang_991992&m=g&t=17' title="Hỗ trợ qua YM!" width="50px" height="50px" alt="Hỗ trợ qua YM!"/></a>
+                        <a href="Skype:thang_991992?chat"><img src="http://mystatus.skype.com/balloon/thang_991992" title="Hỗ trợ qua Skype" width="120" height="30" alt="Hỗ trợ qua Skype"/></a>
+                        <a href="mailto:thang.991992@gmail.com"><img src="../Css/Product/theme/email.jpg" title="Hỗ trợ qua Email" width="50" height="50" alt="Hỗ trợ qua Email"/></a>
+                    </center>
+                </div><!-- End Support Online -->
+                <div class="formlarge"><!-- Begin New Product -->
+                    <h2>Bài viết mới</h2>
+                    <asp:DataList ID="dtlNewTopic" runat="server" RepeatColumns="1" DataKeyField="Topic_ID">
+                    <ItemTemplate>
+                        <table>
+                        <tr><td rowspan="4" style="width: 100px"><asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("Topic_LinkImage")%>' Height="100px" Width="100px"/></td>
+                        </tr>
+                        <tr><td style="width: 157px; height: 21px; text-align: left;">
+                                <asp:HiddenField ID="hdfTopic_ID" runat="server" Value='<%#Eval("Topic_ID") %>' />
+                                <asp:Label ID="lblTopic_Title" runat="server" Text='<%#Eval("Topic_Title") %>'></asp:Label>
+                            </td>
+                        </tr>
+                        <tr><td style="width: 157px"><asp:ImageButton ID="ImageButton2" runat="server" PostBackUrl='<%#"~/Topic.aspx?Topic_ID="+Eval("Topic_ID") %>'  ImageUrl="~/Images/icon_chitiet.gif"/></td></tr>
+                    </table>
+                    </ItemTemplate>
+                    </asp:DataList>
+                </div><!-- End New Product -->
+                <div class="formmedium"><!-- Begin Box Fanpage Facebook -->
+                    <h2>Fanpage Facebook</h2>
+			        <div id="fb-root"></div>
+                    <script>                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=620037738020035";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        } (document, 'script', 'facebook-jssdk'));</script>
+                </div><!-- End Box Fanpage Facebook -->
+                <div class="formtiny"><!-- Begin visit website-->
+                    <h2>Thống kê truy cập</h2>
+                    <script type="text/javascript">
+                        document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));
+		            </script>
+		            <a href="http://it.site44.com" target="_blank" title="Diễn đàn CNTT - Forum IT" >
+			            <script  type="text/javascript" >
+			                try {
+			                    Histats.start(1, 2238242, 4, 485, 112, 61, "00011011");
+			                    Histats.track_hits();
+			                } catch (err) { };
+			            </script>
+		            </a>
+                </div><!-- End visit website -->
+                <div class="formtiny"><!-- Begin Link Website-Blog -->
+                    <h2>Liên kết Website-Blog</h2>
+                    <marquee direction="up" scrolldelay="30" scrollamount="1" truespeed onmouseover=this.stop() onmouseout=this.start() behavior="scroll" height="67px">
+						<asp:Label ID="lblLink" runat="server"></asp:Label></marquee>
+                </div><!-- End Link Website-Blog -->
+            </div><!-- End #sidebar -->
+            <div id="primary">
                 <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+            </div><!-- End #primary -->
         </div>
         <!-- End #content -->
         <div class="clear"></div>

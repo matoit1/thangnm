@@ -14,26 +14,26 @@ namespace nguyenmanhthang.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             mtvUsers.ActiveViewIndex = 0;
-            //if (!IsPostBack)
-            //{
-            //    txtAccounts_FullName.Attributes.Add("placeholder", "Tìm kiếm theo tên Khách hàng");
-            //    loadCustomers();
-            //}
+            if (!IsPostBack)
+            {
+                //txtAccounts_FullName.Attributes.Add("placeholder", "Tìm kiếm theo tên Khách hàng");
+                loadUsers();
+            }
 
         }
 
-        //private void loadCustomers()
-        //{
-        //    try
-        //    {
-        //        DataTable dt = AccountsBO.getDataSetAccounts(0).Tables[0];
-        //        grvListUser.DataSource = dt;
-        //        grvListUser.DataBind();
-        //    }
-        //    catch (Exception)
-        //    {
-        //    }
-        //}
+        private void loadUsers()
+        {
+            //try
+            //{
+            //    DataTable dt = AccountsBO.Accounts_SearchAccounts().Tables[0];
+            //    grvListUser.DataSource = dt;
+            //    grvListUser.DataBind();
+            //}
+            //catch (Exception)
+            //{
+            //}
+        }
 
         protected void grvListUser_RowDataBound(object sender, GridViewRowEventArgs e)
         {

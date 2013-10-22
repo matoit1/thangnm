@@ -897,6 +897,10 @@
     <Content Include="Css\Admin\blue_circle - info.png" />
     <Content Include="Css\Admin\blue_circle - ok.png" />
     <Content Include="Css\Admin\blue_circle - star.png" />
+    <Content Include="Css\Product\bg_footer.png" />
+    <Content Include="Css\Product\bg_footer_container.png" />
+    <Content Include="Css\topic.css" />
+    <Content Include="Error\Chat.css" />
     <Content Include="Css\Admin\menucss3.css" />
     <Content Include="Css\calendar.css" />
     <Content Include="Css\Customer\bg-bar.png" />
@@ -938,10 +942,21 @@
     <Content Include="Css\Product\ZoomImage.css" />
     <Content Include="Css\public.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Error\401.aspx" />
+    <Content Include="Error\403.aspx" />
+    <Content Include="Error\404.aspx" />
+    <Content Include="Error\406.aspx" />
+    <Content Include="Error\chat.js" />
+    <Content Include="Error\Dao_vang_I.swf" />
+    <Content Include="Error\Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="GiaiTri\Default.aspx" />
     <Content Include="HocTap\Default.aspx" />
+    <Content Include="Images\Avatar\admin.jpg" />
+    <Content Include="Images\Avatar\default.jpg" />
+    <Content Include="Images\icon_chitiet.gif" />
     <Content Include="Images\logo.gif" />
+    <Content Include="Images\Topic\default.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="google941e8f34ed1f02ad.html" />
     <Content Include="Info\Tac_gia.aspx" />
@@ -956,14 +971,27 @@
     <Content Include="Library\FCAP.Controls.dll" />
     <Content Include="Library\Microsoft.Sharepoint.Sandbox.dll" />
     <Content Include="PhanMem\Default.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\calendar1.js" />
+    <Content Include="Scripts\calendar2.js" />
+    <Content Include="Scripts\chat.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Admin\Security.aspx" />
+    <Content Include="Scripts\vote.js" />
+    <Content Include="sitemap.xml" />
+    <Content Include="SVIT\css.css" />
+    <Content Include="SVIT\index.htm" />
+    <Content Include="Tag.aspx" />
+    <Content Include="test.html" />
     <Content Include="ThuThuat\Default.aspx" />
+    <Content Include="Topic.aspx" />
     <Content Include="UngDungOnline\Default.aspx" />
     <Content Include="Upload\Default.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1077,6 +1105,41 @@
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
+    <Compile Include="Error\401.aspx.cs">
+      <DependentUpon>401.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\401.aspx.designer.cs">
+      <DependentUpon>401.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\403.aspx.cs">
+      <DependentUpon>403.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\403.aspx.designer.cs">
+      <DependentUpon>403.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\406.aspx.cs">
+      <DependentUpon>406.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\406.aspx.designer.cs">
+      <DependentUpon>406.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GiaiTri\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1150,12 +1213,26 @@
     <Compile Include="Admin\Security.aspx.designer.cs">
       <DependentUpon>Security.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tag.aspx.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tag.aspx.designer.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ThuThuat\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ThuThuat\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topic.aspx.cs">
+      <DependentUpon>Topic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topic.aspx.designer.cs">
+      <DependentUpon>Topic.aspx</DependentUpon>
     </Compile>
     <Compile Include="UngDungOnline\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
