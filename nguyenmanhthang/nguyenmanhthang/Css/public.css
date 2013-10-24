@@ -95,7 +95,7 @@ a img {border:none;}
 .textboxSuccessful{background-color:#33FF33;}
 
 /* Social Settings */
-.social {padding:50px 0px; width:350px; margin:0 auto;}
+.social {width:350px; margin:0 auto;}
 .social-slide {height:48px; width:48px; float:left; margin:0px 5px; -webkit-transition:all ease 0.3s; -moz-transition:all ease 0.3s; -o-transition:all ease 0.3s; -ms-transition:all ease 0.3s; transition:all ease 0.3s;}
 .social-slide:hover {background-position: 0px -48px;}
 .twitter-hover {background-image: url(Product/theme/twitter-hover.png);}

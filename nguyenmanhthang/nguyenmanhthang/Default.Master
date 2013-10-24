@@ -9,7 +9,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="Vietnamese, English" />
     <meta name="description" content="Nguyễn Mạnh Thắng - Đơn giản là chia sẻ" />
-    <meta name="language" content="Vietnamese, English" />
     <meta name="keywords" content="ThangNM, Admin Control Panel - ThangNM Joint Stock Company, Manager, thang.991992@gmail.com, Nguyễn Mạnh Thắng" />
     <meta name="robots" content="index ,follow" />
     <link rel="author" href="https://plus.google.com/109664385150832451485" />
@@ -197,16 +196,9 @@
                     <h2>Bài viết mới</h2>
                     <asp:DataList ID="dtlNewTopic" runat="server" RepeatColumns="1" DataKeyField="Topic_ID">
                     <ItemTemplate>
-                        <table>
-                        <tr><td rowspan="4" style="width: 100px"><asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("Topic_LinkImage")%>' Height="100px" Width="100px"/></td>
-                        </tr>
-                        <tr><td style="width: 157px; height: 21px; text-align: left;">
-                                <asp:HiddenField ID="hdfTopic_ID" runat="server" Value='<%#Eval("Topic_ID") %>' />
-                                <asp:Label ID="lblTopic_Title" runat="server" Text='<%#Eval("Topic_Title") %>'></asp:Label>
-                            </td>
-                        </tr>
-                        <tr><td style="width: 157px"><asp:ImageButton ID="ImageButton2" runat="server" PostBackUrl='<%#"~/Topic.aspx?Topic_ID="+Eval("Topic_ID") %>'  ImageUrl="~/Images/icon_chitiet.gif"/></td></tr>
-                    </table>
+                        <asp:HyperLink ID="hplTopic" runat="server" NavigateUrl='<%#"~/Topic.aspx?Topic_ID="+Eval("Topic_ID") %>'><%#Eval("Topic_Title") %></asp:HyperLink>
+                        <asp:HiddenField ID="hdfTopic_ID" runat="server" Value='<%#Eval("Topic_ID") %>' />
+                        <hr  style="width:auto"/>
                     </ItemTemplate>
                     </asp:DataList>
                 </div><!-- End New Product -->
@@ -255,7 +247,14 @@
                     Le Hai Thanh & Hoang Quang Huy</p>
                 </div>
                 <div class="service">
-                    <p><a href="../Admin/Default.aspx">Admin</a> | <a href="../Default.aspx">Product</a> |<a href="../Customer/Default.aspx">Customer</a></p>
+                    <ul class="social">
+                        <a href="http://fb.com/share2everyone" target="_blank"><li class="facebook-hover social-slide"></li></a>
+                        <a href="https://twitter.com/thang_991992" target="_blank"><li class="twitter-hover social-slide"></li></a>
+                        <a href="https://plus.google.com/u/0/109664385150832451485" target="_blank"><li class="google-hover social-slide"></li></a>
+                        <a href="#" target="_blank"><li class="pinterest-hover social-slide"></li></a>
+                        <a href="#" target="_blank"><li class="instagram-hover social-slide"></li></a>
+                        <a href="#" target="_blank"><li class="tumblr-hover social-slide"></li></a>
+                    </ul>
                 </div>
                 <div class="share">
                     <p>&copy; 2013 Designed by <a href="https://plus.google.com/109664385150832451485">ThangNM</a></p>
