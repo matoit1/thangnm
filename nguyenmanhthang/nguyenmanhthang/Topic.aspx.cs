@@ -15,20 +15,25 @@ namespace nguyenmanhthang
         {
             if (Request.QueryString["Topic_ID"] != null)
             {
+                try
+                {
+                    Comment1.Topic_ID = Convert.ToInt64(Request.QueryString["Topic_ID"]);
+                }
+                catch { }
                 lblMore.Text = "Các bài viết liên quan";
                 pnlDetail.Visible = true;
-                pnlComment.Visible = true;
+                tabMain.Visible = true;
                 loadTopic(Convert.ToInt64(Request.QueryString["Topic_ID"]));
             }
             else
             {
                 lblMore.Text = "Tất cả các bài viết";
                 pnlDetail.Visible = false;
-                pnlComment.Visible = false;
-                loadShow();
+                tabMain.Visible = false;
             }
             if (!IsPostBack)
             {
+                loadShow();
             }
         }
 
@@ -42,20 +47,29 @@ namespace nguyenmanhthang
             }
             catch (Exception) { }
         }
-        public void loadTopic(Int64 ID)
+        public void loadTopic(Int64 Topic_ID)
         {
+            DataSet ds;
             try
             {
-                TopicBO.Topic_ASC_Visit(ID);
+                TopicBO.Topic_ASC_Visit(Topic_ID);
             }
             catch (Exception) { }
 
             try
             {
-                DataSet dt = TopicBO.Topic_getTopicbyTopic_ID(ID);
-                rptInfo.DataSource = dt;
+                ds = CommentBO.Comment_SelectListbyTopic_ID(Topic_ID, true);
+                rptComment.DataSource = ds;
+                rptComment.DataBind();
+            }
+            catch (Exception) { }
+
+            try
+            {
+                ds = TopicBO.Topic_getTopicbyTopic_ID(Topic_ID);
+                rptInfo.DataSource = ds;
                 rptInfo.DataBind();
-                String Tags = dt.Tables[0].Rows[0]["Topic_Tag"].ToString();
+                String Tags = ds.Tables[0].Rows[0]["Topic_Tag"].ToString();
                 string[] Tag = new string[10];
                 Tag = Tags.Split(',');
                 DataTable tblTags = new DataTable();
@@ -69,7 +83,13 @@ namespace nguyenmanhthang
                 rptTag.DataSource = tblTags;
                 rptTag.DataBind();
             }
-            catch (Exception) { }
+            catch (Exception) {
+                lblMore.Text = "Các bài viết có thể bạn quan tâm";
+                lblMessage.Text = "Không tìm thấy bài viết !";
+                lblMessage.CssClass = "alert_success";
+                pnlDetail.Visible = false;
+                tabMain.Visible = false;
+            }
         }
 
         protected void rptTopic_ItemCommand(object source, RepeaterCommandEventArgs e)

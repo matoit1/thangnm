@@ -40,13 +40,67 @@ namespace nguyenmanhthang {
         protected global::System.Web.UI.WebControls.Repeater rptTag;
         
         /// <summary>
-        /// pnlComment control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlComment;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// tabMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabContainer tabMain;
+        
+        /// <summary>
+        /// TabCommentDefault control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabCommentDefault;
+        
+        /// <summary>
+        /// rptComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptComment;
+        
+        /// <summary>
+        /// Comment1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::nguyenmanhthang.UserControl.Comment Comment1;
+        
+        /// <summary>
+        /// TabCommentFacebook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabCommentFacebook;
+        
+        /// <summary>
+        /// TabCommentGoogle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabCommentGoogle;
         
         /// <summary>
         /// pnlAll control.
@@ -56,6 +110,15 @@ namespace nguyenmanhthang {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlAll;
+        
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
         /// lblMore control.

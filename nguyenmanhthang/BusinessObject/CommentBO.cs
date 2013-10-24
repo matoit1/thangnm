@@ -11,7 +11,7 @@ namespace BusinessObject
     public class CommentBO
     {
         // 1. Comment_Insert
-        public static bool Comment_Insert(Int64 Topic_ID, string Comment_Name, string Comment_Email, string Comment_Website, string Comment_Content, bool Comment_Status)
+        public static bool Comment_Insert(Int64 Topic_ID, string Comment_Name, string Comment_Email, string Comment_Website, string Comment_Content)
         {
             CommentEO _CommentEO = new CommentEO();
             _CommentEO.Topic_ID = Topic_ID;
@@ -19,7 +19,6 @@ namespace BusinessObject
             _CommentEO.Comment_Email = Comment_Email;
             _CommentEO.Comment_Website = Comment_Website;
             _CommentEO.Comment_Content = Comment_Content;
-            _CommentEO.Comment_Status = Comment_Status;
             if (CommentDAO.Comment_Insert(_CommentEO))
                 return true;
             else
@@ -67,10 +66,11 @@ namespace BusinessObject
         }
 
         // 5. Comment_SelectListbyTopic_ID
-        public static DataSet Comment_SelectListbyTopic_ID(Int64 Topic_ID)
+        public static DataSet Comment_SelectListbyTopic_ID(Int64 Topic_ID, bool Comment_Status)
         {
             CommentEO _CommentEO = new CommentEO();
             _CommentEO.Topic_ID = Topic_ID;
+            _CommentEO.Comment_Status = Comment_Status;
             DataSet ds = CommentDAO.Comment_SelectListbyTopic_ID(_CommentEO);
             return ds;
         }

@@ -121,6 +121,7 @@
     <Content Include="Admin\New_Topic.aspx" />
     <Content Include="Admin\Setting.aspx" />
     <Content Include="Admin\Stats.aspx" />
+    <Content Include="Admin\Tab.aspx" />
     <Content Include="Admin\Users.aspx" />
     <Content Include="Admin\Category.aspx" />
     <Content Include="ckeditor\adapters\jquery.js" />
@@ -989,6 +990,7 @@
     <Content Include="Topic.aspx" />
     <Content Include="UngDungOnline\Default.aspx" />
     <Content Include="Upload\Default.aspx" />
+    <Content Include="UserControl\Comment.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1076,6 +1078,13 @@
     </Compile>
     <Compile Include="Admin\Stats.aspx.designer.cs">
       <DependentUpon>Stats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Tab.aspx.cs">
+      <DependentUpon>Tab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Tab.aspx.designer.cs">
+      <DependentUpon>Tab.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
@@ -1248,6 +1257,13 @@
     <Compile Include="Upload\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\Comment.ascx.cs">
+      <DependentUpon>Comment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Comment.ascx.designer.cs">
+      <DependentUpon>Comment.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1278,7 +1294,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3358</DevelopmentServerPort>
+          <DevelopmentServerPort>16642</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

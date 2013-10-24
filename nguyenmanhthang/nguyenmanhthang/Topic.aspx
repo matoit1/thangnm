@@ -1,10 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Topic.aspx.cs" Inherits="nguyenmanhthang.Topic" MasterPageFile="~/Default.Master" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register src="~/UserControl/Comment.ascx" tagname="Comment" tagprefix="uc2" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphHead" runat="server">
     <meta property="fb:app_id" content="432781806807255"/>
-    <link href="../../Css/Product/tab.css" rel="stylesheet" type="text/css"/>
     <link href="../Css/topic.css" rel="stylesheet" type="text/css"/>
-    <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
     <asp:Panel ID="pnlDetail" runat="server">
@@ -52,62 +52,67 @@
             </div><div class="clear"></div>
     </asp:Panel>
     <div style="margin: 15px 15px 15px 15px;">
-        <asp:Panel ID="pnlComment" runat="server">
-            <div id="tabContaier">
-		        <ul>
-			        <li><a href="#tab1">Bình luận Facebook</a></li>
-			        <li><a href="#tab2">Bình luận Google+</a></li>
-		        </ul>
-		        <div class="tabDetails">
-			        <div id="tab1" class="tabContents">
-		                <div id="Div1"></div><!-- Begin Comment Facebook -->
-			            <script>
-			                (function (d, s, id) {
-			                    var js, fjs = d.getElementsByTagName(s)[0];
-			                    if (d.getElementById(id)) return;
-			                    js = d.createElement(s); js.id = id;
-			                    js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=432781806807255";
-			                    fjs.parentNode.insertBefore(js, fjs);
-			                } (document, 'script', 'facebook-jssdk'));
-                        </script>
-		                <div class="fb-comments" data-href="<%=Request.Url.ToString()%>" data-width="500" data-num-posts="10"></div><!-- End Comment Facebook -->
-			        </div>
-			        <div id="tab2" class="tabContents">
-				        <script src="https://apis.google.com/js/plusone.js"></script>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <cc1:TabContainer ID="tabMain" runat="server" ActiveTabIndex="0">
+        <cc1:TabPanel runat="server" HeaderText="Bình luận" ID="TabCommentDefault">
+            <ContentTemplate>
+                <asp:Repeater ID="rptComment" runat="server">
+                <ItemTemplate>
+                        <asp:HyperLink ID="hplComment_Name" runat="server" NavigateUrl='<%#Eval("Comment_Website")%>'><%#Eval("Comment_Name")%></asp:HyperLink>
+                        <i><asp:Label ID="lblComment_LastUpdate" runat="server" Text='<%#Eval("Comment_LastUpdate")%>'></asp:Label></i><br />
+                        <asp:Label ID="Label1" runat="server" Text='<%#Eval("Comment_Content")%>'></asp:Label>
+                        <hr /><br />
+                </ItemTemplate>
+                </asp:Repeater>
+                <br /><br />
+                <uc2:Comment ID="Comment1" runat="server" />
+            </ContentTemplate>
+        </cc1:TabPanel>
+        <cc1:TabPanel runat="server" HeaderText="Bình luận bằng Facebook" ID="TabCommentFacebook">
+            <ContentTemplate>
+                <div id="Div1"></div><!-- Begin Comment Facebook -->
+			    <script>
+			        (function (d, s, id) {
+			            var js, fjs = d.getElementsByTagName(s)[0];
+			            if (d.getElementById(id)) return;
+			            js = d.createElement(s); js.id = id;
+			            js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=432781806807255";
+			            fjs.parentNode.insertBefore(js, fjs);
+			        } (document, 'script', 'facebook-jssdk'));
+                </script>
+		        <div class="fb-comments" data-href="<%=Request.Url.ToString()%>" data-width="500" data-num-posts="10"></div><!-- End Comment Facebook -->
+            
+</ContentTemplate>
+        
+
+</cc1:TabPanel>
+        <cc1:TabPanel runat="server" HeaderText="Bình luận bằng Google" ID="TabCommentGoogle">
+            <ContentTemplate>
+                <script src="https://apis.google.com/js/plusone.js"></script>
 		                <div class="g-comments"
 			                data-href="<%=Request.Url.ToString()%>"
 			                data-width="500"
 			                data-first_party_property="BLOGGER"
 			                data-view_type="FILTERED_POSTMOD">
 		                </div>
-			        </div>
-		        </div>
-		        <script type="text/javascript">
-		            $(document).ready(function () {
-		                $(".tabContents").hide(); // Ẩn toàn bộ nội dung của tab
-		                $(".tabContents:first").show(); // Mặc định sẽ hiển thị tab1
-		                $("#tabContaier ul li a").click(function () { //Khai báo sự kiện khi click vào một tab nào đó
-		                    var activeTab = $(this).attr("href");
-		                    $("#tabContaier ul li a").removeClass("active");
-		                    $(this).addClass("active");
-		                    $(".tabContents").hide();
-		                    $(activeTab).fadeIn();
-		                });
-		            });
-		        </script>
-	        </div>
-        </asp:Panel>
+            
+</ContentTemplate>
+        
+
+</cc1:TabPanel>
+    </cc1:TabContainer>
         <asp:Panel ID="pnlAll" runat="server">
-        <center><br /><br /><h1><asp:Label ID="lblMore" runat="server"></asp:Label></h1><br /></center>
+        <center><asp:Label ID="lblMessage" runat="server"></asp:Label><br /><br /><h1><asp:Label ID="lblMore" runat="server"></asp:Label></h1><br /></center>
             <asp:Repeater ID="rptTopic" runat="server" onitemcommand="rptTopic_ItemCommand" 
                 onitemdatabound="rptTopic_ItemDataBound" >
                 <HeaderTemplate><ul></HeaderTemplate>
                 <ItemTemplate>
                     <li><asp:HiddenField ID="lblWebsite_ID" runat="server" Value='<%#Eval("Topic_ID")%>'></asp:HiddenField>
-                        <asp:Label ID="Label1" runat="server" Text="Tiêu đề: "></asp:Label>
-                        <asp:Label ID="lblWebsite_Title" runat="server" Text='<%#Eval("Topic_Title")%>'></asp:Label>
+                        <asp:Label ID="lblWebsite_Title" runat="server" Text='<%#Eval("Topic_Title")%>'></asp:Label><br />
                         <i><asp:Label ID="lblWebsite_LastUpdate" runat="server" Text='<%#" cập nhật lần cuối: <"+Eval("Topic_LastUpdate")+">"%>'></asp:Label></i>
-                        <asp:LinkButton ID="hplDetail" runat="server" CommandName="Detail"> >>Chi tiết >> </asp:LinkButton>
+                        <asp:LinkButton ID="hplDetail" runat="server" CommandName="Detail"> >> Chi tiết >> </asp:LinkButton>
+                        <hr /><br />
                     </li>
                 </ItemTemplate>
                 <FooterTemplate></ul></FooterTemplate>

@@ -25,7 +25,6 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@Comment_Email", _CommentEO.Comment_Email));
                     cmd.Parameters.Add(new SqlParameter("@Comment_Website", _CommentEO.Comment_Website));
                     cmd.Parameters.Add(new SqlParameter("@Comment_Content", _CommentEO.Comment_Content));
-                    cmd.Parameters.Add(new SqlParameter("@Comment_Status", _CommentEO.Comment_Status));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
