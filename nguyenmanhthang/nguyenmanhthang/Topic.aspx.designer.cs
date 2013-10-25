@@ -76,13 +76,13 @@ namespace nguyenmanhthang {
         protected global::System.Web.UI.WebControls.Repeater rptComment;
         
         /// <summary>
-        /// Comment1 control.
+        /// CommentUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::nguyenmanhthang.UserControl.Comment Comment1;
+        protected global::nguyenmanhthang.UserControl.CommentUC CommentUC1;
         
         /// <summary>
         /// TabCommentFacebook control.

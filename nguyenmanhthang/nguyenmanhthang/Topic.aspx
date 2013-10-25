@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Topic.aspx.cs" Inherits="nguyenmanhthang.Topic" MasterPageFile="~/Default.Master" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<%@ Register src="~/UserControl/Comment.ascx" tagname="Comment" tagprefix="uc2" %>
+<%@ Register src="~/UserControl/CommentUC.ascx" tagname="CommentUC" tagprefix="uc2" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphHead" runat="server">
     <meta property="fb:app_id" content="432781806807255"/>
@@ -66,7 +66,7 @@
                 </ItemTemplate>
                 </asp:Repeater>
                 <br /><br />
-                <uc2:Comment ID="Comment1" runat="server" />
+                <uc2:CommentUC ID="CommentUC1" runat="server" />
             </ContentTemplate>
         </cc1:TabPanel>
         <cc1:TabPanel runat="server" HeaderText="Bình luận bằng Facebook" ID="TabCommentFacebook">

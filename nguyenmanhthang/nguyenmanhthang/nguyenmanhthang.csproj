@@ -68,6 +68,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Accounts\Login.aspx" />
     <Content Include="Admin\Alert.aspx" />
     <Content Include="Admin\Basic_Styles.aspx" />
     <Content Include="Admin\Content_Manager.aspx" />
@@ -122,6 +123,7 @@
     <Content Include="Admin\Setting.aspx" />
     <Content Include="Admin\Stats.aspx" />
     <Content Include="Admin\Tab.aspx" />
+    <Content Include="Admin\Topic.aspx" />
     <Content Include="Admin\Users.aspx" />
     <Content Include="Admin\Category.aspx" />
     <Content Include="ckeditor\adapters\jquery.js" />
@@ -990,7 +992,10 @@
     <Content Include="Topic.aspx" />
     <Content Include="UngDungOnline\Default.aspx" />
     <Content Include="Upload\Default.aspx" />
-    <Content Include="UserControl\Comment.ascx" />
+    <Content Include="UserControl\CommentUC.ascx" />
+    <Content Include="UserControl\DetailTopicUC.ascx" />
+    <Content Include="UserControl\ListTopicUC.ascx" />
+    <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1002,6 +1007,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Accounts\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Accounts\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1085,6 +1097,13 @@
     </Compile>
     <Compile Include="Admin\Tab.aspx.designer.cs">
       <DependentUpon>Tab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Topic.aspx.cs">
+      <DependentUpon>Topic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Topic.aspx.designer.cs">
+      <DependentUpon>Topic.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
@@ -1257,12 +1276,33 @@
     <Compile Include="Upload\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\Comment.ascx.cs">
-      <DependentUpon>Comment.ascx</DependentUpon>
+    <Compile Include="UserControl\CommentUC.ascx.cs">
+      <DependentUpon>CommentUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\Comment.ascx.designer.cs">
-      <DependentUpon>Comment.ascx</DependentUpon>
+    <Compile Include="UserControl\CommentUC.ascx.designer.cs">
+      <DependentUpon>CommentUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DetailTopicUC.ascx.cs">
+      <DependentUpon>DetailTopicUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DetailTopicUC.ascx.designer.cs">
+      <DependentUpon>DetailTopicUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ListTopicUC.ascx.cs">
+      <DependentUpon>ListTopicUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ListTopicUC.ascx.designer.cs">
+      <DependentUpon>ListTopicUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LoginUC.ascx.cs">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LoginUC.ascx.designer.cs">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

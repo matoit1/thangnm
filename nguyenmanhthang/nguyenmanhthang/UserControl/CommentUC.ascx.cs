@@ -8,7 +8,7 @@ using BusinessObject;
 
 namespace nguyenmanhthang.UserControl
 {
-    public partial class Comment : System.Web.UI.UserControl
+    public partial class CommentUC : System.Web.UI.UserControl
     {
         private Int64 _Topic_ID;
         public Int64 Topic_ID
