@@ -49,6 +49,15 @@ namespace nguyenmanhthang.Admin {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink13;
         
         /// <summary>
+        /// hplAccounts_Fullname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplAccounts_Fullname;
+        
+        /// <summary>
         /// HyperLink14 control.
         /// </summary>
         /// <remarks>

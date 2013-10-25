@@ -10,7 +10,7 @@
 namespace nguyenmanhthang.Admin {
     
     
-    public partial class Tab {
+    public partial class Topic {
         
         /// <summary>
         /// ScriptManager1 control.
@@ -20,6 +20,24 @@ namespace nguyenmanhthang.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// mtvMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.MultiView mtvMain;
+        
+        /// <summary>
+        /// vList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
         /// tabMain control.
@@ -40,6 +58,15 @@ namespace nguyenmanhthang.Admin {
         protected global::AjaxControlToolkit.TabPanel TabPanel1;
         
         /// <summary>
+        /// ListTopicUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::nguyenmanhthang.UserControl.ListTopicUC ListTopicUC1;
+        
+        /// <summary>
         /// TabPanel2 control.
         /// </summary>
         /// <remarks>
@@ -49,21 +76,30 @@ namespace nguyenmanhthang.Admin {
         protected global::AjaxControlToolkit.TabPanel TabPanel2;
         
         /// <summary>
-        /// TabPanel3 control.
+        /// ListTopicUC2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel3;
+        protected global::nguyenmanhthang.UserControl.ListTopicUC ListTopicUC2;
         
         /// <summary>
-        /// Label3 control.
+        /// vDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.View vDetail;
+        
+        /// <summary>
+        /// DetailTopicUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::nguyenmanhthang.UserControl.DetailTopicUC DetailTopicUC1;
     }
 }

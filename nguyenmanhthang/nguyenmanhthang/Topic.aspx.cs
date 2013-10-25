@@ -17,7 +17,7 @@ namespace nguyenmanhthang
             {
                 try
                 {
-                    Comment1.Topic_ID = Convert.ToInt64(Request.QueryString["Topic_ID"]);
+                    CommentUC1.Topic_ID = Convert.ToInt64(Request.QueryString["Topic_ID"]);
                 }
                 catch { }
                 lblMore.Text = "Các bài viết liên quan";
@@ -41,8 +41,8 @@ namespace nguyenmanhthang
         {
             try
             {
-                DataSet dt = TopicBO.Topic_SelectListToShow(true, 5);
-                rptTopic.DataSource = dt;
+                DataSet ds = TopicBO.Topic_SelectListToShow(true, 5);
+                rptTopic.DataSource = ds;
                 rptTopic.DataBind();
             }
             catch (Exception) { }

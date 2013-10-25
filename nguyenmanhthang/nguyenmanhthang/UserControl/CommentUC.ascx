@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Comment.ascx.cs" Inherits="nguyenmanhthang.UserControl.Comment" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CommentUC.ascx.cs" Inherits="nguyenmanhthang.UserControl.CommentUC" %>
 <link rel="stylesheet" href="../admin/css/layout.css" type="text/css" media="screen" />
 <asp:Label ID="lblMessage" runat="server"></asp:Label>
 <table>

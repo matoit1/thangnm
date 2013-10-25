@@ -10,7 +10,7 @@
 namespace nguyenmanhthang.UserControl {
     
     
-    public partial class Comment {
+    public partial class DetailTopicUC {
         
         /// <summary>
         /// lblMessage control.
@@ -22,75 +22,66 @@ namespace nguyenmanhthang.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
-        /// txtComment_Name control.
+        /// txtTopic_Title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComment_Name;
+        protected global::System.Web.UI.WebControls.TextBox txtTopic_Title;
         
         /// <summary>
-        /// rfvComment_Name control.
+        /// txtTopic_Content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvComment_Name;
+        protected global::CKEditor.NET.CKEditorControl txtTopic_Content;
         
         /// <summary>
-        /// txtComment_Email control.
+        /// txtTopic_LinkImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComment_Email;
+        protected global::System.Web.UI.WebControls.TextBox txtTopic_LinkImage;
         
         /// <summary>
-        /// rfvComment_Email control.
+        /// ddlTopic_Category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvComment_Email;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Category;
         
         /// <summary>
-        /// txtComment_Website control.
+        /// txtTopic_Tag control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComment_Website;
+        protected global::System.Web.UI.WebControls.TextBox txtTopic_Tag;
         
         /// <summary>
-        /// txtComment_Content control.
+        /// ddlTopic_Status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComment_Content;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Status;
         
         /// <summary>
-        /// rfvComment_Content control.
+        /// btnPublish control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvComment_Content;
-        
-        /// <summary>
-        /// btnComment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnComment;
+        protected global::System.Web.UI.WebControls.Button btnPublish;
     }
 }
