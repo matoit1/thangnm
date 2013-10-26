@@ -32,6 +32,7 @@
 			<div class="submit_link">
                 <asp:DropDownList ID="ddlTopic_Status" runat="server"></asp:DropDownList>
                 <asp:Button ID="btnPublish" runat="server" Text="Publish" class="alt_btn" onclick="btnPublish_Click"></asp:Button>
+                <asp:Button ID="btnUpdate" runat="server" Text="Cập nhật" class="alt_btn" ></asp:Button>
 				<input type="reset" value="Reset">
 			</div>
 		</div>

@@ -11,12 +11,13 @@
         <td colspan="2">
             <cc1:GridViewExt ID="grvListTopic" runat="server" CssClass="GridLayout" AutoGenerateColumns="False"
                 FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="20" 
-                datakeynames="Topic_ID" onrowcommand="grvListTopic_RowCommand">
+                datakeynames="Topic_ID" onrowcommand="grvListTopic_RowCommand" 
+                onrowdatabound="grvListTopic_RowDataBound">
                 <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="cmdDetail" runat="server"  CommandName="cmdView" Width="90px" CommandArgument='<%#Container.DataItemIndex %>'>Chi tiết</asp:LinkButton>
+                            <asp:LinkButton ID="cmdDetail" runat="server"  CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("Topic_ID")%>'>Chi tiết</asp:LinkButton>
                          </ItemTemplate>
                       <ItemStyle HorizontalAlign="Center"  />
                     </asp:TemplateField>

@@ -1,7 +1,6 @@
-﻿<html>
-<head>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TextboxInt.ascx.cs" Inherits="nguyenmanhthang.UserControl.TextboxInt" %>
 <script>
-    function keyPhone(e) {
+    function keyInteger(e) {
         var keyword = null;
         if (window.event) {
             keyword = window.event.keyCode;
@@ -16,12 +15,5 @@
             return false;
         }
     }
-
 </script>
-</head>
-
-<body>
-Nhap so dien thoai :
-<input name="phone" type="text" onkeypress="return keyPhone(event);"/>
-</body>
-</html>
+<asp:TextBox ID="txtInteger" runat="server" onkeypress="return keyInteger(event);"></asp:TextBox>

@@ -11,12 +11,22 @@ namespace nguyenmanhthang.UserControl
 {
     public partial class ListTopicUC : System.Web.UI.UserControl
     {
-        private DataSet _dsTopic;
-        public DataSet dsTopic
-        {
-            get { return this._dsTopic; }
-            set { _dsTopic = value; }
-        }
+        #region "Khai Báo Biến, Thuộc tính"
+            public event EventHandler ViewTopic;
+            private Int64 _Topic_ID;
+            public Int64 Topic_ID
+            {
+                get { return this._Topic_ID; }
+                set { _Topic_ID = value; }
+            }
+
+            private DataSet _dsTopic;
+            public DataSet dsTopic
+            {
+                get { return this._dsTopic; }
+                set { _dsTopic = value; }
+            }
+        #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,7 +35,6 @@ namespace nguyenmanhthang.UserControl
                 BindDataGrid(dsTopic);
             }
         }
-
         protected void BindDataGrid(DataSet ds)
         {
             try
@@ -43,11 +52,25 @@ namespace nguyenmanhthang.UserControl
             BindDataGrid(dsTopic);
         }
 
+        protected void grvListTopic_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                Int64 Topic_ID = (Int64)grvListTopic.DataKeys[e.Row.RowIndex].Values["Topic_ID"];
+                //LinkButton URL1 = (LinkButton)e.Row.FindControl("hpView");
+                //URL1.PostBackUrl = "~/Admin/Edit/OrdersDetails.aspx?Orders_ID=" + Topic_ID + "&ViewMode=true";
+            }
+        }
+
         protected void grvListTopic_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "cmdView")
             {
-                Int64 Topic_ID = Convert.ToInt64(e.CommandArgument);
+                this.Topic_ID = Convert.ToInt64(e.CommandArgument);
+                if (ViewTopic != null)
+                {
+                    ViewTopic(this, EventArgs.Empty);
+                }
             }
         }
     }

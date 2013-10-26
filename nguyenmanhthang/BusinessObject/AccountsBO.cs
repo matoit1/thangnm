@@ -17,7 +17,6 @@ namespace BusinessObject
             _AccountsEO.Accounts_Username = Accounts_Username;
             _AccountsEO.Accounts_Password = Accounts_Password;
             _AccountsEO.Accounts_Email = Accounts_Email;
-            _AccountsEO.Accounts_Prefix = Accounts_Prefix;
             _AccountsEO.Accounts_Permission = Accounts_Permission;
             _AccountsEO.Accounts_LinkAvatar = Accounts_LinkAvatar;
             _AccountsEO.Accounts_FullName = Accounts_FullName;
@@ -41,7 +40,6 @@ namespace BusinessObject
             _AccountsEO.Accounts_Username = Accounts_Username;
             _AccountsEO.Accounts_Password = Accounts_Password;
             _AccountsEO.Accounts_Email = Accounts_Email;
-            _AccountsEO.Accounts_Prefix = Accounts_Prefix;
             _AccountsEO.Accounts_Permission = Accounts_Permission;
             _AccountsEO.Accounts_LinkAvatar = Accounts_LinkAvatar;
             _AccountsEO.Accounts_FullName = Accounts_FullName;

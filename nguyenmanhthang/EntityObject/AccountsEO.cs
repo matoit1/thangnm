@@ -11,18 +11,17 @@ namespace EntityObject
         private string _Accounts_Username;
         private string _Accounts_Password;
         private string _Accounts_Email;
-        private int _Accounts_Prefix;
-        private int _Accounts_Permission;
-        private DateTime _Accounts_RegisterDate;
-        private string _Accounts_LinkAvatar;
         private string _Accounts_FullName;
         private string _Accounts_Address;
         private DateTime _Accounts_DateOfBirth;
         private string _Accounts_PhoneNumber;
+        private int _Accounts_Permission;
+        private string _Accounts_LinkAvatar;
         private string _Accounts_Signature;
         private int _Accounts_Like;
         private bool _Accounts_Notification;
         private bool _Accounts_Status;
+        private DateTime _Accounts_RegisterDate;
 
         // 1. Xay dung cac phuong thuc set, get cho Accounts_ID
         public Int64 Accounts_ID
@@ -52,88 +51,81 @@ namespace EntityObject
             set { this._Accounts_Email = value; }
         }
 
-        // 5. Xay dung cac phuong thuc set, get cho Accounts_Prefix
-        public int Accounts_Prefix
-        {
-            get { return this._Accounts_Prefix; }
-            set { this._Accounts_Prefix = value; }
-        }
-
-        // 6. Xay dung cac phuong thuc set, get cho Accounts_Permission
-        public int Accounts_Permission
-        {
-            get { return this._Accounts_Permission; }
-            set { this._Accounts_Permission = value; }
-        }
-
-        // 7. Xay dung cac phuong thuc set, get cho Accounts_RegisterDate
-        public DateTime Accounts_RegisterDate
-        {
-            get { return this._Accounts_RegisterDate; }
-            set { this._Accounts_RegisterDate = value; }
-        }
-
-        // 8. Xay dung cac phuong thuc set, get cho Accounts_LinkAvatar
-        public string Accounts_LinkAvatar
-        {
-            get { return this._Accounts_LinkAvatar; }
-            set { this._Accounts_LinkAvatar = value; }
-        }
-
-        // 9. Xay dung cac phuong thuc set, get cho Accounts_FullName
+        // 5. Xay dung cac phuong thuc set, get cho Accounts_FullName
         public string Accounts_FullName
         {
             get { return this._Accounts_FullName; }
             set { this._Accounts_FullName = value; }
         }
 
-        // 10. Xay dung cac phuong thuc set, get cho Accounts_Address
+        // 6. Xay dung cac phuong thuc set, get cho Accounts_Address
         public string Accounts_Address
         {
             get { return this._Accounts_Address; }
             set { this._Accounts_Address = value; }
         }
 
-        // 11. Xay dung cac phuong thuc set, get cho Accounts_DateOfBirth
+        // 7. Xay dung cac phuong thuc set, get cho Accounts_DateOfBirth
         public DateTime Accounts_DateOfBirth
         {
             get { return this._Accounts_DateOfBirth; }
             set { this._Accounts_DateOfBirth = value; }
         }
 
-        // 12. Xay dung cac phuong thuc set, get cho Accounts_PhoneNumber
+        // 8. Xay dung cac phuong thuc set, get cho Accounts_PhoneNumber
         public string Accounts_PhoneNumber
         {
             get { return this._Accounts_PhoneNumber; }
             set { this._Accounts_PhoneNumber = value; }
         }
 
-        // 13. Xay dung cac phuong thuc set, get cho Accounts_Signature
+        // 9. Xay dung cac phuong thuc set, get cho Accounts_Permission
+        public int Accounts_Permission
+        {
+            get { return this._Accounts_Permission; }
+            set { this._Accounts_Permission = value; }
+        }
+
+        // 10. Xay dung cac phuong thuc set, get cho Accounts_LinkAvatar
+        public string Accounts_LinkAvatar
+        {
+            get { return this._Accounts_LinkAvatar; }
+            set { this._Accounts_LinkAvatar = value; }
+        }
+
+        // 11. Xay dung cac phuong thuc set, get cho Accounts_Signature
         public string Accounts_Signature
         {
             get { return this._Accounts_Signature; }
             set { this._Accounts_Signature = value; }
         }
 
-        // 14. Xay dung cac phuong thuc set, get cho Accounts_Like
+        // 12. Xay dung cac phuong thuc set, get cho Accounts_Like
         public int Accounts_Like
         {
             get { return this._Accounts_Like; }
             set { this._Accounts_Like = value; }
         }
 
-        // 15. Xay dung cac phuong thuc set, get cho Accounts_Notification
+        // 13. Xay dung cac phuong thuc set, get cho Accounts_Notification
         public bool Accounts_Notification
         {
             get { return this._Accounts_Notification; }
             set { this._Accounts_Notification = value; }
         }
 
-        // 16. Xay dung cac phuong thuc set, get cho Accounts_Status
+        // 14. Xay dung cac phuong thuc set, get cho Accounts_Status
         public bool Accounts_Status
         {
             get { return this._Accounts_Status; }
             set { this._Accounts_Status = value; }
+        }
+
+        // 15. Xay dung cac phuong thuc set, get cho Accounts_RegisterDate
+        public DateTime Accounts_RegisterDate
+        {
+            get { return this._Accounts_RegisterDate; }
+            set { this._Accounts_RegisterDate = value; }
         }
     }
 }
