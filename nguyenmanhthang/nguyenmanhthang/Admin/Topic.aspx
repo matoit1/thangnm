@@ -11,7 +11,7 @@
             <cc1:TabContainer ID="tabMain" runat="server" ActiveTabIndex="0">
                 <cc1:TabPanel runat="server" HeaderText="TabTopic" ID="TabPanel1">
                     <ContentTemplate>
-                        <uc1:ListTopicUC ID="ListTopicUC1" runat="server" />
+                        <uc1:ListTopicUC ID="ListTopicUC1" runat="server"   OnViewTopic="OnViewTopic_Click"/>
                     </ContentTemplate>
                 </cc1:TabPanel>
                 <cc1:TabPanel runat="server" HeaderText="TabTopicBlock" ID="TabPanel2">

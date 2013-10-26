@@ -23,13 +23,12 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Password", _AccountsEO.Accounts_Password));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Email", _AccountsEO.Accounts_Email));
-                    cmd.Parameters.Add(new SqlParameter("@Accounts_Prefix", _AccountsEO.Accounts_Prefix));
-                    cmd.Parameters.Add(new SqlParameter("@Accounts_Permission", _AccountsEO.Accounts_Permission));
-                    cmd.Parameters.Add(new SqlParameter("@Accounts_LinkAvatar", _AccountsEO.Accounts_LinkAvatar));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_FullName", _AccountsEO.Accounts_FullName));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Address", _AccountsEO.Accounts_Address));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_DateOfBirth", _AccountsEO.Accounts_DateOfBirth));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_PhoneNumber", _AccountsEO.Accounts_PhoneNumber));
+                    cmd.Parameters.Add(new SqlParameter("@Accounts_Permission", _AccountsEO.Accounts_Permission));
+                    cmd.Parameters.Add(new SqlParameter("@Accounts_LinkAvatar", _AccountsEO.Accounts_LinkAvatar));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Signature", _AccountsEO.Accounts_Signature));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Like", _AccountsEO.Accounts_Like));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Notification", _AccountsEO.Accounts_Notification));
@@ -59,13 +58,12 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Password", _AccountsEO.Accounts_Password));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Email", _AccountsEO.Accounts_Email));
-                    cmd.Parameters.Add(new SqlParameter("@Accounts_Prefix", _AccountsEO.Accounts_Prefix));
-                    cmd.Parameters.Add(new SqlParameter("@Accounts_Permission", _AccountsEO.Accounts_Permission));
-                    cmd.Parameters.Add(new SqlParameter("@Accounts_LinkAvatar", _AccountsEO.Accounts_LinkAvatar));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_FullName", _AccountsEO.Accounts_FullName));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Address", _AccountsEO.Accounts_Address));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_DateOfBirth", _AccountsEO.Accounts_DateOfBirth));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_PhoneNumber", _AccountsEO.Accounts_PhoneNumber));
+                    cmd.Parameters.Add(new SqlParameter("@Accounts_Permission", _AccountsEO.Accounts_Permission));
+                    cmd.Parameters.Add(new SqlParameter("@Accounts_LinkAvatar", _AccountsEO.Accounts_LinkAvatar));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Signature", _AccountsEO.Accounts_Signature));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Like", _AccountsEO.Accounts_Like));
                     cmd.Parameters.Add(new SqlParameter("@Accounts_Notification", _AccountsEO.Accounts_Notification));
@@ -210,7 +208,7 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectInfoByAccounts_Username", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectListbyAccounts_Username", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
                     ds = new DataSet();
@@ -237,11 +235,11 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("Accounts_SearchAccounts", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_FullName", _AccountsEO.Accounts_FullName));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Email", _AccountsEO.Accounts_Email));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Permission", _AccountsEO.Accounts_Permission));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_FullName", _AccountsEO.Accounts_FullName));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Address", _AccountsEO.Accounts_Address));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Permission", _AccountsEO.Accounts_Permission));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

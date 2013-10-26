@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections;
 using BusinessObject;
+using System.Data;
 
 namespace nguyenmanhthang.UserControl
 {
@@ -51,7 +52,7 @@ namespace nguyenmanhthang.UserControl
                 else { status = false; }
                 if (txtTopic_LinkImage.Text == "") { Topic_LinkImage = "~/Images/Topic/Default.jpg"; }
                 else { Topic_LinkImage = txtTopic_LinkImage.Text; }
-                bool check = TopicBO.Topic_Insert(Accounts_ID, txtTopic_Title.Text, Topic_LinkImage, ddlTopic_Category.SelectedValue, txtTopic_Tag.Text, txtTopic_Content.Text, 0, status);
+                bool check = TopicBO.Topic_Insert(Accounts_ID, txtTopic_Title.Text, Topic_LinkImage, Convert.ToInt32(ddlTopic_Category.SelectedValue), 1, txtTopic_Tag.Text, txtTopic_Content.Text, 0, status);
                 if (check == true)
                 {
                     lblMessage.Text = "Thêm bài viết mới thành công";
@@ -113,6 +114,47 @@ namespace nguyenmanhthang.UserControl
             catch
             {
                 lblMessage.Text = "Không Load được Kiểu đăng bài";
+                lblMessage.CssClass = "alert_error";
+            }
+        }
+
+        public void LoadDetailTopic(Int64 ID)
+        {
+            DataSet dsDetailTopic= TopicBO.Topic_getTopicbyTopic_ID(ID);
+            txtTopic_Title.Text=dsDetailTopic.Tables[0].Rows[0]["Topic_Title"].ToString();
+            txtTopic_Content.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Content"].ToString();
+            txtTopic_LinkImage.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_LinkImage"].ToString();
+            txtTopic_Tag.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Tag"].ToString();
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //DataSet Author = AccountsBO. Accounts_GetAccounts_IDbyAccounts_Username(Request.Cookies["administrator"].ToString());
+                //int Accounts_ID =Convert.ToInt32(Author.Tables[0].Rows[0]["Accounts_ID"]);
+                int Accounts_ID = 3;
+                bool status;
+                string Topic_LinkImage;
+                if (Convert.ToInt32(ddlTopic_Status.SelectedValue) == 1) { status = true; }
+                else { status = false; }
+                if (txtTopic_LinkImage.Text == "") { Topic_LinkImage = "~/Images/Topic/Default.jpg"; }
+                else { Topic_LinkImage = txtTopic_LinkImage.Text; }
+                //bool check = TopicBO.Topic_Update(1, Accounts_ID, txtTopic_Title.Text, Topic_LinkImage, ddlTopic_Category.SelectedValue, txtTopic_Tag.Text, txtTopic_Content.Text, 0, status);
+                //if (check == true)
+                //{
+                //    lblMessage.Text = "Thêm bài viết mới thành công";
+                //    lblMessage.CssClass = "alert_success";
+                //}
+                //else
+                //{
+                //    lblMessage.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
+                //    lblMessage.CssClass = "alert_error";
+                //}
+            }
+            catch
+            {
+                lblMessage.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
                 lblMessage.CssClass = "alert_error";
             }
         }

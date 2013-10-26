@@ -24,5 +24,12 @@ namespace nguyenmanhthang.Admin
                 ListTopicUC2.dsTopic = dsTopicBlock;
             }
         }
+
+        protected void OnViewTopic_Click(object sender, EventArgs e)
+        {
+            Int64 Topic_ID = ListTopicUC1.Topic_ID;
+            mtvMain.ActiveViewIndex = 1;
+            DetailTopicUC1.LoadDetailTopic(Topic_ID);
+        }
     }
 }

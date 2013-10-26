@@ -11,7 +11,8 @@ namespace EntityObject
         private int _Topic_Author;
         private string _Topic_Title;
         private string _Topic_LinkImage;
-        private string _Topic_Category;
+        private int _Topic_Category;
+        private int _Topic_Parent;
         private string _Topic_Tag;
         private string _Topic_Content;
         private int _Topic_Visit;
@@ -47,41 +48,48 @@ namespace EntityObject
         }
 
         // 5. Xay dung cac phuong thuc set, get cho Topic_Category
-        public string Topic_Category
+        public int Topic_Category
         {
             get { return this._Topic_Category; }
             set { this._Topic_Category = value; }
         }
 
-        // 6. Xay dung cac phuong thuc set, get cho Topic_Tag
+        // 6. Xay dung cac phuong thuc set, get cho Topic_Parent
+        public int Topic_Parent
+        {
+            get { return this._Topic_Parent; }
+            set { this._Topic_Parent = value; }
+        }
+
+        // 7. Xay dung cac phuong thuc set, get cho Topic_Tag
         public string Topic_Tag
         {
             get { return this._Topic_Tag; }
             set { this._Topic_Tag = value; }
         }
 
-        // 7. Xay dung cac phuong thuc set, get cho Topic_Content
+        // 8. Xay dung cac phuong thuc set, get cho Topic_Content
         public string Topic_Content
         {
             get { return this._Topic_Content; }
             set { this._Topic_Content = value; }
         }
 
-        // 8. Xay dung cac phuong thuc set, get cho Topic_Visit
+        // 9. Xay dung cac phuong thuc set, get cho Topic_Visit
         public int Topic_Visit
         {
             get { return this._Topic_Visit; }
             set { this._Topic_Visit = value; }
         }
 
-        // 9. Xay dung cac phuong thuc set, get cho Topic_Status
+        // 10. Xay dung cac phuong thuc set, get cho Topic_Status
         public bool Topic_Status
         {
             get { return this._Topic_Status; }
             set { this._Topic_Status = value; }
         }
 
-        // 10. Xay dung cac phuong thuc set, get cho _Topic_LastUpdate
+        // 11. Xay dung cac phuong thuc set, get cho _Topic_LastUpdate
         public DateTime Topic_LastUpdate
         {
             get { return this._Topic_LastUpdate; }
