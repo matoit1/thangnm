@@ -14,6 +14,7 @@
 				<fieldset>
 					<p>Nội dung</p>
 					<span style="float:left; margin-left:10px; width:920px;"><CKEditor:CKEditorControl ID="txtTopic_Content" runat="server" CssClass="ck"></CKEditor:CKEditorControl></span>
+                    <asp:HiddenField ID="hfTopic_Description" runat="server" />
 				</fieldset>
                 <fieldset>
 					<p>Link Ảnh bìa bài viết</p>

@@ -26,6 +26,7 @@
 				<fieldset style="width:48%; float:left;"> <!-- to make two field float next to one another, adjust values accordingly -->
 					<p>Gắn thẻ</p>
 					<asp:TextBox ID="txtTopic_Tag" runat="server"></asp:TextBox>
+                    <br /><asp:TextBox ID="txtTest" runat="server"></asp:TextBox>
 				</fieldset><div class="clear"></div>
 		</div>
 		<div>

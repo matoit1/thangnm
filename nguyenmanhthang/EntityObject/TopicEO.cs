@@ -15,6 +15,7 @@ namespace EntityObject
         private int _Topic_Parent;
         private string _Topic_Tag;
         private string _Topic_Content;
+        private string _Topic_Description;
         private int _Topic_Visit;
         private bool _Topic_Status;
         private DateTime _Topic_LastUpdate;
@@ -75,21 +76,28 @@ namespace EntityObject
             set { this._Topic_Content = value; }
         }
 
-        // 9. Xay dung cac phuong thuc set, get cho Topic_Visit
+        // 9. Xay dung cac phuong thuc set, get cho Topic_Description
+        public string Topic_Description
+        {
+            get { return this._Topic_Description; }
+            set { this._Topic_Description = value; }
+        }
+
+        // 10. Xay dung cac phuong thuc set, get cho Topic_Visit
         public int Topic_Visit
         {
             get { return this._Topic_Visit; }
             set { this._Topic_Visit = value; }
         }
 
-        // 10. Xay dung cac phuong thuc set, get cho Topic_Status
+        // 11. Xay dung cac phuong thuc set, get cho Topic_Status
         public bool Topic_Status
         {
             get { return this._Topic_Status; }
             set { this._Topic_Status = value; }
         }
 
-        // 11. Xay dung cac phuong thuc set, get cho _Topic_LastUpdate
+        // 12. Xay dung cac phuong thuc set, get cho _Topic_LastUpdate
         public DateTime Topic_LastUpdate
         {
             get { return this._Topic_LastUpdate; }

@@ -15,12 +15,13 @@
                     </div>
                     <div style="float:left; width: 425px; padding: 5px"">
                         <asp:HiddenField ID="hfTopic_ID" runat="server" Value='<%#Eval("Topic_ID")%>'></asp:HiddenField>
-                        <asp:Label ID="lblTopic_Title" runat="server" Text='<%#Eval("Topic_Title")%>' Font-Bold="true" Font-Size="20px"></asp:Label><br /><br /><br />
+                        <asp:Label ID="lblTopic_Title" runat="server" Text='<%#Eval("Topic_Title")%>' Font-Bold="true" Font-Size="20px"></asp:Label><br />
+                        <asp:Label ID="Label3" runat="server" Text='<%#Eval("Topic_Description")%>'></asp:Label>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"~/Topic.aspx?Topic_ID=" +Eval("Topic_ID")%>'> Xem thêm...</asp:HyperLink><br /><br />
                         <asp:Label ID="Label2" runat="server" Text='<%#"Chủ đề: "+Eval("Topic_Category")%>'></asp:Label><br />
                         <asp:Label ID="Label1" runat="server" Text='<%#"Tag: "+Eval("Topic_Tag")%>'></asp:Label><br />
                         <asp:Label ID="lblTopic_Visit" runat="server" Text='<%#"Số lượt xem: "+Eval("Topic_Visit")%>'></asp:Label><br />
                         <i><asp:Label ID="lblWebsite_LastUpdate" runat="server" Text='<%#"Cập nhật lần cuối: "+Eval("Topic_LastUpdate")%>'></asp:Label></i>
-                        <asp:LinkButton ID="hplDetail" runat="server" PostBackUrl='<%#"~/Topic.aspx?Topic_ID=" +Eval("Topic_ID")%>' > >> Xem chi tiết >> </asp:LinkButton>
                     </div>
                 </div><hr /><br />
             </ItemTemplate>

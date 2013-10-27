@@ -27,6 +27,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@Topic_Parent", _TopicEO.Topic_Parent));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Tag", _TopicEO.Topic_Tag));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Content", _TopicEO.Topic_Content));
+                    cmd.Parameters.Add(new SqlParameter("@Topic_Description", _TopicEO.Topic_Description));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Visit", _TopicEO.Topic_Visit));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Status", _TopicEO.Topic_Status));
                     cmd.ExecuteNonQuery();
@@ -58,6 +59,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@Topic_Parent", _TopicEO.Topic_Parent));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Tag", _TopicEO.Topic_Tag));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Content", _TopicEO.Topic_Content));
+                    cmd.Parameters.Add(new SqlParameter("@Topic_Description", _TopicEO.Topic_Description));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Visit", _TopicEO.Topic_Visit));
                     cmd.Parameters.Add(new SqlParameter("@Topic_Status", _TopicEO.Topic_Status));
                     cmd.ExecuteNonQuery();

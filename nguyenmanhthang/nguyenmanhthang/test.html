@@ -1,27 +1,16 @@
 ﻿<html>
 <head>
-<script>
-    function keyPhone(e) {
-        var keyword = null;
-        if (window.event) {
-            keyword = window.event.keyCode;
-        } else {
-            keyword = e.which; //NON IE;
-        }
+    <script>
+        function strip_tags(str) {
+            t = str.replace(/<(\/)?(html|head|title|body|h1|h2|h3|h4|h5|h6|p|br|hr|  pre|em|strong|code|b|i|a|ul|li|ol|dl|dd|table|tr|t  h|td)([^>]*)>/gi, "");
+            t = t.replace(/<(\/)?(iframe|frameset|form|input|select|option|textar  ea|blackquote|address|object)([^>]*)>/gi, "");
 
-        if (keyword < 48 || keyword > 57) {
-            if (keyword == 48 || keyword == 127) {
-                return;
-            }
-            return false;
+            txt.innerHTML = t;
         }
-    }
-
-</script>
+    </script>
 </head>
-
 <body>
-Nhap so dien thoai :
-<input name="phone" type="text" onkeypress="return keyPhone(event);"/>
+    <textarea onKeyUp="strip_tags(this.value)"></textarea>
+    <span id="txt"></span>
 </body>
 </html>
