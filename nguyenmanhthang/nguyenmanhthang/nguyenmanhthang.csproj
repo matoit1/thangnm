@@ -1327,12 +1327,14 @@
     </Compile>
     <Compile Include="UserControl\AccountsDetailUC.ascx.cs">
       <DependentUpon>AccountsDetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\AccountsDetailUC.ascx.designer.cs">
       <DependentUpon>AccountsDetailUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\AccountsListUC.ascx.cs">
       <DependentUpon>AccountsListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\AccountsListUC.ascx.designer.cs">
       <DependentUpon>AccountsListUC.ascx</DependentUpon>
