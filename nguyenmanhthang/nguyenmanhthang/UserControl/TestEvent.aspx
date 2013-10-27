@@ -2,11 +2,14 @@
 <%@ Register Assembly="FCAP.Controls" Namespace="FCAP.Controls" TagPrefix="cc1" %>
 <%@ Register src="EventUserControl.ascx" tagname="EventUserControl" tagprefix="uc1" %>
 
+<%@ Register src="DetailTopicUC.ascx" tagname="DetailTopicUC" tagprefix="uc2" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="css.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -18,7 +21,10 @@
         
         <br />
         <cc1:intergertextbox runat="server" ID="txtSo_HD" runat="server" Width="400px"></cc1:intergertextbox>
+        <uc2:DetailTopicUC ID="DetailTopicUC1" runat="server" />
     </div>
+
+
     </form>
 </body>
 </html>

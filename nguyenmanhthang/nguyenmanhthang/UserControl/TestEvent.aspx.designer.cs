@@ -47,5 +47,14 @@ namespace nguyenmanhthang.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::FCAP.Controls.IntergerTextbox txtSo_HD;
+        
+        /// <summary>
+        /// DetailTopicUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::nguyenmanhthang.UserControl.TopicDetailUC TopicDetailUC1;
     }
 }

@@ -10,7 +10,16 @@
 namespace nguyenmanhthang.UserControl {
     
     
-    public partial class DetailTopicUC {
+    public partial class TopicDetailUC {
+        
+        /// <summary>
+        /// ibtnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnBack;
         
         /// <summary>
         /// lblMessage control.
@@ -20,6 +29,33 @@ namespace nguyenmanhthang.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
+        
+        /// <summary>
+        /// pnlInfo1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlInfo1;
+        
+        /// <summary>
+        /// txtTopic_ID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTopic_ID;
+        
+        /// <summary>
+        /// txtTopic_Author control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTopic_Author;
         
         /// <summary>
         /// txtTopic_Title control.
@@ -49,15 +85,6 @@ namespace nguyenmanhthang.UserControl {
         protected global::System.Web.UI.WebControls.TextBox txtTopic_LinkImage;
         
         /// <summary>
-        /// ddlTopic_Category control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Category;
-        
-        /// <summary>
         /// txtTopic_Tag control.
         /// </summary>
         /// <remarks>
@@ -67,13 +94,40 @@ namespace nguyenmanhthang.UserControl {
         protected global::System.Web.UI.WebControls.TextBox txtTopic_Tag;
         
         /// <summary>
-        /// txtTest control.
+        /// ddlTopic_Category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTest;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Category;
+        
+        /// <summary>
+        /// pnlInfo2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlInfo2;
+        
+        /// <summary>
+        /// txtTopic_Visit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTopic_Visit;
+        
+        /// <summary>
+        /// txtTopic_LastUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTopic_LastUpdate;
         
         /// <summary>
         /// ddlTopic_Status control.

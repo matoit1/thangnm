@@ -49,40 +49,40 @@ namespace nguyenmanhthang.Admin {
         protected global::AjaxControlToolkit.TabContainer tabMain;
         
         /// <summary>
-        /// TabPanel1 control.
+        /// TabTopic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel1;
+        protected global::AjaxControlToolkit.TabPanel TabTopic;
         
         /// <summary>
-        /// ListTopicUC1 control.
+        /// TopicListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::nguyenmanhthang.UserControl.ListTopicUC ListTopicUC1;
+        protected global::nguyenmanhthang.UserControl.ListTopicUC TopicListUC1;
         
         /// <summary>
-        /// TabPanel2 control.
+        /// TabTopicBlock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel2;
+        protected global::AjaxControlToolkit.TabPanel TabTopicBlock;
         
         /// <summary>
-        /// ListTopicUC2 control.
+        /// TopicListUC2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::nguyenmanhthang.UserControl.ListTopicUC ListTopicUC2;
+        protected global::nguyenmanhthang.UserControl.ListTopicUC TopicListUC2;
         
         /// <summary>
         /// vDetail control.
@@ -94,12 +94,21 @@ namespace nguyenmanhthang.Admin {
         protected global::System.Web.UI.WebControls.View vDetail;
         
         /// <summary>
-        /// DetailTopicUC1 control.
+        /// TopicDetailUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::nguyenmanhthang.UserControl.DetailTopicUC DetailTopicUC1;
+        protected global::nguyenmanhthang.UserControl.TopicDetailUC TopicDetailUC1;
+        
+        /// <summary>
+        /// ibtnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnAdd;
     }
 }

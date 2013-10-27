@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListTopicUC.ascx.cs" Inherits="nguyenmanhthang.UserControl.ListTopicUC" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TopicListUC.ascx.cs" Inherits="nguyenmanhthang.UserControl.ListTopicUC" %>
 <%@ Register Assembly="FCAP.Controls" Namespace="FCAP.Controls" TagPrefix="cc1" %>
 
 <table width="100%" align="center" cellpadding="2" cellspacing="0">
@@ -9,10 +9,11 @@
     </tr>
     <tr>
         <td colspan="2">
-            <cc1:GridViewExt ID="grvListTopic" runat="server" CssClass="GridLayout" AutoGenerateColumns="False"
-                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="20" 
-                datakeynames="Topic_ID" onrowcommand="grvListTopic_RowCommand" 
-                onrowdatabound="grvListTopic_RowDataBound">
+            <cc1:GridViewExt ID="grvListTopic" runat="server" CssClass="mGrid" AutoGenerateColumns="False"
+                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="1" 
+                datakeynames="Topic_ID" onrowcommand="grvListTopic_RowCommand" emptydatatext="Không có bản ghi nào."
+                onrowdatabound="grvListTopic_RowDataBound" 
+                onpageindexchanging="grvListTopic_PageIndexChanging">
                 <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                 <Columns>
                     <asp:TemplateField>

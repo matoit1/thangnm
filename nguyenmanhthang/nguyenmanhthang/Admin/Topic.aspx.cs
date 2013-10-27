@@ -16,20 +16,57 @@ namespace nguyenmanhthang.Admin
             if (!IsPostBack)
             {
                 DataSet dsTopic = TopicBO.Topic_SelectListbyTopic_Status(true);
-                ListTopicUC1.lblTitle.Text = "Danh sách các bài viết";
-                ListTopicUC1.dsTopic = dsTopic;
-
+                TopicListUC1.lblTitle.Text = "Danh sách các bài viết";
+                TopicListUC1.isBlock = false;
+                TopicListUC1.dsTopic = dsTopic;
                 DataSet dsTopicBlock = TopicBO.Topic_SelectListbyTopic_Status(false);
-                ListTopicUC2.lblTitle.Text = "Danh sách các bài viết bị khóa";
-                ListTopicUC2.dsTopic = dsTopicBlock;
+                TopicListUC2.lblTitle.Text = "Danh sách các bài viết bị khóa";
+                TopicListUC2.isBlock = true;
+                TopicListUC2.dsTopic = dsTopicBlock;
             }
         }
 
         protected void OnViewTopic_Click(object sender, EventArgs e)
         {
-            Int64 Topic_ID = ListTopicUC1.Topic_ID;
+            Int64 Topic_ID = TopicListUC1.Topic_ID;
             mtvMain.ActiveViewIndex = 1;
-            DetailTopicUC1.LoadDetailTopic(Topic_ID);
+            ibtnAdd.Visible = false;
+            TopicDetailUC1.LoadDetailTopic(Topic_ID, false);
+        }
+
+        protected void OnViewTopicBlock_Click(object sender, EventArgs e)
+        {
+            Int64 Topic_ID = TopicListUC2.Topic_ID;
+            mtvMain.ActiveViewIndex = 1;
+            ibtnAdd.Visible = false;
+            TopicDetailUC1.LoadDetailTopic(Topic_ID, false);
+        }
+
+        protected void OnBack_Click(object sender, EventArgs e)
+        {
+            mtvMain.ActiveViewIndex = 0;
+            ibtnAdd.Visible = true;
+        }
+
+        protected void OnPageChangeTopic_Click(object sender, EventArgs e)
+        {
+            DataSet dsTopic = TopicBO.Topic_SelectListbyTopic_Status(true);
+            TopicListUC1.dsTopic = dsTopic;
+            tabMain.ActiveTab = TabTopic;
+        }
+
+        protected void OnPageChangeTopicBlock_Click(object sender, EventArgs e)
+        {
+            DataSet dsTopic = TopicBO.Topic_SelectListbyTopic_Status(false);
+            TopicListUC2.dsTopic = dsTopic;
+            tabMain.ActiveTab = TabTopicBlock;
+        }
+
+        protected void ibtnAdd_Click(object sender, ImageClickEventArgs e)
+        {
+            mtvMain.ActiveViewIndex = 1;
+            ibtnAdd.Visible = false;
+            TopicDetailUC1.LoadDetailTopic(0, true);
         }
     }
 }
