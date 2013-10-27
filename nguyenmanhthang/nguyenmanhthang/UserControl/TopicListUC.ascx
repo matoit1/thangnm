@@ -9,8 +9,8 @@
     </tr>
     <tr>
         <td colspan="2">
-            <cc1:GridViewExt ID="grvListTopic" runat="server" CssClass="mGrid" AutoGenerateColumns="False"
-                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="1" 
+            <cc1:GridViewExt ID="grvListTopic" runat="server" CssClass="mGrid" AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
+                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="2" 
                 datakeynames="Topic_ID" onrowcommand="grvListTopic_RowCommand" emptydatatext="Không có bản ghi nào."
                 onrowdatabound="grvListTopic_RowDataBound" 
                 onpageindexchanging="grvListTopic_PageIndexChanging">
@@ -18,7 +18,7 @@
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="cmdDetail" runat="server"  CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("Topic_ID")%>'>Chi tiết</asp:LinkButton>
+                            <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("Topic_ID")%>'>Chi tiết</asp:LinkButton>
                          </ItemTemplate>
                       <ItemStyle HorizontalAlign="Center"  />
                     </asp:TemplateField>

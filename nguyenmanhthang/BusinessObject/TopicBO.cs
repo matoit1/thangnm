@@ -31,12 +31,13 @@ namespace BusinessObject
         }
 
         // 2. Topic_Update
-        public static bool Topic_Update(Int64 Topic_ID, int Topic_Author, string Topic_Title, int Topic_Category, int Topic_Parent, string Topic_Tag, string Topic_Content, string Topic_Description, int Topic_Visit, bool Topic_Status)
+        public static bool Topic_Update(Int64 Topic_ID, int Topic_Author, string Topic_Title, string Topic_LinkImage, int Topic_Category, int Topic_Parent, string Topic_Tag, string Topic_Content, string Topic_Description, int Topic_Visit, bool Topic_Status)
         {
             TopicEO _TopicEO = new TopicEO();
             _TopicEO.Topic_ID = Topic_ID;
             _TopicEO.Topic_Author = Topic_Author;
             _TopicEO.Topic_Title = Topic_Title;
+            _TopicEO.Topic_LinkImage = Topic_LinkImage;
             _TopicEO.Topic_Category = Topic_Category;
             _TopicEO.Topic_Parent = Topic_Parent;
             _TopicEO.Topic_Tag = Topic_Tag;

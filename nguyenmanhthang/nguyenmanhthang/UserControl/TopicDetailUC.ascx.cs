@@ -184,19 +184,20 @@ namespace nguyenmanhthang.UserControl
                 string Topic_LinkImage;
                 if (Convert.ToInt32(ddlTopic_Status.SelectedValue) == 1) { status = true; }
                 else { status = false; }
-                if (txtTopic_LinkImage.Text == "") { Topic_LinkImage = "~/Images/Topic/Default.jpg"; }
+                if (txtTopic_LinkImage.Text == "") { Topic_LinkImage = "~//Images//Topic//Default.jpg"; }
                 else { Topic_LinkImage = txtTopic_LinkImage.Text; }
-                //bool check = TopicBO.Topic_Update(1, Accounts_ID, txtTopic_Title.Text, Topic_LinkImage, ddlTopic_Category.SelectedValue, txtTopic_Tag.Text, txtTopic_Content.Text, 0, status);
-                //if (check == true)
-                //{
-                //    lblMessage.Text = "Thêm bài viết mới thành công";
-                //    lblMessage.CssClass = "alert_success";
-                //}
-                //else
-                //{
-                //    lblMessage.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
-                //    lblMessage.CssClass = "alert_error";
-                //}
+                string Topic_Description = RemoveHtmlTags.RemoveHtmlTagsUsingCharArray(txtTopic_Content.Text);
+                bool check = TopicBO.Topic_Update(Convert.ToInt64(txtTopic_ID.Text), Accounts_ID, txtTopic_Title.Text,Topic_LinkImage, 1, 1, txtTopic_Tag.Text, txtTopic_Content.Text, Topic_Description, Convert.ToInt32(txtTopic_Visit.Text),status);
+                if (check == true)
+                {
+                    lblMessage.Text = "Thêm bài viết mới thành công";
+                    lblMessage.CssClass = "alert_success";
+                }
+                else
+                {
+                    lblMessage.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
+                    lblMessage.CssClass = "alert_error";
+                }
             }
             catch
             {
