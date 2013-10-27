@@ -990,14 +990,14 @@
     <Content Include="Admin\Security.aspx" />
     <Content Include="Scripts\vote.js" />
     <Content Include="sitemap.xml" />
-    <Content Include="SVIT\css.css" />
-    <Content Include="SVIT\index.htm" />
     <Content Include="Tag.aspx" />
     <Content Include="test.html" />
     <Content Include="ThuThuat\Default.aspx" />
     <Content Include="Topic.aspx" />
     <Content Include="UngDungOnline\Default.aspx" />
     <Content Include="Upload\Default.aspx" />
+    <Content Include="UserControl\AccountsDetailUC.ascx" />
+    <Content Include="UserControl\AccountsListUC.ascx" />
     <Content Include="UserControl\CommentUC.ascx" />
     <Content Include="UserControl\css.css" />
     <Content Include="UserControl\TopicDetailUC.ascx" />
@@ -1324,6 +1324,18 @@
     </Compile>
     <Compile Include="Upload\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AccountsDetailUC.ascx.cs">
+      <DependentUpon>AccountsDetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AccountsDetailUC.ascx.designer.cs">
+      <DependentUpon>AccountsDetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AccountsListUC.ascx.cs">
+      <DependentUpon>AccountsListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AccountsListUC.ascx.designer.cs">
+      <DependentUpon>AccountsListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\CommentUC.ascx.cs">
       <DependentUpon>CommentUC.ascx</DependentUpon>

@@ -112,7 +112,7 @@ a img {border:none;}
 
 
 
-.wrapper_input {background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #9BA0AF; border-radius: 5px 5px 5px 5px; width: 100%;}
+.wrapper_input {background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #9BA0AF; border-radius: 5px 5px 5px 5px; width: 99.5%; margin: 5px 5px 100px 5px}
 .wrapper_input .header {background: url("../Images/Template/wrapper_input_header_bg.png") repeat-x scroll 0 0 #F1F1F4; border-top-left-radius: 5px; border-top-right-radius: 5px; height: 38px; width: 100%;}
 .wrapper_input .content {color: #666666; margin: 10px 20px; display:block;}
 .wrapper_input .header h3 {display: block; float: left; width: 90%; color: #1F1F20; font-size: 13px; margin: 8px 20px; text-shadow: 0 1px 0 #FFFFFF; text-transform: uppercase;}
