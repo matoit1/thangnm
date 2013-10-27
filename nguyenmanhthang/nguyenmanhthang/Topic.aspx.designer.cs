@@ -85,15 +85,6 @@ namespace nguyenmanhthang {
         protected global::nguyenmanhthang.UserControl.CommentUC CommentUC1;
         
         /// <summary>
-        /// TabCommentFacebook control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabCommentFacebook;
-        
-        /// <summary>
         /// TabCommentGoogle control.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,15 @@ namespace nguyenmanhthang {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.TabPanel TabCommentGoogle;
+        
+        /// <summary>
+        /// TabCommentFacebook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabCommentFacebook;
         
         /// <summary>
         /// pnlAll control.
