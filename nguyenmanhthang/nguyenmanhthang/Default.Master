@@ -7,7 +7,7 @@
     <title>Nguyễn Mạnh Thắng - Đơn giản là chia sẻ</title>
     <link href="../favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="language" content="Vietnamese, English" />
+    <meta http-equiv="content-language" content="vi" />
     <meta name="description" content="Nguyễn Mạnh Thắng - Đơn giản là chia sẻ" />
     <meta name="keywords" content="ThangNM, Admin Control Panel - ThangNM Joint Stock Company, Manager, thang.991992@gmail.com, Nguyễn Mạnh Thắng" />
     <meta name="robots" content="index ,follow" />

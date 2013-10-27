@@ -59,48 +59,39 @@
             <ContentTemplate>
                 <asp:Repeater ID="rptComment" runat="server">
                 <ItemTemplate>
-                        <asp:HyperLink ID="hplComment_Name" runat="server" NavigateUrl='<%#Eval("Comment_Website")%>'><%#Eval("Comment_Name")%></asp:HyperLink>
-                        <i><asp:Label ID="lblComment_LastUpdate" runat="server" Text='<%#Eval("Comment_LastUpdate")%>'></asp:Label></i><br />
-                        <asp:Label ID="Label1" runat="server" Text='<%#Eval("Comment_Content")%>'></asp:Label>
-                        <hr /><br />
+                    <asp:HyperLink ID="hplComment_Name" runat="server" NavigateUrl='<%#Eval("Comment_Website")%>'><%#Eval("Comment_Name")%></asp:HyperLink>
+                    <i><asp:Label ID="lblComment_LastUpdate" runat="server" Text='<%#Eval("Comment_LastUpdate")%>'></asp:Label></i><br />
+                    <asp:Label ID="Label1" runat="server" Text='<%#Eval("Comment_Content")%>'></asp:Label>
+                    <hr /><br />
                 </ItemTemplate>
-                </asp:Repeater>
-                <br /><br />
+                </asp:Repeater><br /><br />
                 <uc2:CommentUC ID="CommentUC1" runat="server" />
+            </ContentTemplate>
+        </cc1:TabPanel>
+        <cc1:TabPanel runat="server" HeaderText="Bình luận bằng Google" ID="TabCommentGoogle">
+            <ContentTemplate>
+                <script src="https://apis.google.com/js/plusone.js"></script>
+		        <div class="g-comments"
+			        data-href="<%=Request.Url.ToString()%>"
+			        data-width="500"
+			        data-first_party_property="BLOGGER"
+			        data-view_type="FILTERED_POSTMOD">
+		        </div>
             </ContentTemplate>
         </cc1:TabPanel>
         <cc1:TabPanel runat="server" HeaderText="Bình luận bằng Facebook" ID="TabCommentFacebook">
             <ContentTemplate>
-                <div id="Div1"></div><!-- Begin Comment Facebook -->
-			    <script>
-			        (function (d, s, id) {
-			            var js, fjs = d.getElementsByTagName(s)[0];
-			            if (d.getElementById(id)) return;
-			            js = d.createElement(s); js.id = id;
-			            js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=432781806807255";
-			            fjs.parentNode.insertBefore(js, fjs);
-			        } (document, 'script', 'facebook-jssdk'));
-                </script>
-		        <div class="fb-comments" data-href="<%=Request.Url.ToString()%>" data-width="500" data-num-posts="10"></div><!-- End Comment Facebook -->
-            
-</ContentTemplate>
-        
-
-</cc1:TabPanel>
-        <cc1:TabPanel runat="server" HeaderText="Bình luận bằng Google" ID="TabCommentGoogle">
-            <ContentTemplate>
-                <script src="https://apis.google.com/js/plusone.js"></script>
-		                <div class="g-comments"
-			                data-href="<%=Request.Url.ToString()%>"
-			                data-width="500"
-			                data-first_party_property="BLOGGER"
-			                data-view_type="FILTERED_POSTMOD">
-		                </div>
-            
-</ContentTemplate>
-        
-
-</cc1:TabPanel>
+                <div id="fb-root"></div>
+                <script>                    (function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=432781806807255";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    } (document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-comments" data-href="<%=Request.Url.AbsoluteUri.ToString()%>" data-colorscheme="light" data-numposts="10" data-width="500"></div>            
+            </ContentTemplate>
+        </cc1:TabPanel>
     </cc1:TabContainer>
         <asp:Panel ID="pnlAll" runat="server">
         <center><asp:Label ID="lblMessage" runat="server"></asp:Label><br /><br /><h1><asp:Label ID="lblMore" runat="server"></asp:Label></h1><br /></center>
