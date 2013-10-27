@@ -68,6 +68,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
     <Content Include="Admin\Accounts\Login.aspx" />
     <Content Include="Admin\Alert.aspx" />
     <Content Include="Admin\Basic_Styles.aspx" />
@@ -892,6 +893,7 @@
     <Content Include="ckfinder\skins\v1\richcombo.css" />
     <Content Include="ckfinder\skins\v1\skin.js" />
     <Content Include="ckfinder\skins\v1\uipanel.css" />
+    <Content Include="Contact.aspx" />
     <Content Include="Css\Admin\admin.css" />
     <Content Include="Css\Admin\bg_footer.png" />
     <Content Include="Css\Admin\bg_footer_container.png" />
@@ -952,6 +954,7 @@
     <Content Include="Error\chat.js" />
     <Content Include="Error\Dao_vang_I.swf" />
     <Content Include="Error\Default.aspx" />
+    <Content Include="FAQ.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="GiaiTri\Default.aspx" />
     <Content Include="HocTap\Default.aspx" />
@@ -980,6 +983,7 @@
     <Content Include="Library\FCAP.Controls.dll" />
     <Content Include="Library\Microsoft.Sharepoint.Sandbox.dll" />
     <Content Include="PhanMem\Default.aspx" />
+    <Content Include="Policies-Privacy.aspx" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
@@ -989,6 +993,7 @@
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Admin\Security.aspx" />
     <Content Include="Scripts\vote.js" />
+    <Content Include="Sitemap.aspx" />
     <Content Include="sitemap.xml" />
     <Content Include="Tag.aspx" />
     <Content Include="test.html" />
@@ -1055,6 +1060,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Accounts\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1167,6 +1179,13 @@
     <Compile Include="Admin\Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1215,6 +1234,13 @@
     </Compile>
     <Compile Include="Error\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiaiTri\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -1282,6 +1308,13 @@
     <Compile Include="PhanMem\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Policies-Privacy.aspx.cs">
+      <DependentUpon>Policies-Privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Policies-Privacy.aspx.designer.cs">
+      <DependentUpon>Policies-Privacy.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Admin\Security.aspx.cs">
       <DependentUpon>Security.aspx</DependentUpon>
@@ -1289,6 +1322,13 @@
     </Compile>
     <Compile Include="Admin\Security.aspx.designer.cs">
       <DependentUpon>Security.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitemap.aspx.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitemap.aspx.designer.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tag.aspx.cs">
       <DependentUpon>Tag.aspx</DependentUpon>

@@ -64,7 +64,9 @@
                     <asp:Label ID="Label1" runat="server" Text='<%#Eval("Comment_Content")%>'></asp:Label>
                     <hr /><br />
                 </ItemTemplate>
-                </asp:Repeater><br /><br />
+                <FooterTemplate><div id="comment_success"><a href="comment_success"></a></div></FooterTemplate>
+                </asp:Repeater>
+                <br /><br />
                 <uc2:CommentUC ID="CommentUC1" runat="server" />
             </ContentTemplate>
         </cc1:TabPanel>
