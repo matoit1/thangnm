@@ -26,12 +26,22 @@ namespace nguyenmanhthang.UserControl
         {
             try
             {
-                bool check = CommentBO.Comment_Insert(Topic_ID,txtComment_Name.Text,txtComment_Email.Text,txtComment_Website.Text,txtComment_Content.Text);
+                string Comment_Website;
+                if (txtComment_Website.Text.Contains("http://") || txtComment_Website.Text.Contains("https://"))
+                {
+                    Comment_Website = txtComment_Website.Text;
+                }
+                else
+                {
+                    Comment_Website = "http://" + txtComment_Website.Text;
+                }
+                bool check = CommentBO.Comment_Insert(Topic_ID, txtComment_Name.Text, txtComment_Email.Text, Comment_Website, txtComment_Content.Text);
                 if (check == true)
                 {
                     lblMessage.Text = "Bình luận thành công";
                     lblMessage.CssClass = "alert_success";
                     txtComment_Content.Text = "";
+                    Response.Redirect(Request.Url.AbsoluteUri + "#comment_success");
                 }
                 else
                 {

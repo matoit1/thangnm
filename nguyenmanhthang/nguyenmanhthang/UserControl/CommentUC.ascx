@@ -3,7 +3,7 @@
 <asp:Label ID="lblMessage" runat="server"></asp:Label>
 <table>
     <tr>
-        <td>Họ vè tên: </td>
+        <td>Họ và tên: </td>
         <td><asp:TextBox ID="txtComment_Name" runat="server"></asp:TextBox></td>
         <td style="color:Red; ">*</td>
         <td><asp:RequiredFieldValidator ID="rfvComment_Name" runat="server" ErrorMessage="Bạn chưa nhập Họ và Tên" ControlToValidate="txtComment_Name"></asp:RequiredFieldValidator></td>
