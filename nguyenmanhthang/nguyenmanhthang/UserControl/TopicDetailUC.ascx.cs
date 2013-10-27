@@ -11,8 +11,12 @@ using nguyenmanhthang.Library;
 
 namespace nguyenmanhthang.UserControl
 {
-    public partial class DetailTopicUC : System.Web.UI.UserControl
+    public partial class TopicDetailUC : System.Web.UI.UserControl
     {
+        #region "Khai Báo Biến, Thuộc tính"
+            public event EventHandler Back;
+        #endregion
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,17 +30,17 @@ namespace nguyenmanhthang.UserControl
         {
             txtTopic_Content.config.toolbar = new object[] { 
               new object[] { "Save", "NewPage", "Preview", "-", "Templates" },
-				new object[] { "Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "-", "Print", "SpellChecker", "Scayt" },
-				new object[] { "Undo", "Redo", "-", "Find", "Replace", "-", "SelectAll", "RemoveFormat" },
+                new object[] { "Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "-", "Print", "SpellChecker", "Scayt" },
+                new object[] { "Undo", "Redo", "-", "Find", "Replace", "-", "SelectAll", "RemoveFormat" },
 			
-				"/",
-				new object[] { "Bold", "Italic", "Underline", "Strike" },
-				new object[] { "NumberedList", "BulletedList", "-", "Outdent", "Indent", "Blockquote", "CreateDiv" },
-				new object[] { "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock" },
-				new object[] { "BidiLtr", "BidiRtl" },
-				new object[] { "Link", "Unlink", "Anchor" },
-				new object[] { "Image"},
-				"/"
+                "/",
+                new object[] { "Bold", "Italic", "Underline", "Strike" },
+                new object[] { "NumberedList", "BulletedList", "-", "Outdent", "Indent", "Blockquote", "CreateDiv" },
+                new object[] { "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock" },
+                new object[] { "BidiLtr", "BidiRtl" },
+                new object[] { "Link", "Unlink", "Anchor" },
+                new object[] { "Image"},
+                "/"
             };
         }
 
@@ -120,14 +124,53 @@ namespace nguyenmanhthang.UserControl
             }
         }
 
-        public void LoadDetailTopic(Int64 ID)
+        public void LoadDetailTopic(Int64 ID, bool state) // state =true thì thêm; state =false thì sửa
         {
-            DataSet dsDetailTopic= TopicBO.Topic_getTopicbyTopic_ID(ID);
-            txtTopic_Title.Text=dsDetailTopic.Tables[0].Rows[0]["Topic_Title"].ToString();
-            txtTopic_Content.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Content"].ToString();
-            txtTopic_LinkImage.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_LinkImage"].ToString();
-            txtTopic_Tag.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Tag"].ToString();
-            txtTest.Text = RemoveHtmlTags.RemoveHtmlTagsUsingCharArray(txtTopic_Content.Text);
+            if (ID != 0)
+            {
+                try
+                {
+                    DataSet dsDetailTopic = TopicBO.Topic_getTopicbyTopic_ID(ID);
+                    txtTopic_Title.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Title"].ToString();
+                    txtTopic_Content.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Content"].ToString();
+                    txtTopic_LinkImage.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_LinkImage"].ToString();
+                    txtTopic_Tag.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Tag"].ToString();
+                    txtTopic_Author.Text = dsDetailTopic.Tables[0].Rows[0]["Accounts_FullName"].ToString();
+                    txtTopic_ID.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_ID"].ToString();
+                    txtTopic_LastUpdate.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_LastUpdate"].ToString();
+                    txtTopic_Visit.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Visit"].ToString();
+                }
+                catch { }
+            }
+            else
+            {
+                txtTopic_Title.Text = "";
+                txtTopic_Content.Text = "";
+                txtTopic_LinkImage.Text = "";
+                txtTopic_Tag.Text = "";
+                txtTopic_Author.Text = "";
+                txtTopic_ID.Text = "";
+                txtTopic_LastUpdate.Text = "";
+                txtTopic_Visit.Text = "";
+            }
+            if (state == true)
+            {
+                pnlInfo1.Visible = false;
+                pnlInfo2.Visible = false;
+                btnPublish.Visible = true;
+                btnUpdate.Visible = false;
+            }
+            else
+            {
+                pnlInfo1.Visible = true;
+                pnlInfo2.Visible = true;
+                btnPublish.Visible = false;
+                btnUpdate.Visible = true;
+                txtTopic_ID.Enabled = false;
+                txtTopic_Author.Enabled = false;
+                txtTopic_LastUpdate.Enabled = false;
+                txtTopic_Visit.Enabled = false;
+            }
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -159,6 +202,14 @@ namespace nguyenmanhthang.UserControl
             {
                 lblMessage.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
                 lblMessage.CssClass = "alert_error";
+            }
+        }
+
+        protected void ibtnBack_Click(object sender, ImageClickEventArgs e)
+        {
+            if (Back != null)
+            {
+                Back(this, EventArgs.Empty);
             }
         }
     }

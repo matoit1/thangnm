@@ -957,8 +957,14 @@
     <Content Include="HocTap\Default.aspx" />
     <Content Include="Images\Avatar\admin.jpg" />
     <Content Include="Images\Avatar\default.jpg" />
+    <Content Include="Images\Template\btnNewTopic.png" />
+    <Content Include="Images\Template\ibtnBack.gif" />
     <Content Include="Images\icon_chitiet.gif" />
     <Content Include="Images\logo.gif" />
+    <Content Include="Images\Template\btnSubmit.png" />
+    <Content Include="Images\Template\btnReset.png" />
+    <Content Include="Images\Template\wrapper_input_footer_bg.png" />
+    <Content Include="Images\Template\wrapper_input_header_bg.png" />
     <Content Include="Images\Topic\default.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="google941e8f34ed1f02ad.html" />
@@ -993,10 +999,48 @@
     <Content Include="UngDungOnline\Default.aspx" />
     <Content Include="Upload\Default.aspx" />
     <Content Include="UserControl\CommentUC.ascx" />
-    <Content Include="UserControl\DetailTopicUC.ascx" />
+    <Content Include="UserControl\css.css" />
+    <Content Include="UserControl\TopicDetailUC.ascx" />
     <Content Include="UserControl\DroplistKey.ascx" />
     <Content Include="UserControl\EventUserControl.ascx" />
-    <Content Include="UserControl\ListTopicUC.ascx" />
+    <Content Include="UserControl\Images\breadcrumb_divider.png" />
+    <Content Include="UserControl\Images\btn_submit.png" />
+    <Content Include="UserControl\Images\btn_submit_2.png" />
+    <Content Include="UserControl\Images\btn_view_site.png" />
+    <Content Include="UserControl\Images\header_bg.png" />
+    <Content Include="UserControl\Images\header_shadow.png" />
+    <Content Include="UserControl\Images\icn_add_user.png" />
+    <Content Include="UserControl\Images\icn_alert_error.png" />
+    <Content Include="UserControl\Images\icn_alert_info.png" />
+    <Content Include="UserControl\Images\icn_alert_success.png" />
+    <Content Include="UserControl\Images\icn_alert_warning.png" />
+    <Content Include="UserControl\Images\icn_audio.png" />
+    <Content Include="UserControl\Images\icn_categories.png" />
+    <Content Include="UserControl\Images\icn_edit.png" />
+    <Content Include="UserControl\Images\icn_edit_article.png" />
+    <Content Include="UserControl\Images\icn_folder.png" />
+    <Content Include="UserControl\Images\icn_jump_back.png" />
+    <Content Include="UserControl\Images\icn_logout.png" />
+    <Content Include="UserControl\Images\icn_new_article.png" />
+    <Content Include="UserControl\Images\icn_photo.png" />
+    <Content Include="UserControl\Images\icn_profile.png" />
+    <Content Include="UserControl\Images\icn_search.png" />
+    <Content Include="UserControl\Images\icn_security.png" />
+    <Content Include="UserControl\Images\icn_settings.png" />
+    <Content Include="UserControl\Images\icn_tags.png" />
+    <Content Include="UserControl\Images\icn_trash.png" />
+    <Content Include="UserControl\Images\icn_user.png" />
+    <Content Include="UserControl\Images\icn_video.png" />
+    <Content Include="UserControl\Images\icn_view_users.png" />
+    <Content Include="UserControl\Images\module_footer_bg.png" />
+    <Content Include="UserControl\Images\post_message.png" />
+    <Content Include="UserControl\Images\secondary_bar.png" />
+    <Content Include="UserControl\Images\secondary_bar_shadow.png" />
+    <Content Include="UserControl\Images\sidebar.png" />
+    <Content Include="UserControl\Images\sidebar_divider.png" />
+    <Content Include="UserControl\Images\sidebar_shadow.png" />
+    <Content Include="UserControl\Images\table_sorter_header.png" />
+    <Content Include="UserControl\TopicListUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="UserControl\TestEvent.aspx" />
     <Content Include="UserControl\TextboxInt.ascx" />
@@ -1288,12 +1332,12 @@
     <Compile Include="UserControl\CommentUC.ascx.designer.cs">
       <DependentUpon>CommentUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\DetailTopicUC.ascx.cs">
-      <DependentUpon>DetailTopicUC.ascx</DependentUpon>
+    <Compile Include="UserControl\TopicDetailUC.ascx.cs">
+      <DependentUpon>TopicDetailUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\DetailTopicUC.ascx.designer.cs">
-      <DependentUpon>DetailTopicUC.ascx</DependentUpon>
+    <Compile Include="UserControl\TopicDetailUC.ascx.designer.cs">
+      <DependentUpon>TopicDetailUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\DroplistKey.ascx.cs">
       <DependentUpon>DroplistKey.ascx</DependentUpon>
@@ -1309,12 +1353,12 @@
     <Compile Include="UserControl\EventUserControl.ascx.designer.cs">
       <DependentUpon>EventUserControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\ListTopicUC.ascx.cs">
-      <DependentUpon>ListTopicUC.ascx</DependentUpon>
+    <Compile Include="UserControl\TopicListUC.ascx.cs">
+      <DependentUpon>TopicListUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\ListTopicUC.ascx.designer.cs">
-      <DependentUpon>ListTopicUC.ascx</DependentUpon>
+    <Compile Include="UserControl\TopicListUC.ascx.designer.cs">
+      <DependentUpon>TopicListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\LoginUC.ascx.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>

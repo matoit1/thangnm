@@ -13,6 +13,8 @@ namespace nguyenmanhthang.UserControl
     {
         #region "Khai Báo Biến, Thuộc tính"
             public event EventHandler ViewTopic;
+            public event EventHandler PageChangeTopic;
+            public bool isBlock;
             private Int64 _Topic_ID;
             public Int64 Topic_ID
             {
@@ -49,6 +51,10 @@ namespace nguyenmanhthang.UserControl
         protected void grvListTopic_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListTopic.PageIndex = e.NewPageIndex;
+            if (PageChangeTopic != null)
+            {
+                PageChangeTopic(this, EventArgs.Empty);
+            }
             BindDataGrid(dsTopic);
         }
 
