@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Collections;
 using BusinessObject;
 using System.Data;
+using nguyenmanhthang.Library;
 
 namespace nguyenmanhthang.UserControl
 {
@@ -52,7 +53,8 @@ namespace nguyenmanhthang.UserControl
                 else { status = false; }
                 if (txtTopic_LinkImage.Text == "") { Topic_LinkImage = "~/Images/Topic/Default.jpg"; }
                 else { Topic_LinkImage = txtTopic_LinkImage.Text; }
-                bool check = TopicBO.Topic_Insert(Accounts_ID, txtTopic_Title.Text, Topic_LinkImage, Convert.ToInt32(ddlTopic_Category.SelectedValue), 1, txtTopic_Tag.Text, txtTopic_Content.Text, 0, status);
+                string Topic_Description = RemoveHtmlTags.RemoveHtmlTagsUsingCharArray(txtTopic_Content.Text);
+                bool check = TopicBO.Topic_Insert(Accounts_ID, txtTopic_Title.Text, Topic_LinkImage, Convert.ToInt32(ddlTopic_Category.SelectedValue), 1, txtTopic_Tag.Text, txtTopic_Content.Text, Topic_Description, 0, status);
                 if (check == true)
                 {
                     lblMessage.Text = "Thêm bài viết mới thành công";
@@ -125,6 +127,7 @@ namespace nguyenmanhthang.UserControl
             txtTopic_Content.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Content"].ToString();
             txtTopic_LinkImage.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_LinkImage"].ToString();
             txtTopic_Tag.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Tag"].ToString();
+            txtTest.Text = RemoveHtmlTags.RemoveHtmlTagsUsingCharArray(txtTopic_Content.Text);
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)

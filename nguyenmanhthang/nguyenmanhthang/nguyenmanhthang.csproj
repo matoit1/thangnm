@@ -1229,6 +1229,7 @@
       <DependentUpon>Sitemap.aspx</DependentUpon>
     </Compile>
     <Compile Include="Library\Encrypt.cs" />
+    <Compile Include="Library\RemoveHtmlTags.cs" />
     <Compile Include="Library\RewriteUrl.cs" />
     <Compile Include="PhanMem\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -40,6 +40,15 @@ namespace nguyenmanhthang.Admin {
         protected global::CKEditor.NET.CKEditorControl txtTopic_Content;
         
         /// <summary>
+        /// hfTopic_Description control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfTopic_Description;
+        
+        /// <summary>
         /// txtTopic_LinkImage control.
         /// </summary>
         /// <remarks>
