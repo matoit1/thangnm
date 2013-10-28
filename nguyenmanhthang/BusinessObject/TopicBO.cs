@@ -62,7 +62,16 @@ namespace BusinessObject
                 return false;
         }
 
-        // 4. Topic_Block
+        // 4. Topic_DeleteList
+        public static bool Topic_DeleteList(String ListTopic_ID)
+        {
+            if (TopicDAO.Topic_DeleteList(ListTopic_ID))
+                return true;
+            else
+                return false;
+        }
+
+        // 5. Topic_Block
         public static bool Topic_Block(Int64 Topic_ID, bool Topic_Status)
         {
             TopicEO _TopicEO = new TopicEO();
@@ -74,7 +83,7 @@ namespace BusinessObject
                 return false;
         }
 
-        // 5. Topic_SelectListbyTopic_Status
+        // 6. Topic_SelectListbyTopic_Status
         public static DataSet Topic_SelectListbyTopic_Status(bool Topic_Status)
         {
             TopicEO _TopicEO = new TopicEO();
@@ -83,7 +92,7 @@ namespace BusinessObject
             return ds;
         }
 
-        // 6. Topic_getTopicbyTopic_ID
+        // 7. Topic_getTopicbyTopic_ID
         public static DataSet Topic_getTopicbyTopic_ID(Int64 Topic_ID)
         {
             TopicEO _TopicEO = new TopicEO();
@@ -92,7 +101,7 @@ namespace BusinessObject
             return ds;
         }
 
-        // 7. Topic_SelectListToShow
+        // 8. Topic_SelectListToShow
         public static DataSet Topic_SelectListToShow(bool Topic_Status, int Quantity)
         {
             TopicEO _TopicEO = new TopicEO();
@@ -101,7 +110,7 @@ namespace BusinessObject
             return ds;
         }
 
-        // 8. Topic_ASC_Visit
+        // 9. Topic_ASC_Visit
         public static bool Topic_ASC_Visit(Int64 Topic_ID)
         {
             TopicEO _TopicEO = new TopicEO();

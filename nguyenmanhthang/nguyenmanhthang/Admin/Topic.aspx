@@ -10,12 +10,12 @@
             <cc1:TabContainer ID="tabMain" runat="server" ActiveTabIndex="0">
                 <cc1:TabPanel runat="server" HeaderText="Bài viết" ID="TabTopic">
                     <ContentTemplate>
-                        <uc1:TopicListUC ID="TopicListUC1" runat="server" OnViewTopic="OnViewTopic_Click" OnPageChangeTopic="OnPageChangeTopic_Click"/>
+                        <uc1:TopicListUC ID="TopicListUC1" runat="server" OnViewTopic="OnViewTopic_Click" OnPageChangeTopic="OnPageChangeTopic_Click" OnNewTopic="OnNewTopic_Click" OnDeleteTopic="OnDeleteTopic_Click"/>
                     </ContentTemplate>
                 </cc1:TabPanel>
                 <cc1:TabPanel runat="server" HeaderText="Bài viết bị khóa" ID="TabTopicBlock">
                     <ContentTemplate>
-                        <uc1:TopicListUC ID="TopicListUC2" runat="server" OnViewTopic="OnViewTopicBlock_Click" OnPageChangeTopic="OnPageChangeTopicBlock_Click"/> 
+                        <uc1:TopicListUC ID="TopicListUC2" runat="server" OnViewTopic="OnViewTopicBlock_Click" OnPageChangeTopic="OnPageChangeTopicBlock_Click" OnNewTopic="OnNewTopic_Click" OnDeleteTopic="OnDeleteTopic_Click"/> 
                     </ContentTemplate>
                 </cc1:TabPanel>
         </cc1:TabContainer>
@@ -24,5 +24,4 @@
             <uc2:TopicDetailUC ID="TopicDetailUC1" runat="server" OnBack="OnBack_Click"/>
         </asp:View>
     </asp:MultiView>
-    <asp:ImageButton ID="ibtnAdd" runat="server" ImageUrl="~/Images/Template/btnNewTopic.png" onclick="ibtnAdd_Click" CssClass="btnNewTopic" />
 </asp:Content>

@@ -30,7 +30,6 @@ namespace nguyenmanhthang.Admin
         {
             Int64 Topic_ID = TopicListUC1.Topic_ID;
             mtvMain.ActiveViewIndex = 1;
-            ibtnAdd.Visible = false;
             TopicDetailUC1.LoadDetailTopic(Topic_ID, false);
         }
 
@@ -38,14 +37,12 @@ namespace nguyenmanhthang.Admin
         {
             Int64 Topic_ID = TopicListUC2.Topic_ID;
             mtvMain.ActiveViewIndex = 1;
-            ibtnAdd.Visible = false;
             TopicDetailUC1.LoadDetailTopic(Topic_ID, false);
         }
 
         protected void OnBack_Click(object sender, EventArgs e)
         {
             mtvMain.ActiveViewIndex = 0;
-            ibtnAdd.Visible = true;
         }
 
         protected void OnPageChangeTopic_Click(object sender, EventArgs e)
@@ -62,11 +59,24 @@ namespace nguyenmanhthang.Admin
             tabMain.ActiveTab = TabTopicBlock;
         }
 
-        protected void ibtnAdd_Click(object sender, ImageClickEventArgs e)
+        protected void OnNewTopic_Click(object sender, EventArgs e)
         {
             mtvMain.ActiveViewIndex = 1;
-            ibtnAdd.Visible = false;
             TopicDetailUC1.LoadDetailTopic(0, true);
+        }
+
+        protected void OnDeleteTopic_Click(object sender, EventArgs e)
+        {
+            DataSet dsTopic = TopicBO.Topic_SelectListbyTopic_Status(true);
+            TopicListUC1.lblTitle.Text = "Danh sách các bài viết";
+            TopicListUC1.isBlock = false;
+            TopicListUC1.dsTopic = dsTopic;
+            TopicListUC1.ReBindDataGrid();
+            DataSet dsTopicBlock = TopicBO.Topic_SelectListbyTopic_Status(false);
+            TopicListUC2.lblTitle.Text = "Danh sách các bài viết bị khóa";
+            TopicListUC2.isBlock = true;
+            TopicListUC2.dsTopic = dsTopicBlock;
+            TopicListUC2.ReBindDataGrid();
         }
     }
 }

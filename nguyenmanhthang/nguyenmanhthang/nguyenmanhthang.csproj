@@ -961,6 +961,7 @@
     <Content Include="Images\Avatar\admin.jpg" />
     <Content Include="Images\Avatar\default.jpg" />
     <Content Include="Images\Template\btnNewTopic.png" />
+    <Content Include="Images\Template\btnRemove.gif" />
     <Content Include="Images\Template\ibtnBack.gif" />
     <Content Include="Images\icon_chitiet.gif" />
     <Content Include="Images\logo.gif" />

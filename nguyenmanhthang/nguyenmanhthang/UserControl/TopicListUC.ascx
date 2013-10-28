@@ -4,7 +4,8 @@
 <table width="100%" align="center" cellpadding="2" cellspacing="0">
     <tr>
         <td align="center" colspan="2">
-            <asp:Label ID="lblTitle" CssClass="TitleForm" runat="server" Text="Danh Sách Bài viết"></asp:Label>
+            <asp:Label ID="lblTitle" CssClass="TitleForm" runat="server" Text="Danh Sách Bài viết"></asp:Label><br />
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
         </td>
     </tr>
     <tr>
@@ -54,6 +55,12 @@
         <td>
             <asp:Label ID="lblTitleBanGhi" CssClass="LabelBoldBlue" runat="server" Text="Tổng số bản ghi: "></asp:Label>
             <asp:Label ID="lblSo_BanGhi" CssClass="LabelBoldBlue" runat="server"></asp:Label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <asp:ImageButton ID="ibtnDelete" runat="server" ImageUrl="~/Images/Template/btnRemove.gif" onclick="ibtnDelete_Click" CssClass="btnNewTopic" />
+            <asp:ImageButton ID="ibtnAdd" runat="server" ImageUrl="~/Images/Template/btnNewTopic.png" onclick="ibtnAdd_Click" CssClass="btnNewTopic" />
         </td>
     </tr>
 </table>

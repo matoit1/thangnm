@@ -11,9 +11,11 @@ namespace nguyenmanhthang.UserControl
 {
     public partial class ListTopicUC : System.Web.UI.UserControl
     {
-        #region "Khai Báo Biến, Thuộc tính"
+        #region "Khai Báo Biến, Thuộc tính, Sự kiện"
             public event EventHandler ViewTopic;
             public event EventHandler PageChangeTopic;
+            public event EventHandler NewTopic;
+            public event EventHandler DeleteTopic;
             public bool isBlock;
             private Int64 _Topic_ID;
             public Int64 Topic_ID
@@ -37,6 +39,12 @@ namespace nguyenmanhthang.UserControl
                 BindDataGrid(dsTopic);
             }
         }
+
+        public void ReBindDataGrid()
+        {
+            BindDataGrid(dsTopic);
+        }
+
         protected void BindDataGrid(DataSet ds)
         {
             try
@@ -77,6 +85,39 @@ namespace nguyenmanhthang.UserControl
                 {
                     ViewTopic(this, EventArgs.Empty);
                 }
+            }
+        }
+
+        protected void ibtnDelete_Click(object sender, ImageClickEventArgs e)
+        {
+            try
+            {
+                String strID = "";
+                foreach (GridViewRow row in grvListTopic.SelectedRows)
+                {
+                    strID += "," + grvListTopic.DataKeys[row.RowIndex].Values["Topic_ID"];
+
+                }
+                TopicBO.Topic_DeleteList(strID.Substring(1));
+                if (DeleteTopic != null)
+                {
+                    DeleteTopic(this, EventArgs.Empty);
+                }
+                lblMessage.Text = "Xóa thành công";
+                lblMessage.CssClass = "alert_success";
+            }
+            catch (Exception)
+            {
+                lblMessage.Text = "Xóa thất bại vui lòng kiểm tra lại";
+                lblMessage.CssClass = "alert_error";
+            }
+        }
+
+        protected void ibtnAdd_Click(object sender, ImageClickEventArgs e)
+        {
+            if (NewTopic != null)
+            {
+                NewTopic(this, EventArgs.Empty);
             }
         }
     }
