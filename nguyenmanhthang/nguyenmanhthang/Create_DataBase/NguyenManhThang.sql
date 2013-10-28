@@ -41,7 +41,8 @@ CREATE TABLE Topic
 	Topic_Author INT NOT NULL
 		CONSTRAINT Topic_Author FOREIGN KEY (Topic_Author)
 		REFERENCES Accounts(Accounts_ID)
-		ON UPDATE CASCADE,
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
 	Topic_Title NVARCHAR(500),
 	Topic_LinkImage NVARCHAR(200) DEFAULT('~/Images/Topic/Default.jpg'),
 	Topic_Category INT,
@@ -64,7 +65,8 @@ CREATE TABLE Comment
 	Topic_ID BIGINT NOT NULL
 		CONSTRAINT Client_ID FOREIGN KEY (Topic_ID)
 		REFERENCES Topic(Topic_ID)
-		ON UPDATE CASCADE,
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
 	Comment_Name NVARCHAR(100),
 	Comment_Email NVARCHAR(100),
 	Comment_Website NVARCHAR(100),
