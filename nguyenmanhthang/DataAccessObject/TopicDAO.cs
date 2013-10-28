@@ -98,7 +98,30 @@ namespace DataAccessObject
             }
         }
 
-        // 4. Topic_Block
+        // 4. Topic_DeleteList
+        public static bool Topic_DeleteList(String _ListTopic_ID)
+        {
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("Topic_DeleteList", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@ListTopic_ID", _ListTopic_ID));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
+        // 5. Topic_Block
         public static bool Topic_Block(TopicEO _TopicEO)
         {
             using (SqlConnection conn = Connection.getConnection())
@@ -122,7 +145,7 @@ namespace DataAccessObject
             }
         }
 
-        // 5. Topic_SelectListbyTopic_Status
+        // 6. Topic_SelectListbyTopic_Status
         public static DataSet Topic_SelectListbyTopic_Status(TopicEO _TopicEO)
         {
             DataSet ds = null;
@@ -147,7 +170,7 @@ namespace DataAccessObject
             }
         }
 
-        // 6. Topic_getTopicbyTopic_ID
+        // 7. Topic_getTopicbyTopic_ID
         public static DataSet Topic_getTopicbyTopic_ID(TopicEO _TopicEO)
         {
             DataSet ds = null;
@@ -172,7 +195,7 @@ namespace DataAccessObject
             }
         }
 
-        // 7. Topic_SelectListToShow
+        // 8. Topic_SelectListToShow
         public static DataSet Topic_SelectListToShow(TopicEO _TopicEO, int Quantity)
         {
             DataSet ds = null;
@@ -198,7 +221,7 @@ namespace DataAccessObject
             }
         }
 
-        // 8. Topic_ASC_Visit
+        // 9. Topic_ASC_Visit
         public static bool Topic_ASC_Visit(TopicEO _TopicEO)
         {
             using (SqlConnection conn = Connection.getConnection())

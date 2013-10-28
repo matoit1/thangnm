@@ -101,14 +101,5 @@ namespace nguyenmanhthang.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::nguyenmanhthang.UserControl.TopicDetailUC TopicDetailUC1;
-        
-        /// <summary>
-        /// ibtnAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibtnAdd;
     }
 }
