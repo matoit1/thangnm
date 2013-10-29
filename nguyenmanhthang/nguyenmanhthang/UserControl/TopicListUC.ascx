@@ -59,8 +59,9 @@
     </tr>
     <tr>
         <td>
-            <asp:ImageButton ID="ibtnDelete" runat="server" ImageUrl="~/Images/Template/btnRemove.gif" onclick="ibtnDelete_Click" CssClass="btnNewTopic" />
+            <asp:ImageButton ID="ibtnDelete" runat="server" ImageUrl="~/Images/Template/btnRemove.png" onclick="ibtnDelete_Click" CssClass="btnNewTopic" />
             <asp:ImageButton ID="ibtnAdd" runat="server" ImageUrl="~/Images/Template/btnNewTopic.png" onclick="ibtnAdd_Click" CssClass="btnNewTopic" />
+            <asp:ImageButton ID="ibtnExportExcel" runat="server" ImageUrl="~/Images/Template/btnExport_Excel.gif" onclick="ibtnAdd_Click" CssClass="btnNewTopic" />
         </td>
     </tr>
 </table>
