@@ -81,16 +81,16 @@
 		<hr/>
 		<h3>Quản lý Nội dung</h3>
 		<ul class="toggle">
-			<li class="icn_new_article"><asp:HyperLink ID="hplNewTopic" NavigateUrl="~/Admin/New_Topic.aspx" runat="server">Bài viết mới</asp:HyperLink></li>
-			<li class="icn_edit_article"><asp:HyperLink ID="HyperLink2" NavigateUrl="~/Admin/New_Topic.aspx?Edit=True" runat="server">Sửa bài viết</asp:HyperLink></li>
-			<li class="icn_categories"><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Admin/Category.aspx" runat="server">Thể loại</asp:HyperLink></li>
-			<li class="icn_tags"><asp:HyperLink ID="HyperLink12" NavigateUrl="~/Admin/Category.aspx" runat="server">Thẻ</asp:HyperLink></li>
+			<li class="icn_new_article"><asp:HyperLink ID="hplNewTopic" NavigateUrl="~/Admin/Topic.aspx" runat="server">Bài viết mới</asp:HyperLink></li>
+			<li class="icn_edit_article"><asp:HyperLink ID="HyperLink2" NavigateUrl="~/Admin/Topic.aspx?Edit=True" runat="server">Sửa bài viết</asp:HyperLink></li>
+			<li class="icn_categories"><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Admin/Topic.aspx" runat="server">Thể loại</asp:HyperLink></li>
+			<li class="icn_tags"><asp:HyperLink ID="HyperLink12" NavigateUrl="~/Admin/Topic.aspx" runat="server">Thẻ</asp:HyperLink></li>
 		</ul>
 		<h3>Quản lý Tài khoản</h3>
 		<ul class="toggle">
-			<li class="icn_add_user"><asp:HyperLink ID="HyperLink4" NavigateUrl="~/Admin/Users.aspx?Active=1" runat="server">Thêm tài khoản mới</asp:HyperLink></li>
-			<li class="icn_view_users"><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Admin/Users.aspx?Active=1" runat="server">Quản lý Tài khoản</asp:HyperLink></li>
-			<li class="icn_profile"><asp:HyperLink ID="HyperLink6" NavigateUrl="~/Admin/Users.aspx?Active=1" runat="server">Thông tin tài khoản của bạn</asp:HyperLink></li>
+			<li class="icn_add_user"><asp:HyperLink ID="HyperLink4" NavigateUrl="~/Admin/Users.aspx" runat="server">Thêm tài khoản mới</asp:HyperLink></li>
+			<li class="icn_view_users"><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Admin/Users.aspx" runat="server">Quản lý Tài khoản</asp:HyperLink></li>
+			<li class="icn_profile"><asp:HyperLink ID="HyperLink6" NavigateUrl="~/Admin/Users.aspx" runat="server">Thông tin tài khoản của bạn</asp:HyperLink></li>
 		</ul>
 		<h3>Quản lý Đa phương tiện</h3>
 		<ul class="toggle">

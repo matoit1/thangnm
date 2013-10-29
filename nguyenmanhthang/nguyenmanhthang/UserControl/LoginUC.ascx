@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoginUC.ascx.cs" Inherits="nguyenmanhthang.UserControl.LoginUC" %>
-<div style="border: 2px ridge red; margin: 5px 5px 5px 5px; padding: 5px 5px 5px 5px; width: 224px; height: 220px;">
+<div style="border: 2px ridge red; margin: 5px 5px 5px 5px; padding: 5px 5px 5px 5px; width: 250px; height: 250px;">
 <table>
     <tr><td></td>
         <td><asp:Label ID="lblMsg" runat="server"></asp:Label></td>
@@ -25,7 +25,7 @@
     </tr>
 </table>
 <hr />
-<asp:HyperLink ID="hplForgotPassword" runat="server" NavigateUrl="~/Accounts/ForgotPassword.aspx">Quên mật khẩu/ tài khoản?</asp:HyperLink>
+<asp:HyperLink ID="hplForgotPassword" runat="server" NavigateUrl="~/Accounts/ForgotPassword.aspx">Quên mật khẩu/ tài khoản?</asp:HyperLink><br />
 <asp:HyperLink ID="hplRegister" runat="server" NavigateUrl="~/Accounts/Register.aspx">Tạo tài khoản mới.</asp:HyperLink>
 </div>
 <div style="clear:both"></div>
