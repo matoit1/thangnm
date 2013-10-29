@@ -130,5 +130,5 @@ a img {border:none;}
 .wrapper_input .footer .submit .btnSubmit {background: url("../Images/Template/btnReset.png") repeat-x scroll 0 0 #D0D1D4; border: 1px solid #30B0C8; border-radius: 5px 5px 5px 5px; box-shadow: 0 1px 0 #FFFFFF; color: #003E49; cursor: pointer; font-weight: bold; height: 22px; padding: 0 10px; text-shadow: 0 1px 0 #6CDCF9;}
 .wrapper_input .footer .submit .btnReset {background: url("../Images/Template/btnSubmit.png") repeat-x scroll 0 0 #D0D1D4; border: 1px solid #A8A9A8; border-radius: 5px 5px 5px 5px; box-shadow: 0 1px 0 #FFFFFF; color: #666666; cursor: pointer; font-weight: bold; height: 22px; padding: 0 10px; text-shadow: 0 1px 0 #FFFFFF;}
 .btnBack {margin-left: 30px;}
-.btnNewTopic {margin-left: 30px; margin-top:20px; width:30px}
+.btnNewTopic {margin-left: 30px; margin-top:20px;}
 .clear{clear:both;}

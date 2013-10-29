@@ -10,7 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div style="margin: 10px auto auto auto; width:500px">
         <uc1:LoginUC ID="LoginUC1" runat="server" />
     </div>
     </form>
