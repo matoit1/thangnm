@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoginUC.ascx.cs" Inherits="nguyenmanhthang.UserControl.LoginUC" %>
-<div style="border: 2px ridge red; margin: 5px 5px 5px 5px; padding: 5px 5px 5px 5px; width: 250px; height: 250px;">
+<div style="border: 2px ridge red; margin: 5px 5px 5px 5px; padding: 10px 10px 10px 10px; width: 250px; height: 250px;">
 <table>
     <tr><td></td>
         <td><asp:Label ID="lblMsg" runat="server"></asp:Label></td>

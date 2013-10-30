@@ -1006,10 +1006,10 @@
     <Content Include="UserControl\AccountsDetailUC.ascx" />
     <Content Include="UserControl\AccountsListUC.ascx" />
     <Content Include="UserControl\CommentUC.ascx" />
-    <Content Include="UserControl\css.css" />
+    <Content Include="Test\css.css" />
     <Content Include="UserControl\TopicDetailUC.ascx" />
-    <Content Include="UserControl\DroplistKey.ascx" />
-    <Content Include="UserControl\EventUserControl.ascx" />
+    <Content Include="Test\DroplistKey.ascx" />
+    <Content Include="Test\EventUserControl.ascx" />
     <Content Include="UserControl\Images\breadcrumb_divider.png" />
     <Content Include="UserControl\Images\btn_submit.png" />
     <Content Include="UserControl\Images\btn_submit_2.png" />
@@ -1049,8 +1049,8 @@
     <Content Include="UserControl\Images\table_sorter_header.png" />
     <Content Include="UserControl\TopicListUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
-    <Content Include="UserControl\TestEvent.aspx" />
-    <Content Include="UserControl\TextboxInt.ascx" />
+    <Content Include="Test\TestEvent.aspx" />
+    <Content Include="Test\TextboxInt.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1395,18 +1395,18 @@
     <Compile Include="UserControl\TopicDetailUC.ascx.designer.cs">
       <DependentUpon>TopicDetailUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\DroplistKey.ascx.cs">
+    <Compile Include="Test\DroplistKey.ascx.cs">
       <DependentUpon>DroplistKey.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\DroplistKey.ascx.designer.cs">
+    <Compile Include="Test\DroplistKey.ascx.designer.cs">
       <DependentUpon>DroplistKey.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\EventUserControl.ascx.cs">
+    <Compile Include="Test\EventUserControl.ascx.cs">
       <DependentUpon>EventUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\EventUserControl.ascx.designer.cs">
+    <Compile Include="Test\EventUserControl.ascx.designer.cs">
       <DependentUpon>EventUserControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\TopicListUC.ascx.cs">
@@ -1423,18 +1423,18 @@
     <Compile Include="UserControl\LoginUC.ascx.designer.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\TestEvent.aspx.cs">
+    <Compile Include="Test\TestEvent.aspx.cs">
       <DependentUpon>TestEvent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\TestEvent.aspx.designer.cs">
+    <Compile Include="Test\TestEvent.aspx.designer.cs">
       <DependentUpon>TestEvent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\TextboxInt.ascx.cs">
+    <Compile Include="Test\TextboxInt.ascx.cs">
       <DependentUpon>TextboxInt.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\TextboxInt.ascx.designer.cs">
+    <Compile Include="Test\TextboxInt.ascx.designer.cs">
       <DependentUpon>TextboxInt.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
