@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using BusinessObject;
+using System.Text;
+using System.IO;
+using System.Drawing;
 
 namespace nguyenmanhthang.UserControl
 {
@@ -16,6 +19,7 @@ namespace nguyenmanhthang.UserControl
             public event EventHandler PageChangeTopic;
             public event EventHandler NewTopic;
             public event EventHandler DeleteTopic;
+            public event EventHandler ExportToExcelTopic;
             public bool isBlock;
             private Int64 _Topic_ID;
             public Int64 Topic_ID
@@ -118,6 +122,64 @@ namespace nguyenmanhthang.UserControl
             if (NewTopic != null)
             {
                 NewTopic(this, EventArgs.Empty);
+            }
+        }
+
+        protected void ibtnExportExcel_Click(object sender, ImageClickEventArgs e)
+        {
+            string FileName = "Danh_sach_Bai_viet(" + Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy")) + ").xls";
+            ExportToExcel(FileName, dsTopic);
+        }
+
+        public void ExportToExcel(string fileName, DataSet input)
+        {
+            if (ExportToExcelTopic != null)
+            {
+                ExportToExcelTopic(this, EventArgs.Empty);
+            }
+            Response.Clear();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment;filename=GridViewExport.xls");
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-excel";
+            using (StringWriter sw = new StringWriter())
+            {
+                HtmlTextWriter hw = new HtmlTextWriter(sw);
+
+                //To Export all pages
+                grvListTopic.AllowPaging = false;
+                this.BindDataGrid(dsTopic);
+
+                grvListTopic.HeaderRow.BackColor = Color.White;
+                foreach (TableCell cell in grvListTopic.HeaderRow.Cells)
+                {
+                    cell.BackColor = grvListTopic.HeaderStyle.BackColor;
+                }
+                foreach (GridViewRow row in grvListTopic.Rows)
+                {
+                    row.BackColor = Color.White;
+                    foreach (TableCell cell in row.Cells)
+                    {
+                        if (row.RowIndex % 2 == 0)
+                        {
+                            cell.BackColor = grvListTopic.AlternatingRowStyle.BackColor;
+                        }
+                        else
+                        {
+                            cell.BackColor = grvListTopic.RowStyle.BackColor;
+                        }
+                        cell.CssClass = "textmode";
+                    }
+                }
+
+                //grvListTopic.RenderControl(hw);
+
+                //style to format numbers to string
+                string style = @"<style> .textmode { mso-number-format:\@; } </style>";
+                Response.Write(style);
+                Response.Output.Write(sw.ToString());
+                Response.Flush();
+                Response.End();
             }
         }
     }

@@ -13,15 +13,6 @@ namespace nguyenmanhthang.UserControl {
     public partial class TopicDetailUC {
         
         /// <summary>
-        /// updatePanelTopicDetailUC control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updatePanelTopicDetailUC;
-        
-        /// <summary>
         /// ibtnBack control.
         /// </summary>
         /// <remarks>

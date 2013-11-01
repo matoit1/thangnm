@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using BusinessObject;
+using nguyenmanhthang.Library.Common;
 
 namespace nguyenmanhthang.UserControl
 {

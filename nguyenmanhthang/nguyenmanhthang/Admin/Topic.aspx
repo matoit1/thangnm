@@ -10,18 +10,18 @@
             <cc1:TabContainer ID="tabMain" runat="server" ActiveTabIndex="0">
                 <cc1:TabPanel runat="server" HeaderText="Bài viết" ID="TabTopic">
                     <ContentTemplate>
-                        <uc1:TopicListUC ID="TopicListUC1" runat="server" OnViewTopic="OnViewTopic_Click" OnPageChangeTopic="OnPageChangeTopic_Click" OnNewTopic="OnNewTopic_Click" OnDeleteTopic="OnDeleteTopic_Click"/>
+                        <uc1:TopicListUC ID="TopicListUC1" runat="server" OnViewTopic="ViewTopic_Click" OnPageChangeTopic="PageChangeTopic_Click" OnNewTopic="NewTopic_Click" OnDeleteTopic="DeleteTopic_Click" OnExportToExcelTopic="ExportToExcelTopic_Click"/>
                     </ContentTemplate>
                 </cc1:TabPanel>
                 <cc1:TabPanel runat="server" HeaderText="Bài viết bị khóa" ID="TabTopicBlock">
                     <ContentTemplate>
-                        <uc1:TopicListUC ID="TopicListUC2" runat="server" OnViewTopic="OnViewTopicBlock_Click" OnPageChangeTopic="OnPageChangeTopicBlock_Click" OnNewTopic="OnNewTopic_Click" OnDeleteTopic="OnDeleteTopic_Click"/> 
+                        <uc1:TopicListUC ID="TopicListUC2" runat="server" OnViewTopic="ViewTopicBlock_Click" OnPageChangeTopic="PageChangeTopicBlock_Click" OnNewTopic="NewTopic_Click" OnDeleteTopic="DeleteTopic_Click" OnExportToExcelTopic="ExportToExcelTopicBlock_Click"/> 
                     </ContentTemplate>
                 </cc1:TabPanel>
         </cc1:TabContainer>
         </asp:View>
         <asp:View ID="vDetail" runat="server">
-            <uc2:TopicDetailUC ID="TopicDetailUC1" runat="server" OnBack="OnBack_Click"/>
+            <uc2:TopicDetailUC ID="TopicDetailUC1" runat="server" OnBack="Back_Click"/>
         </asp:View>
     </asp:MultiView>
 </asp:Content>
