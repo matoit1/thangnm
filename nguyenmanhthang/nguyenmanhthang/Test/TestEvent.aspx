@@ -23,7 +23,15 @@
         <cc1:intergertextbox runat="server" ID="txtSo_HD" runat="server" Width="400px"></cc1:intergertextbox>
         <uc2:DetailTopicUC ID="DetailTopicUC1" runat="server" />
     </div>
-
+    <asp:updatepanel runat="server" id="UpdatePanel1">
+<contenttemplate>
+<radu:radupload runat="server" id="RadUpload1" />
+<asp:button runat="server" id="Button1" text="Postback" />
+</contenttemplate>
+<triggers>
+<asp:postbacktrigger controlid="Button1" />
+</triggers>
+</asp:updatepanel>
 
     </form>
 </body>

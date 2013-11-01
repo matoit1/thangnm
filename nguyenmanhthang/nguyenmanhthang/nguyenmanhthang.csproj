@@ -978,12 +978,12 @@
     <Content Include="Info\Gioi_thieu.aspx" />
     <Content Include="Info\Lien_ket_website_blog.aspx" />
     <Content Include="Info\Sitemap.aspx" />
-    <Content Include="Library\AjaxControlToolkit.dll" />
-    <Content Include="Library\CKEditor.NET.dll" />
-    <Content Include="Library\CKFinder.dll" />
-    <Content Include="Library\DevNET.URLRewriter.dll" />
-    <Content Include="Library\FCAP.Controls.dll" />
-    <Content Include="Library\Microsoft.Sharepoint.Sandbox.dll" />
+    <Content Include="Library\DLL\AjaxControlToolkit.dll" />
+    <Content Include="Library\DLL\CKEditor.NET.dll" />
+    <Content Include="Library\DLL\CKFinder.dll" />
+    <Content Include="Library\DLL\DevNET.URLRewriter.dll" />
+    <Content Include="Library\DLL\FCAP.Controls.dll" />
+    <Content Include="Library\DLL\Microsoft.Sharepoint.Sandbox.dll" />
     <Content Include="PhanMem\Default.aspx" />
     <Content Include="Policies-Privacy.aspx" />
     <Content Include="robots.txt" />
@@ -1300,9 +1300,12 @@
     <Compile Include="Info\Sitemap.aspx.designer.cs">
       <DependentUpon>Sitemap.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Library\Encrypt.cs" />
-    <Compile Include="Library\RemoveHtmlTags.cs" />
-    <Compile Include="Library\RewriteUrl.cs" />
+    <Compile Include="Library\Common\Constants.cs" />
+    <Compile Include="Library\Common\Encrypt.cs" />
+    <Compile Include="Library\Common\Error.cs" />
+    <Compile Include="Library\Common\GetTextConstant.cs" />
+    <Compile Include="Library\Common\RemoveHtmlTags.cs" />
+    <Compile Include="Library\Common\RewriteUrl.cs" />
     <Compile Include="PhanMem\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Text.RegularExpressions;
 
-namespace nguyenmanhthang
+namespace nguyenmanhthang.Library.Common
 {
     public class RewriteUrl
     {
