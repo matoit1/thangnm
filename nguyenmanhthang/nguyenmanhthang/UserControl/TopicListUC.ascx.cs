@@ -9,6 +9,7 @@ using BusinessObject;
 using System.Text;
 using System.IO;
 using System.Drawing;
+using nguyenmanhthang.Library.Common;
 
 namespace nguyenmanhthang.UserControl
 {
@@ -53,16 +54,16 @@ namespace nguyenmanhthang.UserControl
         {
             try
             {
-                grvListTopic.DataSource = ds;
-                grvListTopic.DataBind();
-                lblSo_BanGhi.Text = ds.Tables[0].Rows.Count.ToString();
+                grvTopicList.DataSource = ds;
+                grvTopicList.DataBind();
+                lblTongSo_BanGhi.Text = Alert.TONG_SO_BAN_GHI + ds.Tables[0].Rows.Count.ToString();
             }
             catch { }
         }
 
-        protected void grvListTopic_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void grvTopicList_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            grvListTopic.PageIndex = e.NewPageIndex;
+            grvTopicList.PageIndex = e.NewPageIndex;
             if (PageChangeTopic != null)
             {
                 PageChangeTopic(this, EventArgs.Empty);
@@ -70,17 +71,17 @@ namespace nguyenmanhthang.UserControl
             BindDataGrid(dsTopic);
         }
 
-        protected void grvListTopic_RowDataBound(object sender, GridViewRowEventArgs e)
+        protected void grvTopicList_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                Int64 Topic_ID = (Int64)grvListTopic.DataKeys[e.Row.RowIndex].Values["Topic_ID"];
+                Int64 Topic_ID = (Int64)grvTopicList.DataKeys[e.Row.RowIndex].Values["Topic_ID"];
                 //LinkButton URL1 = (LinkButton)e.Row.FindControl("hpView");
                 //URL1.PostBackUrl = "~/Admin/Edit/OrdersDetails.aspx?Orders_ID=" + Topic_ID + "&ViewMode=true";
             }
         }
 
-        protected void grvListTopic_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void grvTopicList_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "cmdView")
             {
@@ -97,9 +98,9 @@ namespace nguyenmanhthang.UserControl
             try
             {
                 String strID = "";
-                foreach (GridViewRow row in grvListTopic.SelectedRows)
+                foreach (GridViewRow row in grvTopicList.SelectedRows)
                 {
-                    strID += "," + grvListTopic.DataKeys[row.RowIndex].Values["Topic_ID"];
+                    strID += "," + grvTopicList.DataKeys[row.RowIndex].Values["Topic_ID"];
 
                 }
                 TopicBO.Topic_DeleteList(strID.Substring(1));
@@ -128,59 +129,63 @@ namespace nguyenmanhthang.UserControl
         protected void ibtnExportExcel_Click(object sender, ImageClickEventArgs e)
         {
             string FileName = "Danh_sach_Bai_viet(" + Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy")) + ").xls";
-            ExportToExcel(FileName, dsTopic);
+            ExportToExcel(FileName);
         }
 
-        public void ExportToExcel(string fileName, DataSet input)
+        public void ExportToExcel(string fileName)
         {
             if (ExportToExcelTopic != null)
             {
                 ExportToExcelTopic(this, EventArgs.Empty);
             }
-            Response.Clear();
-            Response.Buffer = true;
-            Response.AddHeader("content-disposition", "attachment;filename=GridViewExport.xls");
-            Response.Charset = "";
             Response.ContentType = "application/vnd.ms-excel";
-            using (StringWriter sw = new StringWriter())
+            Response.Charset = "";
+            Response.AddHeader("Content-Disposition", "attachment;filename=" + fileName);
+            Response.ContentEncoding = Encoding.Unicode;
+            Response.BinaryWrite(Encoding.Unicode.GetPreamble());
+            DataTable dtb = dsTopic.Tables[0];
+            try
             {
-                HtmlTextWriter hw = new HtmlTextWriter(sw);
-
-                //To Export all pages
-                grvListTopic.AllowPaging = false;
-                this.BindDataGrid(dsTopic);
-
-                grvListTopic.HeaderRow.BackColor = Color.White;
-                foreach (TableCell cell in grvListTopic.HeaderRow.Cells)
+                StringBuilder sb = new StringBuilder();
+                //Tạo dòng tiêu để cho bảng tính
+                for (int count = 0; count < dtb.Columns.Count; count++)
                 {
-                    cell.BackColor = grvListTopic.HeaderStyle.BackColor;
-                }
-                foreach (GridViewRow row in grvListTopic.Rows)
-                {
-                    row.BackColor = Color.White;
-                    foreach (TableCell cell in row.Cells)
+                    if (dtb.Columns[count].ColumnName != null)
+                        sb.Append(dtb.Columns[count].ColumnName);
+                    if (count < dtb.Columns.Count - 1)
                     {
-                        if (row.RowIndex % 2 == 0)
-                        {
-                            cell.BackColor = grvListTopic.AlternatingRowStyle.BackColor;
-                        }
-                        else
-                        {
-                            cell.BackColor = grvListTopic.RowStyle.BackColor;
-                        }
-                        cell.CssClass = "textmode";
+                        sb.Append("\t");
                     }
                 }
-
-                //grvListTopic.RenderControl(hw);
-
-                //style to format numbers to string
-                string style = @"<style> .textmode { mso-number-format:\@; } </style>";
-                Response.Write(style);
-                Response.Output.Write(sw.ToString());
+                Response.Write(sb.ToString() + "\n");
                 Response.Flush();
-                Response.End();
+                //Duyệt từng bản ghi 
+                int soDem = 0;
+                while (dtb.Rows.Count >= soDem + 1)
+                {
+                    sb = new StringBuilder();
+
+                    for (int col = 0; col < dtb.Columns.Count - 1; col++)
+                    {
+                        if (dtb.Rows[soDem][col] != null)
+                            sb.Append(dtb.Rows[soDem][col].ToString().Replace(",", " "));
+                        sb.Append("\t");
+                    }
+                    if (dtb.Rows[soDem][dtb.Columns.Count - 1] != null)
+                        sb.Append(dtb.Rows[soDem][dtb.Columns.Count - 1].ToString().Replace(",", " "));
+
+                    Response.Write(sb.ToString() + "\n");
+                    Response.Flush();
+                    soDem = soDem + 1;
+                }
+
             }
+            catch (Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+            dtb.Dispose();
+            Response.End();
         }
     }
 }

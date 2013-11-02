@@ -1005,6 +1005,8 @@
     <Content Include="Upload\Default.aspx" />
     <Content Include="UserControl\AccountsDetailUC.ascx" />
     <Content Include="UserControl\AccountsListUC.ascx" />
+    <Content Include="UserControl\CommentDetailUC.ascx" />
+    <Content Include="UserControl\CommentListUC.ascx" />
     <Content Include="UserControl\CommentUC.ascx" />
     <Content Include="Test\css.css" />
     <Content Include="UserControl\TopicDetailUC.ascx" />
@@ -1302,7 +1304,7 @@
     </Compile>
     <Compile Include="Library\Common\Constants.cs" />
     <Compile Include="Library\Common\Encrypt.cs" />
-    <Compile Include="Library\Common\Error.cs" />
+    <Compile Include="Library\Common\Alert.cs" />
     <Compile Include="Library\Common\GetTextConstant.cs" />
     <Compile Include="Library\Common\RemoveHtmlTags.cs" />
     <Compile Include="Library\Common\RewriteUrl.cs" />
@@ -1383,6 +1385,20 @@
     </Compile>
     <Compile Include="UserControl\AccountsListUC.ascx.designer.cs">
       <DependentUpon>AccountsListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CommentDetailUC.ascx.cs">
+      <DependentUpon>CommentDetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CommentDetailUC.ascx.designer.cs">
+      <DependentUpon>CommentDetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CommentListUC.ascx.cs">
+      <DependentUpon>CommentListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CommentListUC.ascx.designer.cs">
+      <DependentUpon>CommentListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\CommentUC.ascx.cs">
       <DependentUpon>CommentUC.ascx</DependentUpon>

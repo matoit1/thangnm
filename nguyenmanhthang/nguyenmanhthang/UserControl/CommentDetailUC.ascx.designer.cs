@@ -10,7 +10,7 @@
 namespace nguyenmanhthang.UserControl {
     
     
-    public partial class TopicDetailUC {
+    public partial class CommentDetailUC {
         
         /// <summary>
         /// ibtnBack control.
@@ -40,67 +40,49 @@ namespace nguyenmanhthang.UserControl {
         protected global::System.Web.UI.WebControls.Panel pnlInfo1;
         
         /// <summary>
-        /// txtTopic_ID control.
+        /// txtComment_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.TextBox txtTopic_ID;
+        protected global::System.Web.UI.WebControls.TextBox txtComment_ID;
         
         /// <summary>
-        /// txtTopic_Author control.
+        /// txtComment_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Author;
+        protected global::System.Web.UI.WebControls.TextBox txtComment_Name;
         
         /// <summary>
-        /// txtTopic_Title control.
+        /// txtComment_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Title;
+        protected global::System.Web.UI.WebControls.TextBox txtComment_Email;
         
         /// <summary>
-        /// txtTopic_Content control.
+        /// txtComment_Website control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CKEditor.NET.CKEditorControl txtTopic_Content;
+        protected global::System.Web.UI.WebControls.TextBox txtComment_Website;
         
         /// <summary>
-        /// txtTopic_LinkImage control.
+        /// txtComment_Content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_LinkImage;
-        
-        /// <summary>
-        /// txtTopic_Tag control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Tag;
-        
-        /// <summary>
-        /// ddlTopic_Category control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Category;
+        protected global::CKEditor.NET.CKEditorControl txtComment_Content;
         
         /// <summary>
         /// pnlInfo2 control.
@@ -110,15 +92,6 @@ namespace nguyenmanhthang.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlInfo2;
-        
-        /// <summary>
-        /// txtTopic_Visit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Visit;
         
         /// <summary>
         /// txtTopic_LastUpdate control.

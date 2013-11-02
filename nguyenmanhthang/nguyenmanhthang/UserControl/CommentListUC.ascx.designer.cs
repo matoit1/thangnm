@@ -10,7 +10,7 @@
 namespace nguyenmanhthang.UserControl {
     
     
-    public partial class ListTopicUC {
+    public partial class CommentListUC {
         
         /// <summary>
         /// lblTitle control.
@@ -19,7 +19,7 @@ namespace nguyenmanhthang.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Label lblTitle;
+        protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
         /// lblMessage control.
@@ -31,13 +31,13 @@ namespace nguyenmanhthang.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
-        /// grvTopicList control.
+        /// grvCommentList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FCAP.Controls.GridViewExt grvTopicList;
+        protected global::FCAP.Controls.GridViewExt grvCommentList;
         
         /// <summary>
         /// lblTongSo_BanGhi control.

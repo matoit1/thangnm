@@ -94,6 +94,24 @@ namespace nguyenmanhthang.Admin {
         protected global::System.Web.UI.WebControls.View vDetail;
         
         /// <summary>
+        /// tabDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabContainer tabDetail;
+        
+        /// <summary>
+        /// TabDetailTopic control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabDetailTopic;
+        
+        /// <summary>
         /// TopicDetailUC1 control.
         /// </summary>
         /// <remarks>
@@ -101,5 +119,59 @@ namespace nguyenmanhthang.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::nguyenmanhthang.UserControl.TopicDetailUC TopicDetailUC1;
+        
+        /// <summary>
+        /// TabComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabComment;
+        
+        /// <summary>
+        /// CommentListUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::nguyenmanhthang.UserControl.CommentListUC CommentListUC1;
+        
+        /// <summary>
+        /// TabCommentBlock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabCommentBlock;
+        
+        /// <summary>
+        /// CommentListUC2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::nguyenmanhthang.UserControl.CommentListUC CommentListUC2;
+        
+        /// <summary>
+        /// TabCommentDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabCommentDetail;
+        
+        /// <summary>
+        /// CommentDetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::nguyenmanhthang.UserControl.CommentDetailUC CommentDetailUC1;
     }
 }
