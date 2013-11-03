@@ -1469,6 +1469,10 @@
       <Project>{E2E53630-4D1C-4A16-943D-DCD8B47A5B18}</Project>
       <Name>BusinessObject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccessObject\DataAccessObject.csproj">
+      <Project>{E2CADB93-ACB9-42FB-A1B5-AAC01F9614F5}</Project>
+      <Name>DataAccessObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

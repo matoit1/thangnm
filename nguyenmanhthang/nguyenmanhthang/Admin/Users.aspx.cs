@@ -13,141 +13,52 @@ namespace nguyenmanhthang.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            mtvUsers.ActiveViewIndex = 0;
             if (!IsPostBack)
             {
-                //txtAccounts_FullName.Attributes.Add("placeholder", "Tìm kiếm theo tên Khách hàng");
-                loadUsers();
-            }
-
-        }
-
-        private void loadUsers()
-        {
-            //try
-            //{
-            //    DataTable dt = AccountsBO.Accounts_SearchAccounts().Tables[0];
-            //    grvListUser.DataSource = dt;
-            //    grvListUser.DataBind();
-            //}
-            //catch (Exception)
-            //{
-            //}
-        }
-
-        protected void grvListUser_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                string Accounts_Username = (string)grvListUser.DataKeys[e.Row.RowIndex].Values["Accounts_Username"];
-                HyperLink URL1 = (HyperLink)e.Row.FindControl("hpView");
-                URL1.NavigateUrl = "~/Admin/Edit/EditAccounts.aspx?Accounts_Username=" + Accounts_Username + "&ViewMode=true";
-                HyperLink URL2 = (HyperLink)e.Row.FindControl("hpEdit");
-                URL2.NavigateUrl = "~/Admin/Edit/EditAccounts.aspx?Accounts_Username=" + Accounts_Username;
+                AccountsListUC1.Accounts_Status =true;
+                AccountsListUC2.Accounts_Status = false;
+                tabDetail.Enabled = false;
             }
         }
 
-        protected void btnDelete_Click(object sender, EventArgs e)
+        protected void Back_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    String strID = "";
-            //    foreach (GridViewRow row in grvListUser.SelectedRows)
-            //    {
-            //        strID += "," + grvListUser.DataKeys[row.RowIndex].Values["Accounts_Username"];
-
-            //    }
-            //    AccountsBO.setdeleteAccountsbyUsername(strID.Substring(1));
-            //    loadCustomers();
-            //    lblMessage.Text = "Xóa thành công";
-            //    lblMessage.CssClass = "alert_success";
-            //}
-            //catch (Exception)
-            //{
-            //    lblMessage.Text = "Xóa thất bại vui lòng kiểm tra lại";
-            //    lblMessage.CssClass = "alert_error";
-            //}
+            tabDetail.Enabled = false;
+            tabAccounts.Enabled = true;
+            tabAccountsBlock.Enabled = true;
+            tabMain.ActiveTab = tabAccounts;
         }
 
-        protected void grvListUser_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void PageChangeAccounts_Click(object sender, EventArgs e)
         {
-            //grvListUser.PageIndex = e.NewPageIndex;
-            //loadCustomers();
+            tabMain.ActiveTab = tabAccounts;
         }
 
-        protected void btnShowSearchAdvanced_Click(object sender, EventArgs e)
+        protected void PageChangeAccountsBlock_Click(object sender, EventArgs e)
         {
-            //if (PanelSearchAdvanced.Visible == true)
-            //{
-            //    PanelSearchAdvanced.Visible = false;
-            //}
-            //else
-            //{
-            //    PanelSearchAdvanced.Visible = true;
-            //}
+            tabMain.ActiveTab = tabAccountsBlock;
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
+        protected void ViewAccounts_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    DataTable dt = AccountsBO.getDataSetSearchAccountsbyFullname(txtAccounts_FullName.Text, txtAccounts_Username.Text, txtAccounts_Email.Text, "0", txtAccounts_Address.Text).Tables[0];
-            //    grvListUser.DataSource = dt;
-            //    grvListUser.DataBind();
-            //}
-            //catch (Exception)
-            //{
-            //}
+            Int64 ID = AccountsListUC1.Accounts_ID;
+            AccountsDetailUC1.state = false;
+            AccountsDetailUC1.LoadDetailAccounts(ID, false);
+            tabMain.ActiveTab = tabDetail;
+            tabAccounts.Enabled = false;
+            tabAccountsBlock.Enabled = false;
+            tabDetail.Enabled = true;
         }
 
-        public static String GetTmpDate()
+        protected void ViewAccountsBlock_Click(object sender, EventArgs e)
         {
-            string strTmpDate = System.DateTime.Now.ToShortDateString();
-            strTmpDate = strTmpDate.Replace(":", "-").Trim();
-            strTmpDate = strTmpDate.Replace("/", "-").Trim();
-            return strTmpDate;
-        }
-
-        protected void btnExportExcel_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Response.ClearContent();
-                Response.AddHeader("content-disposition", "attachment; filename=Report_" + GetTmpDate() + ".xls");
-                Response.ContentType = "application/excel";
-                System.IO.StringWriter sw = new System.IO.StringWriter();
-                HtmlTextWriter htw = new HtmlTextWriter(sw);
-                grvListUser.RenderControl(htw);
-                Response.Write(sw.ToString());
-                Response.End();
-
-
-
-                //    Response.ClearContent();
-                //string attachment = ("attachment; filename=Report_" + GetTmpDate() + ".xls");
-                //Response.ClearContent();
-                //Response.AddHeader("content-disposition", attachment);
-                //Response.ContentType = "application/ms-excel";
-                //StringWriter strWrite = New StringWriter();
-                //HtmlTextWriter htmWrite = new HtmlTextWriter(strWrite);
-                //Form 
-                //Dim htmfrm As New HtmlForm();
-                //grEmp.Parent.Controls.Add(htmfrm);
-                //htmfrm.Attributes("runat") = "server";
-                //htmfrm.Controls.Add(grEmp);
-                //htmfrm.RenderControl(htmWrite);
-                //Response.Write(strWrite.ToString());
-                //Response.Flush();
-                //Response.[End]();
-            }
-            catch (Exception)
-            {
-            }
-        }
-
-        protected void btnAddUser_Click(object sender, EventArgs e)
-        {
-            mtvUsers.ActiveViewIndex = 1;
+            Int64 ID = AccountsListUC2.Accounts_ID;
+            AccountsDetailUC1.state = false;
+            AccountsDetailUC1.LoadDetailAccounts(ID, false);
+            tabMain.ActiveTab = tabDetail;
+            tabAccounts.Enabled = false;
+            tabAccountsBlock.Enabled = false;
+            tabDetail.Enabled = true;
         }
     }
 }

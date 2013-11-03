@@ -13,93 +13,75 @@ namespace nguyenmanhthang.Admin {
     public partial class Users {
         
         /// <summary>
-        /// mtvUsers control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView mtvUsers;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// vListUsers control.
+        /// tabMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View vListUsers;
+        protected global::AjaxControlToolkit.TabContainer tabMain;
         
         /// <summary>
-        /// lblListTitle control.
+        /// tabAccounts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblListTitle;
+        protected global::AjaxControlToolkit.TabPanel tabAccounts;
         
         /// <summary>
-        /// grvListUser control.
+        /// AccountsListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FCAP.Controls.GridViewExt grvListUser;
+        protected global::nguyenmanhthang.UserControl.AccountsListUC AccountsListUC1;
         
         /// <summary>
-        /// btnDelete control.
+        /// tabAccountsBlock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
+        protected global::AjaxControlToolkit.TabPanel tabAccountsBlock;
         
         /// <summary>
-        /// btnAddUser control.
+        /// AccountsListUC2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddUser;
+        protected global::nguyenmanhthang.UserControl.AccountsListUC AccountsListUC2;
         
         /// <summary>
-        /// btnExportExcel control.
+        /// tabDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExportExcel;
+        protected global::AjaxControlToolkit.TabPanel tabDetail;
         
         /// <summary>
-        /// vAddUsers control.
+        /// AccountsDetailUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View vAddUsers;
-        
-        /// <summary>
-        /// lblAddTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddTitle;
-        
-        /// <summary>
-        /// lblMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::nguyenmanhthang.UserControl.AccountsDetailUC AccountsDetailUC1;
     }
 }

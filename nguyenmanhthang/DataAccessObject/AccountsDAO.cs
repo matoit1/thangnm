@@ -10,8 +10,8 @@ namespace DataAccessObject
 {
     public class AccountsDAO
     {
-        // 1. Accounts_Insert
-        public static bool Accounts_Insert(AccountsEO _AccountsEO)
+        // 1. Insert
+        public static bool Insert(AccountsEO _AccountsEO)
         {
             using (SqlConnection conn = Connection.getConnection())
             {
@@ -45,8 +45,8 @@ namespace DataAccessObject
             }
         }
 
-        // 2. Accounts_Update
-        public static bool Accounts_Update(AccountsEO _AccountsEO)
+        // 2. Update
+        public static bool Update(AccountsEO _AccountsEO)
         {
             using (SqlConnection conn = Connection.getConnection())
             {
@@ -80,8 +80,8 @@ namespace DataAccessObject
             }
         }
 
-        // 3. Accounts_ResetPassword
-        public static bool Accounts_ResetPassword(AccountsEO _AccountsEO)
+        // 3. ResetPassword
+        public static bool ResetPassword(AccountsEO _AccountsEO)
         {
             using (SqlConnection conn = Connection.getConnection())
             {
@@ -104,8 +104,8 @@ namespace DataAccessObject
             }
         }
 
-        // 4. Accounts_Delete
-        public static bool Accounts_Delete(AccountsEO _AccountsEO)
+        // 4. Delete
+        public static bool Delete(AccountsEO _AccountsEO)
         {
             using (SqlConnection conn = Connection.getConnection())
             {
@@ -127,8 +127,8 @@ namespace DataAccessObject
             }
         }
 
-        // 5. Accounts_Login
-        public static DataSet Accounts_Login(AccountsEO _AccountsEO)
+        // 5. Login
+        public static DataSet Login(AccountsEO _AccountsEO)
         {
             DataSet ds = null;
             using (SqlConnection conn = Connection.getConnection())
@@ -199,8 +199,8 @@ namespace DataAccessObject
             }
         }
 
-        // 8. Accounts_SelectListbyAccounts_Username
-        public static DataSet Accounts_SelectInfoByAccounts_Username(AccountsEO _AccountsEO)
+        // 8. SelectListbyAccounts_Username
+        public static DataSet SelectInfoByAccounts_Username(AccountsEO _AccountsEO)
         {
             DataSet ds = null;
             using (SqlConnection conn = Connection.getConnection())
@@ -224,8 +224,33 @@ namespace DataAccessObject
             }
         }
 
-        // 9. Accounts_SearchAccounts
-        public static DataSet Accounts_SearchAccounts(AccountsEO _AccountsEO)
+        // 9. SelectInfoByAccounts_ID
+        public static DataSet SelectInfoByAccounts_ID(AccountsEO _AccountsEO)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectInfoByAccounts_ID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_ID", _AccountsEO.Accounts_ID));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
+        // 10. SearchAccounts
+        public static DataSet SearchAccounts(AccountsEO _AccountsEO)
         {
             DataSet ds = null;
             using (SqlConnection conn = Connection.getConnection())
@@ -253,8 +278,8 @@ namespace DataAccessObject
             }
         }
 
-        // 10. Accounts_GetAccounts_IDbyAccounts_Username
-        public static DataSet Accounts_GetAccounts_IDbyAccounts_Username(AccountsEO _AccountsEO)
+        // 11. GetAccounts_IDbyAccounts_Username
+        public static DataSet GetAccounts_IDbyAccounts_Username(AccountsEO _AccountsEO)
         {
             DataSet ds = null;
             using (SqlConnection conn = Connection.getConnection())
@@ -265,6 +290,31 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("Accounts_GetAccounts_IDbyAccounts_Username", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
+        // 12. SelectListByAccounts_Status
+        public static DataSet SelectListByAccounts_Status(AccountsEO _AccountsEO)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectListByAccounts_Status", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Status", _AccountsEO.Accounts_Status));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

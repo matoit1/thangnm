@@ -5,27 +5,26 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using BusinessObject;
 
 namespace nguyenmanhthang.UserControl
 {
     public partial class AccountsListUC : System.Web.UI.UserControl
     {
         #region "Khai Báo Biến, Thuộc tính"
-        public event EventHandler ViewTopic;
-        public event EventHandler PageChangeTopic;
+        public event EventHandler ViewAccounts;
+        public event EventHandler PageChangeAccounts;
         public bool isBlock;
-        private Int64 _Topic_ID;
-        public Int64 Topic_ID
+        private Int64 _Accounts_ID;
+        public Int64 Accounts_ID
         {
-            get { return this._Topic_ID; }
-            set { _Topic_ID = value; }
+            get { return this._Accounts_ID; }
+            set { _Accounts_ID = value; }
         }
-
-        private DataSet _dsTopic;
-        public DataSet dsTopic
+        public bool Accounts_Status
         {
-            get { return this._dsTopic; }
-            set { _dsTopic = value; }
+            get { return Convert.ToBoolean(ViewState["Accounts_Status"]); }
+            set { ViewState["Accounts_Status"] = value; }
         }
         #endregion
 
@@ -33,48 +32,42 @@ namespace nguyenmanhthang.UserControl
         {
             if (!IsPostBack)
             {
-                BindDataGrid(dsTopic);
+                BindDataGrid(Accounts_Status, true);
             }
         }
-        protected void BindDataGrid(DataSet ds)
+        public void BindDataGrid(bool _Accounts_Status, bool state_Page)
         {
+            if (!state_Page){
+                grvListAccounts.PageIndex = 0;
+            }
             try
             {
-                grvListTopic.DataSource = ds;
-                grvListTopic.DataBind();
-                lblSo_BanGhi.Text = ds.Tables[0].Rows.Count.ToString();
+                DataSet dsAccounts = AccountsBO.SelectListByAccounts_Status(_Accounts_Status);
+                grvListAccounts.DataSource = dsAccounts;
+                grvListAccounts.DataBind();
+                lblSo_BanGhi.Text = dsAccounts.Tables[0].Rows.Count.ToString();
             }
             catch { }
         }
 
-        protected void grvListTopic_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void grvListAccounts_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            grvListTopic.PageIndex = e.NewPageIndex;
-            if (PageChangeTopic != null)
+            if (PageChangeAccounts != null)
             {
-                PageChangeTopic(this, EventArgs.Empty);
+                PageChangeAccounts(this, EventArgs.Empty);
             }
-            BindDataGrid(dsTopic);
+            grvListAccounts.PageIndex = e.NewPageIndex;
+            BindDataGrid(Accounts_Status, true);
         }
 
-        protected void grvListTopic_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                Int64 Topic_ID = (Int64)grvListTopic.DataKeys[e.Row.RowIndex].Values["Topic_ID"];
-                //LinkButton URL1 = (LinkButton)e.Row.FindControl("hpView");
-                //URL1.PostBackUrl = "~/Admin/Edit/OrdersDetails.aspx?Orders_ID=" + Topic_ID + "&ViewMode=true";
-            }
-        }
-
-        protected void grvListTopic_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void grvListAccounts_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "cmdView")
             {
-                this.Topic_ID = Convert.ToInt64(e.CommandArgument);
-                if (ViewTopic != null)
+                this.Accounts_ID = Convert.ToInt64(e.CommandArgument);
+                if (ViewAccounts != null)
                 {
-                    ViewTopic(this, EventArgs.Empty);
+                    ViewAccounts(this, EventArgs.Empty);
                 }
             }
         }
