@@ -2,9 +2,7 @@
 <%@ Register src="../UserControl/TopicListUC.ascx" tagname="TopicListUC" tagprefix="uc1" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <%@ Register src="../UserControl/TopicDetailUC.ascx" tagname="TopicDetailUC" tagprefix="uc2" %>
-
 <%@ Register src="../UserControl/CommentListUC.ascx" tagname="CommentListUC" tagprefix="uc3" %>
-
 <%@ Register src="../UserControl/CommentDetailUC.ascx" tagname="CommentDetailUC" tagprefix="uc4" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody_Admin" runat="server">

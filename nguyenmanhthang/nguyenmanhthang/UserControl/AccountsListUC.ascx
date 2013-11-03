@@ -9,39 +9,40 @@
     </tr>
     <tr>
         <td colspan="2">
-            <cc1:GridViewExt ID="grvListTopic" runat="server" CssClass="mGrid" AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="2" 
-                datakeynames="Topic_ID" onrowcommand="grvListTopic_RowCommand" emptydatatext="Không có bản ghi nào."
-                onrowdatabound="grvListTopic_RowDataBound" 
-                onpageindexchanging="grvListTopic_PageIndexChanging">
+            <cc1:GridViewExt ID="grvListAccounts" runat="server" CssClass="mGrid" AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
+                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="1" datakeynames="Accounts_ID" onrowcommand="grvListAccounts_RowCommand"
+                emptydatatext="Không có bản ghi nào." onpageindexchanging="grvListAccounts_PageIndexChanging">
                 <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("Topic_ID")%>'>Chi tiết</asp:LinkButton>
+                            <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("Accounts_ID")%>'>Chi tiết</asp:LinkButton>
                          </ItemTemplate>
                       <ItemStyle HorizontalAlign="Center"  />
                     </asp:TemplateField>
-                    <asp:BoundField  DataField="Topic_ID"  HeaderText="Mã Bài viết" >
+                    <asp:BoundField  DataField="Accounts_ID"  HeaderText="Mã" >
                         <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                     </asp:BoundField>
-                    <asp:BoundField DataField="Topic_Title" HeaderText="Tiêu đề">
+                    <asp:BoundField DataField="Accounts_Username" HeaderText="Tên đăng nhập">
                         <ItemStyle CssClass="GridItemText" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Topic_Author" HeaderText="Tác giả">
+                    <asp:BoundField DataField="Accounts_Email" HeaderText="Email">
                         <ItemStyle CssClass="GridItemText" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Topic_LastUpdate" HeaderText="Ngày Cập nhật" dataformatstring="{0:dd/MM/yyyy HH:mm}">
+                    <asp:BoundField DataField="Accounts_FullName" HeaderText="Họ và tên" >
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Accounts_DateOfBirth" HeaderText="Ngày sinh" dataformatstring="{0:dd/MM/yyyy HH:mm}">
                         <ItemStyle CssClass="GridItemCode" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="Topic_Category" HeaderText="Nhóm Bài viết">
-                        <ItemStyle CssClass="GridItemText" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="Topic_Tag" HeaderText="Thẻ">
-                        <ItemStyle CssClass="GridItemText" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="Topic_Visit" HeaderText="Lượt xem">
+                    <asp:BoundField DataField="Accounts_Permission" HeaderText="Quyền">
                         <ItemStyle CssClass="GridItemNumber" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Accounts_Like" HeaderText="Like">
+                        <ItemStyle CssClass="GridItemNumber" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Accounts_RegisterDate" HeaderText="Ngày đăng ký" dataformatstring="{0:dd/MM/yyyy HH:mm}">
+                        <ItemStyle CssClass="GridItemCode" />
                     </asp:BoundField>
                 </Columns>
                 <RowStyle CssClass="GridItem"></RowStyle>

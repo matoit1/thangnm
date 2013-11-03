@@ -24,7 +24,7 @@ namespace nguyenmanhthang.Admin
             {
                 string Accounts_Username = txtAccounts_Username.Text;
                 string Accounts_Password = Encrypt.Crypt(txtAccounts_Password.Text);
-                DataSet temp = AccountsBO.Accounts_Login(Accounts_Username, Accounts_Password);
+                DataSet temp = AccountsBO.Login(Accounts_Username, Accounts_Password);
                 if (temp.Tables[0].Rows.Count > 0)
                 {
                     Response.Cookies["administrator"].Value = Accounts_Username;

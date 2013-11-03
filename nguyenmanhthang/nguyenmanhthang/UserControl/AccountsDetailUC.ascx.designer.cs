@@ -31,112 +31,166 @@ namespace nguyenmanhthang.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
-        /// pnlInfo1 control.
+        /// pnlAccounts_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlInfo1;
+        protected global::System.Web.UI.WebControls.Panel pnlAccounts_ID;
         
         /// <summary>
-        /// txtTopic_ID control.
+        /// txtAccounts_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_ID;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_ID;
         
         /// <summary>
-        /// txtTopic_Author control.
+        /// txtAccounts_Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Author;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Username;
         
         /// <summary>
-        /// txtTopic_Title control.
+        /// txtAccounts_Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Title;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Password;
         
         /// <summary>
-        /// txtTopic_Content control.
+        /// txtAccounts_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CKEditor.NET.CKEditorControl txtTopic_Content;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Email;
         
         /// <summary>
-        /// txtTopic_LinkImage control.
+        /// txtAccounts_FullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_LinkImage;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_FullName;
         
         /// <summary>
-        /// txtTopic_Tag control.
+        /// txtAccounts_Address control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Tag;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Address;
         
         /// <summary>
-        /// ddlTopic_Category control.
+        /// txtAccounts_DateOfBirth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Category;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_DateOfBirth;
         
         /// <summary>
-        /// pnlInfo2 control.
+        /// txtAccounts_PhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlInfo2;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_PhoneNumber;
         
         /// <summary>
-        /// txtTopic_Visit control.
+        /// ddlAccounts_Permission control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_Visit;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAccounts_Permission;
         
         /// <summary>
-        /// txtTopic_LastUpdate control.
+        /// txtAccounts_LinkAvatar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTopic_LastUpdate;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_LinkAvatar;
         
         /// <summary>
-        /// ddlTopic_Status control.
+        /// txtAccounts_Signature control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTopic_Status;
+        protected global::CKEditor.NET.CKEditorControl txtAccounts_Signature;
+        
+        /// <summary>
+        /// pnlAccounts_Like control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlAccounts_Like;
+        
+        /// <summary>
+        /// txtAccounts_Like control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Like;
+        
+        /// <summary>
+        /// chkAccounts_Notification control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkAccounts_Notification;
+        
+        /// <summary>
+        /// pnlAccounts_RegisterDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlAccounts_RegisterDate;
+        
+        /// <summary>
+        /// txtAccounts_RegisterDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_RegisterDate;
+        
+        /// <summary>
+        /// ddlAccounts_Status control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlAccounts_Status;
         
         /// <summary>
         /// btnPublish control.

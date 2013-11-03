@@ -10,8 +10,8 @@ namespace BusinessObject
 {
     public class AccountsBO
     {
-        // 1. Accounts_Insert
-        public static bool Accounts_Insert(string Accounts_Username, string Accounts_Password, string Accounts_Email, int Accounts_Prefix, int Accounts_Permission, string Accounts_LinkAvatar, string Accounts_FullName, string Accounts_Address, DateTime Accounts_DateOfBirth, string Accounts_PhoneNumber, string Accounts_Signature, int Accounts_Like, bool Accounts_Notification, bool Accounts_Status)
+        // 1. Insert
+        public static bool Insert(string Accounts_Username, string Accounts_Password, string Accounts_Email, int Accounts_Permission, string Accounts_LinkAvatar, string Accounts_FullName, string Accounts_Address, DateTime Accounts_DateOfBirth, string Accounts_PhoneNumber, string Accounts_Signature, int Accounts_Like, bool Accounts_Notification, bool Accounts_Status)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
@@ -27,14 +27,14 @@ namespace BusinessObject
             _AccountsEO.Accounts_Like = Accounts_Like;
             _AccountsEO.Accounts_Notification = Accounts_Notification;
             _AccountsEO.Accounts_Status = Accounts_Status;
-            if (AccountsDAO.Accounts_Insert(_AccountsEO))
+            if (AccountsDAO.Insert(_AccountsEO))
                 return true;
             else
                 return false;
         }
 
-        // 2. Accounts_Update
-        public static bool Accounts_Update(string Accounts_Username, string Accounts_Password, string Accounts_Email, int Accounts_Prefix, int Accounts_Permission, string Accounts_LinkAvatar, string Accounts_FullName, string Accounts_Address, DateTime Accounts_DateOfBirth, string Accounts_PhoneNumber, string Accounts_Signature, int Accounts_Like, bool Accounts_Notification, bool Accounts_Status)
+        // 2. Update
+        public static bool Update(string Accounts_Username, string Accounts_Password, string Accounts_Email, int Accounts_Permission, string Accounts_LinkAvatar, string Accounts_FullName, string Accounts_Address, DateTime Accounts_DateOfBirth, string Accounts_PhoneNumber, string Accounts_Signature, int Accounts_Like, bool Accounts_Notification, bool Accounts_Status)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
@@ -50,42 +50,42 @@ namespace BusinessObject
             _AccountsEO.Accounts_Like = Accounts_Like;
             _AccountsEO.Accounts_Notification = Accounts_Notification;
             _AccountsEO.Accounts_Status = Accounts_Status;
-            if (AccountsDAO.Accounts_Update(_AccountsEO))
+            if (AccountsDAO.Update(_AccountsEO))
                 return true;
             else
                 return false;
         }
 
-        // 3. Accounts_ResetPassword
-        public static bool Accounts_ResetPassword(string Accounts_Username, string Accounts_Password)
+        // 3. ResetPassword
+        public static bool ResetPassword(string Accounts_Username, string Accounts_Password)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
             _AccountsEO.Accounts_Password = Accounts_Password;
-            if (AccountsDAO.Accounts_ResetPassword(_AccountsEO))
+            if (AccountsDAO.ResetPassword(_AccountsEO))
                 return true;
             else
                 return false;
         }
 
-        // 4. Accounts_Delete
-        public static bool Accounts_Delete(string Accounts_Username)
+        // 4. Delete
+        public static bool Delete(string Accounts_Username)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
-            if (AccountsDAO.Accounts_Delete(_AccountsEO))
+            if (AccountsDAO.Delete(_AccountsEO))
                 return true;
             else
                 return false;
         }
 
-        // 5. Accounts_Login
-        public static DataSet Accounts_Login(string Accounts_Username, string Accounts_Password)
+        // 5. Login
+        public static DataSet Login(string Accounts_Username, string Accounts_Password)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
             _AccountsEO.Accounts_Password = Accounts_Password;
-            DataSet ds = AccountsDAO.Accounts_Login(_AccountsEO);
+            DataSet ds = AccountsDAO.Login(_AccountsEO);
             return ds;
         }
 
@@ -111,17 +111,26 @@ namespace BusinessObject
                 return false;
         }
 
-        // 8. Accounts_SelectInfoByAccounts_Username
-        public static DataSet Accounts_SelectInfoByAccounts_Username(string Accounts_Username)
+        // 8. SelectInfoByAccounts_Username
+        public static DataSet SelectInfoByAccounts_Username(string Accounts_Username)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
-            DataSet ds = AccountsDAO.Accounts_SelectInfoByAccounts_Username(_AccountsEO);
+            DataSet ds = AccountsDAO.SelectInfoByAccounts_Username(_AccountsEO);
             return ds;
         }
 
-        // 9. Accounts_SearchAccounts
-        public static DataSet Accounts_SearchAccounts(string Accounts_Username, string Accounts_Email, int Accounts_Permission, string Accounts_FullName, string Accounts_Address)
+        // 9. SelectInfoByAccounts_ID
+        public static DataSet SelectInfoByAccounts_ID(Int64 Accounts_ID)
+        {
+            AccountsEO _AccountsEO = new AccountsEO();
+            _AccountsEO.Accounts_ID = Accounts_ID;
+            DataSet ds = AccountsDAO.SelectInfoByAccounts_ID(_AccountsEO);
+            return ds;
+        }
+
+        // 10. SearchAccounts
+        public static DataSet SearchAccounts(string Accounts_Username, string Accounts_Email, int Accounts_Permission, string Accounts_FullName, string Accounts_Address)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
@@ -129,16 +138,25 @@ namespace BusinessObject
             _AccountsEO.Accounts_Permission = Accounts_Permission;
             _AccountsEO.Accounts_FullName = Accounts_FullName;
             _AccountsEO.Accounts_Address = Accounts_Address;
-            DataSet ds = AccountsDAO.Accounts_SearchAccounts(_AccountsEO);
+            DataSet ds = AccountsDAO.SearchAccounts(_AccountsEO);
             return ds;
         }
 
-        // 10. Accounts_GetAccounts_IDbyAccounts_Username
-        public static DataSet Accounts_GetAccounts_IDbyAccounts_Username(string Accounts_Username)
+        // 11. GetAccounts_IDbyAccounts_Username
+        public static DataSet GetAccounts_IDbyAccounts_Username(string Accounts_Username)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
-            DataSet ds = AccountsDAO.Accounts_SearchAccounts(_AccountsEO);
+            DataSet ds = AccountsDAO.GetAccounts_IDbyAccounts_Username(_AccountsEO);
+            return ds;
+        }
+
+        // 12. SelectListByAccounts_Status
+        public static DataSet SelectListByAccounts_Status(bool Accounts_Status)
+        {
+            AccountsEO _AccountsEO = new AccountsEO();
+            _AccountsEO.Accounts_Status = Accounts_Status;
+            DataSet ds = AccountsDAO.SelectListByAccounts_Status(_AccountsEO);
             return ds;
         }
     }
