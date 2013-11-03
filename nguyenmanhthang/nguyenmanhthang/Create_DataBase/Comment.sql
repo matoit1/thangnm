@@ -106,7 +106,7 @@ CREATE PROCEDURE Comment_SelectListbyTopic_ID
 	@Comment_Status BIT
 AS
 BEGIN
-	SELECT Topic_ID, Comment_Name, Comment_Email, Comment_Website, Comment_Content, Comment_Status, 
+	SELECT Comment_ID, Comment_Name, Comment_Email, Comment_Website, Comment_Content, Comment_Status, 
 	CONVERT(varchar,Comment_LastUpdate,103)+ ', '+ CONVERT(varchar,Comment_LastUpdate,24)  AS [Comment_LastUpdate]
 	FROM Comment
 	WHERE (Topic_ID=@Topic_ID AND Comment_Status=@Comment_Status)
@@ -114,4 +114,4 @@ BEGIN
 END
 
 ----- Test	 Proc -----
-EXEC Comment_SelectListbyTopic_ID 1,'true'
+EXEC Comment_SelectListbyTopic_ID 14,'false'

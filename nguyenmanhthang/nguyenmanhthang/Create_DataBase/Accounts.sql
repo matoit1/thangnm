@@ -178,27 +178,23 @@ EXEC Accounts_CheckAccounts_Email 'thang.991992@hotmail.com'
 
 
 
-------- 11. ThangNMjsc_getDataSetAccounts Topic_SelectListbyTopic_Status
+------- 11. Accounts_SelectInfoByAccounts_Status
 --	----- Delete Proc -----
---DROP PROCEDURE ThangNMjsc_getDataSetAccounts
+DROP PROCEDURE Accounts_SelectListByAccounts_Status
 
---	----- Create Proc -----
---CREATE PROCEDURE ThangNMjsc_getDataSetAccounts
---	@Accounts_Permission INT
---AS
---BEGIN
---	IF (@Accounts_Permission =100)
---	   SELECT Accounts_ID, Accounts_Username, Accounts_Password, Accounts_Email, Accounts_Permission, CONVERT(VARCHAR(10),Accounts_RegisterDate,103) AS [Accounts_RegisterDate], Accounts_LinkAvatar, Accounts_FullName, Accounts_Address, CONVERT(VARCHAR(10),Accounts_DateOfBirth,103)  AS [Accounts_DateOfBirth], Accounts_PhoneNumber, Accounts_Status
---	   FROM Accounts WHERE Accounts_Permission IN (1,2,3)
---	   ORDER BY Accounts_RegisterDate DESC
---	ELSE
---	   SELECT Accounts_ID, Accounts_Username, Accounts_Password, Accounts_Email, Accounts_Permission, CONVERT(VARCHAR(10),Accounts_RegisterDate,103) AS [Accounts_RegisterDate], Accounts_LinkAvatar, Accounts_FullName, Accounts_Address, CONVERT(VARCHAR(10),Accounts_DateOfBirth,103)  AS [Accounts_DateOfBirth], Accounts_PhoneNumber, Accounts_Status
---	   FROM Accounts WHERE Accounts_Permission=@Accounts_Permission
---	   ORDER BY Accounts_RegisterDate DESC
---END
+CREATE PROCEDURE Accounts_SelectListByAccounts_Status
+	@Accounts_Status BIT
+AS
+BEGIN
+	SELECT Accounts_ID, Accounts_Username, Accounts_Password, Accounts_Email, Accounts_FullName, Accounts_Address,
+		  CONVERT(VARCHAR(10),Accounts_DateOfBirth,103)  AS [Accounts_DateOfBirth], Accounts_PhoneNumber,
+		  Accounts_Permission, Accounts_LinkAvatar, Accounts_Signature, Accounts_Like, Accounts_Notification,
+		   Accounts_Status, CONVERT(VARCHAR(10),Accounts_RegisterDate,103) AS [Accounts_RegisterDate]
+	FROM Accounts WHERE Accounts_Status=@Accounts_Status
+END
 
 ----- Test	 Proc -----
-EXEC ThangNMjsc_getDataSetAccounts 100
+EXEC Accounts_SelectListByAccounts_Status 'false'
 
 
 
@@ -221,6 +217,26 @@ END
 	----- Test	 Proc -----
 EXEC Accounts_SelectListbyAccounts_Username 'admin'
 
+
+
+----- 12. Accounts_SelectInfoByAccounts_ID
+	----- Delete Proc -----
+DROP PROCEDURE Accounts_SelectInfoByAccounts_ID
+
+	----- Create Proc -----
+CREATE PROCEDURE Accounts_SelectInfoByAccounts_ID
+	@Accounts_ID BIGINT
+AS
+BEGIN
+	SELECT Accounts_ID, Accounts_Username, Accounts_Password, Accounts_Email, Accounts_FullName, Accounts_Address,
+		  CONVERT(VARCHAR(10),Accounts_DateOfBirth,103)  AS [Accounts_DateOfBirth], Accounts_PhoneNumber,
+		  Accounts_Permission, Accounts_LinkAvatar, Accounts_Signature, Accounts_Like, Accounts_Notification,
+		   Accounts_Status, CONVERT(VARCHAR(10),Accounts_RegisterDate,103) AS [Accounts_RegisterDate]
+	FROM Accounts WHERE Accounts_ID=@Accounts_ID
+END
+
+	----- Test	 Proc -----
+EXEC Accounts_SelectInfoByAccounts_ID '3'
 
 
 
