@@ -1,0 +1,46 @@
+/******   wrapper Settings    ****/
+#wrapper {margin:-1px auto; width:1024px; border:2px solid #000000; height:auto; -moz-box-shadow: 26px 5px 8px #7A7A7A; -webkit-box-shadow: 26px 15px 8px #7A7A7A;}
+
+/******   header Settings    ****/
+#header {background-image:url('bg_header.png');}
+
+/******   content Settings    ****/
+#content {background-color:white; min-height:700px; padding: 20px 20px 20px 20px}
+
+/******   Sidebar Settings    ****/
+#sidebar {float:left; width:200px; height:auto; background-color:#D9EE97; min-height:700px;}
+#sidebar div#logo {float:left; text-align:center; width:200px; height:120px;}
+#sidebar h4 {text-align:center; margin-right:10px; color:#660099;}
+#sidebar div#navBar ul,li,a {display:block; margin:0; padding:0; border:0;}/* chinh tong the  tat ca cac the ul,li,a */
+#sidebar div#navBar ul {width:200px; border:1px; background-color:#3883CC; list-style:none;}/* chinh cu the tat ca cac the ul */
+#sidebar div#navBar li {position:relative; padding:1px; padding-left:0px; z-index:9; text-transform: uppercase;}/* chinh cu the tat ca cac the li */
+#sidebar div#navBar li span { float:right;}/* chinh cu the tat ca cac the span */
+#sidebar div#navBar li strong { float:right; font-size:0.8em; color:#9CC24A; text-transform:lowercase; float:left;}/* chinh cu the tat ca cac the strong */
+#sidebar div#navBar .mainNav ul {position:absolute; left:200px; top:0px; background-color:#3883CC;}/* chinh cu the tat cac cac the ul nam trong "mainNav"*/
+#sidebar div#navBar li.mainNav>ul { left:200px; }
+#sidebar div#navBar a {font-size:15px; padding:2px; text-decoration:none; color: White; width:100%; font-weight: bold; border:1px solid #002862;}/* chinh tat cac cac the a */
+#sidebar div#navBar li>a {width:auto; height: 55px;}
+#sidebar div#navBar li.mainNav ul a {color:#1e3d51; border-bottom:1px solid #adaaa3; border-top:1px dashed #f4f1ea;}/* chinh tat ca cac the a cua ul nam trong"mainNav" */
+#sidebar div#navBar a:hover { background-color:White; color:#000000;}/* nut cua tat cac cac the a */
+#sidebar div#navBar li.mainNav li a:hover {background-color:White; color:White;}/* nut cua tat ca cac the a cua li nam trong "mainNav"*/ 
+#sidebar div#navBar li.mainNav:hover {z-index:10;}
+#sidebar div#navBar ul ul, li:hover ul ul {display:none;}
+#sidebar div#navBar li:hover ul, li:hover li:hover ul {display:block;}
+
+/******  primary Settings    ****/
+#primary {font-size:0.7em; float:left; width:auto; border-width:5px; height:auto; padding: 20px 0px 0px 20px }
+#primary #welcome img {float:left; margin-right:5px;}
+#primary #welcome h1 {color:#3f3f3f; text-transform:uppercase; font-size:0.7em; font-weight:normal; padding-top:20px;}
+#primary #welcome span {font-size:1.5em; color:#c23903; border-left:2px solid #c23903; padding-left:20px;}
+#primary #welcome ul {text-align:center; margin-top:5px;}
+#primary #welcome ul li {display:inline;}
+#primary #welcome li a {padding-right:15px; color:#ff6600; padding-left:12px; font-size:1.1em; background:url(images/bullets.png) no-repeat 0 50%;}
+
+/******  footer Settings    ****/
+#footer-container {bottom:0; clear:both; left:0; min-width:1024px; width:100%; margin:0; outline:medium none; color:#135181; position:static; padding-bottom:0px; background:url("bg_footer_container.png") repeat-x scroll 0 33px transparent;}
+#footer {overflow:hidden; height:60px; clear:left; color:#FFFFFF; margin:0 auto; width:924px; outline:medium none; text-align:left; font-size:11px; padding:212px 50px 15px 50px; background:url("bg_footer.png")  no-repeat scroll center top transparent;}
+#footer .copy{display:inline; float:left; margin: 5px 0 0 0px; width: 280px; outline:medium-none; padding:0;}
+#footer .service{display:inline; float:left; padding-top:18px; text-align: center; width: 393px; outline:medium-none; margin:0;}
+#footer .share{display:inline; float:left; margin-top: 2px; text-align: right; width: 250px; outline:medium-none; padding:0;}
+#footer a{display:inline;}
+#menu{padding-top: 7px}

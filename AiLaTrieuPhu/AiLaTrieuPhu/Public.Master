@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.master.cs" Inherits="AiLaTrieuPhu.Public" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Nguyễn Mạnh Thắng - Đơn giản là chia sẻ</title>
+    <link href="../favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="vi" />
+    <meta name="description" content="Nguyễn Mạnh Thắng - Đơn giản là chia sẻ" />
+    <meta name="keywords" content="ThangNM, Admin Control Panel - ThangNM Joint Stock Company, Manager, thang.991992@gmail.com, Nguyễn Mạnh Thắng" />
+    <meta name="robots" content="index ,follow" />
+    <link rel="author" href="https://plus.google.com/109664385150832451485" />
+    <meta name="copyright" content=" © 2013 Copyright ThangNM ™" />
+    <!-- CSS & JavaScript -->
+    <link href="../Css/Product/product.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/public.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/Admin/menucss3.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="bar">
+        <div class="menu">
+            <div class="menuleft">
+            <ul id="css3menu1" class="topmenu">
+                <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx"><img src="../Css/Admin/blue_circle - home2.png" alt="Trang chủ" />Trang chủ</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Giới thiệu</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx">Trang cá nhân</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Default.aspx">Bảng xếp hạng</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Default.aspx">Trợ giúp</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Default.aspx">Liên hệ</asp:HyperLink></li>
+            </ul>
+            </div>
+            <div class="menuright">
+                <ul id="css3menu1" class="topmenu">
+                    <li class="toproot"><asp:HyperLink ID="HyperLink38" runat="server" NavigateUrl="~/Default.aspx">Đăng nhập</asp:HyperLink></li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink39" runat="server" NavigateUrl="~/Default.aspx">Đăng ký</asp:HyperLink></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo"><!-- Begin #logo -->
+               <%-- <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/logo.gif" />--%>
+            </div><!-- End #logo -->
+
+            <asp:Panel ID="panelInfoAccount" runat="server">
+            <div id="infoAccount"><!-- Begin #infoAccount -->
+                <div class="imgAvatar"><asp:Image ID="imgAvatar" runat="server" Width= "50px" Height="50px" /></div>
+                <div class="Text"><asp:HyperLink ID="hpEditAccount" runat="server"><asp:Label ID="lblWelcome" runat="server" Text="Unknow"></asp:Label></asp:HyperLink><br />
+                    <asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click" Width="30px" CausesValidation="False">[Thoát]</asp:LinkButton></div>
+            </div><!-- End #infoAccount -->
+            </asp:Panel>
+        </div>
+        <div id="content">
+            <div id="sidebar"><!-- Begin #sidebar -->
+                <div id="navBar">
+                    
+                </div>
+                <div class="formmedium"><!-- Begin Search Advand -->
+                    <h2>Tìm kiếm nâng cao</h2>
+                    <br /><asp:TextBox ID="txtProducts_Name" runat="server" Width="210px" Height="20px"></asp:TextBox>
+                    <asp:Button ID="btnSearch" runat="server" Height="30px" OnClick="btnSearch_Click" Text="Search" CausesValidation="False"/>
+                </div><!-- End Search Advand -->
+                <div class="formtiny"><!-- Begin visit website-->
+                    <h2>Thống kê truy cập</h2>
+                    <script type="text/javascript">
+                        document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));
+		            </script>
+		            <a href="http://it.site44.com" target="_blank" title="Diễn đàn CNTT - Forum IT" >
+			            <script  type="text/javascript" >
+			                try {
+			                    Histats.start(1, 2238242, 4, 485, 112, 61, "00011011");
+			                    Histats.track_hits();
+			                } catch (err) { };
+			            </script>
+		            </a>
+                </div><!-- End visit website -->
+                <div class="formtiny"><!-- Begin Link Website-Blog -->
+                    <h2>Liên kết Website-Blog</h2>
+                    <marquee direction="up" scrolldelay="30" scrollamount="1" truespeed onmouseover=this.stop() onmouseout=this.start() behavior="scroll" height="67px">
+						<asp:Label ID="lblLink" runat="server"></asp:Label></marquee>
+                </div><!-- End Link Website-Blog -->
+            </div><!-- End #sidebar -->
+            <div id="primary">
+                <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+            </div><!-- End #primary -->
+        </div>
+        <!-- End #content -->
+        <div class="clear"></div>
+            <!-- End #clear -->
+        <div id="footer-container">
+            <div id="footer">
+                <div class="copy">
+                    <p> Project Management <a href="http://www.fis.com.vn">FPT Information System</a><br />
+                    Le Hai Thanh & Hoang Quang Huy</p>
+                </div>
+                <div class="service">
+                    <ul class="social">
+                        <a href="http://fb.com/share2everyone" target="_blank"><li class="facebook-hover social-slide"></li></a>
+                        <a href="https://twitter.com/thang_991992" target="_blank"><li class="twitter-hover social-slide"></li></a>
+                        <a href="https://plus.google.com/u/0/109664385150832451485" target="_blank"><li class="google-hover social-slide"></li></a>
+                        <a href="#" target="_blank"><li class="pinterest-hover social-slide"></li></a>
+                        <a href="#" target="_blank"><li class="instagram-hover social-slide"></li></a>
+                        <a href="#" target="_blank"><li class="tumblr-hover social-slide"></li></a>
+                    </ul>
+                </div>
+                <div class="share">
+                    <p>&copy; 2013 Designed by <a href="https://plus.google.com/109664385150832451485">ThangNM</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- End #footer -->
+    </div>
+    <!-- End #header -->
+    </form>
+</body>
+</html>
