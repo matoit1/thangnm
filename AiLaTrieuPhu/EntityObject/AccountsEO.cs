@@ -7,7 +7,7 @@ namespace EntityObject
 {
     public class AccountsEO
     {
-        private Int64 _Accounts_ID;
+        private int _Accounts_ID;
         private string _Accounts_Username;
         private string _Accounts_Password;
         private string _Accounts_Email;
@@ -21,7 +21,7 @@ namespace EntityObject
         private DateTime _Accounts_RegisterDate;
 
         // 1. Xay dung cac phuong thuc set, get cho Accounts_ID
-        public Int64 Accounts_ID
+        public int Accounts_ID
         {
             get { return this._Accounts_ID; }
             set { this._Accounts_ID = value; }

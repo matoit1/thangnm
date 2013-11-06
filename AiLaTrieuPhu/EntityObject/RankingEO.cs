@@ -8,7 +8,7 @@ namespace EntityObject
     public class RankingEO
     {
         private Int64 _Ranking_ID;
-        private Int32 _Ranking_User;
+        private int _Ranking_User;
         private Int64 _Ranking_Money;
 
         // 1. Xay dung cac phuong thuc set, get cho Ranking_ID
@@ -19,7 +19,7 @@ namespace EntityObject
         }
 
         // 2. Xay dung cac phuong thuc set, get cho Ranking_User
-        public Int32 Ranking_User
+        public int Ranking_User
         {
             get { return this._Ranking_User; }
             set { this._Ranking_User = value; }
