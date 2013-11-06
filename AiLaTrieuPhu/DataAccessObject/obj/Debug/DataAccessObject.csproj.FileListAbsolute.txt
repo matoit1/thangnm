@@ -1,0 +1,5 @@
+D:\Project_ASP.NET\AiLaTrieuPhu\DataAccessObject\bin\Debug\DataAccessObject.dll
+D:\Project_ASP.NET\AiLaTrieuPhu\DataAccessObject\bin\Debug\DataAccessObject.pdb
+D:\Project_ASP.NET\AiLaTrieuPhu\DataAccessObject\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\AiLaTrieuPhu\DataAccessObject\obj\Debug\DataAccessObject.dll
+D:\Project_ASP.NET\AiLaTrieuPhu\DataAccessObject\obj\Debug\DataAccessObject.pdb
