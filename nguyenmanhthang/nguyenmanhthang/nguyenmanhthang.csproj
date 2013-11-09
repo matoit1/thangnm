@@ -902,6 +902,8 @@
     <Content Include="Css\Admin\blue_circle - info.png" />
     <Content Include="Css\Admin\blue_circle - ok.png" />
     <Content Include="Css\Admin\blue_circle - star.png" />
+    <Content Include="Css\images\closebox.png" />
+    <Content Include="Css\popup.css" />
     <Content Include="Css\Product\bg_footer.png" />
     <Content Include="Css\Product\bg_footer_container.png" />
     <Content Include="Css\topic.css" />
@@ -994,6 +996,7 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Admin\Security.aspx" />
+    <Content Include="Scripts\popup.js" />
     <Content Include="Scripts\vote.js" />
     <Content Include="Sitemap.aspx" />
     <Content Include="sitemap.xml" />
