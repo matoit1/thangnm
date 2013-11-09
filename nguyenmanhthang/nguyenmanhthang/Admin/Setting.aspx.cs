@@ -38,14 +38,10 @@ namespace nguyenmanhthang.Admin
                 conn.Close();
                 Response.Write("<script>alert('Sao lưu Dữ liệu thành công!!!')</script>");
             }
-            catch (SqlException ex)
+            catch
             {
-                Response.Write("<script>alert('ERROR: Sao lưu Dữ liệu không thành công, Vui lòng kiểm tra lại.')</script>");
+                Response.Write("<script>alert('ERROR: Sao lưu Dữ liệu không thành công, Vui lòng kiểm tra lại Kết nối và Đường dẫn.')</script>");
                 return;
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('ERROR: Sao lưu Dữ liệu không thành công, Vui lòng kiểm tra lại.')</script>");
             }
         }
 
@@ -62,13 +58,11 @@ namespace nguyenmanhthang.Admin
                 conn.Close();
                 Response.Write("<script>alert('Khôi phục Dữ liệu thành công!!!')</script>");
             }
-            catch (SqlException ex)
+            catch
             {
-                Response.Write("<script>alert('ERROR: Khôi phục Dữ liệu không thành công, Vui lòng kiểm tra lại.')</script>");
+                Response.Write("<script>alert('ERROR: Sao lưu Dữ liệu không thành công, Vui lòng kiểm tra lại Kết nối và Đường dẫn.')</script>");
                 return;
             }
-            catch (Exception ex)
-            { }
         }
 
         private void DanhSachFileDaBackup()
