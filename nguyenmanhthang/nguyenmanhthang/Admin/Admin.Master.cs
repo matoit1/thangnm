@@ -18,7 +18,7 @@ namespace nguyenmanhthang.Admin
                 if (Request.Cookies["administrator"] == null)
                 {
                     Session["url1"] = Request.Url.AbsolutePath;
-                    Response.Redirect("~/Admin/Accounts/Login.aspx");
+                    Response.Redirect("~/Accounts/Login.aspx");
                 }
                 DataSet ds = AccountsBO.SelectInfoByAccounts_Username(Request.Cookies["administrator"].Value);
                 //imgAvatar.ImageUrl = ds.Tables[0].Rows[0]["Accounts_LinkAvatar"].ToString();
@@ -28,7 +28,7 @@ namespace nguyenmanhthang.Admin
             catch
             {
                 Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
-                Response.Redirect("~/Admin/Accounts/Login.aspx");
+                Response.Redirect("~/Accounts/Login.aspx");
             }
         }
 

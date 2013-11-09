@@ -69,7 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Admin\Accounts\Login.aspx" />
+    <Content Include="Accounts\Login.aspx" />
     <Content Include="Admin\Alert.aspx" />
     <Content Include="Admin\Basic_Styles.aspx" />
     <Content Include="Admin\Content_Manager.aspx" />
@@ -1009,6 +1009,8 @@
     <Content Include="UserControl\CommentListUC.ascx" />
     <Content Include="UserControl\CommentUC.ascx" />
     <Content Include="Test\css.css" />
+    <Content Include="UserControl\Login.ascx" />
+    <Content Include="Accounts\login.css" />
     <Content Include="UserControl\TopicDetailUC.ascx" />
     <Content Include="Test\DroplistKey.ascx" />
     <Content Include="Test\EventUserControl.ascx" />
@@ -1071,11 +1073,11 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Accounts\Login.aspx.cs">
+    <Compile Include="Accounts\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Accounts\Login.aspx.designer.cs">
+    <Compile Include="Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Admin.Master.cs">
@@ -1406,6 +1408,13 @@
     </Compile>
     <Compile Include="UserControl\CommentUC.ascx.designer.cs">
       <DependentUpon>CommentUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\TopicDetailUC.ascx.cs">
       <DependentUpon>TopicDetailUC.ascx</DependentUpon>

@@ -15,7 +15,7 @@ body{ background-color:#F7F7F7;}
 #infoAccount .Text {margin-left:5px; padding-top:8px; display:inline}
 
 /******  content Settings    ****/
-#content {margin-top:80px; min-height:1892px;}
+#content {margin-top:50px; min-height:1892px;}
 
 /*  Login Settings    */
 #login {border:2px ridge red; margin:5px 5px 5px 5px; padding:5px 5px 5px 5px; width:224px; height:225px;}
