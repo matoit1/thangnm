@@ -661,15 +661,6 @@ namespace nguyenmanhthang {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink10;
         
         /// <summary>
-        /// HyperLink38 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink38;
-        
-        /// <summary>
         /// HyperLink39 control.
         /// </summary>
         /// <remarks>
@@ -767,5 +758,14 @@ namespace nguyenmanhthang {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
+        
+        /// <summary>
+        /// Login1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::nguyenmanhthang.UserControl.Login Login1;
     }
 }

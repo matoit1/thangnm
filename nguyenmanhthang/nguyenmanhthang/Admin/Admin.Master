@@ -60,7 +60,7 @@
     <div id="header">
 		<div>
 			<h1 class="site_title"><asp:HyperLink ID="HyperLink13" NavigateUrl="~/Admin/Default.aspx" runat="server">Website Admin</asp:HyperLink></h1>
-			<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><a href="http://nguyenmanhthang.tk">View Site</a></div>
+			<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><asp:HyperLink ID="HyperLink15" NavigateUrl="~/Default.aspx" runat="server">View Site</asp:HyperLink></div>
 		</div>
 	</div> <!-- end of header bar -->
 	

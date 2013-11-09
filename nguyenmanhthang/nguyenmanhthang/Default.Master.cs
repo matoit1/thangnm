@@ -16,6 +16,26 @@ namespace nguyenmanhthang
             if (!IsPostBack)
             {
                 LoadNewTopic();
+                if (Request.Cookies["administrator"] != null) // Neu la Admin
+                {
+                    panelInfoAccount.Visible = true;
+                    try
+                    {
+                        DataSet ds = AccountsBO.SelectInfoByAccounts_Username(Request.Cookies["administrator"].Value);
+                        imgAvatar.ImageUrl = ds.Tables[0].Rows[0]["Accounts_LinkAvatar"].ToString();
+                        lblWelcome.Text = "   Hi, " + ds.Tables[0].Rows[0]["Accounts_Fullname"].ToString();// xuất lời chào.
+                        hpEditAccount.NavigateUrl = "~/Admin/Edit/EditAccounts.aspx?Accounts_Username=" + Request.Cookies["administrator"].Value;
+                    }
+                    catch
+                    {
+                        Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
+                        Response.Redirect(Request.Url.AbsolutePath);
+                    }
+                }
+                else
+                {
+                    panelInfoAccount.Visible = false;
+                }
             }
         }
 
