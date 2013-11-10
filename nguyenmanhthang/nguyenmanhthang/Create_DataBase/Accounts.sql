@@ -128,7 +128,7 @@ CREATE PROCEDURE Accounts_Login
 AS
 BEGIN
 	SELECT *
-	FROM Accounts WHERE (Accounts_Username LIKE @Accounts_Username) AND (Accounts_Password LIKE @Accounts_Password) AND (Accounts_Permission IN (1,2)) AND (Accounts_Status='TRUE')
+	FROM Accounts WHERE (Accounts_Username LIKE @Accounts_Username) AND (Accounts_Password LIKE @Accounts_Password) AND (Accounts_Permission IN (0,1,2)) AND (Accounts_Status='TRUE')
 END
 
 ----- Test	 Proc -----
@@ -147,7 +147,7 @@ CREATE PROCEDURE Accounts_CheckAccounts_Username
 	@Accounts_Username VARCHAR(50)
 AS
 BEGIN
-	SELECT Accounts_Permission, Accounts_Status
+	SELECT *
 	FROM Accounts WHERE Accounts_Username=@Accounts_Username
 END
 
@@ -219,7 +219,7 @@ EXEC Accounts_SelectListbyAccounts_Username 'admin'
 
 
 
------ 12. Accounts_SelectInfoByAccounts_ID
+----- 13. Accounts_SelectInfoByAccounts_ID
 	----- Delete Proc -----
 DROP PROCEDURE Accounts_SelectInfoByAccounts_ID
 
@@ -239,8 +239,29 @@ END
 EXEC Accounts_SelectInfoByAccounts_ID '3'
 
 
+----- 14. Accounts_SelectInfoByAccounts_EmailvsAccounts_PhoneNumber
+	----- Delete Proc -----
+DROP PROCEDURE Accounts_SelectInfoByAccounts_EmailvsAccounts_PhoneNumber
 
------ 13. Accounts_SearchAccounts
+	----- Create Proc -----
+CREATE PROCEDURE Accounts_SelectInfoByAccounts_EmailvsAccounts_PhoneNumber
+	@Accounts_Email VARCHAR(100),
+	@Accounts_PhoneNumber VARCHAR(50)
+AS
+BEGIN
+	SELECT Accounts_ID, Accounts_Username, Accounts_Password, Accounts_Email, Accounts_FullName, Accounts_Address,
+		  CONVERT(VARCHAR(10),Accounts_DateOfBirth,103)  AS [Accounts_DateOfBirth], Accounts_PhoneNumber,
+		  Accounts_Permission, Accounts_LinkAvatar, Accounts_Signature, Accounts_Like, Accounts_Notification,
+		   Accounts_Status, CONVERT(VARCHAR(10),Accounts_RegisterDate,103) AS [Accounts_RegisterDate]
+	FROM Accounts WHERE (Accounts_Email=@Accounts_Email  AND (REPLACE(Accounts_PhoneNumber,' ', '')=REPLACE(@Accounts_PhoneNumber,' ', '')))
+END
+
+	----- Test	 Proc -----
+EXEC Accounts_SelectInfoByAccounts_EmailvsAccounts_PhoneNumber 'thang.991992@gmail.com','0167 527 9562'
+
+
+
+----- 15. Accounts_SearchAccounts
 ----- Delete Proc -----
 DROP PROCEDURE Accounts_SearchAccounts
 
@@ -271,7 +292,7 @@ EXEC Accounts_SearchAccounts '','','',''
 
 
 
------ 14. Tao function de chuyen chuoi String thanh String
+----- 16. Tao function de chuyen chuoi String thanh String
 CREATE FUNCTION [dbo].[StringCommaSplit](@ListofUsername NVARCHAR(1000))
 RETURNS @rtn TABLE (StringValue NVARCHAR(1000))
 AS
