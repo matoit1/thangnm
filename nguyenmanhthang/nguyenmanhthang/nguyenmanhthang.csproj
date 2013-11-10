@@ -1016,6 +1016,7 @@
     <Content Include="Upload\Default.aspx" />
     <Content Include="UserControl\AccountsDetailUC.ascx" />
     <Content Include="UserControl\AccountsListUC.ascx" />
+    <Content Include="UserControl\BadgeUC.ascx" />
     <Content Include="UserControl\CommentDetailUC.ascx" />
     <Content Include="UserControl\CommentListUC.ascx" />
     <Content Include="UserControl\CommentUC.ascx" />
@@ -1412,6 +1413,13 @@
     </Compile>
     <Compile Include="UserControl\AccountsListUC.ascx.designer.cs">
       <DependentUpon>AccountsListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BadgeUC.ascx.cs">
+      <DependentUpon>BadgeUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\BadgeUC.ascx.designer.cs">
+      <DependentUpon>BadgeUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\CommentDetailUC.ascx.cs">
       <DependentUpon>CommentDetailUC.ascx</DependentUpon>
