@@ -215,10 +215,23 @@
 			            </script>
 		            </a>
                 </div><!-- End visit website -->
-                <div class="formtiny"><!-- Begin Link Website-Blog -->
+                <div class="formmedium"><!-- Begin Link Website-Blog -->
                     <h2>Liên kết Website-Blog</h2>
-                    <marquee direction="up" scrolldelay="30" scrollamount="1" truespeed onmouseover=this.stop() onmouseout=this.start() behavior="scroll" height="67px">
-						<asp:Label ID="lblLink" runat="server"></asp:Label></marquee>
+                    <marquee direction="up" scrolldelay="30" scrollamount="1" truespeed onmouseover=this.stop() onmouseout=this.start() behavior="scroll" height="274px">
+                        <a href="http://it.site44.com" title="Nguyễn Mạnh Thắng" target="_blank">Diễn đàn CNTT - Forum IT</a><br />
+                        <a href="http://tipshop.tk" title="tipshop.tk" target="_blank">TipShop</a><br />
+                        <img class="favicon" src="http://www.trollvl.com/favicon.ico" /><a alt="liên kết" href="http://www.trollvl.com" target="_blank" title="Chia Sẻ - Thủ Thuật - Hài Hước">TrollVL</a><br />
+                        <a href="http://lienketweb.com">Danh bạ Website - Trao đổi liên kết miễn phí</a><br />
+                        <a href="http://downloadfacebook.net" title="Tai Facebook" target="_blank">Tai Facebook</a><br />
+                        <a href="http://dinhcongthanh.com/" title="DinhCongThanh.Com - Đinh Công Thành Blog" target="_blank">Đinh Công Thành Blog</a><br />
+                        <a href="http://love4all1080.blogspot.com" ref="dofollow" title="Tư vấn tuyển dụng, hỗ trợ lập trình, chia sẻ đam mê" target="_blank">Love4all1080's Blog</a><br />
+                        <a href="http://www.lienketaz.com" title="Kiếm tiền với Tiếp thị liên kết, Tiếp thị liên kết az, Affiliate Marketing">Liên kết AZ |Tiếp thị liên kết - Affiliate Marketing</a><br />
+						<a href="http://misaoblog.com" title="Misao's blog">Misao's Blog</a><br />
+                        <a href="http://www.itviet360.com/p/dich-vu-seo-web-gia-re-giai-phap-tot.html" target="_blank" title="Dịch vụ SEO Web giá rẻ"><strong>Dich vu SEO Web</strong></a><br />
+                        <img src="http://luubutsong.blogspot.com/favicon.ico" class="favicon" /><a href="http://luubutsong.blogspot.com/" target="_blank" title="Nơi Chia Sẻ Giá Trị Cuộc Sống">Lưu Bút Sống</a><br />
+                        <a href="http://www.thienhieu.com" title="tin shock" target="_blank">tin shock</a><br />
+                        <asp:Label ID="lblLink" runat="server"></asp:Label>
+                    </marquee>
                 </div><!-- End Link Website-Blog -->
             </div><!-- End #sidebar -->
             <div id="primary">
@@ -255,7 +268,7 @@
 		<div class="close"></div>
 		<span class="ecs_tooltip">Press Esc to close</span>
 		<div id="popup_content"> <!--your content start-->
-			<uc1:Login ID="Login1" runat="server" OnRedirect="Redirect_Click" />
+			<uc1:Login ID="Login1" runat="server" OnNavigation="Navigation_Click" />
 		</div> <!--your content end-->
 	</div> <!--toPopup end-->
     <div id="backgroundPopup"></div>
