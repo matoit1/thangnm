@@ -39,53 +39,6 @@ namespace nguyenmanhthang
             }
         }
 
-        //protected void btnLogin_Click(object sender, EventArgs e)   // Xu y su kien cho buttom Login
-        //{
-        //    try
-        //    {
-        //        string Accounts_Username = txtAccounts_Username.Text;
-        //        string Accounts_Password = Encrypt.Crypt(txtAccounts_Password.Text);
-        //        DataSet temp = AccountsBO.Accounts_Login(Accounts_Username, Accounts_Password);
-        //        if (temp.Tables[0].Rows.Count > 0)
-        //        {
-        //            if (Convert.ToInt32(temp.Tables[0].Rows[0]["Accounts_Permission"]) > 0) // Kiem tra xem co phai Admin ko?
-        //            {
-        //                Response.Cookies["administrator"].Value = Accounts_Username;
-        //                if (chkRememberMe.Checked == true)
-        //                {
-        //                    Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(10);
-        //                }
-        //                else
-        //                {
-        //                    Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(1);
-        //                }
-        //            }
-        //            else // La Customer
-        //            {
-        //                Response.Cookies["client"].Value = Accounts_Username;
-        //                if (chkRememberMe.Checked == true)
-        //                {
-        //                    Response.Cookies["client"].Expires = DateTime.Now.AddDays(10);
-        //                }
-        //                else
-        //                {
-        //                    Response.Cookies["client"].Expires = DateTime.Now.AddDays(1);
-        //                }
-        //            }
-        //            Response.Redirect(Request.Url.AbsolutePath);
-        //        }
-        //        else
-        //        {
-        //            lblMsg.Text = "Sai tài khoản / mật khẩu";
-        //            lblMsg.CssClass = "notificationError";
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return;
-        //    }
-        //}
-
         protected void lbtnLogout_Click(object sender, EventArgs e)     // Xu y su kien cho buttom Logout
         {
             if (Response.Cookies["administrator"] == null)
@@ -129,7 +82,7 @@ namespace nguyenmanhthang
 
         protected void Navigation_Click(object sender, EventArgs e)
         {
-            if (Login1.state == true) { Response.Redirect(Request.Url.AbsolutePath); } else { Response.Redirect("~/Accounts/Login.aspx"); }
+            if (LoginUC1.state == true) { Response.Redirect(Request.Url.AbsolutePath); } else { Response.Redirect("~/Accounts/Login.aspx"); }
         }
     }
 }
