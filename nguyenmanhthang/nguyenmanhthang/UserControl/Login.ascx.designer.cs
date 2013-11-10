@@ -28,7 +28,7 @@ namespace nguyenmanhthang.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgProfile;
+        protected global::System.Web.UI.WebControls.ImageButton imgProfile;
         
         /// <summary>
         /// lblMsg control.
@@ -67,6 +67,15 @@ namespace nguyenmanhthang.UserControl {
         protected global::System.Web.UI.WebControls.CheckBox chkRememberMe;
         
         /// <summary>
+        /// hplLost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplLost;
+        
+        /// <summary>
         /// btnLogin control.
         /// </summary>
         /// <remarks>
@@ -74,5 +83,14 @@ namespace nguyenmanhthang.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
+        
+        /// <summary>
+        /// hplHelp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplHelp;
     }
 }
