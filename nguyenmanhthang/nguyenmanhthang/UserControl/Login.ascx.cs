@@ -12,9 +12,11 @@ namespace nguyenmanhthang.UserControl
 {
     public partial class Login : System.Web.UI.UserControl
     {
+        public event EventHandler Redirect;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            txtAccounts_Username.Focus();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -49,9 +51,20 @@ namespace nguyenmanhthang.UserControl
                 {
                     lblMsg.Text = "Sai tài khoản / mật khẩu";
                     lblMsg.CssClass = "notificationError";
+                    if (Redirect != null)
+                    {
+                        Redirect(this, EventArgs.Empty);
+                    }
                 }
             }
-            catch (Exception ex) { lblMsg.Text = ex.ToString(); }
+            catch (Exception ex)
+            {
+                lblMsg.Text = ex.ToString(); 
+                if (Redirect != null)
+                {
+                    Redirect(this, EventArgs.Empty);
+                }
+            }
         }
     }
 }

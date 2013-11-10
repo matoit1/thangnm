@@ -126,5 +126,10 @@ namespace nguyenmanhthang
                 Response.Redirect(linkDetail);
             }
         }
+
+        protected void Redirect_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Accounts/Login.aspx");
+        }
     }
 }
