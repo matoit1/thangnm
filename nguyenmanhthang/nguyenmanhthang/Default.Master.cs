@@ -127,9 +127,9 @@ namespace nguyenmanhthang
             }
         }
 
-        protected void Redirect_Click(object sender, EventArgs e)
+        protected void Navigation_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Accounts/Login.aspx");
+            if (Login1.state == true) { Response.Redirect(Request.Url.AbsolutePath); } else { Response.Redirect("~/Accounts/Login.aspx"); }
         }
     }
 }

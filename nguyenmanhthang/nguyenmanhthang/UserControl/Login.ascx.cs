@@ -12,7 +12,8 @@ namespace nguyenmanhthang.UserControl
 {
     public partial class Login : System.Web.UI.UserControl
     {
-        public event EventHandler Redirect;
+        public event EventHandler Navigation;
+        public bool state = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,6 +29,7 @@ namespace nguyenmanhthang.UserControl
                 DataSet temp = AccountsBO.Login(Accounts_Username, Accounts_Password);
                 if (temp.Tables[0].Rows.Count > 0)
                 {
+                    state = true;
                     Response.Cookies["administrator"].Value = Accounts_Username;
                     if (chkRememberMe.Checked == true)
                     {
@@ -40,7 +42,8 @@ namespace nguyenmanhthang.UserControl
                     string url1 = (String)Session["url1"];
                     if (Session["url1"] == null)
                     {
-                        Response.Redirect("~/Admin/Default.aspx");
+                        string l = "~/Admin/Default.aspx";
+                        Response.Redirect(l);
                     }
                     else
                     {
@@ -51,18 +54,18 @@ namespace nguyenmanhthang.UserControl
                 {
                     lblMsg.Text = "Sai tài khoản / mật khẩu";
                     lblMsg.CssClass = "notificationError";
-                    if (Redirect != null)
+                    if (Navigation != null)
                     {
-                        Redirect(this, EventArgs.Empty);
+                        Navigation(this, EventArgs.Empty);
                     }
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                lblMsg.Text = ex.ToString(); 
-                if (Redirect != null)
+                lblMsg.Text = ex.ToString();
+                if (Navigation != null)
                 {
-                    Redirect(this, EventArgs.Empty);
+                    Navigation(this, EventArgs.Empty);
                 }
             }
         }

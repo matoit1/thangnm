@@ -38,7 +38,7 @@ namespace nguyenmanhthang.UserControl
                     string url1 = (String)Session["url1"];
                     if (Session["url1"] == null)
                     {
-                        Response.Redirect("~/Admin/Default.aspx");
+                        Response.Redirect("http://nguyenmanhthang.tk/Admin/Default.aspx");
                     }
                     else
                     {

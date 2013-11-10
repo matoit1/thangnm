@@ -962,7 +962,8 @@
     <Content Include="favicon.ico" />
     <Content Include="GiaiTri\Default.aspx" />
     <Content Include="HocTap\Default.aspx" />
-    <Content Include="HuyHieu.html" />
+    <Content Include="HuyHieu_Facebook.html" />
+    <Content Include="HuyHieu_Google.html" />
     <Content Include="Images\Avatar\admin.jpg" />
     <Content Include="Images\Avatar\default.jpg" />
     <Content Include="Images\Template\btnExport_Excel.png" />
