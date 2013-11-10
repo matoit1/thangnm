@@ -16,6 +16,7 @@
 }
 
 .signin-card .notificationError{color:#FF3366; font-weight: bold; text-align:center}
+.signin-card .notificationSuccessful{color:#33FF33; font-weight: bold;}
 
 .signin-card input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="text"], input[type="url"] 
 {
@@ -38,7 +39,17 @@
     padding: 0 8px;
 }
 
-.signin-card input[type="email"], .signin-card input[type="password"], .signin-card input[type="text"], .signin-card input[type="submit"] {
+.signin-card input[type="email"], .signin-card input[type="password"], .signin-card input[type="text"]{
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    width: 89%;
+    z-index: 1;
+}
+
+.signin-card input[type="submit"]
+{
     -moz-box-sizing: border-box;
     display: block;
     margin-bottom: 10px;

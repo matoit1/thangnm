@@ -90,25 +90,21 @@ namespace BusinessObject
         }
 
         // 6. CheckAccounts_Username
-        public static bool CheckAccounts_Username(string Accounts_Username)
+        public static DataSet CheckAccounts_Username(string Accounts_Username)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Username = Accounts_Username;
-            if (AccountsDAO.CheckAccounts_Username(_AccountsEO))
-                return true;
-            else
-                return false;
+            DataSet ds = AccountsDAO.CheckAccounts_Username(_AccountsEO);
+            return ds;
         }
 
         // 7. CheckAccounts_Email
-        public static bool CheckAccounts_Email(string Accounts_Email)
+        public static DataSet CheckAccounts_Email(string Accounts_Email)
         {
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_Email = Accounts_Email;
-            if (AccountsDAO.CheckAccounts_Email(_AccountsEO))
-                return true;
-            else
-                return false;
+            DataSet ds = AccountsDAO.CheckAccounts_Email(_AccountsEO);
+            return ds;
         }
 
         // 8. SelectInfoByAccounts_Username
@@ -126,6 +122,16 @@ namespace BusinessObject
             AccountsEO _AccountsEO = new AccountsEO();
             _AccountsEO.Accounts_ID = Accounts_ID;
             DataSet ds = AccountsDAO.SelectInfoByAccounts_ID(_AccountsEO);
+            return ds;
+        }
+
+        // 10. SelectInfoByAccounts_EmailvsAccounts_PhoneNumber
+        public static DataSet SelectInfoByAccounts_EmailvsAccounts_PhoneNumber(string Accounts_Email, string Accounts_PhoneNumber)
+        {
+            AccountsEO _AccountsEO = new AccountsEO();
+            _AccountsEO.Accounts_Email = Accounts_Email;
+            _AccountsEO.Accounts_PhoneNumber = Accounts_PhoneNumber;
+            DataSet ds = AccountsDAO.SelectInfoByAccounts_EmailvsAccounts_PhoneNumber(_AccountsEO);
             return ds;
         }
 

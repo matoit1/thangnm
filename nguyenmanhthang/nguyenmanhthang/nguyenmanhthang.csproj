@@ -962,6 +962,7 @@
     <Content Include="favicon.ico" />
     <Content Include="GiaiTri\Default.aspx" />
     <Content Include="HocTap\Default.aspx" />
+    <Content Include="HuyHieu.html" />
     <Content Include="Images\Avatar\admin.jpg" />
     <Content Include="Images\Avatar\default.jpg" />
     <Content Include="Images\Template\btnExport_Excel.png" />
@@ -1007,6 +1008,10 @@
     <Content Include="ThuThuat\Default.aspx" />
     <Content Include="Topic.aspx" />
     <Content Include="UngDungOnline\Default.aspx" />
+    <Content Include="Uploads\files\avatar_2x.png" />
+    <Content Include="Uploads\images\avatar_2x.png" />
+    <Content Include="Uploads\_thumbs\Files\avatar_2x.png" />
+    <Content Include="Uploads\_thumbs\Images\avatar_2x.png" />
     <Content Include="Upload\Default.aspx" />
     <Content Include="UserControl\AccountsDetailUC.ascx" />
     <Content Include="UserControl\AccountsListUC.ascx" />
@@ -1488,6 +1493,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Create_DataBase\" />
+    <Folder Include="Uploads\flash\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.Master" />
