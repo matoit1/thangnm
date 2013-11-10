@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.Master.cs" Inherits="nguyenmanhthang.DefaultMaster" %>
-<%@ Register src="~/UserControl/Login.ascx" tagname="Login" tagprefix="uc1" %>
+<%@ Register src="~/UserControl/LoginUC.ascx" tagname="LoginUC" tagprefix="uc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -32,11 +32,12 @@
             <ul id="css3menu1" class="topmenu">
                 <li class="toproot"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx"><img src="../Css/Admin/blue_circle - home2.png" alt="Trang chủ" />Trang chủ</asp:HyperLink>
                     <ul>
-                        <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Info/Tac_gia.aspx">1.1 Tác giả</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Info/Gioi_thieu.aspx">1.2 Giới thiệu</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Info/Dieu_khoan.aspx">1.3 Điều khoản</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Info/Lien_ket_website_blog.aspx">1.4 Liên kết</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Sitemap.xml">1.5 Sitemap</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink1" runat="server" Target="_blank" NavigateUrl="https://plus.google.com/109664385150832451485">1.1 Tác giả</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">1.2 Giới thiệu</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Policies-Privacy.aspx">1.3 Điều khoản</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink38" runat="server" NavigateUrl="~/FAQ.aspx">1.4 Câu hỏi thường gặp</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Link_Website_Blog.aspx">1.5 Liên kết</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Sitemap.xml">1.6 Sitemap</asp:HyperLink></li>
                     </ul>
                 </li>
                 <li class="toproot"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Admin/Setting.aspx">Học tập</asp:HyperLink>
@@ -138,12 +139,12 @@
                         <li><asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="~/Admin/Setting.aspx">7.2 Server 3 Upfile.vn</asp:HyperLink></li>
                     </ul>
                 </li>
-                <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Admin/Setting.aspx">Liên hệ</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Contact.aspx">Liên hệ</asp:HyperLink></li>
             </ul>
             </div>
             <div class="menuright">
                 <ul id="css3menu1" class="topmenu">
-                    <li class="toproot"><a href="#" id="t" class="topopup">Đăng nhập</a></li>
+                    <li class="toproot"><a href="" id="t" class="topopup">Đăng nhập</a></li>
                     <li class="toproot"><asp:HyperLink ID="HyperLink39" runat="server" NavigateUrl="~/Accounts/Register.aspx">Đăng ký</asp:HyperLink></li>
                 </ul>
             </div>
@@ -268,7 +269,7 @@
 		<div class="close"></div>
 		<span class="ecs_tooltip">Press Esc to close</span>
 		<div id="popup_content"> <!--your content start-->
-			<uc1:Login ID="Login1" runat="server" OnNavigation="Navigation_Click" />
+			<uc1:LoginUC ID="LoginUC1" runat="server" OnNavigation="Navigation_Click" />
 		</div> <!--your content end-->
 	</div> <!--toPopup end-->
     <div id="backgroundPopup"></div>

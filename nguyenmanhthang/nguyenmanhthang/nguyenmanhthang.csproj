@@ -977,7 +977,7 @@
     <Content Include="Images\Template\wrapper_input_footer_bg.png" />
     <Content Include="Images\Template\wrapper_input_header_bg.png" />
     <Content Include="Images\Topic\default.jpg" />
-    <Content Include="Index.aspx" />
+    <Content Include="Link_Website_Blog.aspx" />
     <Content Include="google941e8f34ed1f02ad.html" />
     <Content Include="Info\Tac_gia.aspx" />
     <Content Include="Info\Dieu_khoan.aspx" />
@@ -1020,7 +1020,8 @@
     <Content Include="UserControl\CommentListUC.ascx" />
     <Content Include="UserControl\CommentUC.ascx" />
     <Content Include="Test\css.css" />
-    <Content Include="UserControl\Login.ascx" />
+    <Content Include="UserControl\ContactUC.ascx" />
+    <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="Accounts\login.css" />
     <Content Include="UserControl\TopicDetailUC.ascx" />
     <Content Include="Test\DroplistKey.ascx" />
@@ -1286,12 +1287,12 @@
     <Compile Include="HocTap\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Index.aspx.cs">
+    <Compile Include="Link_Website_Blog.aspx.cs">
+      <DependentUpon>Link_Website_Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="Link_Website_Blog.aspx.designer.cs">
+      <DependentUpon>Link_Website_Blog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Info\Tac_gia.aspx.cs">
       <DependentUpon>Tac_gia.aspx</DependentUpon>
@@ -1433,12 +1434,19 @@
     <Compile Include="UserControl\CommentUC.ascx.designer.cs">
       <DependentUpon>CommentUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\Login.ascx.cs">
-      <DependentUpon>Login.ascx</DependentUpon>
+    <Compile Include="UserControl\ContactUC.ascx.cs">
+      <DependentUpon>ContactUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\Login.ascx.designer.cs">
-      <DependentUpon>Login.ascx</DependentUpon>
+    <Compile Include="UserControl\ContactUC.ascx.designer.cs">
+      <DependentUpon>ContactUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LoginUC.ascx.cs">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LoginUC.ascx.designer.cs">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\TopicDetailUC.ascx.cs">
       <DependentUpon>TopicDetailUC.ascx</DependentUpon>

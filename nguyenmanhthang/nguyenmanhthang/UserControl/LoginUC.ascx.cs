@@ -10,7 +10,7 @@ using BusinessObject;
 
 namespace nguyenmanhthang.UserControl
 {
-    public partial class Login : System.Web.UI.UserControl
+    public partial class LoginUC : System.Web.UI.UserControl
     {
         public event EventHandler Navigation;
         public bool state = false;
