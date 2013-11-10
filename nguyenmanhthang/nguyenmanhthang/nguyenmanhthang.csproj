@@ -1063,7 +1063,6 @@
     <Content Include="UserControl\Images\sidebar_shadow.png" />
     <Content Include="UserControl\Images\table_sorter_header.png" />
     <Content Include="UserControl\TopicListUC.ascx" />
-    <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="Test\TestEvent.aspx" />
     <Content Include="Test\TextboxInt.ascx" />
     <Content Include="Web.config">
@@ -1468,13 +1467,6 @@
     </Compile>
     <Compile Include="UserControl\TopicListUC.ascx.designer.cs">
       <DependentUpon>TopicListUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\LoginUC.ascx.cs">
-      <DependentUpon>LoginUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControl\LoginUC.ascx.designer.cs">
-      <DependentUpon>LoginUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Test\TestEvent.aspx.cs">
       <DependentUpon>TestEvent.aspx</DependentUpon>
