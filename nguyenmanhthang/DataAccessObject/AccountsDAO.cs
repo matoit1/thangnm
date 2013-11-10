@@ -154,47 +154,51 @@ namespace DataAccessObject
         }
 
         // 6. CheckAccounts_Username
-        public static bool CheckAccounts_Username(AccountsEO _AccountsEO)
+        public static DataSet CheckAccounts_Username(AccountsEO _AccountsEO)
         {
+            DataSet ds = null;
             using (SqlConnection conn = Connection.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("CheckAccounts_Username", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
-                    cmd.ExecuteNonQuery();
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_CheckAccounts_Username", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
+                    ds = new DataSet();
+                    da.Fill(ds);
                     conn.Close();
-                    return true;
+                    return ds;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return ds;
                 }
             }
         }
 
         // 7. CheckAccounts_Email
-        public static bool CheckAccounts_Email(AccountsEO _AccountsEO)
+        public static DataSet CheckAccounts_Email(AccountsEO _AccountsEO)
         {
+            DataSet ds = null;
             using (SqlConnection conn = Connection.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("CheckAccounts_Email", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@Accounts_Email", _AccountsEO.Accounts_Email));
-                    cmd.ExecuteNonQuery();
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_CheckAccounts_Email", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Email", _AccountsEO.Accounts_Email));
+                    ds = new DataSet();
+                    da.Fill(ds);
                     conn.Close();
-                    return true;
+                    return ds;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return ds;
                 }
             }
         }
@@ -236,6 +240,32 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectInfoByAccounts_ID", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_ID", _AccountsEO.Accounts_ID));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
+        // 10. SelectInfoByAccounts_EmailvsAccounts_PhoneNumber
+        public static DataSet SelectInfoByAccounts_EmailvsAccounts_PhoneNumber(AccountsEO _AccountsEO)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectInfoByAccounts_EmailvsAccounts_PhoneNumber", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Email", _AccountsEO.Accounts_Email));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_PhoneNumber", _AccountsEO.Accounts_PhoneNumber));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
