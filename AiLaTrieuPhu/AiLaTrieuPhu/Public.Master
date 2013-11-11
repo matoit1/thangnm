@@ -14,9 +14,9 @@
     <link rel="author" href="https://plus.google.com/109664385150832451485" />
     <meta name="copyright" content=" © 2013 Copyright ThangNM ™" />
     <!-- CSS & JavaScript -->
-    <link href="../Css/Product/product.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/product.css" rel="stylesheet" type="text/css" />
     <link href="../Css/public.css" rel="stylesheet" type="text/css" />
-    <link href="../Css/Admin/menucss3.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/menucss3.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
