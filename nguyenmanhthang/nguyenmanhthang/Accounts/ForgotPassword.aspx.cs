@@ -15,54 +15,76 @@ namespace nguyenmanhthang.Accounts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                imgCaptcha1.ImageUrl = new CaptchaProvider().CreateCaptcha();
+                imgCaptcha2.ImageUrl = imgCaptcha1.ImageUrl;
+            }
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
-            DataSet ds = AccountsBO.SelectInfoByAccounts_Username(txtAccounts_Username.Text);
-            if (ds.Tables[0].Rows.Count != 0)
+            CaptchaProvider captchaPro = new CaptchaProvider();
+            if (captchaPro.IsValidCode(txtCaptcha1.Text))
             {
-                if (txtAccounts_Username.Text == ds.Tables[0].Rows[0]["Accounts_Username"].ToString())
+                DataSet ds = AccountsBO.SelectInfoByAccounts_Username(txtAccounts_Username.Text);
+                if (ds.Tables[0].Rows.Count != 0)
                 {
-                    if (txtAccounts_Email.Text == ds.Tables[0].Rows[0]["Accounts_Email"].ToString())
+                    if (txtAccounts_Username.Text == ds.Tables[0].Rows[0]["Accounts_Username"].ToString())
                     {
-                        reset(txtAccounts_Username.Text, txtAccounts_Email.Text);
-                        lblMsg.Text = "Hệ thống đã gửi mật khẩu mới vào Email của bạn";
-                        lblMsg.CssClass = "notificationSuccessful";
+                        if (txtAccounts_Email1.Text == ds.Tables[0].Rows[0]["Accounts_Email"].ToString())
+                        {
+                            reset(txtAccounts_Username.Text, txtAccounts_Email1.Text);
+                            lblMsg1.Text = "Hệ thống đã gửi mật khẩu mới vào Email của bạn";
+                            lblMsg1.CssClass = "notificationSuccessful";
+                        }
+                        else
+                        {
+                            lblMsg1.Text = "Địa chỉ Email không đúng, Vui lòng thử lại";
+                            lblMsg1.CssClass = "notificationError";
+                        }
                     }
                     else
                     {
-                        lblMsg.Text = "Địa chỉ Email không đúng, Vui lòng thử lại";
-                        lblMsg.CssClass = "notificationError";
+                        lblMsg1.Text = "Tài khoản không đúng, Vui lòng thử lại";
+                        lblMsg1.CssClass = "notificationError";
                     }
                 }
                 else
                 {
-                    lblMsg.Text = "Tài khoản không đúng, Vui lòng thử lại";
-                    lblMsg.CssClass = "notificationError";
+                    lblMsg1.Text = "Không có tên tài khoản và email nào trùng khớp. Vui lòng kiểm tra lại";
+                    lblMsg1.CssClass = "notificationError";
                 }
             }
             else
             {
-                lblMsg.Text = "Không có tên tài khoản và email nào trùng khớp. Vui lòng kiểm tra lại";
-                lblMsg.CssClass = "notificationError";
+                lblMsg1.Text = "Captcha không chính xác";
+                lblMsg1.CssClass = "notificationError";
             }
         }
 
         protected void btnFindAccount_Click(object sender, EventArgs e)
         {
-            DataSet ds = AccountsBO.SelectInfoByAccounts_EmailvsAccounts_PhoneNumber(txtAccounts_Email1.Text, txtAccounts_PhoneNumber.Text);
-            if (ds.Tables[0].Rows.Count != 0)
+            CaptchaProvider captchaPro = new CaptchaProvider();
+            if (captchaPro.IsValidCode(txtCaptcha2.Text))
             {
-                reset(ds.Tables[0].Rows[0]["Accounts_Username"].ToString(), txtAccounts_Email1.Text);
-                lblMsg1.Text = "Hệ thống đã gửi mật khẩu mới vào Email của bạn";
-                lblMsg1.CssClass = "notificationSuccessful";
+                DataSet ds = AccountsBO.SelectInfoByAccounts_EmailvsAccounts_PhoneNumber(txtAccounts_Email2.Text, txtAccounts_PhoneNumber.Text);
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    reset(ds.Tables[0].Rows[0]["Accounts_Username"].ToString(), txtAccounts_Email2.Text);
+                    lblMsg2.Text = "Hệ thống đã gửi mật khẩu mới vào Email của bạn";
+                    lblMsg2.CssClass = "notificationSuccessful";
+                }
+                else
+                {
+                    lblMsg2.Text = "Không có email và số điện thoại nào trùng khớp. Vui lòng kiểm tra lại";
+                    lblMsg2.CssClass = "notificationError";
+                }
             }
             else
             {
-                lblMsg1.Text = "Không có email và số điện thoại nào trùng khớp. Vui lòng kiểm tra lại";
-                lblMsg1.CssClass = "notificationError";
+                lblMsg2.Text = "Captcha không chính xác";
+                lblMsg2.CssClass = "notificationError";
             }
         }
 
@@ -89,17 +111,23 @@ namespace nguyenmanhthang.Accounts
                 SmtpServer.Send(mail);
                 AccountsBO.ResetPassword(acc, Encrypt.Crypt(newpass));
                 txtAccounts_Username.Text = "";
-                txtAccounts_Email.Text = "";
-                txtAccounts_PhoneNumber.Text = "";
                 txtAccounts_Email1.Text = "";
+                txtAccounts_PhoneNumber.Text = "";
+                txtAccounts_Email2.Text = "";
             }
             catch (Exception ex)
             {
-                lblMsg.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
-                lblMsg.CssClass = "notificationError";
                 lblMsg1.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
                 lblMsg1.CssClass = "notificationError";
+                lblMsg2.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
+                lblMsg2.CssClass = "notificationError";
             }        
+        }
+
+        protected void ChangeCaptcha_Click(object sender, EventArgs e)
+        {
+            imgCaptcha1.ImageUrl = new CaptchaProvider().CreateCaptcha();
+            imgCaptcha2.ImageUrl = imgCaptcha1.ImageUrl;
         }
     }
 }

@@ -21,6 +21,7 @@
     <div>
         <asp:Panel ID="Panel1" runat="server" DefaultButton="btnRegister">
             <div class="signin-card">
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:ImageButton ID="imgProfile" CssClass="profile-img" ImageUrl="~/Images/Avatar/admin.jpg" AlternateText="ThangNM" PostBackUrl="~/Default.aspx" runat="server" /><br />
                 <asp:Label ID="lblMsg" runat="server"></asp:Label>
                 <p style="display:inline"><asp:TextBox ID="txtAccounts_FullName" name="FullName" type="text" placeholder="Họ và Tên" spellcheck="false" runat="server"></asp:TextBox><span style="color:Red"> *</span></p>
@@ -32,6 +33,13 @@
                 <asp:TextBox ID="txtAccounts_Address" name="Address" type="text" placeholder="Địa chỉ" spellcheck="false" runat="server"></asp:TextBox><span style="color:Red"> *</span>
                 <asp:TextBox ID="txtAccounts_DateOfBirth" name="DateOfBirth" type="date" placeholder="Ngày sinh" spellcheck="false" CssClass="startdate" runat="server"></asp:TextBox><span style="color:Red"> *</span>
                 <asp:TextBox ID="txtAccounts_PhoneNumber" name="PhoneNumber" type="tel" placeholder="Số điện thoại" spellcheck="false" runat="server"></asp:TextBox><span style="color:Red"> *</span>
+                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                    <ContentTemplate>
+                        <asp:Image ID="imgCaptcha" runat="server" />
+                        <asp:ImageButton ID="ibtnChage" runat="server" ImageUrl="~/Images/change.jpg" Height="30px" onclick="ChangeCaptcha_Click" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <br /><asp:TextBox ID="txtCaptcha" runat="server" placeholder="Captcha"></asp:TextBox>
                 <asp:CheckBox ID="chkAgree" runat="server" value="yes" oncheckedchanged="chkAgree_CheckedChanged"/><span>Đồng ý với </span><asp:HyperLink ID="hplPoliciesPrivacy" runat="server" NavigateUrl="~/Policies-Privacy.aspx">Điều khoản ThangNM <span style="color:Red"> *</span></asp:HyperLink><br /><br />
                 <asp:Button ID="btnRegister" runat="server" Text="Đăng ký" CssClass="rc-button" onclick="btnRegister_Click" />
                 <asp:HyperLink ID="hplHelp" runat="server" NavigateUrl="~/FAQ.aspx">Bạn cần trợ giúp?</asp:HyperLink>
