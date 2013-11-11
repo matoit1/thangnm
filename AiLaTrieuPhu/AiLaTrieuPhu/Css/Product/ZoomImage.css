@@ -1,9 +1,0 @@
-﻿.ienlarger {float:left; clear:none; padding:5px 5px 5px 0px; background:url("theme/sidebar-title.gif") no-repeat scroll 0 0 transparent;}
-h1{font-size:18px; color:White;}
-.ienlarger a {color:inherit; display:block; text-decoration:none;}
-.ienlarger a:hover {position:relative;}
-.ienlarger span img {border:1px solid #FFFFFF; margin-bottom:8px;}
-.ienlarger a span {position:absolute; display:none; color:#FFCC00; text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:13px; background-color:#E0E0E0; font-weight:bold; padding-top:10px; padding-right:10px; padding-bottom:13px; padding-left:10px;}
-.ienlarger img {border-width:0;}
-.ienlarger a:hover span {display:block; top:50px; left:90px; z-index:100;}
-.resize_thumb {width:150px; height:auto;}
