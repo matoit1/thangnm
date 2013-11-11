@@ -111,6 +111,7 @@
     <Content Include="Css\topic.css" />
     <Content Include="Default.aspx" />
     <Content Include="Demo.aspx" />
+    <Content Include="Giaodien.htm" />
     <Content Include="Library\AjaxControlToolkit.dll" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
