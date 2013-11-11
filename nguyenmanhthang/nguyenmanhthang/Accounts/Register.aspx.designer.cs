@@ -31,6 +31,15 @@ namespace nguyenmanhthang.Accounts {
         protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// imgProfile control.
         /// </summary>
         /// <remarks>
@@ -128,6 +137,42 @@ namespace nguyenmanhthang.Accounts {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAccounts_PhoneNumber;
+        
+        /// <summary>
+        /// UpdatePanel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        
+        /// <summary>
+        /// imgCaptcha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgCaptcha;
+        
+        /// <summary>
+        /// ibtnChage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnChage;
+        
+        /// <summary>
+        /// txtCaptcha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCaptcha;
         
         /// <summary>
         /// chkAgree control.

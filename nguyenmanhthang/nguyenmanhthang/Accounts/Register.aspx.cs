@@ -15,47 +15,56 @@ namespace nguyenmanhthang.Accounts
     {
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtAccounts_FullName.Text != "")
+            CaptchaProvider captchaPro = new CaptchaProvider();
+            if (captchaPro.IsValidCode(txtCaptcha.Text))
             {
-                if (txtAccounts_Password.Text != "")
+                if (txtAccounts_FullName.Text != "")
                 {
-                    if (txtAccounts_Address.Text != "")
+                    if (txtAccounts_Password.Text != "")
                     {
-                        txtAccounts_Address.BackColor = System.Drawing.ColorTranslator.FromHtml("#00CC00");
-                        if (chkAgree.Checked == true)
+                        if (txtAccounts_Address.Text != "")
                         {
-                            try
+                            txtAccounts_Address.BackColor = System.Drawing.ColorTranslator.FromHtml("#00CC00");
+                            if (chkAgree.Checked == true)
                             {
-                                AccountsBO.Insert(txtAccounts_Username.Text, Encrypt.Crypt(txtAccounts_Password.Text), txtAccounts_Email.Text,0, txtAccounts_LinkAvatar.Text, txtAccounts_FullName.Text, txtAccounts_Address.Text, Convert.ToDateTime(txtAccounts_DateOfBirth.Text).Date, txtAccounts_PhoneNumber.Text,"",0,true,true);
-                                Response.Cookies["client"].Value = txtAccounts_Username.Text;
-                                Response.Redirect("~/Default.aspx");
+                                try
+                                {
+                                    AccountsBO.Insert(txtAccounts_Username.Text, Encrypt.Crypt(txtAccounts_Password.Text), txtAccounts_Email.Text, 0, txtAccounts_LinkAvatar.Text, txtAccounts_FullName.Text, txtAccounts_Address.Text, Convert.ToDateTime(txtAccounts_DateOfBirth.Text).Date, txtAccounts_PhoneNumber.Text, "", 0, true, true);
+                                    Response.Cookies["client"].Value = txtAccounts_Username.Text;
+                                    Response.Redirect("~/Default.aspx");
+                                }
+                                catch (Exception)
+                                {
+                                    lblMsg.Text = "Đăng ký tài khoản không thành công, Vui lòng kiểm tra lại";
+                                }
                             }
-                            catch (Exception)
+                            if (chkAgree.Checked == false)
                             {
-                                lblMsg.Text = "Đăng ký tài khoản không thành công, Vui lòng kiểm tra lại";
+                                lblMsg.Text = "Bạn chưa đồng ý với các điều khoản của chúng tôi";
                             }
                         }
-                        if (chkAgree.Checked == false)
+                        else
                         {
-                            lblMsg.Text = "Bạn chưa đồng ý với các điều khoản của chúng tôi";
+                            txtAccounts_Address.Attributes.Add("placeholder", "Bạn phải nhập đúng địa chỉ");
+                            txtAccounts_Address.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
                         }
                     }
                     else
                     {
-                        txtAccounts_Address.Attributes.Add("placeholder", "Bạn phải nhập đúng địa chỉ");
-                        txtAccounts_Address.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                        txtAccounts_Password.Text = "Bạn chưa nhập mật khẩu";
+                        txtAccounts_Password.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
                     }
                 }
                 else
                 {
-                    txtAccounts_Password.Text = "Bạn chưa nhập mật khẩu";
-                    txtAccounts_Password.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                    txtAccounts_FullName.Attributes.Add("placeholder", "Bạn phải nhập đúng tên của mình");
+                    txtAccounts_FullName.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
                 }
             }
             else
             {
-                txtAccounts_FullName.Attributes.Add("placeholder", "Bạn phải nhập đúng tên của mình");
-                txtAccounts_FullName.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF0000");
+                lblMsg.Text = "Captcha không chính xác";
+                lblMsg.CssClass = "notificationError";
             }
         }
 
@@ -63,16 +72,7 @@ namespace nguyenmanhthang.Accounts
         {
             if (!IsPostBack)
             {
-                //txtAccounts_Username.Text = null;
-                //txtAccounts_Password.Text = null;
-                //txtAccounts_Address.Attributes.Add("placeholder", "VD:Hà Đông, Hà Nội");
-                //txtAccounts_DateOfBirth.Attributes.Add("placeholder", "VD: 29/09/1992");
-                //txtAccounts_FullName.Attributes.Add("placeholder", "VD: Nguyễn Đức Nam");
-                //txtAccounts_LinkAvatar.Attributes.Add("placeholder", "VD: http://images.com/avatar.jpg");
-                //txtAccounts_Password.Attributes.Add("placeholder", "VD: ********");
-                //txtAccounts_PhoneNumber.Attributes.Add("placeholder", "VD: 0125 846 0005");
-                //txtAccounts_Username.Attributes.Add("placeholder", "VD: nickname");
-                //txtAccounts_Email.Attributes.Add("placeholder", "VD: user@gmail.com");
+                imgCaptcha.ImageUrl = new CaptchaProvider().CreateCaptcha();
             }
         }
 
@@ -124,6 +124,11 @@ namespace nguyenmanhthang.Accounts
             {
                 lblMsg.Text = "Đăng ký tài khoản";
             }
+        }
+
+        protected void ChangeCaptcha_Click(object sender, EventArgs e)
+        {
+            imgCaptcha.ImageUrl = new CaptchaProvider().CreateCaptcha();
         }
     }
 }

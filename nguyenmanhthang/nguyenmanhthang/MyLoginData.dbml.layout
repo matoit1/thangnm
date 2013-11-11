@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MyLoginData">
+  <DataContextMoniker Name="/MyLoginDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cd8ba876-97bb-4951-8994-24e92a9a0c0f" absoluteBounds="0.75, 1, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MyLoginDataDataContext/PermissFunc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ec6cde9-791a-45ab-b587-9162d1a3561f" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b120b14a-bf45-4c5b-b108-78a118cb346d" absoluteBounds="0.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MyLoginDataDataContext/SalesUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6335f77-7472-48c7-bb5d-4341e5d864b8" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e5e600f-6fd4-4a2f-9580-fb3361ddc443" absoluteBounds="3.5, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/MyLoginDataDataContext/UserPermiss" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f174da9b-2dc6-4bb6-9838-80d2aee9894a" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.59699625651042); (3.5 : 1.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLoginDataDataContext/PermissFunc/PermissFunc_UserPermiss" />
+      <nodes>
+        <classShapeMoniker Id="cd8ba876-97bb-4951-8994-24e92a9a0c0f" />
+        <classShapeMoniker Id="4e5e600f-6fd4-4a2f-9580-fb3361ddc443" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.53929768880208); (4.5 : 4.53929768880208); (4.5 : 2.2612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLoginDataDataContext/SalesUser/SalesUser_UserPermiss" />
+      <nodes>
+        <classShapeMoniker Id="b120b14a-bf45-4c5b-b108-78a118cb346d" />
+        <classShapeMoniker Id="4e5e600f-6fd4-4a2f-9580-fb3361ddc443" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

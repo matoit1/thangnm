@@ -67,13 +67,13 @@ namespace nguyenmanhthang.Accounts {
         protected global::System.Web.UI.WebControls.ImageButton imgProfile;
         
         /// <summary>
-        /// lblMsg control.
+        /// lblMsg1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg;
+        protected global::System.Web.UI.WebControls.Label lblMsg1;
         
         /// <summary>
         /// txtAccounts_Username control.
@@ -85,13 +85,49 @@ namespace nguyenmanhthang.Accounts {
         protected global::System.Web.UI.WebControls.TextBox txtAccounts_Username;
         
         /// <summary>
-        /// txtAccounts_Email control.
+        /// txtAccounts_Email1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Email;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Email1;
+        
+        /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// imgCaptcha1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgCaptcha1;
+        
+        /// <summary>
+        /// ibtnChage1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnChage1;
+        
+        /// <summary>
+        /// txtCaptcha1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCaptcha1;
         
         /// <summary>
         /// btnReset control.
@@ -139,22 +175,22 @@ namespace nguyenmanhthang.Accounts {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
         
         /// <summary>
-        /// lblMsg1 control.
+        /// lblMsg2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg1;
+        protected global::System.Web.UI.WebControls.Label lblMsg2;
         
         /// <summary>
-        /// txtAccounts_Email1 control.
+        /// txtAccounts_Email2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Email1;
+        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Email2;
         
         /// <summary>
         /// txtAccounts_PhoneNumber control.
@@ -164,6 +200,42 @@ namespace nguyenmanhthang.Accounts {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAccounts_PhoneNumber;
+        
+        /// <summary>
+        /// UpdatePanel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        
+        /// <summary>
+        /// imgCaptcha2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgCaptcha2;
+        
+        /// <summary>
+        /// ibtnChage2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnChage2;
+        
+        /// <summary>
+        /// txtCaptcha2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCaptcha2;
         
         /// <summary>
         /// btnFindAccount control.

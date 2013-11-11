@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Sales" Class="MyLoginDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=THANGNM;Initial Catalog=Sales;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SalesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PermissFunc" Member="PermissFuncs">
+    <Type Name="PermissFunc">
+      <Column Name="PermisFuncID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FunctionName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="PermissFunc_UserPermiss" Member="UserPermisses" ThisKey="PermisFuncID" OtherKey="PermisFuncID" Type="UserPermiss" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalesUser" Member="SalesUsers">
+    <Type Name="SalesUser">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="SalesUser_UserPermiss" Member="UserPermisses" ThisKey="UserID" OtherKey="UserID" Type="UserPermiss" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserPermiss" Member="UserPermisses">
+    <Type Name="UserPermiss">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PermisFuncID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PermissionNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PermissFunc_UserPermiss" Member="PermissFunc" ThisKey="PermisFuncID" OtherKey="PermisFuncID" Type="PermissFunc" IsForeignKey="true" />
+      <Association Name="SalesUser_UserPermiss" Member="SalesUser" ThisKey="UserID" OtherKey="UserID" Type="SalesUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
