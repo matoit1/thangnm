@@ -22,15 +22,6 @@ namespace AiLaTrieuPhu {
         protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
         
         /// <summary>
-        /// UpdatePanelMain control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanelMain;
-        
-        /// <summary>
         /// btnMoney control.
         /// </summary>
         /// <remarks>
@@ -94,6 +85,15 @@ namespace AiLaTrieuPhu {
         protected global::System.Web.UI.WebControls.Button btnLoading;
         
         /// <summary>
+        /// UpdatePanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// btnCountDown control.
         /// </summary>
         /// <remarks>
@@ -148,12 +148,12 @@ namespace AiLaTrieuPhu {
         protected global::System.Web.UI.WebControls.Button btnD;
         
         /// <summary>
-        /// ImageButton1 control.
+        /// ImageButton2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
     }
 }
