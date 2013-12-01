@@ -7,8 +7,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
 <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
                     </asp:ToolkitScriptManager>
-    
-        
             <div style="margin: 15px 15px 15px 15px; width: 700px; height: 500px">
                 <div style="height: 80px; background-color: Navy; width: 500px; float: left"><br />
                     <asp:Button ID="btnMoney" runat="server" Text="0" />
@@ -28,15 +26,15 @@
                     </asp:UpdatePanel>
                 </div>
                 <div style="padding: 5px 5px 5px 5px ;margin:10px 2px 2px 2px; width: 500px; height: 400px; background-color:rgb(210, 213, 253); float: left">
-                  rgb(210, 213, 253): Với mức thưởng trị giá 200.000 VNĐ</h1><br /><br />
-                    <span> Berlin là thủ đô của quốc gia nào</span><br /><br /><br />
-                    <span> A: </span><asp:Button ID="btnA" runat="server" Text="Đức" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án A ko?');" />
-                    <span> B: </span><asp:Button ID="btnB" runat="server" Text="Mỹ" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án B ko?');" /><br />
-                    <span> C: </span><asp:Button ID="btnC" runat="server" Text="Anh" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án C ko?');" />
-                    <span> D: </span><asp:Button ID="btnD" runat="server" Text="Pháp" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án D ko?');" />
+                 <h1><br> Câu 1: Với mức thưởng trị giá 200.000 VNĐ</h1><br />
+                    <span> Thành ngữ thường dạy: Ăn chắc mặc... Từ trong dấu... là gì??</span><br /><br /><br />
+                    <span> A: </span><asp:Button ID="btnA" runat="server" Text="Sang" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án A ko?');" />
+                    <span> B: </span><asp:Button ID="btnB" runat="server" Text="Bền" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án B ko?');" /><br />
+                    <span> C: </span><asp:Button ID="btnC" runat="server" Text="Đẹp" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án C ko?');" />
+                    <span> D: </span><asp:Button ID="btnD" runat="server" Text="Bẩn" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án D ko?');" />
                 </div>
                 <div style="margin:10px 2px 2px 2px; width: 180px; height: 400px; background-color: White; float: left">
-                    <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="avata.png" width= "180px"/>
+                    <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/avatar.png" width= "180px"/>
                 </div>            </div>
 
 </asp:Content>
