@@ -20,8 +20,24 @@ namespace nguyenmanhthang.Library.Common
                 case 6: name="Followers";break;
                 default: name="Anonymous";break;
             }
-            
             return name;
+        }
+
+        public static string getPermissDefault(int Accounts_Permission)
+        {
+            string DefaultValue;
+            switch (Accounts_Permission)
+            {
+                case 0: DefaultValue = "FAQ_btnAdd, FAQ_btnDelete"; break;
+                case 1: DefaultValue = "FAQ_btnAdd, FAQ_btnDelete"; break;
+                case 2: DefaultValue = "FAQ_btnAdd, FAQ_btnDelete"; break;
+                case 3: DefaultValue = "FAQ_btnAdd, FAQ_btnDelete"; break;
+                case 4: DefaultValue = "FAQ_btnAdd, FAQ_btnDelete"; break;
+                case 5: DefaultValue = "FAQ_btnAdd, FAQ_btnDelete"; break;
+                case 6: DefaultValue = "FAQ_btnAdd, FAQ_btnDelete"; break;
+                default: DefaultValue = "null"; break;
+            }
+            return DefaultValue;
         }
     }
 }

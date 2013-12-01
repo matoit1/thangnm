@@ -211,6 +211,7 @@
                 <div class="formmedium"><!-- Begin Link Website-Blog -->
                     <h2>Liên kết Website-Blog</h2>
                     <marquee direction="up" scrolldelay="30" scrollamount="1" truespeed onmouseover=this.stop() onmouseout=this.start() behavior="scroll" height="274px">
+		<a href="http://nguyenmanhthang.tk" title="Nguyễn Mạnh Thắng" target="_blank">Nguyễn Mạnh Thắng</a><br />
                         <a href="http://it.site44.com" title="Nguyễn Mạnh Thắng" target="_blank">Diễn đàn CNTT - Forum IT</a><br />
                         <a href="http://tipshop.tk" title="tipshop.tk" target="_blank">TipShop</a><br />
                         <img class="favicon" src="http://www.trollvl.com/favicon.ico" /><a alt="liên kết" href="http://www.trollvl.com" target="_blank" title="Chia Sẻ - Thủ Thuật - Hài Hước">TrollVL</a><br />
@@ -224,6 +225,7 @@
                         <img src="http://luubutsong.blogspot.com/favicon.ico" class="favicon" /><a href="http://luubutsong.blogspot.com/" target="_blank" title="Nơi Chia Sẻ Giá Trị Cuộc Sống">Lưu Bút Sống</a><br />
                         <a href="http://www.thienhieu.com" title="tin shock" target="_blank">tin shock</a><br />
 	        <br /> <!-- Backlink Code --><br /> <a title="Blog Học Anh Văn| Nơi Chia Sẽ Những Bí Quyết Và Kinh Nghiệm Để Học Tốt Tiếng Anh|Phương Pháp Luyện Listening-Speaking-Reading-Writing Mới Nhất|Bài Test: Mini Test-Skill Test-Full Test" href="http://tienganhgioi123.blogspot.com/" target="_blank"><img src="http://2.bp.blogspot.com/-iuXGUa-OzHk/URCYALh85PI/AAAAAAAAKj4/du1RXkyn1TU/s1600/TVL.jpg" alt="tienganhgioi123" width="82" height="15" border="0" /></a><br /> <!-- End Backlink Code --><br />
+	<a href="http://suoinguoncuocsong.blogspot.com " title="Suối nguồn cuộc sống">Suối nguồn cuộc sống</a><br />
                         <asp:Label ID="lblLink" runat="server"></asp:Label></marquee>
                 </div><!-- End Link Website-Blog -->
             </div><!-- End #sidebar -->

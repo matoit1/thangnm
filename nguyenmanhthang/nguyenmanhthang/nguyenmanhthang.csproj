@@ -137,6 +137,8 @@
     <Content Include="Admin\Topic.aspx" />
     <Content Include="Admin\Users.aspx" />
     <Content Include="Admin\Category.aspx" />
+    <Content Include="attacker.html" />
+    <Content Include="BingSiteAuth.xml" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\CHANGES.html" />
     <Content Include="ckeditor\ckeditor.js" />
@@ -917,6 +919,7 @@
     <Content Include="Css\Product\bg_footer.png" />
     <Content Include="Css\Product\bg_footer_container.png" />
     <Content Include="Css\topic.css" />
+    <Content Include="Dao_vang_III.swf" />
     <Content Include="Error\Chat.css" />
     <Content Include="Css\Admin\menucss3.css" />
     <Content Include="Css\calendar.css" />
@@ -987,6 +990,7 @@
     <Content Include="Images\Template\wrapper_input_footer_bg.png" />
     <Content Include="Images\Template\wrapper_input_header_bg.png" />
     <Content Include="Images\Topic\default.jpg" />
+    <Content Include="index1.html" />
     <Content Include="Library\DLL\MSCaptcha.dll" />
     <Content Include="Library\DLL\Recaptcha.dll" />
     <Content Include="Link_Website_Blog.aspx" />
@@ -1002,7 +1006,9 @@
     <Content Include="Library\DLL\DevNET.URLRewriter.dll" />
     <Content Include="Library\DLL\FCAP.Controls.dll" />
     <Content Include="Library\DLL\Microsoft.Sharepoint.Sandbox.dll" />
+    <Content Include="LinQ.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Login.htm" />
     <Content Include="MyFile.aspx" />
     <Content Include="PhanMem\Default.aspx" />
     <Content Include="Policies-Privacy.aspx" />
@@ -1308,6 +1314,7 @@
     <Compile Include="Library\Common\CaptchaProvider.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Library\Common\SecurityFunction.cs" />
     <Compile Include="Library\Permit_Access\Enums.cs" />
     <Compile Include="Library\Permit_Access\SecurityServices.cs" />
     <Compile Include="Library\Permit_Access\SesionExt.cs" />
@@ -1364,6 +1371,13 @@
     <Compile Include="Library\Common\GetTextConstant.cs" />
     <Compile Include="Library\Common\RemoveHtmlTags.cs" />
     <Compile Include="Library\Common\RewriteUrl.cs" />
+    <Compile Include="LinQ.aspx.cs">
+      <DependentUpon>LinQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinQ.aspx.designer.cs">
+      <DependentUpon>LinQ.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
