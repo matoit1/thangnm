@@ -1,9 +1,9 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.master.cs" Inherits="AiLaTrieuPhu.Public" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Client.master.cs" Inherits="AiLaTrieuPhu.Client.Client" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Ai la trieu phu</title>
     <link href="../favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,14 +19,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="bar">
-        <div id="banner"><asp:Image ID="Image1" runat="server" ImageUrl="~/Images/banner.png"  alt="Banner" /></div>
+     <div id="bar">
+        <div id="banner">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/banner.png"  alt="Banner" />
+         </div>
         <div class="clr"></div>
         <div class="menu">
             <div class="menuleft">
             <ul id="css3menu1" class="topmenu">
-                <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx"><asp:Image ID="Image2" runat="server" ImageUrl="~/Images/btnHome.png" alt="Trang chủ" />Trang chủ</asp:HyperLink></li>
-                <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Giới thiệu</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Client/Default.aspx"><asp:Image ID="Image2" runat="server" ImageUrl="~/Images/btnHome.png" alt="Trang chủ" />Trang chủ</asp:HyperLink></li>
+                <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Client/Account.aspx">QL Câu hỏi</asp:HyperLink></li>
                 <li class="topmenu"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Default.aspx">Trang cá nhân</asp:HyperLink></li>
                 <li class="topmenu"><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Default.aspx">Bảng xếp hạng</asp:HyperLink></li>
                 <li class="topmenu"><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Default.aspx">Trợ giúp</asp:HyperLink></li>
@@ -44,38 +46,7 @@
     <div id="wrapper">
        
         <div id="content">
-            <div id="sidebar"><!-- Begin #sidebar -->
-                <div id="navBar">
-                    
-                </div>
-                <div class="formmedium"><!-- Begin Search Advand -->
-                    <h2>Tìm kiếm nâng cao</h2>
-                    <br /><asp:TextBox ID="txtProducts_Name" runat="server" Width="210px" Height="20px"></asp:TextBox>
-                    <asp:Button ID="btnSearch" runat="server" Height="30px" OnClick="btnSearch_Click" Text="Search" CausesValidation="False"/>
-                </div><!-- End Search Advand -->
-                <div class="formtiny"><!-- Begin visit website-->
-                    <h2>Thống kê truy cập</h2>
-                    <script type="text/javascript">
-                        document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));
-		            </script>
-		            <a href="http://it.site44.com" target="_blank" title="Diễn đàn CNTT - Forum IT" >
-			            <script  type="text/javascript" >
-			                try {
-			                    Histats.start(1, 2238242, 4, 485, 112, 61, "00011011");
-			                    Histats.track_hits();
-			                } catch (err) { };
-			            </script>
-		            </a>
-                </div><!-- End visit website -->
-                <div class="formtiny"><!-- Begin Link Website-Blog -->
-                    <h2>Liên kết Website-Blog</h2>
-                    <marquee direction="up" scrolldelay="30" scrollamount="1" truespeed onmouseover=this.stop() onmouseout=this.start() behavior="scroll" height="67px">
-						<asp:Label ID="lblLink" runat="server"></asp:Label></marquee>
-                </div><!-- End Link Website-Blog -->
-            </div><!-- End #sidebar -->
-            <div id="primary">
                 <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
-            </div><!-- End #primary -->
         </div>
         <!-- End #content -->
         <div class="clear"></div>
