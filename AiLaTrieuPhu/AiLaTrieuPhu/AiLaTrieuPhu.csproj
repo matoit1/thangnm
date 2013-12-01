@@ -63,6 +63,7 @@
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Admin\Cauhoi.aspx" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\QLCauHoi.aspx" />
     <Content Include="Client\Account.aspx" />
     <Content Include="Client\Default.aspx" />
     <Content Include="Images\avatar.png" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QLCauHoi.aspx.cs">
+      <DependentUpon>QLCauHoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QLCauHoi.aspx.designer.cs">
+      <DependentUpon>QLCauHoi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Client\Account.aspx.cs">
       <DependentUpon>Account.aspx</DependentUpon>
