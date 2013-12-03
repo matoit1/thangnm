@@ -35,8 +35,10 @@
             </div>
             <div class="menuright">
                 <ul id="css3menu1" class="topmenu">
-                    <li class="toproot"><asp:HyperLink ID="HyperLink38" runat="server" NavigateUrl="~/Default.aspx">Đăng nhập</asp:HyperLink></li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink39" runat="server" NavigateUrl="~/Default.aspx">Đăng ký</asp:HyperLink></li>
+                    <li class="toproot">
+                    <asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click">Đăng xuất</asp:LinkButton>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -51,7 +53,7 @@
                 <div class="formmedium"><!-- Begin Search Advand -->
                     <h2>Tìm kiếm nâng cao</h2>
                     <br /><asp:TextBox ID="txtProducts_Name" runat="server" Width="210px" Height="20px"></asp:TextBox>
-                    <asp:Button ID="btnSearch" runat="server" Height="30px" OnClick="btnSearch_Click" Text="Search" CausesValidation="False"/>
+                    <asp:Button ID="btnSearch" runat="server" Height="30px" Text="Search" CausesValidation="False"/>
                 </div><!-- End Search Advand -->
                 <div class="formtiny"><!-- Begin visit website-->
                     <h2>Thống kê truy cập</h2>

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace AiLaTrieuPhu.Admin
 {
-    public partial class QLCauHoi : System.Web.UI.Page
+    public partial class QLDiem : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,13 +18,13 @@ namespace AiLaTrieuPhu.Admin
 
         protected void LoadDL()
         {
-            grvDanhsachCauhoi.DataSource = CauhoiDAO.DanhsachCauhoi(1);
-            grvDanhsachCauhoi.DataBind();
+            grvDanhsachDiem.DataSource = DiemDAO.Search(0);
+            grvDanhsachDiem.DataBind();
         }
 
         protected void btnThem_Click(object sender, EventArgs e)
         {
-            if (CauhoiDAO.Insert(txtCauhoi_cauhoi.Text, txtCauhoi_A.Text, txtCauhoi_B.Text, txtCauhoi_C.Text, txtCauhoi_D.Text, Convert.ToInt32(txtCauhoi_dung.Text), Convert.ToInt32(txtCauhoi_capdo.Text)) == true)
+            if (DiemDAO.Insert(Convert.ToInt32(txtDiem_User.Text), Convert.ToInt64(txtDiem_tien.Text)) == true)
             {
                 lblMsg.Text = "Thêm thành công!!!";
             }
@@ -36,7 +36,7 @@ namespace AiLaTrieuPhu.Admin
 
         protected void btnSua_Click(object sender, EventArgs e)
         {
-            if (CauhoiDAO.Update(Convert.ToInt64(txtCauhoi_ID.Text), txtCauhoi_cauhoi.Text, txtCauhoi_A.Text, txtCauhoi_B.Text, txtCauhoi_C.Text, txtCauhoi_D.Text, Convert.ToInt32(txtCauhoi_dung.Text), Convert.ToInt32(txtCauhoi_capdo.Text)) == true)
+            if (DiemDAO.Update(Convert.ToInt64(txtDiem_ID.Text), Convert.ToInt32(txtDiem_User.Text), Convert.ToInt64(txtDiem_tien.Text)) == true)
             {
                 lblMsg.Text = "Cập nhật thành công!!!";
             }
@@ -48,19 +48,15 @@ namespace AiLaTrieuPhu.Admin
 
         protected void btnXoatrang_Click(object sender, EventArgs e)
         {
-            txtCauhoi_ID.Text = "";
-            txtCauhoi_cauhoi.Text = "";
-            txtCauhoi_A.Text = "";
-            txtCauhoi_B.Text = "";
-            txtCauhoi_C.Text = "";
-            txtCauhoi_D.Text = "";
-            txtCauhoi_dung.Text = "";
-            txtCauhoi_capdo.Text = "";
+            txtDiem_ID.Text = "";
+            txtDiem_User.Text = "";
+            txtDiem_tien.Text = "";
+            txtDiem_ngay.Text = "";
         }
 
         protected void btnXoa_Click(object sender, EventArgs e)
         {
-            if (CauhoiDAO.Delete(Convert.ToInt64(txtCauhoi_ID.Text)))
+            if (DiemDAO.Delete(Convert.ToInt64(txtDiem_ID.Text)))
             {
                 lblMsg.Text = "Xóa thành công!!!";
             }
@@ -72,20 +68,11 @@ namespace AiLaTrieuPhu.Admin
 
         protected void btnTimkiem_Click(object sender, EventArgs e)
         {
-            Int64 id;
-            if (txtCauhoi_ID.Text == "")
-            {
-                id = 0;
-            }
-            else
-            {
-                id= Convert.ToInt64(txtCauhoi_ID.Text);
-            }
             try
             {
-                DataSet ds = CauhoiDAO.Search(id, txtCauhoi_cauhoi.Text);
-                grvDanhsachCauhoi.DataSource = ds;
-                grvDanhsachCauhoi.DataBind();
+                DataSet ds = DiemDAO.Search(Convert.ToInt32(txtDiem_User.Text));
+                grvDanhsachDiem.DataSource = ds;
+                grvDanhsachDiem.DataBind();
             }
             catch (Exception ex) { lblMsg.Text = ex.Message; }
         }

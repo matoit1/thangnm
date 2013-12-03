@@ -1,12 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AiLaTrieuPhu._Default" MasterPageFile="~/Public.Master" %>
 
-<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="cphHead" runat="server">
-</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
-<asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-                    </asp:ToolkitScriptManager>
             <div style="margin: 15px 15px 15px 15px; width: 700px; height: 500px">
                 <div style="height: 80px; background-color: Navy; width: 500px; float: left"><br />
                     <asp:Button ID="btnMoney" runat="server" Text="0" />
@@ -18,23 +12,30 @@
                 </div>
                 <div style="height: 80px; background-color: Navy; width: 200px; float: left"><br />
                     <asp:Button ID="btnLoading" runat="server" Text="Loading..." />
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <ContentTemplate>
-                            <asp:Button ID="btnCountDown" runat="server" Text="30" />
-                            <asp:Timer ID="timerCountDown" runat="server" Interval="1000" OnTick="timerCountDown_Tick"></asp:Timer>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
                 </div>
+                <asp:ScriptManager ID="ScriptManager1Demo" runat="server">
+                </asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1Demo" runat="server">
+                <ContentTemplate>
                 <div style="padding: 5px 5px 5px 5px ;margin:10px 2px 2px 2px; width: 500px; height: 400px; background-color:rgb(210, 213, 253); float: left">
-                 <h1><br> Câu 1: Với mức thưởng trị giá 200.000 VNĐ</h1><br />
-                    <span> Thành ngữ thường dạy: Ăn chắc mặc... Từ trong dấu... là gì??</span><br /><br /><br />
-                    <span> A: </span><asp:Button ID="btnA" runat="server" Text="Sang" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án A ko?');" />
-                    <span> B: </span><asp:Button ID="btnB" runat="server" Text="Bền" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án B ko?');" /><br />
-                    <span> C: </span><asp:Button ID="btnC" runat="server" Text="Đẹp" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án C ko?');" />
-                    <span> D: </span><asp:Button ID="btnD" runat="server" Text="Bẩn" OnClientClick="return confirm('Bạn có chắc chắn chọn đáp án D ko?');" />
+                 <h1><br><asp:Label ID="lblSTT" runat="server" Text="Label"></asp:Label></h1><br />
+                    <asp:Label ID="lblMsg" runat="server" ></asp:Label><br />
+                    <asp:Repeater ID="rpCauhoi" runat="server" onitemcommand="rpCauhoi_ItemCommand">
+                        <ItemTemplate>
+                                    #<asp:Label ID="Label1" runat="server" Text='<%#Eval("Cauhoi_ID")+": "%>' Font-Bold="true" Font-Size="20px"></asp:Label>
+                                    <asp:Label ID="lblCauhoi_cauhoi" runat="server" Text='<%#Eval("Cauhoi_cauhoi")%>' Font-Bold="true" Font-Size="20px"></asp:Label><br />
+                                    <span> A: </span><asp:Button ID="btnA" runat="server" Text='<%#Eval("Cauhoi_A")%>' CommandName="A"/>
+                                    <span> B: </span><asp:Button ID="btnB" runat="server" Text='<%#Eval("Cauhoi_B")%>' CommandName="B"/><br />
+                                    <span> C: </span><asp:Button ID="btnC" runat="server" Text='<%#Eval("Cauhoi_C")%>' CommandName="C"/>
+                                    <span> D: </span><asp:Button ID="btnD" runat="server" Text='<%#Eval("Cauhoi_D")%>' CommandName="D"/>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
+                </ContentTemplate>
+                </asp:UpdatePanel>
                 <div style="margin:10px 2px 2px 2px; width: 180px; height: 400px; background-color: White; float: left">
                     <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/avatar.png" width= "180px"/>
-                </div>            </div>
+                </div>
+            </div>
 
 </asp:Content>

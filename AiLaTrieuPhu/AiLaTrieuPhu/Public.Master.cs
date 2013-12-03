@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using AiLaTrieuPhu.Library;
+using System.Data;
 
 namespace AiLaTrieuPhu
 {
@@ -11,26 +13,26 @@ namespace AiLaTrieuPhu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (Request.Cookies["acc"] == null)
+                {
+                    Session["url1"] = Request.Url.AbsolutePath;
+                    Response.Redirect("~/Accounts/Login.aspx");
+                }
+                DataSet ds = TaikhoanDAO.Search(Request.Cookies["acc"].Value);
+            }
+            catch
+            {
+                Response.Cookies["acc"].Expires = DateTime.Now.AddDays(-1);
+                Response.Redirect("~/Accounts/Login.aspx");
+            }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)     // Xu y su kien cho buttom Logout
         {
-            if (Response.Cookies["administrator"] == null)
-            {
-                Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies["acc"].Expires = DateTime.Now.AddDays(-1);
                 Response.Redirect(Request.Url.AbsolutePath);
-            }
-            else
-            {
-                Response.Cookies["client"].Expires = DateTime.Now.AddDays(-1);
-                Response.Redirect(Request.Url.AbsolutePath);
-            }
-        }
-
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

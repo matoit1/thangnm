@@ -13,15 +13,6 @@ namespace AiLaTrieuPhu {
     public partial class _Default {
         
         /// <summary>
-        /// ToolkitScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
-        
-        /// <summary>
         /// btnMoney control.
         /// </summary>
         /// <remarks>
@@ -85,67 +76,49 @@ namespace AiLaTrieuPhu {
         protected global::System.Web.UI.WebControls.Button btnLoading;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// ScriptManager1Demo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.ScriptManager ScriptManager1Demo;
         
         /// <summary>
-        /// btnCountDown control.
+        /// UpdatePanel1Demo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCountDown;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1Demo;
         
         /// <summary>
-        /// timerCountDown control.
+        /// lblSTT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.Timer timerCountDown;
+        protected global::System.Web.UI.WebControls.Label lblSTT;
         
         /// <summary>
-        /// btnA control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnA;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// btnB control.
+        /// rpCauhoi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnB;
-        
-        /// <summary>
-        /// btnC control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnC;
-        
-        /// <summary>
-        /// btnD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnD;
+        protected global::System.Web.UI.WebControls.Repeater rpCauhoi;
         
         /// <summary>
         /// ImageButton2 control.

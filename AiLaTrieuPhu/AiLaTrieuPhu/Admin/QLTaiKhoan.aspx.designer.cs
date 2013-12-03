@@ -10,7 +10,7 @@
 namespace AiLaTrieuPhu.Admin {
     
     
-    public partial class QLCauHoi {
+    public partial class QLTaiKhoan {
         
         /// <summary>
         /// form1 control.
@@ -40,49 +40,22 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// txtCauhoi_ID control.
+        /// txttaikhoan_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCauhoi_ID;
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_ID;
         
         /// <summary>
-        /// lblCauhoi_ID control.
+        /// lbltaikhoan_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCauhoi_ID;
-        
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_ID;
         
         /// <summary>
         /// Label5 control.
@@ -94,22 +67,22 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// txtCauhoi_cauhoi control.
+        /// txttaikhoan_tentaikhoan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCauhoi_cauhoi;
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_tentaikhoan;
         
         /// <summary>
-        /// lblCauhoi_cauhoi control.
+        /// lbltaikhoan_tentaikhoan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCauhoi_cauhoi;
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_tentaikhoan;
         
         /// <summary>
         /// Label6 control.
@@ -121,22 +94,22 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// txtCauhoi_A control.
+        /// txttaikhoan_matkhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCauhoi_A;
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_matkhau;
         
         /// <summary>
-        /// lblCauhoi_A control.
+        /// lbltaikhoan_matkhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCauhoi_A;
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_matkhau;
         
         /// <summary>
         /// Label7 control.
@@ -148,22 +121,22 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// txtCauhoi_B control.
+        /// txttaikhoan_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCauhoi_B;
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_Email;
         
         /// <summary>
-        /// lblCauhoi_B control.
+        /// lbltaikhoan_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCauhoi_B;
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_Email;
         
         /// <summary>
         /// Label8 control.
@@ -175,22 +148,22 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// txtCauhoi_C control.
+        /// txttaikhoan_tendaydu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCauhoi_C;
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_tendaydu;
         
         /// <summary>
-        /// lblCauhoi_C control.
+        /// lbltaikhoan_tendaydu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCauhoi_C;
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_tendaydu;
         
         /// <summary>
         /// Label9 control.
@@ -202,22 +175,22 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// txtCauhoi_D control.
+        /// txttaikhoan_diachi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCauhoi_D;
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_diachi;
         
         /// <summary>
-        /// lblCauhoi_D control.
+        /// lbltaikhoan_diachi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCauhoi_D;
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_diachi;
         
         /// <summary>
         /// Label10 control.
@@ -229,22 +202,22 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// txtCauhoi_dung control.
+        /// txttaikhoan_ngaysinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCauhoi_dung;
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_ngaysinh;
         
         /// <summary>
-        /// lblCauhoi_dung control.
+        /// lbltaikhoan_ngaysinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCauhoi_dung;
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_ngaysinh;
         
         /// <summary>
         /// Label11 control.
@@ -256,22 +229,130 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// txtCauhoi_capdo control.
+        /// txttaikhoan_sodienthoai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCauhoi_capdo;
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_sodienthoai;
         
         /// <summary>
-        /// lblCauhoi_capdo control.
+        /// lbltaikhoan_sodienthoai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCauhoi_capdo;
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_sodienthoai;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// txttaikhoan_quyenhan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_quyenhan;
+        
+        /// <summary>
+        /// lbtaikhoan_quyenhan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbtaikhoan_quyenhan;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
+        /// txttaikhoan_annhdaidien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_annhdaidien;
+        
+        /// <summary>
+        /// lbltaikhoan_annhdaidien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_annhdaidien;
+        
+        /// <summary>
+        /// Label14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label14;
+        
+        /// <summary>
+        /// txttaikhoan_trangthai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_trangthai;
+        
+        /// <summary>
+        /// lbltaikhoan_trangthai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_trangthai;
+        
+        /// <summary>
+        /// Label15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label15;
+        
+        /// <summary>
+        /// txttaikhoan_ngaydangky control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttaikhoan_ngaydangky;
+        
+        /// <summary>
+        /// lbltaikhoan_ngaydangky control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltaikhoan_ngaydangky;
         
         /// <summary>
         /// btnThem control.
@@ -319,12 +400,12 @@ namespace AiLaTrieuPhu.Admin {
         protected global::System.Web.UI.WebControls.Button btnXoatrang;
         
         /// <summary>
-        /// grvDanhsachCauhoi control.
+        /// grvDanhsachTaikhoan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvDanhsachCauhoi;
+        protected global::System.Web.UI.WebControls.GridView grvDanhsachTaikhoan;
     }
 }
