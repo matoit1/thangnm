@@ -292,6 +292,25 @@ EXEC Accounts_SearchAccounts '','','',''
 
 
 
+----- 16. Accounts_CheckPermiss
+	----- Delete Proc ----- 
+DROP PROCEDURE Accounts_CheckPermiss
+
+	----- Create Proc -----
+CREATE PROCEDURE Accounts_CheckPermiss
+	@AccountsPermiss_UserID INT,
+	@AccountsPermiss_FunctionID VARCHAR(50)
+AS
+BEGIN
+	SELECT AccountsPermiss_UserID,AccountsPermiss_FunctionID
+	FROM AccountsPermiss WHERE (AccountsPermiss_UserID LIKE @AccountsPermiss_UserID) AND (AccountsPermiss_FunctionID LIKE @AccountsPermiss_FunctionID)
+END
+
+----- Test	 Proc -----
+EXEC Accounts_CheckPermiss 3, 'FAQ_btnAdd'
+
+
+
 ----- 16. Tao function de chuyen chuoi String thanh String
 CREATE FUNCTION [dbo].[StringCommaSplit](@ListofUsername NVARCHAR(1000))
 RETURNS @rtn TABLE (StringValue NVARCHAR(1000))
