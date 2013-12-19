@@ -4,5 +4,6 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-
+    <asp:GridView ID="GridView1" runat="server">
+    </asp:GridView>
 </asp:Content>

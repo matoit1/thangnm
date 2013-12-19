@@ -33,6 +33,39 @@ CREATE TABLE Accounts
 	Accounts_RegisterDate DATETIME DEFAULT(GETDATE())
 )
 
+-- 2.	Table PermissFunction
+USE NguyenManhThang
+CREATE TABLE PermissFunction
+(
+	PermissFunction_ID VARCHAR(50) PRIMARY KEY NOT NULL,
+	PermissFunction_Name NVARCHAR(200) NOT NULL,
+	PermissFunction_Link VARCHAR(200) NOT NULL,
+	PermissFunction_Ex1 VARCHAR(200),
+	PermissFunction_Ex2 VARCHAR(200),
+	PermissFunction_Ex3 VARCHAR(200)
+)
+
+-- 3.	Table AccountsPermiss
+USE NguyenManhThang
+CREATE TABLE AccountsPermiss
+(
+	AccountsPermiss_UserID INT NOT NULL
+		CONSTRAINT AccountsPermiss_UserID FOREIGN KEY (AccountsPermiss_UserID)
+		REFERENCES Accounts(Accounts_ID)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+	AccountsPermiss_FunctionID VARCHAR(50) NOT NULL
+		CONSTRAINT AccountsPermiss_FunctionID FOREIGN KEY (AccountsPermiss_FunctionID)
+		REFERENCES PermissFunction(PermissFunction_ID)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE,
+	AccountsPermiss_Ex1 VARCHAR(200),
+	AccountsPermiss_Ex2 VARCHAR(200),
+	AccountsPermiss_Ex3 VARCHAR(200),
+	PRIMARY KEY(AccountsPermiss_UserID, AccountsPermiss_FunctionID)
+)
+
+
 -- 2.	Topic
 USE NguyenManhThang
 CREATE TABLE Topic
