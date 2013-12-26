@@ -122,21 +122,22 @@
                         <li><asp:HyperLink ID="HyperLink51" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.5 Quét virus</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink52" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6 Download Driver</asp:HyperLink>
                             <ul>
-                                <li><asp:HyperLink ID="HyperLink58" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6.1 Asus</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="HyperLink59" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6.2 Acer</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="HyperLink60" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6.3 Dell</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="HyperLink61" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6.4 Toshhiba</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="HyperLink62" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6.5 Sony</asp:HyperLink></li>
-                                <li><asp:HyperLink ID="HyperLink63" runat="server" NavigateUrl="~/Admin/Setting.aspx">6.6.6 HP</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink58" runat="server" Target="_blank" NavigateUrl="http://support.asus.com/download/options.aspx?SLanguage=en">6.6.1 Asus</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink59" runat="server" Target="_blank" NavigateUrl="http://www.acer.com.vn/ac/vi/VN/content/drivers">6.6.2 Acer</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink60" runat="server" Target="_blank" NavigateUrl="http://www.dell.com/support/drivers/us/en/04/ProductSelector/Select?rquery=na">6.6.3 Dell</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink61" runat="server" Target="_blank" NavigateUrl="http://toshiba-asia.com/support/drivers">6.6.4 Toshhiba</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink62" runat="server" Target="_blank" NavigateUrl="http://www.sony-asia.com/section/support">6.6.5 Sony</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink63" runat="server" Target="_blank" NavigateUrl="http://www8.hp.com/vn/en/drivers.html">6.6.6 HP</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink40" runat="server" Target="_blank" NavigateUrl="http://support.asus.com/download/options.aspx?SLanguage=en">6.6.7 Download Driver Online</asp:HyperLink></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li class="toproot"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Admin/Setting.aspx">Upload</asp:HyperLink>
+                <li class="toproot"><asp:HyperLink ID="HyperLink7" runat="server" Target="_blank" NavigateUrl="http://dbinbox.com/thangnm">Upload</asp:HyperLink>
                     <ul>
-                        <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Admin/Setting.aspx">7.1 Server 1 Dropbox</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Admin/Setting.aspx">7.2 Server 2 Dropbox</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink53" runat="server" NavigateUrl="~/Admin/Setting.aspx">7.2 Server 3 Upfile.vn</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink8" runat="server" Target="_blank" NavigateUrl="https://www.dropbox.com/sh/grqkgi6i04oy1m1/zp2mHSUUuS">7.1 Server 1 Dropbox</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink9" runat="server" Target="_blank" NavigateUrl="http://dbinbox.com/forum_it">7.2 Server 2 Dropbox</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink53" runat="server" Target="_blank" NavigateUrl="http://upfile.vn">7.2 Server 3 Upfile.vn</asp:HyperLink></li>
                     </ul>
                 </li>
                 <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Contact.aspx">Liên hệ</asp:HyperLink></li>
