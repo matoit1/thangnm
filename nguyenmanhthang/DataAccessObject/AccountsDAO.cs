@@ -317,7 +317,7 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("Accounts_GetAccounts_IDbyAccounts_Username", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectListbyAccounts_Username", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Username", _AccountsEO.Accounts_Username));
                     ds = new DataSet();
@@ -345,6 +345,32 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("Accounts_SelectListByAccounts_Status", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@Accounts_Status", _AccountsEO.Accounts_Status));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
+        // 16. CheckPermiss
+        public static DataSet CheckPermiss(int AccountsPermiss_UserID, string AccountsPermiss_FunctionID)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("Accounts_CheckPermiss", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@AccountsPermiss_UserID", AccountsPermiss_UserID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@AccountsPermiss_FunctionID", AccountsPermiss_FunctionID)); 
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

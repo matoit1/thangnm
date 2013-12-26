@@ -1,0 +1,15 @@
+.tech { color: darkred; font-weight:bold;}
+.client { color: green; font-weight:bold;}
+.errorMessage { color: red; }
+.errorDetail { color: red; font-size:0.6em; padding: 0 12px 0 12px; }
+
+html,body {margin: 0px 0px 0px 0px ;padding: 0px 0px 0px 0px;}
+
+#result{border:1px solid;padding:8px;position: fixed;bottom:140px;top:5px;left:5px;right:5px;overflow:auto;}
+
+#messageMommy{position:fixed;left:4px;right:100px;bottom:35px;height:100px;}
+#sendMommy{position:fixed;right:5px;bottom:35px;width:80px;height:100px;}
+#message{height:100px;width:100%;}
+#send{width:80px;height:105px;}
+
+#info{position:fixed;left:5px;right:5px;bottom:5px;}

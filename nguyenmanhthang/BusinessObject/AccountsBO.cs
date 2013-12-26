@@ -165,5 +165,13 @@ namespace BusinessObject
             DataSet ds = AccountsDAO.SelectListByAccounts_Status(_AccountsEO);
             return ds;
         }
+
+        // 16. CheckPermiss
+        public static DataSet CheckPermiss(int AccountsPermiss_UserID, string AccountsPermiss_FunctionID)
+        {
+            AccountsEO _AccountsEO = new AccountsEO();
+            DataSet ds = AccountsDAO.CheckPermiss(AccountsPermiss_UserID, AccountsPermiss_FunctionID);
+            return ds;
+        }
     }
 }
