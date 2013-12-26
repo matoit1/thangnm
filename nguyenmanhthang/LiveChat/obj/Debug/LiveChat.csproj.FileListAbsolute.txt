@@ -1,0 +1,5 @@
+D:\Project_ASP.NET\nguyenmanhthang\LiveChat\bin\LiveChat.dll
+D:\Project_ASP.NET\nguyenmanhthang\LiveChat\bin\LiveChat.pdb
+D:\Project_ASP.NET\nguyenmanhthang\LiveChat\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\nguyenmanhthang\LiveChat\obj\Debug\LiveChat.dll
+D:\Project_ASP.NET\nguyenmanhthang\LiveChat\obj\Debug\LiveChat.pdb

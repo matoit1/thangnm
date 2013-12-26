@@ -1,0 +1,16 @@
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\LinQ.dll
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\LinQ.pdb
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\LinQ.xml
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\BusinessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\DataAccessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\EntityObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\BusinessObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\DataAccessObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\bin\EntityObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\obj\Debug\LinQ.Resources.resources
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\obj\Debug\LinQ.dll
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\obj\Debug\LinQ.xml
+D:\Project_ASP.NET\nguyenmanhthang\LinQ\obj\Debug\LinQ.pdb
