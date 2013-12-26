@@ -1,5 +1,5 @@
 ----- Create insert-----
-alter PROCEDURE Cauhoi_Insert
+CREATE PROCEDURE Cauhoi_Insert
 	
 	@Cauhoi_cauhoi VARCHAR(500),
 	@Cauhoi_A NVARCHAR(500),
@@ -7,18 +7,17 @@ alter PROCEDURE Cauhoi_Insert
 	@Cauhoi_C NVARCHAR(500),
 	@Cauhoi_D NVARCHAR(500),
 	@Cauhoi_dung int,
-	@Cauhoi_capdo int,
-	@Cauhoi_ghichu nvarchar(500)
+	@Cauhoi_capdo int
 	
 	
 AS
 BEGIN
-	INSERT INTO Cauhoi(Cauhoi_cauhoi,Cauhoi_A,Cauhoi_B,Cauhoi_C,Cauhoi_D,Cauhoi_dung,Cauhoi_capdo,Cauhoi_ghichu)
-	VALUES (@Cauhoi_cauhoi,@Cauhoi_A,@Cauhoi_B,@Cauhoi_C,@Cauhoi_D,@Cauhoi_dung,@Cauhoi_capdo,@Cauhoi_ghichu)
+	INSERT INTO Cauhoi(Cauhoi_cauhoi,Cauhoi_A,Cauhoi_B,Cauhoi_C,Cauhoi_D,Cauhoi_dung,Cauhoi_capdo)
+	VALUES (@Cauhoi_cauhoi,@Cauhoi_A,@Cauhoi_B,@Cauhoi_C,@Cauhoi_D,@Cauhoi_dung,@Cauhoi_capdo)
 END
 
 -- create update------
-alter PROCEDURE Cauhoi_Update
+CREATE PROCEDURE Cauhoi_Update
 	@Cauhoi_ID BIGINT,
 	@Cauhoi_cauhoi NVARCHAR(500),
 	@Cauhoi_A NVARCHAR(500),
@@ -26,8 +25,7 @@ alter PROCEDURE Cauhoi_Update
 	@Cauhoi_C NVARCHAR(500),
 	@Cauhoi_D NVARCHAR(500),
 	@Cauhoi_dung INT,
-	@Cauhoi_capdo INT,
-	@Cauhoi_ghichu nvarchar(500)
+	@Cauhoi_capdo INT
 AS
 BEGIN
 	UPDATE Cauhoi
@@ -38,15 +36,14 @@ BEGIN
 		Cauhoi_C=@Cauhoi_C,
 		Cauhoi_D=@Cauhoi_D,
 		Cauhoi_dung=@Cauhoi_dung,
-		Cauhoi_capdo=@Cauhoi_capdo,
-		Cauhoi_ghichu=@Cauhoi_ghichu
+		Cauhoi_capdo=@Cauhoi_capdo
 	WHERE	Cauhoi_ID=@Cauhoi_ID
 END
 
 
 
 ----- create delete -----
-alter PROCEDURE Cauhoi_Delete
+CREATE PROCEDURE Cauhoi_Delete
 	@Cauhoi_ID BIGINT
 AS
 BEGIN
@@ -56,7 +53,7 @@ END
 
 
 ----create search------
-ALTER PROCEDURE Cauhoi_Search
+CREATE PROCEDURE Cauhoi_Search
 	@Cauhoi_ID BIGINT,
 	@Cauhoi_cauhoi NVARCHAR(500)
 AS
@@ -73,7 +70,7 @@ exec Cauhoi_Search  null,'th'
 
 
 ----- Create insert-----
-alter PROCEDURE Diem_Insert
+CREATE PROCEDURE Diem_Insert
 
 	@Diem_User INT,
 	@Diem_tien BIGINT
@@ -89,7 +86,7 @@ exec Diem_Insert 5,10
 
 
 -- create update------
-alter PROCEDURE Diem_Update
+CREATE PROCEDURE Diem_Update
 	@Diem_ID BIGINT,
 	@Diem_User INT,
 	@Diem_tien BIGINT
@@ -119,7 +116,7 @@ END
 exec Diem_Delete 10
 
 ----create search------
-ALTER PROCEDURE Diem_Search
+CREATE PROCEDURE Diem_Search
 	@Diem_User INT
 AS
 BEGIN
@@ -158,7 +155,7 @@ exec Taikhoan_Insert 'thang','123','thang@gmail','thangml','vp','11/09/1992','01
 exec Taikhoan_Insert 'minh','123','minh@gmail','thangml','vp','11/09/1992','018t8',1,'','true'					
 
 -- create update------
-alter PROCEDURE Taikhoan_Update
+CREATE PROCEDURE Taikhoan_Update
 	@taikhoan_ID BIGINT,
 	@taikhoan_tentaikhoan VARCHAR(50),
 	@taikhoan_matkhau VARCHAR(50),
