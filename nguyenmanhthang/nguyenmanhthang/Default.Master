@@ -70,7 +70,7 @@
                         </li>
                         <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Admin/Setting.aspx">3.2 Bảo mật</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="~/Admin/Setting.aspx">3.3 Văn phòng</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/Admin/Setting.aspx">3.1 Portable</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/Admin/Setting.aspx">3.4 Portable</asp:HyperLink></li>
                     </ul>
                 </li>
                 <li class="toproot"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/Admin/Setting.aspx">Thủ thuật</asp:HyperLink>
@@ -102,7 +102,7 @@
                         <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Admin/Setting.aspx">5.4 Nghe nhạc</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink45" runat="server" NavigateUrl="~/Admin/Setting.aspx">5.5 Nghe Radio</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="~/Admin/Setting.aspx">5.6 Sách - Truyện</asp:HyperLink></li>
-                        <li><asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="~/Admin/Setting.aspx">5.7 Ảnh động</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="~/AnimatedPictures.aspx">5.7 Ảnh động</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="~/Admin/Setting.aspx">5.8 Dọa ma</asp:HyperLink></li>
                     </ul>
                 </li>
