@@ -12,6 +12,16 @@ namespace nguyenmanhthang
 {
     public partial class AnimatedPictures : System.Web.UI.Page
     {
+        #region "Khai Báo Biến, Thuộc tính"
+        public DataSet _List;
+        public DataSet  ListIdImage
+        {
+            get { return (DataSet)ViewState["ListIdImage"]; }
+            set { ViewState["ListIdImage"] = value; }
+        }
+        #endregion
+
+
         public Int32 idImage
         {
             get { return Convert.ToInt32(ViewState["idImage"]); }
@@ -87,14 +97,21 @@ namespace nguyenmanhthang
             }
         }
 
-        protected void ddlSileShow_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnBack_Click(object sender, EventArgs e)
         {
-            lblMsg.Text = ddlSileShow.SelectedValue;
-        }
-
-        protected void ddlSileShow_TextChanged(object sender, EventArgs e)
-        {
-            lblMsg.Text = ddlSileShow.SelectedValue;
+            DataSet slImages = new DataSet();
+            try
+            {
+                idImage = idImage - 1;
+                slImages = loadLinkImage();
+                imgAnimatedPictures.ImageUrl = slImages.Tables[0].Rows[idImage]["Topic_LinkImage"].ToString();
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = ex.Message;
+                idImage = slImages.Tables[0].Rows.Count-1;
+                imgAnimatedPictures.ImageUrl = slImages.Tables[0].Rows[idImage]["Topic_LinkImage"].ToString();
+            }
         }
 
     }

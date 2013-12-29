@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="nguyenmanhthang.Contact" MasterPageFile="~/Default.Master"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="nguyenmanhthang.Contact" MasterPageFile="~/Common/Default.Master"%>
 
 <%@ Register src="UserControl/ContactUC.ascx" tagname="ContactUC" tagprefix="uc1" %>
 
