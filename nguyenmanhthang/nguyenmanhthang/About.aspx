@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="nguyenmanhthang.About" MasterPageFile="~/Default.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="nguyenmanhthang.About" MasterPageFile="~/Common/Default.Master" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <%@ Register src="~/UserControl/CommentUC.ascx" tagname="CommentUC" tagprefix="uc2" %>
 

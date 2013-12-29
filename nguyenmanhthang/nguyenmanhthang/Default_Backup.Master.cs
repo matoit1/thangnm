@@ -9,7 +9,7 @@ using System.Data;
 
 namespace nguyenmanhthang
 {
-    public partial class DefaultMaster : System.Web.UI.MasterPage
+    public partial class Default_Backup : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

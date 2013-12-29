@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="nguyenmanhthang.Default1" MasterPageFile="~/Default.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="nguyenmanhthang.Default" MasterPageFile="~/Common/Default.Master" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphHead" runat="server">
     <meta property="fb:app_id" content="432781806807255"/>

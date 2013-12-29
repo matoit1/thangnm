@@ -28,6 +28,8 @@ namespace nguyenmanhthang
             }
             else
             {
+                DataSet slImages = new DataSet();
+                slImages = LoadAnimationDAO.Topic_SelectListbyTopic_Category(100, 57);
                 lblMore.Text = "Tất cả các bài viết";
                 pnlDetail.Visible = false;
                 tabMain.Visible = false;
