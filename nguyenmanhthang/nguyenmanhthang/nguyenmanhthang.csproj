@@ -1011,6 +1011,7 @@
     <Content Include="LinQ.aspx" />
     <Content Include="PhanMem\Default.aspx" />
     <Content Include="Policies-Privacy.aspx" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
     <Content Include="Scripts\chat.js" />
