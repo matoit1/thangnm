@@ -65,6 +65,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -1011,7 +1012,6 @@
     <Content Include="LinQ.aspx" />
     <Content Include="PhanMem\Default.aspx" />
     <Content Include="Policies-Privacy.aspx" />
-    <Content Include="robots.txt" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
     <Content Include="Scripts\chat.js" />
@@ -1032,6 +1032,7 @@
     <Content Include="UngDung\Ghep_khung_anh.aspx" />
     <Content Include="UngDung\Photoshop\editor.aspx" />
     <Content Include="UngDung\Photoshop\o-matic.aspx" />
+    <Content Include="UngDung\Ping_Local_Area_Network.aspx" />
     <Content Include="UngDung\Quet_Virus_Online_BKAV.aspx" />
     <Content Include="Uploads\files\avatar_2x.png" />
     <Content Include="Uploads\images\avatar_2x.png" />
@@ -1489,6 +1490,13 @@
     </Compile>
     <Compile Include="UngDung\Photoshop\o-matic.aspx.designer.cs">
       <DependentUpon>o-matic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UngDung\Ping_Local_Area_Network.aspx.cs">
+      <DependentUpon>Ping_Local_Area_Network.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UngDung\Ping_Local_Area_Network.aspx.designer.cs">
+      <DependentUpon>Ping_Local_Area_Network.aspx</DependentUpon>
     </Compile>
     <Compile Include="UngDung\Quet_Virus_Online_BKAV.aspx.cs">
       <DependentUpon>Quet_Virus_Online_BKAV.aspx</DependentUpon>
