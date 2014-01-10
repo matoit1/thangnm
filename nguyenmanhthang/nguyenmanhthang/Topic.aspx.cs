@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using BusinessObject;
+using nguyenmanhthang.Library.Common;
 
 namespace nguyenmanhthang
 {
@@ -42,6 +43,11 @@ namespace nguyenmanhthang
             try
             {
                 DataSet ds = TopicBO.Topic_SelectListToShow(true, 5);
+                ds.Tables[0].Columns.Add(new DataColumn("link"));
+                for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
+                {
+                    ds.Tables[0].Rows[i]["link"] =RewriteUrl.ConvertToUnSign( ds.Tables[0].Rows[i]["Topic_Title"].ToString());
+                }
                 rptTopic.DataSource = ds;
                 rptTopic.DataBind();
             }
@@ -97,8 +103,11 @@ namespace nguyenmanhthang
             string name = e.CommandName;
             if (name == "Detail")
             {
-                string linkDetail = "~/Topic.aspx?Topic_ID=" + ((HiddenField)e.Item.FindControl("lblWebsite_ID")).Value;
+                string linkDetail = "~/Bai-viet/" + ((HiddenField)e.Item.FindControl("lblWebsite_ID")).Value + "/" + RewriteUrl.ConvertToUnSign(((Label)e.Item.FindControl("lblWebsite_Title")).Text) + ".html";
+                //string linkDetail = "~/Topic.aspx?Topic_ID=" + ((HiddenField)e.Item.FindControl("lblWebsite_ID")).Value;
                 Response.Redirect(linkDetail);
+                //LinkButton button = e.CommandSource as LinkButton;
+                //button.PostBackUrl = "";
             }
         }
 

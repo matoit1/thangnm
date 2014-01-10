@@ -17,7 +17,7 @@
                         <asp:HiddenField ID="hfTopic_ID" runat="server" Value='<%#Eval("Topic_ID")%>'></asp:HiddenField>
                         <asp:Label ID="lblTopic_Title" runat="server" Text='<%#Eval("Topic_Title")%>' Font-Bold="true" Font-Size="20px"></asp:Label><br />
                         <asp:Label ID="Label3" runat="server" Text='<%#Eval("Topic_Description")%>'></asp:Label>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"~/Topic.aspx?Topic_ID=" +Eval("Topic_ID")%>'> Xem thêm...</asp:HyperLink><br /><br />
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/Bai-viet/" + Eval("Topic_ID") + "/" + Eval("link") + ".html"%>'> Xem thêm...</asp:HyperLink><br /><br />
                         <asp:Label ID="Label2" runat="server" Text='<%#"Chủ đề: "+Eval("Topic_Category")%>'></asp:Label><br />
                         <asp:Label ID="Label1" runat="server" Text='<%#"Tag: "+Eval("Topic_Tag")%>'></asp:Label><br />
                         <asp:Label ID="lblTopic_Visit" runat="server" Text='<%#"Số lượt xem: "+Eval("Topic_Visit")%>'></asp:Label><br />
