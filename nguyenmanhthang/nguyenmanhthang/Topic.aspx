@@ -104,7 +104,8 @@
                     <li><asp:HiddenField ID="lblWebsite_ID" runat="server" Value='<%#Eval("Topic_ID")%>'></asp:HiddenField>
                         <asp:Label ID="lblWebsite_Title" runat="server" Text='<%#Eval("Topic_Title")%>'></asp:Label><br />
                         <i><asp:Label ID="lblWebsite_LastUpdate" runat="server" Text='<%#" cập nhật lần cuối: <"+Eval("Topic_LastUpdate")+">"%>'></asp:Label></i>
-                        <asp:LinkButton ID="hplDetail" runat="server" CommandName="Detail"> >> Chi tiết >> </asp:LinkButton>
+                        <%--<asp:LinkButton  ID="hplDetail" runat="server" CommandName="Detail" CausesValidation="false" PostBackUrl='<%# "~/Topic/" + Eval("Topic_ID") + "/" + Eval("Topic_Title") + ".html"%>'> >> Chi tiết >> </asp:LinkButton>--%>
+                        <asp:HyperLink ID="hplDetail" runat="server" NavigateUrl='<%# "~/Bai-viet/" + Eval("Topic_ID") + "/" + Eval("link") + ".html"%>'> >> Chi tiết >> </asp:HyperLink>
                         <hr /><br />
                     </li>
                 </ItemTemplate>

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BusinessObject;
 using System.Data;
+using nguyenmanhthang.Library.Common;
 
 namespace nguyenmanhthang.Common
 {
@@ -62,7 +63,12 @@ namespace nguyenmanhthang.Common
         {
             try
             {
-                DataTable tbNewProduct = TopicBO.Topic_SelectListToShow(true, 3).Tables[0];
+                DataSet tbNewProduct = TopicBO.Topic_SelectListToShow(true, 3);
+                tbNewProduct.Tables[0].Columns.Add(new DataColumn("link"));
+                for (int i = 0; i <= tbNewProduct.Tables[0].Rows.Count - 1; i++)
+                {
+                    tbNewProduct.Tables[0].Rows[i]["link"] = RewriteUrl.ConvertToUnSign(tbNewProduct.Tables[0].Rows[i]["Topic_Title"].ToString());
+                }
                 dtlNewTopic.DataSource = tbNewProduct;
                 dtlNewTopic.DataBind();
             }

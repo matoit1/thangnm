@@ -187,7 +187,7 @@
                     <h2>Bài viết mới</h2>
                     <asp:DataList ID="dtlNewTopic" runat="server" RepeatColumns="1" DataKeyField="Topic_ID">
                     <ItemTemplate>
-                        <asp:HyperLink ID="hplTopic" runat="server" NavigateUrl='<%#"~/Topic.aspx?Topic_ID="+Eval("Topic_ID") %>'><%#Eval("Topic_Title") %></asp:HyperLink>
+                        <asp:HyperLink ID="hplTopic" runat="server" NavigateUrl='<%# "~/Bai-viet/" + Eval("Topic_ID") + "/" + Eval("link") + ".html"%>'><%#Eval("Topic_Title") %></asp:HyperLink>
                         <asp:HiddenField ID="hdfTopic_ID" runat="server" Value='<%#Eval("Topic_ID") %>' />
                         <hr  style="width:auto"/>
                     </ItemTemplate>
