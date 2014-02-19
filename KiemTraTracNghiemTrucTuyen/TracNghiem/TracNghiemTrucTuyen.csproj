@@ -55,8 +55,20 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="bin\DataAccessObject.dll" />
+    <Content Include="bin\DataAccessObject.pdb" />
+    <Content Include="bin\EntityObject.dll" />
+    <Content Include="bin\EntityObject.pdb" />
+    <Content Include="bin\TracNghiem.dll" />
+    <Content Include="bin\TracNghiem.pdb" />
+    <Content Include="Database\Proc.sql" />
+    <Content Include="Database\Proc_TracNghiemTrucTuyen.sql" />
     <Content Include="Default.aspx" />
     <Content Include="KhaoSatChatLuong.aspx" />
+    <Content Include="obj\Debug\TracNghiem.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TracNghiem.dll" />
+    <Content Include="obj\Debug\TracNghiem.pdb" />
+    <Content Include="obj\Debug\TracNghiemTrucTuyen.csproj.FileListAbsolute.txt" />
     <Content Include="QLCauhoi.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -136,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Styles\" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +163,11 @@
       <Project>{238604CA-FC06-4960-9E38-ECF48FA6C2DC}</Project>
       <Name>EntityObject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\TracNghiem.csprojResolveAssemblyReference.cache" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

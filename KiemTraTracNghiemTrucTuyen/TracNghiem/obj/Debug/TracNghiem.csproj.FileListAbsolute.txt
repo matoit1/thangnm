@@ -1,0 +1,27 @@
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\obj\Debug\TracNghiem.csprojResolveAssemblyReference.cache
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\bin\TracNghiem.dll
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\bin\TracNghiem.pdb
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\bin\DataAccessObject.dll
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\bin\EntityObject.dll
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\bin\DataAccessObject.pdb
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\bin\EntityObject.pdb
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\obj\Debug\TracNghiem.dll
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\TracNghiem\obj\Debug\TracNghiem.pdb
+E:\Project_ASP.NET\TracNghiem\TracNghiem\bin\TracNghiem.dll
+E:\Project_ASP.NET\TracNghiem\TracNghiem\bin\TracNghiem.pdb
+E:\Project_ASP.NET\TracNghiem\TracNghiem\bin\DataAccessObject.dll
+E:\Project_ASP.NET\TracNghiem\TracNghiem\bin\EntityObject.dll
+E:\Project_ASP.NET\TracNghiem\TracNghiem\bin\DataAccessObject.pdb
+E:\Project_ASP.NET\TracNghiem\TracNghiem\bin\EntityObject.pdb
+E:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\ResolveAssemblyReference.cache
+E:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\TracNghiem.dll
+E:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\TracNghiem.pdb
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\TracNghiem.dll
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\TracNghiem.pdb
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\DataAccessObject.dll
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\EntityObject.dll
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\DataAccessObject.pdb
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\EntityObject.pdb
+D:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\TracNghiem.dll
+D:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\TracNghiem.pdb
