@@ -1,0 +1,14 @@
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\EntityObject\bin\Debug\EntityObject.dll
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\EntityObject\bin\Debug\EntityObject.pdb
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\EntityObject\obj\Debug\EntityObject.dll
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\EntityObject\obj\Debug\EntityObject.pdb
+E:\Project_ASP.NET\TracNghiem\EntityObject\bin\Debug\EntityObject.dll
+E:\Project_ASP.NET\TracNghiem\EntityObject\bin\Debug\EntityObject.pdb
+E:\Project_ASP.NET\TracNghiem\EntityObject\obj\Debug\ResolveAssemblyReference.cache
+E:\Project_ASP.NET\TracNghiem\EntityObject\obj\Debug\EntityObject.dll
+E:\Project_ASP.NET\TracNghiem\EntityObject\obj\Debug\EntityObject.pdb
+D:\Project_ASP.NET\TracNghiem\EntityObject\bin\Debug\EntityObject.dll
+D:\Project_ASP.NET\TracNghiem\EntityObject\bin\Debug\EntityObject.pdb
+D:\Project_ASP.NET\TracNghiem\EntityObject\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\TracNghiem\EntityObject\obj\Debug\EntityObject.dll
+D:\Project_ASP.NET\TracNghiem\EntityObject\obj\Debug\EntityObject.pdb
