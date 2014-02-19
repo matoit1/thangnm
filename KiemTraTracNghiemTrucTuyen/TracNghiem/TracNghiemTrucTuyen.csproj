@@ -64,7 +64,6 @@
     <Content Include="Database\Proc.sql" />
     <Content Include="Database\Proc_TracNghiemTrucTuyen.sql" />
     <Content Include="Default.aspx" />
-    <Content Include="KhaoSatChatLuong.aspx" />
     <Content Include="obj\Debug\TracNghiem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TracNghiem.dll" />
     <Content Include="obj\Debug\TracNghiem.pdb" />
@@ -122,13 +121,6 @@
     <Compile Include="Shared_Libraries.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="KhaoSatChatLuong.aspx.cs">
-      <DependentUpon>KhaoSatChatLuong.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="KhaoSatChatLuong.aspx.designer.cs">
-      <DependentUpon>KhaoSatChatLuong.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLCauhoi.aspx.cs">

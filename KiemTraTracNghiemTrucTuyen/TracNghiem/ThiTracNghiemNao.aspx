@@ -17,12 +17,12 @@
         <asp:Repeater ID="rptLoadCauHoi" runat="server" 
             onitemcommand="rptLoadCauHoi_ItemCommand">
             <ItemTemplate>
-                <asp:Label ID="lblIDCauhoi" runat="server" Text=' <%#Eval("CauhoiID")%>'></asp:Label>
-                <asp:Label ID="lblCauhoi" runat="server" Text=' <%#Eval("tencauhoi")%>'></asp:Label><br /><br />
-                <asp:RadioButton ID="rdoA" runat="server"  GroupName="NhomCH" /><asp:Label ID="lblA" runat="server" Text=' <%#"Câu A: " + Eval("daa")%>'></asp:Label><br />
-                <asp:RadioButton ID="rdoB" runat="server" GroupName="NhomCH" /><asp:Label ID="lblB" runat="server" Text=' <%#"Câu B: " + Eval("dab")%>'></asp:Label><br />
-                <asp:RadioButton ID="rdoC" runat="server" GroupName="NhomCH" /><asp:Label ID="lblC" runat="server" Text=' <%#"Câu C: " + Eval("dac")%>'></asp:Label><br />
-                <asp:RadioButton ID="rdoD" runat="server" GroupName="NhomCH" /><asp:Label ID="lblD" runat="server" Text=' <%#"Câu D: " + Eval("dad")%>'></asp:Label><br />
+                <asp:Label ID="lblIDCauhoi" runat="server" Text=' <%#Eval("Cauhoi_ID")%>'></asp:Label>
+                <asp:Label ID="lblCauhoi" runat="server" Text=' <%#Eval("Cauhoi_cauhoi")%>'></asp:Label><br /><br />
+                <asp:RadioButton ID="rdoA" runat="server"  GroupName="NhomCH" /><asp:Label ID="lblA" runat="server" Text=' <%#"Câu A: " + Eval("Cauhoi_A")%>'></asp:Label><br />
+                <asp:RadioButton ID="rdoB" runat="server" GroupName="NhomCH" /><asp:Label ID="lblB" runat="server" Text=' <%#"Câu B: " + Eval("Cauhoi_B")%>'></asp:Label><br />
+                <asp:RadioButton ID="rdoC" runat="server" GroupName="NhomCH" /><asp:Label ID="lblC" runat="server" Text=' <%#"Câu C: " + Eval("Cauhoi_C")%>'></asp:Label><br />
+                <asp:RadioButton ID="rdoD" runat="server" GroupName="NhomCH" /><asp:Label ID="lblD" runat="server" Text=' <%#"Câu D: " + Eval("Cauhoi_D")%>'></asp:Label><br />
                 <asp:Label ID="lblKetqua" runat="server" ForeColor="Red"></asp:Label><br />
                 <asp:Button Id="CheckIn" CommandName="check"  runat="server" Text="Kiểm tra" /><br />
                 <hr /><br />

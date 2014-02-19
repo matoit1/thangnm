@@ -21,8 +21,8 @@ namespace TracNghiemTrucTuyen
 
         public void BinData()
         {
-            //rptLoadCauHoi.DataSource = CauhoiDAO.LoadDSCauHoi();
-            //rptLoadCauHoi.DataBind();
+            rptLoadCauHoi.DataSource = CauhoiDAO.SelectList();
+            rptLoadCauHoi.DataBind();
         }
 
         protected void rptLoadCauHoi_ItemCommand(object source, RepeaterCommandEventArgs e)
