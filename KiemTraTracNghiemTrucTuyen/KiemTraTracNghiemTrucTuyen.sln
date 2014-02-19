@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TracNghiemTrucTuyen", "TracNghiem\TracNghiemTrucTuyen.csproj", "{2400FC60-7F98-4151-AA73-B8F7FD802CC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessObject", "DataAccessObject\DataAccessObject.csproj", "{28B4F272-9AF3-4767-9238-72BD0DE28EBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityObject", "EntityObject\EntityObject.csproj", "{238604CA-FC06-4960-9E38-ECF48FA6C2DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2400FC60-7F98-4151-AA73-B8F7FD802CC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2400FC60-7F98-4151-AA73-B8F7FD802CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2400FC60-7F98-4151-AA73-B8F7FD802CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2400FC60-7F98-4151-AA73-B8F7FD802CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B4F272-9AF3-4767-9238-72BD0DE28EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B4F272-9AF3-4767-9238-72BD0DE28EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B4F272-9AF3-4767-9238-72BD0DE28EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B4F272-9AF3-4767-9238-72BD0DE28EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{238604CA-FC06-4960-9E38-ECF48FA6C2DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{238604CA-FC06-4960-9E38-ECF48FA6C2DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{238604CA-FC06-4960-9E38-ECF48FA6C2DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{238604CA-FC06-4960-9E38-ECF48FA6C2DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
