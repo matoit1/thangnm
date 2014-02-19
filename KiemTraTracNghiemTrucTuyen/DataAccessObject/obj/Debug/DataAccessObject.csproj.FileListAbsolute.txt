@@ -1,0 +1,14 @@
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\DataAccessObject\bin\Debug\DataAccessObject.dll
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\DataAccessObject\bin\Debug\DataAccessObject.pdb
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\DataAccessObject\obj\Debug\DataAccessObject.dll
+C:\Users\do\documents\visual studio 2010\Projects\TracNghiem\DataAccessObject\obj\Debug\DataAccessObject.pdb
+E:\Project_ASP.NET\TracNghiem\DataAccessObject\bin\Debug\DataAccessObject.dll
+E:\Project_ASP.NET\TracNghiem\DataAccessObject\bin\Debug\DataAccessObject.pdb
+E:\Project_ASP.NET\TracNghiem\DataAccessObject\obj\Debug\ResolveAssemblyReference.cache
+E:\Project_ASP.NET\TracNghiem\DataAccessObject\obj\Debug\DataAccessObject.dll
+E:\Project_ASP.NET\TracNghiem\DataAccessObject\obj\Debug\DataAccessObject.pdb
+D:\Project_ASP.NET\TracNghiem\DataAccessObject\bin\Debug\DataAccessObject.dll
+D:\Project_ASP.NET\TracNghiem\DataAccessObject\bin\Debug\DataAccessObject.pdb
+D:\Project_ASP.NET\TracNghiem\DataAccessObject\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\TracNghiem\DataAccessObject\obj\Debug\DataAccessObject.dll
+D:\Project_ASP.NET\TracNghiem\DataAccessObject\obj\Debug\DataAccessObject.pdb
