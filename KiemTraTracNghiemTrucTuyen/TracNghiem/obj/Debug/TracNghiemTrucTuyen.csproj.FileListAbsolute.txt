@@ -1,0 +1,9 @@
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\TracNghiem.dll
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\TracNghiem.pdb
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\DataAccessObject.dll
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\EntityObject.dll
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\DataAccessObject.pdb
+D:\Project_ASP.NET\TracNghiem\TracNghiem\bin\EntityObject.pdb
+D:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\TracNghiem.dll
+D:\Project_ASP.NET\TracNghiem\TracNghiem\obj\Debug\TracNghiem.pdb
