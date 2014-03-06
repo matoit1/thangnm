@@ -10,7 +10,7 @@
 namespace nguyenmanhthang.UserControl {
     
     
-    public partial class ListTopicUC {
+    public partial class TopicListUC {
         
         /// <summary>
         /// lblTitle control.
@@ -55,7 +55,7 @@ namespace nguyenmanhthang.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibtnDelete;
+        public global::System.Web.UI.WebControls.ImageButton ibtnDelete;
         
         /// <summary>
         /// ibtnAdd control.
@@ -64,7 +64,7 @@ namespace nguyenmanhthang.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibtnAdd;
+        public global::System.Web.UI.WebControls.ImageButton ibtnAdd;
         
         /// <summary>
         /// ibtnExportExcel control.
@@ -73,6 +73,6 @@ namespace nguyenmanhthang.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibtnExportExcel;
+        public global::System.Web.UI.WebControls.ImageButton ibtnExportExcel;
     }
 }

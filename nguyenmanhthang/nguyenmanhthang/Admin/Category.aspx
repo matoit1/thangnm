@@ -1,9 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Category.aspx.cs" Inherits="nguyenmanhthang.Category" MasterPageFile="~/Admin/Admin.Master" %>
 
+<%@ Register src="../UserControl/CategoryListUC.ascx" tagname="CategoryListUC" tagprefix="uc1" %>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody_Admin" runat="server">
-    <h4 class="alert_info">Welcome to the free MediaLoot admin panel template, this could be an informative message.</h4>
-	<h4 class="alert_warning">A Warning Alert</h4>
-	<h4 class="alert_error">An Error Message</h4>
-	<h4 class="alert_success">A Success Message</h4>
-	<div class="spacer"></div>
+    
+    <uc1:CategoryListUC ID="CategoryListUC1" runat="server" OnViewTopic="ViewTopic_Click" OnPageChangeTopic="PageChangeTopic_Click"/>
+    
 </asp:Content>

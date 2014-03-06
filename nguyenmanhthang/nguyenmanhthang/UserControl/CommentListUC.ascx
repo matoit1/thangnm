@@ -11,7 +11,7 @@
     <tr>
         <td colspan="2">
             <cc1:GridViewExt ID="grvCommentList" runat="server" CssClass="mGrid" AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="1" 
+                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="10" 
                 datakeynames="Comment_ID" onrowcommand="grvCommentList_RowCommand" emptydatatext="Không có bản ghi nào."
                 onrowdatabound="grvCommentList_RowDataBound" 
                 onpageindexchanging="grvCommentList_PageIndexChanging">
