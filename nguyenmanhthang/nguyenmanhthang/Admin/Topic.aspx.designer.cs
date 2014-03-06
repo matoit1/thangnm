@@ -64,7 +64,7 @@ namespace nguyenmanhthang.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::nguyenmanhthang.UserControl.ListTopicUC TopicListUC1;
+        protected global::nguyenmanhthang.UserControl.TopicListUC TopicListUC1;
         
         /// <summary>
         /// TabTopicBlock control.
@@ -82,7 +82,7 @@ namespace nguyenmanhthang.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::nguyenmanhthang.UserControl.ListTopicUC TopicListUC2;
+        protected global::nguyenmanhthang.UserControl.TopicListUC TopicListUC2;
         
         /// <summary>
         /// vDetail control.

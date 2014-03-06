@@ -26,5 +26,12 @@
                 </div><hr /><br />
             </ItemTemplate>
         </asp:Repeater>
+        <div style="overflow: hidden;">
+        <asp:Repeater ID="rptPages" runat="server" onitemcommand="rptPages_ItemCommand">
+            <ItemTemplate>
+                <asp:Button ID="btnPage" runat="server" Text="<%# Container.DataItem %>" CommandName="Page" CommandArgument="<%# Container.DataItem %>" />
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
     </div>
 </asp:Content>

@@ -243,5 +243,30 @@ namespace DataAccessObject
                 }
             }
         }
+
+        // 10. Topic_SelectListbyTopic_Tag
+        public static DataSet Topic_SelectListbyTopic_Tag(TopicEO _TopicEO)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = Connection.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("Topic_SelectListbyTopic_Tag", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@Topic_Tag", _TopicEO.Topic_Tag));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
     }
 }

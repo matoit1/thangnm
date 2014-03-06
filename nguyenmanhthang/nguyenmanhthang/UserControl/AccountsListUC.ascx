@@ -10,7 +10,7 @@
     <tr>
         <td colspan="2">
             <cc1:GridViewExt ID="grvListAccounts" runat="server" CssClass="mGrid" AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="1" datakeynames="Accounts_ID" onrowcommand="grvListAccounts_RowCommand"
+                FileTypeDownload="Excel" Width="100%" AllowPaging="True" PageSize="10" datakeynames="Accounts_ID" onrowcommand="grvListAccounts_RowCommand"
                 emptydatatext="Không có bản ghi nào." onpageindexchanging="grvListAccounts_PageIndexChanging">
                 <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                 <Columns>

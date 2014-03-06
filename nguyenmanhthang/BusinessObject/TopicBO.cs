@@ -120,5 +120,14 @@ namespace BusinessObject
             else
                 return false;
         }
+
+        // 10. Topic_SelectListbyTopic_Tag
+        public static DataSet Topic_SelectListbyTopic_Tag(String Topic_Tag)
+        {
+            TopicEO _TopicEO = new TopicEO();
+            _TopicEO.Topic_Tag = Topic_Tag;
+            DataSet ds = TopicDAO.Topic_SelectListbyTopic_Tag(_TopicEO);
+            return ds;
+        }
     }
 }

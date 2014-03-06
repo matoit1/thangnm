@@ -22,11 +22,6 @@
             onitemcommand="rptPages_ItemCommand1">
             <ItemTemplate>
                 <asp:Button ID="btnPage" runat="server" Text="<%# Container.DataItem %>" CommandName="Page" CommandArgument="<%# Container.DataItem %>" />
-<%--                <asp:LinkButton ID="btnPage"
-                 style="padding:1px 3px; margin:1px; background:#ccc; border:solid 1px #666; font:8pt tahoma;"
-                 CommandName="Page" CommandArgument="<%# Container.DataItem %>"
-                 runat="server"><%# Container.DataItem %>
-                </asp:LinkButton>--%>
             </ItemTemplate>
         </asp:Repeater>
     </div>

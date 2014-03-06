@@ -135,6 +135,7 @@
     <Content Include="Admin\Setting.aspx" />
     <Content Include="Admin\Stats.aspx" />
     <Content Include="Admin\Tab.aspx" />
+    <Content Include="Admin\Tag.aspx" />
     <Content Include="Admin\Topic.aspx" />
     <Content Include="Admin\Users.aspx" />
     <Content Include="Admin\Category.aspx" />
@@ -904,6 +905,8 @@
     <Content Include="ckfinder\skins\v1\richcombo.css" />
     <Content Include="ckfinder\skins\v1\skin.js" />
     <Content Include="ckfinder\skins\v1\uipanel.css" />
+    <Content Include="Common\DangNhap.aspx" />
+    <Content Include="Common\TrangChu.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Css\Admin\admin.css" />
     <Content Include="Css\Admin\bg_footer.png" />
@@ -1023,6 +1026,7 @@
     <Content Include="Scripts\vote.js" />
     <Content Include="Sitemap.aspx" />
     <Content Include="Tag.aspx" />
+    <Content Include="Test\Repeater.aspx" />
     <Content Include="ThuThuat\Default.aspx" />
     <Content Include="Topic.aspx" />
     <Content Include="UngDung\Chat_Room.aspx" />
@@ -1039,6 +1043,7 @@
     <Content Include="Uploads\_thumbs\Files\avatar_2x.png" />
     <Content Include="Uploads\_thumbs\Images\avatar_2x.png" />
     <Content Include="Upload\Default.aspx" />
+    <Content Include="User.aspx" />
     <Content Include="UserControl\AccountsDetailUC.ascx" />
     <Content Include="UserControl\AccountsListUC.ascx" />
     <Content Include="UserControl\BadgeUC.ascx" />
@@ -1047,6 +1052,8 @@
     <Content Include="UserControl\CommentUC.ascx" />
     <Content Include="Test\css.css" />
     <Content Include="UserControl\ContactUC.ascx" />
+    <Content Include="UserControl\CategoryDetailUC.ascx" />
+    <Content Include="UserControl\CategoryListUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="Accounts\login.css" />
     <Content Include="UserControl\TopicDetailUC.ascx" />
@@ -1215,6 +1222,13 @@
     <Compile Include="Admin\Tab.aspx.designer.cs">
       <DependentUpon>Tab.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Tag.aspx.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Tag.aspx.designer.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Topic.aspx.cs">
       <DependentUpon>Topic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1236,6 +1250,13 @@
     <Compile Include="Admin\Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Common\DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\DangNhap.aspx.designer.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Common\Default.Master.cs">
       <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1243,7 +1264,13 @@
     <Compile Include="Common\Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
-    <Compile Include="ConnectDAO.cs" />
+    <Compile Include="Common\TrangChu.aspx.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\TrangChu.aspx.designer.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1428,6 +1455,13 @@
     <Compile Include="Tag.aspx.designer.cs">
       <DependentUpon>Tag.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Test\Repeater.aspx.cs">
+      <DependentUpon>Repeater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\Repeater.aspx.designer.cs">
+      <DependentUpon>Repeater.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ThuThuat\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1512,6 +1546,13 @@
     <Compile Include="Upload\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\AccountsDetailUC.ascx.cs">
       <DependentUpon>AccountsDetailUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1560,6 +1601,20 @@
     </Compile>
     <Compile Include="UserControl\ContactUC.ascx.designer.cs">
       <DependentUpon>ContactUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CategoryDetailUC.ascx.cs">
+      <DependentUpon>CategoryDetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CategoryDetailUC.ascx.designer.cs">
+      <DependentUpon>CategoryDetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CategoryListUC.ascx.cs">
+      <DependentUpon>CategoryListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CategoryListUC.ascx.designer.cs">
+      <DependentUpon>CategoryListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\LoginUC.ascx.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>

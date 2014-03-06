@@ -23,7 +23,7 @@ namespace nguyenmanhthang.Admin
                 DataSet ds = AccountsBO.SelectInfoByAccounts_Username(Request.Cookies["administrator"].Value);
                 //imgAvatar.ImageUrl = ds.Tables[0].Rows[0]["Accounts_LinkAvatar"].ToString();
                 hplAccounts_Fullname.Text = "   Hi, " + ds.Tables[0].Rows[0]["Accounts_Fullname"].ToString();// xuất lời chào.
-                hplAccounts_Fullname.NavigateUrl = "~/Admin/Edit/EditAccounts.aspx?Accounts_Username=" + Request.Cookies["administrator"].Value;
+                hplAccounts_Fullname.NavigateUrl = "~/User.aspx?Accounts_Username=" + Request.Cookies["administrator"].Value;
             }
             catch
             {

@@ -83,8 +83,8 @@
 		<ul class="toggle">
 			<li class="icn_new_article"><asp:HyperLink ID="hplNewTopic" NavigateUrl="~/Admin/Topic.aspx" runat="server">Bài viết mới</asp:HyperLink></li>
 			<li class="icn_edit_article"><asp:HyperLink ID="HyperLink2" NavigateUrl="~/Admin/Topic.aspx?Edit=True" runat="server">Sửa bài viết</asp:HyperLink></li>
-			<li class="icn_categories"><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Admin/Topic.aspx" runat="server">Thể loại</asp:HyperLink></li>
-			<li class="icn_tags"><asp:HyperLink ID="HyperLink12" NavigateUrl="~/Admin/Topic.aspx" runat="server">Thẻ</asp:HyperLink></li>
+			<li class="icn_categories"><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Admin/Category.aspx" runat="server">Thể loại</asp:HyperLink></li>
+			<li class="icn_tags"><asp:HyperLink ID="HyperLink12" NavigateUrl="~/Admin/Tag.aspx" runat="server">Thẻ</asp:HyperLink></li>
 		</ul>
 		<h3>Quản lý Tài khoản</h3>
 		<ul class="toggle">

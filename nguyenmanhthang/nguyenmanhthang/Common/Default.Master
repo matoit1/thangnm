@@ -145,8 +145,9 @@
             </div>
             <div class="menuright">
                 <ul id="css3menu1" class="topmenu">
-                    <li class="toproot"><a href="" id="t" class="topopup">Đăng nhập</a></li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink39" runat="server" NavigateUrl="~/Accounts/Register.aspx">Đăng ký</asp:HyperLink></li>
+                    <li class="toproot"><asp:HyperLink ID="hplLogin" runat="server" CssClass="topopup">Đăng nhập</asp:HyperLink></li>
+                    <%--<li class="toproot"><a href="" id="t" class="topopup"><asp:Label ID="lblLogin" runat="server" Text="Đăng nhập"></asp:Label></a></li>--%>
+                    <li class="toproot"><asp:HyperLink ID="hplRegister" runat="server" NavigateUrl="~/Accounts/Register.aspx">Đăng ký</asp:HyperLink></li>
                 </ul>
             </div>
         </div>

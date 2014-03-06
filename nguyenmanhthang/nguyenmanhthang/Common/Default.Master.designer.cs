@@ -679,13 +679,22 @@ namespace nguyenmanhthang.Common {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink10;
         
         /// <summary>
-        /// HyperLink39 control.
+        /// hplLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink39;
+        protected global::System.Web.UI.WebControls.HyperLink hplLogin;
+        
+        /// <summary>
+        /// hplRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplRegister;
         
         /// <summary>
         /// panelInfoAccount control.

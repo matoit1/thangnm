@@ -13,21 +13,12 @@ namespace nguyenmanhthang {
     public partial class Tag {
         
         /// <summary>
-        /// txtTag control.
+        /// TopicListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTag;
-        
-        /// <summary>
-        /// btnSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::nguyenmanhthang.UserControl.TopicListUC TopicListUC1;
     }
 }

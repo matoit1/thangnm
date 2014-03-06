@@ -30,10 +30,48 @@ namespace nguyenmanhthang
                 {
                     ds.Tables[0].Rows[i]["link"] = RewriteUrl.ConvertToUnSign(ds.Tables[0].Rows[i]["Topic_Title"].ToString());
                 }
-                rpTopic.DataSource = ds;
+                PagedDataSource pgitems = new PagedDataSource();
+                System.Data.DataView dv = new System.Data.DataView(ds.Tables[0]);
+                pgitems.DataSource = dv;
+                pgitems.AllowPaging = true;
+                pgitems.PageSize = 5;
+                pgitems.CurrentPageIndex = PageNumber;
+                if (pgitems.PageCount > 1)
+                {
+                    rptPages.Visible = true;
+                    System.Collections.ArrayList pages = new System.Collections.ArrayList();
+                    for (int i = 0; i < pgitems.PageCount; i++)
+                        pages.Add((i + 1).ToString());
+                    rptPages.DataSource = pages;
+                    rptPages.DataBind();
+                }
+                else{
+                    rptPages.Visible = false;
+                }
+                rpTopic.DataSource = pgitems;
                 rpTopic.DataBind();
             }
             catch (Exception) { }
+        }
+
+        public int PageNumber
+        {
+            get
+            {
+                if (ViewState["PageNumber"] != null)
+                    return Convert.ToInt32(ViewState["PageNumber"]);
+                else
+                    return 0;
+            }
+            set
+            {
+                ViewState["PageNumber"] = value;
+            }
+        }
+        protected void rptPages_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            PageNumber = Convert.ToInt32(e.CommandArgument) - 1;
+            loadTopic();
         }
     }
 }

@@ -13,7 +13,7 @@ using nguyenmanhthang.Library.Common;
 
 namespace nguyenmanhthang.UserControl
 {
-    public partial class ListTopicUC : System.Web.UI.UserControl
+    public partial class TopicListUC : System.Web.UI.UserControl
     {
         #region "Khai Báo Biến, Thuộc tính, Sự kiện"
             public event EventHandler ViewTopic;

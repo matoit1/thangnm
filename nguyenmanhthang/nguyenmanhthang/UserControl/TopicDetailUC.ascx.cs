@@ -8,6 +8,7 @@ using System.Collections;
 using BusinessObject;
 using System.Data;
 using nguyenmanhthang.Library.Common;
+using nguyenmanhthang.Library.DataBase;
 
 namespace nguyenmanhthang.UserControl
 {
@@ -92,9 +93,9 @@ namespace nguyenmanhthang.UserControl
                 Value = "Freebies";
                 Key = "2";
                 slloadDropDownList.Add(Key, Value);
-                ddlTopic_Category.DataSource = slloadDropDownList;
-                ddlTopic_Category.DataTextField = "Value";
-                ddlTopic_Category.DataValueField = "Key";
+                ddlTopic_Category.DataSource = LoadAnimationDAO.Topic_SelectListbyTopic_Category(1000, 0);
+                ddlTopic_Category.DataTextField = "Topic_Title";
+                ddlTopic_Category.DataValueField = "Topic_ID";
                 ddlTopic_Category.DataBind();
             }
             catch
@@ -139,6 +140,7 @@ namespace nguyenmanhthang.UserControl
                     txtTopic_ID.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_ID"].ToString();
                     txtTopic_LastUpdate.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_LastUpdate"].ToString();
                     txtTopic_Visit.Text = dsDetailTopic.Tables[0].Rows[0]["Topic_Visit"].ToString();
+                    ddlTopic_Category.SelectedValue = dsDetailTopic.Tables[0].Rows[0]["Topic_Category"].ToString();
                 }
                 catch { }
             }

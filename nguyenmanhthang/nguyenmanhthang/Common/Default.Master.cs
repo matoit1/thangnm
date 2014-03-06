@@ -25,7 +25,9 @@ namespace nguyenmanhthang.Common
                         DataSet ds = AccountsBO.SelectInfoByAccounts_Username(Request.Cookies["administrator"].Value);
                         imgAvatar.ImageUrl = ds.Tables[0].Rows[0]["Accounts_LinkAvatar"].ToString();
                         lblWelcome.Text = "   Hi, " + ds.Tables[0].Rows[0]["Accounts_Fullname"].ToString();// xuất lời chào.
-                        hpEditAccount.NavigateUrl = "~/Admin/Edit/EditAccounts.aspx?Accounts_Username=" + Request.Cookies["administrator"].Value;
+                        hpEditAccount.NavigateUrl = "~/User.aspx?Accounts_Username=" + Request.Cookies["administrator"].Value;
+                        hplLogin.Visible = false;
+                        hplRegister.Visible = false;
                     }
                     catch
                     {
