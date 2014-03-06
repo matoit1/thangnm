@@ -135,7 +135,8 @@ AS
 BEGIN
 	SELECT Topic_ID, Topic_Author, Topic_Title, Topic_LinkImage, Topic_Category, Topic_Parent, Topic_Tag, Topic_Content, Topic_Description,Topic_Visit, Topic_Status, CONVERT(VARCHAR(10),Topic_LastUpdate,103)  AS [Topic_LastUpdate]
 	FROM Topic
-	WHERE Topic_Status=@Topic_Status
+	WHERE	Topic_Status = @Topic_Status
+			AND Topic_Category <> 0
 	ORDER BY Topic_ID DESC
 END
 
@@ -182,7 +183,7 @@ BEGIN
 	SELECT TOP (@Quantity) Topic_ID, Accounts.Accounts_Username, Topic_Title, Topic_LinkImage, Topic_Category, Topic_Parent, Topic_Tag, Topic_Description, Topic_Visit, Topic_Status,
 			CONVERT(varchar,Topic_LastUpdate,103)+ ', '+ CONVERT(varchar,Topic_LastUpdate,24)  AS [Topic_LastUpdate]
 	FROM Topic INNER JOIN Accounts ON Accounts.Accounts_ID = Topic.Topic_Author
-	WHERE Topic_Status=@Topic_Status
+	WHERE Topic_Status=@Topic_Status AND Topic_Category<>0
 	ORDER BY [Topic_LastUpdate] DESC
 END
 
@@ -209,3 +210,44 @@ END
 
 ----- Test	 Proc -----
 EXEC Topic_ASC_Visit 22
+
+
+
+----- 6. Topic_SelectListbyTopic_Category
+----- Delete Proc -----
+DROP PROCEDURE Topic_SelectListbyTopic_Category
+
+----- Create Proc -----
+CREATE PROCEDURE Topic_SelectListbyTopic_Category
+	@Quantity INT,
+	@Topic_Category INT
+AS
+BEGIN
+	SELECT TOP (@Quantity) Topic_ID, Topic_Author, Topic_Title, Topic_LinkImage, Topic_Category, Topic_Parent, Topic_Tag, Topic_Content, Topic_Description,Topic_Visit, Topic_Status, CONVERT(VARCHAR(10),Topic_LastUpdate,103)  AS [Topic_LastUpdate]
+	FROM Topic
+	WHERE (Topic_Category=@Topic_Category) AND (Topic_Status='TRUE')
+	ORDER BY Topic_ID DESC
+END
+
+----- Test	 Proc -----
+EXEC Topic_SelectListbyTopic_Category 100,0
+
+
+
+----- 10. Topic_SelectListbyTopic_Tag
+----- Delete Proc -----
+DROP PROCEDURE Topic_SelectListbyTopic_Tag
+
+----- Create Proc -----
+CREATE PROCEDURE Topic_SelectListbyTopic_Tag
+	@Topic_Tag NVARCHAR(500)
+AS
+BEGIN
+	SELECT Topic_ID, Topic_Author, Topic_Title, Topic_LinkImage, Topic_Category, Topic_Parent, Topic_Tag, Topic_Content, Topic_Description,Topic_Visit, Topic_Status, CONVERT(VARCHAR(10),Topic_LastUpdate,103)  AS [Topic_LastUpdate]
+	FROM Topic
+	WHERE Topic_Status='true' AND Topic_Category <> 0 AND (Topic_Tag LIKE '%' + @Topic_Tag + '%')
+	ORDER BY Topic_ID DESC
+END
+
+----- Test	 Proc -----
+EXEC Topic_SelectListbyTopic_Tag 'ThangNM'
