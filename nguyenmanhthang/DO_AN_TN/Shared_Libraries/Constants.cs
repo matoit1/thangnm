@@ -50,9 +50,12 @@ namespace Shared_Libraries.Constants
     /// </summary>
     public class Giao_Vien_Trang_Thai
     {
-        public const Int16 Da_Chuyen_CongTac = 1;
-        public const Int16 Da_Nghi_Huu = 2;
-        public const Int16 Bo_Viec = 3;
+        public const Int16 Chuyen_Cong_Tac = 1;
+        public const Int16 Nghi_Che_Do = 2;
+        public const Int16 Nghi_Phep = 3;
+        public const Int16 Tam_Dinh_Chi_Cong_Tac = 4;
+        public const Int16 Da_Nghi_Huu = 5;
+        public const Int16 Bo_Viec = 6;
     }
 
     /// <summary>
