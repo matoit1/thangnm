@@ -93,6 +93,7 @@
     <Compile Include="Shared_Libraries\Constants.cs" />
     <Compile Include="Shared_Libraries\GetListConstants.cs" />
     <Compile Include="Shared_Libraries\GetTextConstants.cs" />
+    <Compile Include="Shared_Libraries\Security.cs" />
     <Compile Include="Share_Interface\GiaoVien_SI.Master.cs">
       <DependentUpon>GiaoVien_SI.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,6 +124,7 @@
     </Compile>
     <Compile Include="UserControl\LoginUC.ascx.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\LoginUC.ascx.designer.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
