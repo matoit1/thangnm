@@ -20,52 +20,52 @@ namespace DO_AN_TN.UserControl
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string Accounts_Username = txtAccounts_Username.Text;
-                string Accounts_Password = Encrypt.Crypt(txtAccounts_Password.Text);
-                DataSet temp = AccountsBO.Login(Accounts_Username, Accounts_Password);
-                if (temp.Tables[0].Rows.Count > 0)
-                {
-                    state = true;
-                    Response.Cookies["administrator"].Value = Accounts_Username;
-                    if (chkRememberMe.Checked == true)
-                    {
-                        Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(10);
-                    }
-                    else
-                    {
-                        Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(1);
-                    }
-                    string url1 = (String)Session["url1"];
-                    if (Session["url1"] == null)
-                    {
-                        string l = "~/Admin/Default.aspx";
-                        Response.Redirect(l);
-                    }
-                    else
-                    {
-                        Response.Redirect(url1);
-                    }
-                }
-                else
-                {
-                    lblMsg.Text = "Sai tài khoản / mật khẩu";
-                    lblMsg.CssClass = "notificationError";
-                    if (Navigation != null)
-                    {
-                        Navigation(this, EventArgs.Empty);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = ex.ToString();
-                if (Navigation != null)
-                {
-                    Navigation(this, EventArgs.Empty);
-                }
-            }
+            //try
+            //{
+            //    string Accounts_Username = txtAccounts_Username.Text;
+            //    string Accounts_Password = Encrypt.Crypt(txtAccounts_Password.Text);
+            //    DataSet temp = AccountsBO.Login(Accounts_Username, Accounts_Password);
+            //    if (temp.Tables[0].Rows.Count > 0)
+            //    {
+            //        state = true;
+            //        Response.Cookies["administrator"].Value = Accounts_Username;
+            //        if (chkRememberMe.Checked == true)
+            //        {
+            //            Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(10);
+            //        }
+            //        else
+            //        {
+            //            Response.Cookies["administrator"].Expires = DateTime.Now.AddDays(1);
+            //        }
+            //        string url1 = (String)Session["url1"];
+            //        if (Session["url1"] == null)
+            //        {
+            //            string l = "~/Admin/Default.aspx";
+            //            Response.Redirect(l);
+            //        }
+            //        else
+            //        {
+            //            Response.Redirect(url1);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        lblMsg.Text = "Sai tài khoản / mật khẩu";
+            //        lblMsg.CssClass = "notificationError";
+            //        if (Navigation != null)
+            //        {
+            //            Navigation(this, EventArgs.Empty);
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    lblMsg.Text = ex.ToString();
+            //    if (Navigation != null)
+            //    {
+            //        Navigation(this, EventArgs.Empty);
+            //    }
+            //}
         }
     }
 }

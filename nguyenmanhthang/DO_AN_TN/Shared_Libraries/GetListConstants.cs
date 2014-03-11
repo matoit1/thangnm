@@ -9,6 +9,23 @@ namespace Shared_Libraries
 {
     public class GetListConstants
     {
+        #region "I. Constants - GetTextConstants - GetListConstants"
+        /// <summary> I.1. Quyen_Han_GLC ()</summary>
+        /// <returns></returns>
+        public static SortedList Quyen_Han_GLC()
+        {
+            SortedList output = new SortedList();
+            output.Add(Hoc_Vi_C.Tu_Tai, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Tu_Tai));
+            output.Add(Hoc_Vi_C.Cu_Nhan, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Cu_Nhan));
+            output.Add(Hoc_Vi_C.Ky_Su, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Ky_Su));
+            output.Add(Hoc_Vi_C.Thac_Si, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Thac_Si));
+            output.Add(Hoc_Vi_C.Tien_Si, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Tien_Si));
+            output.Add(Hoc_Vi_C.Tien_Si_Khoa_Hoc, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Tien_Si_Khoa_Hoc));
+            return output;
+        }
+
+        /// <summary> I.2. Hoc_Vi_GLC ()</summary>
+        /// <returns></returns>
         public static SortedList Hoc_Vi_GLC()
         {
             SortedList output = new SortedList();
@@ -21,6 +38,10 @@ namespace Shared_Libraries
             return output;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static SortedList Xep_Loai_Ket_Qua_Hoc_Tap_GLC()
         {
             SortedList output = new SortedList();
@@ -33,6 +54,10 @@ namespace Shared_Libraries
             return output;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static SortedList Tinh_Diem_Chuyen_Can_GLC()
         {
             SortedList output = new SortedList();
@@ -45,6 +70,10 @@ namespace Shared_Libraries
             return output;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static SortedList Chuc_Vu_GLC()
         {
             SortedList output = new SortedList();
@@ -57,6 +86,10 @@ namespace Shared_Libraries
             return output;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static SortedList Quan_He_Voi_Nguoi_Lien_He_GLC()
         {
             SortedList output = new SortedList();
@@ -72,6 +105,10 @@ namespace Shared_Libraries
             return output;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static SortedList Doan_Thanh_Nien_Cong_San_HCM_GLC()
         {
             SortedList output = new SortedList();
@@ -79,5 +116,6 @@ namespace Shared_Libraries
             output.Add(Doan_Thanh_Nien_Cong_San_HCM_C.Chua_Vao_Doan, GetTextConstants.Doan_Thanh_Nien_Cong_San_HCM_GTC(Doan_Thanh_Nien_Cong_San_HCM_C.Chua_Vao_Doan));
             return output;
         }
+        #endregion
     }
 }

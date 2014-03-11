@@ -9,7 +9,7 @@ namespace DO_AN_TN.Shared_Libraries
     public class Security
     {
         /// <summary>
-        /// EnCrypt (Mã hóa chuỗi theo )
+        /// EnCrypt (Mã hóa chuỗi theo thuật toán SHA1)
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
