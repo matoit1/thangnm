@@ -84,7 +84,8 @@
     <Compile Include="EntityObject\SinhVienEO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared_Libraries\Constants.cs" />
-    <Compile Include="Shared_Libraries\GetTextConstant.cs" />
+    <Compile Include="Shared_Libraries\GetListConstants.cs" />
+    <Compile Include="Shared_Libraries\GetTextConstants.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
