@@ -7,12 +7,30 @@ namespace Shared_Libraries
 {
     public class GetTextConstants
     {
-        /// <summary>
-        /// Hoc_Vi_GTC (Học vị)
-        /// </summary>
+        #region "I. Constants - GetTextConstants - GetListConstants"
+        /// <summary> I.1 Quyen_Han_GTC (Quyền hạn) </summary>
+        /// <param name="input"></param>
+        /// <returns>ouput</returns>
+        public static string Quyen_Han_GTC(Int16 input)
+        {
+            string ouput;
+            switch (input)
+            {
+                case 0: ouput = "Khách"; break;
+                case 1: ouput = "Quản trị viên"; break;
+                case 2: ouput = "Giảng Viên"; break;
+                case 3: ouput = "Sinh Viên"; break;
+                case 4: ouput = "Nhân viên"; break;
+                default: ouput = "Ẩn danh"; break;
+            }
+            return ouput;
+        }
+
+        /// <summary> I.2. Hoc_Vi_GTC (Học vị) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Hoc_Vi_GTC(int input){
+        public static string Hoc_Vi_GTC(Int16 input)
+        {
             string output="";
             switch (input){
                 case 1: output = "Tú Tài"; break;
@@ -26,8 +44,89 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary>
-        /// Xep_Loai_Ket_Qua_Hoc_Tap_GTC (Xếp loại kết quả học tập)
+        /// <summary> I.3. Gioi_Tinh_GTC (Giới tính) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string Gioi_Tinh_GTC(bool input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case true: output = "Nam"; break;
+                case false: output = "Nữ"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.4. Hon_Nhan_GTC (Hôn Nhân) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string Hon_Nhan_GTC(bool input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case true: output = "Đã kết hôn"; break;
+                case false: output = "Chưa kết hôn"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.5. Cong_Chuc_GTC (Công Chức) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string Cong_Chuc_GTC(bool input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case true: output = "Đã có công chức"; break;
+                case false: output = "Chưa có công chức"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.6. Trang_Thai_Giao_Vien_GTC (Trạng Thái Giáo Viên) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string Trang_Thai_Giao_Vien_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Chuyển công tác"; break;
+                case 2: output = "Nghỉ chế độ"; break;
+                case 3: output = "Nghỉ phép"; break;
+                case 4: output = "Tạm đình chỉ công tác"; break;
+                case 5: output = "Nghỉ hưu"; break;
+                case 6: output = "Bỏ việc"; break;
+                default: output = "NULL"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.6. Trang_Thai_Giao_Vien_GTC (Trạng Thái Giáo Viên) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string Trang_Thai_Sinh_Vien_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Chuyển công tác"; break;
+                case 2: output = "Nghỉ chế độ"; break;
+                case 3: output = "Nghỉ phép"; break;
+                case 4: output = "Tạm đình chỉ công tác"; break;
+                case 5: output = "Nghỉ hưu"; break;
+                case 6: output = "Bỏ việc"; break;
+                default: output = "NULL"; break;
+            }
+            return output;
+        }
+
+
+
+        /// <summary> I.3. Xep_Loai_Ket_Qua_Hoc_Tap_GTC (Xếp loại kết quả học tập) </summary>
         /// a) Loại đạt:Từ 9 đến 10:Xuất sắc
         /// Từ 8 đến cận 9:Giỏi
         /// Từ 7 đến cận 8:Khá
@@ -38,7 +137,7 @@ namespace Shared_Libraries
         /// </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Xep_Loai_Ket_Qua_Hoc_Tap_GTC(int input)
+        public static string Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Int16 input)
         {
             string output = "";
             switch (input)
@@ -54,15 +153,14 @@ namespace Shared_Libraries
             }
             return output;
         }
+        #endregion
 
-        /// <summary>
-        /// Tinh_Diem_Chuyen_Can_GTC (Tính điểm chuyên cần)
-        /// </summary>
+        /// <summary> Tinh_Diem_Chuyen_Can_GTC (Tính điểm chuyên cần) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static int Tinh_Diem_Chuyen_Can_GTC(int input)
+        public static Int16 Tinh_Diem_Chuyen_Can_GTC(Int16 input)
         {
-            int output = 10;
+            Int16 output;
             switch (input)
             {
                 case 1: output = 10; break;
@@ -75,12 +173,10 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary>
-        /// Chuc_Vu_GTC (Chức vụ)
-        /// </summary>
+        /// <summary> Chuc_Vu_GTC (Chức vụ) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Chuc_Vu_GTC(int input)
+        public static string Chuc_Vu_GTC(Int16 input)
         {
             string output = "Cán bộ nhân viên nhà trường";
             switch (input)
@@ -102,25 +198,7 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary>
-        /// Gioi_Tinh_GTC (Giới tính)
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns>output</returns>
-        public static string Gioi_Tinh_GTC(bool input)
-        {
-            string output = "";
-            switch (input)
-            {
-                case true: output = "Nam"; break;
-                case false: output = "Nữ"; break;
-            }
-            return output;
-        }
-
-        /// <summary>
-        /// Doan_Thanh_Nien_Cong_San_HCM_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh)
-        /// </summary>
+        /// <summary> Doan_Thanh_Nien_Cong_San_HCM_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
         public static string Doan_Thanh_Nien_Cong_San_HCM_GTC(bool input)
@@ -134,12 +212,10 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary>
-        /// Quan_He_Voi_Nguoi_Lien_He_GTC (Quan hệ với người liên hệ)
-        /// </summary>
+        /// <summary> Quan_He_Voi_Nguoi_Lien_He_GTC (Quan hệ với người liên hệ) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Quan_He_Voi_Nguoi_Lien_He_GTC(int input)
+        public static string Quan_He_Voi_Nguoi_Lien_He_GTC(Int16 input)
         {
             string output = "";
             switch (input)
