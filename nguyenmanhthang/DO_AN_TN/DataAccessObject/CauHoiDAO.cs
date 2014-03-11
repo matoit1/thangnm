@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace EntityObject
+namespace DO_AN_TN.DataAccessObject
 {
-    public class LichHocEO
+    public class CauHoiDAO
     {
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DataAccessObject
+namespace DO_AN_TN.DataAccessObject
 {
-    public class LichHocDAO
+    public class ConfigDAO
     {
     }
 }
