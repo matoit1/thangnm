@@ -53,6 +53,7 @@
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -120,13 +121,18 @@
     <Compile Include="Share_Interface\SinhVien_SI.Master.designer.cs">
       <DependentUpon>SinhVien_SI.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\LoginUC.ascx.cs">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LoginUC.ascx.designer.cs">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="GiaoVien\" />
     <Folder Include="QuanTri\" />
     <Folder Include="SinhVien\" />
-    <Folder Include="UserControl\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Share_Interface\GiaoVien_SI.Master" />
