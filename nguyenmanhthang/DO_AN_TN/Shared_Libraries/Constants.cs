@@ -105,4 +105,15 @@ namespace Shared_Libraries.Constants
         public const double Diem_Giua_Ky = 0.2;
         public const double Diem_Thi = 0.7;
     }
+
+    public class DateTimeFomat
+    {
+        public const string DISPLAY_DATE_FORMAT = "dd/MM/yyyy";
+        public const string DISPLAY_DATETIME_FORMAT = "dd/MM/yyyy HH:mm";
+    }
+
+    public class NumberFomat
+    {
+        public const string DISPLAY_NUMBER = "###,##0.######";
+    }
 }
