@@ -15,12 +15,11 @@ namespace Shared_Libraries
         public static SortedList Quyen_Han_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(Hoc_Vi_C.Tu_Tai, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Tu_Tai));
-            output.Add(Hoc_Vi_C.Cu_Nhan, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Cu_Nhan));
-            output.Add(Hoc_Vi_C.Ky_Su, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Ky_Su));
-            output.Add(Hoc_Vi_C.Thac_Si, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Thac_Si));
-            output.Add(Hoc_Vi_C.Tien_Si, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Tien_Si));
-            output.Add(Hoc_Vi_C.Tien_Si_Khoa_Hoc, GetTextConstants.Hoc_Vi_GTC(Hoc_Vi_C.Tien_Si_Khoa_Hoc));
+            output.Add(Quyen_Han_C.Khach, GetTextConstants.Quyen_Han_GTC(Quyen_Han_C.Khach));
+            output.Add(Quyen_Han_C.Quan_Tri_Vien, GetTextConstants.Quyen_Han_GTC(Quyen_Han_C.Quan_Tri_Vien));
+            output.Add(Quyen_Han_C.Giang_Vien, GetTextConstants.Quyen_Han_GTC(Quyen_Han_C.Giang_Vien));
+            output.Add(Quyen_Han_C.Sinh_Vien, GetTextConstants.Quyen_Han_GTC(Quyen_Han_C.Sinh_Vien));
+            output.Add(Quyen_Han_C.Nhan_Vien, GetTextConstants.Quyen_Han_GTC(Quyen_Han_C.Nhan_Vien));
             return output;
         }
 
@@ -87,12 +86,12 @@ namespace Shared_Libraries
         public static SortedList Trang_Thai_Sinh_Vien_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(Trang_Thai_Sinh_Vien_C.Chuyen_Truong, GetTextConstants.Trang_Thai_Giao_Vien_GTC(Trang_Thai_Sinh_Vien_C.Chuyen_Truong));
-            output.Add(Trang_Thai_Sinh_Vien_C.Chuyen_Lop, GetTextConstants.Trang_Thai_Giao_Vien_GTC(Trang_Thai_Sinh_Vien_C.Chuyen_Lop));
-            output.Add(Trang_Thai_Sinh_Vien_C.Bao_Luu_Ket_Qua, GetTextConstants.Trang_Thai_Giao_Vien_GTC(Trang_Thai_Sinh_Vien_C.Bao_Luu_Ket_Qua));
-            output.Add(Trang_Thai_Sinh_Vien_C.Bo_Hoc, GetTextConstants.Trang_Thai_Giao_Vien_GTC(Trang_Thai_Sinh_Vien_C.Bo_Hoc));
-            output.Add(Trang_Thai_Sinh_Vien_C.Luu_Ban, GetTextConstants.Trang_Thai_Giao_Vien_GTC(Trang_Thai_Sinh_Vien_C.Luu_Ban));
-            output.Add(Trang_Thai_Sinh_Vien_C.Duoi_Hoc, GetTextConstants.Trang_Thai_Giao_Vien_GTC(Trang_Thai_Sinh_Vien_C.Duoi_Hoc));
+            output.Add(Trang_Thai_Sinh_Vien_C.Chuyen_Truong, GetTextConstants.Trang_Thai_Sinh_Vien_GTC(Trang_Thai_Sinh_Vien_C.Chuyen_Truong));
+            output.Add(Trang_Thai_Sinh_Vien_C.Chuyen_Lop, GetTextConstants.Trang_Thai_Sinh_Vien_GTC(Trang_Thai_Sinh_Vien_C.Chuyen_Lop));
+            output.Add(Trang_Thai_Sinh_Vien_C.Bao_Luu_Ket_Qua, GetTextConstants.Trang_Thai_Sinh_Vien_GTC(Trang_Thai_Sinh_Vien_C.Bao_Luu_Ket_Qua));
+            output.Add(Trang_Thai_Sinh_Vien_C.Bo_Hoc, GetTextConstants.Trang_Thai_Sinh_Vien_GTC(Trang_Thai_Sinh_Vien_C.Bo_Hoc));
+            output.Add(Trang_Thai_Sinh_Vien_C.Luu_Ban, GetTextConstants.Trang_Thai_Sinh_Vien_GTC(Trang_Thai_Sinh_Vien_C.Luu_Ban));
+            output.Add(Trang_Thai_Sinh_Vien_C.Duoi_Hoc, GetTextConstants.Trang_Thai_Sinh_Vien_GTC(Trang_Thai_Sinh_Vien_C.Duoi_Hoc));
             return output;
         }
 
