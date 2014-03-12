@@ -3,3 +3,12 @@ D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DO_AN_TN.pdb
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\ResolveAssemblyReference.cache
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\DO_AN_TN.dll
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\DO_AN_TN.pdb
+E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\ResolveAssemblyReference.cache
+E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\DO_AN_TN.dll
+E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\DO_AN_TN.pdb
+E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DO_AN_TN.dll
+E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DO_AN_TN.pdb
+D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DataAccessObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\EntityObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DataAccessObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\EntityObject.pdb

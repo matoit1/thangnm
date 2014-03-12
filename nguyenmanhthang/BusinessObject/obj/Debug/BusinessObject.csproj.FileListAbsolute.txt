@@ -7,3 +7,12 @@ D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\EntityObject.pdb
 D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\ResolveAssemblyReference.cache
 D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\BusinessObject.dll
 D:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\BusinessObject.pdb
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\BusinessObject.dll
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\BusinessObject.pdb
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\DataAccessObject.dll
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\EntityObject.dll
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\DataAccessObject.pdb
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\bin\Debug\EntityObject.pdb
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\ResolveAssemblyReference.cache
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\BusinessObject.dll
+E:\Project_ASP.NET\nguyenmanhthang\BusinessObject\obj\Debug\BusinessObject.pdb
