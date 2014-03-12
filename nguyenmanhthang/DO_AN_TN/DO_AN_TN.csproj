@@ -50,9 +50,49 @@
   <ItemGroup>
     <Content Include="App_Themes\layout.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\change.jpg" />
+    <Content Include="Images\Interface\breadcrumb_divider.png" />
+    <Content Include="Images\Interface\btn_submit.png" />
+    <Content Include="Images\Interface\btn_submit_2.png" />
+    <Content Include="Images\Interface\btn_view_site.png" />
+    <Content Include="Images\Interface\header_bg.png" />
+    <Content Include="Images\Interface\header_shadow.png" />
+    <Content Include="Images\Interface\icn_add_user.png" />
+    <Content Include="Images\Interface\icn_alert_error.png" />
+    <Content Include="Images\Interface\icn_alert_info.png" />
+    <Content Include="Images\Interface\icn_alert_success.png" />
+    <Content Include="Images\Interface\icn_alert_warning.png" />
+    <Content Include="Images\Interface\icn_audio.png" />
+    <Content Include="Images\Interface\icn_categories.png" />
+    <Content Include="Images\Interface\icn_edit.png" />
+    <Content Include="Images\Interface\icn_edit_article.png" />
+    <Content Include="Images\Interface\icn_folder.png" />
+    <Content Include="Images\Interface\icn_jump_back.png" />
+    <Content Include="Images\Interface\icn_logout.png" />
+    <Content Include="Images\Interface\icn_new_article.png" />
+    <Content Include="Images\Interface\icn_photo.png" />
+    <Content Include="Images\Interface\icn_profile.png" />
+    <Content Include="Images\Interface\icn_search.png" />
+    <Content Include="Images\Interface\icn_security.png" />
+    <Content Include="Images\Interface\icn_settings.png" />
+    <Content Include="Images\Interface\icn_tags.png" />
+    <Content Include="Images\Interface\icn_trash.png" />
+    <Content Include="Images\Interface\icn_user.png" />
+    <Content Include="Images\Interface\icn_video.png" />
+    <Content Include="Images\Interface\icn_view_users.png" />
+    <Content Include="Images\Interface\module_footer_bg.png" />
+    <Content Include="Images\Interface\post_message.png" />
+    <Content Include="Images\Interface\secondary_bar.png" />
+    <Content Include="Images\Interface\secondary_bar_shadow.png" />
+    <Content Include="Images\Interface\sidebar.png" />
+    <Content Include="Images\Interface\sidebar_divider.png" />
+    <Content Include="Images\Interface\sidebar_shadow.png" />
+    <Content Include="Images\Interface\table_sorter_header.png" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Test\Captcha.aspx" />
+    <Content Include="Test\Drop.aspx" />
     <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -90,9 +130,13 @@
     <Compile Include="EntityObject\PhanCongCongTacEO.cs" />
     <Compile Include="EntityObject\SinhVienEO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared_Libraries\CaptchaProvider.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Shared_Libraries\Constants.cs" />
     <Compile Include="Shared_Libraries\GetListConstants.cs" />
     <Compile Include="Shared_Libraries\GetTextConstants.cs" />
+    <Compile Include="Shared_Libraries\Common.cs" />
     <Compile Include="Shared_Libraries\Security.cs" />
     <Compile Include="Share_Interface\GiaoVien_SI.Master.cs">
       <DependentUpon>GiaoVien_SI.Master</DependentUpon>
@@ -122,6 +166,20 @@
     <Compile Include="Share_Interface\SinhVien_SI.Master.designer.cs">
       <DependentUpon>SinhVien_SI.Master</DependentUpon>
     </Compile>
+    <Compile Include="Test\Captcha.aspx.cs">
+      <DependentUpon>Captcha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\Captcha.aspx.designer.cs">
+      <DependentUpon>Captcha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Drop.aspx.cs">
+      <DependentUpon>Drop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\Drop.aspx.designer.cs">
+      <DependentUpon>Drop.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\LoginUC.ascx.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,6 +191,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="GiaoVien\" />
+    <Folder Include="Images\Temp\" />
     <Folder Include="QuanTri\" />
     <Folder Include="SinhVien\" />
   </ItemGroup>
