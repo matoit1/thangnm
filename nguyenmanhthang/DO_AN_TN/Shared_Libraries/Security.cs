@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 
-namespace DO_AN_TN.Shared_Libraries
+namespace Shared_Libraries
 {
     public class Security
     {

@@ -21,7 +21,7 @@ namespace Shared_Libraries
                 case 2: ouput = "Giảng Viên"; break;
                 case 3: ouput = "Sinh Viên"; break;
                 case 4: ouput = "Nhân viên"; break;
-                default: ouput = "Ẩn danh"; break;
+                default: ouput = "N/A"; break;
             }
             return ouput;
         }
@@ -39,7 +39,7 @@ namespace Shared_Libraries
                 case 4: output = "Thạc Sĩ"; break;
                 case 5: output = "Tiến Sĩ"; break;
                 case 6: output = "Tiến Sĩ Khoa Học"; break;
-                default: output = "Khác"; break;
+                default: output = "N/A"; break;
             }
             return output;
         }
@@ -100,12 +100,12 @@ namespace Shared_Libraries
                 case 4: output = "Tạm đình chỉ công tác"; break;
                 case 5: output = "Nghỉ hưu"; break;
                 case 6: output = "Bỏ việc"; break;
-                default: output = "NULL"; break;
+                default: output = "N/A"; break;
             }
             return output;
         }
 
-        /// <summary> I.6. Trang_Thai_Giao_Vien_GTC (Trạng Thái Giáo Viên) </summary>
+        /// <summary> I.7. Trang_Thai_Sinh_Vien_GTC (Trạng Thái Sinh Viên) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
         public static string Trang_Thai_Sinh_Vien_GTC(Int16 input)
@@ -113,20 +113,72 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Chuyển công tác"; break;
-                case 2: output = "Nghỉ chế độ"; break;
-                case 3: output = "Nghỉ phép"; break;
-                case 4: output = "Tạm đình chỉ công tác"; break;
-                case 5: output = "Nghỉ hưu"; break;
-                case 6: output = "Bỏ việc"; break;
-                default: output = "NULL"; break;
+                case 1: output = "Chuyển trường"; break;
+                case 2: output = "Chuyển lớp"; break;
+                case 3: output = "Bảo lưu kết quả"; break;
+                case 4: output = "Bỏ học"; break;
+                case 5: output = "Lưu ban"; break;
+                case 6: output = "Đuổi học"; break;
+                default: output = "N/A"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.8. Doan_Thanh_Nien_Cong_San_HCM_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string Doan_Thanh_Nien_Cong_San_HCM_GTC(bool input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case true: output = "Đã vào đoàn"; break;
+                case false: output = "Chưa vào đoàn"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.9. Quan_He_Voi_Nguoi_Lien_He_GTC (Quan hệ với người liên hệ) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string Quan_He_Voi_Nguoi_Lien_He_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Bố"; break;
+                case 2: output = "Mẹ"; break;
+                case 3: output = "Anh"; break;
+                case 4: output = "Chị"; break;
+                case 5: output = "Bác"; break;
+                case 6: output = "Chú"; break;
+                case 7: output = "Cô"; break;
+                case 8: output = "Dì"; break;
+                case 9: output = "N/A"; break;
+            }
+            return output;
+        }
+
+        /// <summary>  I.10 He_So_Tinh_Diem_GTC (Hệ số tính điểm)  </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string He_So_Tinh_Diem_GTC(double input)
+        {
+            int medial = Convert.ToInt32(input * 10);
+            string output;
+            switch (medial)
+            {
+                case 1: output = "Điểm chuyên cần"; break;
+                case 2: output = "Điểm giữa kỳ"; break;
+                case 7: output = "Điểm thi"; break;
+                default: output = "N/A"; break;
             }
             return output;
         }
 
 
 
-        /// <summary> I.3. Xep_Loai_Ket_Qua_Hoc_Tap_GTC (Xếp loại kết quả học tập) </summary>
+        /// <summary> I.11. Xep_Loai_Ket_Qua_Hoc_Tap_GTC (Xếp loại kết quả học tập) </summary>
         /// a) Loại đạt:Từ 9 đến 10:Xuất sắc
         /// Từ 8 đến cận 9:Giỏi
         /// Từ 7 đến cận 8:Khá
@@ -142,20 +194,20 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 9: case 10: output = "Xuất Sắc"; break;
+                case 9: output = "Xuất Sắc"; break;
                 case 8: output = "Giỏi"; break;
                 case 7: output = "Khá"; break;
                 case 6: output = "Trung Bình Khá"; break;
                 case 5: output = "Trung Bình"; break;
                 case 4: output = "Yếu"; break;
                 case 3: output = "Kém"; break;
-                default: output = "NULL"; break;
+                default: output = "N/A"; break;
             }
             return output;
         }
         #endregion
 
-        /// <summary> Tinh_Diem_Chuyen_Can_GTC (Tính điểm chuyên cần) </summary>
+        /// <summary> I.12. Tinh_Diem_Chuyen_Can_GTC (Tính điểm chuyên cần) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
         public static Int16 Tinh_Diem_Chuyen_Can_GTC(Int16 input)
@@ -173,7 +225,7 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> Chuc_Vu_GTC (Chức vụ) </summary>
+        /// <summary> I.13. Chuc_Vu_GTC (Chức vụ) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
         public static string Chuc_Vu_GTC(Int16 input)
@@ -193,42 +245,9 @@ namespace Shared_Libraries
                 case 52: output = "Trưởng Bộ Môn Web"; break;
                 case 53: output = "Trưởng Bộ Môn Đồ họa"; break;
                 case 54: output = "Trưởng Bộ Môn Bảo trì"; break;
-                default: output = "Cán bộ nhân viên nhà trường"; break;
-            }
-            return output;
-        }
-
-        /// <summary> Doan_Thanh_Nien_Cong_San_HCM_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
-        /// <param name="input"></param>
-        /// <returns>output</returns>
-        public static string Doan_Thanh_Nien_Cong_San_HCM_GTC(bool input)
-        {
-            string output = "";
-            switch (input)
-            {
-                case true: output = "Đã vào đoàn"; break;
-                case false: output = "Chưa vào đoàn"; break;
-            }
-            return output;
-        }
-
-        /// <summary> Quan_He_Voi_Nguoi_Lien_He_GTC (Quan hệ với người liên hệ) </summary>
-        /// <param name="input"></param>
-        /// <returns>output</returns>
-        public static string Quan_He_Voi_Nguoi_Lien_He_GTC(Int16 input)
-        {
-            string output = "";
-            switch (input)
-            {
-                case 1: output = "Bố"; break;
-                case 2: output = "Mẹ"; break;
-                case 3: output = "Anh"; break;
-                case 4: output = "Chị"; break;
-                case 5: output = "Bác"; break;
-                case 6: output = "Chú"; break;
-                case 7: output = "Cô"; break;
-                case 8: output = "Dì"; break;
-                case 9: output = "Khác"; break;
+                case 55: output = "Cán bộ nhân viên nhà trường"; break;
+                default: output = "N/A"; break;
+                    
             }
             return output;
         }

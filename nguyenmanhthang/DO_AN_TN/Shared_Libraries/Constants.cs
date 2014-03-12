@@ -109,6 +109,51 @@ namespace Shared_Libraries.Constants
         public const double Diem_Giua_Ky = 0.2;
         public const double Diem_Thi = 0.7;
     }
+
+    /// <summary> I.11. Xep_Loai_Ket_Qua_Hoc_Tap_C (Xếp loại kết quả học tập) </summary>
+    /// 
+    public class Xep_Loai_Ket_Qua_Hoc_Tap_C
+    {
+        public const Int16 Xuat_Sac = 9;
+        public const Int16 Gioi = 8;
+        public const Int16 Kha = 7;
+        public const Int16 Trung_Binh_Kha = 6;
+        public const Int16 Trung_Binh = 5;
+        public const Int16 Yeu = 4;
+        public const Int16 Kem = 3;
+    }
+
+    /// <summary> I.12. Tinh_Diem_Chuyen_Can_C (Tính điểm chuyên cần) </summary>
+    /// 
+    public class Tinh_Diem_Chuyen_Can_C
+    {
+        public const Int16 Mot_Buoi = 1;
+        public const Int16 Hai_Buoi = 2;
+        public const Int16 Ba_Buoi = 3;
+        public const Int16 Bon_Buoi = 4;
+        public const Int16 Nam_Buoi = 5;
+    }
+
+
+
+    /// <summary> I.13. Chuc_Vu_C (Chức vụ) </summary>
+    /// 
+    public class Chuc_Vu_C
+    {
+        public const Int16 Vien_Truong = 1;
+        public const Int16 Pho_Vien_Truong = 2;
+        public const Int16 Truong_Khoa = 3;
+        public const Int16 Pho_Khoa = 4;
+        public const Int16 Truong_Phong_Dao_Tao = 5;
+        public const Int16 Pho_Phong_Dao_Tao = 6;
+        public const Int16 Van_Thu = 7;
+        public const Int16 Truong_Bo_Mon_Mang = 50;
+        public const Int16 Truong_Bo_Mon_Mobile = 51;
+        public const Int16 Truong_Bo_Mon_Web = 52;
+        public const Int16 Truong_Bo_Mon_Do_Hoa = 53;
+        public const Int16 Truong_Bo_Mon_Bao_Tri = 54;
+        public const Int16 Can_Bo_Nhan_Vien_Nha_Truong = 55;
+    }
     #endregion
 
     #region "II. Định dạng"
