@@ -12,19 +12,22 @@ namespace DO_AN_TN.Test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            loadQuyen_Han_GLC();
-            loadHoc_Vi_GLC();
-            loadGioi_Tinh_GLC();
-            loadHon_Nhan_GLC();
-            loadCong_Chuc_GLC();
-            loadTrang_Thai_Giao_Vien_GLC();
-            loadTrang_Thai_Sinh_Vien_GLC();
-            loadDoan_Thanh_Nien_Cong_San_HCM_GLC();
-            loadQuan_He_Voi_Nguoi_Lien_He_GLC();
-            loadHe_So_Tinh_Diem_GLC();
-            loadXep_Loai_Ket_Qua_Hoc_Tap_GLC();
-            loadTinh_Diem_Chuyen_Can_GLC();
-            loadChuc_Vu_GLC();
+            if (!IsPostBack)
+            {
+                loadQuyen_Han_GLC();
+                loadHoc_Vi_GLC();
+                loadGioi_Tinh_GLC();
+                loadHon_Nhan_GLC();
+                loadCong_Chuc_GLC();
+                loadTrang_Thai_Giao_Vien_GLC();
+                loadTrang_Thai_Sinh_Vien_GLC();
+                loadDoan_Thanh_Nien_Cong_San_HCM_GLC();
+                loadQuan_He_Voi_Nguoi_Lien_He_GLC();
+                loadHe_So_Tinh_Diem_GLC();
+                loadXep_Loai_Ket_Qua_Hoc_Tap_GLC();
+                loadTinh_Diem_Chuyen_Can_GLC();
+                loadChuc_Vu_GLC();
+            }
         }
 
         public void loadQuyen_Han_GLC()
@@ -129,6 +132,23 @@ namespace DO_AN_TN.Test
             ddlSelectList13.DataTextField = "Value";
             ddlSelectList13.DataValueField = "Key";
             ddlSelectList13.DataBind();
+        }
+
+        protected void btnCheck_Click(object sender, EventArgs e)
+        {
+            lblMsg1.Text = ddlSelectList1.SelectedItem.Value.ToString() + " <=> " + ddlSelectList1.SelectedItem.Text.ToString();
+            lblMsg2.Text = ddlSelectList2.SelectedItem.Value.ToString() + " <=> " + ddlSelectList2.SelectedItem.Text.ToString();
+            lblMsg3.Text = ddlSelectList3.SelectedItem.Value.ToString() + " <=> " + ddlSelectList3.SelectedItem.Text.ToString();
+            lblMsg4.Text = ddlSelectList4.SelectedItem.Value.ToString() + " <=> " + ddlSelectList4.SelectedItem.Text.ToString();
+            lblMsg5.Text = ddlSelectList5.SelectedItem.Value.ToString() + " <=> " + ddlSelectList5.SelectedItem.Text.ToString();
+            lblMsg6.Text = ddlSelectList6.SelectedItem.Value.ToString() + " <=> " + ddlSelectList6.SelectedItem.Text.ToString();
+            lblMsg7.Text = ddlSelectList7.SelectedItem.Value.ToString() + " <=> " + ddlSelectList7.SelectedItem.Text.ToString();
+            lblMsg8.Text = ddlSelectList8.SelectedItem.Value.ToString() + " <=> " + ddlSelectList8.SelectedItem.Text.ToString();
+            lblMsg9.Text = ddlSelectList9.SelectedItem.Value.ToString() + " <=> " + ddlSelectList9.SelectedItem.Text.ToString();
+            lblMsg10.Text = ddlSelectList10.SelectedItem.Value.ToString() + " <=> " + ddlSelectList10.SelectedItem.Text.ToString();
+            lblMsg11.Text = ddlSelectList11.SelectedItem.Value.ToString() + " <=> " + ddlSelectList11.SelectedItem.Text.ToString();
+            lblMsg12.Text = ddlSelectList12.SelectedItem.Value.ToString() + " <=> " + ddlSelectList12.SelectedItem.Text.ToString();
+            lblMsg13.Text = ddlSelectList13.SelectedItem.Value.ToString() + " <=> " + ddlSelectList13.SelectedItem.Text.ToString();
         }
     }
 }
