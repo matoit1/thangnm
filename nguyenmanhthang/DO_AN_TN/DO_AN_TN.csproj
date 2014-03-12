@@ -96,7 +96,10 @@
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="Test\Captcha.aspx" />
     <Content Include="Test\Drop.aspx" />
+    <Content Include="Test\List.aspx" />
     <Content Include="UserControl\LoginUC.ascx" />
+    <Content Include="UserControl\SinhVien_DetailUC.ascx" />
+    <Content Include="UserControl\SinhVien_ListUC.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -204,12 +207,33 @@
     <Compile Include="Test\Drop.aspx.designer.cs">
       <DependentUpon>Drop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Test\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\LoginUC.ascx.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\LoginUC.ascx.designer.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SinhVien_DetailUC.ascx.cs">
+      <DependentUpon>SinhVien_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SinhVien_DetailUC.ascx.designer.cs">
+      <DependentUpon>SinhVien_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SinhVien_ListUC.ascx.cs">
+      <DependentUpon>SinhVien_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SinhVien_ListUC.ascx.designer.cs">
+      <DependentUpon>SinhVien_ListUC.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +251,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Share_Interface\QuanTri_SI.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessObject\DataAccessObject.csproj">
+      <Project>{E2CADB93-ACB9-42FB-A1B5-AAC01F9614F5}</Project>
+      <Name>DataAccessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityObject\EntityObject.csproj">
+      <Project>{D32F71A4-174D-4E87-8CED-8CB2E6E0D4D3}</Project>
+      <Name>EntityObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
