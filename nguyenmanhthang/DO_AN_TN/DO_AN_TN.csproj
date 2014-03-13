@@ -54,6 +54,14 @@
   <ItemGroup>
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\Toolbar.css" />
+    <Content Include="Other\DLL\AjaxControlToolkit.dll" />
+    <Content Include="Other\DLL\CKEditor.NET.dll" />
+    <Content Include="Other\DLL\CKFinder.dll" />
+    <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
+    <Content Include="Other\DLL\FCAP.Controls.dll" />
+    <Content Include="Other\DLL\Microsoft.Sharepoint.Sandbox.dll" />
+    <Content Include="Other\DLL\MSCaptcha.dll" />
+    <Content Include="Other\DLL\Recaptcha.dll" />
     <Content Include="Other\DLL\SCS.Web.UI.WebControls.Toolbar.dll" />
     <Content Include="Default.aspx" />
     <Content Include="GiaoVien\Default.aspx" />
