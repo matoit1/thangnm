@@ -54,7 +54,7 @@
   <ItemGroup>
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\Toolbar.css" />
-    <Content Include="bin\SCS.Web.UI.WebControls.Toolbar.dll" />
+    <Content Include="Other\DLL\SCS.Web.UI.WebControls.Toolbar.dll" />
     <Content Include="Default.aspx" />
     <Content Include="GiaoVien\Default.aspx" />
     <Content Include="Images\change.jpg" />
@@ -173,6 +173,7 @@
     <Content Include="Images\Interface\sidebar_divider.png" />
     <Content Include="Images\Interface\sidebar_shadow.png" />
     <Content Include="Images\Interface\table_sorter_header.png" />
+    <Content Include="Other\SQL_Query\BTL_DB2.sql" />
     <Content Include="QuanTri\Default.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -330,8 +331,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
     <Folder Include="Images\Temp\" />
-    <Folder Include="Shared_Libraries\DLL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Share_Interface\GiaoVien_SI.Master" />
