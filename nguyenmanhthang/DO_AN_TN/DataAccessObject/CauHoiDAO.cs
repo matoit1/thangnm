@@ -7,5 +7,6 @@ namespace DO_AN_TN.DataAccessObject
 {
     public class CauHoiDAO
     {
+
     }
 }
