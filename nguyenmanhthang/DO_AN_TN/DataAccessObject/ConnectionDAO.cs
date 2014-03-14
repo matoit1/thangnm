@@ -7,19 +7,18 @@ using System.Configuration;
 
 namespace DataAccessObject
 {
-    public static class Connection
+    public static class ConnectionDAO
     {
-        private static string connStr1 = ConfigurationManager.ConnectionStrings["connect"].ConnectionString;
-        private static string connStr2 = ConfigurationManager.ConnectionStrings["connect_public"].ConnectionString;
+        private static string connStr = ConfigurationManager.ConnectionStrings["connectdb"].ConnectionString;
         public static SqlConnection getConnection()
         {
             try
             {
-                return new SqlConnection(connStr1);
+                return new SqlConnection(connStr);
             }
-            catch
+            catch(Exception ex)
             {
-                return new SqlConnection(connStr2);
+                return new SqlConnection(ex.Message);
             }
         }
     }
