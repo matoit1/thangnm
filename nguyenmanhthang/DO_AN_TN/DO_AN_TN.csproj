@@ -191,7 +191,21 @@
     <Content Include="Test\Drop.aspx" />
     <Content Include="Test\List.aspx" />
     <Content Include="Test\Toolbar.aspx" />
+    <Content Include="UserControl\CauHoi_DetailUC.ascx" />
+    <Content Include="UserControl\CauHoi_ListUC.ascx" />
+    <Content Include="UserControl\DiemThi_DetailUC.ascx" />
+    <Content Include="UserControl\DiemThi_ListUC.ascx" />
+    <Content Include="UserControl\GiangVien_DetailUC.ascx" />
+    <Content Include="UserControl\GiangVien_ListUC.ascx" />
+    <Content Include="UserControl\LichDayVaHoc_DetailUC.ascx" />
+    <Content Include="UserControl\LichDayVaHoc_ListUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
+    <Content Include="UserControl\LopHoc_DetailUC.ascx" />
+    <Content Include="UserControl\LopHoc_ListUC.ascx" />
+    <Content Include="UserControl\MonHoc_DetailUC.ascx" />
+    <Content Include="UserControl\MonHoc_ListUC.ascx" />
+    <Content Include="UserControl\PhanCongCongTac_DetailUC.ascx" />
+    <Content Include="UserControl\PhanCongCongTac_ListUC.ascx" />
     <Content Include="UserControl\SinhVien_DetailUC.ascx" />
     <Content Include="UserControl\SinhVien_ListUC.ascx" />
     <Content Include="Web.config" />
@@ -315,12 +329,110 @@
     <Compile Include="Test\Toolbar.aspx.designer.cs">
       <DependentUpon>Toolbar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\CauHoi_DetailUC.ascx.cs">
+      <DependentUpon>CauHoi_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CauHoi_DetailUC.ascx.designer.cs">
+      <DependentUpon>CauHoi_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\CauHoi_ListUC.ascx.cs">
+      <DependentUpon>CauHoi_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\CauHoi_ListUC.ascx.designer.cs">
+      <DependentUpon>CauHoi_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiemThi_DetailUC.ascx.cs">
+      <DependentUpon>DiemThi_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiemThi_DetailUC.ascx.designer.cs">
+      <DependentUpon>DiemThi_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiemThi_ListUC.ascx.cs">
+      <DependentUpon>DiemThi_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiemThi_ListUC.ascx.designer.cs">
+      <DependentUpon>DiemThi_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GiangVien_DetailUC.ascx.cs">
+      <DependentUpon>GiangVien_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\GiangVien_DetailUC.ascx.designer.cs">
+      <DependentUpon>GiangVien_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GiangVien_ListUC.ascx.cs">
+      <DependentUpon>GiangVien_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\GiangVien_ListUC.ascx.designer.cs">
+      <DependentUpon>GiangVien_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichDayVaHoc_DetailUC.ascx.cs">
+      <DependentUpon>LichDayVaHoc_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichDayVaHoc_DetailUC.ascx.designer.cs">
+      <DependentUpon>LichDayVaHoc_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LichDayVaHoc_ListUC.ascx.cs">
+      <DependentUpon>LichDayVaHoc_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LichDayVaHoc_ListUC.ascx.designer.cs">
+      <DependentUpon>LichDayVaHoc_ListUC.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\LoginUC.ascx.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\LoginUC.ascx.designer.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LopHoc_DetailUC.ascx.cs">
+      <DependentUpon>LopHoc_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LopHoc_DetailUC.ascx.designer.cs">
+      <DependentUpon>LopHoc_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LopHoc_ListUC.ascx.cs">
+      <DependentUpon>LopHoc_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LopHoc_ListUC.ascx.designer.cs">
+      <DependentUpon>LopHoc_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MonHoc_DetailUC.ascx.cs">
+      <DependentUpon>MonHoc_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MonHoc_DetailUC.ascx.designer.cs">
+      <DependentUpon>MonHoc_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MonHoc_ListUC.ascx.cs">
+      <DependentUpon>MonHoc_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\MonHoc_ListUC.ascx.designer.cs">
+      <DependentUpon>MonHoc_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PhanCongCongTac_DetailUC.ascx.cs">
+      <DependentUpon>PhanCongCongTac_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\PhanCongCongTac_DetailUC.ascx.designer.cs">
+      <DependentUpon>PhanCongCongTac_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PhanCongCongTac_ListUC.ascx.cs">
+      <DependentUpon>PhanCongCongTac_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\PhanCongCongTac_ListUC.ascx.designer.cs">
+      <DependentUpon>PhanCongCongTac_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\SinhVien_DetailUC.ascx.cs">
       <DependentUpon>SinhVien_DetailUC.ascx</DependentUpon>
