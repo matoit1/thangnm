@@ -39,6 +39,7 @@ namespace Shared_Libraries
     public class Messages
     {
         public const string Tong_So_Ban_Ghi = "Tổng số bản ghi: ";
+        public const string Khong_Thoa_Man_Dieu_Kien_Tim_Kiem = "Không thỏa mãn điều kiện tìm kiếm!";
         public const string Loi = "Lỗi: ";
         public const string Them_Thanh_Cong = "Thêm thành công";
         public const string Them_That_Bai = "Thêm thất bại, vui lòng kiểm tra lại!";
