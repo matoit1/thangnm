@@ -13,5 +13,30 @@ namespace DO_AN_TN.UserControl
         {
 
         }
+
+        protected void grvListLopHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+
+        }
+
+        protected void grvListLopHoc_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+        }
+
+        protected void grvListLopHoc_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+        }
+
+        protected void grvListLopHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void grvListLopHoc_Sorting(object sender, GridViewSortEventArgs e)
+        {
+
+        }
     }
 }

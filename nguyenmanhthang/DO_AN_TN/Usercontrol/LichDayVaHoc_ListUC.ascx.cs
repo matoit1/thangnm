@@ -13,5 +13,30 @@ namespace DO_AN_TN.UserControl
         {
 
         }
+
+        protected void grvListLichDayVaHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+
+        }
+
+        protected void grvListLichDayVaHoc_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+        }
+
+        protected void grvListLichDayVaHoc_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+        }
+
+        protected void grvListLichDayVaHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void grvListLichDayVaHoc_Sorting(object sender, GridViewSortEventArgs e)
+        {
+
+        }
     }
 }
