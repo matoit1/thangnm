@@ -12,7 +12,7 @@
             <td></td>
         </tr>
         <tr>
-            <td>Mã sinh viên: </td>
+            <td>Mã lớp học: </td>
             <td><asp:TextBox ID="txtFK_sMaLop" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblFK_sMaLop" runat="server"></asp:Label></td>
         </tr>
@@ -77,6 +77,11 @@
             <td><asp:Label ID="lblsNoiCapCMNDSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
+            <td>Hôn nhân: </td>
+            <td><asp:TextBox ID="txtbHonNhanGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblbHonNhanGV" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
             <td>Họ và tên người liên hệ: </td>
             <td><asp:TextBox ID="txtsNguoiLienHeSV" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsNguoiLienHeSV" runat="server"></asp:Label></td>
@@ -97,21 +102,6 @@
             <td><asp:Label ID="lbliQuanHeVoiNguoiLienHeSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Năm tốt nghiệp THPT: </td>
-            <td><asp:TextBox ID="txtiNamtotnghiepTHPTSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lbliNamtotnghiepTHPTSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Ngày nhập học: </td>
-            <td><asp:TextBox ID="txttNgayNhapHocSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lbltNgayNhapHocSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Ngày ra trường: </td>
-            <td><asp:TextBox ID="txttNgayRaTruongSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lbltNgayRaTruongSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
             <td>Kết nạp đoàn TNCS HCM: </td>
             <td><asp:TextBox ID="txtbKetnapDoanSV" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblbKetnapDoanSV" runat="server"></asp:Label></td>
@@ -127,9 +117,19 @@
             <td><asp:Label ID="lblsNoiketnapDoanSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Hôn nhân: </td>
-            <td><asp:TextBox ID="txtbHonNhanGV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblbHonNhanGV" runat="server"></asp:Label></td>
+            <td>Năm tốt nghiệp THPT: </td>
+            <td><asp:TextBox ID="txtiNamtotnghiepTHPTSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lbliNamtotnghiepTHPTSV" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Ngày nhập học: </td>
+            <td><asp:TextBox ID="txttNgayNhapHocSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lbltNgayNhapHocSV" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Ngày ra trường: </td>
+            <td><asp:TextBox ID="txttNgayRaTruongSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lbltNgayRaTruongSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày cấp thẻ SV: </td>

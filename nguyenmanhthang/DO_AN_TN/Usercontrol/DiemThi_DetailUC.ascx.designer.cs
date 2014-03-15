@@ -157,6 +157,24 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblfDiemthilan2;
         
         /// <summary>
+        /// txtiTrangThai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtiTrangThai;
+        
+        /// <summary>
+        /// lbliTrangThai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbliTrangThai;
+        
+        /// <summary>
         /// btnSearch control.
         /// </summary>
         /// <remarks>

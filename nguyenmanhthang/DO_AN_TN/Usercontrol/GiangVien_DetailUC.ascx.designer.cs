@@ -193,60 +193,6 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblbGioitinhGV;
         
         /// <summary>
-        /// txtsHocViGV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsHocViGV;
-        
-        /// <summary>
-        /// lblsHocViGV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsHocViGV;
-        
-        /// <summary>
-        /// txtsLinkChannels control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsLinkChannels;
-        
-        /// <summary>
-        /// lblsLinkChannels control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsLinkChannels;
-        
-        /// <summary>
-        /// txtsLinkChatRooms control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsLinkChatRooms;
-        
-        /// <summary>
-        /// lblsLinkChatRooms control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsLinkChatRooms;
-        
-        /// <summary>
         /// txtsCMNDGV control.
         /// </summary>
         /// <remarks>
@@ -301,22 +247,22 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblsNoiCapCMNDGV;
         
         /// <summary>
-        /// txtbCongChucGV control.
+        /// txtbHonNhanGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbCongChucGV;
+        protected global::System.Web.UI.WebControls.TextBox txtbHonNhanGV;
         
         /// <summary>
-        /// lblbCongChucGV control.
+        /// lblbHonNhanGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblbCongChucGV;
+        protected global::System.Web.UI.WebControls.Label lblbHonNhanGV;
         
         /// <summary>
         /// txttNgayNhanCongTacGV control.
@@ -355,22 +301,76 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lbliChucVuGV;
         
         /// <summary>
-        /// txtbHonNhanGV control.
+        /// txtsHocViGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbHonNhanGV;
+        protected global::System.Web.UI.WebControls.TextBox txtsHocViGV;
         
         /// <summary>
-        /// lblbHonNhanGV control.
+        /// lblsHocViGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblbHonNhanGV;
+        protected global::System.Web.UI.WebControls.Label lblsHocViGV;
+        
+        /// <summary>
+        /// txtbCongChucGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtbCongChucGV;
+        
+        /// <summary>
+        /// lblbCongChucGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblbCongChucGV;
+        
+        /// <summary>
+        /// txtsLinkChannels control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsLinkChannels;
+        
+        /// <summary>
+        /// lblsLinkChannels control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsLinkChannels;
+        
+        /// <summary>
+        /// txtsLinkChatRooms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsLinkChatRooms;
+        
+        /// <summary>
+        /// lblsLinkChatRooms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsLinkChatRooms;
         
         /// <summary>
         /// txtiTrangThaiGV control.

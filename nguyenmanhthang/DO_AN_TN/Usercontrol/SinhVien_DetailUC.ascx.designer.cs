@@ -265,6 +265,24 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblsNoiCapCMNDSV;
         
         /// <summary>
+        /// txtbHonNhanGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtbHonNhanGV;
+        
+        /// <summary>
+        /// lblbHonNhanGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblbHonNhanGV;
+        
+        /// <summary>
         /// txtsNguoiLienHeSV control.
         /// </summary>
         /// <remarks>
@@ -337,60 +355,6 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lbliQuanHeVoiNguoiLienHeSV;
         
         /// <summary>
-        /// txtiNamtotnghiepTHPTSV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtiNamtotnghiepTHPTSV;
-        
-        /// <summary>
-        /// lbliNamtotnghiepTHPTSV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliNamtotnghiepTHPTSV;
-        
-        /// <summary>
-        /// txttNgayNhapHocSV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttNgayNhapHocSV;
-        
-        /// <summary>
-        /// lbltNgayNhapHocSV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltNgayNhapHocSV;
-        
-        /// <summary>
-        /// txttNgayRaTruongSV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttNgayRaTruongSV;
-        
-        /// <summary>
-        /// lbltNgayRaTruongSV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltNgayRaTruongSV;
-        
-        /// <summary>
         /// txtbKetnapDoanSV control.
         /// </summary>
         /// <remarks>
@@ -445,22 +409,58 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblsNoiketnapDoanSV;
         
         /// <summary>
-        /// txtbHonNhanGV control.
+        /// txtiNamtotnghiepTHPTSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbHonNhanGV;
+        protected global::System.Web.UI.WebControls.TextBox txtiNamtotnghiepTHPTSV;
         
         /// <summary>
-        /// lblbHonNhanGV control.
+        /// lbliNamtotnghiepTHPTSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblbHonNhanGV;
+        protected global::System.Web.UI.WebControls.Label lbliNamtotnghiepTHPTSV;
+        
+        /// <summary>
+        /// txttNgayNhapHocSV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttNgayNhapHocSV;
+        
+        /// <summary>
+        /// lbltNgayNhapHocSV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltNgayNhapHocSV;
+        
+        /// <summary>
+        /// txttNgayRaTruongSV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttNgayRaTruongSV;
+        
+        /// <summary>
+        /// lbltNgayRaTruongSV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltNgayRaTruongSV;
         
         /// <summary>
         /// txttNgayCapTheSV control.

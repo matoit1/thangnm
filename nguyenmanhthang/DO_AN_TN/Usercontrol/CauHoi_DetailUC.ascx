@@ -67,6 +67,11 @@
             <td><asp:Label ID="lbltNgayCapNhat" runat="server"></asp:Label></td>
         </tr>
         <tr>
+            <td>Trạng thái: </td>
+            <td><asp:TextBox ID="txtiTrangThai" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
             <td></td>
