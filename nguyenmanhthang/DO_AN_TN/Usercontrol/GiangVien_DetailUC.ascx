@@ -57,21 +57,6 @@
             <td><asp:Label ID="lblbGioitinhGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Học vị: </td>
-            <td><asp:TextBox ID="txtsHocViGV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsHocViGV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Link kênh dạy học: </td>
-            <td><asp:TextBox ID="txtsLinkChannels" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsLinkChannels" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Link Chat Room: </td>
-            <td><asp:TextBox ID="txtsLinkChatRooms" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsLinkChatRooms" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
             <td>Số CMND: </td>
             <td><asp:TextBox ID="txtsCMNDGV" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsCMNDGV" runat="server"></asp:Label></td>
@@ -87,9 +72,9 @@
             <td><asp:Label ID="lblsNoiCapCMNDGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Công chức: </td>
-            <td><asp:TextBox ID="txtbCongChucGV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblbCongChucGV" runat="server"></asp:Label></td>
+            <td>Hôn nhân: </td>
+            <td><asp:TextBox ID="txtbHonNhanGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblbHonNhanGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày nhận công tác: </td>
@@ -102,9 +87,24 @@
             <td><asp:Label ID="lbliChucVuGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Hôn nhân: </td>
-            <td><asp:TextBox ID="txtbHonNhanGV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblbHonNhanGV" runat="server"></asp:Label></td>
+            <td>Học vị: </td>
+            <td><asp:TextBox ID="txtsHocViGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsHocViGV" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Công chức: </td>
+            <td><asp:TextBox ID="txtbCongChucGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblbCongChucGV" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Link kênh dạy học: </td>
+            <td><asp:TextBox ID="txtsLinkChannels" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkChannels" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Link Chat Room: </td>
+            <td><asp:TextBox ID="txtsLinkChatRooms" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkChatRooms" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Trạng thái: </td>

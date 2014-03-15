@@ -56,6 +56,9 @@
                     <asp:BoundField DataField="fDiemthilan2" HeaderText="Điểm thi lần 2" SortExpression="fDiemthilan2">
                         <ItemStyle CssClass="GridItemText" />
                     </asp:BoundField>
+                    <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThai">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
                 </Columns>
                 <RowStyle CssClass="GridItem"></RowStyle>
                 <HeaderStyle CssClass="GridHeader"></HeaderStyle>

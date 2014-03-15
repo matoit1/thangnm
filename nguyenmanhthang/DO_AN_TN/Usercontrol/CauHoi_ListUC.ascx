@@ -68,6 +68,9 @@
                     <asp:BoundField DataField="tNgayCapNhat" HeaderText="Ngày cập nhật" SortExpression="tNgayCapNhat">
                         <ItemStyle CssClass="GridItemCode" />
                     </asp:BoundField>
+                    <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThai">
+                        <ItemStyle CssClass="GridItemCode" />
+                    </asp:BoundField>
                 </Columns>
                 <RowStyle CssClass="GridItem"></RowStyle>
                 <HeaderStyle CssClass="GridHeader"></HeaderStyle>

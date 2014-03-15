@@ -74,6 +74,9 @@
                     <asp:BoundField  DataField="sNoiCapCMNDSV"  HeaderText="Nơi cấp CMND" SortExpression="sNoiCapCMNDSV">
                         <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                     </asp:BoundField>
+                    <asp:BoundField DataField="bHonNhanSV" HeaderText="Hôn nhân" SortExpression="bHonNhanSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
                     <asp:BoundField DataField="sNguoiLienHeSV" HeaderText="Họ và tên người liên hệ" SortExpression="sNguoiLienHeSV">
                         <ItemStyle CssClass="GridItemText" />
                     </asp:BoundField>
@@ -86,15 +89,6 @@
                     <asp:BoundField DataField="iQuanHeVoiNguoiLienHeSV" HeaderText="Quan hệ với người liên hệ" SortExpression="iQuanHeVoiNguoiLienHeSV">
                         <ItemStyle CssClass="GridItemText" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="iNamtotnghiepTHPTSV" HeaderText="Năm tốt nghiệp THPT" SortExpression="iNamtotnghiepTHPTSV">
-                        <ItemStyle CssClass="GridItemText" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="tNgayNhapHocSV" HeaderText="Ngày nhập học" SortExpression="tNgayNhapHocSV">
-                        <ItemStyle CssClass="GridItemText" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="tNgayRaTruongSV" HeaderText="Ngày ra trường" SortExpression="tNgayRaTruongSV">
-                        <ItemStyle CssClass="GridItemText" />
-                    </asp:BoundField>
                     <asp:BoundField DataField="bKetnapDoanSV" HeaderText="Kết nạp đoàn TNCS HCM" SortExpression="bKetnapDoanSV">
                         <ItemStyle CssClass="GridItemText" />
                     </asp:BoundField>
@@ -104,7 +98,13 @@
                     <asp:BoundField DataField="sNoiketnapDoanSV" HeaderText="Nơi kết nạp đoàn TNCS HCM" SortExpression="sNoiketnapDoanSV">
                         <ItemStyle CssClass="GridItemText" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="bHonNhanGV" HeaderText="Hôn nhân" SortExpression="bHonNhanGV">
+                    <asp:BoundField DataField="iNamtotnghiepTHPTSV" HeaderText="Năm tốt nghiệp THPT" SortExpression="iNamtotnghiepTHPTSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="tNgayNhapHocSV" HeaderText="Ngày nhập học" SortExpression="tNgayNhapHocSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="tNgayRaTruongSV" HeaderText="Ngày ra trường" SortExpression="tNgayRaTruongSV">
                         <ItemStyle CssClass="GridItemText" />
                     </asp:BoundField>
                     <asp:BoundField DataField="tNgayCapTheSV" HeaderText="Ngày cấp thẻ SV" SortExpression="tNgayCapTheSV">
