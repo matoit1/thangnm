@@ -1,121 +1,126 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SinhVien_ListUC.ascx.cs" Inherits="DO_AN_TN.UserControl.SinhVien_ListUC" %>
 <script type="text/javascript">
-    function CheckAll(oCheckbox){
-        var GridView2 = document.getElementById("<%=grvList.ClientID %>");
-        for(i = 1;i < GridView2.rows.length; i++){
+    function CheckAll(oCheckbox) {
+        var GridView2 = document.getElementById("<%=grvListSinhVien.ClientID %>");
+        for (i = 1; i < GridView2.rows.length; i++) {
             GridView2.rows[i].cells[0].getElementsByTagName("INPUT")[0].checked = oCheckbox.checked;
         }
     }
 </script>
-<asp:Label ID="lblMsg" runat="server"></asp:Label><br />
 <table>
     <tr>
-        <td>Mã</td>
-        <td><asp:TextBox ID="txtMa" runat="server"></asp:TextBox></td>
+        <td>
+            <asp:GridView ID="grvListSinhVien" runat="server" CssClass="mGrid" 
+                AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
+                            FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_sMaSV"
+                            emptydatatext="Không có bản ghi nào." 
+                EnableModelValidation="True" onrowcommand="grvListSinhVien_RowCommand" 
+                onselectedindexchanged="grvListSinhVien_SelectedIndexChanged" 
+                onpageindexchanging="grvListSinhVien_PageIndexChanging" 
+                onrowdatabound="grvListSinhVien_RowDataBound"  PageSize="5" 
+                AllowSorting="true" onsorting="grvListSinhVien_Sorting">
+                <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
+                <Columns>
+                    <asp:TemplateField>
+                        <HeaderTemplate>
+                            <input id="Checkbox2" type="checkbox" onclick="CheckAll(this)" runat="server" />
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <asp:CheckBox ID="ItemCheckBox" runat="server" />
+                        </ItemTemplate>
+                   </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("PK_sMaSV")%>'>Chi tiết</asp:LinkButton>
+                            </ItemTemplate>
+                        <ItemStyle HorizontalAlign="Center"  />
+                    </asp:TemplateField>
+                    <asp:BoundField  DataField="FK_sMaLop"  HeaderText="Mã lớp học" SortExpression="FK_sMaLop">
+                        <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                    </asp:BoundField>
+                    <asp:BoundField  DataField="PK_sMaSV"  HeaderText="Mã sinh viên" SortExpression="PK_sMaSV">
+                        <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sHoTenSV" HeaderText="Họ và tên" SortExpression="sHoTenSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sTendangnhapSV" HeaderText="Tên đăng nhập" SortExpression="sTendangnhapSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sMatkhauSV" HeaderText="Mật khẩu" SortExpression="sMatkhauSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sEmailSV" HeaderText="Địa chỉ Email" SortExpression="sEmailSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sDiachiSV" HeaderText="Địa chỉ" SortExpression="sDiachiSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sSdtSV" HeaderText="Số điện thoại" SortExpression="sSdtSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField  DataField="tNgaysinhSV"  HeaderText="Ngày sinh" SortExpression="tNgaysinhSV">
+                        <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="bGioitinhSV" HeaderText="Giới tính" SortExpression="bGioitinhSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sCMNDSV" HeaderText="Số CMND" SortExpression="sCMNDSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="tNgayCapCMNDSV" HeaderText="Ngày cấp cấp CMND" SortExpression="tNgayCapCMNDSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField  DataField="sNoiCapCMNDSV"  HeaderText="Nơi cấp CMND" SortExpression="sNoiCapCMNDSV">
+                        <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sNguoiLienHeSV" HeaderText="Họ và tên người liên hệ" SortExpression="sNguoiLienHeSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sDiaChiNguoiLienHeSV" HeaderText="Địa chỉ người liên hệ" SortExpression="sDiaChiNguoiLienHeSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sSdtNguoiLienHeSV" HeaderText="Số điện thoại" SortExpression="sSdtNguoiLienHeSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="iQuanHeVoiNguoiLienHeSV" HeaderText="Quan hệ với người liên hệ" SortExpression="iQuanHeVoiNguoiLienHeSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="iNamtotnghiepTHPTSV" HeaderText="Năm tốt nghiệp THPT" SortExpression="iNamtotnghiepTHPTSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="tNgayNhapHocSV" HeaderText="Ngày nhập học" SortExpression="tNgayNhapHocSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="tNgayRaTruongSV" HeaderText="Ngày ra trường" SortExpression="tNgayRaTruongSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="bKetnapDoanSV" HeaderText="Kết nạp đoàn TNCS HCM" SortExpression="bKetnapDoanSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="iNamketnapDoanSV" HeaderText="Năm kết nạp đoàn TNCS HCM" SortExpression="iNamketnapDoanSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="sNoiketnapDoanSV" HeaderText="Nơi kết nạp đoàn TNCS HCM" SortExpression="sNoiketnapDoanSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="bHonNhanGV" HeaderText="Hôn nhân" SortExpression="bHonNhanGV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="tNgayCapTheSV" HeaderText="Ngày cấp thẻ SV" SortExpression="tNgayCapTheSV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="iTrangThaiGV" HeaderText="Trạng thái" SortExpression="iTrangThaiGV">
+                        <ItemStyle CssClass="GridItemText" />
+                    </asp:BoundField>
+                </Columns>
+                <RowStyle CssClass="GridItem"></RowStyle>
+                <HeaderStyle CssClass="GridHeader"></HeaderStyle>
+                <FooterStyle CssClass="GridFooter"></FooterStyle>
+            </asp:GridView>
+        </td>
     </tr>
     <tr>
-        <td>Tên</td>
-        <td><asp:TextBox ID="txtTen" runat="server"></asp:TextBox></td>
-    </tr>
-    
-    <tr>
-        <td>Email</td>
-        <td><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Họ tên</td>
-        <td><asp:TextBox ID="txtHoten" runat="server"></asp:TextBox></td>
+        <td><asp:Label ID="lblTongSoBanGhi" runat="server"></asp:Label></td>
     </tr>
 </table>
-<asp:GridView ID="grvList" runat="server" CssClass="mGrid" 
-    AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="Accounts_ID"
-                emptydatatext="Không có bản ghi nào." 
-    EnableModelValidation="True" onrowcommand="grvList_RowCommand" 
-    onrowdatabound="grvList_RowDataBound" 
-    onselectedindexchanged="grvList_SelectedIndexChanged" >
-    <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
-    <Columns>
-        <asp:TemplateField>
-            <HeaderTemplate>
-                <input id="Checkbox2" type="checkbox" onclick="CheckAll(this)" runat="server" />
-            </HeaderTemplate>
-            <ItemTemplate>
-                <asp:CheckBox ID="ItemCheckBox" runat="server" />
-            </ItemTemplate>
-       </asp:TemplateField>
-        <asp:TemplateField>
-            <ItemTemplate>
-                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("Accounts_ID")%>'>Chi tiết</asp:LinkButton>
-                </ItemTemplate>
-            <ItemStyle HorizontalAlign="Center"  />
-        </asp:TemplateField>
-        <asp:BoundField  DataField="Accounts_ID"  HeaderText="Mã" >
-            <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
-        </asp:BoundField>
-        <asp:BoundField DataField="Accounts_Username" HeaderText="Tên đăng nhập">
-            <ItemStyle CssClass="GridItemText" />
-        </asp:BoundField>
-        <asp:BoundField DataField="Accounts_Email" HeaderText="Email">
-            <ItemStyle CssClass="GridItemText" />
-        </asp:BoundField>
-        <asp:BoundField DataField="Accounts_FullName" HeaderText="Họ và tên" >
-            <ItemStyle CssClass="GridItemText" />
-        </asp:BoundField>
-        <asp:BoundField DataField="Accounts_DateOfBirth" HeaderText="Ngày sinh" dataformatstring="{0:dd/MM/yyyy HH:mm}">
-            <ItemStyle CssClass="GridItemCode" />
-        </asp:BoundField>
-        <asp:BoundField DataField="Accounts_Permission" HeaderText="Quyền">
-            <ItemStyle CssClass="GridItemNumber" />
-        </asp:BoundField>
-        <asp:BoundField DataField="Accounts_Like" HeaderText="Like">
-            <ItemStyle CssClass="GridItemNumber" />
-        </asp:BoundField>
-        <asp:BoundField DataField="Accounts_RegisterDate" HeaderText="Ngày đăng ký" dataformatstring="{0:dd/MM/yyyy HH:mm}">
-            <ItemStyle CssClass="GridItemCode" />
-        </asp:BoundField>
-    </Columns>
-    <RowStyle CssClass="GridItem"></RowStyle>
-    <HeaderStyle CssClass="GridHeader"></HeaderStyle>
-    <FooterStyle CssClass="GridFooter"></FooterStyle>
-</asp:GridView>
-<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-    DataKeyNames="Accounts_ID" DataSourceID="SqlDataSource1" 
-    EnableModelValidation="True">
-    <Columns>
-        <asp:BoundField DataField="Accounts_ID" HeaderText="Accounts_ID" 
-            InsertVisible="False" ReadOnly="True" SortExpression="Accounts_ID" />
-        <asp:BoundField DataField="Accounts_Username" HeaderText="Accounts_Username" 
-            SortExpression="Accounts_Username" />
-        <asp:BoundField DataField="Accounts_Password" HeaderText="Accounts_Password" 
-            SortExpression="Accounts_Password" />
-        <asp:BoundField DataField="Accounts_Email" HeaderText="Accounts_Email" 
-            SortExpression="Accounts_Email" />
-        <asp:BoundField DataField="Accounts_FullName" HeaderText="Accounts_FullName" 
-            SortExpression="Accounts_FullName" />
-        <asp:BoundField DataField="Accounts_Address" HeaderText="Accounts_Address" 
-            SortExpression="Accounts_Address" />
-        <asp:BoundField DataField="Accounts_DateOfBirth" 
-            HeaderText="Accounts_DateOfBirth" SortExpression="Accounts_DateOfBirth" />
-        <asp:BoundField DataField="Accounts_PhoneNumber" 
-            HeaderText="Accounts_PhoneNumber" SortExpression="Accounts_PhoneNumber" />
-        <asp:BoundField DataField="Accounts_Permission" 
-            HeaderText="Accounts_Permission" SortExpression="Accounts_Permission" />
-        <asp:BoundField DataField="Accounts_LinkAvatar" 
-            HeaderText="Accounts_LinkAvatar" SortExpression="Accounts_LinkAvatar" />
-        <asp:BoundField DataField="Accounts_Signature" HeaderText="Accounts_Signature" 
-            SortExpression="Accounts_Signature" />
-        <asp:BoundField DataField="Accounts_Like" HeaderText="Accounts_Like" 
-            SortExpression="Accounts_Like" />
-        <asp:CheckBoxField DataField="Accounts_Notification" 
-            HeaderText="Accounts_Notification" SortExpression="Accounts_Notification" />
-        <asp:CheckBoxField DataField="Accounts_Status" HeaderText="Accounts_Status" 
-            SortExpression="Accounts_Status" />
-        <asp:BoundField DataField="Accounts_RegisterDate" 
-            HeaderText="Accounts_RegisterDate" SortExpression="Accounts_RegisterDate" />
-    </Columns>
-</asp:GridView>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-    ConnectionString="<%$ ConnectionStrings:connect %>" 
-    SelectCommand="SELECT * FROM [Accounts]"></asp:SqlDataSource>
-

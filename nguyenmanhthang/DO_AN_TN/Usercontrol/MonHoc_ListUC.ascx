@@ -61,4 +61,3 @@
         <td><asp:Label ID="lblTongSoBanGhi" runat="server"></asp:Label></td>
     </tr>
 </table>
-
