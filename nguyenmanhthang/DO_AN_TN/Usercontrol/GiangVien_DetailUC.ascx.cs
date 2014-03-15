@@ -13,5 +13,40 @@ namespace DO_AN_TN.UserControl
         {
 
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnExport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
