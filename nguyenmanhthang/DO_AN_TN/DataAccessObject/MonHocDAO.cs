@@ -146,11 +146,11 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaMonhoc", _MonHocEO.PK_sMaMonhoc));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTenMonhoc", _MonHocEO.sTenMonhoc));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iSotrinh", _MonHocEO.iSotrinh));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iSotietday", _MonHocEO.iSotietday));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _MonHocEO.iTrangThai));
+                    //da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaMonhoc", _MonHocEO.PK_sMaMonhoc));
+                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sTenMonhoc", _MonHocEO.sTenMonhoc));
+                    //da.SelectCommand.Parameters.Add(new SqlParameter("@iSotrinh", _MonHocEO.iSotrinh));
+                    //da.SelectCommand.Parameters.Add(new SqlParameter("@iSotietday", _MonHocEO.iSotietday));
+                    //da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _MonHocEO.iTrangThai));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

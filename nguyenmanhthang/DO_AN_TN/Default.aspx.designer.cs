@@ -29,5 +29,14 @@ namespace DO_AN_TN {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.MonHoc_DetailUC MonHoc_DetailUC1;
+        
+        /// <summary>
+        /// MonHoc_ListUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.MonHoc_ListUC MonHoc_ListUC1;
     }
 }
