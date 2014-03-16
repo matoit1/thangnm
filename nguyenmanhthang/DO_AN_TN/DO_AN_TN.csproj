@@ -218,8 +218,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessObject\BaiVietDAO.cs" />
     <Compile Include="DataAccessObject\CauHoiDAO.cs" />
     <Compile Include="DataAccessObject\ConfigDAO.cs" />
+    <Compile Include="DataAccessObject\ErrorDAO.cs" />
     <Compile Include="DataAccessObject\GiangVienDAO.cs" />
     <Compile Include="DataAccessObject\ConnectionDAO.cs" />
     <Compile Include="DataAccessObject\LopHocDAO.cs" />
@@ -235,9 +237,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EntityObject\BaiVietEO.cs" />
     <Compile Include="EntityObject\CauHoiEO.cs" />
     <Compile Include="EntityObject\ConfigEO.cs" />
     <Compile Include="EntityObject\DiemThiEO.cs" />
+    <Compile Include="EntityObject\ErrorEO.cs" />
     <Compile Include="EntityObject\GiangVienEO.cs" />
     <Compile Include="EntityObject\LichDayVaHocEO.cs" />
     <Compile Include="EntityObject\LopHocEO.cs" />
