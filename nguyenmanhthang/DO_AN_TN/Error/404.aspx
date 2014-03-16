@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="nguyenmanhthang.Error._404" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="DO_AN_TN.Error._404" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,7 +9,9 @@
 <body>
     <form id="form1" runat="server">
     <div style="margin-top:100px;">
-        <center><h1 style="color:Red; font-weight: bold; ">Không tìm thấy !</h1><hr /></center>
+        <center><h1 style="color:Red; font-weight: bold; ">Not found !</h1><hr />
+        <br /><asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
+        </center>
     </div>
     </form>
 </body>

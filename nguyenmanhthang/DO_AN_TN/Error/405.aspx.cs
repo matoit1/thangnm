@@ -4,14 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using EntityObject;
-using System.IO;
-using Shared_Libraries.Constants;
 using DataAccessObject;
+using Shared_Libraries.Constants;
+using System.IO;
+using EntityObject;
 
 namespace DO_AN_TN.Error
 {
-    public partial class _404 : System.Web.UI.Page
+    public partial class _405 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

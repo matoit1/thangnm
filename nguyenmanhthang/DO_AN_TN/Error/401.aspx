@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="403.aspx.cs" Inherits="DO_AN_TN.Error._403" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="401.aspx.cs" Inherits="DO_AN_TN.Error._401" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div style="margin-top:100px;">
-        <center><h1 style="color:Red; font-weight: bold; ">Forbidden !</h1><hr />
+        <center><h1 style="color:Red; font-weight: bold; ">Access denied !</h1><hr />
         <br /><asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
         </center>
     </div>
