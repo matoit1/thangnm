@@ -97,6 +97,7 @@ namespace EntityObject
             get { return this._tNgayCapNhat; }
             set { this._tNgayCapNhat = value; }
         }
+
         // 12. Xay dung cac phuong thuc set, get cho iTrangThai
         public Int16 iTrangThai
         {
