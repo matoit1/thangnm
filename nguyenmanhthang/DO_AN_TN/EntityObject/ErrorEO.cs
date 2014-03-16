@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace EntityObject
 {
@@ -71,6 +72,27 @@ namespace EntityObject
         {
             get { return this._iStatus; }
             set { this._iStatus = value; }
+        }
+
+        public static ErrorEO Convert_DataSet_To_Object(DataSet dsInput)
+        {
+            ErrorEO objOutput = new ErrorEO();
+            try
+            {
+                objOutput.PK_lErrorID = Convert.ToInt64(dsInput.Tables[0].Rows[0]["PK_lErrorID"]);
+                objOutput.sLink = Convert.ToString(dsInput.Tables[0].Rows[0]["sLink"]);
+                objOutput.sIP = Convert.ToString(dsInput.Tables[0].Rows[0]["sIP"]);
+                objOutput.sBrowser = Convert.ToString(dsInput.Tables[0].Rows[0]["sBrowser"]);
+                objOutput.iCodes = Convert.ToInt16(dsInput.Tables[0].Rows[0]["iCodes"]);
+                objOutput.tTime = Convert.ToDateTime(dsInput.Tables[0].Rows[0]["tTime"]);
+                objOutput.tTimeCheck = Convert.ToDateTime(dsInput.Tables[0].Rows[0]["tTimeCheck"]);
+                objOutput.iStatus = Convert.ToInt16(dsInput.Tables[0].Rows[0]["iStatus"]);
+                return objOutput;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
         #endregion
     }

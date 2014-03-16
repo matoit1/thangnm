@@ -54,6 +54,14 @@
   <ItemGroup>
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\Toolbar.css" />
+    <Content Include="Error\401.aspx" />
+    <Content Include="Error\403.aspx" />
+    <Content Include="Error\404.aspx" />
+    <Content Include="Error\406.aspx" />
+    <Content Include="Error\Chat.css" />
+    <Content Include="Error\chat.js" />
+    <Content Include="Error\Dao_vang_I.swf" />
+    <Content Include="Error\Default.aspx" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CKFinder.dll" />
@@ -213,6 +221,7 @@
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="Test\Captcha.aspx" />
     <Content Include="Test\Drop.aspx" />
+    <Content Include="Test\ItemObject.aspx" />
     <Content Include="Test\List.aspx" />
     <Content Include="Test\Toolbar.aspx" />
     <Content Include="UserControl\CauHoi_DetailUC.ascx" />
@@ -271,6 +280,26 @@
     <Compile Include="EntityObject\MonHocEO.cs" />
     <Compile Include="EntityObject\PhanCongCongTacEO.cs" />
     <Compile Include="EntityObject\SinhVienEO.cs" />
+    <Compile Include="Error\401.aspx.cs">
+      <DependentUpon>401.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\403.aspx.cs">
+      <DependentUpon>403.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\406.aspx.cs">
+      <DependentUpon>406.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="GiaoVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -342,6 +371,13 @@
     </Compile>
     <Compile Include="Test\Drop.aspx.designer.cs">
       <DependentUpon>Drop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\ItemObject.aspx.cs">
+      <DependentUpon>ItemObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\ItemObject.aspx.designer.cs">
+      <DependentUpon>ItemObject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test\List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
