@@ -10,7 +10,42 @@ namespace DataAccessObject
 {
     public class MonHocDAO
     {
-        // 1. MonHoc_Insert
+        /// <summary> 1. MonHoc_CheckExists </summary>
+        /// <param name="_MonHocEO"></param>
+        /// <returns></returns>
+        public static bool MonHoc_CheckExists(MonHocEO _MonHocEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_CheckExists", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaMonhoc", _MonHocEO.PK_sMaMonhoc));
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
+        /// <summary> 2. MonHoc_Insert </summary>
+        /// <param name="_MonHocEO"></param>
+        /// <returns></returns>
         public static bool MonHoc_Insert(MonHocEO _MonHocEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -37,7 +72,9 @@ namespace DataAccessObject
             }
         }
 
-        // 2. MonHoc_Update
+        /// <summary> 3. MonHoc_Update </summary>
+        /// <param name="_MonHocEO"></param>
+        /// <returns></returns>
         public static bool MonHoc_Update(MonHocEO _MonHocEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -64,7 +101,9 @@ namespace DataAccessObject
             }
         }
 
-        // 3. MonHoc_Delete
+        /// <summary> 4. MonHoc_Delete </summary>
+        /// <param name="_MonHocEO"></param>
+        /// <returns></returns>
         public static bool MonHoc_Delete(MonHocEO _MonHocEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -87,8 +126,10 @@ namespace DataAccessObject
             }
         }
 
-        // 4. MonHoc_DeleteList
-        public static bool MonHoc_DeleteList(String _ListTopic_ID)
+        /// <summary> 5. MonHoc_DeleteList </summary>
+        /// <param name="_ListPK_sMaMonhoc"></param>
+        /// <returns></returns>
+        public static bool MonHoc_DeleteList(String _ListPK_sMaMonhoc)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -97,7 +138,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblMonHoc_DeleteList", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@ListTopic_ID", _ListTopic_ID));
+                    cmd.Parameters.Add(new SqlParameter("@ListPK_sMaMonhoc", _ListPK_sMaMonhoc));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -110,7 +151,9 @@ namespace DataAccessObject
             }
         }
 
-        // 5. MonHoc_SelectItem
+        /// <summary> 6. MonHoc_SelectItem </summary>
+        /// <param name="_MonHocEO"></param>
+        /// <returns></returns>
         public static DataSet MonHoc_SelectItem(MonHocEO _MonHocEO)
         {
             DataSet ds = null;
@@ -135,7 +178,9 @@ namespace DataAccessObject
             }
         }
 
-        // 6. MonHoc_SelectList
+        /// <summary> 7. MonHoc_SelectList </summary>
+        /// <param name="_MonHocEO"></param>
+        /// <returns></returns>
         public static DataSet MonHoc_SelectList(MonHocEO _MonHocEO)
         {
             DataSet ds = null;
@@ -146,11 +191,6 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaMonhoc", _MonHocEO.PK_sMaMonhoc));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sTenMonhoc", _MonHocEO.sTenMonhoc));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@iSotrinh", _MonHocEO.iSotrinh));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@iSotietday", _MonHocEO.iSotietday));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _MonHocEO.iTrangThai));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
@@ -164,8 +204,10 @@ namespace DataAccessObject
             }
         }
 
-        // 7. MonHoc_CheckExists
-        public static DataSet MonHoc_CheckExists(MonHocEO _MonHocEO)
+        /// <summary> 8. MonHoc_Search </summary>
+        /// <param name="_MonHocEO"></param>
+        /// <returns></returns>
+        public static DataSet MonHoc_Search(MonHocEO _MonHocEO)
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -173,9 +215,13 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_CheckExists", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaMonhoc", _MonHocEO.PK_sMaMonhoc));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTenMonhoc", _MonHocEO.sTenMonhoc));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iSotrinh", _MonHocEO.iSotrinh));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iSotietday", _MonHocEO.iSotietday));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _MonHocEO.iTrangThai));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
