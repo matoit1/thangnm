@@ -121,13 +121,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lbliSoNamDaoTao;
         
         /// <summary>
-        /// txtiTrangThai control.
+        /// ddliTrangThai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtiTrangThai;
+        protected global::System.Web.UI.WebControls.DropDownList ddliTrangThai;
         
         /// <summary>
         /// lbliTrangThai control.

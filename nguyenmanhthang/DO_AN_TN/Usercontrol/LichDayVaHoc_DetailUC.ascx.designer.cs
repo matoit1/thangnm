@@ -31,13 +31,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtFK_sMaPCCT control.
+        /// ddlFK_sMaPCCT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFK_sMaPCCT;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_sMaPCCT;
         
         /// <summary>
         /// lblFK_sMaPCCT control.
@@ -49,13 +49,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblFK_sMaPCCT;
         
         /// <summary>
-        /// txtFK_sMalop control.
+        /// ddlFK_sMalop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFK_sMalop;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_sMalop;
         
         /// <summary>
         /// lblFK_sMalop control.
@@ -67,13 +67,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblFK_sMalop;
         
         /// <summary>
-        /// txtiCaHoc control.
+        /// ddliCaHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtiCaHoc;
+        protected global::System.Web.UI.WebControls.DropDownList ddliCaHoc;
         
         /// <summary>
         /// lbliCaHoc control.
@@ -121,13 +121,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lbliSoTietDay;
         
         /// <summary>
-        /// txtiTrangThai control.
+        /// ddliTrangThai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtiTrangThai;
+        protected global::System.Web.UI.WebControls.DropDownList ddliTrangThai;
         
         /// <summary>
         /// lbliTrangThai control.

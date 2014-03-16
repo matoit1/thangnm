@@ -13,12 +13,12 @@
         </tr>
         <tr>
             <td>Mã sinh viên: </td>
-            <td><asp:TextBox ID="txtFK_sMaSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlFK_sMaSV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Mã môn học: </td>
-            <td><asp:TextBox ID="txtFK_sMaMonhoc" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlFK_sMaMonhoc" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaMonhoc" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -48,7 +48,7 @@
         </tr>
         <tr>
             <td>Trạng thái: </td>
-            <td><asp:TextBox ID="txtiTrangThai" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
         </tr>
         <tr>

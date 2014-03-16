@@ -31,13 +31,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtFK_sMaSV control.
+        /// ddlFK_sMaSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFK_sMaSV;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_sMaSV;
         
         /// <summary>
         /// lblFK_sMaSV control.
@@ -49,13 +49,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblFK_sMaSV;
         
         /// <summary>
-        /// txtFK_sMaMonhoc control.
+        /// ddlFK_sMaMonhoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFK_sMaMonhoc;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_sMaMonhoc;
         
         /// <summary>
         /// lblFK_sMaMonhoc control.
@@ -157,13 +157,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblfDiemthilan2;
         
         /// <summary>
-        /// txtiTrangThai control.
+        /// ddliTrangThai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtiTrangThai;
+        protected global::System.Web.UI.WebControls.DropDownList ddliTrangThai;
         
         /// <summary>
         /// lbliTrangThai control.

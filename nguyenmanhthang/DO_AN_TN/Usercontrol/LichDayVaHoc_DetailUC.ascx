@@ -1,4 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LichDayVaHoc_DetailUC.ascx.cs" Inherits="DO_AN_TN.UserControl.LichDayVaHoc_DetailUC" %>
+<link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
+<script src="../Scripts/calendar1.js" type="text/javascript"></script>  
+<script src="../Scripts/calendar2.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".startdate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+        $(".enddate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+    });
+</script>
 <div>
     <table>
         <tr>
@@ -13,22 +22,22 @@
         </tr>
         <tr>
             <td>Mã phân công công tác: </td>
-            <td><asp:TextBox ID="txtFK_sMaPCCT" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlFK_sMaPCCT" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaPCCT" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Mã lớp: </td>
-            <td><asp:TextBox ID="txtFK_sMalop" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlFK_sMalop" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMalop" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ca học: </td>
-            <td><asp:TextBox ID="txtiCaHoc" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddliCaHoc" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliCaHoc" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày dạy: </td>
-            <td><asp:TextBox ID="txttNgayDay" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayDay" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayDay" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -38,7 +47,7 @@
         </tr>
         <tr>
             <td>Trạng thái: </td>
-            <td><asp:TextBox ID="txtiTrangThai" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
         </tr>
         <tr>

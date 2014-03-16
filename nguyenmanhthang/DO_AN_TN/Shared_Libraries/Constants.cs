@@ -160,6 +160,18 @@ namespace Shared_Libraries.Constants
     }
     #endregion   
 
+
+    /// <summary> II.2. LichDayVaHoc_iCaHoc_C (Ca học) </summary>
+    /// 
+    public class LichDayVaHoc_iCaHoc_C
+    {
+        public const Int16 Sang = 1;
+        public const Int16 Chieu = 2;
+        public const Int16 Toi = 3;
+    }
+
+
+
     #region "II. Trạng Thái"
     /// <summary> II.1. BaiViet_iTrangThai_C (Trạng thái sửa lỗi) </summary>
     /// 
