@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DataAccessObject;
+using Shared_Libraries;
+using EntityObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -16,37 +19,146 @@ namespace DO_AN_TN.UserControl
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                CauHoiDAO.CauHoi_SelectList(getObject());
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                CauHoiDAO.CauHoi_SelectList(getObject());
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (CauHoiDAO.CauHoi_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (CauHoiDAO.CauHoi_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (CauHoiDAO.CauHoi_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
         }
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-
+            CauHoiDAO.CauHoi_SelectList(getObject());
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
+            txtFK_sMaGV.Text = "";
+            txtPK_iCauhoi_ID.Text = "";
+            txtsCauhoi_Cauhoi.Text = "";
+            txtsCauhoi_A.Text = "";
+            txtsCauhoi_B.Text = "";
+            txtsCauhoi_C.Text = "";
+            txtsCauhoi_D.Text = "";
+            ddliCauhoi_Dung.SelectedIndex = 0;
+            txtsBoCauHoi.Text = "";
+            txttNgayTao.Text = "";
+            txttNgayCapNhat.Text = "";
+            txtiTrangThai.Text = "";
+        }
 
+        private CauHoiEO getObject()
+        {
+            try
+            {
+                CauHoiEO _CauHoiEO = new CauHoiEO();
+                _CauHoiEO.FK_sMaGV = txtFK_sMaGV.Text;
+                try
+                {
+                    _CauHoiEO.PK_iCauhoi_ID = Convert.ToInt16(txtPK_iCauhoi_ID.Text);
+                }
+                catch
+                {
+                    lblPK_iCauhoi_ID.Text = Messages.Khong_Dung_Dinh_Dang_So;
+                    _CauHoiEO.PK_iCauhoi_ID = 0;
+                }
+
+                //try
+                //{
+                //    _CauHoiEO.tNgayTao = Convert.ToInt16(txtiSotietday.Text);
+                //}
+                //catch
+                //{
+                //    txtiSotietday.Text = "0";
+                //    _CauHoiEO.iSotietday = 0;
+                //}
+                try
+                {
+                    _CauHoiEO.iTrangThai = Convert.ToInt16(txtiTrangThai.Text);
+                }
+                catch
+                {
+                    txtiTrangThai.Text = "0";
+                    _CauHoiEO.iTrangThai = 0;
+                }
+                return _CauHoiEO;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

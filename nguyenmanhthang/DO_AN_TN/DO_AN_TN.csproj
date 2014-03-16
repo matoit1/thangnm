@@ -52,6 +52,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\calendar.css" />
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\Toolbar.css" />
     <Content Include="Error\401.aspx" />
@@ -215,6 +216,8 @@
     <Content Include="Other\SQL_Query\Procdure\tblPhanCongCongTac.sql" />
     <Content Include="Other\SQL_Query\Procdure\tblSinhVien.sql" />
     <Content Include="QuanTri\Default.aspx" />
+    <Content Include="Scripts\calendar1.js" />
+    <Content Include="Scripts\calendar2.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
