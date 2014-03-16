@@ -26,7 +26,7 @@ namespace DO_AN_TN.Error
                     _ErrorEO.iCodes = Convert.ToInt16(Path.GetFileName(Request.Path).Replace(".aspx", ""));
                     _ErrorEO.tTime = DateTime.Now;
                     _ErrorEO.tTimeCheck = DateTime.Now;
-                    _ErrorEO.iStatus = ErrorStatus_C.Da_Phat_Hien;
+                    _ErrorEO.iStatus = Error_iStatus_C.Da_Phat_Hien;
                     if (ErrorDAO.Error_Insert(_ErrorEO) == true)
                     {
                         lblMsg.Text = "Ghi Log thành công!";

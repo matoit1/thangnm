@@ -31,13 +31,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtFK_sMaLop control.
+        /// ddlFK_sMaLop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFK_sMaLop;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_sMaLop;
         
         /// <summary>
         /// lblFK_sMaLop control.
@@ -193,13 +193,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lbltNgaysinhSV;
         
         /// <summary>
-        /// txtbGioitinhSV control.
+        /// ddlbGioitinhSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbGioitinhSV;
+        protected global::System.Web.UI.WebControls.DropDownList ddlbGioitinhSV;
         
         /// <summary>
         /// lblbGioitinhSV control.
@@ -265,13 +265,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblsNoiCapCMNDSV;
         
         /// <summary>
-        /// txtbHonNhanGV control.
+        /// ddlbHonNhanSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbHonNhanGV;
+        protected global::System.Web.UI.WebControls.DropDownList ddlbHonNhanSV;
         
         /// <summary>
         /// lblbHonNhanGV control.
@@ -337,13 +337,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblsSdtNguoiLienHeSV;
         
         /// <summary>
-        /// txtiQuanHeVoiNguoiLienHeSV control.
+        /// ddliQuanHeVoiNguoiLienHeSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtiQuanHeVoiNguoiLienHeSV;
+        protected global::System.Web.UI.WebControls.DropDownList ddliQuanHeVoiNguoiLienHeSV;
         
         /// <summary>
         /// lbliQuanHeVoiNguoiLienHeSV control.
@@ -355,13 +355,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lbliQuanHeVoiNguoiLienHeSV;
         
         /// <summary>
-        /// txtbKetnapDoanSV control.
+        /// ddlbKetnapDoanSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbKetnapDoanSV;
+        protected global::System.Web.UI.WebControls.DropDownList ddlbKetnapDoanSV;
         
         /// <summary>
         /// lblbKetnapDoanSV control.
@@ -481,13 +481,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lbltNgayCapTheSV;
         
         /// <summary>
-        /// txtiTrangThaiGV control.
+        /// ddliTrangThaiSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtiTrangThaiGV;
+        protected global::System.Web.UI.WebControls.DropDownList ddliTrangThaiSV;
         
         /// <summary>
         /// lbliTrangThaiGV control.
