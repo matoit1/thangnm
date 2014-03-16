@@ -160,9 +160,9 @@ namespace DataAccessObject
         /// <summary> 6. Error_SelectItem </summary>
         /// <param name="_ErrorEO"></param>
         /// <returns></returns>
-        public static DataSet Error_SelectItem(ErrorEO _ErrorEO)
+        public static ErrorEO Error_SelectItem(ErrorEO _ErrorEO)
         {
-            DataSet ds = null;
+            ErrorEO output = new ErrorEO();
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -171,15 +171,15 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblError_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lErrorID", _ErrorEO.PK_lErrorID));
-                    ds = new DataSet();
+                    DataSet ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    return output = ErrorEO.Convert_DataSet_To_Object(ds);
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }
