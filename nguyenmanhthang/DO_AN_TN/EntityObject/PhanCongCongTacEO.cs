@@ -7,41 +7,49 @@ namespace DO_AN_TN.EntityObject
 {
     public class PhanCongCongTacEO
     {
-        private string _PK_sMaMonhoc;
-        private string _sTenMonhoc;
-        private Int16 _iSotrinh;
-        private Int16 _iSotietday;
+        private string _PK_sMaPCCT;
+        private string _FK_sMaGV;
+        private string _FK_sMaMonhoc;
+        private Int16 _tNgayBatDau;
+        private Int16 _tNgayKetThuc;
         private Int16 _iTrangThai;
 
-        // 1. Xay dung cac phuong thuc set, get cho PK_sMaMonhoc
-        public string PK_sMaMonhoc
+        // 1. Xay dung cac phuong thuc set, get cho PK_sMaPCCT
+        public string PK_sMaPCCT
         {
-            get { return this._PK_sMaMonhoc; }
-            set { this._PK_sMaMonhoc = value; }
+            get { return this._PK_sMaPCCT; }
+            set { this._PK_sMaPCCT = value; }
         }
 
-        // 2. Xay dung cac phuong thuc set, get cho sTenMonhoc
-        public string sTenMonhoc
+        // 2. Xay dung cac phuong thuc set, get cho FK_sMaGV
+        public string FK_sMaGV
         {
-            get { return this._sTenMonhoc; }
-            set { this._sTenMonhoc = value; }
+            get { return this._FK_sMaGV; }
+            set { this._FK_sMaGV = value; }
         }
 
-        // 3. Xay dung cac phuong thuc set, get cho iSotrinh
-        public Int16 iSotrinh
+        // 3. Xay dung cac phuong thuc set, get cho FK_sMaMonhoc
+        public string FK_sMaMonhoc
         {
-            get { return this._iSotrinh; }
-            set { this._iSotrinh = value; }
+            get { return this._FK_sMaMonhoc; }
+            set { this._FK_sMaMonhoc = value; }
         }
 
-        // 4. Xay dung cac phuong thuc set, get cho iSotietday
-        public Int16 iSotietday
+        // 4. Xay dung cac phuong thuc set, get cho tNgayBatDau
+        public Int16 tNgayBatDau
         {
-            get { return this._iSotietday; }
-            set { this._iSotietday = value; }
+            get { return this._tNgayBatDau; }
+            set { this._tNgayBatDau = value; }
         }
 
-        // 5. Xay dung cac phuong thuc set, get cho iTrangThai
+        // 5. Xay dung cac phuong thuc set, get cho tNgayKetThuc
+        public Int16 tNgayKetThuc
+        {
+            get { return this._tNgayKetThuc; }
+            set { this._tNgayKetThuc = value; }
+        }
+
+        // 6. Xay dung cac phuong thuc set, get cho iTrangThai
         public Int16 iTrangThai
         {
             get { return this._iTrangThai; }
