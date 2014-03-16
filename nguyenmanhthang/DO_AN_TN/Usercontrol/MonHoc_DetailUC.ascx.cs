@@ -14,7 +14,18 @@ namespace DO_AN_TN.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                loadDataToDropDownList();
+            }
+        }
 
+        public void loadDataToDropDownList()
+        {
+            ddliTrangThai.DataSource = GetListConstants.Gioi_Tinh_GLC();
+            ddliTrangThai.DataTextField = "Value";
+            ddliTrangThai.DataValueField = "Key";
+            ddliTrangThai.DataBind();
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -109,7 +120,7 @@ namespace DO_AN_TN.UserControl
             txtsTenMonhoc.Text = "";
             txtiSotrinh.Text = "";
             txtiSotietday.Text = "";
-            txtiTrangThai.Text = "";
+            ddliTrangThai.SelectedIndex = 0;
         }
 
         private MonHocEO getObject()
@@ -135,15 +146,7 @@ namespace DO_AN_TN.UserControl
                     txtiSotietday.Text = "0";
                     _MonHocEO.iSotietday = 0;
                 }
-                try
-                {
-                    _MonHocEO.iTrangThai = Convert.ToInt16(txtiTrangThai.Text);
-                }
-                catch
-                {
-                    txtiTrangThai.Text = "0";
-                    _MonHocEO.iTrangThai = 0;
-                }
+                _MonHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
                 return _MonHocEO;
             }
             catch (Exception)

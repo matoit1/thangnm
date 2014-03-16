@@ -252,5 +252,20 @@ namespace Shared_Libraries
             return output;
         }
 
+        /// <summary> LichDayVaHoc_iCaHoc_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string LichDayVaHoc_iCaHoc_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Sáng"; break;
+                case 2: output = "Chiều"; break;
+                case 3: output = "Tối"; break;
+            }
+            return output;
+        }
+
     }
 }

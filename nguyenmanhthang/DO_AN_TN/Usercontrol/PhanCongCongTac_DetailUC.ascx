@@ -1,4 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PhanCongCongTac_DetailUC.ascx.cs" Inherits="DO_AN_TN.UserControl.PhanCongCongTac_DetailUC" %>
+<link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
+<script src="../Scripts/calendar1.js" type="text/javascript"></script>  
+<script src="../Scripts/calendar2.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".startdate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+        $(".enddate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+    });
+</script>
 <div>
     <table>
         <tr>
@@ -18,27 +27,27 @@
         </tr>
         <tr>
             <td>Mã giảng viên: </td>
-            <td><asp:TextBox ID="txtFK_sMaGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlFK_sMaGV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Mã môn học: </td>
-            <td><asp:TextBox ID="txtFK_sMaMonhoc" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlFK_sMaMonhoc" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaMonhoc" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày bắt đầu: </td>
-            <td><asp:TextBox ID="txttNgayBatDau" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayBatDau" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayBatDau" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày kết thúc: </td>
-            <td><asp:TextBox ID="txttNgayKetThuc" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayKetThuc" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayKetThuc" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Trạng thái: </td>
-            <td><asp:TextBox ID="txtiTrangThai" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
         </tr>
         <tr>

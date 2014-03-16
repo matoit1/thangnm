@@ -181,6 +181,17 @@ namespace Shared_Libraries
             output.Add(GiangVien_iChucVuGV_C.Can_Bo_Nhan_Vien_Nha_Truong, GetTextConstants.GiangVien_iChucVuGV_GTC(GiangVien_iChucVuGV_C.Can_Bo_Nhan_Vien_Nha_Truong));
             return output;
         }
+
+        /// <summary> I.8. LichDayVaHoc_iCaHoc_GLC (Ca học) </summary>
+        /// <returns></returns>
+        public static SortedList LichDayVaHoc_iCaHoc_GLC()
+        {
+            SortedList output = new SortedList();
+            output.Add(LichDayVaHoc_iCaHoc_C.Sang, GetTextConstants.LichDayVaHoc_iCaHoc_GTC(LichDayVaHoc_iCaHoc_C.Sang));
+            output.Add(LichDayVaHoc_iCaHoc_C.Chieu, GetTextConstants.LichDayVaHoc_iCaHoc_GTC(LichDayVaHoc_iCaHoc_C.Chieu));
+            output.Add(LichDayVaHoc_iCaHoc_C.Toi, GetTextConstants.LichDayVaHoc_iCaHoc_GTC(LichDayVaHoc_iCaHoc_C.Toi));
+            return output;
+        }
         #endregion
     }
 }

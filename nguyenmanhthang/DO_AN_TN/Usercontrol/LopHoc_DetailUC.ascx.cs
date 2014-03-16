@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Shared_Libraries;
 
 namespace DO_AN_TN.UserControl
 {
@@ -11,7 +12,18 @@ namespace DO_AN_TN.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                loadDataToDropDownList();
+            }
+        }
 
+        public void loadDataToDropDownList()
+        {
+            ddliTrangThai.DataSource = GetListConstants.Gioi_Tinh_GLC();
+            ddliTrangThai.DataTextField = "Value";
+            ddliTrangThai.DataValueField = "Key";
+            ddliTrangThai.DataBind();
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
