@@ -11,7 +11,7 @@ namespace nguyenmanhthang.Error
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            pnlPopup.Visible = true;
+            //pnlPopup.Visible = true;
         }
     }
 }

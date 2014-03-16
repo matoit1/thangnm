@@ -54,7 +54,6 @@
   <ItemGroup>
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\Toolbar.css" />
-    <Content Include="Error\401.aspx" />
     <Content Include="Error\403.aspx" />
     <Content Include="Error\404.aspx" />
     <Content Include="Error\406.aspx" />
@@ -280,10 +279,6 @@
     <Compile Include="EntityObject\MonHocEO.cs" />
     <Compile Include="EntityObject\PhanCongCongTacEO.cs" />
     <Compile Include="EntityObject\SinhVienEO.cs" />
-    <Compile Include="Error\401.aspx.cs">
-      <DependentUpon>401.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Error\403.aspx.cs">
       <DependentUpon>403.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
