@@ -1,4 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CauHoi_DetailUC.ascx.cs" Inherits="DO_AN_TN.UserControl.CauHoi_DetailUC" %>
+<link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
+    <script src="../Scripts/calendar1.js" type="text/javascript"></script>  
+    <script src="../Scripts/calendar2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".startdate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+            $(".enddate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+        });
+    </script>
 <div>
     <table>
         <tr>
@@ -48,7 +57,14 @@
         </tr>
         <tr>
             <td>Câu trả lời đúng: </td>
-            <td><asp:TextBox ID="txtiCauhoi_Dung" runat="server" Width="400px"></asp:TextBox></td>
+            <td>
+                <asp:DropDownList ID="ddliCauhoi_Dung" runat="server" Width="400px">
+                    <asp:ListItem Value="1">Đáp án A</asp:ListItem>
+                    <asp:ListItem Value="2">Đáp án B</asp:ListItem>
+                    <asp:ListItem Value="3">Đáp án C</asp:ListItem>
+                    <asp:ListItem Value="4">Đáp án D</asp:ListItem>
+                </asp:DropDownList>
+            </td>
             <td><asp:Label ID="lbliCauhoi_Dung" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -58,12 +74,12 @@
         </tr>
         <tr>
             <td>Ngày tạo: </td>
-            <td><asp:TextBox ID="txttNgayTao" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayTao" runat="server" Width= "400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayTao" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày cập nhật: </td>
-            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayCapNhat" runat="server"></asp:Label></td>
         </tr>
         <tr>
