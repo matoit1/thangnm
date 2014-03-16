@@ -181,6 +181,7 @@
     <Content Include="Images\Interface\sidebar_divider.png" />
     <Content Include="Images\Interface\sidebar_shadow.png" />
     <Content Include="Images\Interface\table_sorter_header.png" />
+    <Content Include="Other\ProjectManagement\relationship.png" />
     <Content Include="Other\SQL_Query\BTL_DB2.sql" />
     <Content Include="QuanTri\Default.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
