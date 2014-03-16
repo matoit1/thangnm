@@ -182,6 +182,30 @@
     <Content Include="Images\Interface\sidebar_shadow.png" />
     <Content Include="Images\Interface\table_sorter_header.png" />
     <Content Include="Other\ProjectManagement\relationship.png" />
+    <Content Include="Other\SQL_Query\Create_Database\DoAn_LopHocAo.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblBaiViet.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblCauHoi.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblConfig.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblDiemThi.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblError.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblGiangVien.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblLichDayVaHoc.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblLopHoc.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblMonHoc.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblPhanCongCongTac.sql" />
+    <Content Include="Other\SQL_Query\Create_Database\tblSinhVien.sql" />
+    <Content Include="Other\SQL_Query\Function\Convert.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblBaiViet.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblCauHoi.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblConfig.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblDiemThi.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblError.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblGiangVien.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblLichDayVaHoc.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblLopHoc.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblMonHoc.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblPhanCongCongTac.sql" />
+    <Content Include="Other\SQL_Query\Procdure\tblSinhVien.sql" />
     <Content Include="QuanTri\Default.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -457,7 +481,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="bin\" />
     <Folder Include="Images\Temp\" />
-    <Folder Include="Other\SQL_Query\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Share_Interface\GiaoVien_SI.Master" />
