@@ -10,7 +10,7 @@
 namespace DO_AN_TN.Error {
     
     
-    public partial class _403 {
+    public partial class _405 {
         
         /// <summary>
         /// form1 control.

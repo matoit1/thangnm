@@ -156,6 +156,16 @@ namespace Shared_Libraries.Constants
     }
     #endregion
 
+    /// <summary> II.1. ErrorStatus_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class ErrorStatus_C
+    {
+        public const Int16 Da_Phat_Hien = 1;
+        public const Int16 Da_Xem = 2;
+        public const Int16 Dang_Sua = 3;
+        public const Int16 Da_Sua = 4;
+        public const Int16 Cho_Kiem_Tra_Lai = 5;
+    }
     #region "II. Định dạng"
     /// <summary> II.1. DateTimeFomat (Định dạng ngày giờ) </summary>
     /// 

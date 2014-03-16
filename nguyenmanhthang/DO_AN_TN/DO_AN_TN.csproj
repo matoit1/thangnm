@@ -54,9 +54,10 @@
   <ItemGroup>
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\Toolbar.css" />
+    <Content Include="Error\401.aspx" />
+    <Content Include="Error\405.aspx" />
     <Content Include="Error\403.aspx" />
     <Content Include="Error\404.aspx" />
-    <Content Include="Error\406.aspx" />
     <Content Include="Error\Chat.css" />
     <Content Include="Error\chat.js" />
     <Content Include="Error\Dao_vang_I.swf" />
@@ -279,17 +280,33 @@
     <Compile Include="EntityObject\MonHocEO.cs" />
     <Compile Include="EntityObject\PhanCongCongTacEO.cs" />
     <Compile Include="EntityObject\SinhVienEO.cs" />
+    <Compile Include="Error\401.aspx.cs">
+      <DependentUpon>401.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\401.aspx.designer.cs">
+      <DependentUpon>401.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error\405.aspx.cs">
+      <DependentUpon>405.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\405.aspx.designer.cs">
+      <DependentUpon>405.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Error\403.aspx.cs">
       <DependentUpon>403.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error\403.aspx.designer.cs">
+      <DependentUpon>403.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error\404.aspx.cs">
       <DependentUpon>404.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Error\406.aspx.cs">
-      <DependentUpon>406.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="Error\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
