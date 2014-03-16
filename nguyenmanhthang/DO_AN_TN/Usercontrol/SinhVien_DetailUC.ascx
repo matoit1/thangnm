@@ -1,9 +1,18 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SinhVien_DetailUC.ascx.cs" Inherits="DO_AN_TN.UserControl.SinhVien_DetailUC" %>
+<link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
+<script src="../Scripts/calendar1.js" type="text/javascript"></script>  
+<script src="../Scripts/calendar2.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".startdate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+        $(".enddate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+    });
+</script>
 <div>
     <table>
         <tr>
             <td></td>
-            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Giảng viên"></asp:Label></td>
+            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Sinh viên"></asp:Label></td>
             <td></td>
         </tr>
         <tr>
@@ -12,8 +21,8 @@
             <td></td>
         </tr>
         <tr>
-            <td>Mã lớp học: </td>
-            <td><asp:TextBox ID="txtFK_sMaLop" runat="server" Width="400px"></asp:TextBox></td>
+            <td>Lớp học: </td>
+            <td><asp:DropDownList ID="ddlFK_sMaLop" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaLop" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -53,12 +62,12 @@
         </tr>
         <tr>
             <td>Ngày sinh: </td>
-            <td><asp:TextBox ID="txttNgaysinhSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgaysinhSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgaysinhSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Giới tính: </td>
-            <td><asp:TextBox ID="txtbGioitinhSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlbGioitinhSV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblbGioitinhSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -68,7 +77,7 @@
         </tr>
         <tr>
             <td>Ngày cấp CMND: </td>
-            <td><asp:TextBox ID="txttNgayCapCMNDSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayCapCMNDSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayCapCMNDSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -78,7 +87,7 @@
         </tr>
         <tr>
             <td>Hôn nhân: </td>
-            <td><asp:TextBox ID="txtbHonNhanGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlbHonNhanSV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblbHonNhanGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -98,12 +107,12 @@
         </tr>
         <tr>
             <td>Quan hệ với người liên hệ: </td>
-            <td><asp:TextBox ID="txtiQuanHeVoiNguoiLienHeSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddliQuanHeVoiNguoiLienHeSV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliQuanHeVoiNguoiLienHeSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Kết nạp đoàn TNCS HCM: </td>
-            <td><asp:TextBox ID="txtbKetnapDoanSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddlbKetnapDoanSV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblbKetnapDoanSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -123,22 +132,22 @@
         </tr>
         <tr>
             <td>Ngày nhập học: </td>
-            <td><asp:TextBox ID="txttNgayNhapHocSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayNhapHocSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayNhapHocSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày ra trường: </td>
-            <td><asp:TextBox ID="txttNgayRaTruongSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayRaTruongSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayRaTruongSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày cấp thẻ SV: </td>
-            <td><asp:TextBox ID="txttNgayCapTheSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayCapTheSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayCapTheSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Trạng thái: </td>
-            <td><asp:TextBox ID="txtiTrangThaiGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:DropDownList ID="ddliTrangThaiSV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThaiGV" runat="server"></asp:Label></td>
         </tr>
         <tr>

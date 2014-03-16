@@ -5,70 +5,10 @@ using System.Web;
 
 namespace Shared_Libraries.Constants
 {
-    #region "I. Constants - GetTextConstants - GetListConstants"
-    /// <summary> I.1. Quyen_Han_C (Quyền hạn)</summary>
+    #region "I. Sinh Viên"
+    /// <summary> I.7. SinhVien_iTrangThaiSV_C (Trạng Thái Sinh Viên) </summary>
     /// 
-    public class Quyen_Han_C
-    {
-        public const Int16 Khach = 0;
-        public const Int16 Quan_Tri_Vien = 1;
-        public const Int16 Giang_Vien = 2;
-        public const Int16 Sinh_Vien = 3;
-        public const Int16 Nhan_Vien = 4;
-        public const Int16 An_Danh = 5;
-    }    
-
-    /// <summary> I.2. Hoc_Vi_C (Học vị) </summary>
-    /// 
-    public class Hoc_Vi_C
-    {
-        public const Int16 Tu_Tai = 1;
-        public const Int16 Cu_Nhan = 2;
-        public const Int16 Ky_Su = 3;
-        public const Int16 Thac_Si = 4;
-        public const Int16 Tien_Si = 5;
-        public const Int16 Tien_Si_Khoa_Hoc = 6;
-    }
-
-    /// <summary> I.3. Gioi_Tinh_C (Giới tính) </summary>
-    /// 
-    public class Gioi_Tinh_C
-    {
-        public const Boolean Nam = true;
-        public const Boolean Nu = false;
-    }
-
-    /// <summary> I.4. Hon_Nhan_C (Hôn Nhân) </summary>
-    /// 
-    public class Hon_Nhan_C
-    {
-        public const Boolean Da_Ket_Hon = true;
-        public const Boolean Chua_Ket_Hon = false;
-    }
-
-    /// <summary> I.5. Cong_Chuc_C (Công Chức) </summary>
-    /// 
-    public class Cong_Chuc_C
-    {
-        public const Boolean Da_Co_Cong_Chuc = true;
-        public const Boolean Chua_Co_Cong_Chuc = false;
-    }
-
-    /// <summary> I.6. Trang_Thai_Giao_Vien_C (Trạng Thái Giáo Viên) </summary>
-    /// 
-    public class Trang_Thai_Giao_Vien_C
-    {
-        public const Int16 Chuyen_Cong_Tac = 1;
-        public const Int16 Nghi_Che_Do = 2;
-        public const Int16 Nghi_Phep = 3;
-        public const Int16 Tam_Dinh_Chi_Cong_Tac = 4;
-        public const Int16 Nghi_Huu = 5;
-        public const Int16 Bo_Viec = 6;
-    }
-
-    /// <summary> I.7. Trang_Thai_Sinh_Vien_C (Trạng Thái Sinh Viên) </summary>
-    /// 
-    public class Trang_Thai_Sinh_Vien_C
+    public class SinhVien_iTrangThaiSV_C
     {
         public const Int16 Chuyen_Truong = 1;
         public const Int16 Chuyen_Lop = 2;
@@ -78,17 +18,17 @@ namespace Shared_Libraries.Constants
         public const Int16 Duoi_Hoc = 6;
     }
 
-    /// <summary> I.8. Doan_Thanh_Nien_Cong_San_HCM_C (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+    /// <summary> I.8. SinhVien_bKetnapDoanSV_C (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
     /// 
-    public class Doan_Thanh_Nien_Cong_San_HCM_C
+    public class SinhVien_bKetnapDoanSV_C
     {
         public const Boolean Da_Vao_Doan = true;
         public const Boolean Chua_Vao_Doan = false;
     }
 
-    /// <summary> I.9. Quan_He_Voi_Nguoi_Lien_He_C (Quan hệ với người liên hệ) </summary>
+    /// <summary> I.9. SinhVien_iQuanHeVoiNguoiLienHeSV_C (Quan hệ với người liên hệ) </summary>
     /// 
-    public class Quan_He_Voi_Nguoi_Lien_He_C
+    public class SinhVien_iQuanHeVoiNguoiLienHeSV_C
     {
         public const Int16 Bo = 1;
         public const Int16 Me = 2;
@@ -133,12 +73,45 @@ namespace Shared_Libraries.Constants
         public const Int16 Bon_Buoi = 4;
         public const Int16 Nam_Buoi = 5;
     }
+    #endregion
 
 
-
-    /// <summary> I.13. Chuc_Vu_C (Chức vụ) </summary>
+    #region "II. Giảng Viên"
+    /// <summary> I.2. GiangVien_iHocViGV_C (Học vị) </summary>
     /// 
-    public class Chuc_Vu_C
+    public class GiangVien_iHocViGV_C
+    {
+        public const Int16 Tu_Tai = 1;
+        public const Int16 Cu_Nhan = 2;
+        public const Int16 Ky_Su = 3;
+        public const Int16 Thac_Si = 4;
+        public const Int16 Tien_Si = 5;
+        public const Int16 Tien_Si_Khoa_Hoc = 6;
+    }
+
+    /// <summary> I.5. GiangVien_bCongChucGV_C (Công Chức) </summary>
+    /// 
+    public class GiangVien_bCongChucGV_C
+    {
+        public const Boolean Da_Co_Cong_Chuc = true;
+        public const Boolean Chua_Co_Cong_Chuc = false;
+    }
+
+    /// <summary> I.6. GiangVien_iTrangThaiGV_C (Trạng Thái Giáo Viên) </summary>
+    /// 
+    public class GiangVien_iTrangThaiGV_C
+    {
+        public const Int16 Chuyen_Cong_Tac = 1;
+        public const Int16 Nghi_Che_Do = 2;
+        public const Int16 Nghi_Phep = 3;
+        public const Int16 Tam_Dinh_Chi_Cong_Tac = 4;
+        public const Int16 Nghi_Huu = 5;
+        public const Int16 Bo_Viec = 6;
+    }
+
+    /// <summary> I.13. GiangVien_iChucVuGV_C (Chức vụ) </summary>
+    /// 
+    public class GiangVien_iChucVuGV_C
     {
         public const Int16 Vien_Truong = 1;
         public const Int16 Pho_Vien_Truong = 2;
@@ -156,9 +129,41 @@ namespace Shared_Libraries.Constants
     }
     #endregion
 
-    /// <summary> II.1. ErrorStatus_C (Trạng thái sửa lỗi) </summary>
+
+    #region "III. Khác"
+    /// <summary> I.1. Quyen_Han_C (Quyền hạn)</summary>
     /// 
-    public class ErrorStatus_C
+    public class Quyen_Han_C
+    {
+        public const Int16 Khach = 0;
+        public const Int16 Quan_Tri_Vien = 1;
+        public const Int16 Giang_Vien = 2;
+        public const Int16 Sinh_Vien = 3;
+        public const Int16 Nhan_Vien = 4;
+        public const Int16 An_Danh = 5;
+    }
+
+    /// <summary> I.3. Gioi_Tinh_C (Giới tính) </summary>
+    /// 
+    public class Gioi_Tinh_C
+    {
+        public const Boolean Nam = true;
+        public const Boolean Nu = false;
+    }
+
+    /// <summary> I.4. Hon_Nhan_C (Hôn Nhân) </summary>
+    /// 
+    public class Hon_Nhan_C
+    {
+        public const Boolean Da_Ket_Hon = true;
+        public const Boolean Chua_Ket_Hon = false;
+    }
+    #endregion   
+
+    #region "II. Trạng Thái"
+    /// <summary> II.1. BaiViet_iTrangThai_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class BaiViet_iTrangThai_C
     {
         public const Int16 Da_Phat_Hien = 1;
         public const Int16 Da_Xem = 2;
@@ -166,6 +171,84 @@ namespace Shared_Libraries.Constants
         public const Int16 Da_Sua = 4;
         public const Int16 Cho_Kiem_Tra_Lai = 5;
     }
+
+    /// <summary> II.2. CauHoi_iTrangThai_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class CauHoi_iTrangThai_C
+    {
+        public const Int16 Mo = 1;
+        public const Int16 Tam_Khoa = 2;
+        public const Int16 Khoa = 3;
+    }
+
+    /// <summary> II.3. DiemThi_iTrangThai_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class DiemThi_iTrangThai_C
+    {
+        public const Int16 Da_Phat_Hien = 1;
+        public const Int16 Da_Xem = 2;
+        public const Int16 Dang_Sua = 3;
+        public const Int16 Da_Sua = 4;
+        public const Int16 Cho_Kiem_Tra_Lai = 5;
+    }
+
+    /// <summary> II.4. Error_iStatus_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class Error_iStatus_C
+    {
+        public const Int16 Da_Phat_Hien = 1;
+        public const Int16 Da_Xem = 2;
+        public const Int16 Dang_Sua = 3;
+        public const Int16 Da_Sua = 4;
+        public const Int16 Cho_Kiem_Tra_Lai = 5;
+    }
+
+    /// <summary> II.6. LichDayVaHoc_iTrangThai_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class LichDayVaHoc_iTrangThai_C
+    {
+        public const Int16 Da_Phat_Hien = 1;
+        public const Int16 Da_Xem = 2;
+        public const Int16 Dang_Sua = 3;
+        public const Int16 Da_Sua = 4;
+        public const Int16 Cho_Kiem_Tra_Lai = 5;
+    }
+
+    /// <summary> II.7. LopHoc_iTrangThai_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class LopHoc_iTrangThai_C
+    {
+        public const Int16 Da_Phat_Hien = 1;
+        public const Int16 Da_Xem = 2;
+        public const Int16 Dang_Sua = 3;
+        public const Int16 Da_Sua = 4;
+        public const Int16 Cho_Kiem_Tra_Lai = 5;
+    }
+
+    /// <summary> II.8. MonHoc_iTrangThai_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class MonHoc_iTrangThai_C
+    {
+        public const Int16 Da_Phat_Hien = 1;
+        public const Int16 Da_Xem = 2;
+        public const Int16 Dang_Sua = 3;
+        public const Int16 Da_Sua = 4;
+        public const Int16 Cho_Kiem_Tra_Lai = 5;
+    }
+
+    /// <summary> II.9. PhanCongCongTac_iTrangThai_C (Trạng thái sửa lỗi) </summary>
+    /// 
+    public class PhanCongCongTac_iTrangThai_C
+    {
+        public const Int16 Da_Phat_Hien = 1;
+        public const Int16 Da_Xem = 2;
+        public const Int16 Dang_Sua = 3;
+        public const Int16 Da_Sua = 4;
+        public const Int16 Cho_Kiem_Tra_Lai = 5;
+    }
+    #endregion
+
+
     #region "II. Định dạng"
     /// <summary> II.1. DateTimeFomat (Định dạng ngày giờ) </summary>
     /// 

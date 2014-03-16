@@ -40,7 +40,7 @@ namespace DO_AN_TN.Test
 
         public void loadHoc_Vi_GLC()
         {
-            ddlSelectList2.DataSource = GetListConstants.Hoc_Vi_GLC();
+            ddlSelectList2.DataSource = GetListConstants.GiangVien_iHocViGV_GLC();
             ddlSelectList2.DataTextField = "Value";
             ddlSelectList2.DataValueField = "Key";
             ddlSelectList2.DataBind();
@@ -64,7 +64,7 @@ namespace DO_AN_TN.Test
 
         public void loadCong_Chuc_GLC()
         {
-            ddlSelectList5.DataSource = GetListConstants.Cong_Chuc_GLC();
+            ddlSelectList5.DataSource = GetListConstants.GiangVien_bCongChucGV_GLC();
             ddlSelectList5.DataTextField = "Value";
             ddlSelectList5.DataValueField = "Key";
             ddlSelectList5.DataBind();
@@ -72,7 +72,7 @@ namespace DO_AN_TN.Test
 
         public void loadTrang_Thai_Giao_Vien_GLC()
         {
-            ddlSelectList6.DataSource = GetListConstants.Trang_Thai_Giao_Vien_GLC();
+            ddlSelectList6.DataSource = GetListConstants.GiangVien_iTrangThaiGV_GLC();
             ddlSelectList6.DataTextField = "Value";
             ddlSelectList6.DataValueField = "Key";
             ddlSelectList6.DataBind();
@@ -80,7 +80,7 @@ namespace DO_AN_TN.Test
 
         public void loadTrang_Thai_Sinh_Vien_GLC()
         {
-            ddlSelectList7.DataSource = GetListConstants.Trang_Thai_Sinh_Vien_GLC();
+            ddlSelectList7.DataSource = GetListConstants.SinhVien_iTrangThaiSV_GLC();
             ddlSelectList7.DataTextField = "Value";
             ddlSelectList7.DataValueField = "Key";
             ddlSelectList7.DataBind();
@@ -88,7 +88,7 @@ namespace DO_AN_TN.Test
 
         public void loadDoan_Thanh_Nien_Cong_San_HCM_GLC()
         {
-            ddlSelectList8.DataSource = GetListConstants.Doan_Thanh_Nien_Cong_San_HCM_GLC();
+            ddlSelectList8.DataSource = GetListConstants.SinhVien_bKetnapDoanSV_GLC();
             ddlSelectList8.DataTextField = "Value";
             ddlSelectList8.DataValueField = "Key";
             ddlSelectList8.DataBind();
@@ -96,7 +96,7 @@ namespace DO_AN_TN.Test
 
         public void loadQuan_He_Voi_Nguoi_Lien_He_GLC()
         {
-            ddlSelectList9.DataSource = GetListConstants.Quan_He_Voi_Nguoi_Lien_He_GLC();
+            ddlSelectList9.DataSource = GetListConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GLC();
             ddlSelectList9.DataTextField = "Value";
             ddlSelectList9.DataValueField = "Key";
             ddlSelectList9.DataBind();
@@ -128,7 +128,7 @@ namespace DO_AN_TN.Test
 
         public void loadChuc_Vu_GLC()
         {
-            ddlSelectList13.DataSource = GetListConstants.Chuc_Vu_GLC();
+            ddlSelectList13.DataSource = GetListConstants.GiangVien_iChucVuGV_GLC();
             ddlSelectList13.DataTextField = "Value";
             ddlSelectList13.DataValueField = "Key";
             ddlSelectList13.DataBind();

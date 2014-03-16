@@ -26,10 +26,10 @@ namespace Shared_Libraries
             return ouput;
         }
 
-        /// <summary> I.2. Hoc_Vi_GTC (Học vị) </summary>
+        /// <summary> I.2. GiangVien_iHocViGV_GTC (Học vị) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Hoc_Vi_GTC(Int16 input)
+        public static string GiangVien_iHocViGV_GTC(Int16 input)
         {
             string output="";
             switch (input){
@@ -72,10 +72,10 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> I.5. Cong_Chuc_GTC (Công Chức) </summary>
+        /// <summary> I.5. GiangVien_bCongChucGV_GTC (Công Chức) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Cong_Chuc_GTC(bool input)
+        public static string GiangVien_bCongChucGV_GTC(bool input)
         {
             string output = "";
             switch (input)
@@ -86,10 +86,10 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> I.6. Trang_Thai_Giao_Vien_GTC (Trạng Thái Giáo Viên) </summary>
+        /// <summary> I.6. GiangVien_iTrangThaiGV_GTC (Trạng Thái Giáo Viên) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Trang_Thai_Giao_Vien_GTC(Int16 input)
+        public static string GiangVien_iTrangThaiGV_GTC(Int16 input)
         {
             string output = "";
             switch (input)
@@ -105,10 +105,10 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> I.7. Trang_Thai_Sinh_Vien_GTC (Trạng Thái Sinh Viên) </summary>
+        /// <summary> I.7. SinhVien_iTrangThaiSV_GTC (Trạng Thái Sinh Viên) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Trang_Thai_Sinh_Vien_GTC(Int16 input)
+        public static string SinhVien_iTrangThaiSV_GTC(Int16 input)
         {
             string output = "";
             switch (input)
@@ -124,10 +124,10 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> I.8. Doan_Thanh_Nien_Cong_San_HCM_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+        /// <summary> I.8. SinhVien_bKetnapDoanSV_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Doan_Thanh_Nien_Cong_San_HCM_GTC(bool input)
+        public static string SinhVien_bKetnapDoanSV_GTC(bool input)
         {
             string output = "";
             switch (input)
@@ -138,10 +138,10 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> I.9. Quan_He_Voi_Nguoi_Lien_He_GTC (Quan hệ với người liên hệ) </summary>
+        /// <summary> I.9. SinhVien_iQuanHeVoiNguoiLienHeSV_GTC (Quan hệ với người liên hệ) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Quan_He_Voi_Nguoi_Lien_He_GTC(Int16 input)
+        public static string SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(Int16 input)
         {
             string output = "";
             switch (input)
@@ -225,10 +225,10 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> I.13. Chuc_Vu_GTC (Chức vụ) </summary>
+        /// <summary> I.13. GiangVien_iChucVuGV_GTC (Chức vụ) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Chuc_Vu_GTC(Int16 input)
+        public static string GiangVien_iChucVuGV_GTC(Int16 input)
         {
             string output = "Cán bộ nhân viên nhà trường";
             switch (input)

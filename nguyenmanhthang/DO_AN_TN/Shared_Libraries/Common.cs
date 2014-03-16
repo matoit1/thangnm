@@ -42,6 +42,7 @@ namespace Shared_Libraries
         public const string Khong_Thoa_Man_Dieu_Kien_Tim_Kiem = "Không thỏa mãn điều kiện tìm kiếm!";
         public const string Loi = "Lỗi: ";
         public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng số, Vui lòng kiểm tra lại!";
+        public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng ngày/ giờ, Vui lòng kiểm tra lại!";
 
         public const string Them_Thanh_Cong = "Thêm thành công";
         public const string Them_That_Bai = "Thêm thất bại, vui lòng kiểm tra lại!";
