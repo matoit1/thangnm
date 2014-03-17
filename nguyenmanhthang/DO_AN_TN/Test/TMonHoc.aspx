@@ -1,16 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TMonHoc.aspx.cs" Inherits="DO_AN_TN.Test.TMonHoc" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TMonHoc.aspx.cs" Inherits="DO_AN_TN.Test.TMonHoc" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register src="../UserControl/MonHoc_DetailUC.ascx" tagname="MonHoc_DetailUC" tagprefix="uc1" %>
+<%@ Register src="../UserControl/MonHoc_ListUC.ascx" tagname="MonHoc_ListUC" tagprefix="uc2" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
+    <uc1:MonHoc_DetailUC ID="MonHoc_DetailUC1" runat="server" />
+    <uc2:MonHoc_ListUC ID="MonHoc_ListUC1" runat="server" />
+</asp:Content>

@@ -22,11 +22,10 @@ namespace DO_AN_TN.UserControl
         protected void BindData()
         {
             grvListMonHoc.Visible = false;
-            MonHocEO _MonHocEO = new MonHocEO();
             DataSet dsMonHoc = new DataSet();
             try
             {
-                dsMonHoc = MonHocDAO.MonHoc_SelectList(_MonHocEO);
+                dsMonHoc = MonHocDAO.MonHoc_SelectList();
                 if (Convert.ToInt32(dsMonHoc.Tables[0].Rows.Count.ToString()) > 0)
                 {
                     grvListMonHoc.Visible = true;
@@ -102,8 +101,7 @@ namespace DO_AN_TN.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "Asc";
             }
-            MonHocEO _MonHocEO = new MonHocEO();
-            DataSet dsMonHoc = MonHocDAO.MonHoc_SelectList(_MonHocEO);
+            DataSet dsMonHoc = MonHocDAO.MonHoc_SelectList();
             DataView sortedView = new DataView(dsMonHoc.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;

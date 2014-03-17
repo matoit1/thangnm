@@ -32,7 +32,7 @@ namespace DO_AN_TN.UserControl
         {
             try
             {
-                MonHocDAO.MonHoc_SelectList(getObject());
+                MonHocDAO.MonHoc_SelectList();
             }
             catch (Exception ex)
             {
@@ -44,7 +44,7 @@ namespace DO_AN_TN.UserControl
         {
             try
             {
-                MonHocDAO.MonHoc_SelectList(getObject());
+                MonHocDAO.MonHoc_SelectList();
             }
             catch (Exception ex)
             {
@@ -111,7 +111,7 @@ namespace DO_AN_TN.UserControl
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            MonHocDAO.MonHoc_SelectList(getObject());
+            MonHocDAO.MonHoc_SelectList();
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
