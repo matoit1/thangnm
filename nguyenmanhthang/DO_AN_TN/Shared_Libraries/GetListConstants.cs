@@ -227,21 +227,21 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> I.6. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
-        /// <returns></returns>
-        public static SortedList BaiViet_iTrangThai_GLC()
-        {
-            SortedList output = new SortedList();
-            return output;
-        }
+        ///// <summary> I.6. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
+        ///// <returns></returns>
+        //public static SortedList BaiViet_iTrangThai_GLC()
+        //{
+        //    SortedList output = new SortedList();
+        //    return output;
+        //}
 
-        /// <summary> I.6. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
-        /// <returns></returns>
-        public static SortedList BaiViet_iTrangThai_GLC()
-        {
-            SortedList output = new SortedList();
-            return output;
-        }
+        ///// <summary> I.6. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
+        ///// <returns></returns>
+        //public static SortedList BaiViet_iTrangThai_GLC()
+        //{
+        //    SortedList output = new SortedList();
+        //    return output;
+        //}
         #endregion
     }
 }

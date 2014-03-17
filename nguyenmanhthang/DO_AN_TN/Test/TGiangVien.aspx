@@ -1,16 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TGiangVien.aspx.cs" Inherits="DO_AN_TN.Test.TGiangVien" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TGiangVien.aspx.cs" Inherits="DO_AN_TN.Test.TGiangVien" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register src="../UserControl/GiangVien_DetailUC.ascx" tagname="GiangVien_DetailUC" tagprefix="uc1" %>
+<%@ Register src="../UserControl/GiangVien_ListUC.ascx" tagname="GiangVien_ListUC" tagprefix="uc2" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
+    <uc1:GiangVien_DetailUC ID="GiangVien_DetailUC1" runat="server" />
+    <uc2:GiangVien_ListUC ID="GiangVien_ListUC1" runat="server" />
+</asp:Content>

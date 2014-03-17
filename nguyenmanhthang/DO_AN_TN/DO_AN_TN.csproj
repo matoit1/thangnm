@@ -494,12 +494,14 @@
     </Compile>
     <Compile Include="UserControl\BaiViet_DetailUC.ascx.cs">
       <DependentUpon>BaiViet_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\BaiViet_DetailUC.ascx.designer.cs">
       <DependentUpon>BaiViet_DetailUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\BaiViet_ListUC.ascx.cs">
       <DependentUpon>BaiViet_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\BaiViet_ListUC.ascx.designer.cs">
       <DependentUpon>BaiViet_ListUC.ascx</DependentUpon>
@@ -534,12 +536,14 @@
     </Compile>
     <Compile Include="UserControl\Error_DetailUC.ascx.cs">
       <DependentUpon>Error_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\Error_DetailUC.ascx.designer.cs">
       <DependentUpon>Error_DetailUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\Error_ListUC.ascx.cs">
       <DependentUpon>Error_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\Error_ListUC.ascx.designer.cs">
       <DependentUpon>Error_ListUC.ascx</DependentUpon>

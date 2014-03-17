@@ -151,7 +151,7 @@ namespace DO_AN_TN.UserControl
                 _CauHoiEO.sCauhoi_C = txtsCauhoi_C.Text;
                 _CauHoiEO.sCauhoi_D = txtsCauhoi_D.Text;
                 _CauHoiEO.iCauhoi_Dung = Convert.ToInt16(ddliCauhoi_Dung.SelectedValue);
-                _CauHoiEO.sBoCauHoi = ddlsBoCauHoi.SelectedValue;
+                _CauHoiEO.sBoCauHoi = txtsBoCauHoi.Text;
                 try{_CauHoiEO.tNgayTao = Convert.ToDateTime(txttNgayTao.Text);}
                 catch{lbltNgayTao.Text = Messages.Khong_Dung_Dinh_Dang_Ngay;}
                 try{_CauHoiEO.tNgayCapNhat = Convert.ToDateTime(txttNgayCapNhat.Text);}

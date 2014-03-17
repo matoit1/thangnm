@@ -5,15 +5,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
+        <asp:Menu ID="Menu1" runat="server" StaticDisplayLevels="3" ItemWrap="True" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="|  Quản lý" Value="QuanLy"></asp:MenuItem>
+                <asp:MenuItem Text="|  Bài viết" Value="BaiViet" NavigateUrl="~/Test/TBaiViet.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Câu hỏi" Value="CauHoi" NavigateUrl="~/Test/TCauHoi.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Điểm thi" Value="DiemThi" NavigateUrl="~/Test/TDiemThi.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Error" Value="Error" NavigateUrl="~/Test/TError.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Giảng Viên" Value="GiangVien" NavigateUrl="~/Test/TGiangVien.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Lịch dậy và học" Value="LichDayVaHoc" NavigateUrl="~/Test/TLichDayVaHoc.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/Test/TLopHoc.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/Test/TMonHoc.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Phân công công tác" Value="PhanCongCongTac" NavigateUrl="~/Test/TPhanCongCongTac.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Sinh viên" Value="SinhVien" NavigateUrl="~/Test/TSinhVien.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <hr /><hr /><br />
+        <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
     </div>
     </form>
 </body>
