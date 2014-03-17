@@ -69,7 +69,7 @@
         </tr>
         <tr>
             <td>Bộ câu hỏi: </td>
-            <td><asp:DropDownList ID="ddlsBoCauHoi" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:TextBox ID="txtsBoCauHoi" runat="server" Width= "400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsBoCauHoi" runat="server"></asp:Label></td>
         </tr>
         <tr>

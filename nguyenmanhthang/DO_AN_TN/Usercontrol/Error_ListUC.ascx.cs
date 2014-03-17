@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace DO_AN_TN.GiaoVien
+namespace DO_AN_TN.UserControl
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Error_ListUC : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
