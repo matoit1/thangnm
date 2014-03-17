@@ -54,6 +54,7 @@
   <ItemGroup>
     <Content Include="App_Themes\calendar.css" />
     <Content Include="App_Themes\layout.css" />
+    <Content Include="App_Themes\public.css" />
     <Content Include="App_Themes\Toolbar.css" />
     <Content Include="Error\401.aspx" />
     <Content Include="Error\405.aspx" />
