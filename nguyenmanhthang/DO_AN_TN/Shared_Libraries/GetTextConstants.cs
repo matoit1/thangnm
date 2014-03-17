@@ -322,9 +322,9 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Sáng"; break;
-                case 2: output = "Chiều"; break;
-                case 3: output = "Tối"; break;
+                case 1: output = "Bình thường"; break;
+                case 2: output = "Phúc khảo"; break;
+                case 3: output = "Hủy kết quả"; break;
             }
             return output;
         }
@@ -337,9 +337,11 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Sáng"; break;
-                case 2: output = "Chiều"; break;
-                case 3: output = "Tối"; break;
+                case 1: output = "Đã phát hiện"; break;
+                case 2: output = "Đã xem"; break;
+                case 3: output = "Đang Sửa"; break;
+                case 4: output = "Đã sửa"; break;
+                case 5: output = "Chờ kiểm tra lại"; break;
             }
             return output;
         }
@@ -352,9 +354,10 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Sáng"; break;
-                case 2: output = "Chiều"; break;
-                case 3: output = "Tối"; break;
+                case 1: output = "Học"; break;
+                case 2: output = "Dạy thay"; break;
+                case 3: output = "Học bù"; break;
+                case 4: output = "Nghỉ"; break;
             }
             return output;
         }
@@ -367,9 +370,10 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Sáng"; break;
-                case 2: output = "Chiều"; break;
-                case 3: output = "Tối"; break;
+                case 1: output = "Bình thường"; break;
+                case 2: output = "Tách lớp"; break;
+                case 3: output = "Gộp lớp"; break;
+                case 4: output = "Hủy lớp"; break;
             }
             return output;
         }
@@ -382,9 +386,9 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Sáng"; break;
-                case 2: output = "Chiều"; break;
-                case 3: output = "Tối"; break;
+                case 1: output = "Mở"; break;
+                case 2: output = "Tạm khóa"; break;
+                case 3: output = "Khóa"; break;
             }
             return output;
         }
@@ -397,9 +401,9 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Sáng"; break;
-                case 2: output = "Chiều"; break;
-                case 3: output = "Tối"; break;
+                case 1: output = "Bình thường"; break;
+                case 2: output = "Chuyển giáo viên"; break;
+                case 3: output = "Nghỉ"; break;
             }
             return output;
         }

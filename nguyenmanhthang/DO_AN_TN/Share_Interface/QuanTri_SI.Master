@@ -18,7 +18,7 @@
                 <asp:MenuItem Text="|  Điểm thi" Value="DiemThi" NavigateUrl="~/Test/TDiemThi.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="|  Error" Value="Error" NavigateUrl="~/Test/TError.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="|  Giảng Viên" Value="GiangVien" NavigateUrl="~/Test/TGiangVien.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Lịch dậy và học" Value="LichDayVaHoc" NavigateUrl="~/Test/TLichDayVaHoc.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Lịch dạy và học" Value="LichDayVaHoc" NavigateUrl="~/Test/TLichDayVaHoc.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/Test/TLopHoc.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/Test/TMonHoc.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="|  Phân công công tác" Value="PhanCongCongTac" NavigateUrl="~/Test/TPhanCongCongTac.aspx"></asp:MenuItem>

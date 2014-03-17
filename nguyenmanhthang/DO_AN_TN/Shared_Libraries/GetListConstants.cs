@@ -195,7 +195,7 @@ namespace Shared_Libraries
 
 
 
-        /// <summary> I.6. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
+        /// <summary> III.1. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
         /// <returns></returns>
         public static SortedList BaiViet_iTrangThai_GLC()
         {
@@ -207,80 +207,85 @@ namespace Shared_Libraries
             return output;
         }
 
-        /// <summary> I.6. CauHoi_iTrangThai_GLC (Trạng Thái câu hỏi) </summary>
+        /// <summary> III.2. CauHoi_iTrangThai_GLC (Trạng Thái câu hỏi) </summary>
         /// <returns></returns>
         public static SortedList CauHoi_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(CauHoi_iTrangThai_C.Sang, GetTextConstants.CauHoi_iTrangThai_GTC(CauHoi_iTrangThai_C.Sang));
-            output.Add(CauHoi_iTrangThai_C.Chieu, GetTextConstants.CauHoi_iTrangThai_GTC(CauHoi_iTrangThai_C.Chieu));
-            output.Add(CauHoi_iTrangThai_C.Toi, GetTextConstants.CauHoi_iTrangThai_GTC(CauHoi_iTrangThai_C.Toi));
+            output.Add(CauHoi_iTrangThai_C.Da_Kiem_Duyet, GetTextConstants.CauHoi_iTrangThai_GTC(CauHoi_iTrangThai_C.Da_Kiem_Duyet));
+            output.Add(CauHoi_iTrangThai_C.Cho_Xem_Xet, GetTextConstants.CauHoi_iTrangThai_GTC(CauHoi_iTrangThai_C.Cho_Xem_Xet));
+            output.Add(CauHoi_iTrangThai_C.Tam_Khoa, GetTextConstants.CauHoi_iTrangThai_GTC(CauHoi_iTrangThai_C.Tam_Khoa));
+            output.Add(CauHoi_iTrangThai_C.Khoa, GetTextConstants.CauHoi_iTrangThai_GTC(CauHoi_iTrangThai_C.Khoa));
             return output;
         }
 
-        /// <summary> I.6. DiemThi_iTrangThai_GLC (Trạng Thái điểm thi) </summary>
+        /// <summary> III.3. DiemThi_iTrangThai_GLC (Trạng Thái điểm thi) </summary>
         /// <returns></returns>
         public static SortedList DiemThi_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(DiemThi_iTrangThai_C.Sang, GetTextConstants.DiemThi_iTrangThai_GTC(DiemThi_iTrangThai_C.Sang));
-            output.Add(DiemThi_iTrangThai_C.Chieu, GetTextConstants.DiemThi_iTrangThai_GTC(DiemThi_iTrangThai_C.Chieu));
-            output.Add(DiemThi_iTrangThai_C.Toi, GetTextConstants.DiemThi_iTrangThai_GTC(DiemThi_iTrangThai_C.Toi));
+            output.Add(DiemThi_iTrangThai_C.Binh_Thuong, GetTextConstants.DiemThi_iTrangThai_GTC(DiemThi_iTrangThai_C.Binh_Thuong));
+            output.Add(DiemThi_iTrangThai_C.Phuc_Khao, GetTextConstants.DiemThi_iTrangThai_GTC(DiemThi_iTrangThai_C.Phuc_Khao));
+            output.Add(DiemThi_iTrangThai_C.Huy_Ket_Qua, GetTextConstants.DiemThi_iTrangThai_GTC(DiemThi_iTrangThai_C.Huy_Ket_Qua));
             return output;
         }
 
-        /// <summary> I.6. Error_iStatus_GLC </summary>
+        /// <summary> III.4. Error_iStatus_GLC </summary>
         /// <returns></returns>
         public static SortedList Error_iStatus_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(Error_iStatus_C.Sang, GetTextConstants.Error_iStatus_GTC(Error_iStatus_C.Sang));
-            output.Add(Error_iStatus_C.Chieu, GetTextConstants.Error_iStatus_GTC(Error_iStatus_C.Chieu));
-            output.Add(Error_iStatus_C.Toi, GetTextConstants.Error_iStatus_GTC(Error_iStatus_C.Toi));
+            output.Add(Error_iStatus_C.Da_Phat_Hien, GetTextConstants.Error_iStatus_GTC(Error_iStatus_C.Da_Phat_Hien));
+            output.Add(Error_iStatus_C.Da_Xem, GetTextConstants.Error_iStatus_GTC(Error_iStatus_C.Da_Xem));
+            output.Add(Error_iStatus_C.Dang_Sua, GetTextConstants.Error_iStatus_GTC(Error_iStatus_C.Dang_Sua));
+            output.Add(Error_iStatus_C.Da_Sua, GetTextConstants.Error_iStatus_GTC(Error_iStatus_C.Da_Sua));
+            output.Add(Error_iStatus_C.Cho_Kiem_Tra_Lai, GetTextConstants.Error_iStatus_GTC(Error_iStatus_C.Cho_Kiem_Tra_Lai));
             return output;
         }
 
-        /// <summary> I.6. LichDayVaHoc_iTrangThai_GLC (Trạng Thái lịch dạy và học) </summary>
+        /// <summary> III.5. LichDayVaHoc_iTrangThai_GLC (Trạng Thái lịch dạy và học) </summary>
         /// <returns></returns>
         public static SortedList LichDayVaHoc_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(LichDayVaHoc_iTrangThai_C.Sang, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Sang));
-            output.Add(LichDayVaHoc_iTrangThai_C.Chieu, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Chieu));
-            output.Add(LichDayVaHoc_iTrangThai_C.Toi, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Toi));
+            output.Add(LichDayVaHoc_iTrangThai_C.Hoc, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Hoc));
+            output.Add(LichDayVaHoc_iTrangThai_C.Day_Thay, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Day_Thay));
+            output.Add(LichDayVaHoc_iTrangThai_C.Hoc_Bu, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Hoc_Bu));
+            output.Add(LichDayVaHoc_iTrangThai_C.Nghi, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Nghi));
             return output;
         }
 
-        /// <summary> I.6. LopHoc_iTrangThai_GLC (Trạng Thái lớp học) </summary>
+        /// <summary> III.6. LopHoc_iTrangThai_GLC (Trạng Thái lớp học) </summary>
         /// <returns></returns>
         public static SortedList LopHoc_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(LopHoc_iTrangThai_C.Sang, GetTextConstants.LopHoc_iTrangThai_GTC(LopHoc_iTrangThai_C.Sang));
-            output.Add(LopHoc_iTrangThai_C.Chieu, GetTextConstants.LopHoc_iTrangThai_GTC(LopHoc_iTrangThai_C.Chieu));
-            output.Add(LopHoc_iTrangThai_C.Toi, GetTextConstants.LopHoc_iTrangThai_GTC(LopHoc_iTrangThai_C.Toi));
+            output.Add(LopHoc_iTrangThai_C.Binh_Thuong, GetTextConstants.LopHoc_iTrangThai_GTC(LopHoc_iTrangThai_C.Binh_Thuong));
+            output.Add(LopHoc_iTrangThai_C.Tach_Lop, GetTextConstants.LopHoc_iTrangThai_GTC(LopHoc_iTrangThai_C.Tach_Lop));
+            output.Add(LopHoc_iTrangThai_C.Gop_Lop, GetTextConstants.LopHoc_iTrangThai_GTC(LopHoc_iTrangThai_C.Gop_Lop));
+            output.Add(LopHoc_iTrangThai_C.Huy_Lop, GetTextConstants.LopHoc_iTrangThai_GTC(LopHoc_iTrangThai_C.Huy_Lop));
             return output;
         }
 
-        /// <summary> I.6. MonHoc_iTrangThai_GLC (Trạng Thái môn học) </summary>
+        /// <summary> III.7. MonHoc_iTrangThai_GLC (Trạng Thái môn học) </summary>
         /// <returns></returns>
         public static SortedList MonHoc_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(MonHoc_iTrangThai_C.Sang, GetTextConstants.MonHoc_iTrangThai_GTC(MonHoc_iTrangThai_C.Sang));
-            output.Add(MonHoc_iTrangThai_C.Chieu, GetTextConstants.MonHoc_iTrangThai_GTC(MonHoc_iTrangThai_C.Chieu));
-            output.Add(MonHoc_iTrangThai_C.Toi, GetTextConstants.MonHoc_iTrangThai_GTC(MonHoc_iTrangThai_C.Toi));
+            output.Add(MonHoc_iTrangThai_C.Mo, GetTextConstants.MonHoc_iTrangThai_GTC(MonHoc_iTrangThai_C.Mo));
+            output.Add(MonHoc_iTrangThai_C.Tam_Khoa, GetTextConstants.MonHoc_iTrangThai_GTC(MonHoc_iTrangThai_C.Tam_Khoa));
+            output.Add(MonHoc_iTrangThai_C.Khoa, GetTextConstants.MonHoc_iTrangThai_GTC(MonHoc_iTrangThai_C.Khoa));
             return output;
         }
 
-        /// <summary> I.6. PhanCongCongTac_iTrangThai_GLC (Trạng Thái môn học) </summary>
+        /// <summary> III.8. PhanCongCongTac_iTrangThai_GLC (Trạng Thái môn học) </summary>
         /// <returns></returns>
         public static SortedList PhanCongCongTac_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(PhanCongCongTac_iTrangThai_C.Sang, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Sang));
-            output.Add(PhanCongCongTac_iTrangThai_C.Chieu, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Chieu));
-            output.Add(PhanCongCongTac_iTrangThai_C.Toi, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Toi));
+            output.Add(PhanCongCongTac_iTrangThai_C.Binh_Thuong, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Binh_Thuong));
+            output.Add(PhanCongCongTac_iTrangThai_C.Chuyen_GV, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Chuyen_GV));
+            output.Add(PhanCongCongTac_iTrangThai_C.Huy, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Huy));
             return output;
         }
         #endregion
