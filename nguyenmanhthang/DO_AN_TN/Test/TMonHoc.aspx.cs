@@ -13,5 +13,9 @@ namespace DO_AN_TN.Test
         {
 
         }
+
+        protected void SelectRows_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

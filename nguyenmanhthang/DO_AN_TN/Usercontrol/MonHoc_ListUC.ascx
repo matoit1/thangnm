@@ -33,22 +33,22 @@
                         <ItemTemplate>
                             <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("PK_sMaMonhoc")%>'>Chi tiết</asp:LinkButton>
                             </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center"  />
+                        <ItemStyle Wrap="true" CssClass="GridItemLink" />
                     </asp:TemplateField>
                     <asp:BoundField  DataField="PK_sMaMonhoc"  HeaderText="Mã môn học" SortExpression="PK_sMaMonhoc">
                         <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                     </asp:BoundField>
                     <asp:BoundField DataField="sTenMonhoc" HeaderText="Tên môn học" SortExpression="sTenMonhoc">
-                        <ItemStyle CssClass="GridItemText" />
+                        <ItemStyle Wrap="true" CssClass="GridItemText" />
                     </asp:BoundField>
                     <asp:BoundField DataField="iSotrinh" HeaderText="Số trình" SortExpression="iSotrinh">
-                        <ItemStyle CssClass="GridItemText" />
+                        <ItemStyle Wrap="true" CssClass="GridItemNumber" />
                     </asp:BoundField>
                     <asp:BoundField DataField="iSotietday" HeaderText="Số tiết dạy" SortExpression="iSotietday">
-                        <ItemStyle CssClass="GridItemText" />
+                        <ItemStyle Wrap="true" CssClass="GridItemNumber" />
                     </asp:BoundField>
                     <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThai">
-                        <ItemStyle CssClass="GridItemCode" />
+                        <ItemStyle Wrap="true" CssClass="GridItemNumber" />
                     </asp:BoundField>
                 </Columns>
                 <RowStyle CssClass="GridItem"></RowStyle>

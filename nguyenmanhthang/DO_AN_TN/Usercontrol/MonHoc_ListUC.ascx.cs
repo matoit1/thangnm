@@ -14,6 +14,8 @@ namespace DO_AN_TN.UserControl
 {
     public partial class MonHoc_ListUC : System.Web.UI.UserControl
     {
+        public event EventHandler SelectRows;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             BindData();
@@ -64,6 +66,10 @@ namespace DO_AN_TN.UserControl
                     row.ToolTip = "Click to select this row.";
                 }
             }
+            //if (SelectRows != null)
+            //{
+                SelectRows(this, EventArgs.Empty);
+            //}
             try
             {
                 //BindInfo(Convert.ToInt64(grvListMonHoc.DataKeys[grvListMonHoc.SelectedIndex].Values["Accounts_ID"]));
