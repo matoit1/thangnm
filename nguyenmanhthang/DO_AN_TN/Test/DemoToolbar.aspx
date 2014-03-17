@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Toolbar.aspx.cs" Inherits="DO_AN_TN.Test.Toolbar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DemoToolbar.aspx.cs" Inherits="DO_AN_TN.Test.DemoToolbar" %>
 
 <%@ Register assembly="SCS.Web.UI.WebControls.Toolbar" namespace="SCS.Web.UI.WebControls" tagprefix="SCS" %>
 

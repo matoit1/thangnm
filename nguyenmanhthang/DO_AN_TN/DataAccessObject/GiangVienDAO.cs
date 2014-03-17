@@ -211,7 +211,7 @@ namespace DataAccessObject
         /// <summary> 7. GiangVien_SelectList </summary>
         /// <param name="_GiangVienEO"></param>
         /// <returns></returns>
-        public static DataSet GiangVien_SelectList(GiangVienEO _GiangVienEO)
+        public static DataSet GiangVien_SelectList()
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())

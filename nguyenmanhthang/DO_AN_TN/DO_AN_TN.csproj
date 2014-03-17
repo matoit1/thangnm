@@ -63,6 +63,7 @@
     <Content Include="Error\chat.js" />
     <Content Include="Error\Dao_vang_I.swf" />
     <Content Include="Error\Default.aspx" />
+    <Content Include="GiangVien\Default.aspx" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CKFinder.dll" />
@@ -73,7 +74,6 @@
     <Content Include="Other\DLL\Recaptcha.dll" />
     <Content Include="Other\DLL\SCS.Web.UI.WebControls.Toolbar.dll" />
     <Content Include="Default.aspx" />
-    <Content Include="GiaoVien\Default.aspx" />
     <Content Include="Images\change.jpg" />
     <Content Include="Images\Icon\add_reviewer.gif" />
     <Content Include="Images\Icon\buddy.gif" />
@@ -226,11 +226,25 @@
     <Content Include="Test\Drop.aspx" />
     <Content Include="Test\ItemObject.aspx" />
     <Content Include="Test\List.aspx" />
-    <Content Include="Test\Toolbar.aspx" />
+    <Content Include="Test\TBaiViet.aspx" />
+    <Content Include="Test\TCauHoi.aspx" />
+    <Content Include="Test\TDiemThi.aspx" />
+    <Content Include="Test\TError.aspx" />
+    <Content Include="Test\TGiangVien.aspx" />
+    <Content Include="Test\TLichDayVaHoc.aspx" />
+    <Content Include="Test\TLopHoc.aspx" />
+    <Content Include="Test\TMonHoc.aspx" />
+    <Content Include="Test\DemoToolbar.aspx" />
+    <Content Include="Test\TPhanCongCongTac.aspx" />
+    <Content Include="Test\TSinhVien.aspx" />
+    <Content Include="UserControl\BaiViet_DetailUC.ascx" />
+    <Content Include="UserControl\BaiViet_ListUC.ascx" />
     <Content Include="UserControl\CauHoi_DetailUC.ascx" />
     <Content Include="UserControl\CauHoi_ListUC.ascx" />
     <Content Include="UserControl\DiemThi_DetailUC.ascx" />
     <Content Include="UserControl\DiemThi_ListUC.ascx" />
+    <Content Include="UserControl\Error_DetailUC.ascx" />
+    <Content Include="UserControl\Error_ListUC.ascx" />
     <Content Include="UserControl\GiangVien_DetailUC.ascx" />
     <Content Include="UserControl\GiangVien_ListUC.ascx" />
     <Content Include="UserControl\LichDayVaHoc_DetailUC.ascx" />
@@ -315,11 +329,11 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GiaoVien\Default.aspx.cs">
+    <Compile Include="GiangVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GiaoVien\Default.aspx.designer.cs">
+    <Compile Include="GiangVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -338,12 +352,12 @@
     <Compile Include="Shared_Libraries\GetTextConstants.cs" />
     <Compile Include="Shared_Libraries\Common.cs" />
     <Compile Include="Shared_Libraries\Security.cs" />
-    <Compile Include="Share_Interface\GiaoVien_SI.Master.cs">
-      <DependentUpon>GiaoVien_SI.Master</DependentUpon>
+    <Compile Include="Share_Interface\GiangVien_SI.Master.cs">
+      <DependentUpon>GiangVien_SI.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Share_Interface\GiaoVien_SI.Master.designer.cs">
-      <DependentUpon>GiaoVien_SI.Master</DependentUpon>
+    <Compile Include="Share_Interface\GiangVien_SI.Master.designer.cs">
+      <DependentUpon>GiangVien_SI.Master</DependentUpon>
     </Compile>
     <Compile Include="Share_Interface\Home_SI.Master.cs">
       <DependentUpon>Home_SI.Master</DependentUpon>
@@ -401,12 +415,94 @@
     <Compile Include="Test\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Test\Toolbar.aspx.cs">
-      <DependentUpon>Toolbar.aspx</DependentUpon>
+    <Compile Include="Test\TBaiViet.aspx.cs">
+      <DependentUpon>TBaiViet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Test\Toolbar.aspx.designer.cs">
-      <DependentUpon>Toolbar.aspx</DependentUpon>
+    <Compile Include="Test\TBaiViet.aspx.designer.cs">
+      <DependentUpon>TBaiViet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TCauHoi.aspx.cs">
+      <DependentUpon>TCauHoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TCauHoi.aspx.designer.cs">
+      <DependentUpon>TCauHoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TDiemThi.aspx.cs">
+      <DependentUpon>TDiemThi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TDiemThi.aspx.designer.cs">
+      <DependentUpon>TDiemThi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TError.aspx.cs">
+      <DependentUpon>TError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TError.aspx.designer.cs">
+      <DependentUpon>TError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TGiangVien.aspx.cs">
+      <DependentUpon>TGiangVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TGiangVien.aspx.designer.cs">
+      <DependentUpon>TGiangVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TLichDayVaHoc.aspx.cs">
+      <DependentUpon>TLichDayVaHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TLichDayVaHoc.aspx.designer.cs">
+      <DependentUpon>TLichDayVaHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TLopHoc.aspx.cs">
+      <DependentUpon>TLopHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TLopHoc.aspx.designer.cs">
+      <DependentUpon>TLopHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TMonHoc.aspx.cs">
+      <DependentUpon>TMonHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TMonHoc.aspx.designer.cs">
+      <DependentUpon>TMonHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\DemoToolbar.aspx.cs">
+      <DependentUpon>DemoToolbar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\DemoToolbar.aspx.designer.cs">
+      <DependentUpon>DemoToolbar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TPhanCongCongTac.aspx.cs">
+      <DependentUpon>TPhanCongCongTac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TPhanCongCongTac.aspx.designer.cs">
+      <DependentUpon>TPhanCongCongTac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TSinhVien.aspx.cs">
+      <DependentUpon>TSinhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TSinhVien.aspx.designer.cs">
+      <DependentUpon>TSinhVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BaiViet_DetailUC.ascx.cs">
+      <DependentUpon>BaiViet_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BaiViet_DetailUC.ascx.designer.cs">
+      <DependentUpon>BaiViet_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BaiViet_ListUC.ascx.cs">
+      <DependentUpon>BaiViet_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BaiViet_ListUC.ascx.designer.cs">
+      <DependentUpon>BaiViet_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\CauHoi_DetailUC.ascx.cs">
       <DependentUpon>CauHoi_DetailUC.ascx</DependentUpon>
@@ -435,6 +531,18 @@
     </Compile>
     <Compile Include="UserControl\DiemThi_ListUC.ascx.designer.cs">
       <DependentUpon>DiemThi_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Error_DetailUC.ascx.cs">
+      <DependentUpon>Error_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Error_DetailUC.ascx.designer.cs">
+      <DependentUpon>Error_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Error_ListUC.ascx.cs">
+      <DependentUpon>Error_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Error_ListUC.ascx.designer.cs">
+      <DependentUpon>Error_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\GiangVien_DetailUC.ascx.cs">
       <DependentUpon>GiangVien_DetailUC.ascx</DependentUpon>
@@ -534,7 +642,7 @@
     <Folder Include="Images\Temp\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Share_Interface\GiaoVien_SI.Master" />
+    <Content Include="Share_Interface\GiangVien_SI.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Share_Interface\SinhVien_SI.Master" />

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GiaoVien_SI.master.cs" Inherits="DO_AN_TN.Share_Interface.GiaoVien_SI" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GiangVien_SI.Master.cs" Inherits="DO_AN_TN.Share_Interface.GiangVien_SI" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 

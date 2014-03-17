@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DO_AN_TN.GiaoVien
+namespace DO_AN_TN.Test
 {
 
 
-    public partial class Default
+    public partial class TSinhVien
     {
 
         /// <summary>

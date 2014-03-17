@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace DO_AN_TN.Test
 {
-    public partial class Toolbar : System.Web.UI.Page
+    public partial class TLichDayVaHoc : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Toolbar1_ButtonClicked(object sender, SCS.Web.UI.WebControls.ButtonEventArgs e)
-        {
-            lblMsg.Text = lblMsg.Text + e.CommandName.ToString();
         }
     }
 }

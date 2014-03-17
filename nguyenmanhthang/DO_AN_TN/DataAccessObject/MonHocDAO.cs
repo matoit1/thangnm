@@ -181,7 +181,7 @@ namespace DataAccessObject
         /// <summary> 7. MonHoc_SelectList </summary>
         /// <param name="_MonHocEO"></param>
         /// <returns></returns>
-        public static DataSet MonHoc_SelectList(MonHocEO _MonHocEO)
+        public static DataSet MonHoc_SelectList()
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())

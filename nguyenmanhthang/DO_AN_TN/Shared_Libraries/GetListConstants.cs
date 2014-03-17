@@ -192,6 +192,56 @@ namespace Shared_Libraries
             output.Add(LichDayVaHoc_iCaHoc_C.Toi, GetTextConstants.LichDayVaHoc_iCaHoc_GTC(LichDayVaHoc_iCaHoc_C.Toi));
             return output;
         }
+
+
+
+        /// <summary> I.6. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
+        /// <returns></returns>
+        public static SortedList BaiViet_iTrangThai_GLC()
+        {
+            SortedList output = new SortedList();
+            return output;
+        }
+
+        /// <summary> I.6. CauHoi_iTrangThai_GLC (Trạng Thái câu hỏi) </summary>
+        /// <returns></returns>
+        public static SortedList CauHoi_iTrangThai_GLC()
+        {
+            SortedList output = new SortedList();
+            return output;
+        }
+
+        /// <summary> I.6. DiemThi_iTrangThai_GLC (Trạng Thái điểm thi) </summary>
+        /// <returns></returns>
+        public static SortedList DiemThi_iTrangThai_GLC()
+        {
+            SortedList output = new SortedList();
+            return output;
+        }
+
+        /// <summary> I.6. Error_iStatus_GLC </summary>
+        /// <returns></returns>
+        public static SortedList Error_iStatus_GLC()
+        {
+            SortedList output = new SortedList();
+            return output;
+        }
+
+        /// <summary> I.6. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
+        /// <returns></returns>
+        public static SortedList BaiViet_iTrangThai_GLC()
+        {
+            SortedList output = new SortedList();
+            return output;
+        }
+
+        /// <summary> I.6. BaiViet_iTrangThai_GLC (Trạng Thái bài viết) </summary>
+        /// <returns></returns>
+        public static SortedList BaiViet_iTrangThai_GLC()
+        {
+            SortedList output = new SortedList();
+            return output;
+        }
         #endregion
     }
 }
