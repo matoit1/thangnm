@@ -267,5 +267,142 @@ namespace Shared_Libraries
             return output;
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary> BaiViet_iTrangThai_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string BaiViet_iTrangThai_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Chờ xem xét"; break;
+                case 2: output = "Đã kiểm duyệt"; break;
+                case 3: output = "Tạm khóa"; break;
+                case 4: output = "Khóa"; break;
+            }
+            return output;
+        }
+
+        /// <summary> CauHoi_iTrangThai_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string CauHoi_iTrangThai_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Chờ xem xét"; break;
+                case 2: output = "Đã kiểm duyệt"; break;
+                case 3: output = "Tạm khóa"; break;
+                case 4: output = "Khóa"; break;
+            }
+            return output;
+        }
+
+        /// <summary> DiemThi_iTrangThai_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string DiemThi_iTrangThai_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Sáng"; break;
+                case 2: output = "Chiều"; break;
+                case 3: output = "Tối"; break;
+            }
+            return output;
+        }
+
+        /// <summary> Error_iStatus_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string Error_iStatus_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Sáng"; break;
+                case 2: output = "Chiều"; break;
+                case 3: output = "Tối"; break;
+            }
+            return output;
+        }
+
+        /// <summary> LichDayVaHoc_iTrangThai_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string LichDayVaHoc_iTrangThai_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Sáng"; break;
+                case 2: output = "Chiều"; break;
+                case 3: output = "Tối"; break;
+            }
+            return output;
+        }
+
+        /// <summary> LopHoc_iTrangThai_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string LopHoc_iTrangThai_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Sáng"; break;
+                case 2: output = "Chiều"; break;
+                case 3: output = "Tối"; break;
+            }
+            return output;
+        }
+
+        /// <summary> MonHoc_iTrangThai_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string MonHoc_iTrangThai_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Sáng"; break;
+                case 2: output = "Chiều"; break;
+                case 3: output = "Tối"; break;
+            }
+            return output;
+        }
+
+        /// <summary> PhanCongCongTac_iTrangThai_GTC (Ca học) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string PhanCongCongTac_iTrangThai_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Sáng"; break;
+                case 2: output = "Chiều"; break;
+                case 3: output = "Tối"; break;
+            }
+            return output;
+        }
+
     }
 }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Shared_Libraries;
+using DataAccessObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -20,14 +21,14 @@ namespace DO_AN_TN.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddlFK_sMaPCCT.DataSource = GetListConstants.Gioi_Tinh_GLC();
-            ddlFK_sMaPCCT.DataTextField = "Value";
-            ddlFK_sMaPCCT.DataValueField = "Key";
+            ddlFK_sMaPCCT.DataSource = PhanCongCongTacDAO.PhanCongCongTac_SelectList();
+            ddlFK_sMaPCCT.DataTextField = "PK_sMaPCCT";
+            ddlFK_sMaPCCT.DataValueField = "PK_sMaPCCT";
             ddlFK_sMaPCCT.DataBind();
 
-            ddlFK_sMalop.DataSource = GetListConstants.Hon_Nhan_GLC();
-            ddlFK_sMalop.DataTextField = "Value";
-            ddlFK_sMalop.DataValueField = "Key";
+            ddlFK_sMalop.DataSource = LopHocDAO.LopHoc_SelectList();
+            ddlFK_sMalop.DataTextField = "PK_sMalop";
+            ddlFK_sMalop.DataValueField = "sTenlop";
             ddlFK_sMalop.DataBind();
 
             ddliCaHoc.DataSource = GetListConstants.LichDayVaHoc_iCaHoc_GLC();
@@ -35,7 +36,7 @@ namespace DO_AN_TN.UserControl
             ddliCaHoc.DataValueField = "Key";
             ddliCaHoc.DataBind();
 
-            ddliTrangThai.DataSource = GetListConstants.LichDayVaHoc_iCaHoc_GLC();
+            ddliTrangThai.DataSource = GetListConstants.LichDayVaHoc_iTrangThai_GLC();
             ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();

@@ -20,7 +20,7 @@ namespace DO_AN_TN.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddliTrangThai.DataSource = GetListConstants.Gioi_Tinh_GLC();
+            ddliTrangThai.DataSource = GetListConstants.LopHoc_iTrangThai_GLC();
             ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();

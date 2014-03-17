@@ -183,7 +183,7 @@ namespace DataAccessObject
         /// <summary> 7. PhanCongCongTac_SelectList </summary>
         /// <param name="_PhanCongCongTacEO"></param>
         /// <returns></returns>
-        public static DataSet PhanCongCongTac_SelectList(PhanCongCongTacEO _PhanCongCongTacEO)
+        public static DataSet PhanCongCongTac_SelectList()
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())

@@ -177,20 +177,20 @@ namespace Shared_Libraries.Constants
     /// 
     public class BaiViet_iTrangThai_C
     {
-        public const Int16 Da_Phat_Hien = 1;
-        public const Int16 Da_Xem = 2;
-        public const Int16 Dang_Sua = 3;
-        public const Int16 Da_Sua = 4;
-        public const Int16 Cho_Kiem_Tra_Lai = 5;
+        public const Int16 Cho_Xem_Xet = 1;
+        public const Int16 Da_Kiem_Duyet = 2;
+        public const Int16 Tam_Khoa = 3;
+        public const Int16 Khoa = 4;
     }
 
     /// <summary> II.2. CauHoi_iTrangThai_C (Trạng thái sửa lỗi) </summary>
     /// 
     public class CauHoi_iTrangThai_C
     {
-        public const Int16 Mo = 1;
-        public const Int16 Tam_Khoa = 2;
-        public const Int16 Khoa = 3;
+        public const Int16 Cho_Xem_Xet = 1;
+        public const Int16 Da_Kiem_Duyet = 2;
+        public const Int16 Tam_Khoa = 3;
+        public const Int16 Khoa = 4;
     }
 
     /// <summary> II.3. DiemThi_iTrangThai_C (Trạng thái sửa lỗi) </summary>
@@ -199,9 +199,8 @@ namespace Shared_Libraries.Constants
     {
         public const Int16 Da_Phat_Hien = 1;
         public const Int16 Da_Xem = 2;
-        public const Int16 Dang_Sua = 3;
-        public const Int16 Da_Sua = 4;
-        public const Int16 Cho_Kiem_Tra_Lai = 5;
+        public const Int16 Xem_Lai = 3;
+        public const Int16 Huy = 4;
     }
 
     /// <summary> II.4. Error_iStatus_C (Trạng thái sửa lỗi) </summary>
@@ -241,22 +240,19 @@ namespace Shared_Libraries.Constants
     /// 
     public class MonHoc_iTrangThai_C
     {
-        public const Int16 Da_Phat_Hien = 1;
-        public const Int16 Da_Xem = 2;
-        public const Int16 Dang_Sua = 3;
-        public const Int16 Da_Sua = 4;
-        public const Int16 Cho_Kiem_Tra_Lai = 5;
+        public const Int16 Mo = 1;
+        public const Int16 Tam_Khoa = 2;
+        public const Int16 Khoa = 3;
     }
 
     /// <summary> II.9. PhanCongCongTac_iTrangThai_C (Trạng thái sửa lỗi) </summary>
     /// 
     public class PhanCongCongTac_iTrangThai_C
     {
-        public const Int16 Da_Phat_Hien = 1;
-        public const Int16 Da_Xem = 2;
-        public const Int16 Dang_Sua = 3;
-        public const Int16 Da_Sua = 4;
-        public const Int16 Cho_Kiem_Tra_Lai = 5;
+        public const Int16 Hoc = 1;
+        public const Int16 Day_Thay = 2;
+        public const Int16 Hoc_Bu = 3;
+        public const Int16 Nghi = 4;
     }
     #endregion
 

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Shared_Libraries;
+using DataAccessObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -20,17 +21,17 @@ namespace DO_AN_TN.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddlFK_sMaGV.DataSource = GetListConstants.Gioi_Tinh_GLC();
-            ddlFK_sMaGV.DataTextField = "Value";
-            ddlFK_sMaGV.DataValueField = "Key";
+            ddlFK_sMaGV.DataSource = GiangVienDAO.GiangVien_SelectList();
+            ddlFK_sMaGV.DataTextField = "sHoTenGV";
+            ddlFK_sMaGV.DataValueField = "PK_sMaGV";
             ddlFK_sMaGV.DataBind();
 
-            ddlFK_sMaMonhoc.DataSource = GetListConstants.Hon_Nhan_GLC();
-            ddlFK_sMaMonhoc.DataTextField = "Value";
-            ddlFK_sMaMonhoc.DataValueField = "Key";
+            ddlFK_sMaMonhoc.DataSource = MonHocDAO.MonHoc_SelectList();
+            ddlFK_sMaMonhoc.DataTextField = "sTenMonhoc";
+            ddlFK_sMaMonhoc.DataValueField = "PK_sMaMonhoc";
             ddlFK_sMaMonhoc.DataBind();
 
-            ddliTrangThai.DataSource = GetListConstants.SinhVien_iTrangThaiSV_GLC();
+            ddliTrangThai.DataSource = GetListConstants.PhanCongCongTac_iTrangThai_GLC();
             ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
