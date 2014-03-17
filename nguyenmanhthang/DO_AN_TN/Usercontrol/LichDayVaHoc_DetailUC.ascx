@@ -12,7 +12,7 @@
     <table>
         <tr>
             <td></td>
-            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Lịch dậy và học"></asp:Label></td>
+            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Lịch dạy và học"></asp:Label></td>
             <td></td>
         </tr>
         <tr>

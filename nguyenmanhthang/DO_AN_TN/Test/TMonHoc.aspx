@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TMonHoc.aspx.cs" Inherits="DO_AN_TN.Test.TMonHoc" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TMonHoc.aspx.cs" Inherits="DO_AN_TN.Test.TMonHoc" MasterPageFile="~/Share_Interface/QuanTri_SI.Master"  EnableEventValidation="false" %>
 
 <%@ Register src="../UserControl/MonHoc_DetailUC.ascx" tagname="MonHoc_DetailUC" tagprefix="uc1" %>
 <%@ Register src="../UserControl/MonHoc_ListUC.ascx" tagname="MonHoc_ListUC" tagprefix="uc2" %>
