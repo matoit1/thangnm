@@ -183,7 +183,7 @@ namespace DataAccessObject
         /// <summary> 7. LopHoc_SelectList </summary>
         /// <param name="_LopHocEO"></param>
         /// <returns></returns>
-        public static DataSet LopHoc_SelectList(LopHocEO _LopHocEO)
+        public static DataSet LopHoc_SelectList()
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
