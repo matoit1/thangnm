@@ -14,7 +14,7 @@
         }
     }
 </script>
-<style type="text/css">
+<%--<style type="text/css">
 .modalBackground
 {
     background-color:Gray;
@@ -31,16 +31,22 @@
 }
 </style>
 <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-</cc1:ToolkitScriptManager>
-<div>
-    <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server" PopupControlID="pnlSearch" TargetControlID="btnTimKiem" BackgroundCssClass="modalBackground" 
+</cc1:ToolkitScriptManager>--%>
+<%--    <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server" PopupControlID="pnlSearch" TargetControlID="btnTimKiem" BackgroundCssClass="modalBackground" 
     OkControlID="" CancelControlID="" DropShadow="true" Drag="false" >
-    </cc1:ModalPopupExtender>
+    </cc1:ModalPopupExtender>--%>
+<div>
     <table>
         <tr>
             <td>
-                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="topopup" >LinkButton</asp:LinkButton>
-                <asp:Button ID="btnTimKiem" runat="server" Text="Tìm kiếm"/>
+                <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" onclick="btnSearch_Click" />
+                <asp:Button ID="btnRefresh" runat="server" Text="Làm mới" onclick="btnRefresh_Click" />
+                <asp:Button ID="btnAddNew" runat="server" Text="Thêm" onclick="btnAddNew_Click" />
+                <asp:Button ID="btnDeleteList" runat="server" Text="Xóa" />
+                <asp:Button ID="btnExportExcel" runat="server" Text="Xuất ra Excel" 
+                    onclick="btnExportExcel_Click" />
+                <%--<asp:LinkButton ID="LinkButton1" runat="server" CssClass="topopup" >LinkButton</asp:LinkButton>
+                <asp:Button ID="btnTimKiem" runat="server" Text="Tìm kiếm"/>--%>
             </td>
         </tr>
         <tr>
@@ -94,10 +100,9 @@
         <tr>
             <td><asp:Label ID="lblTongSoBanGhi" runat="server"></asp:Label></td>
         </tr>
-    </table><br />
-    <asp:HyperLink ID="hplLogin" runat="server" CssClass="topopup">Đăng nhập</asp:HyperLink>
+    </table>
 </div>
-<asp:Panel ID="pnlSearch" runat="server" CssClass="modalPopup">
+<%--<asp:Panel ID="pnlSearch" runat="server" CssClass="modalPopup">
 <uc1:LoginUC ID="LoginUC2" runat="server" OnNavigation="Navigation_Click" />
 </asp:Panel>
 <div id="toPopup">
@@ -107,4 +112,4 @@
 		<uc1:LoginUC ID="LoginUC1" runat="server" OnNavigation="Navigation_Click" />
 	</div> <!--your content end-->
 </div> <!--toPopup end-->
-<div id="backgroundPopup"></div>
+<div id="backgroundPopup"></div>--%>

@@ -13,40 +13,49 @@ namespace DO_AN_TN.UserControl {
     public partial class MonHoc_ListUC {
         
         /// <summary>
-        /// ToolkitScriptManager1 control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
+        protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
-        /// ModalPopupExtender1 control.
+        /// btnRefresh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ModalPopupExtender ModalPopupExtender1;
+        protected global::System.Web.UI.WebControls.Button btnRefresh;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// btnAddNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Button btnAddNew;
         
         /// <summary>
-        /// btnTimKiem control.
+        /// btnDeleteList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTimKiem;
+        protected global::System.Web.UI.WebControls.Button btnDeleteList;
+        
+        /// <summary>
+        /// btnExportExcel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExportExcel;
         
         /// <summary>
         /// grvListMonHoc control.
@@ -65,41 +74,5 @@ namespace DO_AN_TN.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTongSoBanGhi;
-        
-        /// <summary>
-        /// hplLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplLogin;
-        
-        /// <summary>
-        /// pnlSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlSearch;
-        
-        /// <summary>
-        /// LoginUC2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DO_AN_TN.UserControl.LoginUC LoginUC2;
-        
-        /// <summary>
-        /// LoginUC1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DO_AN_TN.UserControl.LoginUC LoginUC1;
     }
 }
