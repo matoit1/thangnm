@@ -14,8 +14,20 @@ namespace DO_AN_TN.Test
 
         }
 
-        protected void SelectRows_Click(object sender, EventArgs e)
+        protected void SelectRow_Click(object sender, EventArgs e)
         {
+            //MonHoc_DetailUC1.BindDataDetail(MonHoc_ListUC1.PK_sMaMonhoc);
+        }
+
+        protected void ViewDetail_Click(object sender, EventArgs e)
+        {
+            mtvMain.SetActiveView(vDetail);
+            MonHoc_DetailUC2.BindDataDetail(MonHoc_ListUC1.PK_sMaMonhoc);
+        }
+
+        protected void lbtnBack_Click(object sender, EventArgs e)
+        {
+            mtvMain.SetActiveView(vList);
         }
     }
 }
