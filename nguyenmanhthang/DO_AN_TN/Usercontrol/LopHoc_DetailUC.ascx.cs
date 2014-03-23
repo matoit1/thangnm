@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Shared_Libraries;
+using EntityObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -59,6 +60,28 @@ namespace DO_AN_TN.UserControl
         protected void btnReset_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private LopHocEO getObject()
+        {
+            try
+            {
+                LopHocEO _LopHocEO = new LopHocEO();
+                _LopHocEO.PK_sMalop = txtPK_sMalop.Text;
+                _LopHocEO.sTenlop = txtsTenlop.Text;
+                try{ _LopHocEO.iNamvaotruong = Convert.ToInt16(txtiNamvaotruong.Text);}
+                catch{ lbliNamvaotruong.Text = Messages.Khong_Dung_Dinh_Dang_So;}
+                try{ _LopHocEO.iSiso = Convert.ToInt16(txtiSiso.Text);}
+                catch{ lbliSiso.Text = Messages.Khong_Dung_Dinh_Dang_So;}
+                try{ _LopHocEO.iSoNamDaoTao = Convert.ToInt16(txtiSoNamDaoTao.Text);}
+                catch{ lbliSoNamDaoTao.Text = Messages.Khong_Dung_Dinh_Dang_So;}
+                _LopHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
+                return _LopHocEO;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

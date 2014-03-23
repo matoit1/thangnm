@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccessObject;
 using EntityObject;
+using Shared_Libraries;
 
 namespace DO_AN_TN.Test
 {
@@ -29,6 +30,10 @@ namespace DO_AN_TN.Test
                     txtiStatus.Text = result.iStatus.ToString();
                 }
             }
+            LichDayVaHocEO obj = new LichDayVaHocEO();
+            obj.FK_sMaPCCT = "1";
+            obj.FK_sMalop = "1";
+            Convert_ToOject.LichDayVaHocEO(LichDayVaHocDAO.LichDayVaHoc_SelectItem(obj));
         }
     }
 }
