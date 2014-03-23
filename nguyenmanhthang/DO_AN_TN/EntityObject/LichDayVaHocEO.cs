@@ -12,6 +12,7 @@ namespace EntityObject
         private Int16 _iCaHoc;
         private DateTime _tNgayDay;
         private Int16 _iSoTietDay;
+        private string _sSinhVienNghi;
         private Int16 _iTrangThai;
 
         // 1. Xay dung cac phuong thuc set, get cho FK_sMaPCCT
@@ -49,7 +50,14 @@ namespace EntityObject
             set { this._iSoTietDay = value; }
         }
 
-        // 6. Xay dung cac phuong thuc set, get cho iTrangThai
+        // 6. Xay dung cac phuong thuc set, get cho sSinhVienNghi
+        public string sSinhVienNghi
+        {
+            get { return this._sSinhVienNghi; }
+            set { this._sSinhVienNghi = value; }
+        }
+
+        // 7. Xay dung cac phuong thuc set, get cho iTrangThai
         public Int16 iTrangThai
         {
             get { return this._iTrangThai; }

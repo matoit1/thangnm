@@ -13,7 +13,6 @@
     <div>
         <asp:Menu ID="Menu1" runat="server" StaticDisplayLevels="3" ItemWrap="True" Orientation="Horizontal">
             <Items>
-                <asp:MenuItem Text="|  Quản lý" Value="QuanLy"></asp:MenuItem>
                 <asp:MenuItem Text="|  Bài viết" Value="BaiViet" NavigateUrl="~/Test/TBaiViet.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="|  Câu hỏi" Value="CauHoi" NavigateUrl="~/Test/TCauHoi.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="|  Điểm thi" Value="DiemThi" NavigateUrl="~/Test/TDiemThi.aspx"></asp:MenuItem>

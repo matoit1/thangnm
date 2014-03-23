@@ -13,5 +13,4 @@
             <uc1:MonHoc_DetailUC ID="MonHoc_DetailUC2" runat="server" />
         </asp:View>
     </asp:MultiView>
-
 </asp:Content>
