@@ -14,11 +14,22 @@ namespace DO_AN_TN.UserControl
 {
     public partial class MonHoc_ListUC : System.Web.UI.UserControl
     {
-        public event EventHandler SelectRows;
+        public event EventHandler ViewDetail;
+        public event EventHandler SelectRow;
+        private string _PK_sMaMonhoc;
+        public string PK_sMaMonhoc
+        {
+            get { return this._PK_sMaMonhoc; }
+            set { _PK_sMaMonhoc = value; }
+        }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindData();
+            if (!IsPostBack)
+            {
+                BindData();
+            }
         }
 
         protected void BindData()
@@ -48,7 +59,15 @@ namespace DO_AN_TN.UserControl
 
         protected void grvListMonHoc_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            if (e.CommandName == "cmdView")
+            {
+                this.PK_sMaMonhoc = Convert.ToString(e.CommandArgument);
 
+                if (ViewDetail != null)
+                {
+                    ViewDetail(this, EventArgs.Empty);
+                }
+            }
         }
 
         protected void grvListMonHoc_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,17 +85,11 @@ namespace DO_AN_TN.UserControl
                     row.ToolTip = "Click to select this row.";
                 }
             }
-            //if (SelectRows != null)
+            //if (SelectRow != null)
             //{
-                SelectRows(this, EventArgs.Empty);
+            //    PK_sMaMonhoc = grvListMonHoc.DataKeys[grvListMonHoc.SelectedIndex].Values["PK_sMaMonhoc"].ToString();
+            //    SelectRow(this, EventArgs.Empty);
             //}
-            try
-            {
-                //BindInfo(Convert.ToInt64(grvListMonHoc.DataKeys[grvListMonHoc.SelectedIndex].Values["Accounts_ID"]));
-            }
-            catch (Exception)
-            {
-            }
         }
 
         protected void grvListMonHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -100,12 +113,12 @@ namespace DO_AN_TN.UserControl
             if (direction == SortDirection.Ascending)
             {
                 direction = SortDirection.Descending;
-                sortingDirection = "Desc";
+                sortingDirection = "DESC";
             }
             else
             {
                 direction = SortDirection.Ascending;
-                sortingDirection = "Asc";
+                sortingDirection = "ASC";
             }
             DataSet dsMonHoc = MonHocDAO.MonHoc_SelectList();
             DataView sortedView = new DataView(dsMonHoc.Tables[0]);
@@ -127,6 +140,11 @@ namespace DO_AN_TN.UserControl
             }
             set
             { ViewState["directionState"] = value; }
+        }
+
+        protected void Navigation_Click(object sender, EventArgs e)
+        {
+            if (LoginUC1.state == true) { Response.Redirect(Request.Url.AbsolutePath); } else { Response.Redirect("~/Accounts/Login.aspx"); }
         }
     }
 }

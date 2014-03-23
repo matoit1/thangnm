@@ -28,6 +28,15 @@ namespace DO_AN_TN.UserControl
             ddliTrangThai.DataBind();
         }
 
+        public void BindDataDetail(string _MonHocEO)
+        {
+            txtPK_sMaMonhoc.Text = _MonHocEO;
+            //txtPK_sMaMonhoc.Text = _MonHocEO.PK_sMaMonhoc;
+            //txtsTenMonhoc.Text = _MonHocEO.sTenMonhoc;
+            //txtiSotrinh.Text = _MonHocEO.iSotrinh.ToString();
+            //txtiSotietday.Text = _MonHocEO.iSotietday.ToString();
+            //ddliTrangThai.SelectedValue = _MonHocEO.iTrangThai.ToString();
+        }
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             try
