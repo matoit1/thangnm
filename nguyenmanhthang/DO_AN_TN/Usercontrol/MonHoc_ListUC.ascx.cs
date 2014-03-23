@@ -9,6 +9,8 @@ using DataAccessObject;
 using EntityObject;
 using Shared_Libraries;
 using System.Data;
+using System.Text;
+using System.IO;
 
 namespace DO_AN_TN.UserControl
 {
@@ -16,6 +18,8 @@ namespace DO_AN_TN.UserControl
     {
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
+        public event EventHandler AddNew;
+        public event EventHandler Search;
         private string _PK_sMaMonhoc;
         public string PK_sMaMonhoc
         {
@@ -32,7 +36,7 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-        protected void BindData()
+        public void BindData()
         {
             grvListMonHoc.Visible = false;
             DataSet dsMonHoc = new DataSet();
@@ -62,7 +66,6 @@ namespace DO_AN_TN.UserControl
             if (e.CommandName == "cmdView")
             {
                 this.PK_sMaMonhoc = Convert.ToString(e.CommandArgument);
-
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);
@@ -144,7 +147,141 @@ namespace DO_AN_TN.UserControl
 
         protected void Navigation_Click(object sender, EventArgs e)
         {
-            if (LoginUC1.state == true) { Response.Redirect(Request.Url.AbsolutePath); } else { Response.Redirect("~/Accounts/Login.aspx"); }
+            //if (LoginUC1.state == true) { Response.Redirect(Request.Url.AbsolutePath); } else { Response.Redirect("~/Accounts/Login.aspx"); }
+        }
+
+        protected void btnAddNew_Click(object sender, EventArgs e)
+        {
+            if (AddNew != null)
+            {
+                AddNew(this, EventArgs.Empty);
+            }
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (Search != null)
+            {
+                Search(this, EventArgs.Empty);
+            }
+        }
+
+        protected void btnRefresh_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        protected void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            string FileName = "Danh_sach_Mon_Hoc(" + Messages.DateTime_Temp + ").xls";
+            ExportToExcel(FileName);
+        }
+
+        //public void ExportToExcel(string fileName)
+        //{
+        //    Response.ContentType = "application/csv";
+        //    Response.Charset = "";
+        //    Response.AddHeader("Content-Disposition", "attachment;filename=" + fileName);
+        //    Response.ContentEncoding = Encoding.Unicode;
+        //    Response.BinaryWrite(Encoding.Unicode.GetPreamble());
+        //    DataTable dtb = MonHocDAO.MonHoc_SelectList().Tables[0];
+        //    try
+        //    {
+        //        StringBuilder sb = new StringBuilder();
+        //        //Tạo dòng tiêu để cho bảng tính
+        //        for (int count = 0; count < dtb.Columns.Count; count++)
+        //        {
+        //            if (dtb.Columns[count].ColumnName != null)
+        //                sb.Append(dtb.Columns[count].ColumnName);
+        //            if (count < dtb.Columns.Count - 1)
+        //            {
+        //                sb.Append("\t");
+        //            }
+        //        }
+        //        Response.Write(sb.ToString() + "\n");
+        //        Response.Flush();
+        //        //Duyệt từng bản ghi 
+        //        int soDem = 0;
+        //        while (dtb.Rows.Count >= soDem + 1)
+        //        {
+        //            sb = new StringBuilder();
+
+        //            for (int col = 0; col < dtb.Columns.Count - 1; col++)
+        //            {
+        //                if (dtb.Rows[soDem][col] != null)
+        //                    sb.Append(dtb.Rows[soDem][col].ToString().Replace(",", " "));
+        //                sb.Append("\t");
+        //            }
+        //            if (dtb.Rows[soDem][dtb.Columns.Count - 1] != null)
+        //                sb.Append(dtb.Rows[soDem][dtb.Columns.Count - 1].ToString().Replace(",", " "));
+
+        //            Response.Write(sb.ToString() + "\n");
+        //            Response.Flush();
+        //            soDem = soDem + 1;
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Response.Write(ex.Message);
+        //    }
+        //    dtb.Dispose();
+        //    Response.End();
+        //}
+
+
+
+        public void VerifyRenderingInServerForm(Control control)
+        {
+            /* Verifies that the control is rendered */
+        }
+
+        protected void ExportToExcel(string fileName)
+        {
+            Response.Clear();
+            Response.Buffer = true;
+            Response.AddHeader("Content-Disposition", "attachment;filename=" + fileName);
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-excel";
+            using (StringWriter sw = new StringWriter())
+            {
+                HtmlTextWriter hw = new HtmlTextWriter(sw);
+
+                //To Export all pages
+                grvListMonHoc.AllowPaging = false;
+                this.BindData();
+
+                grvListMonHoc.HeaderRow.BackColor = Color.White;
+                foreach (TableCell cell in grvListMonHoc.HeaderRow.Cells)
+                {
+                    cell.BackColor = grvListMonHoc.HeaderStyle.BackColor;
+                }
+                foreach (GridViewRow row in grvListMonHoc.Rows)
+                {
+                    row.BackColor = Color.White;
+                    foreach (TableCell cell in row.Cells)
+                    {
+                        if (row.RowIndex % 2 == 0)
+                        {
+                            cell.BackColor = grvListMonHoc.AlternatingRowStyle.BackColor;
+                        }
+                        else
+                        {
+                            cell.BackColor = grvListMonHoc.RowStyle.BackColor;
+                        }
+                        cell.CssClass = "textmode";
+                    }
+                }
+
+                grvListMonHoc.RenderControl(hw);
+
+                //style to format numbers to string
+                string style = @"<style> .textmode { } </style>";
+                Response.Write(style);
+                Response.Output.Write(sw.ToString());
+                Response.Flush();
+                Response.End();
+            }
         }
     }
 }

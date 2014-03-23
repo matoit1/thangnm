@@ -20,47 +20,14 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-        public void loadDataToDropDownList()
+        public void BindDataDetail(MonHocEO _MonHocEO)
         {
-            ddliTrangThai.DataSource = GetListConstants.MonHoc_iTrangThai_GLC();
-            ddliTrangThai.DataTextField = "Value";
-            ddliTrangThai.DataValueField = "Key";
-            ddliTrangThai.DataBind();
-        }
-
-        public void BindDataDetail(string _PK_sMaMonhoc)
-        {
-            MonHocEO _MonHocEO = new MonHocEO();
-            _MonHocEO.PK_sMaMonhoc = _PK_sMaMonhoc;
-            _MonHocEO = Convert_ToOject.MonHocEO(MonHocDAO.MonHoc_SelectItem(_MonHocEO));
             txtPK_sMaMonhoc.Text = _MonHocEO.PK_sMaMonhoc;
             txtsTenMonhoc.Text = _MonHocEO.sTenMonhoc;
             txtiSotrinh.Text = _MonHocEO.iSotrinh.ToString();
             txtiSotietday.Text = _MonHocEO.iSotietday.ToString();
-            ddliTrangThai.SelectedValue = _MonHocEO.iTrangThai.ToString();
-        }
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                MonHocDAO.MonHoc_SelectList();
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnRefresh_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                MonHocDAO.MonHoc_SelectList();
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
+            try{ ddliTrangThai.SelectedValue = _MonHocEO.iTrangThai.ToString();}
+            catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)
@@ -120,18 +87,10 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-        protected void btnExport_Click(object sender, EventArgs e)
-        {
-            MonHocDAO.MonHoc_SelectList();
-        }
-
         protected void btnReset_Click(object sender, EventArgs e)
         {
-            txtPK_sMaMonhoc.Text = "";
-            txtsTenMonhoc.Text = "";
-            txtiSotrinh.Text = "";
-            txtiSotietday.Text = "";
-            ddliTrangThai.SelectedIndex = 0;
+            MonHocEO _MonHocEO = new MonHocEO();
+            BindDataDetail(_MonHocEO);
         }
 
         private MonHocEO getObject()
@@ -141,22 +100,10 @@ namespace DO_AN_TN.UserControl
                 MonHocEO _MonHocEO = new MonHocEO();
                 _MonHocEO.PK_sMaMonhoc = txtPK_sMaMonhoc.Text;
                 _MonHocEO.sTenMonhoc = txtsTenMonhoc.Text;
-                try{
-                    _MonHocEO.iSotrinh = Convert.ToInt16(txtiSotrinh.Text);
-                }
-                catch{
-                    txtiSotrinh.Text = "0";
-                    _MonHocEO.iSotrinh = 0;
-                }
-                try
-                {
-                    _MonHocEO.iSotietday = Convert.ToInt16(txtiSotietday.Text);
-                }
-                catch
-                {
-                    txtiSotietday.Text = "0";
-                    _MonHocEO.iSotietday = 0;
-                }
+                try{ _MonHocEO.iSotrinh = Convert.ToInt16(txtiSotrinh.Text);}
+                catch { lbliSotrinh.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try{_MonHocEO.iSotietday = Convert.ToInt16(txtiSotietday.Text);}
+                catch{ lbliSotietday.Text = Messages.Khong_Dung_Dinh_Dang_So;}
                 _MonHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
                 return _MonHocEO;
             }
@@ -164,6 +111,14 @@ namespace DO_AN_TN.UserControl
             {
                 throw;
             }
+        }
+
+        public void loadDataToDropDownList()
+        {
+            ddliTrangThai.DataSource = GetListConstants.MonHoc_iTrangThai_GLC();
+            ddliTrangThai.DataTextField = "Value";
+            ddliTrangThai.DataValueField = "Key";
+            ddliTrangThai.DataBind();
         }
     }
 }

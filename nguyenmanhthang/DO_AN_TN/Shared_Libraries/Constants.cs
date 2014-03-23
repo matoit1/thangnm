@@ -268,5 +268,6 @@ namespace Shared_Libraries.Constants
     {
         public const string DISPLAY_NUMBER = "###,##0.######";
     }
+
     #endregion
 }

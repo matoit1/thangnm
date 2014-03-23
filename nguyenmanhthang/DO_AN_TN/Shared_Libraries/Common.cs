@@ -34,6 +34,14 @@ namespace Shared_Libraries
             }
             return new string(array, 0, arrayIndex);
         }
+
+        public static string GetTempDate()
+        {
+            string strTmpDate = System.DateTime.Now.ToShortDateString();
+            strTmpDate = strTmpDate.Replace(":", "-").Trim();
+            strTmpDate = strTmpDate.Replace("/", "-").Trim();
+            return strTmpDate;
+        }
     }
 
     public class Messages
@@ -50,5 +58,7 @@ namespace Shared_Libraries
         public const string Sua_That_Bai = "Sửa thất bại, vui lòng kiểm tra lại!";
         public const string Xoa_Thanh_Cong = "Xóa thành công";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
+
+        public static readonly string DateTime_Temp = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
     }
 }
