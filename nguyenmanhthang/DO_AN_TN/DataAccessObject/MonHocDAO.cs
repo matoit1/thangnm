@@ -154,8 +154,9 @@ namespace DataAccessObject
         /// <summary> 6. MonHoc_SelectItem </summary>
         /// <param name="_MonHocEO"></param>
         /// <returns></returns>
-        public static DataSet MonHoc_SelectItem(MonHocEO _MonHocEO)
+        public static MonHocEO MonHoc_SelectItem(MonHocEO _MonHocEO)
         {
+            MonHocEO output = new MonHocEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -168,12 +169,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    output = DataSet2Object.MonHoc(ds);
+                    return output;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }

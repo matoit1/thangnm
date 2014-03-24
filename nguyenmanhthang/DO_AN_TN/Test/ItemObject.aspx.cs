@@ -33,7 +33,7 @@ namespace DO_AN_TN.Test
             LichDayVaHocEO obj = new LichDayVaHocEO();
             obj.FK_sMaPCCT = "1";
             obj.FK_sMalop = "1";
-            DataSet2Object.LichDayVaHocEO(LichDayVaHocDAO.LichDayVaHoc_SelectItem(obj));
+            LichDayVaHocDAO.LichDayVaHoc_SelectItem(obj);
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Web;
 using EntityObject;
 using System.Data;
 
-namespace Shared_Libraries
+namespace DataAccessObject
 {
     public class DataSet2Object
     {
@@ -165,7 +165,7 @@ namespace Shared_Libraries
             }
         }
 
-        public static LichDayVaHocEO LichDayVaHocEO(DataSet input)
+        public static LichDayVaHocEO LichDayVaHoc(DataSet input)
         {
             try
             {

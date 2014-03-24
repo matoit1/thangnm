@@ -174,7 +174,8 @@ namespace DataAccessObject
                     DataSet ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return output = ErrorEO.Convert_DataSet_To_Object(ds);
+                    output = DataSet2Object.Error(ds);
+                    return output = DataSet2Object.Error(ds);
                 }
                 catch (Exception)
                 {

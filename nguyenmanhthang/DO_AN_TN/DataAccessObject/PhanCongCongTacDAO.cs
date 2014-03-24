@@ -156,8 +156,9 @@ namespace DataAccessObject
         /// <summary> 6. PhanCongCongTac_SelectItem </summary>
         /// <param name="_PhanCongCongTacEO"></param>
         /// <returns></returns>
-        public static DataSet PhanCongCongTac_SelectItem(PhanCongCongTacEO _PhanCongCongTacEO)
+        public static PhanCongCongTacEO PhanCongCongTac_SelectItem(PhanCongCongTacEO _PhanCongCongTacEO)
         {
+            PhanCongCongTacEO output = new PhanCongCongTacEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -170,12 +171,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    output = DataSet2Object.PhanCongCongTac(ds);
+                    return output;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }

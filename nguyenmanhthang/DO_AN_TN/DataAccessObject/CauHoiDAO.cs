@@ -168,8 +168,9 @@ namespace DataAccessObject
         /// <summary> 6. CauHoi_SelectItem </summary>
         /// <param name="_CauHoiEO"></param>
         /// <returns></returns>
-        public static DataSet CauHoi_SelectItem(CauHoiEO _CauHoiEO)
+        public static CauHoiEO CauHoi_SelectItem(CauHoiEO _CauHoiEO)
         {
+            CauHoiEO output = new CauHoiEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -182,12 +183,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    output = DataSet2Object.CauHoi(ds);
+                    return output;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }
