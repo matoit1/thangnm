@@ -1,13 +1,22 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LopHoc_ListUC.ascx.cs" Inherits="DO_AN_TN.UserControl.LopHoc_ListUC" %>
 <script type="text/javascript">
-    function CheckAll(oCheckbox) {
-        var GridView2 = document.getElementById("<%=grvListLopHoc.ClientID %>");
-        for (i = 1; i < GridView2.rows.length; i++) {
-            GridView2.rows[i].cells[0].getElementsByTagName("INPUT")[0].checked = oCheckbox.checked;
+    function CheckAll(chkTemp) {
+        var grvTemp = document.getElementById("<%=grvListLopHoc.ClientID %>");
+        for (i = 1; i < grvTemp.rows.length; i++) {
+            grvTemp.rows[i].cells[0].getElementsByTagName("INPUT")[0].checked = chkTemp.checked;
         }
     }
 </script>
 <table>
+    <tr>
+        <td>
+            <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" onclick="btnSearch_Click" />
+            <asp:Button ID="btnRefresh" runat="server" Text="Làm mới" onclick="btnRefresh_Click" />
+            <asp:Button ID="btnAddNew" runat="server" Text="Thêm" onclick="btnAddNew_Click" />
+            <asp:Button ID="btnDeleteList" runat="server" Text="Xóa" onclick="btnDeleteList_Click" />
+            <asp:Button ID="btnExportExcel" runat="server" Text="Xuất ra Excel" onclick="btnExportExcel_Click" />
+        </td>
+    </tr>
     <tr>
         <td>
             <asp:GridView ID="grvListLopHoc" runat="server" CssClass="mGrid" 

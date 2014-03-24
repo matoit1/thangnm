@@ -7,10 +7,10 @@
 <script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
 <script type="text/javascript" src="../Scripts/popup.js"></script>
 <script type="text/javascript">
-    function CheckAll(oCheckbox) {
-        var GridView2 = document.getElementById("<%=grvListMonHoc.ClientID %>");
-        for (i = 1; i < GridView2.rows.length; i++) {
-            GridView2.rows[i].cells[0].getElementsByTagName("INPUT")[0].checked = oCheckbox.checked;
+    function CheckAll(chkTemp) {
+        var grvTemp = document.getElementById("<%=grvListMonHoc.ClientID %>");
+        for (i = 1; i < grvTemp.rows.length; i++) {
+            grvTemp.rows[i].cells[0].getElementsByTagName("INPUT")[0].checked = chkTemp.checked;
         }
     }
 </script>
@@ -42,28 +42,28 @@
                 <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" onclick="btnSearch_Click" />
                 <asp:Button ID="btnRefresh" runat="server" Text="Làm mới" onclick="btnRefresh_Click" />
                 <asp:Button ID="btnAddNew" runat="server" Text="Thêm" onclick="btnAddNew_Click" />
-                <asp:Button ID="btnDeleteList" runat="server" Text="Xóa" />
-                <asp:Button ID="btnExportExcel" runat="server" Text="Xuất ra Excel" 
-                    onclick="btnExportExcel_Click" />
+                <asp:Button ID="btnDeleteList" runat="server" Text="Xóa" onclick="btnDeleteList_Click" />
+                <asp:Button ID="btnExportExcel" runat="server" Text="Xuất ra Excel" onclick="btnExportExcel_Click" />
                 <%--<asp:LinkButton ID="LinkButton1" runat="server" CssClass="topopup" >LinkButton</asp:LinkButton>
                 <asp:Button ID="btnTimKiem" runat="server" Text="Tìm kiếm"/>--%>
             </td>
         </tr>
         <tr>
             <td>
-                <asp:GridView ID="grvListMonHoc" runat="server" CssClass="mGrid" 
+                <asp:GridView ID="grvListMonHoc" runat="server" CssClass="mGrid" AllowSorting="true" PageSize="5" 
                     AutoGenerateColumns="False" Width="100%" AllowPaging="True" datakeynames="PK_sMaMonhoc"
-                                emptydatatext="Không có bản ghi nào." 
-                    EnableModelValidation="True" onrowcommand="grvListMonHoc_RowCommand" 
-                    onselectedindexchanged="grvListMonHoc_SelectedIndexChanged" 
-                    onpageindexchanging="grvListMonHoc_PageIndexChanging" 
-                    onrowdatabound="grvListMonHoc_RowDataBound"  PageSize="5" 
-                    AllowSorting="true" onsorting="grvListMonHoc_Sorting">
+                    emptydatatext="Không có bản ghi nào."
+                    EnableModelValidation="True"
+                    onrowcommand="grvListMonHoc_RowCommand"
+                    onselectedindexchanged="grvListMonHoc_SelectedIndexChanged"
+                    onpageindexchanging="grvListMonHoc_PageIndexChanging"
+                    onrowdatabound="grvListMonHoc_RowDataBound"
+                    onsorting="grvListMonHoc_Sorting">
                     <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                     <Columns>
                         <asp:TemplateField>
                             <HeaderTemplate>
-                                <input id="Checkbox2" type="checkbox" onclick="CheckAll(this)" runat="server" />
+                                <input id="chkList" type="checkbox" onclick="CheckAll(this)" runat="server" />
                             </HeaderTemplate>
                             <ItemTemplate>
                                 <asp:CheckBox ID="ItemCheckBox" runat="server" />

@@ -13,5 +13,11 @@ namespace DO_AN_TN.Test
         {
 
         }
+
+        protected void lbtnBack_Click(object sender, EventArgs e)
+        {
+            mtvMain.SetActiveView(vList);
+            LopHoc_ListUC1.BindData();
+        }
     }
 }
