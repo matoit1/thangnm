@@ -8,7 +8,7 @@ namespace EntityObject
     public class CauHoiEO
     {
         private string _FK_sMaGV;
-        private Int64 _PK_iCauhoi_ID;
+        private Int64 _PK_lCauhoi_ID;
         private string _sCauhoi_Cauhoi;
         private string _sCauhoi_A;
         private string _sCauhoi_B;
@@ -29,10 +29,10 @@ namespace EntityObject
         }
 
         // 2. Xay dung cac phuong thuc set, get cho PK_iCauhoi_ID
-        public Int64 PK_iCauhoi_ID
+        public Int64 PK_lCauhoi_ID
         {
-            get { return this._PK_iCauhoi_ID; }
-            set { this._PK_iCauhoi_ID = value; }
+            get { return this._PK_lCauhoi_ID; }
+            set { this._PK_lCauhoi_ID = value; }
         }
 
         // 3. Xay dung cac phuong thuc set, get cho sCauhoi_Cauhoi
