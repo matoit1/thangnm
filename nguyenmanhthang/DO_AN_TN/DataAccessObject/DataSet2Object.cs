@@ -7,7 +7,7 @@ using System.Data;
 
 namespace Shared_Libraries
 {
-    public class Convert_ToOject
+    public class DataSet2Object
     {
         public static LichDayVaHocEO LichDayVaHocEO(DataSet input)
         {

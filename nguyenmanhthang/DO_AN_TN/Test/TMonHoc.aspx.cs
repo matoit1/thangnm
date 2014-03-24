@@ -17,6 +17,11 @@ namespace DO_AN_TN.Test
 
         }
 
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            //base.VerifyRenderingInServerForm(control);
+        }
+
         protected void SelectRow_Click(object sender, EventArgs e)
         {
             //MonHoc_DetailUC1.BindDataDetail(MonHoc_ListUC1.PK_sMaMonhoc);
@@ -27,7 +32,7 @@ namespace DO_AN_TN.Test
             mtvMain.SetActiveView(vDetail);
             MonHocEO _MonHocEO = new MonHocEO();
             _MonHocEO.PK_sMaMonhoc = MonHoc_ListUC1.PK_sMaMonhoc;
-            _MonHocEO = Convert_ToOject.MonHocEO(MonHocDAO.MonHoc_SelectItem(_MonHocEO));
+            _MonHocEO = DataSet2Object.MonHocEO(MonHocDAO.MonHoc_SelectItem(_MonHocEO));
             MonHoc_DetailUC2.BindDataDetail(_MonHocEO);
         }
 
