@@ -160,8 +160,9 @@ namespace DataAccessObject
         /// <summary> 6. LichDayVaHoc_SelectItem </summary>
         /// <param name="_LichDayVaHocEO"></param>
         /// <returns></returns>
-        public static DataSet LichDayVaHoc_SelectItem(LichDayVaHocEO _LichDayVaHocEO)
+        public static LichDayVaHocEO LichDayVaHoc_SelectItem(LichDayVaHocEO _LichDayVaHocEO)
         {
+            LichDayVaHocEO output = new LichDayVaHocEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -175,12 +176,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    output = DataSet2Object.LichDayVaHoc(ds);
+                    return output;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }

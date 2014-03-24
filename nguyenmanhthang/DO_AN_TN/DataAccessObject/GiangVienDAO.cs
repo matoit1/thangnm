@@ -184,8 +184,9 @@ namespace DataAccessObject
         /// <summary> 6. GiangVien_SelectItem </summary>
         /// <param name="_GiangVienEO"></param>
         /// <returns></returns>
-        public static DataSet GiangVien_SelectItem(GiangVienEO _GiangVienEO)
+        public static GiangVienEO GiangVien_SelectItem(GiangVienEO _GiangVienEO)
         {
+            GiangVienEO output = new GiangVienEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -198,12 +199,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    output = DataSet2Object.GiangVien(ds);
+                    return output;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }

@@ -164,8 +164,9 @@ namespace DataAccessObject
         /// <summary> 6. DiemThi_SelectItem </summary>
         /// <param name="_DiemThiEO"></param>
         /// <returns></returns>
-        public static DataSet DiemThi_SelectItem(DiemThiEO _DiemThiEO)
+        public static DiemThiEO DiemThi_SelectItem(DiemThiEO _DiemThiEO)
         {
+            DiemThiEO output = new DiemThiEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -180,12 +181,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    output = DataSet2Object.DiemThi(ds);
+                    return output;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }

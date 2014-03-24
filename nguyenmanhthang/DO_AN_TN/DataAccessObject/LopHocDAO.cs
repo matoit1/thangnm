@@ -156,8 +156,9 @@ namespace DataAccessObject
         /// <summary> 6. LopHoc_SelectItem </summary>
         /// <param name="_LopHocEO"></param>
         /// <returns></returns>
-        public static DataSet LopHoc_SelectItem(LopHocEO _LopHocEO)
+        public static LopHocEO LopHoc_SelectItem(LopHocEO _LopHocEO)
         {
+            LopHocEO output = new LopHocEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -170,12 +171,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    output = DataSet2Object.LopHoc(ds);
+                    return output;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }

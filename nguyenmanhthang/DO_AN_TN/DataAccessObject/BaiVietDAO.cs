@@ -166,8 +166,9 @@ namespace DataAccessObject
         /// <summary> 6. BaiViet_SelectItem </summary>
         /// <param name="_BaiVietEO"></param>
         /// <returns></returns>
-        public static DataSet BaiViet_SelectItem(BaiVietEO _BaiVietEO)
+        public static BaiVietEO BaiViet_SelectItem(BaiVietEO _BaiVietEO)
         {
+            BaiVietEO output = new BaiVietEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -180,12 +181,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    return ds;
+                    output = DataSet2Object.BaiViet(ds);
+                    return output;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return output;
                 }
             }
         }
