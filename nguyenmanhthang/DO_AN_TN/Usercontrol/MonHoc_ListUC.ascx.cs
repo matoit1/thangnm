@@ -16,17 +16,19 @@ namespace DO_AN_TN.UserControl
 {
     public partial class MonHoc_ListUC : System.Web.UI.UserControl
     {
+#region "Properties & Event"
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
         public event EventHandler Search;
+
         private string _PK_sMaMonhoc;
         public string PK_sMaMonhoc
         {
             get { return this._PK_sMaMonhoc; }
             set { _PK_sMaMonhoc = value; }
         }
-
+#endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -279,6 +281,11 @@ namespace DO_AN_TN.UserControl
                 Response.Flush();
                 Response.End();
             }
+        }
+
+        protected void btnDeleteList_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
