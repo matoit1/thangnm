@@ -143,8 +143,8 @@ namespace DO_AN_TN.UserControl
             {
                 CauHoiEO _CauHoiEO = new CauHoiEO();
                 _CauHoiEO.FK_sMaGV = ddlFK_sMaGV.SelectedValue;
-                try{_CauHoiEO.PK_iCauhoi_ID = Convert.ToInt16(txtPK_iCauhoi_ID.Text);}
-                catch{lblPK_iCauhoi_ID.Text = Messages.Khong_Dung_Dinh_Dang_So;_CauHoiEO.PK_iCauhoi_ID = 0;}
+                try { _CauHoiEO.PK_lCauhoi_ID = Convert.ToInt16(txtPK_iCauhoi_ID.Text); }
+                catch { lblPK_iCauhoi_ID.Text = Messages.Khong_Dung_Dinh_Dang_So; _CauHoiEO.PK_lCauhoi_ID = 0; }
                 _CauHoiEO.sCauhoi_Cauhoi = txtsCauhoi_Cauhoi.Text;
                 _CauHoiEO.sCauhoi_A = txtsCauhoi_A.Text;
                 _CauHoiEO.sCauhoi_B = txtsCauhoi_B.Text;

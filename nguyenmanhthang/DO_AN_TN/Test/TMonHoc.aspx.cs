@@ -32,7 +32,7 @@ namespace DO_AN_TN.Test
             mtvMain.SetActiveView(vDetail);
             MonHocEO _MonHocEO = new MonHocEO();
             _MonHocEO.PK_sMaMonhoc = MonHoc_ListUC1.PK_sMaMonhoc;
-            _MonHocEO = DataSet2Object.MonHocEO(MonHocDAO.MonHoc_SelectItem(_MonHocEO));
+            _MonHocEO = DataSet2Object.MonHoc(MonHocDAO.MonHoc_SelectItem(_MonHocEO));
             MonHoc_DetailUC2.BindDataDetail(_MonHocEO);
         }
 
