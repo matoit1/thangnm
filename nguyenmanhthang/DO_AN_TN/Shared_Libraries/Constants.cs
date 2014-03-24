@@ -135,12 +135,12 @@ namespace Shared_Libraries.Constants
     /// 
     public class Quyen_Han_C
     {
-        public const Int16 Khach = 0;
         public const Int16 Quan_Tri_Vien = 1;
         public const Int16 Giang_Vien = 2;
         public const Int16 Sinh_Vien = 3;
         public const Int16 Nhan_Vien = 4;
-        public const Int16 An_Danh = 5;
+        public const Int16 Khach = 5;
+        public const Int16 An_Danh = 6;
     }
 
     /// <summary> I.3. Gioi_Tinh_C (Giới tính) </summary>

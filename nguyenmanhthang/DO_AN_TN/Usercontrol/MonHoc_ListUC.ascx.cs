@@ -36,6 +36,8 @@ namespace DO_AN_TN.UserControl
             }
         }
 
+
+
         public void BindData()
         {
             grvListMonHoc.Visible = false;
@@ -230,11 +232,6 @@ namespace DO_AN_TN.UserControl
         //}
 
 
-
-        public void VerifyRenderingInServerForm(Control control)
-        {
-            /* Verifies that the control is rendered */
-        }
 
         protected void ExportToExcel(string fileName)
         {
