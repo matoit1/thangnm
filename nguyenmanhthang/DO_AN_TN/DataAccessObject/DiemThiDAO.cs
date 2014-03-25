@@ -139,7 +139,7 @@ namespace DataAccessObject
         /// <summary> 5. DiemThi_DeleteList </summary>
         /// <param name="_ListPK_sMaMonhoc"></param>
         /// <returns></returns>
-        public static bool DiemThi_DeleteList(String _ListPK_iCauhoi_ID)
+        public static bool DiemThi_DeleteList(String _ListPK_lCauhoi_ID)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -148,7 +148,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblDiemThi_DeleteList", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@ListPK_iCauhoi_ID", _ListPK_iCauhoi_ID));
+                    cmd.Parameters.Add(new SqlParameter("@ListPK_lCauhoi_ID", _ListPK_lCauhoi_ID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;

@@ -22,7 +22,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_CheckExists", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
                     DataSet ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
@@ -56,7 +56,7 @@ namespace DataAccessObject
                     SqlCommand cmd = new SqlCommand("tblCauHoi_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FK_sMaGV", _CauHoiEO.FK_sMaGV));
-                    cmd.Parameters.Add(new SqlParameter("@PK_iCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
+                    cmd.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
                     cmd.Parameters.Add(new SqlParameter("@sCauhoi_Cauhoi", _CauHoiEO.sCauhoi_Cauhoi));
                     cmd.Parameters.Add(new SqlParameter("@sCauhoi_A", _CauHoiEO.sCauhoi_A));
                     cmd.Parameters.Add(new SqlParameter("@sCauhoi_B", _CauHoiEO.sCauhoi_B));
@@ -92,7 +92,7 @@ namespace DataAccessObject
                     SqlCommand cmd = new SqlCommand("tblCauHoi_Update", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FK_sMaGV", _CauHoiEO.FK_sMaGV));
-                    cmd.Parameters.Add(new SqlParameter("@PK_iCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
+                    cmd.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
                     cmd.Parameters.Add(new SqlParameter("@sCauhoi_Cauhoi", _CauHoiEO.sCauhoi_Cauhoi));
                     cmd.Parameters.Add(new SqlParameter("@sCauhoi_A", _CauHoiEO.sCauhoi_A));
                     cmd.Parameters.Add(new SqlParameter("@sCauhoi_B", _CauHoiEO.sCauhoi_B));
@@ -127,7 +127,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblCauHoi_Delete", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
+                    cmd.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -143,7 +143,7 @@ namespace DataAccessObject
         /// <summary> 5. CauHoi_DeleteList </summary>
         /// <param name="_ListPK_sMaMonhoc"></param>
         /// <returns></returns>
-        public static bool CauHoi_DeleteList(String _ListPK_iCauhoi_ID)
+        public static bool CauHoi_DeleteList(String _ListPK_lCauhoi_ID)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -152,7 +152,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblCauHoi_DeleteList", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@ListPK_iCauhoi_ID", _ListPK_iCauhoi_ID));
+                    cmd.Parameters.Add(new SqlParameter("@ListPK_lCauhoi_ID", _ListPK_lCauhoi_ID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -179,7 +179,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
@@ -234,7 +234,7 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaGV", _CauHoiEO.FK_sMaGV));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sCauhoi_Cauhoi", _CauHoiEO.sCauhoi_Cauhoi));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sCauhoi_A", _CauHoiEO.sCauhoi_A));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sCauhoi_B", _CauHoiEO.sCauhoi_B));

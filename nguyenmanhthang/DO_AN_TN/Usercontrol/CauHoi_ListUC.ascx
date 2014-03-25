@@ -22,7 +22,7 @@
             <td>
                 <asp:GridView ID="grvListCauHoi" runat="server" CssClass="mGrid" 
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                                FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_iCauhoi_ID"
+                                FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_lCauhoi_ID"
                                 emptydatatext="Không có bản ghi nào." 
                     EnableModelValidation="True" onrowcommand="grvListCauHoi_RowCommand" 
                     onselectedindexchanged="grvListCauHoi_SelectedIndexChanged" 
@@ -41,14 +41,14 @@
                        </asp:TemplateField>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("PK_iCauhoi_ID")%>'>Chi tiết</asp:LinkButton>
+                                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("PK_lCauhoi_ID")%>'>Chi tiết</asp:LinkButton>
                                 </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center"  />
                         </asp:TemplateField>
                         <asp:BoundField  DataField="FK_sMaGV"  HeaderText="Mã giáo viên" SortExpression="FK_sMaGV">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField DataField="PK_iCauhoi_ID" HeaderText="Mã câu hỏi" SortExpression="PK_iCauhoi_ID">
+                        <asp:BoundField DataField="PK_lCauhoi_ID" HeaderText="Mã câu hỏi" SortExpression="PK_lCauhoi_ID">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                         <asp:BoundField DataField="sCauhoi_Cauhoi" HeaderText="Câu hỏi" SortExpression="sCauhoi_Cauhoi">
