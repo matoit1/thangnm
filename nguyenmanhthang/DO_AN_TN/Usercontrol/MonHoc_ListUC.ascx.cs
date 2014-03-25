@@ -38,8 +38,6 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-
-
         public void BindData()
         {
             grvListMonHoc.Visible = false;

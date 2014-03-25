@@ -13,13 +13,22 @@ namespace DO_AN_TN.Test {
     public partial class TDiemThi {
         
         /// <summary>
-        /// DiemThi_DetailUC1 control.
+        /// mtvMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DO_AN_TN.UserControl.DiemThi_DetailUC DiemThi_DetailUC1;
+        protected global::System.Web.UI.WebControls.MultiView mtvMain;
+        
+        /// <summary>
+        /// vList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
         /// DiemThi_ListUC1 control.
@@ -29,5 +38,32 @@ namespace DO_AN_TN.Test {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.DiemThi_ListUC DiemThi_ListUC1;
+        
+        /// <summary>
+        /// vDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vDetail;
+        
+        /// <summary>
+        /// lbtnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
+        
+        /// <summary>
+        /// DiemThi_DetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.DiemThi_DetailUC DiemThi_DetailUC1;
     }
 }
