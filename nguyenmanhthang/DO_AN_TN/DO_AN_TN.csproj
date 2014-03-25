@@ -69,6 +69,7 @@
     <Content Include="Error\chat.js" />
     <Content Include="Error\Dao_vang_I.swf" />
     <Content Include="Error\Default.aspx" />
+    <Content Include="Flash\SampleMediaPlayback.swf" />
     <Content Include="GiangVien\Default.aspx" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
@@ -234,10 +235,13 @@
     <Content Include="Scripts\popup.js" />
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="SinhVien\User.aspx" />
+    <Content Include="Test\AMS_Server.aspx" />
+    <Content Include="Test\AMS_Client.aspx" />
     <Content Include="Test\Captcha.aspx" />
     <Content Include="Test\Drop.aspx" />
     <Content Include="Test\ItemObject.aspx" />
     <Content Include="Test\List.aspx" />
+    <Content Include="Flash\LiveSample.swf" />
     <Content Include="Test\TBaiViet.aspx" />
     <Content Include="Test\TCauHoi.aspx" />
     <Content Include="Test\TDiemThi.aspx" />
@@ -406,6 +410,20 @@
     </Compile>
     <Compile Include="SinhVien\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\AMS_Server.aspx.cs">
+      <DependentUpon>AMS_Server.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\AMS_Server.aspx.designer.cs">
+      <DependentUpon>AMS_Server.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\AMS_Client.aspx.cs">
+      <DependentUpon>AMS_Client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\AMS_Client.aspx.designer.cs">
+      <DependentUpon>AMS_Client.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test\Captcha.aspx.cs">
       <DependentUpon>Captcha.aspx</DependentUpon>
