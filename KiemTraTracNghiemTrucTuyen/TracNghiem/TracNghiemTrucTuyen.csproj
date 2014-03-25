@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TracNghiem</RootNamespace>
-    <AssemblyName>TracNghiem</AssemblyName>
+    <RootNamespace>TracNghiemTrucTuyen</RootNamespace>
+    <AssemblyName>TracNghiemTrucTuyen</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
@@ -33,11 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Anthem, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>LIB\Anthem.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -55,15 +60,24 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="App_Data\FirstChatRoom.xml" />
+    <Content Include="App_Themes\Theme1\ChatStyleSheet.css" />
     <Content Include="bin\DataAccessObject.dll" />
     <Content Include="bin\DataAccessObject.pdb" />
     <Content Include="bin\EntityObject.dll" />
     <Content Include="bin\EntityObject.pdb" />
     <Content Include="bin\TracNghiem.dll" />
     <Content Include="bin\TracNghiem.pdb" />
+    <Content Include="ChatRoom.aspx" />
     <Content Include="Database\Proc.sql" />
     <Content Include="Database\Proc_TracNghiemTrucTuyen.sql" />
+    <Content Include="Backup\Default.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Images\manIcon.gif" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\womanIcon.gif" />
+    <Content Include="LIB\Anthem.dll" />
     <Content Include="obj\Debug\TracNghiem.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TracNghiem.dll" />
     <Content Include="obj\Debug\TracNghiem.pdb" />
@@ -74,13 +88,14 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="ThiTracNghiemNao.aspx" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
+    <Content Include="Backup\Web.config" />
+    <Content Include="Backup\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Web.Release.config">
+    <Content Include="Backup\Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Backup\Chatroom.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\ChangePassword.aspx.cs">
@@ -111,12 +126,39 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="XHandle.cs" />
+    <Compile Include="Backup\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatRoom.aspx.cs">
+      <DependentUpon>ChatRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChatRoom.aspx.designer.cs">
+      <DependentUpon>ChatRoom.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LIB\LinqChat.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LinqChat.dbml</DependentUpon>
     </Compile>
     <Compile Include="Shared_Libraries.cs" />
     <Compile Include="Global.asax.cs">
@@ -137,9 +179,16 @@
     <Compile Include="ThiTracNghiemNao.aspx.designer.cs">
       <DependentUpon>ThiTracNghiemNao.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Backup\Chatroom.aspx.cs">
+      <DependentUpon>Chatroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Backup\Chatroom.aspx.designer.cs">
+      <DependentUpon>Chatroom.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Code\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Styles\" />
   </ItemGroup>
@@ -157,9 +206,30 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="LIB\LinqChat.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LinqChat.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\ResolveAssemblyReference.cache" />
     <None Include="obj\Debug\TracNghiem.csprojResolveAssemblyReference.cache" />
+    <Content Include="web1.config" />
+    <Content Include="web1.Debug.config">
+      <DependentUpon>web1.config</DependentUpon>
+    </Content>
+    <Content Include="web1.Release.config">
+      <DependentUpon>web1.config</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LIB\LinqChat.dbml.layout">
+      <DependentUpon>LinqChat.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
