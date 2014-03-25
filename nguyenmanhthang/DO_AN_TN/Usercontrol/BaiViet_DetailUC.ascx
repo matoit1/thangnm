@@ -12,7 +12,7 @@
     <table>
         <tr>
             <td></td>
-            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Sinh viên"></asp:Label></td>
+            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Bài viết"></asp:Label></td>
             <td></td>
         </tr>
         <tr>
@@ -21,134 +21,59 @@
             <td></td>
         </tr>
         <tr>
-            <td>Lớp học: </td>
-            <td><asp:DropDownList ID="ddlFK_sMaLop" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lblFK_sMaLop" runat="server"></asp:Label></td>
+            <td>Giáo viên: </td>
+            <td><asp:DropDownList ID="ddlFK_sMaGV" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:Label ID="lblFK_sMaGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Mã sinh viên: </td>
-            <td><asp:TextBox ID="txtPK_sMaSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblPK_sMaSV" runat="server"></asp:Label></td>
+            <td>Mã bài viết: </td>
+            <td><asp:TextBox ID="txtPK_lMaBaiViet" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblPK_lMaBaiViet" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Họ và tên: </td>
-            <td><asp:TextBox ID="txtsHoTenSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsHoTenSV" runat="server"></asp:Label></td>
+            <td>Tiêu đề: </td>
+            <td><asp:TextBox ID="txtsTieuDe" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsTieuDe" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Tên đăng nhập: </td>
-            <td><asp:TextBox ID="txtsTendangnhapSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsTendangnhapSV" runat="server"></asp:Label></td>
+            <td>Link Ảnh: </td>
+            <td><asp:TextBox ID="txtsLinkAnh" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkAnh" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Mật khẩu: </td>
-            <td><asp:TextBox ID="txtsMatkhauSV" runat="server" Width="400px" TextMode="Password"></asp:TextBox></td>
-            <td><asp:Label ID="lblsMatkhauSV" runat="server"></asp:Label></td>
+            <td>Tags: </td>
+            <td><asp:TextBox ID="txtsTag" runat="server" Width="400px" TextMode="Password"></asp:TextBox></td>
+            <td><asp:Label ID="lblsTag" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Địa chỉ Email: </td>
-            <td><asp:TextBox ID="txtsEmailSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsEmailSV" runat="server"></asp:Label></td>
+            <td>Nội dung: </td>
+            <td><asp:TextBox ID="txtsNoiDung" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsNoiDung" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Địa chỉ liên hệ: </td>
-            <td><asp:TextBox ID="txtsDiachiSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsDiachiSV" runat="server"></asp:Label></td>
+            <td>Lượt xem: </td>
+            <td><asp:TextBox ID="txtiLuotXem" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lbliLuotXem" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Số điện thoại: </td>
-            <td><asp:TextBox ID="txtsSdtSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsSdtSV" runat="server"></asp:Label></td>
+            <td>Ngày viết: </td>
+            <td><asp:TextBox ID="txttNgayViet" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
+            <td><asp:Label ID="lbltNgayViet" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Ngày sinh: </td>
-            <td><asp:TextBox ID="txttNgaysinhSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
-            <td><asp:Label ID="lbltNgaysinhSV" runat="server"></asp:Label></td>
+            <td>Ngày cập nhật: </td>
+            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
+            <td><asp:Label ID="lbltNgayCapNhat" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Giới tính: </td>
-            <td><asp:DropDownList ID="ddlbGioitinhSV" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lblbGioitinhSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Số CMND: </td>
-            <td><asp:TextBox ID="txtsCMNDSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsCMNDSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Ngày cấp CMND: </td>
-            <td><asp:TextBox ID="txttNgayCapCMNDSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
-            <td><asp:Label ID="lbltNgayCapCMNDSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Nơi cấp CMND: </td>
-            <td><asp:TextBox ID="txtsNoiCapCMNDSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsNoiCapCMNDSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Hôn nhân: </td>
-            <td><asp:DropDownList ID="ddlbHonNhanSV" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lblbHonNhanGV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Họ và tên người liên hệ: </td>
-            <td><asp:TextBox ID="txtsNguoiLienHeSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsNguoiLienHeSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Địa chỉ người liên hệ: </td>
-            <td><asp:TextBox ID="txtsDiaChiNguoiLienHeSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsDiaChiNguoiLienHeSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Số điện thoại người liên hệ: </td>
-            <td><asp:TextBox ID="txtsSdtNguoiLienHeSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsSdtNguoiLienHeSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Quan hệ với người liên hệ: </td>
-            <td><asp:DropDownList ID="ddliQuanHeVoiNguoiLienHeSV" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lbliQuanHeVoiNguoiLienHeSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Kết nạp đoàn TNCS HCM: </td>
-            <td><asp:DropDownList ID="ddlbKetnapDoanSV" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lblbKetnapDoanSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Năm kết nạp đoàn TNCS HCM: </td>
-            <td><asp:TextBox ID="txtiNamketnapDoanSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lbliNamketnapDoanSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Nơi kết nạp đoàn TNCS HCM: </td>
-            <td><asp:TextBox ID="txtsNoiketnapDoanSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsNoiketnapDoanSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Năm tốt nghiệp THPT: </td>
-            <td><asp:TextBox ID="txtiNamtotnghiepTHPTSV" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lbliNamtotnghiepTHPTSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Ngày nhập học: </td>
-            <td><asp:TextBox ID="txttNgayNhapHocSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
-            <td><asp:Label ID="lbltNgayNhapHocSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Ngày ra trường: </td>
-            <td><asp:TextBox ID="txttNgayRaTruongSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
-            <td><asp:Label ID="lbltNgayRaTruongSV" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Ngày cấp thẻ SV: </td>
-            <td><asp:TextBox ID="txttNgayCapTheSV" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
-            <td><asp:Label ID="lbltNgayCapTheSV" runat="server"></asp:Label></td>
+            <td>Mô tả: </td>
+            <td><asp:TextBox ID="txtsMoTa" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsMoTa" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Trạng thái: </td>
-            <td><asp:DropDownList ID="ddliTrangThaiSV" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lbliTrangThaiGV" runat="server"></asp:Label></td>
+            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td></td>

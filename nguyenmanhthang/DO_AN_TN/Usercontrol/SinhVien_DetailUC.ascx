@@ -148,7 +148,7 @@
         <tr>
             <td>Trạng thái: </td>
             <td><asp:DropDownList ID="ddliTrangThaiSV" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lbliTrangThaiGV" runat="server"></asp:Label></td>
+            <td><asp:Label ID="lbliTrangThaiSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td></td>

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Shared_Libraries;
 using DataAccessObject;
+using EntityObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -16,6 +17,105 @@ namespace DO_AN_TN.UserControl
             if (!IsPostBack)
             {
                 loadDataToDropDownList();
+            }
+        }
+
+        public void BindDataDetail(DiemThiEO _DiemThiEO)
+        {
+            ddlFK_sMaSV.SelectedValue = _DiemThiEO.FK_sMaSV;
+            ddlFK_sMaMonhoc.SelectedValue = Convert.ToString(_DiemThiEO.FK_sMaMonhoc);
+            txtPK_iSolanhoc.Text = Convert.ToString(_DiemThiEO.PK_iSolanhoc);
+            txtfDiemchuyencan.Text = Convert.ToString(_DiemThiEO.fDiemchuyencan);
+            txtfDiemgiuaky.Text = Convert.ToString(_DiemThiEO.fDiemgiuaky);
+            txtfDiemthilan1.Text = Convert.ToString(_DiemThiEO.fDiemthilan1);
+            txtfDiemthilan2.Text = Convert.ToString(_DiemThiEO.fDiemthilan2);
+            try { ddliTrangThai.SelectedValue = _DiemThiEO.iTrangThai.ToString(); }
+            catch { ddliTrangThai.SelectedIndex = 0; }
+        }
+
+        #region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DiemThiDAO.DiemThi_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DiemThiDAO.DiemThi_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DiemThiDAO.DiemThi_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            DiemThiEO _DiemThiEO = new DiemThiEO();
+            BindDataDetail(_DiemThiEO);
+        }
+        #endregion
+
+        private DiemThiEO getObject()
+        {
+            try
+            {
+                DiemThiEO _DiemThiEO = new DiemThiEO();
+                _DiemThiEO.FK_sMaSV = ddlFK_sMaSV.SelectedValue;
+                _DiemThiEO.FK_sMaMonhoc = ddlFK_sMaMonhoc.SelectedValue;
+                _DiemThiEO.PK_iSolanhoc = Convert.ToInt16(txtPK_iSolanhoc.Text);
+                _DiemThiEO.fDiemchuyencan = Convert.ToSingle(txtfDiemchuyencan.Text);
+                _DiemThiEO.fDiemgiuaky = Convert.ToSingle(txtfDiemgiuaky.Text);
+                _DiemThiEO.fDiemthilan1 = Convert.ToSingle(txtfDiemthilan1.Text);
+                _DiemThiEO.fDiemthilan2 = Convert.ToSingle(txtfDiemthilan2.Text);
+                _DiemThiEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
+                return _DiemThiEO;
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
@@ -35,41 +135,6 @@ namespace DO_AN_TN.UserControl
             ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
-        }
-
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnRefresh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnInsert_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnExport_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

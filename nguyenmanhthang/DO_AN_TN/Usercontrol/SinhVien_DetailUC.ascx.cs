@@ -53,8 +53,7 @@ namespace DO_AN_TN.UserControl
             catch { ddliTrangThaiSV.SelectedIndex = 0; }
         }
 
-
-
+        #region "Event Button"
         protected void btnInsert_Click(object sender, EventArgs e)
         {
             try
@@ -117,6 +116,7 @@ namespace DO_AN_TN.UserControl
             SinhVienEO _SinhVienEO = new SinhVienEO();
             BindDataDetail(_SinhVienEO);
         }
+        #endregion
 
         private SinhVienEO getObject()
         {
