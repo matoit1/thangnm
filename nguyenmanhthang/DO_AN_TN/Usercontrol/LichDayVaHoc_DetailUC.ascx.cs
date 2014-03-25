@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Shared_Libraries;
 using DataAccessObject;
+using EntityObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -16,6 +17,103 @@ namespace DO_AN_TN.UserControl
             if (!IsPostBack)
             {
                 loadDataToDropDownList();
+            }
+        }
+
+        public void BindDataDetail(LichDayVaHocEO _LichDayVaHocEO)
+        {
+            ddlFK_sMaPCCT.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMaPCCT);
+            ddlFK_sMalop.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMalop);
+            ddliCaHoc.SelectedValue = Convert.ToString(_LichDayVaHocEO.iCaHoc);
+            txttNgayDay.Text = Convert.ToString(_LichDayVaHocEO.tNgayDay);
+            txtiSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
+            txtsSinhVienNghi.Text = Convert.ToString(_LichDayVaHocEO.sSinhVienNghi);
+            try { ddliTrangThai.SelectedValue = _LichDayVaHocEO.iTrangThai.ToString(); }
+            catch { ddliTrangThai.SelectedIndex = 0; }
+        }
+
+        #region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (LichDayVaHocDAO.LichDayVaHoc_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (LichDayVaHocDAO.LichDayVaHoc_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (LichDayVaHocDAO.LichDayVaHoc_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+            BindDataDetail(_LichDayVaHocEO);
+        }
+        #endregion
+
+        private LichDayVaHocEO getObject()
+        {
+            try
+            {
+                LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+                _LichDayVaHocEO.FK_sMaPCCT = ddlFK_sMaPCCT.SelectedValue;
+                _LichDayVaHocEO.FK_sMalop = ddlFK_sMalop.SelectedValue;
+                _LichDayVaHocEO.iCaHoc = Convert.ToInt16(ddliCaHoc.SelectedValue);
+                _LichDayVaHocEO.tNgayDay = Convert.ToDateTime(txttNgayDay.Text);
+                _LichDayVaHocEO.iSoTietDay = Convert.ToInt16(txtiSoTietDay.Text);
+                _LichDayVaHocEO.sSinhVienNghi = txtsSinhVienNghi.Text;
+                _LichDayVaHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
+                return _LichDayVaHocEO;
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
@@ -40,41 +138,6 @@ namespace DO_AN_TN.UserControl
             ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
-        }
-
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnRefresh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnInsert_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnExport_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

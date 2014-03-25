@@ -490,13 +490,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.DropDownList ddliTrangThaiSV;
         
         /// <summary>
-        /// lbliTrangThaiGV control.
+        /// lbliTrangThaiSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliTrangThaiGV;
+        protected global::System.Web.UI.WebControls.Label lbliTrangThaiSV;
         
         /// <summary>
         /// btnInsert control.
