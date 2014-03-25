@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <td>Tags: </td>
-            <td><asp:TextBox ID="txtsTag" runat="server" Width="400px" TextMode="Password"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsTag" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsTag" runat="server"></asp:Label></td>
         </tr>
         <tr>

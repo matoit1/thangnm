@@ -90,7 +90,7 @@
                         <asp:BoundField DataField="iChucVuGV" HeaderText="Chức vụ" SortExpression="iChucVuGV">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sHocViGV" HeaderText="Học vị" SortExpression="sHocViGV">
+                        <asp:BoundField DataField="iHocViGV" HeaderText="Học vị" SortExpression="sHocViGV">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                         <asp:BoundField DataField="bCongChucGV" HeaderText="Công chức" SortExpression="bCongChucGV">
