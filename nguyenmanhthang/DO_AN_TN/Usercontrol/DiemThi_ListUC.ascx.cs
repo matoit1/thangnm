@@ -32,8 +32,8 @@ namespace DO_AN_TN.UserControl
             get { return this._FK_sMaMonhoc; }
             set { _FK_sMaMonhoc = value; }
         }
-        private string _PK_iSolanhoc;
-        public string PK_iSolanhoc
+        private Int16 _PK_iSolanhoc;
+        public Int16 PK_iSolanhoc
         {
             get { return this._PK_iSolanhoc; }
             set { _PK_iSolanhoc = value; }
@@ -78,9 +78,14 @@ namespace DO_AN_TN.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                this.FK_sMaSV = Convert.ToString(e.CommandArgument);
-                this.FK_sMaMonhoc = Convert.ToString(e.CommandArgument);
-                this.PK_iSolanhoc = Convert.ToString(e.CommandArgument);
+                //int index = Convert.ToInt32(e.CommandArgument);
+                //int documentID = Convert.ToInt32(grvListDiemThi.DataKeys[index].Value);
+
+                GridViewRow row = this.grvListDiemThi.SelectedRow;
+                int index = Convert.ToInt16(e.CommandArgument) % grvListDiemThi.PageSize;
+                this.FK_sMaSV = Convert.ToString(grvListDiemThi.DataKeys[index].Values["FK_sMaSV"]);
+                this.FK_sMaMonhoc = Convert.ToString(grvListDiemThi.DataKeys[index].Values["FK_sMaMonhoc"]);
+                this.PK_iSolanhoc = Convert.ToInt16(grvListDiemThi.DataKeys[index].Values["PK_iSolanhoc"]);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);

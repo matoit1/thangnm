@@ -7,198 +7,189 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DO_AN_TN.Share_Interface {
+namespace nguyenmanhthang {
     
     
-    public partial class SinhVien_SI {
+    public partial class User {
         
         /// <summary>
-        /// cphHead control.
+        /// lblTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
+        protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
-        /// form1 control.
+        /// pnlSecret1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel pnlSecret1;
         
         /// <summary>
-        /// HyperLink13 control.
+        /// lblAccounts_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink13;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_ID;
         
         /// <summary>
-        /// HyperLink15 control.
+        /// lblAccounts_Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink15;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Username;
         
         /// <summary>
-        /// hplAccounts_Fullname control.
+        /// lblAccounts_Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplAccounts_Fullname;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Password;
         
         /// <summary>
-        /// HyperLink14 control.
+        /// lblAccounts_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink14;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Email;
         
         /// <summary>
-        /// hplNewTopic control.
+        /// lblAccounts_FullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplNewTopic;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_FullName;
         
         /// <summary>
-        /// HyperLink2 control.
+        /// lblAccounts_Address control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Address;
         
         /// <summary>
-        /// HyperLink3 control.
+        /// lblAccounts_DateOfBirth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_DateOfBirth;
         
         /// <summary>
-        /// HyperLink12 control.
+        /// pnlSecret2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink12;
+        protected global::System.Web.UI.WebControls.Panel pnlSecret2;
         
         /// <summary>
-        /// HyperLink4 control.
+        /// lblAccounts_PhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_PhoneNumber;
         
         /// <summary>
-        /// HyperLink5 control.
+        /// lblAccounts_Permission control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink5;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Permission;
         
         /// <summary>
-        /// HyperLink6 control.
+        /// lblAccounts_LinkAvatar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink6;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_LinkAvatar;
         
         /// <summary>
-        /// HyperLink7 control.
+        /// lblAccounts_Signature control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink7;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Signature;
         
         /// <summary>
-        /// HyperLink8 control.
+        /// lblAccounts_Like control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink8;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Like;
         
         /// <summary>
-        /// HyperLink9 control.
+        /// pnlSecret3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink9;
+        protected global::System.Web.UI.WebControls.Panel pnlSecret3;
         
         /// <summary>
-        /// HyperLink10 control.
+        /// lblAccounts_Notification control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink10;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Notification;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// lblAccounts_Status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_Status;
         
         /// <summary>
-        /// HyperLink11 control.
+        /// lblAccounts_RegisterDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink11;
+        protected global::System.Web.UI.WebControls.Label lblAccounts_RegisterDate;
         
         /// <summary>
-        /// lbtnLogout control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnLogout;
-        
-        /// <summary>
-        /// cphBody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
     }
 }
