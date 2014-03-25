@@ -6,7 +6,7 @@
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <asp:MultiView ID="mtvMain" runat="server" ActiveViewIndex="0">
         <asp:View ID="vList" runat="server">
-            <uc2:LopHoc_ListUC ID="LopHoc_ListUC1" runat="server" />
+            <uc2:LopHoc_ListUC ID="LopHoc_ListUC1" runat="server" OnSelectRow="SelectRow_Click" OnViewDetail="ViewDetail_Click" OnAddNew="AddNew_Click"/>
         </asp:View>
         <asp:View ID="vDetail" runat="server">
             <asp:LinkButton ID="lbtnBack" runat="server" onclick="lbtnBack_Click">Quay lại danh sách</asp:LinkButton>

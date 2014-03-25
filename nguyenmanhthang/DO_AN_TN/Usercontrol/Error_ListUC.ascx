@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Error_ListUC.ascx.cs" Inherits="DO_AN_TN.UserControl.Error_ListUC" %>
 <script type="text/javascript">
     function CheckAll(chkTemp) {
-        var grvTemp = document.getElementById("<%=grvListSinhVien.ClientID %>");
+        var grvTemp = document.getElementById("<%=grvListError.ClientID %>");
         for (i = 1; i < grvTemp.rows.length; i++) {
             grvTemp.rows[i].cells[0].getElementsByTagName("INPUT")[0].checked = chkTemp.checked;
         }
@@ -24,11 +24,11 @@
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
                     FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_lErrorID"
                     emptydatatext="Không có bản ghi nào."   PageSize="5" 
-                    EnableModelValidation="True" onrowcommand="grvListBaiViet_RowCommand" 
-                    onselectedindexchanged="grvListBaiViet_SelectedIndexChanged" 
-                    onpageindexchanging="grvListBaiViet_PageIndexChanging" 
-                    onrowdatabound="grvListBaiViet_RowDataBound"
-                    AllowSorting="true" onsorting="grvListBaiViet_Sorting">
+                    EnableModelValidation="True" onrowcommand="grvListError_RowCommand" 
+                    onselectedindexchanged="grvListError_SelectedIndexChanged" 
+                    onpageindexchanging="grvListError_PageIndexChanging" 
+                    onrowdatabound="grvListError_RowDataBound"
+                    AllowSorting="true" onsorting="grvListError_Sorting">
                     <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                     <Columns>
                         <asp:TemplateField>

@@ -121,20 +121,10 @@ namespace DO_AN_TN.UserControl
 
         public void loadDataToDropDownList()
         {
-            //ddlFK_sMaSV.DataSource = SinhVienDAO.SinhVien_SelectList();
-            //ddlFK_sMaSV.DataTextField = "sHotenSV";
-            //ddlFK_sMaSV.DataValueField = "PK_sMaSV";
-            //ddlFK_sMaSV.DataBind();
-
-            //ddlFK_sMaMonhoc.DataSource = MonHocDAO.MonHoc_SelectList();
-            //ddlFK_sMaMonhoc.DataTextField = "sTenMonhoc";
-            //ddlFK_sMaMonhoc.DataValueField = "PK_sMaMonhoc";
-            //ddlFK_sMaMonhoc.DataBind();
-
-            //ddliTrangThai.DataSource = GetListConstants.Error_iTrangThai_GLC();
-            //ddliTrangThai.DataTextField = "Value";
-            //ddliTrangThai.DataValueField = "Key";
-            //ddliTrangThai.DataBind();
+            ddliStatus.DataSource = GetListConstants.Error_iStatus_GLC();
+            ddliStatus.DataTextField = "Value";
+            ddliStatus.DataValueField = "Key";
+            ddliStatus.DataBind();
         }
     }
 }
