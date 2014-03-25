@@ -222,6 +222,35 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 6. SinhVien_SelectItem </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static SinhVienEO SinhVien_SelectItem_By_sTendangnhapSV(SinhVienEO _SinhVienEO)
+        {
+            SinhVienEO output = new SinhVienEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_SelectItem_By_sTendangnhapSV", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaSV", _SinhVienEO.PK_sMaSV));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    output = DataSet2Object.SinhVien(ds);
+                    return output;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return output;
+                }
+            }
+        }
+
         /// <summary> 7. SinhVien_SelectList </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>

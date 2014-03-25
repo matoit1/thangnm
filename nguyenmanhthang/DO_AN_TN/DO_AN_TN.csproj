@@ -224,11 +224,16 @@
     <Content Include="QuanTri\Default.aspx" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
+    <Content Include="Scripts\hideshow.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.5.2.min.js" />
+    <Content Include="Scripts\jquery.equalHeight.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
     <Content Include="Scripts\popup.js" />
     <Content Include="SinhVien\Default.aspx" />
+    <Content Include="SinhVien\User.aspx" />
     <Content Include="Test\Captcha.aspx" />
     <Content Include="Test\Drop.aspx" />
     <Content Include="Test\ItemObject.aspx" />
@@ -394,6 +399,13 @@
     </Compile>
     <Compile Include="SinhVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test\Captcha.aspx.cs">
       <DependentUpon>Captcha.aspx</DependentUpon>

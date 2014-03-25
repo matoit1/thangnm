@@ -33,7 +33,7 @@ namespace DO_AN_TN.Test
             DiemThiEO _DiemThiEO = new DiemThiEO();
             _DiemThiEO.FK_sMaSV = DiemThi_ListUC1.FK_sMaSV;
             _DiemThiEO.FK_sMaMonhoc = DiemThi_ListUC1.FK_sMaMonhoc;
-            _DiemThiEO.PK_iSolanhoc = Convert.ToInt16(DiemThi_ListUC1.PK_iSolanhoc);
+            _DiemThiEO.PK_iSolanhoc = DiemThi_ListUC1.PK_iSolanhoc;
             _DiemThiEO = DiemThiDAO.DiemThi_SelectItem(_DiemThiEO);
             DiemThi_DetailUC1.BindDataDetail(_DiemThiEO);
         }
