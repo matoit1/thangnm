@@ -37,8 +37,10 @@ namespace DO_AN_TN.UserControl
             txtsNoiCapCMNDGV.Text = _GiangVienEO.sNoiCapCMNDGV;
             ddlbHonNhanGV.SelectedValue = Convert.ToString(_GiangVienEO.bHonNhanGV);
             txttNgayNhanCongTacGV.Text = Convert.ToString(_GiangVienEO.tNgayNhanCongTacGV);
-            ddlbiChucVuGV.Text = Convert.ToString(_GiangVienEO.iChucVuGV);
-            ddliHocViGV.Text = Convert.ToString(_GiangVienEO.iHocViGV);
+            try { ddlbiChucVuGV.SelectedValue = Convert.ToString(_GiangVienEO.iChucVuGV); }
+            catch { ddlbiChucVuGV.SelectedIndex = 0; }
+            try { ddliHocViGV.SelectedValue = Convert.ToString(_GiangVienEO.iHocViGV);}
+            catch { ddlbiChucVuGV.SelectedIndex = 0; }
             ddlbCongChucGV.SelectedValue = Convert.ToString(_GiangVienEO.bCongChucGV);
             txtsLinkChannels.Text = Convert.ToString(_GiangVienEO.sLinkChannels);
             txtsLinkChatRooms.Text = _GiangVienEO.sLinkChatRooms;

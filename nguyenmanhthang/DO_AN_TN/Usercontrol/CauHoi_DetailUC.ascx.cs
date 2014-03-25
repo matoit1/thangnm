@@ -30,7 +30,8 @@ namespace DO_AN_TN.UserControl
             txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_B;
             txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_C;
             txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_D;
-            ddliCauhoi_Dung.SelectedValue = Convert.ToString(_CauHoiEO.iCauhoi_Dung);
+            try { ddliCauhoi_Dung.SelectedValue = Convert.ToString(_CauHoiEO.iCauhoi_Dung); }
+            catch { ddliCauhoi_Dung.SelectedIndex = 0; }
             txtsBoCauHoi.Text = _CauHoiEO.sBoCauHoi;
             txttNgayTao.Text = Convert.ToString(_CauHoiEO.tNgayTao);
             txttNgayCapNhat.Text = Convert.ToString(_CauHoiEO.tNgayCapNhat);

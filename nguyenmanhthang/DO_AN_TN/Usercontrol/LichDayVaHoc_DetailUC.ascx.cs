@@ -24,7 +24,8 @@ namespace DO_AN_TN.UserControl
         {
             ddlFK_sMaPCCT.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMaPCCT);
             ddlFK_sMalop.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMalop);
-            ddliCaHoc.SelectedValue = Convert.ToString(_LichDayVaHocEO.iCaHoc);
+            try { ddliCaHoc.SelectedValue = Convert.ToString(_LichDayVaHocEO.iCaHoc); }
+            catch { ddliCaHoc.SelectedIndex = 0; }
             txttNgayDay.Text = Convert.ToString(_LichDayVaHocEO.tNgayDay);
             txtiSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
             txtsSinhVienNghi.Text = Convert.ToString(_LichDayVaHocEO.sSinhVienNghi);
@@ -125,8 +126,8 @@ namespace DO_AN_TN.UserControl
             ddlFK_sMaPCCT.DataBind();
 
             ddlFK_sMalop.DataSource = LopHocDAO.LopHoc_SelectList();
-            ddlFK_sMalop.DataTextField = "PK_sMalop";
-            ddlFK_sMalop.DataValueField = "sTenlop";
+            ddlFK_sMalop.DataTextField = "sTenlop";
+            ddlFK_sMalop.DataValueField = "PK_sMalop";
             ddlFK_sMalop.DataBind();
 
             ddliCaHoc.DataSource = GetListConstants.LichDayVaHoc_iCaHoc_GLC();

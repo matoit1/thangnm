@@ -159,10 +159,10 @@ namespace DO_AN_TN.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddliTrangThaiSV.DataSource = SinhVienDAO.SinhVien_SelectList();
-            ddliTrangThaiSV.DataTextField = "sTenlop";
-            ddliTrangThaiSV.DataValueField = "PK_sMalop";
-            ddliTrangThaiSV.DataBind();
+            ddlFK_sMaLop.DataSource = LopHocDAO.LopHoc_SelectList();
+            ddlFK_sMaLop.DataTextField = "sTenlop";
+            ddlFK_sMaLop.DataValueField = "PK_sMalop";
+            ddlFK_sMaLop.DataBind();
 
             ddlbGioitinhSV.DataSource = GetListConstants.Gioi_Tinh_GLC();
             ddlbGioitinhSV.DataTextField = "Value";
