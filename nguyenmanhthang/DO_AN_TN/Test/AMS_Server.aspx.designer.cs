@@ -20,5 +20,14 @@ namespace DO_AN_TN.Test {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// ASM_ServerUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.ASM_ServerUC ASM_ServerUC1;
     }
 }

@@ -253,6 +253,8 @@
     <Content Include="Test\DemoToolbar.aspx" />
     <Content Include="Test\TPhanCongCongTac.aspx" />
     <Content Include="Test\TSinhVien.aspx" />
+    <Content Include="UserControl\ASM_ClientUC.ascx" />
+    <Content Include="UserControl\ASM_ServerUC.ascx" />
     <Content Include="UserControl\BaiViet_DetailUC.ascx" />
     <Content Include="UserControl\BaiViet_ListUC.ascx" />
     <Content Include="UserControl\CauHoi_DetailUC.ascx" />
@@ -529,6 +531,20 @@
     </Compile>
     <Compile Include="Test\TSinhVien.aspx.designer.cs">
       <DependentUpon>TSinhVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ASM_ClientUC.ascx.cs">
+      <DependentUpon>ASM_ClientUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ASM_ClientUC.ascx.designer.cs">
+      <DependentUpon>ASM_ClientUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ASM_ServerUC.ascx.cs">
+      <DependentUpon>ASM_ServerUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ASM_ServerUC.ascx.designer.cs">
+      <DependentUpon>ASM_ServerUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\BaiViet_DetailUC.ascx.cs">
       <DependentUpon>BaiViet_DetailUC.ascx</DependentUpon>
