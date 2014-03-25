@@ -39,7 +39,7 @@ namespace DO_AN_TN.UserControl
         {
             try
             {
-                CauHoiDAO.CauHoi_SelectList(getObject());
+                CauHoiDAO.CauHoi_SelectList();
             }
             catch (Exception ex)
             {
@@ -51,7 +51,7 @@ namespace DO_AN_TN.UserControl
         {
             try
             {
-                CauHoiDAO.CauHoi_SelectList(getObject());
+                CauHoiDAO.CauHoi_SelectList();
             }
             catch (Exception ex)
             {
@@ -118,7 +118,7 @@ namespace DO_AN_TN.UserControl
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            CauHoiDAO.CauHoi_SelectList(getObject());
+            CauHoiDAO.CauHoi_SelectList();
         }
 
         protected void btnReset_Click(object sender, EventArgs e)

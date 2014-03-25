@@ -190,7 +190,7 @@ namespace DataAccessObject
         /// <summary> 7. LichDayVaHoc_SelectList </summary>
         /// <param name="_LichDayVaHocEO"></param>
         /// <returns></returns>
-        public static DataSet LichDayVaHoc_SelectList(LichDayVaHocEO _LichDayVaHocEO)
+        public static DataSet LichDayVaHoc_SelectList()
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())

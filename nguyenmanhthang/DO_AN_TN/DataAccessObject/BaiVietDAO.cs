@@ -195,7 +195,7 @@ namespace DataAccessObject
         /// <summary> 7. BaiViet_SelectList </summary>
         /// <param name="_BaiVietEO"></param>
         /// <returns></returns>
-        public static DataSet BaiViet_SelectList(BaiVietEO _BaiVietEO)
+        public static DataSet BaiViet_SelectList()
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())

@@ -195,7 +195,7 @@ namespace DataAccessObject
         /// <summary> 7. DiemThi_SelectList </summary>
         /// <param name="_DiemThiEO"></param>
         /// <returns></returns>
-        public static DataSet DiemThi_SelectList(DiemThiEO _DiemThiEO)
+        public static DataSet DiemThi_SelectList()
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
