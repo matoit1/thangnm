@@ -188,7 +188,7 @@ namespace DataAccessObject
         /// <summary> 7. Error_SelectList </summary>
         /// <param name="_ErrorEO"></param>
         /// <returns></returns>
-        public static DataSet Error_SelectList(ErrorEO _ErrorEO)
+        public static DataSet Error_SelectList()
         {
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
