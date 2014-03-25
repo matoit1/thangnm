@@ -28,7 +28,7 @@ namespace EntityObject
             set { this._FK_sMaGV = value; }
         }
 
-        // 2. Xay dung cac phuong thuc set, get cho PK_iCauhoi_ID
+        // 2. Xay dung cac phuong thuc set, get cho PK_lCauhoi_ID
         public Int64 PK_lCauhoi_ID
         {
             get { return this._PK_lCauhoi_ID; }

@@ -72,6 +72,7 @@ namespace Shared_Libraries
         public static SortedList GiangVien_iTrangThaiGV_GLC()
         {
             SortedList output = new SortedList();
+            output.Add(GiangVien_iTrangThaiGV_C.Dang_Cong_Tac, GetTextConstants.GiangVien_iTrangThaiGV_GTC(GiangVien_iTrangThaiGV_C.Dang_Cong_Tac));
             output.Add(GiangVien_iTrangThaiGV_C.Chuyen_Cong_Tac, GetTextConstants.GiangVien_iTrangThaiGV_GTC(GiangVien_iTrangThaiGV_C.Chuyen_Cong_Tac));
             output.Add(GiangVien_iTrangThaiGV_C.Nghi_Che_Do, GetTextConstants.GiangVien_iTrangThaiGV_GTC(GiangVien_iTrangThaiGV_C.Nghi_Che_Do));
             output.Add(GiangVien_iTrangThaiGV_C.Nghi_Phep, GetTextConstants.GiangVien_iTrangThaiGV_GTC(GiangVien_iTrangThaiGV_C.Nghi_Phep));
@@ -86,6 +87,7 @@ namespace Shared_Libraries
         public static SortedList SinhVien_iTrangThaiSV_GLC()
         {
             SortedList output = new SortedList();
+            output.Add(SinhVien_iTrangThaiSV_C.Dang_Hoc, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Dang_Hoc));
             output.Add(SinhVien_iTrangThaiSV_C.Chuyen_Truong, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Chuyen_Truong));
             output.Add(SinhVien_iTrangThaiSV_C.Chuyen_Lop, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Chuyen_Lop));
             output.Add(SinhVien_iTrangThaiSV_C.Bao_Luu_Ket_Qua, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Bao_Luu_Ket_Qua));

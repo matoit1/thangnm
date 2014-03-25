@@ -27,9 +27,9 @@ namespace DO_AN_TN.UserControl
             txtPK_lCauhoi_ID.Text = Convert.ToString(_CauHoiEO.PK_lCauhoi_ID);
             txtsCauhoi_Cauhoi.Text = _CauHoiEO.sCauhoi_Cauhoi;
             txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_A;
-            txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_B;
-            txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_C;
-            txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_D;
+            txtsCauhoi_B.Text = _CauHoiEO.sCauhoi_B;
+            txtsCauhoi_C.Text = _CauHoiEO.sCauhoi_C;
+            txtsCauhoi_D.Text = _CauHoiEO.sCauhoi_D;
             try { ddliCauhoi_Dung.SelectedValue = Convert.ToString(_CauHoiEO.iCauhoi_Dung); }
             catch { ddliCauhoi_Dung.SelectedIndex = 0; }
             txtsBoCauHoi.Text = _CauHoiEO.sBoCauHoi;

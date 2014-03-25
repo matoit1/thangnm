@@ -94,12 +94,13 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Chuyển công tác"; break;
-                case 2: output = "Nghỉ chế độ"; break;
-                case 3: output = "Nghỉ phép"; break;
-                case 4: output = "Tạm đình chỉ công tác"; break;
-                case 5: output = "Nghỉ hưu"; break;
-                case 6: output = "Bỏ việc"; break;
+                case 1: output = "Đang công tác"; break;
+                case 2: output = "Chuyển công tác"; break;
+                case 3: output = "Nghỉ chế độ"; break;
+                case 4: output = "Nghỉ phép"; break;
+                case 5: output = "Tạm đình chỉ công tác"; break;
+                case 6: output = "Nghỉ hưu"; break;
+                case 7: output = "Bỏ việc"; break;
                 default: output = "N/A"; break;
             }
             return output;
@@ -113,12 +114,13 @@ namespace Shared_Libraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Chuyển trường"; break;
-                case 2: output = "Chuyển lớp"; break;
-                case 3: output = "Bảo lưu kết quả"; break;
-                case 4: output = "Bỏ học"; break;
-                case 5: output = "Lưu ban"; break;
-                case 6: output = "Đuổi học"; break;
+                case 1: output = "Đang học"; break;
+                case 2: output = "Chuyển trường"; break;
+                case 3: output = "Chuyển lớp"; break;
+                case 4: output = "Bảo lưu kết quả"; break;
+                case 5: output = "Bỏ học"; break;
+                case 6: output = "Lưu ban"; break;
+                case 7: output = "Đuổi học"; break;
                 default: output = "N/A"; break;
             }
             return output;

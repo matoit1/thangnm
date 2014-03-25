@@ -10,12 +10,13 @@ namespace Shared_Libraries.Constants
     /// 
     public class SinhVien_iTrangThaiSV_C
     {
-        public const Int16 Chuyen_Truong = 1;
-        public const Int16 Chuyen_Lop = 2;
-        public const Int16 Bao_Luu_Ket_Qua = 3;
-        public const Int16 Bo_Hoc = 4;
-        public const Int16 Luu_Ban = 5;
-        public const Int16 Duoi_Hoc = 6;
+        public const Int16 Dang_Hoc = 1;
+        public const Int16 Chuyen_Truong = 2;
+        public const Int16 Chuyen_Lop = 3;
+        public const Int16 Bao_Luu_Ket_Qua = 4;
+        public const Int16 Bo_Hoc = 5;
+        public const Int16 Luu_Ban = 6;
+        public const Int16 Duoi_Hoc = 7;
     }
 
     /// <summary> I.8. SinhVien_bKetnapDoanSV_C (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
@@ -101,12 +102,13 @@ namespace Shared_Libraries.Constants
     /// 
     public class GiangVien_iTrangThaiGV_C
     {
-        public const Int16 Chuyen_Cong_Tac = 1;
-        public const Int16 Nghi_Che_Do = 2;
-        public const Int16 Nghi_Phep = 3;
-        public const Int16 Tam_Dinh_Chi_Cong_Tac = 4;
-        public const Int16 Nghi_Huu = 5;
-        public const Int16 Bo_Viec = 6;
+        public const Int16 Dang_Cong_Tac = 1;
+        public const Int16 Chuyen_Cong_Tac = 2;
+        public const Int16 Nghi_Che_Do = 3;
+        public const Int16 Nghi_Phep = 4;
+        public const Int16 Tam_Dinh_Chi_Cong_Tac = 5;
+        public const Int16 Nghi_Huu = 6;
+        public const Int16 Bo_Viec = 7;
     }
 
     /// <summary> I.13. GiangVien_iChucVuGV_C (Chức vụ) </summary>

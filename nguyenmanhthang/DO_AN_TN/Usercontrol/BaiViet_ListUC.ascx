@@ -75,7 +75,7 @@
                         <asp:BoundField DataField="sMoTa" HeaderText="Mô tả" SortExpression="bGioitinhSV">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="iTrangThaiSV" HeaderText="Trạng thái" SortExpression="iTrangThaiSV">
+                        <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThaiSV">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                     </Columns>
