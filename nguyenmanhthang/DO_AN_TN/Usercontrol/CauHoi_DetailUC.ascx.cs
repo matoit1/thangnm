@@ -21,18 +21,23 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-        public void loadDataToDropDownList()
+        public void BindDataDetail(CauHoiEO _CauHoiEO)
         {
-
-            ddlFK_sMaGV.DataSource = GiangVienDAO.GiangVien_SelectList();
-            ddlFK_sMaGV.DataTextField = "sHoTenGV";
-            ddlFK_sMaGV.DataValueField = "PK_sMaGV";
-            ddlFK_sMaGV.DataBind();
-
-            ddliTrangThai.DataSource = GetListConstants.CauHoi_iTrangThai_GLC();
-            ddliTrangThai.DataTextField = "Value";
-            ddliTrangThai.DataValueField = "Key";
-            ddliTrangThai.DataBind();
+            ddlFK_sMaGV.SelectedValue = _CauHoiEO.FK_sMaGV;
+            txtPK_lCauhoi_ID.Text = Convert.ToString(_CauHoiEO.PK_lCauhoi_ID);
+            txtsCauhoi_Cauhoi.Text = _CauHoiEO.sCauhoi_Cauhoi;
+            txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_A;
+            txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_B;
+            txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_C;
+            txtsCauhoi_A.Text = _CauHoiEO.sCauhoi_D;
+            ddliCauhoi_Dung.SelectedValue = Convert.ToString(_CauHoiEO.iCauhoi_Dung);
+            txtsBoCauHoi.Text = _CauHoiEO.sBoCauHoi;
+            txttNgayTao.Text = Convert.ToString(_CauHoiEO.tNgayTao);
+            txttNgayCapNhat.Text = Convert.ToString(_CauHoiEO.tNgayCapNhat);
+            try { txttNgayCapNhat.Text = Convert.ToString(_CauHoiEO.tNgayCapNhat); }
+            catch { txttNgayCapNhat.Text = ""; }
+            try { ddliTrangThai.SelectedValue = _CauHoiEO.iTrangThai.ToString(); }
+            catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -124,7 +129,7 @@ namespace DO_AN_TN.UserControl
         protected void btnReset_Click(object sender, EventArgs e)
         {
             ddlFK_sMaGV.SelectedIndex = 0;
-            txtPK_iCauhoi_ID.Text = "";
+            txtPK_lCauhoi_ID.Text = "";
             txtsCauhoi_Cauhoi.Text = "";
             txtsCauhoi_A.Text = "";
             txtsCauhoi_B.Text = "";
@@ -143,8 +148,8 @@ namespace DO_AN_TN.UserControl
             {
                 CauHoiEO _CauHoiEO = new CauHoiEO();
                 _CauHoiEO.FK_sMaGV = ddlFK_sMaGV.SelectedValue;
-                try { _CauHoiEO.PK_lCauhoi_ID = Convert.ToInt16(txtPK_iCauhoi_ID.Text); }
-                catch { lblPK_iCauhoi_ID.Text = Messages.Khong_Dung_Dinh_Dang_So; _CauHoiEO.PK_lCauhoi_ID = 0; }
+                try { _CauHoiEO.PK_lCauhoi_ID = Convert.ToInt16(txtPK_lCauhoi_ID.Text); }
+                catch { lblPK_lCauhoi_ID.Text = Messages.Khong_Dung_Dinh_Dang_So; _CauHoiEO.PK_lCauhoi_ID = 0; }
                 _CauHoiEO.sCauhoi_Cauhoi = txtsCauhoi_Cauhoi.Text;
                 _CauHoiEO.sCauhoi_A = txtsCauhoi_A.Text;
                 _CauHoiEO.sCauhoi_B = txtsCauhoi_B.Text;
@@ -163,6 +168,20 @@ namespace DO_AN_TN.UserControl
             {
                 throw;
             }
+        }
+
+        public void loadDataToDropDownList()
+        {
+
+            ddlFK_sMaGV.DataSource = GiangVienDAO.GiangVien_SelectList();
+            ddlFK_sMaGV.DataTextField = "sHoTenGV";
+            ddlFK_sMaGV.DataValueField = "PK_sMaGV";
+            ddlFK_sMaGV.DataBind();
+
+            ddliTrangThai.DataSource = GetListConstants.CauHoi_iTrangThai_GLC();
+            ddliTrangThai.DataTextField = "Value";
+            ddliTrangThai.DataValueField = "Key";
+            ddliTrangThai.DataBind();
         }
     }
 }

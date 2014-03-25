@@ -31,7 +31,7 @@ namespace DO_AN_TN.Test
         {
             mtvMain.SetActiveView(vDetail);
             LopHocEO _LopHocEO = new LopHocEO();
-            _LopHocEO.PK_sMalop = LopHoc_ListUC1.PK_sMalop;
+            _LopHocEO.PK_sMalop = LopHoc_ListUC1.PK_sMaMonhoc;
             _LopHocEO = LopHocDAO.LopHoc_SelectItem(_LopHocEO);
             LopHoc_DetailUC1.BindDataDetail(_LopHocEO);
         }

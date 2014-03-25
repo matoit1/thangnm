@@ -49,22 +49,22 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblFK_sMaGV;
         
         /// <summary>
-        /// txtPK_iCauhoi_ID control.
+        /// txtPK_lCauhoi_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPK_iCauhoi_ID;
+        protected global::System.Web.UI.WebControls.TextBox txtPK_lCauhoi_ID;
         
         /// <summary>
-        /// lblPK_iCauhoi_ID control.
+        /// lblPK_lCauhoi_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPK_iCauhoi_ID;
+        protected global::System.Web.UI.WebControls.Label lblPK_lCauhoi_ID;
         
         /// <summary>
         /// txtsCauhoi_Cauhoi control.
