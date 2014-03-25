@@ -10,7 +10,7 @@
         </asp:View>
         <asp:View ID="vDetail" runat="server">
             <asp:LinkButton ID="lbtnBack" runat="server" onclick="lbtnBack_Click">Quay lại danh sách</asp:LinkButton>
-            <uc1:MonHoc_DetailUC ID="MonHoc_DetailUC2" runat="server" />
+            <uc1:MonHoc_DetailUC ID="MonHoc_DetailUC1" runat="server" />
         </asp:View>
     </asp:MultiView>
 </asp:Content>

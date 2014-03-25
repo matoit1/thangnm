@@ -33,14 +33,14 @@ namespace DO_AN_TN.Test
             MonHocEO _MonHocEO = new MonHocEO();
             _MonHocEO.PK_sMaMonhoc = MonHoc_ListUC1.PK_sMaMonhoc;
             _MonHocEO = MonHocDAO.MonHoc_SelectItem(_MonHocEO);
-            MonHoc_DetailUC2.BindDataDetail(_MonHocEO);
+            MonHoc_DetailUC1.BindDataDetail(_MonHocEO);
         }
 
         protected void AddNew_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
             MonHocEO _MonHocEO = new MonHocEO();
-            MonHoc_DetailUC2.BindDataDetail(_MonHocEO);
+            MonHoc_DetailUC1.BindDataDetail(_MonHocEO);
         }
 
         protected void lbtnBack_Click(object sender, EventArgs e)
