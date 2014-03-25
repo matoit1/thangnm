@@ -63,13 +63,9 @@
         <tr>
             <td></td>
             <td>
-                <asp:Button ID="btnSearch" runat="server" Text="Search" onclick="btnSearch_Click" />
-                <asp:Button ID="btnRefresh" runat="server" Text="Refresh" onclick="btnRefresh_Click" />
                 <asp:Button ID="btnInsert" runat="server" Text="Insert" onclick="btnInsert_Click" />
                 <asp:Button ID="btnUpdate" runat="server" Text="Update" onclick="btnUpdate_Click" />
                 <asp:Button ID="btnDelete" runat="server" Text="Delete" onclick="btnDelete_Click" />
-                <asp:Button ID="btnExport" runat="server" Text="Export" 
-                    onclick="btnExport_Click" style="height: 26px" />
                 <asp:Button ID="btnReset" runat="server" Text="Reset" onclick="btnReset_Click" />
             </td>
             <td></td>

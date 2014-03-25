@@ -37,7 +37,7 @@
         </tr>
         <tr>
             <td>Trình duyệt: </td>
-            <td><asp:TextBox ID="txtsBrowser" runat="server" Width="400px" TextMode="Password"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsBrowser" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsBrowser" runat="server"></asp:Label></td>
         </tr>
         <tr>

@@ -40,30 +40,6 @@ namespace DO_AN_TN.UserControl
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                CauHoiDAO.CauHoi_SelectList();
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnRefresh_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                CauHoiDAO.CauHoi_SelectList();
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
         protected void btnInsert_Click(object sender, EventArgs e)
         {
             try
@@ -119,11 +95,6 @@ namespace DO_AN_TN.UserControl
             {
                 lblMsg.Text = Messages.Loi + ex.Message;
             }
-        }
-
-        protected void btnExport_Click(object sender, EventArgs e)
-        {
-            CauHoiDAO.CauHoi_SelectList();
         }
 
         protected void btnReset_Click(object sender, EventArgs e)

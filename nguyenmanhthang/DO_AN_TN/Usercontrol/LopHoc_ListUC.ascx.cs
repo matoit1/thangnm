@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using Shared_Libraries;
 using DataAccessObject;
+using System.IO;
+using System.Drawing;
 
 namespace DO_AN_TN.UserControl
 {
@@ -18,17 +20,20 @@ namespace DO_AN_TN.UserControl
         public event EventHandler AddNew;
         public event EventHandler Search;
 
-        private string _PK_sMaMonhoc;
-        public string PK_sMaMonhoc
+        private string _PK_sMalop;
+        public string PK_sMalop
         {
-            get { return this._PK_sMaMonhoc; }
-            set { _PK_sMaMonhoc = value; }
+            get { return this._PK_sMalop; }
+            set { _PK_sMalop = value; }
         }
 #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                BindData();
+            }
         }
 
         public void BindData()
@@ -56,29 +61,165 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-        protected void grvListLopHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-
-        }
-
+        #region "Event GridView"
         protected void grvListLopHoc_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-
-        }
-
-        protected void grvListLopHoc_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-
+            if (e.CommandName == "cmdView")
+            {
+                this.PK_sMalop = Convert.ToString(e.CommandArgument);
+                if (ViewDetail != null)
+                {
+                    ViewDetail(this, EventArgs.Empty);
+                }
+            }
         }
 
         protected void grvListLopHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
+            foreach (GridViewRow row in grvListLopHoc.Rows)
+            {
+                if (row.RowIndex == grvListLopHoc.SelectedIndex)
+                {
+                    row.BackColor = ColorTranslator.FromHtml("#A1DCF2");
+                    row.ToolTip = string.Empty;
+                }
+                else
+                {
+                    row.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+                    row.ToolTip = "Click to select this row.";
+                }
+            }
+        }
 
+        protected void grvListLopHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grvListLopHoc.PageIndex = e.NewPageIndex;
+            BindData();
+        }
+
+        protected void grvListLopHoc_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(grvListLopHoc, "Select$" + e.Row.RowIndex);
+                e.Row.ToolTip = "Click to select this row.";
+            }
         }
 
         protected void grvListLopHoc_Sorting(object sender, GridViewSortEventArgs e)
         {
+            string sortingDirection = string.Empty;
+            if (direction == SortDirection.Ascending)
+            {
+                direction = SortDirection.Descending;
+                sortingDirection = "DESC";
+            }
+            else
+            {
+                direction = SortDirection.Ascending;
+                sortingDirection = "ASC";
+            }
+            DataSet dsLopHoc = LopHocDAO.LopHoc_SelectList();
+            DataView sortedView = new DataView(dsLopHoc.Tables[0]);
+            sortedView.Sort = e.SortExpression + " " + sortingDirection;
+            Session["objects"] = sortedView;
+            grvListLopHoc.DataSource = sortedView;
+            grvListLopHoc.DataBind();
+        }
+
+        public SortDirection direction
+        {
+            get
+            {
+                if (ViewState["directionState"] == null)
+                {
+                    ViewState["directionState"] = SortDirection.Ascending;
+                }
+                return (SortDirection)ViewState["directionState"];
+            }
+            set
+            { ViewState["directionState"] = value; }
+        }
+        #endregion
+
+        #region "Event Button"
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (Search != null)
+            {
+                Search(this, EventArgs.Empty);
+            }
+        }
+
+        protected void btnRefresh_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        protected void btnAddNew_Click(object sender, EventArgs e)
+        {
+            if (AddNew != null)
+            {
+                AddNew(this, EventArgs.Empty);
+            }
+        }
+
+        protected void btnDeleteList_Click(object sender, EventArgs e)
+        {
 
         }
+
+        protected void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            string FileName = "Danh_sach_Bai_Viet(" + Messages.DateTime_Temp + ").xls";
+            ExportToExcel(FileName);
+        }
+
+        protected void ExportToExcel(string fileName)
+        {
+            Response.Clear();
+            Response.Buffer = true;
+            Response.AddHeader("Content-Disposition", "attachment;filename=" + fileName);
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-excel";
+            using (StringWriter sw = new StringWriter())
+            {
+                HtmlTextWriter hw = new HtmlTextWriter(sw);
+                //To Export all pages
+                grvListLopHoc.AllowPaging = false;
+                this.BindData();
+
+                grvListLopHoc.HeaderRow.BackColor = Color.White;
+                foreach (TableCell cell in grvListLopHoc.HeaderRow.Cells)
+                {
+                    cell.BackColor = grvListLopHoc.HeaderStyle.BackColor;
+                }
+                foreach (GridViewRow row in grvListLopHoc.Rows)
+                {
+                    row.BackColor = Color.White;
+                    foreach (TableCell cell in row.Cells)
+                    {
+                        if (row.RowIndex % 2 == 0)
+                        {
+                            cell.BackColor = grvListLopHoc.AlternatingRowStyle.BackColor;
+                        }
+                        else
+                        {
+                            cell.BackColor = grvListLopHoc.RowStyle.BackColor;
+                        }
+                        cell.CssClass = "textmode";
+                    }
+                }
+
+                grvListLopHoc.RenderControl(hw);
+                //style to format numbers to string
+                string style = @"<style> .textmode { } </style>";
+                Response.Write(style);
+                Response.Output.Write(sw.ToString());
+                Response.Flush();
+                Response.End();
+            }
+        }
+        #endregion
     }
 }
