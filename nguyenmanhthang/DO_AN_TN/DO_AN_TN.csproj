@@ -58,6 +58,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\QuangCao.xml" />
     <Content Include="App_Themes\calendar.css" />
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\login.css" />
@@ -250,6 +251,7 @@
     <Content Include="Test\TCauHoi.aspx" />
     <Content Include="Test\TDiemThi.aspx" />
     <Content Include="Test\TError.aspx" />
+    <Content Include="Test\TestXML.aspx" />
     <Content Include="Test\TGiangVien.aspx" />
     <Content Include="Test\TLichDayVaHoc.aspx" />
     <Content Include="Test\TLopHoc.aspx" />
@@ -489,6 +491,13 @@
     <Compile Include="Test\TError.aspx.designer.cs">
       <DependentUpon>TError.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Test\TestXML.aspx.cs">
+      <DependentUpon>TestXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TestXML.aspx.designer.cs">
+      <DependentUpon>TestXML.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Test\TGiangVien.aspx.cs">
       <DependentUpon>TGiangVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -715,7 +724,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="bin\" />
     <Folder Include="Images\Temp\" />
   </ItemGroup>
