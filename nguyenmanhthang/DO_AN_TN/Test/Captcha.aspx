@@ -11,6 +11,10 @@
     <div>
     <asp:Image ID="imgCaptcha1" runat="server" />
     <asp:ImageButton ID="ibtnChage1" runat="server" ImageUrl="~/Images/change.jpg" Height="30px" onclick="ChangeCaptcha_Click" />
+    <br /><br />
+    <asp:Label ID="lblMsg" runat="server"></asp:Label><br />
+    <asp:TextBox ID="txtInput" runat="server"></asp:TextBox><br />
+    <asp:Button ID="Button1" runat="server" Text="Button" onclick="Button1_Click" />
     </div>
     </form>
 </body>

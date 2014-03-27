@@ -22,5 +22,14 @@ namespace DO_AN_TN.Test
         {
             imgCaptcha1.ImageUrl = new CaptchaProvider().CreateCaptcha();
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblMsg.Text = Common.DocTienBangChu(Convert.ToInt64(txtInput.Text), " đồng");
+            }
+            catch (Exception ex) { lblMsg.Text = ex.Message; }
+        }
     }
 }
