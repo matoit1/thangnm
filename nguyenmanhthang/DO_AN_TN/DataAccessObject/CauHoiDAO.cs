@@ -257,5 +257,88 @@ namespace DataAccessObject
                 }
             }
         }
+
+        public static int CauHoi_CountAll()
+        {
+            DataSet ds = null;
+            int count = 0;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_CountAll", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    count = Convert.ToInt32(ds.Tables[0].Rows[0]["SumQuestion"].ToString());
+                    return count;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return count;
+                }
+            }
+        }
+
+        public static DataSet CauHoi_SelectList_Question_by_Array_Cauhoi_ID(string ListPK_lCauhoi_ID)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_SelectList_Question_by_Array_PK_lCauhoi_ID", conn);
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@ListPK_lCauhoi_ID", ListPK_lCauhoi_ID));
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
+        public static bool Check(Int64 PK_lCauhoi_ID, Int16 iCauhoi_Dung)
+        {
+            DataSet ds = null;
+            Boolean kq = false;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_Check", conn);
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", PK_lCauhoi_ID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iCauhoi_Dung", iCauhoi_Dung));
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    if (ds.Tables[0].Rows.Count != 0)
+                    {
+                        kq = true;
+                    }
+                    else
+                    {
+                        kq = false;
+                    }
+                    return kq;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return kq;
+                }
+            }
+        }
     }
 }

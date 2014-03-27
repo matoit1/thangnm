@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace Shared_Libraries
 {
@@ -41,6 +42,40 @@ namespace Shared_Libraries
             strTmpDate = strTmpDate.Replace(":", "-").Trim();
             strTmpDate = strTmpDate.Replace("/", "-").Trim();
             return strTmpDate;
+        }
+
+        public static List<int> Get_List_ID_by_List_Index(List<int> lstIndex, DataSet ListID)
+        {
+            List<int> lst = new List<int>();
+            int tmp;
+            for (int i = 0; i < lstIndex.Count; i++)
+            {
+                tmp = Convert.ToInt32(ListID.Tables[0].Rows[lstIndex[i]]["PK_lCauhoi_ID"].ToString());
+                lst.Add(tmp);
+            }
+            return lst;
+        }
+
+        public static int Random_Number(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
+        }
+
+        public static List<int> Random_Array_Not_Duplicate(int sum, int num)
+        {
+            int tmp;
+            List<int> lst = new List<int>();
+            do
+            {
+                tmp = Random_Number(0, sum);
+                if (lst.Contains(tmp) == false)
+                {
+                    lst.Add(tmp);
+                }
+            }
+            while (lst.Count < num);
+            return lst;
         }
     }
 
