@@ -1,10 +1,10 @@
-D:\Project_ASP.NET\nguyenmanhthang\EntityObject\bin\Debug\EntityObject.dll
-D:\Project_ASP.NET\nguyenmanhthang\EntityObject\bin\Debug\EntityObject.pdb
-D:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\ResolveAssemblyReference.cache
-D:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\EntityObject.dll
-D:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\EntityObject.pdb
 E:\Project_ASP.NET\nguyenmanhthang\EntityObject\bin\Debug\EntityObject.dll
 E:\Project_ASP.NET\nguyenmanhthang\EntityObject\bin\Debug\EntityObject.pdb
 E:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\ResolveAssemblyReference.cache
 E:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\EntityObject.dll
 E:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\EntityObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\EntityObject\bin\Debug\EntityObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\EntityObject\bin\Debug\EntityObject.pdb
+D:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\EntityObject.dll
+D:\Project_ASP.NET\nguyenmanhthang\EntityObject\obj\Debug\EntityObject.pdb
