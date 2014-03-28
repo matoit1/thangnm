@@ -22,11 +22,13 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(LichDayVaHocEO _LichDayVaHocEO)
         {
-            ddlFK_sMaPCCT.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMaPCCT);
-            ddlFK_sMalop.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMalop);
+            try { ddlFK_sMaPCCT.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMaPCCT); }
+            catch { lblFK_sMaPCCT.Text = Messages.Ma_Khong_Hop_Le; }
+            try { ddlFK_sMalop.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMalop); }
+            catch { lblFK_sMalop.Text=Messages.Ma_Khong_Hop_Le; }
             try { ddliCaHoc.SelectedValue = Convert.ToString(_LichDayVaHocEO.iCaHoc); }
             catch { ddliCaHoc.SelectedIndex = 0; }
-            txttNgayDay.Text = Convert.ToString(_LichDayVaHocEO.tNgayDay);
+            txttNgayDay.Text = Convert.ToString(_LichDayVaHocEO.tNgayDay.ToShortDateString());
             txtiSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
             txtsSinhVienNghi.Text = Convert.ToString(_LichDayVaHocEO.sSinhVienNghi);
             try { ddliTrangThai.SelectedValue = _LichDayVaHocEO.iTrangThai.ToString(); }
@@ -103,13 +105,19 @@ namespace DO_AN_TN.UserControl
             try
             {
                 LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
-                _LichDayVaHocEO.FK_sMaPCCT = ddlFK_sMaPCCT.SelectedValue;
-                _LichDayVaHocEO.FK_sMalop = ddlFK_sMalop.SelectedValue;
-                _LichDayVaHocEO.iCaHoc = Convert.ToInt16(ddliCaHoc.SelectedValue);
-                _LichDayVaHocEO.tNgayDay = Convert.ToDateTime(txttNgayDay.Text);
-                _LichDayVaHocEO.iSoTietDay = Convert.ToInt16(txtiSoTietDay.Text);
+                try { _LichDayVaHocEO.FK_sMaPCCT = ddlFK_sMaPCCT.SelectedValue; }
+                catch { lblFK_sMaPCCT.Text = Messages.Ma_Khong_Hop_Le; }
+                try { _LichDayVaHocEO.FK_sMalop = ddlFK_sMalop.SelectedValue; }
+                catch { lblFK_sMalop.Text = Messages.Ma_Khong_Hop_Le; }
+                try { _LichDayVaHocEO.iCaHoc = Convert.ToInt16(ddliCaHoc.SelectedValue); }
+                catch { lbliCaHoc.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try { _LichDayVaHocEO.tNgayDay = Convert.ToDateTime(txttNgayDay.Text); }
+                catch { lbltNgayDay.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                try { _LichDayVaHocEO.iSoTietDay = Convert.ToInt16(txtiSoTietDay.Text); }
+                catch { lbliSoTietDay.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 _LichDayVaHocEO.sSinhVienNghi = txtsSinhVienNghi.Text;
-                _LichDayVaHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
+                try { _LichDayVaHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
+                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _LichDayVaHocEO;
             }
             catch (Exception)

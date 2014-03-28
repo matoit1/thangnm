@@ -23,7 +23,8 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(CauHoiEO _CauHoiEO)
         {
-            ddlFK_sMaGV.SelectedValue = Convert.ToString(_CauHoiEO.FK_sMaGV);
+            try { ddlFK_sMaGV.SelectedValue = Convert.ToString(_CauHoiEO.FK_sMaGV); }
+            catch { ddlFK_sMaGV.SelectedIndex = 0; }
             txtPK_lCauhoi_ID.Text = Convert.ToString(_CauHoiEO.PK_lCauhoi_ID);
             txtsCauhoi_Cauhoi.Text = Convert.ToString(_CauHoiEO.sCauhoi_Cauhoi);
             txtsCauhoi_A.Text = Convert.ToString(_CauHoiEO.sCauhoi_A);
@@ -121,21 +122,24 @@ namespace DO_AN_TN.UserControl
             try
             {
                 CauHoiEO _CauHoiEO = new CauHoiEO();
-                _CauHoiEO.FK_sMaGV = Convert.ToString(ddlFK_sMaGV.SelectedValue);
-                try { _CauHoiEO.PK_lCauhoi_ID = Convert.ToInt16(txtPK_lCauhoi_ID.Text); }
+                try { _CauHoiEO.FK_sMaGV = Convert.ToString(ddlFK_sMaGV.SelectedValue); }
+                catch { lblFK_sMaGV.Text = Messages.Ma_Khong_Hop_Le; }
+                try { _CauHoiEO.PK_lCauhoi_ID = Convert.ToInt64(txtPK_lCauhoi_ID.Text); }
                 catch { lblPK_lCauhoi_ID.Text = Messages.Khong_Dung_Dinh_Dang_So; _CauHoiEO.PK_lCauhoi_ID = 0; }
                 _CauHoiEO.sCauhoi_Cauhoi = Convert.ToString(txtsCauhoi_Cauhoi.Text);
                 _CauHoiEO.sCauhoi_A = Convert.ToString(txtsCauhoi_A.Text);
                 _CauHoiEO.sCauhoi_B = Convert.ToString(txtsCauhoi_B.Text);
                 _CauHoiEO.sCauhoi_C = Convert.ToString(txtsCauhoi_C.Text);
                 _CauHoiEO.sCauhoi_D = Convert.ToString(txtsCauhoi_D.Text);
-                _CauHoiEO.iCauhoi_Dung = Convert.ToInt16(ddliCauhoi_Dung.SelectedValue);
+                try { _CauHoiEO.iCauhoi_Dung = Convert.ToInt16(ddliCauhoi_Dung.SelectedValue); }
+                catch { lbliCauhoi_Dung.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 _CauHoiEO.sBoCauHoi = Convert.ToString(txtsBoCauHoi.Text);
                 try{_CauHoiEO.tNgayTao = Convert.ToDateTime(txttNgayTao.Text);}
                 catch{lbltNgayTao.Text = Messages.Khong_Dung_Dinh_Dang_Ngay;}
                 try{_CauHoiEO.tNgayCapNhat = Convert.ToDateTime(txttNgayCapNhat.Text);}
                 catch{lbltNgayCapNhat.Text = Messages.Khong_Dung_Dinh_Dang_Ngay;}
-                _CauHoiEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
+                try { _CauHoiEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
+                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _CauHoiEO;
             }
             catch (Exception)

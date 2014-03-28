@@ -22,8 +22,10 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(DiemThiEO _DiemThiEO)
         {
-            ddlFK_sMaSV.SelectedValue = _DiemThiEO.FK_sMaSV;
-            ddlFK_sMaMonhoc.SelectedValue = Convert.ToString(_DiemThiEO.FK_sMaMonhoc);
+            try { ddlFK_sMaSV.SelectedValue = Convert.ToString(_DiemThiEO.FK_sMaSV); }
+            catch { lblFK_sMaSV.Text = Messages.Ma_Khong_Hop_Le; }
+            try { ddlFK_sMaMonhoc.SelectedValue = Convert.ToString(_DiemThiEO.FK_sMaMonhoc); }
+            catch { ddlFK_sMaMonhoc.SelectedIndex = 0; }
             txtPK_iSolanhoc.Text = Convert.ToString(_DiemThiEO.PK_iSolanhoc);
             txtfDiemchuyencan.Text = Convert.ToString(_DiemThiEO.fDiemchuyencan);
             txtfDiemgiuaky.Text = Convert.ToString(_DiemThiEO.fDiemgiuaky);
@@ -103,14 +105,22 @@ namespace DO_AN_TN.UserControl
             try
             {
                 DiemThiEO _DiemThiEO = new DiemThiEO();
-                _DiemThiEO.FK_sMaSV = ddlFK_sMaSV.SelectedValue;
-                _DiemThiEO.FK_sMaMonhoc = ddlFK_sMaMonhoc.SelectedValue;
-                _DiemThiEO.PK_iSolanhoc = Convert.ToInt16(txtPK_iSolanhoc.Text);
-                _DiemThiEO.fDiemchuyencan = Convert.ToSingle(txtfDiemchuyencan.Text);
-                _DiemThiEO.fDiemgiuaky = Convert.ToSingle(txtfDiemgiuaky.Text);
-                _DiemThiEO.fDiemthilan1 = Convert.ToSingle(txtfDiemthilan1.Text);
-                _DiemThiEO.fDiemthilan2 = Convert.ToSingle(txtfDiemthilan2.Text);
-                _DiemThiEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
+                try { _DiemThiEO.FK_sMaSV = Convert.ToString(ddlFK_sMaSV.SelectedValue); }
+                catch { lblFK_sMaSV.Text = Messages.Ma_Khong_Hop_Le; }
+                try { _DiemThiEO.FK_sMaMonhoc = Convert.ToString(ddlFK_sMaMonhoc.SelectedValue); }
+                catch { lblFK_sMaMonhoc.Text = Messages.Ma_Khong_Hop_Le; }
+                try { _DiemThiEO.PK_iSolanhoc = Convert.ToInt16(txtPK_iSolanhoc.Text); }
+                catch { lblPK_iSolanhoc.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try { _DiemThiEO.fDiemchuyencan = Convert.ToSingle(txtfDiemchuyencan.Text);}
+                catch { lblfDiemchuyencan.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try { _DiemThiEO.fDiemgiuaky = Convert.ToSingle(txtfDiemgiuaky.Text);}
+                catch { lblfDiemgiuaky.Text = Messages.Khong_Dung_Dinh_Dang_So;}
+                try { _DiemThiEO.fDiemthilan1 = Convert.ToSingle(txtfDiemthilan1.Text);}
+                catch { lblfDiemthilan1.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try { _DiemThiEO.fDiemthilan2 = Convert.ToSingle(txtfDiemthilan2.Text);}
+                catch { lblfDiemthilan2.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try { _DiemThiEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
+                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _DiemThiEO;
             }
             catch (Exception)
