@@ -24,8 +24,9 @@ namespace EntityObject
         private Int16 _iChucVuGV;
         private Int16 _iHocViGV;
         private bool _bCongChucGV;
-        private string _sLinkChannels;
-        private string _sLinkChatRooms;
+        private string _sLinkChannelsGV;
+        private string _sLinkChatRoomsGV;
+        private string _sLinkAvatarGV;
         private Int16 _iTrangThaiGV;
 
         #region "Method"
@@ -149,26 +150,33 @@ namespace EntityObject
             set { this._bCongChucGV = value; }
         }
 
-        // 19. Xay dung cac phuong thuc set, get cho sLinkChannels
-        public string sLinkChannels
+        // 19. Xay dung cac phuong thuc set, get cho sLinkChannelsGV
+        public string sLinkChannelsGV
         {
-            get { return this._sLinkChannels; }
-            set { this._sLinkChannels = value; }
-        }
-        #endregion
-
-        // 20. Xay dung cac phuong thuc set, get cho sLinkChatRooms
-        public string sLinkChatRooms
-        {
-            get { return this._sLinkChatRooms; }
-            set { this._sLinkChatRooms = value; }
+            get { return this._sLinkChannelsGV; }
+            set { this._sLinkChannelsGV = value; }
         }
 
-        // 21. Xay dung cac phuong thuc set, get cho iTrangThaiGV
+        // 20. Xay dung cac phuong thuc set, get cho sLinkChatRoomsGV
+        public string sLinkChatRoomsGV
+        {
+            get { return this._sLinkChatRoomsGV; }
+            set { this._sLinkChatRoomsGV = value; }
+        }
+
+        // 21. Xay dung cac phuong thuc set, get cho sLinkAvatarGV
+        public string sLinkAvatarGV
+        {
+            get { return this._sLinkAvatarGV; }
+            set { this._sLinkAvatarGV = value; }
+        }
+
+        // 22. Xay dung cac phuong thuc set, get cho iTrangThaiGV
         public Int16 iTrangThaiGV
         {
             get { return this._iTrangThaiGV; }
             set { this._iTrangThaiGV = value; }
         }
+        #endregion
     }
 }

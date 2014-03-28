@@ -223,6 +223,8 @@ namespace Shared_Libraries.Constants
         public const Int16 Day_Thay = 2;
         public const Int16 Hoc_Bu = 3;
         public const Int16 Nghi = 4;
+        public const Int16 Thi = 5;
+        public const Int16 Kiem_Tra_Giua_Ky = 6;
     }
 
     /// <summary> II.7. LopHoc_iTrangThai_C (Trạng thái sửa lỗi) </summary>
@@ -251,6 +253,8 @@ namespace Shared_Libraries.Constants
         public const Int16 Binh_Thuong = 1;
         public const Int16 Chuyen_GV = 2;
         public const Int16 Huy = 3;
+        public const Int16 Hoc_Lai = 4;
+        public const Int16 Hoc_Xong = 5;
     }
     #endregion
 

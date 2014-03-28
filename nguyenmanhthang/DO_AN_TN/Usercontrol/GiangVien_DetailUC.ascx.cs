@@ -42,8 +42,8 @@ namespace DO_AN_TN.UserControl
             try { ddliHocViGV.SelectedValue = Convert.ToString(_GiangVienEO.iHocViGV);}
             catch { ddlbiChucVuGV.SelectedIndex = 0; }
             ddlbCongChucGV.SelectedValue = Convert.ToString(_GiangVienEO.bCongChucGV);
-            txtsLinkChannels.Text = Convert.ToString(_GiangVienEO.sLinkChannels);
-            txtsLinkChatRooms.Text = _GiangVienEO.sLinkChatRooms;
+            txtsLinkChannelsGV.Text = Convert.ToString(_GiangVienEO.sLinkChannelsGV);
+            txtsLinkChatRoomsGV.Text = _GiangVienEO.sLinkChatRoomsGV;
             try { ddliTrangThaiGV.SelectedValue = _GiangVienEO.iTrangThaiGV.ToString(); }
             catch { ddliTrangThaiGV.SelectedIndex = 0; }
         }
@@ -136,8 +136,8 @@ namespace DO_AN_TN.UserControl
                 _GiangVienEO.iChucVuGV = Convert.ToInt16(ddlbiChucVuGV.Text);
                 _GiangVienEO.iHocViGV = Convert.ToInt16(ddliHocViGV.Text);
                 _GiangVienEO.bCongChucGV = Convert.ToBoolean(ddlbCongChucGV.SelectedValue);
-                _GiangVienEO.sLinkChannels = txtsLinkChannels.Text;
-                _GiangVienEO.sLinkChatRooms = txtsLinkChatRooms.Text;
+                _GiangVienEO.sLinkChannelsGV = txtsLinkChannelsGV.Text;
+                _GiangVienEO.sLinkChatRoomsGV = txtsLinkChatRoomsGV.Text;
                 _GiangVienEO.iTrangThaiGV = Convert.ToInt16(ddliTrangThaiGV.SelectedValue);
                 return _GiangVienEO;
             }

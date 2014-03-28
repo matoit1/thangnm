@@ -337,40 +337,40 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblbCongChucGV;
         
         /// <summary>
-        /// txtsLinkChannels control.
+        /// txtsLinkChannelsGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsLinkChannels;
+        protected global::System.Web.UI.WebControls.TextBox txtsLinkChannelsGV;
         
         /// <summary>
-        /// lblsLinkChannels control.
+        /// lblsLinkChannelsGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsLinkChannels;
+        protected global::System.Web.UI.WebControls.Label lblsLinkChannelsGV;
         
         /// <summary>
-        /// txtsLinkChatRooms control.
+        /// txtsLinkChatRoomsGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsLinkChatRooms;
+        protected global::System.Web.UI.WebControls.TextBox txtsLinkChatRoomsGV;
         
         /// <summary>
-        /// lblsLinkChatRooms control.
+        /// lblsLinkChatRoomsGV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsLinkChatRooms;
+        protected global::System.Web.UI.WebControls.Label lblsLinkChatRoomsGV;
         
         /// <summary>
         /// ddliTrangThaiGV control.

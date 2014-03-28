@@ -360,6 +360,8 @@ namespace Shared_Libraries
                 case 2: output = "Dạy thay"; break;
                 case 3: output = "Học bù"; break;
                 case 4: output = "Nghỉ"; break;
+                case 5: output = "Thi"; break;
+                case 6: output = "Kiểm tra giữa kỳ"; break;
             }
             return output;
         }
@@ -406,6 +408,8 @@ namespace Shared_Libraries
                 case 1: output = "Bình thường"; break;
                 case 2: output = "Chuyển giáo viên"; break;
                 case 3: output = "Nghỉ"; break;
+                case 4: output = "Học lại"; break;
+                case 5: output = "Học xong"; break;
             }
             return output;
         }
