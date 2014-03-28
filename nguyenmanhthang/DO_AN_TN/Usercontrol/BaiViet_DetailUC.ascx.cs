@@ -22,17 +22,19 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(BaiVietEO _BaiVietEO)
         {
-            ddlFK_sMaGV.SelectedValue = _BaiVietEO.FK_sMaGV;
+            try { ddlFK_sMaGV.SelectedValue = Convert.ToString(_BaiVietEO.FK_sMaGV); }
+            catch { ddlFK_sMaGV.SelectedIndex = 0; }
             txtPK_lMaBaiViet.Text = Convert.ToString(_BaiVietEO.PK_lMaBaiViet);
-            txtsTieuDe.Text = _BaiVietEO.sTieuDe;
-            txtsLinkAnh.Text = _BaiVietEO.sLinkAnh;
-            txtsTag.Text = _BaiVietEO.sTag;
-            txtsNoiDung.Text = _BaiVietEO.sNoiDung;
+            txtsTieuDe.Text = Convert.ToString(_BaiVietEO.sTieuDe);
+            txtsLinkAnh.Text = Convert.ToString(_BaiVietEO.sLinkAnh);
+            txtsTag.Text = Convert.ToString(_BaiVietEO.sTag);
+            txtsNoiDung.Text = Convert.ToString(_BaiVietEO.sNoiDung);
             txtiLuotXem.Text = Convert.ToString(_BaiVietEO.iLuotXem);
-            txttNgayViet.Text = Convert.ToString(_BaiVietEO.tNgayViet.ToShortDateString());
+            try { txttNgayViet.Text = Convert.ToString(_BaiVietEO.tNgayViet.ToShortDateString()); }
+            catch { txttNgayViet.Text = ""; }
             try { txttNgayCapNhat.Text = Convert.ToString(_BaiVietEO.tNgayCapNhat.ToShortDateString()); }
             catch { txttNgayCapNhat.Text = ""; }
-            try { ddliTrangThai.SelectedValue = _BaiVietEO.iTrangThai.ToString(); }
+            try { ddliTrangThai.SelectedValue = Convert.ToString(_BaiVietEO.iTrangThai); }
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
@@ -106,17 +108,23 @@ namespace DO_AN_TN.UserControl
             try
             {
                 BaiVietEO _BaiVietEO = new BaiVietEO();
-                _BaiVietEO.FK_sMaGV = ddlFK_sMaGV.SelectedValue;
-                _BaiVietEO.PK_lMaBaiViet = Convert.ToInt64(txtPK_lMaBaiViet.Text);
-                _BaiVietEO.sTieuDe = txtsTieuDe.Text;
-                _BaiVietEO.sLinkAnh = txtsLinkAnh.Text;
-                _BaiVietEO.sTag = txtsTag.Text;
-                _BaiVietEO.sNoiDung = txtsNoiDung.Text;
-                _BaiVietEO.iLuotXem = Convert.ToInt16(txtiLuotXem.Text);
-                _BaiVietEO.tNgayViet = Convert.ToDateTime(txttNgayViet.Text);
-                _BaiVietEO.tNgayCapNhat = Convert.ToDateTime(txttNgayCapNhat.Text);
-                _BaiVietEO.sMoTa = txtsMoTa.Text;
-                _BaiVietEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
+                try { _BaiVietEO.FK_sMaGV = Convert.ToString(ddlFK_sMaGV.SelectedValue); }
+                catch { lblFK_sMaGV.Text = Messages.Ma_Khong_Hop_Le; }
+                try { _BaiVietEO.PK_lMaBaiViet = Convert.ToInt64(txtPK_lMaBaiViet.Text); }
+                catch { lblPK_lMaBaiViet.Text = Messages.Khong_Dung_Dinh_Dang_So; _BaiVietEO.PK_lMaBaiViet = 0; }
+                _BaiVietEO.sTieuDe = Convert.ToString(txtsTieuDe.Text);
+                _BaiVietEO.sLinkAnh = Convert.ToString(txtsLinkAnh.Text);
+                _BaiVietEO.sTag = Convert.ToString(txtsTag.Text);
+                _BaiVietEO.sNoiDung = Convert.ToString(txtsNoiDung.Text);
+                try { _BaiVietEO.iLuotXem = Convert.ToInt16(txtiLuotXem.Text); }
+                catch { lbliLuotXem.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try { _BaiVietEO.tNgayViet = Convert.ToDateTime(txttNgayViet.Text); }
+                catch { lbltNgayViet.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                try { _BaiVietEO.tNgayCapNhat = Convert.ToDateTime(txttNgayCapNhat.Text); }
+                catch { lbltNgayCapNhat.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                _BaiVietEO.sMoTa = Convert.ToString(txtsMoTa.Text);
+                try { _BaiVietEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
+                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _BaiVietEO;
             }
             catch (Exception)

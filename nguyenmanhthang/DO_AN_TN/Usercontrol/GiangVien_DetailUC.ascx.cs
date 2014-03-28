@@ -22,21 +22,21 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(GiangVienEO _GiangVienEO)
         {
-            txtPK_sMaGV.Text = Convert.ToString(_GiangVienEO.PK_sMaGV);
+            try { txtPK_sMaGV.Text = Convert.ToString(_GiangVienEO.PK_sMaGV); }
+            catch { lblPK_sMaGV.Text = Messages.Ma_Khong_Hop_Le; }
             txtsHoTenGV.Text = Convert.ToString(_GiangVienEO.sHotenGV);
             txtsTendangnhapGV.Text = Convert.ToString(_GiangVienEO.sTendangnhapGV);
             txtsMatkhauGV.Text = Convert.ToString(_GiangVienEO.sMatkhauGV);
             txtsEmailGV.Text = Convert.ToString(_GiangVienEO.sEmailGV);
             txtsDiachiGV.Text = Convert.ToString(_GiangVienEO.sDiachiGV);
             txtsSdtGV.Text = Convert.ToString(_GiangVienEO.sSdtGV);
-            try { txttNgaysinhGV.Text = Convert.ToString(_GiangVienEO.tNgaysinhGV); }
-            catch { txttNgaysinhGV.Text = ""; }
+            txttNgaysinhGV.Text = Convert.ToString(_GiangVienEO.tNgaysinhGV.ToShortDateString());
             ddlbGioitinhGV.SelectedValue = Convert.ToString(_GiangVienEO.bGioitinhGV);
             txtsCMNDGV.Text = Convert.ToString(_GiangVienEO.sCMNDGV);
-            txttNgayCapCMNDGV.Text = Convert.ToString(_GiangVienEO.tNgayCapCMNDGV);
+            txttNgayCapCMNDGV.Text = Convert.ToString(_GiangVienEO.tNgayCapCMNDGV.ToShortDateString());
             txtsNoiCapCMNDGV.Text = Convert.ToString(_GiangVienEO.sNoiCapCMNDGV);
             ddlbHonNhanGV.SelectedValue = Convert.ToString(_GiangVienEO.bHonNhanGV);
-            txttNgayNhanCongTacGV.Text = Convert.ToString(_GiangVienEO.tNgayNhanCongTacGV);
+            txttNgayNhanCongTacGV.Text = Convert.ToString(_GiangVienEO.tNgayNhanCongTacGV.ToShortDateString());
             try { ddlbiChucVuGV.SelectedValue = Convert.ToString(_GiangVienEO.iChucVuGV); }
             catch { ddlbiChucVuGV.SelectedIndex = 0; }
             try { ddliHocViGV.SelectedValue = Convert.ToString(_GiangVienEO.iHocViGV);}
@@ -126,20 +126,26 @@ namespace DO_AN_TN.UserControl
                 _GiangVienEO.sEmailGV = Convert.ToString(txtsEmailGV.Text);
                 _GiangVienEO.sDiachiGV = Convert.ToString(txtsDiachiGV.Text);
                 _GiangVienEO.sSdtGV = Convert.ToString(txtsSdtGV.Text);
-                _GiangVienEO.tNgaysinhGV = Convert.ToDateTime(txttNgaysinhGV.Text);
+                try { _GiangVienEO.tNgaysinhGV = Convert.ToDateTime(txttNgaysinhGV.Text); }
+                catch { lbltNgaysinhGV.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
                 _GiangVienEO.bGioitinhGV = Convert.ToBoolean(ddlbGioitinhGV.SelectedValue);
                 _GiangVienEO.sCMNDGV = Convert.ToString(txtsCMNDGV.Text);
-                _GiangVienEO.tNgayCapCMNDGV = Convert.ToDateTime(txttNgayCapCMNDGV.Text);
+                try { _GiangVienEO.tNgayCapCMNDGV = Convert.ToDateTime(txttNgayCapCMNDGV.Text);}
+                catch{lbltNgayCapCMNDGV.Text=Messages.Khong_Dung_Dinh_Dang_Ngay;}
                 _GiangVienEO.sNoiCapCMNDGV = Convert.ToString(txtsNoiCapCMNDGV.Text);
                 _GiangVienEO.bHonNhanGV = Convert.ToBoolean(ddlbHonNhanGV.SelectedValue);
-                _GiangVienEO.tNgayNhanCongTacGV = Convert.ToDateTime(txttNgayNhanCongTacGV.Text);
-                _GiangVienEO.iChucVuGV = Convert.ToInt16(ddlbiChucVuGV.Text);
-                _GiangVienEO.iHocViGV = Convert.ToInt16(ddliHocViGV.Text);
+                try { _GiangVienEO.tNgayNhanCongTacGV = Convert.ToDateTime(txttNgayNhanCongTacGV.Text);}
+                catch{lbltNgayNhanCongTacGV.Text=Messages.Khong_Dung_Dinh_Dang_Ngay;}
+                try { _GiangVienEO.iChucVuGV = Convert.ToInt16(ddlbiChucVuGV.Text);}
+                catch{lbliChucVuGV.Text=Messages.Khong_Dung_Dinh_Dang_So;}
+                try { _GiangVienEO.iHocViGV = Convert.ToInt16(ddliHocViGV.Text); }
+                catch { lblsHocViGV.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 _GiangVienEO.bCongChucGV = Convert.ToBoolean(ddlbCongChucGV.SelectedValue);
                 _GiangVienEO.sLinkChannelsGV = Convert.ToString(txtsLinkChannelsGV.Text);
                 _GiangVienEO.sLinkChatRoomsGV = Convert.ToString(txtsLinkChatRoomsGV.Text);
                 _GiangVienEO.sLinkAvatarGV = Convert.ToString(txtsLinkAvatarGV.Text);
-                _GiangVienEO.iTrangThaiGV = Convert.ToInt16(ddliTrangThaiGV.SelectedValue);
+                try { _GiangVienEO.iTrangThaiGV = Convert.ToInt16(ddliTrangThaiGV.SelectedValue);}
+                catch{lbliTrangThaiGV.Text=Messages.Khong_Dung_Dinh_Dang_So;}
                 return _GiangVienEO;
             }
             catch (Exception)

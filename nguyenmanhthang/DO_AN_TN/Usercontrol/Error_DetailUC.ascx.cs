@@ -22,13 +22,14 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(ErrorEO _ErrorEO)
         {
-            txtPK_lErrorID.Text = Convert.ToString(_ErrorEO.PK_lErrorID);
+            try { txtPK_lErrorID.Text = Convert.ToString(_ErrorEO.PK_lErrorID); }
+            catch { lblPK_lErrorID.Text = Messages.Ma_Khong_Hop_Le; }
             txtsLink.Text = Convert.ToString(_ErrorEO.sLink);
             txtsIP.Text = Convert.ToString(_ErrorEO.sIP);
             txtsBrowser.Text = Convert.ToString(_ErrorEO.sBrowser);
             txtiCodes.Text = Convert.ToString(_ErrorEO.iCodes);
-            txttTime.Text = Convert.ToString(_ErrorEO.tTime);
-            txttTimeCheck.Text = Convert.ToString(_ErrorEO.tTimeCheck);
+            txttTime.Text = Convert.ToString(_ErrorEO.tTime.ToShortDateString());
+            txttTimeCheck.Text = Convert.ToString(_ErrorEO.tTimeCheck.ToShortDateString());
             try { ddliStatus.SelectedValue = _ErrorEO.iStatus.ToString(); }
             catch { ddliStatus.SelectedIndex = 0; }
         }
@@ -103,14 +104,19 @@ namespace DO_AN_TN.UserControl
             try
             {
                 ErrorEO _ErrorEO = new ErrorEO();
-                _ErrorEO.PK_lErrorID = Convert.ToInt64(txtPK_lErrorID.Text);
+                try { _ErrorEO.PK_lErrorID = Convert.ToInt64(txtPK_lErrorID.Text); }
+                catch { lblPK_lErrorID.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 _ErrorEO.sLink = txtsLink.Text;
                 _ErrorEO.sIP = txtsIP.Text;
                 _ErrorEO.sBrowser = txtsBrowser.Text;
-                _ErrorEO.iCodes = Convert.ToInt16(txtiCodes.Text);
-                _ErrorEO.tTime = Convert.ToDateTime(txttTime.Text);
-                _ErrorEO.tTimeCheck = Convert.ToDateTime(txttTimeCheck.Text);
-                _ErrorEO.iStatus = Convert.ToInt16(ddliStatus.SelectedValue);
+                try { _ErrorEO.iCodes = Convert.ToInt16(txtiCodes.Text); }
+                catch { lbliCodes.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try { _ErrorEO.tTime = Convert.ToDateTime(txttTime.Text); }
+                catch { lbltTime.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                try { _ErrorEO.tTimeCheck = Convert.ToDateTime(txttTimeCheck.Text); }
+                catch { lbltTimeCheck.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                try { _ErrorEO.iStatus = Convert.ToInt16(ddliStatus.SelectedValue); }
+                catch { lbliStatus.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
                 return _ErrorEO;
             }
             catch (Exception)
