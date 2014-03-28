@@ -146,7 +146,7 @@
             <td><asp:Label ID="lbltNgayCapTheSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Ngày cấp thẻ SV: </td>
+            <td>Link Avatar: </td>
             <td><asp:TextBox ID="txtsLinkAvatarSV" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsLinkAvatarSV" runat="server"></asp:Label></td>
         </tr>
