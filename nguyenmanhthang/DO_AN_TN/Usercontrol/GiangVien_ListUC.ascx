@@ -102,6 +102,9 @@
                         <asp:BoundField DataField="sLinkChatRooms" HeaderText="Link Chat Rooms" SortExpression="sLinkChatRooms">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
+                        <asp:BoundField DataField="sLinkAvatarGV" HeaderText="Link Avatar" SortExpression="sLinkAvatarGV">
+                            <ItemStyle CssClass="GridItemText" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="iTrangThaiGV" HeaderText="Trạng thái" SortExpression="iTrangThaiGV">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>

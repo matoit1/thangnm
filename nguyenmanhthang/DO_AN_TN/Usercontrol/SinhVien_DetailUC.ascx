@@ -146,6 +146,11 @@
             <td><asp:Label ID="lbltNgayCapTheSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
+            <td>Ngày cấp thẻ SV: </td>
+            <td><asp:TextBox ID="txtsLinkAvatarSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkAvatarSV" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
             <td>Trạng thái: </td>
             <td><asp:DropDownList ID="ddliTrangThaiSV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThaiSV" runat="server"></asp:Label></td>

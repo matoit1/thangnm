@@ -120,6 +120,9 @@
                         <asp:BoundField DataField="tNgayCapTheSV" HeaderText="Ngày cấp thẻ SV" SortExpression="tNgayCapTheSV">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
+                        <asp:BoundField DataField="sLinkAvatarSV" HeaderText="Link Avatar" SortExpression="sLinkAvatarSV">
+                            <ItemStyle CssClass="GridItemText" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="iTrangThaiSV" HeaderText="Trạng thái" SortExpression="iTrangThaiSV">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>

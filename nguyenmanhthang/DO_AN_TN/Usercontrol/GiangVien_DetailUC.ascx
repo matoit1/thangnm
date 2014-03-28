@@ -116,6 +116,11 @@
             <td><asp:Label ID="lblsLinkChatRoomsGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
+            <td>Link Avatar: </td>
+            <td><asp:TextBox ID="txtsLinkAvatarGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkAvatarGV" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
             <td>Trạng thái: </td>
             <td><asp:DropDownList ID="ddliTrangThaiGV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThaiGV" runat="server"></asp:Label></td>

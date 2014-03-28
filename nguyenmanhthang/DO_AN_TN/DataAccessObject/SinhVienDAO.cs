@@ -80,6 +80,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@tNgayNhapHocSV", _SinhVienEO.tNgayNhapHocSV));
                     cmd.Parameters.Add(new SqlParameter("@tNgayRaTruongSV", _SinhVienEO.tNgayRaTruongSV));
                     cmd.Parameters.Add(new SqlParameter("@tNgayCapTheSV", _SinhVienEO.tNgayCapTheSV));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkAvatarSV", _SinhVienEO.sLinkAvatarSV));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThaiSV", _SinhVienEO.iTrangThaiSV));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -130,6 +131,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@tNgayNhapHocSV", _SinhVienEO.tNgayNhapHocSV));
                     cmd.Parameters.Add(new SqlParameter("@tNgayRaTruongSV", _SinhVienEO.tNgayRaTruongSV));
                     cmd.Parameters.Add(new SqlParameter("@tNgayCapTheSV", _SinhVienEO.tNgayCapTheSV));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkAvatarSV", _SinhVienEO.sLinkAvatarSV));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThaiSV", _SinhVienEO.iTrangThaiSV));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -315,6 +317,7 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayNhapHocSV", _SinhVienEO.tNgayNhapHocSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayRaTruongSV", _SinhVienEO.tNgayRaTruongSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayCapTheSV", _SinhVienEO.tNgayCapTheSV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkAvatarSV", _SinhVienEO.sLinkAvatarSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiSV", _SinhVienEO.iTrangThaiSV));
                     ds = new DataSet();
                     da.Fill(ds);
