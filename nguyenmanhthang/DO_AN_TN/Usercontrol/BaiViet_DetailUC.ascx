@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <td>Mã bài viết: </td>
-            <td><asp:TextBox ID="txtPK_lMaBaiViet" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_lMaBaiViet" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_lMaBaiViet" runat="server"></asp:Label></td>
         </tr>
         <tr>

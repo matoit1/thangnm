@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <td>Mã câu hỏi: </td>
-            <td><asp:TextBox ID="txtPK_lCauhoi_ID" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_lCauhoi_ID" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_lCauhoi_ID" runat="server"></asp:Label></td>
         </tr>
         <tr>

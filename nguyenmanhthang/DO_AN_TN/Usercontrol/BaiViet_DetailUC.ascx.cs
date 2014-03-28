@@ -29,8 +29,8 @@ namespace DO_AN_TN.UserControl
             txtsTag.Text = _BaiVietEO.sTag;
             txtsNoiDung.Text = _BaiVietEO.sNoiDung;
             txtiLuotXem.Text = Convert.ToString(_BaiVietEO.iLuotXem);
-            txttNgayViet.Text = Convert.ToString(_BaiVietEO.tNgayViet);
-            try { txttNgayCapNhat.Text = Convert.ToString(_BaiVietEO.tNgayCapNhat); }
+            txttNgayViet.Text = Convert.ToString(_BaiVietEO.tNgayViet.ToShortDateString());
+            try { txttNgayCapNhat.Text = Convert.ToString(_BaiVietEO.tNgayCapNhat.ToShortDateString()); }
             catch { txttNgayCapNhat.Text = ""; }
             try { ddliTrangThai.SelectedValue = _BaiVietEO.iTrangThai.ToString(); }
             catch { ddliTrangThai.SelectedIndex = 0; }
