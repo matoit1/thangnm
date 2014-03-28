@@ -72,8 +72,9 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@iChucVuGV", _GiangVienEO.iChucVuGV));
                     cmd.Parameters.Add(new SqlParameter("@iHocViGV", _GiangVienEO.iHocViGV));
                     cmd.Parameters.Add(new SqlParameter("@bCongChucGV", _GiangVienEO.bCongChucGV));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkChannels", _GiangVienEO.sLinkChannels));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkChatRooms", _GiangVienEO.sLinkChatRooms));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkChannelsGV", _GiangVienEO.sLinkChannelsGV));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkChatRoomsGV", _GiangVienEO.sLinkChatRoomsGV));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkAvatarGV", _GiangVienEO.sLinkAvatarGV));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThaiGV", _GiangVienEO.iTrangThaiGV));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -116,8 +117,9 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@iChucVuGV", _GiangVienEO.iChucVuGV));
                     cmd.Parameters.Add(new SqlParameter("@iHocViGV", _GiangVienEO.iHocViGV));
                     cmd.Parameters.Add(new SqlParameter("@bCongChucGV", _GiangVienEO.bCongChucGV));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkChannels", _GiangVienEO.sLinkChannels));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkChatRooms", _GiangVienEO.sLinkChatRooms));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkChannelsGV", _GiangVienEO.sLinkChannelsGV));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkChatRoomsGV", _GiangVienEO.sLinkChatRoomsGV));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkAvatarGV", _GiangVienEO.sLinkAvatarGV));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThaiGV", _GiangVienEO.iTrangThaiGV));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -266,8 +268,9 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iChucVuGV", _GiangVienEO.iChucVuGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iHocViGV", _GiangVienEO.iHocViGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@bCongChucGV", _GiangVienEO.bCongChucGV));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkChannels", _GiangVienEO.sLinkChannels));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkChatRooms", _GiangVienEO.sLinkChatRooms));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkChannelsGV", _GiangVienEO.sLinkChannelsGV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkChatRoomsGV", _GiangVienEO.sLinkChatRoomsGV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkAvatarGV", _GiangVienEO.sLinkAvatarGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiGV", _GiangVienEO.iTrangThaiGV));
                     ds = new DataSet();
                     da.Fill(ds);

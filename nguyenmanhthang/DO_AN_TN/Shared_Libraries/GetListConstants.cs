@@ -254,6 +254,8 @@ namespace Shared_Libraries
             output.Add(LichDayVaHoc_iTrangThai_C.Day_Thay, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Day_Thay));
             output.Add(LichDayVaHoc_iTrangThai_C.Hoc_Bu, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Hoc_Bu));
             output.Add(LichDayVaHoc_iTrangThai_C.Nghi, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Nghi));
+            output.Add(LichDayVaHoc_iTrangThai_C.Thi, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Thi));
+            output.Add(LichDayVaHoc_iTrangThai_C.Kiem_Tra_Giua_Ky, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Kiem_Tra_Giua_Ky));
             return output;
         }
 
@@ -288,6 +290,8 @@ namespace Shared_Libraries
             output.Add(PhanCongCongTac_iTrangThai_C.Binh_Thuong, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Binh_Thuong));
             output.Add(PhanCongCongTac_iTrangThai_C.Chuyen_GV, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Chuyen_GV));
             output.Add(PhanCongCongTac_iTrangThai_C.Huy, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Huy));
+            output.Add(PhanCongCongTac_iTrangThai_C.Hoc_Lai, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Hoc_Lai));
+            output.Add(PhanCongCongTac_iTrangThai_C.Hoc_Xong, GetTextConstants.PhanCongCongTac_iTrangThai_GTC(PhanCongCongTac_iTrangThai_C.Hoc_Xong));
             return output;
         }
         #endregion

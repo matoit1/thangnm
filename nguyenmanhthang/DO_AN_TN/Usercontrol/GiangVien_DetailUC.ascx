@@ -107,13 +107,13 @@
         </tr>
         <tr>
             <td>Link kênh dạy học: </td>
-            <td><asp:TextBox ID="txtsLinkChannels" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsLinkChannels" runat="server"></asp:Label></td>
+            <td><asp:TextBox ID="txtsLinkChannelsGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkChannelsGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Link Chat Room: </td>
-            <td><asp:TextBox ID="txtsLinkChatRooms" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblsLinkChatRooms" runat="server"></asp:Label></td>
+            <td><asp:TextBox ID="txtsLinkChatRoomsGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkChatRoomsGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Trạng thái: </td>

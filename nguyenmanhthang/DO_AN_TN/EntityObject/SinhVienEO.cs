@@ -32,6 +32,7 @@ namespace EntityObject
         private DateTime _tNgayNhapHocSV;
         private DateTime _tNgayRaTruongSV;
         private DateTime _tNgayCapTheSV;
+        private string _sLinkAvatarSV;
         private Int16 _iTrangThaiSV;
 
         #region "Method"
@@ -213,7 +214,14 @@ namespace EntityObject
             set { this._tNgayCapTheSV = value; }
         }
 
-        // 26. Xay dung cac phuong thuc set, get cho iTrangThaiSV
+        // 26. Xay dung cac phuong thuc set, get cho sLinkAvatarSV
+        public string sLinkAvatarSV
+        {
+            get { return this._sLinkAvatarSV; }
+            set { this._sLinkAvatarSV = value; }
+        }
+
+        // 27. Xay dung cac phuong thuc set, get cho iTrangThaiSV
         public Int16 iTrangThaiSV
         {
             get { return this._iTrangThaiSV; }

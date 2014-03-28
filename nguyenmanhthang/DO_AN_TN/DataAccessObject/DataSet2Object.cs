@@ -153,8 +153,9 @@ namespace DataAccessObject
                     output.iChucVuGV = Convert.ToInt16(dr["iChucVuGV"]);
                     output.iHocViGV = Convert.ToInt16(dr["iHocViGV"]);
                     output.bCongChucGV = Convert.ToBoolean(dr["bCongChucGV"]);
-                    output.sLinkChannels = Convert.ToString(dr["sLinkChannels"]);
-                    output.sLinkChatRooms = Convert.ToString(dr["sLinkChatRooms"]);
+                    output.sLinkChannelsGV = Convert.ToString(dr["sLinkChannelsGV"]);
+                    output.sLinkChatRoomsGV = Convert.ToString(dr["sLinkChatRoomsGV"]);
+                    output.sLinkAvatarGV = Convert.ToString(dr["sLinkAvatarGV"]);
                     output.iTrangThaiGV = Convert.ToInt16(dr["iTrangThaiGV"]);
                 }
                 return output;
