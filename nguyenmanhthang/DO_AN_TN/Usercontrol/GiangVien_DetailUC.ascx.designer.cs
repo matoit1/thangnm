@@ -373,6 +373,24 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblsLinkChatRoomsGV;
         
         /// <summary>
+        /// txtsLinkAvatarGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsLinkAvatarGV;
+        
+        /// <summary>
+        /// lblsLinkAvatarGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsLinkAvatarGV;
+        
+        /// <summary>
         /// ddliTrangThaiGV control.
         /// </summary>
         /// <remarks>

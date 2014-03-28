@@ -285,6 +285,7 @@ namespace DataAccessObject
                     output.tNgayNhapHocSV = Convert.ToDateTime(dr["tNgayNhapHocSV"]);
                     output.tNgayRaTruongSV = Convert.ToDateTime(dr["tNgayRaTruongSV"]);
                     output.tNgayCapTheSV = Convert.ToDateTime(dr["tNgayCapTheSV"]);
+                    output.sLinkAvatarSV = Convert.ToString(dr["sLinkAvatarSV"]);
                     output.iTrangThaiSV = Convert.ToInt16(dr["iTrangThaiSV"]);
                 }
                 return output;

@@ -22,19 +22,19 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(GiangVienEO _GiangVienEO)
         {
-            txtPK_sMaGV.Text = _GiangVienEO.PK_sMaGV;
-            txtsHoTenGV.Text = _GiangVienEO.sHotenGV;
-            txtsTendangnhapGV.Text = _GiangVienEO.sTendangnhapGV;
-            txtsMatkhauGV.Text = _GiangVienEO.sMatkhauGV;
-            txtsEmailGV.Text = _GiangVienEO.sEmailGV;
-            txtsDiachiGV.Text = _GiangVienEO.sDiachiGV;
-            txtsSdtGV.Text = _GiangVienEO.sSdtGV;
+            txtPK_sMaGV.Text = Convert.ToString(_GiangVienEO.PK_sMaGV);
+            txtsHoTenGV.Text = Convert.ToString(_GiangVienEO.sHotenGV);
+            txtsTendangnhapGV.Text = Convert.ToString(_GiangVienEO.sTendangnhapGV);
+            txtsMatkhauGV.Text = Convert.ToString(_GiangVienEO.sMatkhauGV);
+            txtsEmailGV.Text = Convert.ToString(_GiangVienEO.sEmailGV);
+            txtsDiachiGV.Text = Convert.ToString(_GiangVienEO.sDiachiGV);
+            txtsSdtGV.Text = Convert.ToString(_GiangVienEO.sSdtGV);
             try { txttNgaysinhGV.Text = Convert.ToString(_GiangVienEO.tNgaysinhGV); }
             catch { txttNgaysinhGV.Text = ""; }
             ddlbGioitinhGV.SelectedValue = Convert.ToString(_GiangVienEO.bGioitinhGV);
-            txtsCMNDGV.Text = _GiangVienEO.sCMNDGV;
+            txtsCMNDGV.Text = Convert.ToString(_GiangVienEO.sCMNDGV);
             txttNgayCapCMNDGV.Text = Convert.ToString(_GiangVienEO.tNgayCapCMNDGV);
-            txtsNoiCapCMNDGV.Text = _GiangVienEO.sNoiCapCMNDGV;
+            txtsNoiCapCMNDGV.Text = Convert.ToString(_GiangVienEO.sNoiCapCMNDGV);
             ddlbHonNhanGV.SelectedValue = Convert.ToString(_GiangVienEO.bHonNhanGV);
             txttNgayNhanCongTacGV.Text = Convert.ToString(_GiangVienEO.tNgayNhanCongTacGV);
             try { ddlbiChucVuGV.SelectedValue = Convert.ToString(_GiangVienEO.iChucVuGV); }
@@ -43,7 +43,8 @@ namespace DO_AN_TN.UserControl
             catch { ddlbiChucVuGV.SelectedIndex = 0; }
             ddlbCongChucGV.SelectedValue = Convert.ToString(_GiangVienEO.bCongChucGV);
             txtsLinkChannelsGV.Text = Convert.ToString(_GiangVienEO.sLinkChannelsGV);
-            txtsLinkChatRoomsGV.Text = _GiangVienEO.sLinkChatRoomsGV;
+            txtsLinkChatRoomsGV.Text = Convert.ToString(_GiangVienEO.sLinkChatRoomsGV);
+            txtsLinkAvatarGV.Text = Convert.ToString(_GiangVienEO.sLinkAvatarGV);
             try { ddliTrangThaiGV.SelectedValue = _GiangVienEO.iTrangThaiGV.ToString(); }
             catch { ddliTrangThaiGV.SelectedIndex = 0; }
         }
@@ -118,26 +119,26 @@ namespace DO_AN_TN.UserControl
             try
             {
                 GiangVienEO _GiangVienEO = new GiangVienEO();
-                _GiangVienEO.PK_sMaGV = txtPK_sMaGV.Text;
-                _GiangVienEO.sHotenGV = txtsHoTenGV.Text;
-                _GiangVienEO.sTendangnhapGV = txtsTendangnhapGV.Text;
-                _GiangVienEO.sMatkhauGV = txtsMatkhauGV.Text;
-                _GiangVienEO.sEmailGV = txtsEmailGV.Text;
-                _GiangVienEO.sDiachiGV = txtsDiachiGV.Text;
-                _GiangVienEO.sSdtGV = txtsSdtGV.Text;
+                _GiangVienEO.PK_sMaGV = Convert.ToString(txtPK_sMaGV.Text);
+                _GiangVienEO.sHotenGV = Convert.ToString(txtsHoTenGV.Text);
+                _GiangVienEO.sTendangnhapGV = Convert.ToString(txtsTendangnhapGV.Text);
+                _GiangVienEO.sMatkhauGV = Convert.ToString(txtsMatkhauGV.Text);
+                _GiangVienEO.sEmailGV = Convert.ToString(txtsEmailGV.Text);
+                _GiangVienEO.sDiachiGV = Convert.ToString(txtsDiachiGV.Text);
+                _GiangVienEO.sSdtGV = Convert.ToString(txtsSdtGV.Text);
                 _GiangVienEO.tNgaysinhGV = Convert.ToDateTime(txttNgaysinhGV.Text);
                 _GiangVienEO.bGioitinhGV = Convert.ToBoolean(ddlbGioitinhGV.SelectedValue);
-                _GiangVienEO.sCMNDGV = txtsCMNDGV.Text;
+                _GiangVienEO.sCMNDGV = Convert.ToString(txtsCMNDGV.Text);
                 _GiangVienEO.tNgayCapCMNDGV = Convert.ToDateTime(txttNgayCapCMNDGV.Text);
-                _GiangVienEO.sNoiCapCMNDGV = txtsNoiCapCMNDGV.Text;
+                _GiangVienEO.sNoiCapCMNDGV = Convert.ToString(txtsNoiCapCMNDGV.Text);
                 _GiangVienEO.bHonNhanGV = Convert.ToBoolean(ddlbHonNhanGV.SelectedValue);
-
                 _GiangVienEO.tNgayNhanCongTacGV = Convert.ToDateTime(txttNgayNhanCongTacGV.Text);
                 _GiangVienEO.iChucVuGV = Convert.ToInt16(ddlbiChucVuGV.Text);
                 _GiangVienEO.iHocViGV = Convert.ToInt16(ddliHocViGV.Text);
                 _GiangVienEO.bCongChucGV = Convert.ToBoolean(ddlbCongChucGV.SelectedValue);
-                _GiangVienEO.sLinkChannelsGV = txtsLinkChannelsGV.Text;
-                _GiangVienEO.sLinkChatRoomsGV = txtsLinkChatRoomsGV.Text;
+                _GiangVienEO.sLinkChannelsGV = Convert.ToString(txtsLinkChannelsGV.Text);
+                _GiangVienEO.sLinkChatRoomsGV = Convert.ToString(txtsLinkChatRoomsGV.Text);
+                _GiangVienEO.sLinkAvatarGV = Convert.ToString(txtsLinkAvatarGV.Text);
                 _GiangVienEO.iTrangThaiGV = Convert.ToInt16(ddliTrangThaiGV.SelectedValue);
                 return _GiangVienEO;
             }
