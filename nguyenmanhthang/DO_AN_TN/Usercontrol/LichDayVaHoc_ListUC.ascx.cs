@@ -72,8 +72,10 @@ namespace DO_AN_TN.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                this.FK_sMaPCCT = Convert.ToString(e.CommandArgument);
-                this.FK_sMalop = Convert.ToString(e.CommandArgument);
+                GridViewRow row = this.grvListLichDayVaHoc.SelectedRow;
+                int index = Convert.ToInt16(e.CommandArgument) % grvListLichDayVaHoc.PageSize;
+                this.FK_sMaPCCT = Convert.ToString(grvListLichDayVaHoc.DataKeys[index].Values["FK_sMaPCCT"]);
+                this.FK_sMalop = Convert.ToString(grvListLichDayVaHoc.DataKeys[index].Values["FK_sMalop"]);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);

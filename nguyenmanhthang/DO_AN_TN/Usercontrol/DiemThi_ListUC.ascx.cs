@@ -78,9 +78,6 @@ namespace DO_AN_TN.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                //int index = Convert.ToInt32(e.CommandArgument);
-                //int documentID = Convert.ToInt32(grvListDiemThi.DataKeys[index].Value);
-
                 GridViewRow row = this.grvListDiemThi.SelectedRow;
                 int index = Convert.ToInt16(e.CommandArgument) % grvListDiemThi.PageSize;
                 this.FK_sMaSV = Convert.ToString(grvListDiemThi.DataKeys[index].Values["FK_sMaSV"]);
