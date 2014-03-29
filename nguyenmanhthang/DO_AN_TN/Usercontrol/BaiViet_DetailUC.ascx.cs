@@ -38,71 +38,6 @@ namespace DO_AN_TN.UserControl
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
-        #region "Event Button"
-        protected void btnInsert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (BaiVietDAO.BaiViet_Insert(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (BaiVietDAO.BaiViet_Update(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (BaiVietDAO.BaiViet_Delete(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-            BaiVietEO _BaiVietEO = new BaiVietEO();
-            BindDataDetail(_BaiVietEO);
-        }
-        #endregion
-
         private BaiVietEO getObject()
         {
             try
@@ -133,6 +68,22 @@ namespace DO_AN_TN.UserControl
             }
         }
 
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblFK_sMaGV.Text = "";
+            lblPK_lMaBaiViet.Text = "";
+            lblsTieuDe.Text = "";
+            lblsLinkAnh.Text = "";
+            lblsTag.Text = "";
+            lblsNoiDung.Text = "";
+            lbliLuotXem.Text = "";
+            lbltNgayViet.Text = "";
+            lbltNgayCapNhat.Text = "";
+            lblsMoTa.Text = "";
+            lbliTrangThai.Text = "";
+        }
+
         public void loadDataToDropDownList()
         {
             ddlFK_sMaGV.DataSource = GiangVienDAO.GiangVien_SelectList();
@@ -145,5 +96,74 @@ namespace DO_AN_TN.UserControl
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
         }
+
+        #region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (BaiVietDAO.BaiViet_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (BaiVietDAO.BaiViet_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (BaiVietDAO.BaiViet_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            BaiVietEO _BaiVietEO = new BaiVietEO();
+            BindDataDetail(_BaiVietEO);
+        }
+        #endregion
     }
 }
