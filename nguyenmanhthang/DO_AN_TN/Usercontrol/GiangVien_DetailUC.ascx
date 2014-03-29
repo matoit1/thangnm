@@ -98,7 +98,7 @@
         <tr>
             <td>Học vị: </td>
             <td><asp:DropDownList ID="ddliHocViGV" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lblsHocViGV" runat="server"></asp:Label></td>
+            <td><asp:Label ID="lbliHocViGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Công chức: </td>

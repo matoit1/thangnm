@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td>Mã lỗi: </td>
-            <td><asp:TextBox ID="txtPK_lErrorID" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_lErrorID" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_lErrorID" runat="server"></asp:Label></td>
         </tr>
         <tr>
