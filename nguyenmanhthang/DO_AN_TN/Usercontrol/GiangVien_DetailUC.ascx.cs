@@ -23,7 +23,7 @@ namespace DO_AN_TN.UserControl
         public void BindDataDetail(GiangVienEO _GiangVienEO)
         {
             try { txtPK_sMaGV.Text = Convert.ToString(_GiangVienEO.PK_sMaGV); }
-            catch { lblPK_sMaGV.Text = Messages.Ma_Khong_Hop_Le; }
+            catch { txtPK_sMaGV.Text = "";  lblPK_sMaGV.Text = Messages.Ma_Khong_Hop_Le; }
             txtsHoTenGV.Text = Convert.ToString(_GiangVienEO.sHotenGV);
             txtsTendangnhapGV.Text = Convert.ToString(_GiangVienEO.sTendangnhapGV);
             txtsMatkhauGV.Text = Convert.ToString(_GiangVienEO.sMatkhauGV);
@@ -38,15 +38,15 @@ namespace DO_AN_TN.UserControl
             ddlbHonNhanGV.SelectedValue = Convert.ToString(_GiangVienEO.bHonNhanGV);
             txttNgayNhanCongTacGV.Text = Convert.ToString(_GiangVienEO.tNgayNhanCongTacGV.ToShortDateString());
             try { ddlbiChucVuGV.SelectedValue = Convert.ToString(_GiangVienEO.iChucVuGV); }
-            catch { ddlbiChucVuGV.SelectedIndex = 0; }
+            catch { ddlbiChucVuGV.SelectedIndex = 0; lbliChucVuGV.Text = Messages.Loi_Tai_Du_Lieu; }
             try { ddliHocViGV.SelectedValue = Convert.ToString(_GiangVienEO.iHocViGV);}
-            catch { ddlbiChucVuGV.SelectedIndex = 0; }
+            catch { ddlbiChucVuGV.SelectedIndex = 0; lbliHocViGV.Text = Messages.Loi_Tai_Du_Lieu; }
             ddlbCongChucGV.SelectedValue = Convert.ToString(_GiangVienEO.bCongChucGV);
             txtsLinkChannelsGV.Text = Convert.ToString(_GiangVienEO.sLinkChannelsGV);
             txtsLinkChatRoomsGV.Text = Convert.ToString(_GiangVienEO.sLinkChatRoomsGV);
             txtsLinkAvatarGV.Text = Convert.ToString(_GiangVienEO.sLinkAvatarGV);
             try { ddliTrangThaiGV.SelectedValue = _GiangVienEO.iTrangThaiGV.ToString(); }
-            catch { ddliTrangThaiGV.SelectedIndex = 0; }
+            catch { ddliTrangThaiGV.SelectedIndex = 0; lbliTrangThaiGV.Text = Messages.Loi_Tai_Du_Lieu; }
         }
 
         #region "Event Button"
@@ -139,7 +139,7 @@ namespace DO_AN_TN.UserControl
                 try { _GiangVienEO.iChucVuGV = Convert.ToInt16(ddlbiChucVuGV.Text);}
                 catch{lbliChucVuGV.Text=Messages.Khong_Dung_Dinh_Dang_So;}
                 try { _GiangVienEO.iHocViGV = Convert.ToInt16(ddliHocViGV.Text); }
-                catch { lblsHocViGV.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                catch { lbliHocViGV.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 _GiangVienEO.bCongChucGV = Convert.ToBoolean(ddlbCongChucGV.SelectedValue);
                 _GiangVienEO.sLinkChannelsGV = Convert.ToString(txtsLinkChannelsGV.Text);
                 _GiangVienEO.sLinkChatRoomsGV = Convert.ToString(txtsLinkChatRoomsGV.Text);

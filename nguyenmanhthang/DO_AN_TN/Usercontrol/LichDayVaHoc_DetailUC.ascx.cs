@@ -23,16 +23,16 @@ namespace DO_AN_TN.UserControl
         public void BindDataDetail(LichDayVaHocEO _LichDayVaHocEO)
         {
             try { ddlFK_sMaPCCT.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMaPCCT); }
-            catch { lblFK_sMaPCCT.Text = Messages.Ma_Khong_Hop_Le; }
+            catch { ddlFK_sMaPCCT.SelectedIndex = 0; lblFK_sMaPCCT.Text = Messages.Ma_Khong_Hop_Le; }
             try { ddlFK_sMalop.SelectedValue = Convert.ToString(_LichDayVaHocEO.FK_sMalop); }
-            catch { lblFK_sMalop.Text=Messages.Ma_Khong_Hop_Le; }
+            catch { ddlFK_sMalop.SelectedIndex = 0; lblFK_sMalop.Text = Messages.Ma_Khong_Hop_Le; }
             try { ddliCaHoc.SelectedValue = Convert.ToString(_LichDayVaHocEO.iCaHoc); }
-            catch { ddliCaHoc.SelectedIndex = 0; }
+            catch { ddliCaHoc.SelectedIndex = 0; lbliCaHoc.Text = Messages.Loi_Tai_Du_Lieu; }
             txttNgayDay.Text = Convert.ToString(_LichDayVaHocEO.tNgayDay.ToShortDateString());
             txtiSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
             txtsSinhVienNghi.Text = Convert.ToString(_LichDayVaHocEO.sSinhVienNghi);
             try { ddliTrangThai.SelectedValue = _LichDayVaHocEO.iTrangThai.ToString(); }
-            catch { ddliTrangThai.SelectedIndex = 0; }
+            catch { ddliTrangThai.SelectedIndex = 0; lbliTrangThai.Text = Messages.Loi_Tai_Du_Lieu; }
         }
 
         #region "Event Button"
@@ -105,9 +105,9 @@ namespace DO_AN_TN.UserControl
             try
             {
                 LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
-                try { _LichDayVaHocEO.FK_sMaPCCT = ddlFK_sMaPCCT.SelectedValue; }
+                try { _LichDayVaHocEO.FK_sMaPCCT = Convert.ToString(ddlFK_sMaPCCT.SelectedValue); }
                 catch { lblFK_sMaPCCT.Text = Messages.Ma_Khong_Hop_Le; }
-                try { _LichDayVaHocEO.FK_sMalop = ddlFK_sMalop.SelectedValue; }
+                try { _LichDayVaHocEO.FK_sMalop = Convert.ToString(ddlFK_sMalop.SelectedValue); }
                 catch { lblFK_sMalop.Text = Messages.Ma_Khong_Hop_Le; }
                 try { _LichDayVaHocEO.iCaHoc = Convert.ToInt16(ddliCaHoc.SelectedValue); }
                 catch { lbliCaHoc.Text = Messages.Khong_Dung_Dinh_Dang_So; }
@@ -115,7 +115,7 @@ namespace DO_AN_TN.UserControl
                 catch { lbltNgayDay.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
                 try { _LichDayVaHocEO.iSoTietDay = Convert.ToInt16(txtiSoTietDay.Text); }
                 catch { lbliSoTietDay.Text = Messages.Khong_Dung_Dinh_Dang_So; }
-                _LichDayVaHocEO.sSinhVienNghi = txtsSinhVienNghi.Text;
+                _LichDayVaHocEO.sSinhVienNghi = Convert.ToString(txtsSinhVienNghi.Text);
                 try { _LichDayVaHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
                 catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _LichDayVaHocEO;

@@ -22,7 +22,8 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(LopHocEO _LopHocEO)
         {
-            txtPK_sMalop.Text = Convert.ToString(_LopHocEO.PK_sMalop);
+            try { txtPK_sMalop.Text = Convert.ToString(_LopHocEO.PK_sMalop); }
+            catch { txtPK_sMalop.Text = ""; lblPK_sMalop.Text = Messages.Ma_Khong_Hop_Le; }
             txtsTenlop.Text = Convert.ToString(_LopHocEO.sTenlop);
             txtiNamvaotruong.Text = Convert.ToString(_LopHocEO.iNamvaotruong);
             txtiSiso.Text = Convert.ToString(_LopHocEO.iSiso);
@@ -101,8 +102,8 @@ namespace DO_AN_TN.UserControl
             try
             {
                 LopHocEO _LopHocEO = new LopHocEO();
-                _LopHocEO.PK_sMalop = txtPK_sMalop.Text;
-                _LopHocEO.sTenlop = txtsTenlop.Text;
+                _LopHocEO.PK_sMalop = Convert.ToString(txtPK_sMalop.Text);
+                _LopHocEO.sTenlop = Convert.ToString(txtsTenlop.Text);
                 try{ _LopHocEO.iNamvaotruong = Convert.ToInt16(txtiNamvaotruong.Text);}
                 catch{ lbliNamvaotruong.Text = Messages.Khong_Dung_Dinh_Dang_So;}
                 try{ _LopHocEO.iSiso = Convert.ToInt16(txtiSiso.Text);}

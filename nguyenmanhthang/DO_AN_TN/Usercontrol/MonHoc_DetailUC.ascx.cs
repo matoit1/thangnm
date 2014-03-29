@@ -22,12 +22,13 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(MonHocEO _MonHocEO)
         {
-            txtPK_sMaMonhoc.Text = _MonHocEO.PK_sMaMonhoc;
+            try { txtPK_sMaMonhoc.Text = _MonHocEO.PK_sMaMonhoc; }
+            catch { txtPK_sMaMonhoc.Text = ""; lblPK_sMaMonhoc.Text = Messages.Loi_Tai_Du_Lieu; }
             txtsTenMonhoc.Text = _MonHocEO.sTenMonhoc;
             txtiSotrinh.Text = _MonHocEO.iSotrinh.ToString();
             txtiSotietday.Text = _MonHocEO.iSotietday.ToString();
             try{ ddliTrangThai.SelectedValue = _MonHocEO.iTrangThai.ToString();}
-            catch { ddliTrangThai.SelectedIndex = 0; }
+            catch { ddliTrangThai.SelectedIndex = 0; lbliTrangThai.Text = Messages.Loi_Tai_Du_Lieu; }
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)
@@ -98,7 +99,8 @@ namespace DO_AN_TN.UserControl
             try
             {
                 MonHocEO _MonHocEO = new MonHocEO();
-                _MonHocEO.PK_sMaMonhoc = txtPK_sMaMonhoc.Text;
+                try { _MonHocEO.PK_sMaMonhoc = txtPK_sMaMonhoc.Text; }
+                catch { txtPK_sMaMonhoc.Text = ""; lblPK_sMaMonhoc.Text = Messages.Ma_Khong_Hop_Le; }
                 _MonHocEO.sTenMonhoc = txtsTenMonhoc.Text;
                 try{ _MonHocEO.iSotrinh = Convert.ToInt16(txtiSotrinh.Text);}
                 catch { lbliSotrinh.Text = Messages.Khong_Dung_Dinh_Dang_So; }

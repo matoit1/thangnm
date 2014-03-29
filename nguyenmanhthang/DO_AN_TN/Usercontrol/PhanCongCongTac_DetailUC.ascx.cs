@@ -22,13 +22,18 @@ namespace DO_AN_TN.UserControl
 
         public void BindDataDetail(PhanCongCongTacEO _PhanCongCongTacEO)
         {
-            txtPK_sMaPCCT.Text = Convert.ToString(_PhanCongCongTacEO.PK_sMaPCCT);
-            ddlFK_sMaGV.Text = Convert.ToString(_PhanCongCongTacEO.FK_sMaGV);
-            ddlFK_sMaMonhoc.Text = Convert.ToString(_PhanCongCongTacEO.FK_sMaMonhoc);
-            txttNgayBatDau.Text = Convert.ToString(_PhanCongCongTacEO.tNgayBatDau);
-            txttNgayKetThuc.Text = Convert.ToString(_PhanCongCongTacEO.tNgayKetThuc);
+            try { txtPK_sMaPCCT.Text = Convert.ToString(_PhanCongCongTacEO.PK_sMaPCCT); }
+            catch { lblPK_sMaPCCT.Text = Messages.Ma_Khong_Hop_Le; }
+            try { ddlFK_sMaGV.Text = Convert.ToString(_PhanCongCongTacEO.FK_sMaGV); }
+            catch { lblFK_sMaGV.Text = Messages.Ma_Khong_Hop_Le; }
+            try { ddlFK_sMaMonhoc.Text = Convert.ToString(_PhanCongCongTacEO.FK_sMaMonhoc); }
+            catch { lblFK_sMaMonhoc.Text = Messages.Ma_Khong_Hop_Le; }
+            try { txttNgayBatDau.Text = Convert.ToString(_PhanCongCongTacEO.tNgayBatDau.ToShortDateString()); }
+            catch { txttNgayBatDau.Text = ""; lbltNgayBatDau.Text = Messages.Loi_Tai_Du_Lieu; }
+            try { txttNgayKetThuc.Text = Convert.ToString(_PhanCongCongTacEO.tNgayKetThuc.ToShortDateString()); }
+            catch { lbltNgayKetThuc.Text = Messages.Loi_Tai_Du_Lieu; }
             try { ddliTrangThai.SelectedValue = _PhanCongCongTacEO.iTrangThai.ToString(); }
-            catch { ddliTrangThai.SelectedIndex = 0; }
+            catch { ddliTrangThai.SelectedIndex = 0; lbliTrangThai.Text = Messages.Loi_Tai_Du_Lieu; }
         }
 
         #region "Event Button"
@@ -101,12 +106,15 @@ namespace DO_AN_TN.UserControl
             try
             {
                 PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
-                _PhanCongCongTacEO.PK_sMaPCCT = txtPK_sMaPCCT.Text;
-                _PhanCongCongTacEO.FK_sMaGV = ddlFK_sMaGV.SelectedValue;
-                _PhanCongCongTacEO.FK_sMaMonhoc = ddlFK_sMaMonhoc.SelectedValue;
-                _PhanCongCongTacEO.tNgayBatDau = Convert.ToDateTime(txttNgayBatDau.Text);
-                _PhanCongCongTacEO.tNgayKetThuc = Convert.ToDateTime(txttNgayKetThuc.Text);
-                _PhanCongCongTacEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue);
+                _PhanCongCongTacEO.PK_sMaPCCT = Convert.ToString(txtPK_sMaPCCT.Text);
+                _PhanCongCongTacEO.FK_sMaGV = Convert.ToString(ddlFK_sMaGV.SelectedValue);
+                _PhanCongCongTacEO.FK_sMaMonhoc = Convert.ToString(ddlFK_sMaMonhoc.SelectedValue);
+                try { _PhanCongCongTacEO.tNgayBatDau = Convert.ToDateTime(txttNgayBatDau.Text); }
+                catch { lbltNgayBatDau.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                try { _PhanCongCongTacEO.tNgayKetThuc = Convert.ToDateTime(txttNgayKetThuc.Text); }
+                catch { lbltNgayKetThuc.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                try { _PhanCongCongTacEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
+                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _PhanCongCongTacEO;
             }
             catch (Exception)
