@@ -41,7 +41,7 @@
                        </asp:TemplateField>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("FK_sMaPCCT")%>'>Chi tiết</asp:LinkButton>
+                                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Container.DataItemIndex %>'>Chi tiết</asp:LinkButton>
                                 </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center"  />
                         </asp:TemplateField>

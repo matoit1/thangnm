@@ -167,7 +167,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblLopHoc_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaSV", _LopHocEO.PK_sMalop));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMalop", _LopHocEO.PK_sMalop));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
