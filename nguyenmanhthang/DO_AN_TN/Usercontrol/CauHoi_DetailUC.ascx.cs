@@ -42,81 +42,6 @@ namespace DO_AN_TN.UserControl
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
-        protected void btnInsert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (CauHoiDAO.CauHoi_Insert(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (CauHoiDAO.CauHoi_Update(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (CauHoiDAO.CauHoi_Delete(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-            CauHoiEO _CauHoiEO = new CauHoiEO();
-            BindDataDetail(_CauHoiEO);
-            //ddlFK_sMaGV.SelectedIndex = 0;
-            //txtPK_lCauhoi_ID.Text = "";
-            //txtsCauhoi_Cauhoi.Text = "";
-            //txtsCauhoi_A.Text = "";
-            //txtsCauhoi_B.Text = "";
-            //txtsCauhoi_C.Text = "";
-            //txtsCauhoi_D.Text = "";
-            //ddliCauhoi_Dung.SelectedIndex = 0;
-            //txtsBoCauHoi.Text = "";
-            //txttNgayTao.Text = "";
-            //txttNgayCapNhat.Text = "";
-            //ddliTrangThai.SelectedIndex = 0;
-        }
-
         private CauHoiEO getObject()
         {
             try
@@ -161,5 +86,91 @@ namespace DO_AN_TN.UserControl
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
         }
+
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblFK_sMaGV.Text = "";
+            lblPK_lCauhoi_ID.Text = "";
+            lblsCauhoi_Cauhoi.Text = "";
+            lblsCauhoi_A.Text = "";
+            lblsCauhoi_B.Text = "";
+            lblsCauhoi_C.Text = "";
+            lblsCauhoi_D.Text = "";
+            lbliCauhoi_Dung.Text = "";
+            lblsBoCauHoi.Text = "";
+            lbltNgayTao.Text = "";
+            lbltNgayCapNhat.Text = "";
+            lbliTrangThai.Text = "";
+        }
+
+#region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (CauHoiDAO.CauHoi_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (CauHoiDAO.CauHoi_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (CauHoiDAO.CauHoi_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            CauHoiEO _CauHoiEO = new CauHoiEO();
+            BindDataDetail(_CauHoiEO);
+        }
+#endregion;
     }
 }
