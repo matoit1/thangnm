@@ -88,7 +88,7 @@
         <tr>
             <td>Hôn nhân: </td>
             <td><asp:DropDownList ID="ddlbHonNhanSV" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lblbHonNhanGV" runat="server"></asp:Label></td>
+            <td><asp:Label ID="lblbHonNhanSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Họ và tên người liên hệ: </td>

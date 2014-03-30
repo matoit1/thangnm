@@ -16,6 +16,7 @@ namespace DO_AN_TN.UserControl
         {
             if (!IsPostBack)
             {
+                ClearMessages();
                 loadDataToDropDownList();
             }
         }
@@ -61,71 +62,6 @@ namespace DO_AN_TN.UserControl
             try { ddliTrangThaiSV.SelectedValue = _SinhVienEO.iTrangThaiSV.ToString(); }
             catch { ddliTrangThaiSV.SelectedIndex = 0; lbliTrangThaiSV.Text=Messages.Loi_Tai_Du_Lieu;}
         }
-
-        #region "Event Button"
-        protected void btnInsert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (SinhVienDAO.SinhVien_Insert(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (SinhVienDAO.SinhVien_Update(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (SinhVienDAO.SinhVien_Delete(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-            SinhVienEO _SinhVienEO = new SinhVienEO();
-            BindDataDetail(_SinhVienEO);
-        }
-        #endregion
 
         private SinhVienEO getObject()
         {
@@ -208,5 +144,106 @@ namespace DO_AN_TN.UserControl
             ddliTrangThaiSV.DataValueField = "Key";
             ddliTrangThaiSV.DataBind();
         }
+
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblFK_sMaLop.Text = "";
+            lblPK_sMaSV.Text = "";
+            lblsHoTenSV.Text = "";
+            lblsTendangnhapSV.Text = "";
+            lblsMatkhauSV.Text = "";
+            lblsEmailSV.Text = "";
+            lblsDiachiSV.Text = "";
+            lblsSdtSV.Text = "";
+            lbltNgaysinhSV.Text = "";
+            lblbGioitinhSV.Text = "";
+            lblsCMNDSV.Text = "";
+            lbltNgayCapCMNDSV.Text = "";
+            lblsNoiCapCMNDSV.Text = "";
+            lblbHonNhanSV.Text = "";
+            lblsNguoiLienHeSV.Text = "";
+            lblsDiaChiNguoiLienHeSV.Text = "";
+            lblsSdtNguoiLienHeSV.Text = "";
+            lbliQuanHeVoiNguoiLienHeSV.Text = "";
+            lblbKetnapDoanSV.Text = "";
+            lbliNamketnapDoanSV.Text = "";
+            lblsNoiketnapDoanSV.Text = "";
+            lbliNamtotnghiepTHPTSV.Text = "";
+            lbltNgayNhapHocSV.Text = "";
+            lbltNgayRaTruongSV.Text = "";
+            lbltNgayCapTheSV.Text = "";
+            lblsLinkAvatarSV.Text = "";
+            lbliTrangThaiSV.Text = "";
+        }
+
+        #region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (SinhVienDAO.SinhVien_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (SinhVienDAO.SinhVien_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (SinhVienDAO.SinhVien_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            SinhVienEO _SinhVienEO = new SinhVienEO();
+            BindDataDetail(_SinhVienEO);
+        }
+        #endregion
     }
 }

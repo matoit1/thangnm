@@ -274,13 +274,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.DropDownList ddlbHonNhanSV;
         
         /// <summary>
-        /// lblbHonNhanGV control.
+        /// lblbHonNhanSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblbHonNhanGV;
+        protected global::System.Web.UI.WebControls.Label lblbHonNhanSV;
         
         /// <summary>
         /// txtsNguoiLienHeSV control.
