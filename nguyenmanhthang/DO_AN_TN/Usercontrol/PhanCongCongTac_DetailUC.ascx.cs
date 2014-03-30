@@ -16,6 +16,7 @@ namespace DO_AN_TN.UserControl
         {
             if (!IsPostBack)
             {
+                ClearMessages();
                 loadDataToDropDownList();
             }
         }
@@ -35,71 +36,6 @@ namespace DO_AN_TN.UserControl
             try { ddliTrangThai.SelectedValue = _PhanCongCongTacEO.iTrangThai.ToString(); }
             catch { ddliTrangThai.SelectedIndex = 0; lbliTrangThai.Text = Messages.Loi_Tai_Du_Lieu; }
         }
-
-        #region "Event Button"
-        protected void btnInsert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (PhanCongCongTacDAO.PhanCongCongTac_Insert(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (PhanCongCongTacDAO.PhanCongCongTac_Update(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (PhanCongCongTacDAO.PhanCongCongTac_Delete(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-            PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
-            BindDataDetail(_PhanCongCongTacEO);
-        }
-        #endregion
 
         private PhanCongCongTacEO getObject()
         {
@@ -140,5 +76,85 @@ namespace DO_AN_TN.UserControl
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
         }
+
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblPK_sMaPCCT.Text = "";
+            lblFK_sMaGV.Text = "";
+            lblFK_sMaMonhoc.Text = "";
+            lbltNgayBatDau.Text = "";
+            lbltNgayKetThuc.Text = "";
+            lbliTrangThai.Text = "";
+        }
+
+        #region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (PhanCongCongTacDAO.PhanCongCongTac_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (PhanCongCongTacDAO.PhanCongCongTac_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (PhanCongCongTacDAO.PhanCongCongTac_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
+            BindDataDetail(_PhanCongCongTacEO);
+        }
+        #endregion
     }
 }

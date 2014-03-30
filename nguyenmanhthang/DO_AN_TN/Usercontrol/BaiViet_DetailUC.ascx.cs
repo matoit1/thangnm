@@ -16,6 +16,7 @@ namespace DO_AN_TN.UserControl
         {
             if (!IsPostBack)
             {
+                ClearMessages();
                 loadDataToDropDownList();
             }
         }
@@ -68,6 +69,19 @@ namespace DO_AN_TN.UserControl
             }
         }
 
+        public void loadDataToDropDownList()
+        {
+            ddlFK_sMaGV.DataSource = GiangVienDAO.GiangVien_SelectList();
+            ddlFK_sMaGV.DataTextField = "sHoTenGV";
+            ddlFK_sMaGV.DataValueField = "PK_sMaGV";
+            ddlFK_sMaGV.DataBind();
+
+            ddliTrangThai.DataSource = GetListConstants.BaiViet_iTrangThai_GLC();
+            ddliTrangThai.DataTextField = "Value";
+            ddliTrangThai.DataValueField = "Key";
+            ddliTrangThai.DataBind();
+        }
+
         private void ClearMessages()
         {
             lblMsg.Text = "";
@@ -82,19 +96,6 @@ namespace DO_AN_TN.UserControl
             lbltNgayCapNhat.Text = "";
             lblsMoTa.Text = "";
             lbliTrangThai.Text = "";
-        }
-
-        public void loadDataToDropDownList()
-        {
-            ddlFK_sMaGV.DataSource = GiangVienDAO.GiangVien_SelectList();
-            ddlFK_sMaGV.DataTextField = "sHoTenGV";
-            ddlFK_sMaGV.DataValueField = "PK_sMaGV";
-            ddlFK_sMaGV.DataBind();
-
-            ddliTrangThai.DataSource = GetListConstants.BaiViet_iTrangThai_GLC();
-            ddliTrangThai.DataTextField = "Value";
-            ddliTrangThai.DataValueField = "Key";
-            ddliTrangThai.DataBind();
         }
 
         #region "Event Button"

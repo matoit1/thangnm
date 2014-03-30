@@ -16,6 +16,7 @@ namespace DO_AN_TN.UserControl
         {
             if (!IsPostBack)
             {
+                ClearMessages();
                 loadDataToDropDownList();
             }
         }
@@ -37,10 +38,10 @@ namespace DO_AN_TN.UserControl
             txtsNoiCapCMNDGV.Text = Convert.ToString(_GiangVienEO.sNoiCapCMNDGV);
             ddlbHonNhanGV.SelectedValue = Convert.ToString(_GiangVienEO.bHonNhanGV);
             txttNgayNhanCongTacGV.Text = Convert.ToString(_GiangVienEO.tNgayNhanCongTacGV.ToShortDateString());
-            try { ddlbiChucVuGV.SelectedValue = Convert.ToString(_GiangVienEO.iChucVuGV); }
-            catch { ddlbiChucVuGV.SelectedIndex = 0; lbliChucVuGV.Text = Messages.Loi_Tai_Du_Lieu; }
+            try { ddliChucVuGV.SelectedValue = Convert.ToString(_GiangVienEO.iChucVuGV); }
+            catch { ddliChucVuGV.SelectedIndex = 0; lbliChucVuGV.Text = Messages.Loi_Tai_Du_Lieu; }
             try { ddliHocViGV.SelectedValue = Convert.ToString(_GiangVienEO.iHocViGV);}
-            catch { ddlbiChucVuGV.SelectedIndex = 0; lbliHocViGV.Text = Messages.Loi_Tai_Du_Lieu; }
+            catch { ddliHocViGV.SelectedIndex = 0; lbliHocViGV.Text = Messages.Loi_Tai_Du_Lieu; }
             ddlbCongChucGV.SelectedValue = Convert.ToString(_GiangVienEO.bCongChucGV);
             txtsLinkChannelsGV.Text = Convert.ToString(_GiangVienEO.sLinkChannelsGV);
             txtsLinkChatRoomsGV.Text = Convert.ToString(_GiangVienEO.sLinkChatRoomsGV);
@@ -49,9 +50,109 @@ namespace DO_AN_TN.UserControl
             catch { ddliTrangThaiGV.SelectedIndex = 0; lbliTrangThaiGV.Text = Messages.Loi_Tai_Du_Lieu; }
         }
 
+        private GiangVienEO getObject()
+        {
+            try
+            {
+                GiangVienEO _GiangVienEO = new GiangVienEO();
+                _GiangVienEO.PK_sMaGV = Convert.ToString(txtPK_sMaGV.Text);
+                _GiangVienEO.sHotenGV = Convert.ToString(txtsHoTenGV.Text);
+                _GiangVienEO.sTendangnhapGV = Convert.ToString(txtsTendangnhapGV.Text);
+                _GiangVienEO.sMatkhauGV = Convert.ToString(txtsMatkhauGV.Text);
+                _GiangVienEO.sEmailGV = Convert.ToString(txtsEmailGV.Text);
+                _GiangVienEO.sDiachiGV = Convert.ToString(txtsDiachiGV.Text);
+                _GiangVienEO.sSdtGV = Convert.ToString(txtsSdtGV.Text);
+                try { _GiangVienEO.tNgaysinhGV = Convert.ToDateTime(txttNgaysinhGV.Text); }
+                catch { lbltNgaysinhGV.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                _GiangVienEO.bGioitinhGV = Convert.ToBoolean(ddlbGioitinhGV.SelectedValue);
+                _GiangVienEO.sCMNDGV = Convert.ToString(txtsCMNDGV.Text);
+                try { _GiangVienEO.tNgayCapCMNDGV = Convert.ToDateTime(txttNgayCapCMNDGV.Text); }
+                catch { lbltNgayCapCMNDGV.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                _GiangVienEO.sNoiCapCMNDGV = Convert.ToString(txtsNoiCapCMNDGV.Text);
+                _GiangVienEO.bHonNhanGV = Convert.ToBoolean(ddlbHonNhanGV.SelectedValue);
+                try { _GiangVienEO.tNgayNhanCongTacGV = Convert.ToDateTime(txttNgayNhanCongTacGV.Text); }
+                catch { lbltNgayNhanCongTacGV.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
+                try { _GiangVienEO.iChucVuGV = Convert.ToInt16(ddliChucVuGV.Text); }
+                catch { lbliChucVuGV.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                try { _GiangVienEO.iHocViGV = Convert.ToInt16(ddliHocViGV.Text); }
+                catch { lbliHocViGV.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                _GiangVienEO.bCongChucGV = Convert.ToBoolean(ddlbCongChucGV.SelectedValue);
+                _GiangVienEO.sLinkChannelsGV = Convert.ToString(txtsLinkChannelsGV.Text);
+                _GiangVienEO.sLinkChatRoomsGV = Convert.ToString(txtsLinkChatRoomsGV.Text);
+                _GiangVienEO.sLinkAvatarGV = Convert.ToString(txtsLinkAvatarGV.Text);
+                try { _GiangVienEO.iTrangThaiGV = Convert.ToInt16(ddliTrangThaiGV.SelectedValue); }
+                catch { lbliTrangThaiGV.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                return _GiangVienEO;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void loadDataToDropDownList()
+        {
+            ddlbGioitinhGV.DataSource = GetListConstants.Gioi_Tinh_GLC();
+            ddlbGioitinhGV.DataTextField = "Value";
+            ddlbGioitinhGV.DataValueField = "Key";
+            ddlbGioitinhGV.DataBind();
+
+            ddlbHonNhanGV.DataSource = GetListConstants.Hon_Nhan_GLC();
+            ddlbHonNhanGV.DataTextField = "Value";
+            ddlbHonNhanGV.DataValueField = "Key";
+            ddlbHonNhanGV.DataBind();
+
+            ddliChucVuGV.DataSource = GetListConstants.GiangVien_iChucVuGV_GLC();
+            ddliChucVuGV.DataTextField = "Value";
+            ddliChucVuGV.DataValueField = "Key";
+            ddliChucVuGV.DataBind();
+
+            ddliHocViGV.DataSource = GetListConstants.GiangVien_iHocViGV_GLC();
+            ddliHocViGV.DataTextField = "Value";
+            ddliHocViGV.DataValueField = "Key";
+            ddliHocViGV.DataBind();
+
+            ddlbCongChucGV.DataSource = GetListConstants.GiangVien_bCongChucGV_GLC();
+            ddlbCongChucGV.DataTextField = "Value";
+            ddlbCongChucGV.DataValueField = "Key";
+            ddlbCongChucGV.DataBind();
+
+            ddliTrangThaiGV.DataSource = GetListConstants.GiangVien_iTrangThaiGV_GLC();
+            ddliTrangThaiGV.DataTextField = "Value";
+            ddliTrangThaiGV.DataValueField = "Key";
+            ddliTrangThaiGV.DataBind();
+        }
+
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblPK_sMaGV.Text = "";
+            lblsHoTenGV.Text = "";
+            lblsTendangnhapGV.Text = "";
+            lblsMatkhauGV.Text = "";
+            lblsEmailGV.Text = "";
+            lblsDiachiGV.Text = "";
+            lblsSdtGV.Text = "";
+            lbltNgaysinhGV.Text = "";
+            lblbGioitinhGV.Text = "";
+            lblsCMNDGV.Text = "";
+            lbltNgayCapCMNDGV.Text = "";
+            lblsNoiCapCMNDGV.Text = "";
+            lblbHonNhanGV.Text = "";
+            lbltNgayNhanCongTacGV.Text = "";
+            lbliChucVuGV.Text = "";
+            lbliHocViGV.Text = "";
+            lblbCongChucGV.Text = "";
+            lblsLinkChannelsGV.Text = "";
+            lblsLinkChatRoomsGV.Text = "";
+            lblsLinkAvatarGV.Text = "";
+            lbliTrangThaiGV.Text = "";
+        }
+
         #region "Event Button"
         protected void btnInsert_Click(object sender, EventArgs e)
         {
+            ClearMessages();
             try
             {
                 if (GiangVienDAO.GiangVien_Insert(getObject()) == true)
@@ -71,6 +172,7 @@ namespace DO_AN_TN.UserControl
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
+            ClearMessages();
             try
             {
                 if (GiangVienDAO.GiangVien_Update(getObject()) == true)
@@ -90,6 +192,7 @@ namespace DO_AN_TN.UserControl
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
+            ClearMessages();
             try
             {
                 if (GiangVienDAO.GiangVien_Delete(getObject()) == true)
@@ -109,82 +212,10 @@ namespace DO_AN_TN.UserControl
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
+            ClearMessages();
             GiangVienEO _GiangVienEO = new GiangVienEO();
             BindDataDetail(_GiangVienEO);
         }
         #endregion
-
-        private GiangVienEO getObject()
-        {
-            try
-            {
-                GiangVienEO _GiangVienEO = new GiangVienEO();
-                _GiangVienEO.PK_sMaGV = Convert.ToString(txtPK_sMaGV.Text);
-                _GiangVienEO.sHotenGV = Convert.ToString(txtsHoTenGV.Text);
-                _GiangVienEO.sTendangnhapGV = Convert.ToString(txtsTendangnhapGV.Text);
-                _GiangVienEO.sMatkhauGV = Convert.ToString(txtsMatkhauGV.Text);
-                _GiangVienEO.sEmailGV = Convert.ToString(txtsEmailGV.Text);
-                _GiangVienEO.sDiachiGV = Convert.ToString(txtsDiachiGV.Text);
-                _GiangVienEO.sSdtGV = Convert.ToString(txtsSdtGV.Text);
-                try { _GiangVienEO.tNgaysinhGV = Convert.ToDateTime(txttNgaysinhGV.Text); }
-                catch { lbltNgaysinhGV.Text = Messages.Khong_Dung_Dinh_Dang_Ngay; }
-                _GiangVienEO.bGioitinhGV = Convert.ToBoolean(ddlbGioitinhGV.SelectedValue);
-                _GiangVienEO.sCMNDGV = Convert.ToString(txtsCMNDGV.Text);
-                try { _GiangVienEO.tNgayCapCMNDGV = Convert.ToDateTime(txttNgayCapCMNDGV.Text);}
-                catch{lbltNgayCapCMNDGV.Text=Messages.Khong_Dung_Dinh_Dang_Ngay;}
-                _GiangVienEO.sNoiCapCMNDGV = Convert.ToString(txtsNoiCapCMNDGV.Text);
-                _GiangVienEO.bHonNhanGV = Convert.ToBoolean(ddlbHonNhanGV.SelectedValue);
-                try { _GiangVienEO.tNgayNhanCongTacGV = Convert.ToDateTime(txttNgayNhanCongTacGV.Text);}
-                catch{lbltNgayNhanCongTacGV.Text=Messages.Khong_Dung_Dinh_Dang_Ngay;}
-                try { _GiangVienEO.iChucVuGV = Convert.ToInt16(ddlbiChucVuGV.Text);}
-                catch{lbliChucVuGV.Text=Messages.Khong_Dung_Dinh_Dang_So;}
-                try { _GiangVienEO.iHocViGV = Convert.ToInt16(ddliHocViGV.Text); }
-                catch { lbliHocViGV.Text = Messages.Khong_Dung_Dinh_Dang_So; }
-                _GiangVienEO.bCongChucGV = Convert.ToBoolean(ddlbCongChucGV.SelectedValue);
-                _GiangVienEO.sLinkChannelsGV = Convert.ToString(txtsLinkChannelsGV.Text);
-                _GiangVienEO.sLinkChatRoomsGV = Convert.ToString(txtsLinkChatRoomsGV.Text);
-                _GiangVienEO.sLinkAvatarGV = Convert.ToString(txtsLinkAvatarGV.Text);
-                try { _GiangVienEO.iTrangThaiGV = Convert.ToInt16(ddliTrangThaiGV.SelectedValue);}
-                catch{lbliTrangThaiGV.Text=Messages.Khong_Dung_Dinh_Dang_So;}
-                return _GiangVienEO;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-        
-        public void loadDataToDropDownList()
-        {
-            ddlbGioitinhGV.DataSource = GetListConstants.Gioi_Tinh_GLC();
-            ddlbGioitinhGV.DataTextField = "Value";
-            ddlbGioitinhGV.DataValueField = "Key";
-            ddlbGioitinhGV.DataBind();
-
-            ddlbHonNhanGV.DataSource = GetListConstants.Hon_Nhan_GLC();
-            ddlbHonNhanGV.DataTextField = "Value";
-            ddlbHonNhanGV.DataValueField = "Key";
-            ddlbHonNhanGV.DataBind();
-
-            ddlbiChucVuGV.DataSource = GetListConstants.GiangVien_iChucVuGV_GLC();
-            ddlbiChucVuGV.DataTextField = "Value";
-            ddlbiChucVuGV.DataValueField = "Key";
-            ddlbiChucVuGV.DataBind();
-
-            ddliHocViGV.DataSource = GetListConstants.GiangVien_iHocViGV_GLC();
-            ddliHocViGV.DataTextField = "Value";
-            ddliHocViGV.DataValueField = "Key";
-            ddliHocViGV.DataBind();
-
-            ddlbCongChucGV.DataSource = GetListConstants.GiangVien_bCongChucGV_GLC();
-            ddlbCongChucGV.DataTextField = "Value";
-            ddlbCongChucGV.DataValueField = "Key";
-            ddlbCongChucGV.DataBind();
-
-            ddliTrangThaiGV.DataSource = GetListConstants.GiangVien_iTrangThaiGV_GLC();
-            ddliTrangThaiGV.DataTextField = "Value";
-            ddliTrangThaiGV.DataValueField = "Key";
-            ddliTrangThaiGV.DataBind();
-        }
     }
 }

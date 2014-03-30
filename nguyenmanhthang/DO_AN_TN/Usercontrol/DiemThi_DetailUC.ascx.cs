@@ -16,6 +16,7 @@ namespace DO_AN_TN.UserControl
         {
             if (!IsPostBack)
             {
+                ClearMessages();
                 loadDataToDropDownList();
             }
         }
@@ -34,71 +35,6 @@ namespace DO_AN_TN.UserControl
             try { ddliTrangThai.SelectedValue = _DiemThiEO.iTrangThai.ToString(); }
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
-
-        #region "Event Button"
-        protected void btnInsert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (DiemThiDAO.DiemThi_Insert(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (DiemThiDAO.DiemThi_Update(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (DiemThiDAO.DiemThi_Delete(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-            DiemThiEO _DiemThiEO = new DiemThiEO();
-            BindDataDetail(_DiemThiEO);
-        }
-        #endregion
 
         private DiemThiEO getObject()
         {
@@ -146,5 +82,87 @@ namespace DO_AN_TN.UserControl
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
         }
+
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblFK_sMaSV.Text = "";
+            lblFK_sMaMonhoc.Text = "";
+            lblPK_iSolanhoc.Text = "";
+            lblfDiemchuyencan.Text = "";
+            lblfDiemgiuaky.Text = "";
+            lblfDiemthilan1.Text = "";
+            lblfDiemthilan2.Text = "";
+            lbliTrangThai.Text = "";
+        }
+
+        #region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (DiemThiDAO.DiemThi_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (DiemThiDAO.DiemThi_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (DiemThiDAO.DiemThi_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            DiemThiEO _DiemThiEO = new DiemThiEO();
+            BindDataDetail(_DiemThiEO);
+        }
+        #endregion
     }
 }

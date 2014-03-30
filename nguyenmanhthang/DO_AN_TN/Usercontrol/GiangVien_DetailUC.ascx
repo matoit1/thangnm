@@ -92,7 +92,7 @@
         </tr>
         <tr>
             <td>Chức vụ: </td>
-            <td><asp:DropDownList ID="ddlbiChucVuGV" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:DropDownList ID="ddliChucVuGV" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliChucVuGV" runat="server"></asp:Label></td>
         </tr>
         <tr>

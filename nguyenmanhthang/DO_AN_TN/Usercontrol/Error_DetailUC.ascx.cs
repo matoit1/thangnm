@@ -16,6 +16,7 @@ namespace DO_AN_TN.UserControl
         {
             if (!IsPostBack)
             {
+                ClearMessages();
                 loadDataToDropDownList();
             }
         }
@@ -33,71 +34,6 @@ namespace DO_AN_TN.UserControl
             try { ddliStatus.SelectedValue = _ErrorEO.iStatus.ToString(); }
             catch { ddliStatus.SelectedIndex = 0; }
         }
-
-        #region "Event Button"
-        protected void btnInsert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ErrorDAO.Error_Insert(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ErrorDAO.Error_Update(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ErrorDAO.Error_Delete(getObject()) == true)
-                {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMsg.Text = Messages.Loi + ex.Message;
-            }
-        }
-
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-            ErrorEO _ErrorEO = new ErrorEO();
-            BindDataDetail(_ErrorEO);
-        }
-        #endregion
 
         private ErrorEO getObject()
         {
@@ -132,5 +68,87 @@ namespace DO_AN_TN.UserControl
             ddliStatus.DataValueField = "Key";
             ddliStatus.DataBind();
         }
+
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblPK_lErrorID.Text = "";
+            lblsLink.Text = "";
+            lblsIP.Text = "";
+            lblsBrowser.Text = "";
+            lbliCodes.Text = "";
+            lbltTime.Text = "";
+            lbltTimeCheck.Text = "";
+            lbliStatus.Text = "";
+        }
+
+        #region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (ErrorDAO.Error_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (ErrorDAO.Error_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (ErrorDAO.Error_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            ErrorEO _ErrorEO = new ErrorEO();
+            BindDataDetail(_ErrorEO);
+        }
+        #endregion
     }
 }
