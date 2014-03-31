@@ -4,122 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8"/>
-	<title>Nguyen Manh Thang - Dashboard Admin Panel</title>
-     <link href="../favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="Nguyễn Mạnh Thắng - ThangNM" />
-	<meta name="language" content="Vietnamese, English"/>
-    <link rel="author" href="https://plus.google.com/109664385150832451485"/>
-    <meta name="copyright" content=" © 2013 Copyright ThangNM ™"/>
-
-	<link rel="stylesheet" href="../App_Themes/layout.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../App_Themes/public.css" type="text/css" media="screen" />
-	<!--[if lt IE 9]>
-	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<script src="../Scripts/jquery-1.5.2.min.js" type="text/javascript"></script>
-	<script src="../Scripts/hideshow.js" type="text/javascript"></script>
-	<script src="../Scripts/jquery.tablesorter.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="../Scripts/jquery.equalHeight.js"></script>
-	<script type="text/javascript">
-	    $(document).ready(function () {
-	        $(".tablesorter").tablesorter();
-	    }
-	);
-	    $(document).ready(function () {
-
-	        //When page loads...
-	        $(".tab_content").hide(); //Hide all content
-	        $("ul.tabs li:first").addClass("active").show(); //Activate first tab
-	        $(".tab_content:first").show(); //Show first tab content
-
-	        //On Click Event
-	        $("ul.tabs li").click(function () {
-
-	            $("ul.tabs li").removeClass("active"); //Remove any "active" class
-	            $(this).addClass("active"); //Add "active" class to selected tab
-	            $(".tab_content").hide(); //Hide all tab content
-
-	            var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
-	            $(activeTab).fadeIn(); //Fade in the active ID content
-	            return false;
-	        });
-
-	    });
-    </script>
-    <script type="text/javascript">
-        $(function () {
-            $('.column').equalHeight();
-        });
-    </script>
+    <title>Sinh Viên</title>
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+    <link href="../App_Themes/public.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="header">
-		<div>
-			<h1 class="site_title"><asp:HyperLink ID="HyperLink13" NavigateUrl="~/Admin/Default.aspx" runat="server">Website Admin</asp:HyperLink></h1>
-			<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><asp:HyperLink ID="HyperLink15" NavigateUrl="~/Default.aspx" runat="server">View Site</asp:HyperLink></div>
-		</div>
-	</div> <!-- end of header bar -->
-	
-	<div id="secondary_bar">
-		<div class="user">
-			<p><asp:HyperLink ID="hplAccounts_Fullname" runat="server"></asp:HyperLink>(<a href="#">3 Messages</a>)</p>
-			<!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
-		</div>
-		<div class="breadcrumbs_container">
-			<div class="breadcrumbs"><asp:HyperLink ID="HyperLink14" NavigateUrl="~/Admin/Default.aspx" runat="server">Website Admin</asp:HyperLink><div class="breadcrumb_divider"></div> <a class="current">Dashboard</a></div>
-		</div>
-	</div><!-- end of secondary bar -->
-	
-	<div id="sidebar" class="column">
-<%--		<form class="quick_search">
-			<input type="text" value="Quick Search" onfocus="if(!this._haschanged){this.value=''};this._haschanged=true;">
-		</form>--%>
-		<hr/>
-		<h3>Quản lý Nội dung</h3>
-		<ul class="toggle">
-			<li class="icn_new_article"><asp:HyperLink ID="hplNewTopic" NavigateUrl="~/Admin/Topic.aspx" runat="server">Bài viết mới</asp:HyperLink></li>
-			<li class="icn_edit_article"><asp:HyperLink ID="HyperLink2" NavigateUrl="~/Admin/Topic.aspx?Edit=True" runat="server">Sửa bài viết</asp:HyperLink></li>
-			<li class="icn_categories"><asp:HyperLink ID="HyperLink3" NavigateUrl="~/Admin/Category.aspx" runat="server">Thể loại</asp:HyperLink></li>
-			<li class="icn_tags"><asp:HyperLink ID="HyperLink12" NavigateUrl="~/Admin/Tag.aspx" runat="server">Thẻ</asp:HyperLink></li>
-		</ul>
-		<h3>Quản lý Tài khoản</h3>
-		<ul class="toggle">
-			<li class="icn_add_user"><asp:HyperLink ID="HyperLink4" NavigateUrl="~/Admin/Users.aspx" runat="server">Thêm tài khoản mới</asp:HyperLink></li>
-			<li class="icn_view_users"><asp:HyperLink ID="HyperLink5" NavigateUrl="~/Admin/Users.aspx" runat="server">Quản lý Tài khoản</asp:HyperLink></li>
-			<li class="icn_profile"><asp:HyperLink ID="HyperLink6" NavigateUrl="~/Admin/Users.aspx" runat="server">Thông tin tài khoản của bạn</asp:HyperLink></li>
-		</ul>
-		<h3>Quản lý Đa phương tiện</h3>
-		<ul class="toggle">
-			<li class="icn_folder"><asp:HyperLink ID="HyperLink7" NavigateUrl="~/Admin/File_Manager.aspx" runat="server">Quản lý File</asp:HyperLink></li>
-			<li class="icn_photo"><asp:HyperLink ID="HyperLink8" NavigateUrl="~/Admin/File_Manager.aspx" runat="server">Ảnh</asp:HyperLink></li>
-			<li class="icn_audio"><asp:HyperLink ID="HyperLink9" NavigateUrl="~/Admin/File_Manager.aspx" runat="server">Nhạc</asp:HyperLink></li>
-			<li class="icn_video"><asp:HyperLink ID="HyperLink10" NavigateUrl="~/Admin/File_Manager.aspx" runat="server">Video</asp:HyperLink></li>
-		</ul>
-		<h3>Quản lý Trang Admin</h3>
-		<ul class="toggle">
-			<li class="icn_settings"><asp:HyperLink ID="HyperLink1" NavigateUrl="~/Admin/Setting.aspx" runat="server">Tùy chọn</asp:HyperLink></li>
-			<li class="icn_security"><asp:HyperLink ID="HyperLink11" NavigateUrl="~/Admin/Security.aspx" runat="server">Bảo mật</asp:HyperLink></li>
-			<li class="icn_jump_back"><asp:LinkButton ID="lbtnLogout" runat="server" 
-                    onclick="lbtnLogout_Click">Đăng xuất</asp:LinkButton></li>
-		</ul>
-		
-		<div class="footer">
-			<hr />
-			<p><strong>Copyright &copy; 2014 FITHOU</strong></p>
-            <p>Đồ án tốt nghiệp <a href="http://fithou.edu.vn" title="ThangNM">FITHOU</a></p>
-			<p><a href="http://fb.com/nguyenthithuylinh71" target="_blank" >Nguyen Thi Thuy Linh</a> & <a href="http://fb.com/thang.991992"  target="_blank">Nguyen Manh Thang</a></p>
-            <br /><br /><br />
-		</div>
-	</div><!-- end of sidebar -->
-	
-	<div id="main" class="column">
-		<asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
-	</div>
+        <div>
+            <asp:Menu ID="Menu1" runat="server" ItemWrap="True" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem Text="|  Trang chủ" Value="TrangChu" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/QuanTri/Default.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/QuanTri/Default.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Thông tin cá nhân" Value="ThongTinCaNhan" NavigateUrl="~/SinhVien/ThongTinCaNhan.aspx"></asp:MenuItem>
+                 </Items>
+            </asp:Menu>
+            <hr /><hr /><br />
+            <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>

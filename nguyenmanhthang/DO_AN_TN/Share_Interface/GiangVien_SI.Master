@@ -4,16 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Giảng viên</title>
     <asp:ContentPlaceHolder ID="cphHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder ID="cphBody" runat="server">
-        
-        </asp:ContentPlaceHolder>
+        <asp:Menu ID="Menu1" runat="server" ItemWrap="True" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="|  Trang chủ" Value="TrangChu" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/GiangVien/LopHoc.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/GiangVien/MonHoc.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Thông tin cá nhân" Value="ThongTinCaNhan" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx"></asp:MenuItem>
+             </Items>
+        </asp:Menu>
+        <hr /><hr /><br />
+        <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
     </div>
     </form>
 </body>

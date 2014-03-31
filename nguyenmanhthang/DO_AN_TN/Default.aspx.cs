@@ -12,5 +12,25 @@ namespace DO_AN_TN
         protected void Page_Load(object sender, EventArgs e)
         {
         }
+
+        protected void btnTrangChu_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+
+        protected void btnQuanTri_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/QuanTri/Default.aspx");
+        }
+
+        protected void btnGiangVien_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/GiangVien/Default.aspx");
+        }
+
+        protected void btnSinhVien_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/SinhVien/Default.aspx");
+        }
     }
 }
