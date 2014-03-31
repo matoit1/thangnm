@@ -13,5 +13,17 @@ namespace DO_AN_TN.QuanTri
         {
 
         }
+
+        #region "Raise Event"
+        protected void ViewDetail_Click(object sender, EventArgs e)
+        {
+            mtvMain.ActiveViewIndex = 1;
+        }
+        #endregion
+
+        protected void lbtnBack_Click(object sender, EventArgs e)
+        {
+            mtvMain.SetActiveView(vList);
+        }
     }
 }

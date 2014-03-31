@@ -23,7 +23,7 @@ namespace DO_AN_TN.QuanTri
 
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
-            mtvMain.SetActiveView(vDanhSach);
+            mtvMain.SetActiveView(vList);
         }
     }
 }

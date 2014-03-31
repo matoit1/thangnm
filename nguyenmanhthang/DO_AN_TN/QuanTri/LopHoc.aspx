@@ -1,7 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LopHoc.aspx.cs" Inherits="DO_AN_TN.QuanTri.LopHoc" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" %>
 
+<%@ Register src="../UserControl/LopHoc_ListUC.ascx" tagname="LopHoc_ListUC" tagprefix="uc1" %>
+
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <div>
-    
+        <asp:MultiView ID="mtvMain" runat="server" ActiveViewIndex="0">
+            <asp:View ID="vList" runat="server">
+                <uc1:LopHoc_ListUC ID="LopHoc_ListUC1" runat="server" OnViewDetail="ViewDetail_Click"/>
+            </asp:View>
+            <asp:View ID="vDetail" runat="server">
+                <asp:LinkButton ID="lbtnBack" runat="server" onclick="lbtnBack_Click">Quay lại danh sách</asp:LinkButton><br /><br />
+            </asp:View>
+        </asp:MultiView>
     </div>
 </asp:Content>
