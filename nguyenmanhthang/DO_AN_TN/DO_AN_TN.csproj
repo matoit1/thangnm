@@ -203,7 +203,14 @@
     <Content Include="Images\Interface\sidebar_shadow.png" />
     <Content Include="Images\Interface\table_sorter_header.png" />
     <Content Include="Other\ProjectManagement\relationship.png" />
+    <Content Include="QuanTri\BaiViet.aspx" />
+    <Content Include="QuanTri\Config.aspx" />
+    <Content Include="QuanTri\Database.aspx" />
     <Content Include="QuanTri\Default.aspx" />
+    <Content Include="QuanTri\GiangVien.aspx" />
+    <Content Include="QuanTri\LopHoc.aspx" />
+    <Content Include="QuanTri\MonHoc.aspx" />
+    <Content Include="QuanTri\SinhVien.aspx" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
     <Content Include="Scripts\hideshow.js" />
@@ -339,12 +346,61 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanTri\BaiViet.aspx.cs">
+      <DependentUpon>BaiViet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\BaiViet.aspx.designer.cs">
+      <DependentUpon>BaiViet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Config.aspx.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Config.aspx.designer.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Database.aspx.cs">
+      <DependentUpon>Database.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Database.aspx.designer.cs">
+      <DependentUpon>Database.aspx</DependentUpon>
+    </Compile>
     <Compile Include="QuanTri\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="QuanTri\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiangVien.aspx.cs">
+      <DependentUpon>GiangVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiangVien.aspx.designer.cs">
+      <DependentUpon>GiangVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\LopHoc.aspx.cs">
+      <DependentUpon>LopHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\LopHoc.aspx.designer.cs">
+      <DependentUpon>LopHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\MonHoc.aspx.cs">
+      <DependentUpon>MonHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\MonHoc.aspx.designer.cs">
+      <DependentUpon>MonHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\SinhVien.aspx.cs">
+      <DependentUpon>SinhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\SinhVien.aspx.designer.cs">
+      <DependentUpon>SinhVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="Shared_Libraries\CaptchaProvider.cs">
       <SubType>ASPXCodeBehind</SubType>
