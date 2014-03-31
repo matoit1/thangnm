@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LopHoc.aspx.cs" Inherits="DO_AN_TN.GiangVien.LopHoc" MasterPageFile="~/Share_Interface/GiangVien_SI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LopHoc.aspx.cs" Inherits="DO_AN_TN.GiangVien.LopHoc" MasterPageFile="~/Share_Interface/GiangVien_SI.Master" EnableEventValidation="false"%>
 
 <%@ Register src="../UserControl/LopHoc_ListUC.ascx" tagname="LopHoc_ListUC" tagprefix="uc1" %>
 

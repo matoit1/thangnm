@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiangVien.aspx.cs" Inherits="DO_AN_TN.QuanTri.GiangVien" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiangVien.aspx.cs" Inherits="DO_AN_TN.QuanTri.GiangVien" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" EnableEventValidation="false"%>
 
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 <%@ Register src="../UserControl/GiangVien_DetailUC.ascx" tagname="GiangVien_DetailUC" tagprefix="uc1" %>

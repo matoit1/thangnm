@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SinhVien.aspx.cs" Inherits="DO_AN_TN.QuanTri.SinhVien" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SinhVien.aspx.cs" Inherits="DO_AN_TN.QuanTri.SinhVien" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" EnableEventValidation="false"%>
 
 <%@ Register src="../UserControl/SinhVien_ListUC.ascx" tagname="SinhVien_ListUC" tagprefix="uc1" %>
 

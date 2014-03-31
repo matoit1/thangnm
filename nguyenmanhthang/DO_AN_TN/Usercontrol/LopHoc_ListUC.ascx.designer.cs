@@ -37,7 +37,7 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddNew;
+        public global::System.Web.UI.WebControls.Button btnAddNew;
         
         /// <summary>
         /// btnDeleteList control.
@@ -46,7 +46,7 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDeleteList;
+        public global::System.Web.UI.WebControls.Button btnDeleteList;
         
         /// <summary>
         /// btnExportExcel control.
