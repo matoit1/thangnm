@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DataAccessObject;
+using EntityObject;
 
 namespace DO_AN_TN.QuanTri
 {
@@ -18,6 +20,10 @@ namespace DO_AN_TN.QuanTri
         protected void ViewDetail_Click(object sender, EventArgs e)
         {
             mtvMain.ActiveViewIndex = 1;
+            GiangVienEO _GiangVienEO = new GiangVienEO();
+            _GiangVienEO.PK_sMaGV = GiangVien_ListUC1.PK_sMaGV;
+            _GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
+            GiangVien_DetailUC1.BindDataDetail(_GiangVienEO);
         }
         #endregion
 

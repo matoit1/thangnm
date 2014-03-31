@@ -11,19 +11,8 @@ namespace DO_AN_TN.SinhVien
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        #region "Raise Event"
-        protected void ViewDetail_Click(object sender, EventArgs e)
-        {
-            mtvMain.ActiveViewIndex = 1;
-        }
-        #endregion
-
-        protected void lbtnBack_Click(object sender, EventArgs e)
-        {
-            mtvMain.SetActiveView(vList);
+            DiemThi_ListUC1.btnAddNew.Visible = false;
+            DiemThi_ListUC1.btnDeleteList.Visible = false;
         }
     }
 }

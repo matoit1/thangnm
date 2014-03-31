@@ -3,7 +3,6 @@
 <%@ Register src="~/UserControl/LoginUC.ascx" tagname="LoginUC" tagprefix="uc1" %>
 
 <link href="../App_Themes/popup.css" rel="stylesheet" type="text/css" />
-<link href="../App_Themes/login.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
 <script type="text/javascript" src="../Scripts/popup.js"></script>
 <script type="text/javascript">
