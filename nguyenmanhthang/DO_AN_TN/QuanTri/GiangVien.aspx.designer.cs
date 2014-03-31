@@ -13,13 +13,13 @@ namespace DO_AN_TN.QuanTri {
     public partial class GiangVien {
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// smrMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.ScriptManager smrMain;
         
         /// <summary>
         /// mtvMain control.
@@ -31,13 +31,13 @@ namespace DO_AN_TN.QuanTri {
         protected global::System.Web.UI.WebControls.MultiView mtvMain;
         
         /// <summary>
-        /// vDanhSach control.
+        /// vList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View vDanhSach;
+        protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
         /// GiangVien_ListUC1 control.
@@ -49,13 +49,13 @@ namespace DO_AN_TN.QuanTri {
         protected global::DO_AN_TN.UserControl.GiangVien_ListUC GiangVien_ListUC1;
         
         /// <summary>
-        /// vChiTiet control.
+        /// vDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View vChiTiet;
+        protected global::System.Web.UI.WebControls.View vDetail;
         
         /// <summary>
         /// lbtnBack control.
@@ -85,13 +85,13 @@ namespace DO_AN_TN.QuanTri {
         protected global::AjaxControlToolkit.TabPanel tplThongTinChung;
         
         /// <summary>
-        /// TabPanel1 control.
+        /// tplMonHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel1;
+        protected global::AjaxControlToolkit.TabPanel tplMonHoc;
         
         /// <summary>
         /// MonHoc_ListUC1 control.
@@ -103,13 +103,13 @@ namespace DO_AN_TN.QuanTri {
         protected global::DO_AN_TN.UserControl.MonHoc_ListUC MonHoc_ListUC1;
         
         /// <summary>
-        /// TabPanel2 control.
+        /// tplLopHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel2;
+        protected global::AjaxControlToolkit.TabPanel tplLopHoc;
         
         /// <summary>
         /// LopHoc_ListUC1 control.
@@ -121,13 +121,13 @@ namespace DO_AN_TN.QuanTri {
         protected global::DO_AN_TN.UserControl.LopHoc_ListUC LopHoc_ListUC1;
         
         /// <summary>
-        /// TabPanel3 control.
+        /// tplCauHoi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel3;
+        protected global::AjaxControlToolkit.TabPanel tplCauHoi;
         
         /// <summary>
         /// CauHoi_ListUC1 control.
@@ -139,13 +139,13 @@ namespace DO_AN_TN.QuanTri {
         protected global::DO_AN_TN.UserControl.CauHoi_ListUC CauHoi_ListUC1;
         
         /// <summary>
-        /// TabPanel4 control.
+        /// tplBaiViet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel4;
+        protected global::AjaxControlToolkit.TabPanel tplBaiViet;
         
         /// <summary>
         /// BaiViet_ListUC1 control.
@@ -157,31 +157,31 @@ namespace DO_AN_TN.QuanTri {
         protected global::DO_AN_TN.UserControl.BaiViet_ListUC BaiViet_ListUC1;
         
         /// <summary>
-        /// TabPanel5 control.
+        /// tplPhanCongCongTac control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanel5;
+        protected global::AjaxControlToolkit.TabPanel tplPhanCongCongTac;
         
         /// <summary>
-        /// MultiView1 control.
+        /// mtvMainPCCT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView MultiView1;
+        protected global::System.Web.UI.WebControls.MultiView mtvMainPCCT;
         
         /// <summary>
-        /// View1 control.
+        /// vListPCCT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View1;
+        protected global::System.Web.UI.WebControls.View vListPCCT;
         
         /// <summary>
         /// PhanCongCongTac_ListUC1 control.
@@ -193,13 +193,13 @@ namespace DO_AN_TN.QuanTri {
         protected global::DO_AN_TN.UserControl.PhanCongCongTac_ListUC PhanCongCongTac_ListUC1;
         
         /// <summary>
-        /// View2 control.
+        /// vDetailPCCT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View View2;
+        protected global::System.Web.UI.WebControls.View vDetailPCCT;
         
         /// <summary>
         /// LichDayVaHoc_ListUC1 control.

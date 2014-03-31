@@ -1,7 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SinhVien.aspx.cs" Inherits="DO_AN_TN.QuanTri.SinhVien" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" %>
 
+<%@ Register src="../UserControl/SinhVien_ListUC.ascx" tagname="SinhVien_ListUC" tagprefix="uc1" %>
+
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <div>
-    
+        <asp:MultiView ID="mtvMain" runat="server" ActiveViewIndex="0">
+            <asp:View ID="vList" runat="server">
+                <uc1:SinhVien_ListUC ID="SinhVien_ListUC1" runat="server" OnViewDetail="ViewDetail_Click"/>
+            </asp:View>
+            <asp:View ID="vDetail" runat="server">
+                <asp:LinkButton ID="lbtnBack" runat="server" onclick="lbtnBack_Click">Quay lại danh sách</asp:LinkButton><br /><br />
+            </asp:View>
+        </asp:MultiView>
     </div>
 </asp:Content>

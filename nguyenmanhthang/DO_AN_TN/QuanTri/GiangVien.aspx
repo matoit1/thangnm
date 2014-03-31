@@ -11,13 +11,13 @@
 
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:ScriptManager ID="smrMain" runat="server"></asp:ScriptManager>
     <div>
         <asp:MultiView ID="mtvMain" runat="server" ActiveViewIndex="0">
-            <asp:View ID="vDanhSach" runat="server">
+            <asp:View ID="vList" runat="server">
                 <uc1:GiangVien_ListUC ID="GiangVien_ListUC1" runat="server" OnViewDetail="ViewDetail_Click" />
             </asp:View>
-            <asp:View ID="vChiTiet" runat="server">
+            <asp:View ID="vDetail" runat="server">
                 <asp:LinkButton ID="lbtnBack" runat="server" onclick="lbtnBack_Click">Quay lại danh sách</asp:LinkButton><br /><br />
                 <cc1:TabContainer ID="tcrMain" runat="server" ActiveTabIndex="0">
                     <cc1:TabPanel ID="tplThongTinChung" runat="server" HeaderText="Thông tin chung">
@@ -25,33 +25,33 @@
                             Thông tin chung
                         </HeaderTemplate>
                     </cc1:TabPanel>
-                    <cc1:TabPanel ID="TabPanel1" runat="server" HeaderText="Môn học">
+                    <cc1:TabPanel ID="tplMonHoc" runat="server" HeaderText="Môn học">
                         <ContentTemplate>
                             <uc7:MonHoc_ListUC ID="MonHoc_ListUC1" runat="server" />
                         </ContentTemplate>
                     </cc1:TabPanel>
-                    <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="Lớp học">
+                    <cc1:TabPanel ID="tplLopHoc" runat="server" HeaderText="Lớp học">
                         <ContentTemplate>
                             <uc6:LopHoc_ListUC ID="LopHoc_ListUC1" runat="server" />
                         </ContentTemplate>
                     </cc1:TabPanel>
-                    <cc1:TabPanel ID="TabPanel3" runat="server" HeaderText="Câu hỏi">
+                    <cc1:TabPanel ID="tplCauHoi" runat="server" HeaderText="Câu hỏi">
                         <ContentTemplate>
                             <uc4:CauHoi_ListUC ID="CauHoi_ListUC1" runat="server" />
                         </ContentTemplate>
                     </cc1:TabPanel>
-                    <cc1:TabPanel ID="TabPanel4" runat="server" HeaderText="Bài viết">
+                    <cc1:TabPanel ID="tplBaiViet" runat="server" HeaderText="Bài viết">
                         <ContentTemplate>
                             <uc3:BaiViet_ListUC ID="BaiViet_ListUC1" runat="server" />
                         </ContentTemplate>
                     </cc1:TabPanel>
-                    <cc1:TabPanel ID="TabPanel5" runat="server" HeaderText="Phân công công tác">
+                    <cc1:TabPanel ID="tplPhanCongCongTac" runat="server" HeaderText="Phân công công tác">
                         <ContentTemplate>
-                            <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
-                                <asp:View ID="View1" runat="server">
+                            <asp:MultiView ID="mtvMainPCCT" runat="server" ActiveViewIndex="0">
+                                <asp:View ID="vListPCCT" runat="server">
                                     <uc8:PhanCongCongTac_ListUC ID="PhanCongCongTac_ListUC1" runat="server" />
                                 </asp:View>
-                                <asp:View ID="View2" runat="server">
+                                <asp:View ID="vDetailPCCT" runat="server">
                                     <uc5:LichDayVaHoc_ListUC ID="LichDayVaHoc_ListUC1" runat="server" />
                                 </asp:View>
                             </asp:MultiView>
