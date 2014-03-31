@@ -75,6 +75,9 @@
     <Content Include="Error\Default.aspx" />
     <Content Include="Flash\SampleMediaPlayback.swf" />
     <Content Include="GiangVien\Default.aspx" />
+    <Content Include="GiangVien\LopHoc.aspx" />
+    <Content Include="GiangVien\MonHoc.aspx" />
+    <Content Include="GiangVien\ThongTinCaNhan.aspx" />
     <Content Include="Media\Virus.WAV" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
@@ -211,6 +214,7 @@
     <Content Include="QuanTri\LopHoc.aspx" />
     <Content Include="QuanTri\MonHoc.aspx" />
     <Content Include="QuanTri\SinhVien.aspx" />
+    <Content Include="QuanTri\ThongTinCaNhan.aspx" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
     <Content Include="Scripts\hideshow.js" />
@@ -222,6 +226,7 @@
     <Content Include="Scripts\jquery.tablesorter.min.js" />
     <Content Include="Scripts\popup.js" />
     <Content Include="SinhVien\Default.aspx" />
+    <Content Include="SinhVien\ThongTinCaNhan.aspx" />
     <Content Include="SinhVien\User.aspx" />
     <Content Include="Test\AMS_Server.aspx" />
     <Content Include="Test\AMS_Client.aspx" />
@@ -345,6 +350,27 @@
     <Compile Include="GiangVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GiangVien\LopHoc.aspx.cs">
+      <DependentUpon>LopHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\LopHoc.aspx.designer.cs">
+      <DependentUpon>LopHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien\MonHoc.aspx.cs">
+      <DependentUpon>MonHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\MonHoc.aspx.designer.cs">
+      <DependentUpon>MonHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien\ThongTinCaNhan.aspx.cs">
+      <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\ThongTinCaNhan.aspx.designer.cs">
+      <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanTri\BaiViet.aspx.cs">
       <DependentUpon>BaiViet.aspx</DependentUpon>
@@ -402,6 +428,13 @@
     <Compile Include="QuanTri\SinhVien.aspx.designer.cs">
       <DependentUpon>SinhVien.aspx</DependentUpon>
     </Compile>
+    <Compile Include="QuanTri\ThongTinCaNhan.aspx.cs">
+      <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\ThongTinCaNhan.aspx.designer.cs">
+      <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Shared_Libraries\CaptchaProvider.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -445,6 +478,13 @@
     </Compile>
     <Compile Include="SinhVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\ThongTinCaNhan.aspx.cs">
+      <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\ThongTinCaNhan.aspx.designer.cs">
+      <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
     </Compile>
     <Compile Include="SinhVien\User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>

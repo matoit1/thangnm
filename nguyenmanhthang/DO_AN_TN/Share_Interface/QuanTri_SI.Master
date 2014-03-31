@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Quản trị</title>
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
     <link href="../App_Themes/public.css" rel="stylesheet" type="text/css" />
 </head>
@@ -13,17 +13,16 @@
     <div>
         <asp:Menu ID="Menu1" runat="server" ItemWrap="True" Orientation="Horizontal">
             <Items>
+                <asp:MenuItem Text="|  Trang chủ" Value="TrangChu" NavigateUrl="~/Default.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="|  Quản trị" Value="QuanTri" NavigateUrl="~/QuanTri/Default.aspx">
-                    <asp:MenuItem Text="Giảng Viên" Value="GiangVien" NavigateUrl="~/QuanTri/GiangVien.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Sinh Viên" Value="SinhVien" NavigateUrl="~/QuanTri/SinhVien.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Lớp học" Value="LopHoc" NavigateUrl="~/QuanTri/LopHoc.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Môn học" Value="MonHoc" NavigateUrl="~/QuanTri/MonHoc.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Bài viết" Value="BaiViet" NavigateUrl="~/QuanTri/BaiViet.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Cấu hình website" Value="Config" NavigateUrl="~/QuanTri/Config.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Cơ sở dữ liệu" Value="Database" NavigateUrl="~/QuanTri/Database.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Giảng Viên" Value="GiangVien" NavigateUrl="~/QuanTri/GiangVien.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Sinh Viên" Value="SinhVien" NavigateUrl="~/QuanTri/SinhVien.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/QuanTri/LopHoc.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/QuanTri/MonHoc.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Bài viết" Value="BaiViet" NavigateUrl="~/QuanTri/BaiViet.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Cấu hình website" Value="Config" NavigateUrl="~/QuanTri/Config.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Cơ sở dữ liệu" Value="Database" NavigateUrl="~/QuanTri/Database.aspx"></asp:MenuItem>
                 </asp:MenuItem>
-            </Items>
-            <Items>
                 <asp:MenuItem Text="|  Test" Value="Test">
                     <asp:MenuItem Text="|  Bài viết" Value="BaiViet" NavigateUrl="~/Test/TBaiViet.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="|  Câu hỏi" Value="CauHoi" NavigateUrl="~/Test/TCauHoi.aspx"></asp:MenuItem>
@@ -36,7 +35,8 @@
                     <asp:MenuItem Text="|  Phân công công tác" Value="PhanCongCongTac" NavigateUrl="~/Test/TPhanCongCongTac.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="|  Sinh viên" Value="SinhVien" NavigateUrl="~/Test/TSinhVien.aspx"></asp:MenuItem>
                 </asp:MenuItem>
-            </Items>
+                <asp:MenuItem Text="|  Thông tin cá nhân" Value="ThongTinCaNhan" NavigateUrl="~/QuanTri/ThongTinCaNhan.aspx"></asp:MenuItem>
+             </Items>
         </asp:Menu>
         <hr /><hr /><br />
         <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
