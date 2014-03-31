@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MonHoc.aspx.cs" Inherits="DO_AN_TN.GiangVien.MonHoc" MasterPageFile="~/Share_Interface/GiangVien_SI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MonHoc.aspx.cs" Inherits="DO_AN_TN.GiangVien.MonHoc" MasterPageFile="~/Share_Interface/GiangVien_SI.Master" EnableEventValidation="false"%>
 
 <%@ Register src="../UserControl/MonHoc_ListUC.ascx" tagname="MonHoc_ListUC" tagprefix="uc1" %>
 

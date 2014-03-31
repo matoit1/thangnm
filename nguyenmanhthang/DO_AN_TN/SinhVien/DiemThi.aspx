@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DiemThi.aspx.cs" Inherits="DO_AN_TN.SinhVien.DiemThi" MasterPageFile="~/Share_Interface/SinhVien_SI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DiemThi.aspx.cs" Inherits="DO_AN_TN.SinhVien.DiemThi" MasterPageFile="~/Share_Interface/SinhVien_SI.Master" EnableEventValidation="false" %>
 
 <%@ Register src="../UserControl/DiemThi_ListUC.ascx" tagname="DiemThi_ListUC" tagprefix="uc1" %>
 

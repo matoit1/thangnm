@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LichHoc.aspx.cs" Inherits="DO_AN_TN.SinhVien.LichHoc" MasterPageFile="~/Share_Interface/SinhVien_SI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LichHoc.aspx.cs" Inherits="DO_AN_TN.SinhVien.LichHoc" MasterPageFile="~/Share_Interface/SinhVien_SI.Master" EnableEventValidation="false" %>
 
 <%@ Register src="../UserControl/LichDayVaHoc_ListUC.ascx" tagname="LichDayVaHoc_ListUC" tagprefix="uc1" %>
 

@@ -11,7 +11,8 @@ namespace DO_AN_TN.GiangVien
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LopHoc_ListUC1.btnAddNew.Visible = false;
+            LopHoc_ListUC1.btnDeleteList.Visible = false;
         }
 
         #region "Raise Event"
