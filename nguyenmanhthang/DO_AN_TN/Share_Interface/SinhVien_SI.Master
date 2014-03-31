@@ -14,8 +14,8 @@
             <asp:Menu ID="Menu1" runat="server" ItemWrap="True" Orientation="Horizontal">
                 <Items>
                     <asp:MenuItem Text="|  Trang chủ" Value="TrangChu" NavigateUrl="~/Default.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/QuanTri/Default.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/QuanTri/Default.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Điểm thi" Value="DiemThi" NavigateUrl="~/SinhVien/DiemThi.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Lịch học" Value="LichHoc" NavigateUrl="~/SinhVien/LichHoc.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="|  Thông tin cá nhân" Value="ThongTinCaNhan" NavigateUrl="~/SinhVien/ThongTinCaNhan.aspx"></asp:MenuItem>
                  </Items>
             </asp:Menu>
