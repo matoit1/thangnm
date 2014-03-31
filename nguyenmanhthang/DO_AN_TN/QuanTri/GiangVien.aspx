@@ -1,7 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiangVien.aspx.cs" Inherits="DO_AN_TN.QuanTri.GiangVien" MasterPageFile="~/Share_Interface/QuanTri_SI.Master" %>
 
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
-<%@ Register src="../UserControl/GiangVien_ListUC.ascx" tagname="GiangVien_ListUC" tagprefix="uc1" %>
+<%@ Register src="../UserControl/GiangVien_DetailUC.ascx" tagname="GiangVien_DetailUC" tagprefix="uc1" %>
+<%@ Register src="../UserControl/GiangVien_ListUC.ascx" tagname="GiangVien_ListUC" tagprefix="uc2" %>
 <%@ Register src="../UserControl/BaiViet_ListUC.ascx" tagname="BaiViet_ListUC" tagprefix="uc3" %>
 <%@ Register src="../UserControl/CauHoi_ListUC.ascx" tagname="CauHoi_ListUC" tagprefix="uc4" %>
 <%@ Register src="../UserControl/LichDayVaHoc_ListUC.ascx" tagname="LichDayVaHoc_ListUC" tagprefix="uc5" %>
@@ -15,15 +16,15 @@
     <div>
         <asp:MultiView ID="mtvMain" runat="server" ActiveViewIndex="0">
             <asp:View ID="vList" runat="server">
-                <uc1:GiangVien_ListUC ID="GiangVien_ListUC1" runat="server" OnViewDetail="ViewDetail_Click" />
+                <uc2:GiangVien_ListUC ID="GiangVien_ListUC1" runat="server" OnViewDetail="ViewDetail_Click" />
             </asp:View>
             <asp:View ID="vDetail" runat="server">
                 <asp:LinkButton ID="lbtnBack" runat="server" onclick="lbtnBack_Click">Quay lại danh sách</asp:LinkButton><br /><br />
                 <cc1:TabContainer ID="tcrMain" runat="server" ActiveTabIndex="0">
                     <cc1:TabPanel ID="tplThongTinChung" runat="server" HeaderText="Thông tin chung">
-                        <HeaderTemplate>
-                            Thông tin chung
-                        </HeaderTemplate>
+                        <ContentTemplate>
+                            <uc1:GiangVien_DetailUC ID="GiangVien_DetailUC1" runat="server" />
+                        </ContentTemplate>
                     </cc1:TabPanel>
                     <cc1:TabPanel ID="tplMonHoc" runat="server" HeaderText="Môn học">
                         <ContentTemplate>
