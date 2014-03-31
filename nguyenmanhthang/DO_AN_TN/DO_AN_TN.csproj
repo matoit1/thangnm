@@ -226,6 +226,8 @@
     <Content Include="Scripts\jquery.tablesorter.min.js" />
     <Content Include="Scripts\popup.js" />
     <Content Include="SinhVien\Default.aspx" />
+    <Content Include="SinhVien\DiemThi.aspx" />
+    <Content Include="SinhVien\LichHoc.aspx" />
     <Content Include="SinhVien\ThongTinCaNhan.aspx" />
     <Content Include="SinhVien\User.aspx" />
     <Content Include="Test\AMS_Server.aspx" />
@@ -478,6 +480,20 @@
     </Compile>
     <Compile Include="SinhVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\DiemThi.aspx.cs">
+      <DependentUpon>DiemThi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\DiemThi.aspx.designer.cs">
+      <DependentUpon>DiemThi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\LichHoc.aspx.cs">
+      <DependentUpon>LichHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\LichHoc.aspx.designer.cs">
+      <DependentUpon>LichHoc.aspx</DependentUpon>
     </Compile>
     <Compile Include="SinhVien\ThongTinCaNhan.aspx.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
