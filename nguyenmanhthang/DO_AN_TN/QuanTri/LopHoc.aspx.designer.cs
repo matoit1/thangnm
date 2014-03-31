@@ -10,6 +10,6 @@
 namespace DO_AN_TN.QuanTri {
     
     
-    public partial class Default {
+    public partial class LopHoc {
     }
 }

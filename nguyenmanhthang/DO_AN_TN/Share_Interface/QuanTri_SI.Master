@@ -11,18 +11,31 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Menu ID="Menu1" runat="server" StaticDisplayLevels="3" ItemWrap="True" Orientation="Horizontal">
+        <asp:Menu ID="Menu1" runat="server" ItemWrap="True" Orientation="Horizontal">
             <Items>
-                <asp:MenuItem Text="|  Bài viết" Value="BaiViet" NavigateUrl="~/Test/TBaiViet.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Câu hỏi" Value="CauHoi" NavigateUrl="~/Test/TCauHoi.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Điểm thi" Value="DiemThi" NavigateUrl="~/Test/TDiemThi.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Error" Value="Error" NavigateUrl="~/Test/TError.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Giảng Viên" Value="GiangVien" NavigateUrl="~/Test/TGiangVien.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Lịch dạy và học" Value="LichDayVaHoc" NavigateUrl="~/Test/TLichDayVaHoc.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/Test/TLopHoc.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/Test/TMonHoc.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Phân công công tác" Value="PhanCongCongTac" NavigateUrl="~/Test/TPhanCongCongTac.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Sinh viên" Value="SinhVien" NavigateUrl="~/Test/TSinhVien.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="|  Quản trị" Value="QuanTri" NavigateUrl="~/QuanTri/Default.aspx">
+                    <asp:MenuItem Text="Giảng Viên" Value="GiangVien" NavigateUrl="~/QuanTri/GiangVien.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Sinh Viên" Value="SinhVien" NavigateUrl="~/QuanTri/SinhVien.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Lớp học" Value="LopHoc" NavigateUrl="~/QuanTri/LopHoc.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Môn học" Value="MonHoc" NavigateUrl="~/QuanTri/MonHoc.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Bài viết" Value="BaiViet" NavigateUrl="~/QuanTri/BaiViet.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Cấu hình website" Value="Config" NavigateUrl="~/QuanTri/Config.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Cơ sở dữ liệu" Value="Database" NavigateUrl="~/QuanTri/Database.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+            <Items>
+                <asp:MenuItem Text="|  Test" Value="Test">
+                    <asp:MenuItem Text="|  Bài viết" Value="BaiViet" NavigateUrl="~/Test/TBaiViet.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Câu hỏi" Value="CauHoi" NavigateUrl="~/Test/TCauHoi.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Điểm thi" Value="DiemThi" NavigateUrl="~/Test/TDiemThi.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Error" Value="Error" NavigateUrl="~/Test/TError.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Giảng Viên" Value="GiangVien" NavigateUrl="~/Test/TGiangVien.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Lịch dạy và học" Value="LichDayVaHoc" NavigateUrl="~/Test/TLichDayVaHoc.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/Test/TLopHoc.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/Test/TMonHoc.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Phân công công tác" Value="PhanCongCongTac" NavigateUrl="~/Test/TPhanCongCongTac.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Sinh viên" Value="SinhVien" NavigateUrl="~/Test/TSinhVien.aspx"></asp:MenuItem>
+                </asp:MenuItem>
             </Items>
         </asp:Menu>
         <hr /><hr /><br />
