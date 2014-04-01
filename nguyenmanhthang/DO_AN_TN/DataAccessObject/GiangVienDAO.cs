@@ -284,5 +284,34 @@ namespace DataAccessObject
                 }
             }
         }
+
+        /// <summary> 10. GiangVien_Login </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static DataSet GiangVien_Login(GiangVienEO _GiangVienEO)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblGiangVien_Login", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapGV", _GiangVienEO.sTendangnhapGV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sMatkhauGV", _GiangVienEO.sMatkhauGV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiGV", _GiangVienEO.iTrangThaiGV));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
     }
 }

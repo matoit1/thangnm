@@ -224,7 +224,7 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 6. SinhVien_SelectItem </summary>
+        /// <summary> 7. SinhVien_SelectItem_By_sTendangnhapSV </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>
         public static SinhVienEO SinhVien_SelectItem_By_sTendangnhapSV(SinhVienEO _SinhVienEO)
@@ -253,7 +253,7 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 7. SinhVien_SelectList </summary>
+        /// <summary> 8. SinhVien_SelectList </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>
         public static DataSet SinhVien_SelectList()
@@ -279,7 +279,7 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 8. SinhVien_Search </summary>
+        /// <summary> 9. SinhVien_Search </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>
         public static DataSet SinhVien_Search(SinhVienEO _SinhVienEO)
@@ -318,6 +318,35 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayRaTruongSV", _SinhVienEO.tNgayRaTruongSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayCapTheSV", _SinhVienEO.tNgayCapTheSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkAvatarSV", _SinhVienEO.sLinkAvatarSV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiSV", _SinhVienEO.iTrangThaiSV));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
+        /// <summary> 10. SinhVien_Login </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static DataSet SinhVien_Login(SinhVienEO _SinhVienEO)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_Login", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sMatkhauSV", _SinhVienEO.sMatkhauSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiSV", _SinhVienEO.iTrangThaiSV));
                     ds = new DataSet();
                     da.Fill(ds);

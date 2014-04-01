@@ -74,10 +74,14 @@
     <Content Include="Error\Dao_vang_I.swf" />
     <Content Include="Error\Default.aspx" />
     <Content Include="Flash\SampleMediaPlayback.swf" />
+    <Content Include="GiangVien\Accounts\ForgotPassword.aspx" />
+    <Content Include="GiangVien\Accounts\Login.aspx" />
+    <Content Include="GiangVien\Accounts\Register.aspx" />
     <Content Include="GiangVien\Default.aspx" />
     <Content Include="GiangVien\LopHoc.aspx" />
     <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
+    <Content Include="Images\Avatar\default.jpg" />
     <Content Include="Media\Virus.WAV" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
@@ -206,6 +210,9 @@
     <Content Include="Images\Interface\sidebar_shadow.png" />
     <Content Include="Images\Interface\table_sorter_header.png" />
     <Content Include="Other\ProjectManagement\relationship.png" />
+    <Content Include="QuanTri\Accounts\ForgotPassword.aspx" />
+    <Content Include="QuanTri\Accounts\Login.aspx" />
+    <Content Include="QuanTri\Accounts\Register.aspx" />
     <Content Include="QuanTri\BaiViet.aspx" />
     <Content Include="QuanTri\Config.aspx" />
     <Content Include="QuanTri\Database.aspx" />
@@ -225,6 +232,9 @@
     <Content Include="Scripts\jquery.equalHeight.js" />
     <Content Include="Scripts\jquery.tablesorter.min.js" />
     <Content Include="Scripts\popup.js" />
+    <Content Include="SinhVien\Accounts\ForgotPassword.aspx" />
+    <Content Include="SinhVien\Accounts\Login.aspx" />
+    <Content Include="SinhVien\Accounts\Register.aspx" />
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="SinhVien\DiemThi.aspx" />
     <Content Include="SinhVien\LichHoc.aspx" />
@@ -345,6 +355,27 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="GiangVien\Accounts\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\Accounts\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien\Accounts\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\Accounts\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien\Accounts\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\Accounts\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GiangVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -374,6 +405,27 @@
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanTri\Accounts\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Accounts\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Accounts\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Accounts\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Accounts\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Accounts\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="QuanTri\BaiViet.aspx.cs">
       <DependentUpon>BaiViet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -473,6 +525,27 @@
     </Compile>
     <Compile Include="Share_Interface\SinhVien_SI.Master.designer.cs">
       <DependentUpon>SinhVien_SI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="SinhVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -37,25 +37,25 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg;
+        public global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtAccounts_Username control.
+        /// txtsTendangnhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Username;
+        public global::System.Web.UI.WebControls.TextBox txtsTendangnhap;
         
         /// <summary>
-        /// txtAccounts_Password control.
+        /// txtsMatkhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Password;
+        protected global::System.Web.UI.WebControls.TextBox txtsMatkhau;
         
         /// <summary>
         /// chkRememberMe control.
@@ -64,7 +64,7 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkRememberMe;
+        public global::System.Web.UI.WebControls.CheckBox chkRememberMe;
         
         /// <summary>
         /// hplLost control.

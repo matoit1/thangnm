@@ -13,23 +13,19 @@ namespace DO_AN_TN.Share_Interface
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (Request.Cookies["sinhvien"] == null)
-            //    {
-            //        Session["url1"] = Request.Url.AbsolutePath;
-            //        Response.Redirect("~/Accounts/Login.aspx");
-            //    }
-            //    DataSet ds = SinhVienDAO.SinhVien_SelectItem(Request.Cookies["sinhvien"].Value);
-            //    //imgAvatar.ImageUrl = ds.Tables[0].Rows[0]["Accounts_LinkAvatar"].ToString();
-            //    hplAccounts_Fullname.Text = "   Hi, " + ds.Tables[0].Rows[0]["sHotenSV"].ToString();// xuất lời chào.
-            //    hplAccounts_Fullname.NavigateUrl = "~/User.aspx?Accounts_Username=" + Request.Cookies["sinhvien"].Value;
-            //}
-            //catch
-            //{
-            //    Response.Cookies["sinhvien"].Expires = DateTime.Now.AddDays(-1);
-            //    Response.Redirect("~/Accounts/Login.aspx");
-            //}
+            try
+            {
+                if (Request.Cookies["sinhvien"] == null)
+                {
+                    Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.AbsolutePath);
+                }
+                lblInfo.Text = "   Hi, " + Request.Cookies["sinhvien"].Value;
+            }
+            catch
+            {
+                Response.Cookies["sinhvien"].Expires = DateTime.Now.AddDays(-1);
+                Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.AbsolutePath);
+            }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)

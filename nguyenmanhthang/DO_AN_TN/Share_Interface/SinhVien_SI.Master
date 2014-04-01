@@ -19,6 +19,8 @@
                     <asp:MenuItem Text="|  Thông tin cá nhân" Value="ThongTinCaNhan" NavigateUrl="~/SinhVien/ThongTinCaNhan.aspx"></asp:MenuItem>
                  </Items>
             </asp:Menu>
+            <asp:Label ID="lblInfo" runat="server"></asp:Label>
+            <asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click">Thoát</asp:LinkButton>
             <hr /><hr /><br />
             <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
         </div>
