@@ -13,7 +13,7 @@ namespace DO_AN_TN.QuanTri.Accounts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LoginUC1.hplLost.NavigateUrl = "~/QuanTri/Accounts/ForgotPassword.aspx";
         }
 
         protected void Login_Click(object sender, EventArgs e)

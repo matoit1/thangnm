@@ -270,6 +270,7 @@
     <Content Include="UserControl\DiemThi_ListUC.ascx" />
     <Content Include="UserControl\Error_DetailUC.ascx" />
     <Content Include="UserControl\Error_ListUC.ascx" />
+    <Content Include="UserControl\ForgotPasswordUC.ascx" />
     <Content Include="UserControl\GiangVien_DetailUC.ascx" />
     <Content Include="UserControl\GiangVien_ListUC.ascx" />
     <Content Include="UserControl\LichDayVaHoc_DetailUC.ascx" />
@@ -281,6 +282,7 @@
     <Content Include="UserControl\MonHoc_ListUC.ascx" />
     <Content Include="UserControl\PhanCongCongTac_DetailUC.ascx" />
     <Content Include="UserControl\PhanCongCongTac_ListUC.ascx" />
+    <Content Include="UserControl\RegisterUC.ascx" />
     <Content Include="UserControl\SinhVien_DetailUC.ascx" />
     <Content Include="UserControl\SinhVien_ListUC.ascx" />
     <Content Include="UserControl\TracNghiemUC.ascx" />
@@ -785,6 +787,13 @@
     <Compile Include="UserControl\Error_ListUC.ascx.designer.cs">
       <DependentUpon>Error_ListUC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ForgotPasswordUC.ascx.cs">
+      <DependentUpon>ForgotPasswordUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ForgotPasswordUC.ascx.designer.cs">
+      <DependentUpon>ForgotPasswordUC.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\GiangVien_DetailUC.ascx.cs">
       <DependentUpon>GiangVien_DetailUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -861,6 +870,13 @@
     </Compile>
     <Compile Include="UserControl\PhanCongCongTac_ListUC.ascx.designer.cs">
       <DependentUpon>PhanCongCongTac_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\RegisterUC.ascx.cs">
+      <DependentUpon>RegisterUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\RegisterUC.ascx.designer.cs">
+      <DependentUpon>RegisterUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\SinhVien_DetailUC.ascx.cs">
       <DependentUpon>SinhVien_DetailUC.ascx</DependentUpon>

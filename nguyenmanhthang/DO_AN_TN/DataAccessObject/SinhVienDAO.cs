@@ -145,6 +145,32 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 3. SinhVien_ResetPassword </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static bool SinhVien_ResetPassword(SinhVienEO _SinhVienEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblSinhVien_ResetPassword", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
+                    cmd.Parameters.Add(new SqlParameter("@sMatkhauSV", _SinhVienEO.sMatkhauSV));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
         /// <summary> 4. SinhVien_Delete </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>
@@ -237,6 +263,35 @@ namespace DataAccessObject
                 {
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_SelectBysTendangnhapSV", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    output = DataSet2Object.SinhVien(ds);
+                    return output;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return output;
+                }
+            }
+        }
+
+        /// <summary> 8. SinhVien_SelectBysEmailSVvssSdtSV </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static SinhVienEO SinhVien_SelectBysEmailSVvssSdtSV(SinhVienEO _SinhVienEO)
+        {
+            SinhVienEO output = new SinhVienEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_SelectBysEmailSVvssSdtSV", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
                     ds = new DataSet();
