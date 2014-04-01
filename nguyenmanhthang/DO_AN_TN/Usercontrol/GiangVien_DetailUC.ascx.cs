@@ -58,7 +58,7 @@ namespace DO_AN_TN.UserControl
                 _GiangVienEO.PK_sMaGV = Convert.ToString(txtPK_sMaGV.Text);
                 _GiangVienEO.sHotenGV = Convert.ToString(txtsHoTenGV.Text);
                 _GiangVienEO.sTendangnhapGV = Convert.ToString(txtsTendangnhapGV.Text);
-                _GiangVienEO.sMatkhauGV = Convert.ToString(txtsMatkhauGV.Text);
+                _GiangVienEO.sMatkhauGV = Convert.ToString(Security.EnCrypt(txtsMatkhauGV.Text));
                 _GiangVienEO.sEmailGV = Convert.ToString(txtsEmailGV.Text);
                 _GiangVienEO.sDiachiGV = Convert.ToString(txtsDiachiGV.Text);
                 _GiangVienEO.sSdtGV = Convert.ToString(txtsSdtGV.Text);
