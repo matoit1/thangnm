@@ -13,7 +13,7 @@ namespace DO_AN_TN.SinhVien.Accounts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LoginUC1.hplLost.NavigateUrl = "~/SinhVien/Accounts/ForgotPassword.aspx";
         }
 
         protected void Login_Click(object sender, EventArgs e)
