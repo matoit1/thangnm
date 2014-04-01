@@ -5,21 +5,29 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using DataAccessObject;
+using EntityObject;
 
 namespace DO_AN_TN.UserControl
 {
     public partial class LoginUC : System.Web.UI.UserControl
     {
         public event EventHandler Navigation;
+        public event EventHandler Login;
         public bool state = false;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtAccounts_Username.Focus();
+            txtsTendangnhap.Focus();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            if (Login != null)
+            {
+                Login(this, EventArgs.Empty);
+            }
+
             //try
             //{
             //    string Accounts_Username = txtAccounts_Username.Text;
@@ -66,6 +74,37 @@ namespace DO_AN_TN.UserControl
             //        Navigation(this, EventArgs.Empty);
             //    }
             //}
+        }
+
+        public DataSet Check(Int16 iType)
+        {
+            DataSet dsOutput = null;
+            try
+            {
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                GiangVienEO _GiangVienEO = new GiangVienEO();
+
+                switch (iType)
+                {
+                    case 1: _SinhVienEO.sTendangnhapSV = txtsTendangnhap.Text;
+                        _SinhVienEO.sMatkhauSV = txtsMatkhau.Text;
+                        _SinhVienEO.iTrangThaiSV = 1;
+                        dsOutput = SinhVienDAO.SinhVien_Login(_SinhVienEO); break;
+                    case 2: _GiangVienEO.sTendangnhapGV = txtsTendangnhap.Text;
+                        _GiangVienEO.sMatkhauGV = txtsMatkhau.Text;
+                        _GiangVienEO.iTrangThaiGV = 1;
+                        dsOutput = GiangVienDAO.GiangVien_Login(_GiangVienEO); break;
+                    case 3: _GiangVienEO.sTendangnhapGV = txtsTendangnhap.Text;
+                        _GiangVienEO.sMatkhauGV = txtsMatkhau.Text;
+                        _GiangVienEO.iTrangThaiGV = 2;
+                        dsOutput = GiangVienDAO.GiangVien_Login(_GiangVienEO); break;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = ex.Message;
+            }
+            return dsOutput;
         }
     }
 }

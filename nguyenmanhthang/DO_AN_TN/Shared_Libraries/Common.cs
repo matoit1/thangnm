@@ -312,6 +312,9 @@ namespace Shared_Libraries
         public const string Xoa_Thanh_Cong = "Xóa thành công";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
 
+        public const string Dang_Nhap_Thanh_Cong = "Đăng nhập thành công";
+        public const string Dang_Nhap_That_Bai = "Đăng nhập thất bại, vui lòng kiểm tra lại!";
+
         public static readonly string DateTime_Temp = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
     }
 }
