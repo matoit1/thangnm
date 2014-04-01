@@ -224,10 +224,10 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 7. SinhVien_SelectItem_By_sTendangnhapSV </summary>
+        /// <summary> 7. SinhVien_SelectBysTendangnhapSV </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>
-        public static SinhVienEO SinhVien_SelectItem_By_sTendangnhapSV(SinhVienEO _SinhVienEO)
+        public static SinhVienEO SinhVien_SelectBysTendangnhapSV(SinhVienEO _SinhVienEO)
         {
             SinhVienEO output = new SinhVienEO();
             DataSet ds = null;
@@ -236,9 +236,9 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_SelectItem_By_sTendangnhapSV", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_SelectBysTendangnhapSV", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaSV", _SinhVienEO.PK_sMaSV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
