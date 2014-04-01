@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using DataAccessObject;
 using EntityObject;
+using Shared_Libraries;
 
 namespace DO_AN_TN.UserControl
 {
@@ -87,16 +88,16 @@ namespace DO_AN_TN.UserControl
                 switch (iType)
                 {
                     case 1: _SinhVienEO.sTendangnhapSV = txtsTendangnhap.Text;
-                        _SinhVienEO.sMatkhauSV = txtsMatkhau.Text;
+                        _SinhVienEO.sMatkhauSV = Security.EnCrypt(txtsMatkhau.Text);
                         _SinhVienEO.iTrangThaiSV = 1;
                         dsOutput = SinhVienDAO.SinhVien_Login(_SinhVienEO); break;
                     case 2: _GiangVienEO.sTendangnhapGV = txtsTendangnhap.Text;
-                        _GiangVienEO.sMatkhauGV = txtsMatkhau.Text;
+                        _GiangVienEO.sMatkhauGV =  Security.EnCrypt(txtsMatkhau.Text);
                         _GiangVienEO.iTrangThaiGV = 1;
                         dsOutput = GiangVienDAO.GiangVien_Login(_GiangVienEO); break;
                     case 3: _GiangVienEO.sTendangnhapGV = txtsTendangnhap.Text;
-                        _GiangVienEO.sMatkhauGV = txtsMatkhau.Text;
-                        _GiangVienEO.iTrangThaiGV = 2;
+                        _GiangVienEO.sMatkhauGV =  Security.EnCrypt(txtsMatkhau.Text);
+                        _GiangVienEO.iTrangThaiGV = 1;
                         dsOutput = GiangVienDAO.GiangVien_Login(_GiangVienEO); break;
                 }
             }

@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoginUC.ascx.cs" Inherits="DO_AN_TN.UserControl.LoginUC" %>
-<link href="../App_Themes/login.css" rel="stylesheet" type="text/css" />
+<link href="../../App_Themes/login.css" rel="stylesheet" type="text/css" />
 <asp:Panel ID="pnlLogin" runat="server" DefaultButton="btnLogin">
     <div class="signin-card">
         <asp:ImageButton ID="imgProfile" CssClass="profile-img" ImageUrl="~/Images/Avatar/default.jpg" AlternateText="ThangNM" PostBackUrl="~/Default.aspx" runat="server" /><br />

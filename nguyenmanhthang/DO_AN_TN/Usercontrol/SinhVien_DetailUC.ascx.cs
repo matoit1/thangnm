@@ -72,7 +72,7 @@ namespace DO_AN_TN.UserControl
                 _SinhVienEO.PK_sMaSV = Convert.ToString(txtPK_sMaSV.Text);
                 _SinhVienEO.sHotenSV = Convert.ToString(txtsHoTenSV.Text);
                 _SinhVienEO.sTendangnhapSV = Convert.ToString(txtsTendangnhapSV.Text);
-                _SinhVienEO.sMatkhauSV = Convert.ToString(txtsMatkhauSV.Text);
+                _SinhVienEO.sMatkhauSV = Convert.ToString(Security.EnCrypt(txtsMatkhauSV.Text));
                 _SinhVienEO.sEmailSV = Convert.ToString(txtsEmailSV.Text);
                 _SinhVienEO.sDiachiSV = Convert.ToString(txtsDiachiSV.Text);
                 _SinhVienEO.sSdtSV = Convert.ToString(txtsSdtSV.Text);
