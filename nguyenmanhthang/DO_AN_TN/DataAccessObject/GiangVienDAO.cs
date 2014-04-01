@@ -212,6 +212,35 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 7. GiangVien_SelectBysTendangnhapGV </summary>
+        /// <param name="_GiangVienEO"></param>
+        /// <returns></returns>
+        public static GiangVienEO GiangVien_SelectBysTendangnhapGV(GiangVienEO _GiangVienEO)
+        {
+            GiangVienEO output = new GiangVienEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblGiangVien_SelectBysTendangnhapGV", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapGV", _GiangVienEO.sTendangnhapGV));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    output = DataSet2Object.GiangVien(ds);
+                    return output;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return output;
+                }
+            }
+        }
+
         /// <summary> 7. GiangVien_SelectList </summary>
         /// <param name="_GiangVienEO"></param>
         /// <returns></returns>
