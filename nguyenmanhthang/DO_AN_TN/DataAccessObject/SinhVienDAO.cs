@@ -293,7 +293,8 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_SelectBysEmailSVvssSdtSV", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sEmailSV", _SinhVienEO.sEmailSV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sSdtSV", _SinhVienEO.sSdtSV));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

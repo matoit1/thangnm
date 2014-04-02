@@ -14,6 +14,16 @@ namespace DO_AN_TN.UserControl
 {
     public partial class ForgotPasswordUC : System.Web.UI.UserControl
     {
+        #region "Properties & Event"
+        public event EventHandler ResetPassword;
+        public event EventHandler FindAccount;
+        public string login_url
+        {
+            get { return (string)ViewState["login_url"]; }
+            set { ViewState["login_url"] = value; }
+        }
+        #endregion
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,7 +31,6 @@ namespace DO_AN_TN.UserControl
                 imgCaptcha1.ImageUrl = new CaptchaProvider().CreateCaptcha();
                 imgCaptcha2.ImageUrl = imgCaptcha1.ImageUrl;
             }
-
         }
 
         protected void btnReset_Click(object sender, EventArgs e)
@@ -29,40 +38,14 @@ namespace DO_AN_TN.UserControl
             CaptchaProvider captchaPro = new CaptchaProvider();
             if (captchaPro.IsValidCode(txtCaptcha1.Text))
             {
-                SinhVienEO _SinhVienEO = new SinhVienEO();
-                _SinhVienEO.sTendangnhapSV = txtAccounts_Username.Text;
-                _SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);
-                if (_SinhVienEO != null)
+                if (ResetPassword != null)
                 {
-                    if (txtAccounts_Username.Text == _SinhVienEO.sTendangnhapSV)
-                    {
-                        if (txtAccounts_Email1.Text == _SinhVienEO.sEmailSV)
-                        {
-                            reset(txtAccounts_Username.Text, txtAccounts_Email1.Text);
-                            lblMsg1.Text = "Hệ thống đã gửi mật khẩu mới vào Email của bạn";
-                            lblMsg1.CssClass = "notificationSuccessful";
-                        }
-                        else
-                        {
-                            lblMsg1.Text = "Địa chỉ Email không đúng, Vui lòng thử lại";
-                            lblMsg1.CssClass = "notificationError";
-                        }
-                    }
-                    else
-                    {
-                        lblMsg1.Text = "Tài khoản không đúng, Vui lòng thử lại";
-                        lblMsg1.CssClass = "notificationError";
-                    }
-                }
-                else
-                {
-                    lblMsg1.Text = "Không có tên tài khoản và email nào trùng khớp. Vui lòng kiểm tra lại";
-                    lblMsg1.CssClass = "notificationError";
+                    ResetPassword(this, EventArgs.Empty);
                 }
             }
             else
             {
-                lblMsg1.Text = "Captcha không chính xác";
+                lblMsg1.Text = Messages.Sai_Captcha;
                 lblMsg1.CssClass = "notificationError";
             }
         }
@@ -72,30 +55,80 @@ namespace DO_AN_TN.UserControl
             CaptchaProvider captchaPro = new CaptchaProvider();
             if (captchaPro.IsValidCode(txtCaptcha2.Text))
             {
-                SinhVienEO _SinhVienEO = new SinhVienEO();
-                _SinhVienEO.sEmailSV = txtAccounts_Email2.Text;
-                _SinhVienEO.sSdtSV = txtAccounts_PhoneNumber.Text;
-                _SinhVienEO = SinhVienDAO.SinhVien_SelectBysEmailSVvssSdtSV(_SinhVienEO);
-                if (_SinhVienEO != null)
+                if (FindAccount != null)
                 {
-                    reset(_SinhVienEO.sTendangnhapSV, txtAccounts_Email2.Text);
-                    lblMsg2.Text = "Hệ thống đã gửi mật khẩu mới vào Email của bạn";
-                    lblMsg2.CssClass = "notificationSuccessful";
-                }
-                else
-                {
-                    lblMsg2.Text = "Không có email và số điện thoại nào trùng khớp. Vui lòng kiểm tra lại";
-                    lblMsg2.CssClass = "notificationError";
-                }
+                    FindAccount(this, EventArgs.Empty);
+                } 
             }
             else
             {
-                lblMsg2.Text = "Captcha không chính xác";
+                lblMsg2.Text = Messages.Sai_Captcha;
                 lblMsg2.CssClass = "notificationError";
             }
         }
 
-        public void reset(String acc, String email){
+        public void Reset_Password(string acc, string email, Int16 type){
+            string newpass = Security.RandomPassword();
+            bool state = false;
+            SinhVienEO _SinhVienEO = new SinhVienEO();
+            GiangVienEO _GiangVienEO = new GiangVienEO();
+            try
+            {
+                switch (type)
+                {
+                    case 1:
+                        _SinhVienEO.sTendangnhapSV = acc;
+                        _SinhVienEO.sMatkhauSV = Security.EnCrypt(newpass);
+                        if (SinhVienDAO.SinhVien_ResetPassword(_SinhVienEO) == true)
+                        {
+                            Sent_Mail(acc, email, newpass);
+                            state = true;
+                        }
+                        break;
+                    case 2: 
+                        _GiangVienEO.sTendangnhapGV = acc;
+                        _GiangVienEO.sMatkhauGV = Security.EnCrypt(newpass);
+                        if (GiangVienDAO.GiangVien_ResetPassword(_GiangVienEO) == true)
+                        {
+                            Sent_Mail(acc, email, newpass);
+                            state = true;
+                        }
+                        break;
+                    case 3: 
+                        _GiangVienEO.sTendangnhapGV = acc;
+                        _GiangVienEO.sMatkhauGV = Security.EnCrypt(newpass);
+                        if (GiangVienDAO.GiangVien_ResetPassword(_GiangVienEO) == true)
+                        {
+                            Sent_Mail(acc, email, newpass);
+                            state = true;
+                        }
+                        break;
+                }
+                if(state == true){
+                    txtsTendangnhap.Text = "";
+                    txtsEmail1.Text = "";
+                    txtsSdt.Text = "";
+                    txtsEmail2.Text = "";
+                }
+                else{
+                    lblMsg1.Text = Messages.Doi_Mat_Khau_That_Bai;
+                    lblMsg1.CssClass = "notificationError";
+                    lblMsg2.Text = Messages.Doi_Mat_Khau_That_Bai;
+                    lblMsg2.CssClass = "notificationError";
+                }
+            }
+            catch
+            {
+                lblMsg1.Text = Messages.Doi_Mat_Khau_That_Bai;
+                lblMsg1.CssClass = "notificationError";
+                lblMsg2.Text = Messages.Doi_Mat_Khau_That_Bai;
+                lblMsg2.CssClass = "notificationError";
+            }
+                  
+        }
+
+        public void Sent_Mail(string acc, string email, string newpass)
+        {
             SmtpClient SmtpServer = new SmtpClient();
             SmtpServer.Credentials = new System.Net.NetworkCredential("it.site44.com@gmail.com", "ydtndlpacvzspqid");
             SmtpServer.Port = 587;
@@ -105,33 +138,26 @@ namespace DO_AN_TN.UserControl
             String[] addr = email.Split(',');
             try
             {
-                string newpass = Security.RandomPassword();
+                
                 mail.From = new MailAddress("it.site44.com@gmail.com", "Nguyễn Mạnh Thắng - ThangNM", System.Text.Encoding.UTF8);
                 Byte i;
                 for (i = 0; i < addr.Length; i++)
                     mail.To.Add(addr[i]);
-                mail.Subject = "Yêu cầu lấy lại mật khẩu [" + acc + "] http://nguyenmanhthang.tk ";
-                mail.Body = "Yêu cầu lấy lại mật khẩu từ Website Nguyễn Mạnh Thắng - ThangNM \n\n   Tên đăng nhập của bạn là: " + acc +
-                    ".\n   Mật khẩu mới của bạn là : " + newpass + "\n\nBạn có thể đăng nhập tại đây: http://nguyenmanhthang.tk/accounts/login.aspx";
+                mail.Subject = "Yêu cầu lấy lại mật khẩu [" + acc + "] " + Request.Url.Host;
+                mail.Body = "Bạn đã sử dụng chức năng lấy lại mật khẩu trên website " + Request.Url.Host + "\n\n" +
+                    "   Tên đăng nhập của bạn là: " + acc + ".\n" +
+                    "   Mật khẩu mới của bạn là : " + newpass + "\n\nBạn có thể đăng nhập tại đây: " + login_url;
                 mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
                 mail.ReplyTo = new MailAddress(email);
                 SmtpServer.Send(mail);
-                SinhVienEO _SinhVienEO = new SinhVienEO();
-                _SinhVienEO.sTendangnhapSV = acc;
-                _SinhVienEO.sMatkhauSV = Security.EnCrypt(newpass);
-                SinhVienDAO.SinhVien_ResetPassword(_SinhVienEO);
-                txtAccounts_Username.Text = "";
-                txtAccounts_Email1.Text = "";
-                txtAccounts_PhoneNumber.Text = "";
-                txtAccounts_Email2.Text = "";
             }
             catch (Exception ex)
             {
-                lblMsg1.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
+                lblMsg1.Text = Messages.Gui_Mail_Doi_Mat_Khau_That_Bai;
                 lblMsg1.CssClass = "notificationError";
-                lblMsg2.Text = "Có lỗi xảy ra. Vui lòng kiểm tra lại";
+                lblMsg2.Text = Messages.Gui_Mail_Doi_Mat_Khau_That_Bai;
                 lblMsg2.CssClass = "notificationError";
-            }        
+            }  
         }
 
         protected void ChangeCaptcha_Click(object sender, EventArgs e)

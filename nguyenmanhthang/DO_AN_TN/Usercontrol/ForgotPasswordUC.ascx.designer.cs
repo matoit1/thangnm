@@ -64,25 +64,25 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg1;
+        public global::System.Web.UI.WebControls.Label lblMsg1;
         
         /// <summary>
-        /// txtAccounts_Username control.
+        /// txtsTendangnhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Username;
+        public global::System.Web.UI.WebControls.TextBox txtsTendangnhap;
         
         /// <summary>
-        /// txtAccounts_Email1 control.
+        /// txtsEmail1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Email1;
+        public global::System.Web.UI.WebControls.TextBox txtsEmail1;
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -172,25 +172,25 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg2;
+        public global::System.Web.UI.WebControls.Label lblMsg2;
         
         /// <summary>
-        /// txtAccounts_Email2 control.
+        /// txtsEmail2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccounts_Email2;
+        public global::System.Web.UI.WebControls.TextBox txtsEmail2;
         
         /// <summary>
-        /// txtAccounts_PhoneNumber control.
+        /// txtsSdt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccounts_PhoneNumber;
+        public global::System.Web.UI.WebControls.TextBox txtsSdt;
         
         /// <summary>
         /// UpdatePanel2 control.

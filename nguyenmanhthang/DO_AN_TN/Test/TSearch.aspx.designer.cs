@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DO_AN_TN.QuanTri.Accounts {
+namespace DO_AN_TN.Test {
     
     
-    public partial class ForgotPassword {
+    public partial class TSearch {
         
         /// <summary>
         /// form1 control.
@@ -22,12 +22,21 @@ namespace DO_AN_TN.QuanTri.Accounts {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ForgotPasswordUC1 control.
+        /// hplLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DO_AN_TN.UserControl.ForgotPasswordUC ForgotPasswordUC1;
+        protected global::System.Web.UI.WebControls.HyperLink hplLogin;
+        
+        /// <summary>
+        /// SinhVien_SearchUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.Search.SinhVien_SearchUC SinhVien_SearchUC1;
     }
 }
