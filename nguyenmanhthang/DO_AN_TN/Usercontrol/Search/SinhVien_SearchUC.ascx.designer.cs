@@ -7,81 +7,81 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DO_AN_TN.UserControl {
+namespace DO_AN_TN.UserControl.Search {
     
     
-    public partial class SinhVien_ListUC {
+    public partial class SinhVien_SearchUC {
         
         /// <summary>
-        /// hplSearch control.
+        /// Panel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplSearch;
+        protected global::System.Web.UI.WebControls.Panel Panel1;
         
         /// <summary>
-        /// btnRefresh control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRefresh;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// btnAddNew control.
+        /// txtFK_sMaLop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddNew;
+        protected global::System.Web.UI.WebControls.TextBox txtFK_sMaLop;
         
         /// <summary>
-        /// btnDeleteList control.
+        /// txtPK_sMaSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDeleteList;
+        protected global::System.Web.UI.WebControls.TextBox txtPK_sMaSV;
         
         /// <summary>
-        /// btnExportExcel control.
+        /// txtsHotenSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExportExcel;
+        protected global::System.Web.UI.WebControls.TextBox txtsHotenSV;
         
         /// <summary>
-        /// grvListSinhVien control.
+        /// txtsTendangnhapSV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvListSinhVien;
+        protected global::System.Web.UI.WebControls.TextBox txtsTendangnhapSV;
         
         /// <summary>
-        /// lblTongSoBanGhi control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTongSoBanGhi;
+        protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
-        /// SinhVien_SearchUC1 control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DO_AN_TN.UserControl.Search.SinhVien_SearchUC SinhVien_SearchUC1;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
     }
 }

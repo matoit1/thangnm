@@ -133,6 +133,32 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 3. GiangVien_ResetPassword </summary>
+        /// <param name="_GiangVienEO"></param>
+        /// <returns></returns>
+        public static bool GiangVien_ResetPassword(GiangVienEO _GiangVienEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblGiangVien_ResetPassword", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sTendangnhapGV", _GiangVienEO.sTendangnhapGV));
+                    cmd.Parameters.Add(new SqlParameter("@sMatkhauGV", _GiangVienEO.sMatkhauGV));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
         /// <summary> 4. GiangVien_Delete </summary>
         /// <param name="_GiangVienEO"></param>
         /// <returns></returns>

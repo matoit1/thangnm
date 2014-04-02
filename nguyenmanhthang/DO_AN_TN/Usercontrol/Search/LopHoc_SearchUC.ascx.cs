@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace DO_AN_TN.QuanTri.Accounts
+namespace DO_AN_TN.UserControl.Search
 {
-    public partial class ForgotPassword : System.Web.UI.Page
+    public partial class LopHoc_SearchUC : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ForgotPasswordUC1.login_url = Request.Url.Host + "/QuanTri/Accounts/Login.aspx";
+
         }
     }
 }

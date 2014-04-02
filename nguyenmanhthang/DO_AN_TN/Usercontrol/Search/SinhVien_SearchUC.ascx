@@ -1,0 +1,59 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SinhVien_SearchUC.ascx.cs" Inherits="DO_AN_TN.UserControl.Search.SinhVien_SearchUC" %>
+<style type="text/css">
+.wrap {
+    background-color: #F7F7F7;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 25px auto auto auto;
+	padding: 20px;
+    width: 350px;
+}
+.head {
+    text-align: center;
+    color: Blue;
+    font-size:24px;
+}
+</style>
+<div id="toPopup">
+	<div class="close"></div>
+	<span class="ecs_tooltip">Bấm phím Esc để đóng cửa sổ này!</span>
+	<div id="popup_content">
+        <asp:Panel ID="Panel1" runat="server" CssClass="wrap" DefaultButton="btnSearch">
+            <table>
+                <tr>
+                    <td colspan="2" class="head">Tìm kiếm sinh viên</td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td colspan="2"><asp:Label ID="lblMsg" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td>Mã Lớp Học</td>
+                    <td><asp:TextBox ID="txtFK_sMaLop" runat="server" Width="250px"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Mã Sinh Viên</td>
+                    <td><asp:TextBox ID="txtPK_sMaSV" runat="server" Width="250px"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Họ và Tên</td>
+                    <td><asp:TextBox ID="txtsHotenSV" runat="server" Width="250px"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Tên đăng nhập</td>
+                    <td><asp:TextBox ID="txtsTendangnhapSV" runat="server" Width="250px"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" 
+                            onclick="btnSearch_Click" />
+                        <asp:Button ID="btnCancel" runat="server" Text="Hủy" 
+                            onclick="btnCancel_Click" />
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
+    </div>
+</div>
+<div id="backgroundPopup"></div>

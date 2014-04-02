@@ -11,7 +11,7 @@ namespace DO_AN_TN.GiangVien.Accounts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ForgotPasswordUC1.login_url = Request.Url.Host + "/GiangVien/Accounts/Login.aspx";
         }
     }
 }

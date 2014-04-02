@@ -82,6 +82,7 @@
     <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
     <Content Include="Images\Avatar\default.jpg" />
+    <Content Include="Images\Icon\closebox.png" />
     <Content Include="Media\Virus.WAV" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
@@ -258,6 +259,7 @@
     <Content Include="Test\TMonHoc.aspx" />
     <Content Include="Test\DemoToolbar.aspx" />
     <Content Include="Test\TPhanCongCongTac.aspx" />
+    <Content Include="Test\TSearch.aspx" />
     <Content Include="Test\TSinhVien.aspx" />
     <Content Include="UserControl\ASM_ClientUC.ascx" />
     <Content Include="UserControl\ASM_ServerUC.ascx" />
@@ -283,6 +285,16 @@
     <Content Include="UserControl\PhanCongCongTac_DetailUC.ascx" />
     <Content Include="UserControl\PhanCongCongTac_ListUC.ascx" />
     <Content Include="UserControl\RegisterUC.ascx" />
+    <Content Include="UserControl\Search\BaiViet_SearchUC.ascx" />
+    <Content Include="UserControl\Search\CauHoi_SearchUC.ascx" />
+    <Content Include="UserControl\Search\DiemThi_SearchUC.ascx" />
+    <Content Include="UserControl\Search\Error_SearchUC.ascx" />
+    <Content Include="UserControl\Search\GiangVien_SearchUC.ascx" />
+    <Content Include="UserControl\Search\LichDayVaHoc_SearchUC.ascx" />
+    <Content Include="UserControl\Search\LopHoc_SearchUC.ascx" />
+    <Content Include="UserControl\Search\MonHoc_SearchUC.ascx" />
+    <Content Include="UserControl\Search\PhanCongCongTac_SearchUC.ascx" />
+    <Content Include="UserControl\Search\SinhVien_SearchUC.ascx" />
     <Content Include="UserControl\SinhVien_DetailUC.ascx" />
     <Content Include="UserControl\SinhVien_ListUC.ascx" />
     <Content Include="UserControl\TracNghiemUC.ascx" />
@@ -703,6 +715,13 @@
     <Compile Include="Test\TPhanCongCongTac.aspx.designer.cs">
       <DependentUpon>TPhanCongCongTac.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Test\TSearch.aspx.cs">
+      <DependentUpon>TSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TSearch.aspx.designer.cs">
+      <DependentUpon>TSearch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Test\TSinhVien.aspx.cs">
       <DependentUpon>TSinhVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -878,6 +897,76 @@
     <Compile Include="UserControl\RegisterUC.ascx.designer.cs">
       <DependentUpon>RegisterUC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\Search\BaiViet_SearchUC.ascx.cs">
+      <DependentUpon>BaiViet_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\BaiViet_SearchUC.ascx.designer.cs">
+      <DependentUpon>BaiViet_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\CauHoi_SearchUC.ascx.cs">
+      <DependentUpon>CauHoi_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\CauHoi_SearchUC.ascx.designer.cs">
+      <DependentUpon>CauHoi_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\DiemThi_SearchUC.ascx.cs">
+      <DependentUpon>DiemThi_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\DiemThi_SearchUC.ascx.designer.cs">
+      <DependentUpon>DiemThi_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\Error_SearchUC.ascx.cs">
+      <DependentUpon>Error_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\Error_SearchUC.ascx.designer.cs">
+      <DependentUpon>Error_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\GiangVien_SearchUC.ascx.cs">
+      <DependentUpon>GiangVien_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\GiangVien_SearchUC.ascx.designer.cs">
+      <DependentUpon>GiangVien_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\LichDayVaHoc_SearchUC.ascx.cs">
+      <DependentUpon>LichDayVaHoc_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\LichDayVaHoc_SearchUC.ascx.designer.cs">
+      <DependentUpon>LichDayVaHoc_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\LopHoc_SearchUC.ascx.cs">
+      <DependentUpon>LopHoc_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\LopHoc_SearchUC.ascx.designer.cs">
+      <DependentUpon>LopHoc_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\MonHoc_SearchUC.ascx.cs">
+      <DependentUpon>MonHoc_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\MonHoc_SearchUC.ascx.designer.cs">
+      <DependentUpon>MonHoc_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\PhanCongCongTac_SearchUC.ascx.cs">
+      <DependentUpon>PhanCongCongTac_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\PhanCongCongTac_SearchUC.ascx.designer.cs">
+      <DependentUpon>PhanCongCongTac_SearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Search\SinhVien_SearchUC.ascx.cs">
+      <DependentUpon>SinhVien_SearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Search\SinhVien_SearchUC.ascx.designer.cs">
+      <DependentUpon>SinhVien_SearchUC.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\SinhVien_DetailUC.ascx.cs">
       <DependentUpon>SinhVien_DetailUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -917,7 +1006,6 @@
     <Content Include="Share_Interface\QuanTri_SI.Master" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Icon\Thumbs.db" />
     <None Include="Other\ProjectManagement\General.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

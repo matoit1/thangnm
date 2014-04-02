@@ -305,15 +305,27 @@ namespace Shared_Libraries
         public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng ngày/ giờ, Vui lòng kiểm tra lại!";
 
-        public const string Them_Thanh_Cong = "Thêm thành công";
+        public const string Them_Thanh_Cong = "Thêm thành công!";
         public const string Them_That_Bai = "Thêm thất bại, vui lòng kiểm tra lại!";
-        public const string Sua_Thanh_Cong = "Sửa thành công";
+        public const string Sua_Thanh_Cong = "Sửa thành công!";
         public const string Sua_That_Bai = "Sửa thất bại, vui lòng kiểm tra lại!";
-        public const string Xoa_Thanh_Cong = "Xóa thành công";
+        public const string Xoa_Thanh_Cong = "Xóa thành công!";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
 
-        public const string Dang_Nhap_Thanh_Cong = "Đăng nhập thành công";
+        public const string Dang_Nhap_Thanh_Cong = "Đăng nhập thành công!";
         public const string Dang_Nhap_That_Bai = "Đăng nhập thất bại, vui lòng kiểm tra lại!";
+
+        public const string Doi_Mat_Khau_That_Bai = "Đổi mật khẩu thất bại, vui lòng kiểm tra lại!";
+        public const string Doi_Mat_Khau_Thanh_Cong = "Đổi mật khẩu thành công!";
+        public const string Gui_Mail_Doi_Mat_Khau_Thanh_Cong = "Hệ thống đã gửi mật khẩu mới vào Email của bạn!";
+        public const string Gui_Mail_Doi_Mat_Khau_That_Bai = "Không thể kết nối tới Email!";
+
+        public const string Sai_Ten_Tai_Khoan = "Tài khoản không đúng, Vui lòng thử lại!";
+        public const string Sai_Email = "Email không đúng, Vui lòng thử lại!";
+        public const string Sai_Mat_Khau = "Mật khẩu không đúng, Vui lòng thử lại!";
+        public const string Sai_Ten_Tai_Khoan_Hoac_Email = "Không có tên tài khoản và email nào trùng khớp. Vui lòng kiểm tra lại!";
+        public const string Sai_Email_Hoac_So_Dien_Thoai = "Không có email và số điện thoại nào trùng khớp. Vui lòng kiểm tra lại!";
+        public const string Sai_Captcha = "Captcha không chính xác, vui lòng kiểm tra lại!";
 
         public static readonly string DateTime_Temp = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
     }

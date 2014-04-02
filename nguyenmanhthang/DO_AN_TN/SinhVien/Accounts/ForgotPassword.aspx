@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <uc1:ForgotPasswordUC ID="ForgotPasswordUC1" runat="server" />
+        <uc1:ForgotPasswordUC ID="ForgotPasswordUC1" runat="server" OnResetPassword="ResetPassword_Click" OnFindAccount="FindAccount_Click"/>
     
     </div>
     </form>
