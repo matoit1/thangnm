@@ -113,6 +113,31 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 3. BaiViet_Update_iLuotXem </summary>
+        /// <param name="_BaiVietEO"></param>
+        /// <returns></returns>
+        public static bool BaiViet_Update_iLuotXem(BaiVietEO _BaiVietEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblBaiViet_Update_iLuotXem", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_lMaBaiViet", _BaiVietEO.PK_lMaBaiViet));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
         /// <summary> 4. BaiViet_Delete </summary>
         /// <param name="_BaiVietEO"></param>
         /// <returns></returns>
