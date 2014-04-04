@@ -1,12 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MonHoc_ListUC.ascx.cs" Inherits="DO_AN_TN.UserControl.MonHoc_ListUC" %>
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<%@ Register src="~/UserControl/LoginUC.ascx" tagname="LoginUC" tagprefix="uc1" %>
+<%@ Register src="Search/MonHoc_SearchUC.ascx" tagname="MonHoc_SearchUC" tagprefix="uc1" %>
 
-<%@ Register src="Search/MonHoc_SearchUC.ascx" tagname="MonHoc_SearchUC" tagprefix="uc2" %>
-
-<link href="../App_Themes/popup.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
-<script type="text/javascript" src="../Scripts/popup.js"></script>
 <script type="text/javascript">
     function CheckAll(chkTemp) {
         var grvTemp = document.getElementById("<%=grvListMonHoc.ClientID %>");
@@ -79,5 +73,5 @@
             <td><asp:Label ID="lblTongSoBanGhi" runat="server"></asp:Label></td>
         </tr>
     </table>
-    <uc2:MonHoc_SearchUC ID="MonHoc_SearchUC1" runat="server" OnSearch="Search_Click" />
+    <uc1:MonHoc_SearchUC ID="MonHoc_SearchUC1" runat="server" OnSearch="Search_Click" />
 </div>

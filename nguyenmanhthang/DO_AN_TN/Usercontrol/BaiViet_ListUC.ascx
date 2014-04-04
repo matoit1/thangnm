@@ -1,8 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BaiViet_ListUC.ascx.cs" Inherits="DO_AN_TN.UserControl.BaiViet_ListUC" %>
 <%@ Register src="Search/BaiViet_SearchUC.ascx" tagname="BaiViet_SearchUC" tagprefix="uc1" %>
-<link href="../App_Themes/popup.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
-<script type="text/javascript" src="../Scripts/popup.js"></script>
+
 <script type="text/javascript">
     function CheckAll(chkTemp) {
         var grvTemp = document.getElementById("<%=grvListBaiViet.ClientID %>");
