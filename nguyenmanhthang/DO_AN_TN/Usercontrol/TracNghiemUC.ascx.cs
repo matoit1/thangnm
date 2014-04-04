@@ -90,7 +90,9 @@ namespace DO_AN_TN.UserControl
             }
             lblMsg.Text = "Bạn đã trả lời đúng: " + true_false + "/10";
             DiemThiEO _DiemThiEO = new DiemThiEO();
-            _DiemThiEO.FK_sMaSV = "10A110111";
+            SinhVienEO _SinhVienEO = new SinhVienEO();
+            _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
+            _DiemThiEO.FK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
             _DiemThiEO.FK_sMaMonhoc = "MH000004";
             _DiemThiEO.PK_iSolanhoc = 1;
             _DiemThiEO.fDiemgiuaky = true_false;

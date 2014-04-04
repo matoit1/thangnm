@@ -239,6 +239,7 @@
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="SinhVien\DiemThi.aspx" />
     <Content Include="SinhVien\LichHoc.aspx" />
+    <Content Include="SinhVien\ThiTracNghiem.aspx" />
     <Content Include="SinhVien\ThongTinCaNhan.aspx" />
     <Content Include="SinhVien\User.aspx" />
     <Content Include="Test\AMS_Server.aspx" />
@@ -298,7 +299,9 @@
     <Content Include="UserControl\SinhVien_DetailUC.ascx" />
     <Content Include="UserControl\SinhVien_ListUC.ascx" />
     <Content Include="UserControl\TracNghiemUC.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -581,6 +584,13 @@
     </Compile>
     <Compile Include="SinhVien\LichHoc.aspx.designer.cs">
       <DependentUpon>LichHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\ThiTracNghiem.aspx.cs">
+      <DependentUpon>ThiTracNghiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\ThiTracNghiem.aspx.designer.cs">
+      <DependentUpon>ThiTracNghiem.aspx</DependentUpon>
     </Compile>
     <Compile Include="SinhVien\ThongTinCaNhan.aspx.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>

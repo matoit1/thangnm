@@ -2,6 +2,8 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <%@ Register src="~/UserControl/LoginUC.ascx" tagname="LoginUC" tagprefix="uc1" %>
 
+<%@ Register src="Search/MonHoc_SearchUC.ascx" tagname="MonHoc_SearchUC" tagprefix="uc2" %>
+
 <link href="../App_Themes/popup.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
 <script type="text/javascript" src="../Scripts/popup.js"></script>
@@ -13,38 +15,15 @@
         }
     }
 </script>
-<%--<style type="text/css">
-.modalBackground
-{
-    background-color:Gray;
-    filter:alpha(opacity=70);
-    opacity:0.7;
-}
-.modalPopup
-{
-    background-color:#EEEEEE;
-    border-width:3px;
-    border-style:solid;
-    border-color:Gray;
-    padding:3px;
-}
-</style>
-<cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-</cc1:ToolkitScriptManager>--%>
-<%--    <cc1:ModalPopupExtender ID="ModalPopupExtender1" runat="server" PopupControlID="pnlSearch" TargetControlID="btnTimKiem" BackgroundCssClass="modalBackground" 
-    OkControlID="" CancelControlID="" DropShadow="true" Drag="false" >
-    </cc1:ModalPopupExtender>--%>
 <div>
     <table>
         <tr>
             <td>
-                <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" onclick="btnSearch_Click" />
+                <asp:HyperLink ID="hplSearch" runat="server" NavigateUrl="#" CssClass="topopup style_button" >Tìm kiếm</asp:HyperLink>
                 <asp:Button ID="btnRefresh" runat="server" Text="Làm mới" onclick="btnRefresh_Click" />
                 <asp:Button ID="btnAddNew" runat="server" Text="Thêm" onclick="btnAddNew_Click" />
                 <asp:Button ID="btnDeleteList" runat="server" Text="Xóa" onclick="btnDeleteList_Click" />
                 <asp:Button ID="btnExportExcel" runat="server" Text="Xuất ra Excel" onclick="btnExportExcel_Click" />
-                <%--<asp:LinkButton ID="LinkButton1" runat="server" CssClass="topopup" >LinkButton</asp:LinkButton>
-                <asp:Button ID="btnTimKiem" runat="server" Text="Tìm kiếm"/>--%>
             </td>
         </tr>
         <tr>
@@ -100,15 +79,5 @@
             <td><asp:Label ID="lblTongSoBanGhi" runat="server"></asp:Label></td>
         </tr>
     </table>
+    <uc2:MonHoc_SearchUC ID="MonHoc_SearchUC1" runat="server" OnSearch="Search_Click" />
 </div>
-<%--<asp:Panel ID="pnlSearch" runat="server" CssClass="modalPopup">
-<uc1:LoginUC ID="LoginUC2" runat="server" OnNavigation="Navigation_Click" />
-</asp:Panel>
-<div id="toPopup">
-	<div class="close"></div>
-	<span class="ecs_tooltip">Press Esc to close</span>
-	<div id="popup_content"> <!--your content start-->
-		<uc1:LoginUC ID="LoginUC1" runat="server" OnNavigation="Navigation_Click" />
-	</div> <!--your content end-->
-</div> <!--toPopup end-->
-<div id="backgroundPopup"></div>--%>

@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BaiViet_ListUC.ascx.cs" Inherits="DO_AN_TN.UserControl.BaiViet_ListUC" %>
+<%@ Register src="Search/BaiViet_SearchUC.ascx" tagname="BaiViet_SearchUC" tagprefix="uc1" %>
 <link href="../App_Themes/popup.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
 <script type="text/javascript" src="../Scripts/popup.js"></script>
@@ -92,4 +93,5 @@
             <td><asp:Label ID="lblTongSoBanGhi" runat="server"></asp:Label></td>
         </tr>
     </table>
+    <uc1:BaiViet_SearchUC ID="BaiViet_SearchUC1" runat="server" OnSearch="Search_Click" />
 </div>

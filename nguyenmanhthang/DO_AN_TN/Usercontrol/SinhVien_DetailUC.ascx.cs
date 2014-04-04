@@ -245,5 +245,19 @@ namespace DO_AN_TN.UserControl
             BindDataDetail(_SinhVienEO);
         }
         #endregion
+
+        protected void txtPK_sMaSV_TextChanged(object sender, EventArgs e)
+        {
+            SinhVienEO _SinhVienEO = new SinhVienEO();
+            _SinhVienEO.PK_sMaSV = txtPK_sMaSV.Text;
+            if (SinhVienDAO.SinhVien_CheckExists(_SinhVienEO) == true)
+            {
+                lblPK_sMaSV.Text = Messages.Ma_Da_Ton_Tai;
+            }
+            else
+            {
+                lblPK_sMaSV.Text = "";
+            }
+        }
     }
 }

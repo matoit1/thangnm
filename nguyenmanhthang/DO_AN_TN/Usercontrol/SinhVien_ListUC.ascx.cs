@@ -146,7 +146,7 @@ namespace DO_AN_TN.UserControl
         #region "Event Button"
         protected void Search_Click(object sender, EventArgs e)
         {
-            lblTongSoBanGhi.Text = "testc";
+            BindData();
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)

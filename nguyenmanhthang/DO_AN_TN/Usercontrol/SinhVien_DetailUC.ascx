@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <td>Mã sinh viên: </td>
-            <td><asp:TextBox ID="txtPK_sMaSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_sMaSV" runat="server" Width="400px" ontextchanged="txtPK_sMaSV_TextChanged" AutoPostBack="true"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_sMaSV" runat="server"></asp:Label></td>
         </tr>
         <tr>

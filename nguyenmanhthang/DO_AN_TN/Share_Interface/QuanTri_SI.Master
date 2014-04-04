@@ -5,8 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Quản trị</title>
-    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
     <link href="../App_Themes/public.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('form ~ div').hide();
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">

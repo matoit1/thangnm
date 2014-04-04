@@ -18,7 +18,6 @@ namespace DO_AN_TN.UserControl
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
-        public event EventHandler Search;
 
         private string _PK_sMaPCCT;
         public string PK_sMaPCCT
@@ -143,12 +142,9 @@ namespace DO_AN_TN.UserControl
         #endregion
 
         #region "Event Button"
-        protected void btnSearch_Click(object sender, EventArgs e)
+        protected void Search_Click(object sender, EventArgs e)
         {
-            if (Search != null)
-            {
-                Search(this, EventArgs.Empty);
-            }
+            BindData();
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)

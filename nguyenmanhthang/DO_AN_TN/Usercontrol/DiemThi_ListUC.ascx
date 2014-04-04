@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DiemThi_ListUC.ascx.cs" Inherits="DO_AN_TN.UserControl.DiemThi_ListUC" %>
+<%@ Register src="Search/DiemThi_SearchUC.ascx" tagname="DiemThi_SearchUC" tagprefix="uc1" %>
 <script type="text/javascript">
     function CheckAll(oCheckbox) {
         var GridView2 = document.getElementById("<%=grvListDiemThi.ClientID %>");
@@ -11,7 +12,7 @@
     <table>
         <tr>
             <td>
-                <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" onclick="btnSearch_Click" />
+                <asp:HyperLink ID="hplSearch" runat="server" NavigateUrl="#" CssClass="topopup style_button" >Tìm kiếm</asp:HyperLink>
                 <asp:Button ID="btnRefresh" runat="server" Text="Làm mới" onclick="btnRefresh_Click" />
                 <asp:Button ID="btnAddNew" runat="server" Text="Thêm" onclick="btnAddNew_Click" />
                 <asp:Button ID="btnDeleteList" runat="server" Text="Xóa" onclick="btnDeleteList_Click" />
@@ -80,4 +81,5 @@
             <td><asp:Label ID="lblTongSoBanGhi" runat="server"></asp:Label></td>
         </tr>
     </table>
+    <uc1:DiemThi_SearchUC ID="DiemThi_SearchUC1" runat="server" OnSearch="Search_Click" />
 </div>
