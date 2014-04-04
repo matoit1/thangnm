@@ -78,6 +78,7 @@
     <Content Include="GiangVien\Accounts\Login.aspx" />
     <Content Include="GiangVien\Accounts\Register.aspx" />
     <Content Include="GiangVien\Default.aspx" />
+    <Content Include="GiangVien\GiangDay.aspx" />
     <Content Include="GiangVien\LopHoc.aspx" />
     <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
@@ -238,6 +239,7 @@
     <Content Include="SinhVien\Accounts\Register.aspx" />
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="SinhVien\DiemThi.aspx" />
+    <Content Include="SinhVien\HocTap.aspx" />
     <Content Include="SinhVien\LichHoc.aspx" />
     <Content Include="SinhVien\ThiTracNghiem.aspx" />
     <Content Include="SinhVien\ThongTinCaNhan.aspx" />
@@ -399,6 +401,13 @@
     </Compile>
     <Compile Include="GiangVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien\GiangDay.aspx.cs">
+      <DependentUpon>GiangDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\GiangDay.aspx.designer.cs">
+      <DependentUpon>GiangDay.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiangVien\LopHoc.aspx.cs">
       <DependentUpon>LopHoc.aspx</DependentUpon>
@@ -577,6 +586,13 @@
     </Compile>
     <Compile Include="SinhVien\DiemThi.aspx.designer.cs">
       <DependentUpon>DiemThi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\HocTap.aspx.cs">
+      <DependentUpon>HocTap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\HocTap.aspx.designer.cs">
+      <DependentUpon>HocTap.aspx</DependentUpon>
     </Compile>
     <Compile Include="SinhVien\LichHoc.aspx.cs">
       <DependentUpon>LichHoc.aspx</DependentUpon>
