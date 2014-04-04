@@ -13,13 +13,13 @@ namespace DO_AN_TN.UserControl {
     public partial class LopHoc_ListUC {
         
         /// <summary>
-        /// btnSearch control.
+        /// hplSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.HyperLink hplSearch;
         
         /// <summary>
         /// btnRefresh control.
@@ -74,5 +74,14 @@ namespace DO_AN_TN.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTongSoBanGhi;
+        
+        /// <summary>
+        /// LopHoc_SearchUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.Search.LopHoc_SearchUC LopHoc_SearchUC1;
     }
 }

@@ -74,5 +74,14 @@ namespace DO_AN_TN.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTongSoBanGhi;
+        
+        /// <summary>
+        /// BaiViet_SearchUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.Search.BaiViet_SearchUC BaiViet_SearchUC1;
     }
 }

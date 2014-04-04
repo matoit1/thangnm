@@ -13,10 +13,17 @@ namespace DO_AN_TN.SinhVien
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SinhVienEO _SinhVienEO = new SinhVienEO();
-            _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
-            _SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);
-            SinhVien_DetailUC1.BindDataDetail(_SinhVienEO);
+            try
+            {
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
+                _SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);
+                SinhVien_DetailUC1.BindDataDetail(_SinhVienEO);
+            }
+            catch
+            {
+
+            }
         }
     }
 }

@@ -29,7 +29,7 @@ namespace DO_AN_TN.SinhVien.Accounts
                     if (ForgotPasswordUC1.txtsEmail1.Text == _SinhVienEO.sEmailSV)
                     {
                         ForgotPasswordUC1.Reset_Password(ForgotPasswordUC1.txtsTendangnhap.Text, ForgotPasswordUC1.txtsEmail1.Text, 1);
-                        ForgotPasswordUC1.lblMsg1.Text = "";
+                        ForgotPasswordUC1.lblMsg1.Text = Messages.Doi_Mat_Khau_Thanh_Cong;
                         ForgotPasswordUC1.lblMsg1.CssClass = "notificationSuccessful";
                     }
                     else

@@ -20,7 +20,6 @@ namespace DO_AN_TN.UserControl
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
-        public event EventHandler Search;
 
         private string _PK_sMaMonhoc;
         public string PK_sMaMonhoc
@@ -63,6 +62,7 @@ namespace DO_AN_TN.UserControl
             }
         }
 
+        #region "Event GridView"
         protected void grvListMonHoc_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "cmdView")
@@ -146,10 +146,17 @@ namespace DO_AN_TN.UserControl
             set
             { ViewState["directionState"] = value; }
         }
+        #endregion
 
-        protected void Navigation_Click(object sender, EventArgs e)
+        #region "Event Button"
+        protected void Search_Click(object sender, EventArgs e)
         {
-            //if (LoginUC1.state == true) { Response.Redirect(Request.Url.AbsolutePath); } else { Response.Redirect("~/Accounts/Login.aspx"); }
+            BindData();
+        }
+
+        protected void btnRefresh_Click(object sender, EventArgs e)
+        {
+            BindData();
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
@@ -160,17 +167,9 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
+        protected void btnDeleteList_Click(object sender, EventArgs e)
         {
-            if (Search != null)
-            {
-                Search(this, EventArgs.Empty);
-            }
-        }
 
-        protected void btnRefresh_Click(object sender, EventArgs e)
-        {
-            BindData();
         }
 
         protected void btnExportExcel_Click(object sender, EventArgs e)
@@ -280,10 +279,6 @@ namespace DO_AN_TN.UserControl
                 Response.End();
             }
         }
-
-        protected void btnDeleteList_Click(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }
