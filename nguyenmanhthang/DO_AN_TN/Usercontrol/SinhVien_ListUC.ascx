@@ -1,8 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SinhVien_ListUC.ascx.cs" Inherits="DO_AN_TN.UserControl.SinhVien_ListUC" %>
 <%@ Register src="Search/SinhVien_SearchUC.ascx" tagname="SinhVien_SearchUC" tagprefix="uc1" %>
-<link href="../App_Themes/popup.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
-<script type="text/javascript" src="../Scripts/popup.js"></script>
 <script type="text/javascript">
     function CheckAll(chkTemp) {
         var grvTemp = document.getElementById("<%=grvListSinhVien.ClientID %>");
