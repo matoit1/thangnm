@@ -60,8 +60,6 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sIP", _ErrorEO.sIP));
                     cmd.Parameters.Add(new SqlParameter("@sBrowser", _ErrorEO.sBrowser));
                     cmd.Parameters.Add(new SqlParameter("@iCodes", _ErrorEO.iCodes));
-                    cmd.Parameters.Add(new SqlParameter("@tTime", _ErrorEO.tTime));
-                    cmd.Parameters.Add(new SqlParameter("@tTimeCheck", _ErrorEO.tTimeCheck));
                     cmd.Parameters.Add(new SqlParameter("@iStatus", _ErrorEO.iStatus));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -92,8 +90,6 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sIP", _ErrorEO.sIP));
                     cmd.Parameters.Add(new SqlParameter("@sBrowser", _ErrorEO.sBrowser));
                     cmd.Parameters.Add(new SqlParameter("@iCodes", _ErrorEO.iCodes));
-                    cmd.Parameters.Add(new SqlParameter("@tTime", _ErrorEO.tTime));
-                    cmd.Parameters.Add(new SqlParameter("@tTimeCheck", _ErrorEO.tTimeCheck));
                     cmd.Parameters.Add(new SqlParameter("@iStatus", _ErrorEO.iStatus));
                     cmd.ExecuteNonQuery();
                     conn.Close();

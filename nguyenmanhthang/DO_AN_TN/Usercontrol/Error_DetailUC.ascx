@@ -47,12 +47,12 @@
         </tr>
         <tr>
             <td>Ngày phát hiện: </td>
-            <td><asp:TextBox ID="txttTime" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttTime" runat="server" Width="400px" class="startdate" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lbltTime" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày kiểm tra: </td>
-            <td><asp:TextBox ID="txttTimeCheck" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttTimeCheck" runat="server" Width="400px" class="startdate" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lbltTimeCheck" runat="server"></asp:Label></td>
         </tr>
         <tr>

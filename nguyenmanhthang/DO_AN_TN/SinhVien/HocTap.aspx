@@ -1,9 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HocTap.aspx.cs" Inherits="DO_AN_TN.SinhVien.HocTap" MasterPageFile="~/Share_Interface/SinhVien_SI.Master" %>
 <%@ Register src="../UserControl/ASM_ClientUC.ascx" tagname="ASM_ClientUC" tagprefix="uc1" %>
+<%@ Register src="../UserControl/ChatUC.ascx" tagname="ChatUC" tagprefix="uc1" %>
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <div style="margin: 5px auto auto 350px; width: 800px">
         <uc1:ASM_ClientUC ID="ASM_ClientUC1" runat="server" />
     </div>
-
+    <div>
+        <uc1:ChatUC ID="ChatUC1" runat="server" />
+    </div>
 </asp:Content>
