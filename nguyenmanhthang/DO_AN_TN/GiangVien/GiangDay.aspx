@@ -2,7 +2,7 @@
 <%@ Register src="../UserControl/ASM_ServerUC.ascx" tagname="ASM_ServerUC" tagprefix="uc1" %>
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
-    <div>
+    <div style="margin: 5px auto auto 350px; width: 800px">
         <uc1:ASM_ServerUC ID="ASM_ServerUC1" runat="server" />
     </div>
 </asp:Content>
