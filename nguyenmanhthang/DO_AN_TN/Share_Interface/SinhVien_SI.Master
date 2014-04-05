@@ -25,6 +25,7 @@
                     <asp:MenuItem Text="|  Trang chủ" Value="TrangChu" NavigateUrl="~/Default.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="|  Điểm thi" Value="DiemThi" NavigateUrl="~/SinhVien/DiemThi.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="|  Lịch học" Value="LichHoc" NavigateUrl="~/SinhVien/LichHoc.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="|  Học tập" Value="HocTap" NavigateUrl="~/SinhVien/HocTap.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="|  Thi trắc nghiệm" Value="ThiTracNghiem" NavigateUrl="~/SinhVien/ThiTracNghiem.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="|  Thông tin cá nhân" Value="ThongTinCaNhan" NavigateUrl="~/SinhVien/ThongTinCaNhan.aspx"></asp:MenuItem>
                  </Items>
