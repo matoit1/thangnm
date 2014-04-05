@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ChatUC.ascx.cs" Inherits="DO_AN_TN.UserControl.ChatUC" %>
+<link href="../App_Themes/layout.css" rel="stylesheet" type="text/css" />
 <div>
     <article class="module width_quarter">
 	    <header><h3>Messages</h3></header>

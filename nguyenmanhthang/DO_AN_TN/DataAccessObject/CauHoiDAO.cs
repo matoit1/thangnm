@@ -64,8 +64,6 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sCauhoi_D", _CauHoiEO.sCauhoi_D));
                     cmd.Parameters.Add(new SqlParameter("@iCauhoi_Dung", _CauHoiEO.iCauhoi_Dung));
                     cmd.Parameters.Add(new SqlParameter("@sBoCauHoi", _CauHoiEO.sBoCauHoi));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayTao", _CauHoiEO.tNgayTao));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayCapNhat", _CauHoiEO.tNgayCapNhat));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _CauHoiEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -100,8 +98,6 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sCauhoi_D", _CauHoiEO.sCauhoi_D));
                     cmd.Parameters.Add(new SqlParameter("@iCauhoi_Dung", _CauHoiEO.iCauhoi_Dung));
                     cmd.Parameters.Add(new SqlParameter("@sBoCauHoi", _CauHoiEO.sBoCauHoi));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayTao", _CauHoiEO.tNgayTao));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayCapNhat", _CauHoiEO.tNgayCapNhat));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _CauHoiEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();

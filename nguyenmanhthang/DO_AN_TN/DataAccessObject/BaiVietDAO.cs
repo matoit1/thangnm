@@ -62,8 +62,6 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sTag", _BaiVietEO.sTag));
                     cmd.Parameters.Add(new SqlParameter("@sNoiDung", _BaiVietEO.sNoiDung));
                     cmd.Parameters.Add(new SqlParameter("@iLuotXem", _BaiVietEO.iLuotXem));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayViet", _BaiVietEO.tNgayViet));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayCapNhat", _BaiVietEO.tNgayCapNhat));
                     cmd.Parameters.Add(new SqlParameter("@sMoTa", _BaiVietEO.sMoTa));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _BaiVietEO.iTrangThai));
                     cmd.ExecuteNonQuery();
@@ -97,8 +95,6 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sTag", _BaiVietEO.sTag));
                     cmd.Parameters.Add(new SqlParameter("@sNoiDung", _BaiVietEO.sNoiDung));
                     cmd.Parameters.Add(new SqlParameter("@iLuotXem", _BaiVietEO.iLuotXem));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayViet", _BaiVietEO.tNgayViet));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayCapNhat", _BaiVietEO.tNgayCapNhat));
                     cmd.Parameters.Add(new SqlParameter("@sMoTa", _BaiVietEO.sMoTa));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _BaiVietEO.iTrangThai));
                     cmd.ExecuteNonQuery();

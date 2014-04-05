@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     <asp:Image ID="imgCaptcha1" runat="server" />
     <asp:ImageButton ID="ibtnChage1" runat="server" ImageUrl="~/Images/change.jpg" Height="30px" onclick="ChangeCaptcha_Click" />
     <br /><br />

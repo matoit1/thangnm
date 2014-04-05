@@ -74,12 +74,12 @@
         </tr>
         <tr>
             <td>Ngày tạo: </td>
-            <td><asp:TextBox ID="txttNgayTao" runat="server" Width= "400px" class="startdate"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayTao" runat="server" Width= "400px" class="startdate" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayTao" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày cập nhật: </td>
-            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px" class="startdate"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px" class="startdate" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayCapNhat" runat="server"></asp:Label></td>
         </tr>
         <tr>
