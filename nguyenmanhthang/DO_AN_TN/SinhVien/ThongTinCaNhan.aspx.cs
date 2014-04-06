@@ -22,7 +22,7 @@ namespace DO_AN_TN.SinhVien
             }
             catch
             {
-
+                Response.Redirect("~/SinhVien/Default.aspx");
             }
         }
     }
