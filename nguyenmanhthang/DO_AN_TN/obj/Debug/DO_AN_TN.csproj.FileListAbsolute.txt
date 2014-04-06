@@ -3,6 +3,7 @@ E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\DO_AN_TN.dll
 E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\DO_AN_TN.pdb
 E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DO_AN_TN.dll
 E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DO_AN_TN.pdb
+E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\SCS.Web.UI.WebControls.Toolbar.dll
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DO_AN_TN.dll
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\DO_AN_TN.pdb
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\AjaxControlToolkit.dll
@@ -10,4 +11,3 @@ D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\SCS.Web.UI.WebControls.Toolbar.d
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\ResolveAssemblyReference.cache
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\DO_AN_TN.dll
 D:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\obj\Debug\DO_AN_TN.pdb
-E:\Project_ASP.NET\nguyenmanhthang\DO_AN_TN\bin\SCS.Web.UI.WebControls.Toolbar.dll
