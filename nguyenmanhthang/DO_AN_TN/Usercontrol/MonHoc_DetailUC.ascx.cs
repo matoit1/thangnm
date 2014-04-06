@@ -139,5 +139,49 @@ namespace DO_AN_TN.UserControl
             BindDataDetail(_MonHocEO);
         }
         #endregion
+
+        #region "CheckExists"
+        protected void txtPK_sMaMonhoc_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MonHocEO _MonHocEO = new MonHocEO();
+                _MonHocEO.PK_sMaMonhoc = txtPK_sMaMonhoc.Text;
+                if (MonHocDAO.MonHoc_CheckExists_PK_sMaMonhoc(_MonHocEO) == true)
+                {
+                    lblPK_sMaMonhoc.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblPK_sMaMonhoc.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void txtsTenMonhoc_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MonHocEO _MonHocEO = new MonHocEO();
+                _MonHocEO.sTenMonhoc = txtsTenMonhoc.Text;
+                if (MonHocDAO.MonHoc_CheckExists_sTenMonhoc(_MonHocEO) == true)
+                {
+                    lblsTenMonhoc.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblsTenMonhoc.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+        #endregion
     }
 }

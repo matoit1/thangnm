@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td>Mã phân công công tác: </td>
-            <td><asp:TextBox ID="txtPK_sMaPCCT" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_sMaPCCT" runat="server" Width="400px" ontextchanged="txtPK_sMaPCCT_TextChanged"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_sMaPCCT" runat="server"></asp:Label></td>
         </tr>
         <tr>

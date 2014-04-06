@@ -164,5 +164,41 @@ namespace DO_AN_TN.UserControl
             BindDataDetail(_LichDayVaHocEO);
         }
         #endregion
+
+        #region "CheckExists"
+        protected void ddlFK_sMaPCCT_TextChanged(object sender, EventArgs e)
+        {
+            CheckExitts();
+        }
+
+        protected void ddlFK_sMalop_TextChanged(object sender, EventArgs e)
+        {
+            CheckExitts();
+        }
+
+        private void CheckExitts()
+        {
+            try
+            {
+                LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+                _LichDayVaHocEO.FK_sMaPCCT = ddlFK_sMaPCCT.SelectedValue;
+                _LichDayVaHocEO.FK_sMalop = ddlFK_sMalop.SelectedValue;
+                if (LichDayVaHocDAO.LichDayVaHoc_CheckExists(_LichDayVaHocEO) == true)
+                {
+                    lblFK_sMaPCCT.Text = Messages.Ma_Da_Ton_Tai;
+                    lblFK_sMalop.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblFK_sMaPCCT.Text = "";
+                    lblFK_sMalop.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = ex.Message;
+            }
+        }
+        #endregion
     }
 }
