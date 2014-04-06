@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td>Mã giảng viên: </td>
-            <td><asp:TextBox ID="txtPK_sMaGV" runat="server" Width="400px" ontextchanged="txtPK_sMaGV_TextChanged" Enabled="false" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_sMaGV" runat="server" Width="400px" ontextchanged="txtPK_sMaGV_TextChanged" AutoPostBack="true" Enabled="false" ></asp:TextBox></td>
             <td><asp:Label ID="lblPK_sMaGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -32,7 +32,7 @@
         </tr>
         <tr>
             <td>Tên đăng nhập: </td>
-            <td><asp:TextBox ID="txtsTendangnhapGV" runat="server" Width="400px" ontextchanged="txtsTendangnhapGV_TextChanged" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsTendangnhapGV" runat="server" Width="400px" ontextchanged="txtsTendangnhapGV_TextChanged" AutoPostBack="true" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblsTendangnhapGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <td>Địa chỉ Email: </td>
-            <td><asp:TextBox ID="txtsEmailGV" runat="server" Width="400px" ontextchanged="txtsEmailGV_TextChanged"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsEmailGV" runat="server" Width="400px" ontextchanged="txtsEmailGV_TextChanged" AutoPostBack="true"></asp:TextBox></td>
             <td><asp:Label ID="lblsEmailGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -67,7 +67,7 @@
         </tr>
         <tr>
             <td>Số CMND: </td>
-            <td><asp:TextBox ID="txtsCMNDGV" runat="server" Width="400px" ontextchanged="txtsCMNDGV_TextChanged"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsCMNDGV" runat="server" Width="400px" ontextchanged="txtsCMNDGV_TextChanged" AutoPostBack="true"></asp:TextBox></td>
             <td><asp:Label ID="lblsCMNDGV" runat="server"></asp:Label></td>
         </tr>
         <tr>

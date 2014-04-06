@@ -18,28 +18,25 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists_PK_sMaSV", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaSV", _SinhVienEO.PK_sMaSV));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblSinhVien_CheckExists_PK_sMaSV", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_sMaSV", _SinhVienEO.PK_sMaSV));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
@@ -51,28 +48,25 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists_sTendangnhapSV", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblSinhVien_CheckExists_sTendangnhapSV", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
@@ -84,28 +78,25 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists_sEmailSV", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sEmailSV", _SinhVienEO.sEmailSV));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblSinhVien_CheckExists_sEmailSV", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sEmailSV", _SinhVienEO.sEmailSV));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
@@ -117,28 +108,25 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists_sCMNDSV", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sCMNDSV", _SinhVienEO.sCMNDSV));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblSinhVien_CheckExists_sCMNDSV", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sCMNDSV", _SinhVienEO.sCMNDSV));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }

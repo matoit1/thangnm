@@ -26,6 +26,7 @@ namespace DataAccessObject
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FK_sMaPCCT", _LichDayVaHocEO.FK_sMaPCCT));
                     cmd.Parameters.Add(new SqlParameter("@FK_sMalop", _LichDayVaHocEO.FK_sMalop));
+                    cmd.Parameters.Add(new SqlParameter("@iCaHoc", _LichDayVaHocEO.iCaHoc));
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {

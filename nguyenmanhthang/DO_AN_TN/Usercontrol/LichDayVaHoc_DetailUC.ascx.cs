@@ -176,6 +176,11 @@ namespace DO_AN_TN.UserControl
             CheckExitts();
         }
 
+        protected void ddliCaHoc_TextChanged(object sender, EventArgs e)
+        {
+            CheckExitts();
+        }
+
         private void CheckExitts()
         {
             try
@@ -183,15 +188,18 @@ namespace DO_AN_TN.UserControl
                 LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
                 _LichDayVaHocEO.FK_sMaPCCT = ddlFK_sMaPCCT.SelectedValue;
                 _LichDayVaHocEO.FK_sMalop = ddlFK_sMalop.SelectedValue;
+                _LichDayVaHocEO.iCaHoc = Convert.ToInt16(ddliCaHoc.SelectedValue);
                 if (LichDayVaHocDAO.LichDayVaHoc_CheckExists(_LichDayVaHocEO) == true)
                 {
                     lblFK_sMaPCCT.Text = Messages.Ma_Da_Ton_Tai;
                     lblFK_sMalop.Text = Messages.Ma_Da_Ton_Tai;
+                    lbliCaHoc.Text = Messages.Ma_Da_Ton_Tai;
                 }
                 else
                 {
                     lblFK_sMaPCCT.Text = "";
                     lblFK_sMalop.Text = "";
+                    lbliCaHoc.Text = "";
                 }
             }
             catch (Exception ex)
