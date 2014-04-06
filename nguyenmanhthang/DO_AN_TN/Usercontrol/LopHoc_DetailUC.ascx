@@ -13,12 +13,12 @@
         </tr>
         <tr>
             <td>Mã lớp học: </td>
-            <td><asp:TextBox ID="txtPK_sMalop" runat="server" Width="400px" ontextchanged="txtPK_sMalop_TextChanged"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_sMalop" runat="server" Width="400px" ontextchanged="txtPK_sMalop_TextChanged" AutoPostBack="true"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_sMalop" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Tên lớp học: </td>
-            <td><asp:TextBox ID="txtsTenlop" runat="server" Width="400px" ontextchanged="txtsTenlop_TextChanged"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsTenlop" runat="server" Width="400px" ontextchanged="txtsTenlop_TextChanged" AutoPostBack="true"></asp:TextBox></td>
             <td><asp:Label ID="lblsTenlop" runat="server"></asp:Label></td>
         </tr>
         <tr>
