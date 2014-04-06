@@ -249,57 +249,85 @@ namespace DO_AN_TN.UserControl
         #region "CheckExists"
         protected void txtPK_sMaSV_TextChanged(object sender, EventArgs e)
         {
-            SinhVienEO _SinhVienEO = new SinhVienEO();
-            _SinhVienEO.PK_sMaSV = txtPK_sMaSV.Text;
-            if (SinhVienDAO.SinhVien_CheckExists_PK_sMaSV(_SinhVienEO) == true)
+            try
             {
-                lblPK_sMaSV.Text = Messages.Ma_Da_Ton_Tai;
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                _SinhVienEO.PK_sMaSV = txtPK_sMaSV.Text;
+                if (SinhVienDAO.SinhVien_CheckExists_PK_sMaSV(_SinhVienEO) == true)
+                {
+                    lblPK_sMaSV.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblPK_sMaSV.Text = "";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblPK_sMaSV.Text = "";
+                lblMsg.Text = Messages.Loi + ex.Message;
             }
         }
 
         protected void txtsTendangnhapSV_TextChanged(object sender, EventArgs e)
         {
-            SinhVienEO _SinhVienEO = new SinhVienEO();
-            _SinhVienEO.sTendangnhapSV = txtsTendangnhapSV.Text;
-            if (SinhVienDAO.SinhVien_CheckExists_sTendangnhapSV(_SinhVienEO) == true)
+            try
             {
-                lblPK_sMaSV.Text = Messages.Ma_Da_Ton_Tai;
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                _SinhVienEO.sTendangnhapSV = txtsTendangnhapSV.Text;
+                if (SinhVienDAO.SinhVien_CheckExists_sTendangnhapSV(_SinhVienEO) == true)
+                {
+                    lblsTendangnhapSV.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblsTendangnhapSV.Text = "";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblPK_sMaSV.Text = "";
+                lblMsg.Text = Messages.Loi + ex.Message;
             }
         }
 
         protected void txtsEmailSV_TextChanged(object sender, EventArgs e)
         {
-            SinhVienEO _SinhVienEO = new SinhVienEO();
-            _SinhVienEO.sEmailSV = txtsEmailSV.Text;
-            if (SinhVienDAO.SinhVien_CheckExists_sEmailSV(_SinhVienEO) == true)
+            try
             {
-                lblPK_sMaSV.Text = Messages.Ma_Da_Ton_Tai;
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                _SinhVienEO.sEmailSV = txtsEmailSV.Text;
+                if (SinhVienDAO.SinhVien_CheckExists_sEmailSV(_SinhVienEO) == true)
+                {
+                    lblsEmailSV.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblsEmailSV.Text = "";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblPK_sMaSV.Text = "";
+                lblMsg.Text = Messages.Loi + ex.Message;
             }
         }
 
         protected void txtsCMNDSV_TextChanged(object sender, EventArgs e)
         {
-            SinhVienEO _SinhVienEO = new SinhVienEO();
-            _SinhVienEO.sCMNDSV = txtsCMNDSV.Text;
-            if (SinhVienDAO.SinhVien_CheckExists_sCMNDSV(_SinhVienEO) == true)
+            try
             {
-                lblPK_sMaSV.Text = Messages.Ma_Da_Ton_Tai;
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                _SinhVienEO.sCMNDSV = txtsCMNDSV.Text;
+                if (SinhVienDAO.SinhVien_CheckExists_sCMNDSV(_SinhVienEO) == true)
+                {
+                    lblsCMNDSV.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblsCMNDSV.Text = "";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblPK_sMaSV.Text = "";
+                lblMsg.Text = Messages.Loi + ex.Message;
             }
         }
         #endregion

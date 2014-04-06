@@ -164,5 +164,49 @@ namespace DO_AN_TN.UserControl
             BindDataDetail(_DiemThiEO);
         }
         #endregion
+
+        #region "CheckExists"
+        protected void ddlFK_sMaSV_TextChanged(object sender, EventArgs e)
+        {
+            CheckExitts();
+        }
+
+        protected void ddlFK_sMaMonhoc_TextChanged(object sender, EventArgs e)
+        {
+            CheckExitts();
+        }
+
+        protected void txtPK_iSolanhoc_TextChanged(object sender, EventArgs e)
+        {
+            CheckExitts();
+        }
+
+        private void CheckExitts()
+        {
+            try
+            {
+                DiemThiEO _DiemThiEO = new DiemThiEO();
+                _DiemThiEO.FK_sMaSV = ddlFK_sMaSV.SelectedValue;
+                _DiemThiEO.FK_sMaMonhoc = ddlFK_sMaMonhoc.SelectedValue;
+                _DiemThiEO.PK_iSolanhoc = Convert.ToInt16(txtPK_iSolanhoc.Text);
+                if (DiemThiDAO.DiemThi_CheckExists(_DiemThiEO) == true)
+                {
+                    lblFK_sMaSV.Text = Messages.Ma_Da_Ton_Tai;
+                    lblFK_sMaMonhoc.Text = Messages.Ma_Da_Ton_Tai;
+                    lblPK_iSolanhoc.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblFK_sMaSV.Text = "";
+                    lblFK_sMaMonhoc.Text = "";
+                    lblPK_iSolanhoc.Text = "";
+                }
+            }
+            catch(Exception ex)
+            {
+                lblMsg.Text = ex.Message;
+            }
+        }
+        #endregion
     }
 }

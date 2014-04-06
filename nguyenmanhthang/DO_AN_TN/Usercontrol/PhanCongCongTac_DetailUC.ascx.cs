@@ -156,5 +156,28 @@ namespace DO_AN_TN.UserControl
             BindDataDetail(_PhanCongCongTacEO);
         }
         #endregion
+
+        #region "CheckExists"
+        protected void txtPK_sMaMonhoc_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
+                _PhanCongCongTacEO.PK_sMaPCCT = txtPK_sMaPCCT.Text;
+                if (PhanCongCongTacDAO.PhanCongCongTac_CheckExists(_PhanCongCongTacEO) == true)
+                {
+                    lblPK_sMaPCCT.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblPK_sMaPCCT.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+        #endregion
     }
 }

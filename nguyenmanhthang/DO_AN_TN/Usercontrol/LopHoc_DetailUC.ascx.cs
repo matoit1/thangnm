@@ -142,5 +142,49 @@ namespace DO_AN_TN.UserControl
             BindDataDetail(_LopHocEO);
         }
         #endregion
+
+        #region "CheckExists"
+        protected void txtPK_sMalop_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LopHocEO _LopHocEO = new LopHocEO();
+                _LopHocEO.PK_sMalop = txtPK_sMalop.Text;
+                if (LopHocDAO.LopHoc_CheckExists_PK_sMalop(_LopHocEO) == true)
+                {
+                    lblPK_sMalop.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblPK_sMalop.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void txtsTenlop_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                LopHocEO _LopHocEO = new LopHocEO();
+                _LopHocEO.sTenlop = txtsTenlop.Text;
+                if (LopHocDAO.LopHoc_CheckExists_sTenlop(_LopHocEO) == true)
+                {
+                    lblsTenlop.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblsTenlop.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+        #endregion
     }
 }

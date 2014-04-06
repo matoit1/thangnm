@@ -13,17 +13,20 @@
         </tr>
         <tr>
             <td>Mã sinh viên: </td>
-            <td><asp:DropDownList ID="ddlFK_sMaSV" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:DropDownList ID="ddlFK_sMaSV" runat="server" Width="405px" 
+                    ontextchanged="ddlFK_sMaSV_TextChanged"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Mã môn học: </td>
-            <td><asp:DropDownList ID="ddlFK_sMaMonhoc" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:DropDownList ID="ddlFK_sMaMonhoc" runat="server" Width="405px" 
+                    ontextchanged="ddlFK_sMaMonhoc_TextChanged"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaMonhoc" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Số lần học: </td>
-            <td><asp:TextBox ID="txtPK_iSolanhoc" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_iSolanhoc" runat="server" Width="400px" 
+                    ontextchanged="txtPK_iSolanhoc_TextChanged"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_iSolanhoc" runat="server"></asp:Label></td>
         </tr>
         <tr>

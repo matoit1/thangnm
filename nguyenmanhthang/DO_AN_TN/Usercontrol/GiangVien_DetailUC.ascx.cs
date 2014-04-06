@@ -217,5 +217,91 @@ namespace DO_AN_TN.UserControl
             BindDataDetail(_GiangVienEO);
         }
         #endregion
+
+        #region "CheckExists"
+        protected void txtPK_sMaGV_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                GiangVienEO _GiangVienEO = new GiangVienEO();
+                _GiangVienEO.PK_sMaGV = txtPK_sMaGV.Text;
+                if (GiangVienDAO.GiangVien_CheckExists_PK_sMaGV(_GiangVienEO) == true)
+                {
+                    lblPK_sMaGV.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblPK_sMaGV.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void txtsTendangnhapGV_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                GiangVienEO _GiangVienEO = new GiangVienEO();
+                _GiangVienEO.sTendangnhapGV = txtsTendangnhapGV.Text;
+                if (GiangVienDAO.GiangVien_CheckExists_sTendangnhapGV(_GiangVienEO) == true)
+                {
+                    lblsTendangnhapGV.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblsTendangnhapGV.Text = "";
+                }
+            }
+            catch(Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void txtsEmailGV_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                GiangVienEO _GiangVienEO = new GiangVienEO();
+                _GiangVienEO.sEmailGV = txtsEmailGV.Text;
+                if (GiangVienDAO.GiangVien_CheckExists_sEmailGV(_GiangVienEO) == true)
+                {
+                    lblsEmailGV.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblsEmailGV.Text = "";
+                }
+            }
+            catch(Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void txtsCMNDGV_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                GiangVienEO _GiangVienEO = new GiangVienEO();
+                _GiangVienEO.sCMNDGV = txtsCMNDGV.Text;
+                if (GiangVienDAO.GiangVien_CheckExists_sCMNDGV(_GiangVienEO) == true)
+                {
+                    lblsCMNDGV.Text = Messages.Ma_Da_Ton_Tai;
+                }
+                else
+                {
+                    lblsCMNDGV.Text = "";
+                }
+            }
+            catch(Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+        #endregion
     }
 }

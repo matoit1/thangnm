@@ -22,12 +22,14 @@
         </tr>
         <tr>
             <td>Mã phân công công tác: </td>
-            <td><asp:DropDownList ID="ddlFK_sMaPCCT" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:DropDownList ID="ddlFK_sMaPCCT" runat="server" Width="405px" 
+                    ontextchanged="ddlFK_sMaPCCT_TextChanged"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMaPCCT" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Mã lớp: </td>
-            <td><asp:DropDownList ID="ddlFK_sMalop" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:DropDownList ID="ddlFK_sMalop" runat="server" Width="405px" 
+                    ontextchanged="ddlFK_sMalop_TextChanged"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_sMalop" runat="server"></asp:Label></td>
         </tr>
         <tr>
