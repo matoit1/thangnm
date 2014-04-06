@@ -10,6 +10,7 @@ namespace DataAccessObject
 {
     public class PhanCongCongTacDAO
     {
+        #region "CheckExists"
         /// <summary> 1. PhanCongCongTac_CheckExists </summary>
         /// <param name="_PhanCongCongTacEO"></param>
         /// <returns></returns>
@@ -17,23 +18,20 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblPhanCongCongTac_CheckExists", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaPCCT", _PhanCongCongTacEO.PK_sMaPCCT));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblPhanCongCongTac_CheckExists", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_sMaPCCT", _PhanCongCongTacEO.PK_sMaPCCT));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
@@ -42,7 +40,9 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Insert, Update, Delete"
         /// <summary> 2. PhanCongCongTac_Insert </summary>
         /// <param name="_PhanCongCongTacEO"></param>
         /// <returns></returns>
@@ -152,13 +152,15 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Select"
         /// <summary> 6. PhanCongCongTac_SelectItem </summary>
         /// <param name="_PhanCongCongTacEO"></param>
         /// <returns></returns>
         public static PhanCongCongTacEO PhanCongCongTac_SelectItem(PhanCongCongTacEO _PhanCongCongTacEO)
         {
-            PhanCongCongTacEO output = new PhanCongCongTacEO();
+            PhanCongCongTacEO oOutput = new PhanCongCongTacEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -171,13 +173,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.PhanCongCongTac(ds);
-                    return output;
+                    oOutput = DataSet2Object.PhanCongCongTac(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -187,7 +189,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet PhanCongCongTac_SelectList()
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -195,15 +197,15 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblPhanCongCongTac_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -213,7 +215,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet PhanCongCongTac_Search(PhanCongCongTacEO _PhanCongCongTacEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -227,17 +229,18 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayBatDau", _PhanCongCongTacEO.tNgayBatDau));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayKetThuc", _PhanCongCongTacEO.tNgayKetThuc));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _PhanCongCongTacEO.iTrangThai));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
+        #endregion
     }
 }

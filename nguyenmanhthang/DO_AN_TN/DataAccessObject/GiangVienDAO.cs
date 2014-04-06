@@ -10,39 +10,129 @@ namespace DataAccessObject
 {
     public class GiangVienDAO
     {
-        /// <summary> 1. GiangVien_CheckExists </summary>
+        #region "CheckExists"
+        /// <summary> 1. GiangVien_CheckExists_PK_sMaGV </summary>
         /// <param name="_GiangVienEO"></param>
         /// <returns></returns>
-        public static bool GiangVien_CheckExists(GiangVienEO _GiangVienEO)
+        public static bool GiangVien_CheckExists_PK_sMaGV(GiangVienEO _GiangVienEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblGiangVien_CheckExists", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaGV", _GiangVienEO.PK_sMaGV));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblGiangVien_CheckExists_PK_sMaGV", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_sMaGV", _GiangVienEO.PK_sMaGV));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
 
+        /// <summary> 2. GiangVien_CheckExists_sTendangnhapGV </summary>
+        /// <param name="_GiangVienEO"></param>
+        /// <returns></returns>
+        public static bool GiangVien_CheckExists_sTendangnhapGV(GiangVienEO _GiangVienEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                bool bOutput = false;
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblGiangVien_CheckExists_sTendangnhapGV", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sTendangnhapGV", _GiangVienEO.sTendangnhapGV));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
+                    conn.Close();
+                    return bOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return bOutput;
+                }
+            }
+        }
+
+        /// <summary> 3. GiangVien_CheckExists_sEmailGV </summary>
+        /// <param name="_GiangVienEO"></param>
+        /// <returns></returns>
+        public static bool GiangVien_CheckExists_sEmailGV(GiangVienEO _GiangVienEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                bool bOutput = false;
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblGiangVien_CheckExists_sEmailGV", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sEmailGV", _GiangVienEO.sEmailGV));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
+                    conn.Close();
+                    return bOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return bOutput;
+                }
+            }
+        }
+
+        /// <summary> 4. GiangVien_CheckExists_sCMNDGV </summary>
+        /// <param name="_GiangVienEO"></param>
+        /// <returns></returns>
+        public static bool GiangVien_CheckExists_sCMNDGV(GiangVienEO _GiangVienEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                bool bOutput = false;
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblGiangVien_CheckExists_sCMNDGV", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sCMNDGV", _GiangVienEO.sCMNDGV));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
+                    conn.Close();
+                    return bOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return bOutput;
+                }
+            }
+        }
+        #endregion
+
+        #region "Insert, Update, Delete"
         /// <summary> 2. GiangVien_Insert </summary>
         /// <param name="_GiangVienEO"></param>
         /// <returns></returns>
@@ -208,13 +298,15 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Select"
         /// <summary> 6. GiangVien_SelectItem </summary>
         /// <param name="_GiangVienEO"></param>
         /// <returns></returns>
         public static GiangVienEO GiangVien_SelectItem(GiangVienEO _GiangVienEO)
         {
-            GiangVienEO output = new GiangVienEO();
+            GiangVienEO oOutput = new GiangVienEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -227,13 +319,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.GiangVien(ds);
-                    return output;
+                    oOutput = DataSet2Object.GiangVien(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -243,7 +335,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static GiangVienEO GiangVien_SelectBysTendangnhapGV(GiangVienEO _GiangVienEO)
         {
-            GiangVienEO output = new GiangVienEO();
+            GiangVienEO oOutput = new GiangVienEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -256,13 +348,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.GiangVien(ds);
-                    return output;
+                    oOutput = DataSet2Object.GiangVien(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -272,7 +364,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet GiangVien_SelectList()
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -280,15 +372,15 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblGiangVien_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -298,7 +390,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet GiangVien_Search(GiangVienEO _GiangVienEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -327,15 +419,15 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkChatRoomsGV", _GiangVienEO.sLinkChatRoomsGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkAvatarGV", _GiangVienEO.sLinkAvatarGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiGV", _GiangVienEO.iTrangThaiGV));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -345,7 +437,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet GiangVien_Login(GiangVienEO _GiangVienEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -356,17 +448,18 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapGV", _GiangVienEO.sTendangnhapGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sMatkhauGV", _GiangVienEO.sMatkhauGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiGV", _GiangVienEO.iTrangThaiGV));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
+        #endregion
     }
 }

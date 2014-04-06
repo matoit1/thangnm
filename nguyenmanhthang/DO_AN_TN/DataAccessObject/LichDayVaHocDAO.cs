@@ -10,6 +10,7 @@ namespace DataAccessObject
 {
     public class LichDayVaHocDAO
     {
+        #region "CheckExists"
         /// <summary> 1. LichDayVaHoc_CheckExists </summary>
         /// <param name="_LichDayVaHocEO"></param>
         /// <returns></returns>
@@ -17,33 +18,32 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblLichDayVaHoc_CheckExists", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaPCCT", _LichDayVaHocEO.FK_sMaPCCT));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMalop", _LichDayVaHocEO.FK_sMalop));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblLichDayVaHoc_CheckExists", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@FK_sMaPCCT", _LichDayVaHocEO.FK_sMaPCCT));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sMalop", _LichDayVaHocEO.FK_sMalop));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
+        #endregion
 
+        #region "Insert, Update, Delete"
         /// <summary> 2. LichDayVaHoc_Insert </summary>
         /// <param name="_LichDayVaHocEO"></param>
         /// <returns></returns>
@@ -156,13 +156,15 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Select"
         /// <summary> 6. LichDayVaHoc_SelectItem </summary>
         /// <param name="_LichDayVaHocEO"></param>
         /// <returns></returns>
         public static LichDayVaHocEO LichDayVaHoc_SelectItem(LichDayVaHocEO _LichDayVaHocEO)
         {
-            LichDayVaHocEO output = new LichDayVaHocEO();
+            LichDayVaHocEO oOutput = new LichDayVaHocEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -176,13 +178,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.LichDayVaHoc(ds);
-                    return output;
+                    oOutput = DataSet2Object.LichDayVaHoc(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -192,7 +194,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet LichDayVaHoc_SelectList()
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -200,15 +202,15 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblLichDayVaHoc_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -218,7 +220,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet LichDayVaHoc_Search(LichDayVaHocEO _LichDayVaHocEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -233,17 +235,18 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iSoTietDay", _LichDayVaHocEO.iSoTietDay));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sSinhVienNghi", _LichDayVaHocEO.sSinhVienNghi));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _LichDayVaHocEO.iTrangThai));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
+        #endregion
     }
 }
