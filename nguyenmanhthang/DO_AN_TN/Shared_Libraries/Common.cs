@@ -200,104 +200,11 @@ namespace Shared_Libraries
             }
             return KetQua;
         }
-
-
-
-//    #region "Đổi số nguyên ra chữ"
-//    public static string Group3ToStrX(string num){
-//        string[] No = {"không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"};
-//        string kq;
-//            string tram;
-//        string chuc;
-//        string donvi;
-//        // Trăm
-//        if (num.Substring(0, 1) == "0"){
-//            tram = "";
-//        }
-//        else{
-//            tram = No(Convert.ToByte(num.Substring(0, 1))) & " trăm ";
-//        }
-//        // Chục
-//        switch(num.Substring(1, 1)){
-//            case "0":
-//                if (num.Substring(2, 1) != "0" && num.Substring(0, 1) != "0" ){
-//                    chuc = "linh ";
-//        }
-//                else{
-//                    chuc = "";
-//        }
-//break;
-//            case "1":
-//                chuc = "mười ";
-//                break;
-//            default:
-//                chuc = No(Convert.ToByte(num.Substring(1, 1))) & " mươi ";
-//                break;
-//    }
-//        // Đơn vị
-//        switch (num.Substring(2, 1)){
-//            case "0": donvi = "";break;
-//            case "1": if((num.Substring(1, 1) == "0") || (num.Substring(1, 1) == "1") ){
-//                    donvi = "một";
-//            }
-//                else{
-//                    donvi = "mốt";
-//        }break;
-//                case "5":
-//                if (num.Substring(1, 1) != "0"){
-//                    donvi = "lăm";
-//                }
-//                else{
-//                    donvi = "năm";
-//                }break;
-//            default:
-//                donvi = No(Convert.ToByte(num.Substring(2, 1)));
-//                break;
-//        }
-//        kq = tram + chuc + donvi;
-//        return kq;
-//}
-
-//    public string IntNumStr(string num){
-//        string[] Cap = {"", " nghìn ", " triệu ", " tỷ ", " nghìn tỷ ", " triệu tỷ ", " tỷ tỷ ", " nghìn tỷ tỷ "};
-//        string kq = "";
-//        string str = num;
-//        string g3;
-//        string kqtg;
-//        int caps = 0;
-//        while (str.Length > 3){
-//            g3 = str.Substring(str.Length - 3, 3);
-//            str = str.Substring(0, str.Length - 3);
-//            if (g3 != "000"){
-//                kqtg = Group3ToStrX(g3) + Cap(Convert.ToByte(caps));
-//            }
-//            else{
-//                kqtg = "";
-//            }
-//            kq = kqtg + kq;
-//            caps += 1;
-//        }
-//        //Chuẩn bị trước khi sử dụng hàm Group32Str1
-//        while (str.Length < 3){
-//            str = "0" + str;
-//        }
-
-//        if ((str == "000") & (num.Length <= 3)){
-//            kqtg = "không";
-//        }
-//        else{
-//            kqtg = Group3ToStrX(str) + Cap(Convert.ToByte(caps));
-//        }
-//        kq = kqtg + kq;
-//        return kq;
-//}
-//#endregion
-
     }
 
     public class Messages
     {
-        public const string Tong_So_Ban_Ghi = "Tổng số bản ghi: ";
+        #region "Error"
         public const string Khong_Thoa_Man_Dieu_Kien_Tim_Kiem = "Không thỏa mãn điều kiện tìm kiếm!";
         public const string Loi = "Lỗi: ";
         public const string Loi_Tai_Du_Lieu = "Lỗi tải dữ liệu!";
@@ -305,29 +212,43 @@ namespace Shared_Libraries
         public const string Ma_Khong_Hop_Le = "Mã không hợp lệ!";
         public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng ngày/ giờ, Vui lòng kiểm tra lại!";
+        #endregion
 
+        #region "Information"
+        public const string Tong_So_Ban_Ghi = "Tổng số bản ghi: ";
         public const string Them_Thanh_Cong = "Thêm thành công!";
         public const string Them_That_Bai = "Thêm thất bại, vui lòng kiểm tra lại!";
         public const string Sua_Thanh_Cong = "Sửa thành công!";
         public const string Sua_That_Bai = "Sửa thất bại, vui lòng kiểm tra lại!";
         public const string Xoa_Thanh_Cong = "Xóa thành công!";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
+        #endregion
 
+        #region "Security"
         public const string Dang_Nhap_Thanh_Cong = "Đăng nhập thành công!";
         public const string Dang_Nhap_That_Bai = "Đăng nhập thất bại, vui lòng kiểm tra lại!";
-
         public const string Doi_Mat_Khau_That_Bai = "Đổi mật khẩu thất bại, vui lòng kiểm tra lại!";
         public const string Doi_Mat_Khau_Thanh_Cong = "Đổi mật khẩu thành công!";
         public const string Gui_Mail_Doi_Mat_Khau_Thanh_Cong = "Hệ thống đã gửi mật khẩu mới vào Email của bạn!";
         public const string Gui_Mail_Doi_Mat_Khau_That_Bai = "Không thể kết nối tới Email!";
-
         public const string Sai_Ten_Tai_Khoan = "Tài khoản không đúng, Vui lòng thử lại!";
         public const string Sai_Email = "Email không đúng, Vui lòng thử lại!";
         public const string Sai_Mat_Khau = "Mật khẩu không đúng, Vui lòng thử lại!";
         public const string Sai_Ten_Tai_Khoan_Hoac_Email = "Không có tên tài khoản và email nào trùng khớp. Vui lòng kiểm tra lại!";
         public const string Sai_Email_Hoac_So_Dien_Thoai = "Không có email và số điện thoại nào trùng khớp. Vui lòng kiểm tra lại!";
         public const string Sai_Captcha = "Captcha không chính xác, vui lòng kiểm tra lại!";
+        #endregion
 
+        #region "Format"
         public static readonly string DateTime_Temp = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
+        #endregion
+
+        #region "tblCauHoi"
+        public const string Ban_Da_Tra_Loi_Dung = "Bạn đã trả lời đúng: ";
+        public const string Tra_Loi_Dung = "Bạn đã trả lời đúng!";
+        public const string Tra_Loi_Sai = "Bạn đã trả lời sai!";
+        public const string Cham_Diem_Thanh_Cong = "Chấm điểm thành công!";
+        public const string Cham_Diem_Khong_Thanh_Cong = "Chấm điểm không thành công!";
+        #endregion
     }
 }

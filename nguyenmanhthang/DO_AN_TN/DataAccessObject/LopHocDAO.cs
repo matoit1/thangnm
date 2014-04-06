@@ -10,39 +10,69 @@ namespace DataAccessObject
 {
     public class LopHocDAO
     {
-        /// <summary> 1. LopHoc_CheckExists </summary>
+        #region "CheckExists"
+        /// <summary> 1. LopHoc_CheckExists_PK_sMalop </summary>
         /// <param name="_LopHocEO"></param>
         /// <returns></returns>
-        public static bool LopHoc_CheckExists(LopHocEO _LopHocEO)
+        public static bool LopHoc_CheckExists_PK_sMalop(LopHocEO _LopHocEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblLopHoc_CheckExists", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMalop", _LopHocEO.PK_sMalop));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblLopHoc_CheckExists_PK_sMalop", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_sMalop", _LopHocEO.PK_sMalop));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
 
+        /// <summary> 1. LopHoc_CheckExists_sTenlop </summary>
+        /// <param name="_LopHocEO"></param>
+        /// <returns></returns>
+        public static bool LopHoc_CheckExists_sTenlop(LopHocEO _LopHocEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                bool bOutput = false;
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblLopHoc_CheckExists_sTenlop", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@sTenlop", _LopHocEO.sTenlop));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
+                    conn.Close();
+                    return bOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return bOutput;
+                }
+            }
+        }
+        #endregion
+
+        #region "Insert, Update, Delete"
         /// <summary> 2. LopHoc_Insert </summary>
         /// <param name="_LopHocEO"></param>
         /// <returns></returns>
@@ -152,13 +182,15 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Select"
         /// <summary> 6. LopHoc_SelectItem </summary>
         /// <param name="_LopHocEO"></param>
         /// <returns></returns>
         public static LopHocEO LopHoc_SelectItem(LopHocEO _LopHocEO)
         {
-            LopHocEO output = new LopHocEO();
+            LopHocEO oOutput = new LopHocEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -171,13 +203,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.LopHoc(ds);
-                    return output;
+                    oOutput = DataSet2Object.LopHoc(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -187,7 +219,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet LopHoc_SelectList()
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -195,15 +227,15 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblLopHoc_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -213,7 +245,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet LopHoc_Search(LopHocEO _LopHocEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -227,17 +259,18 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iSiso", _LopHocEO.iSiso));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iSoNamDaoTao", _LopHocEO.iSoNamDaoTao));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _LopHocEO.iTrangThai));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
+        #endregion
     }
 }

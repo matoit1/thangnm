@@ -10,17 +10,18 @@ namespace DataAccessObject
 {
     public class SinhVienDAO
     {
-        /// <summary> 1. SinhVien_CheckExists </summary>
+        #region "CheckExists"
+        /// <summary> 1. SinhVien_CheckExists_PK_sMaSV </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>
-        public static bool SinhVien_CheckExists(SinhVienEO _SinhVienEO)
+        public static bool SinhVien_CheckExists_PK_sMaSV(SinhVienEO _SinhVienEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists_PK_sMaSV", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sMaSV", _SinhVienEO.PK_sMaSV));
                     DataSet ds = new DataSet();
@@ -43,6 +44,107 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 2. SinhVien_CheckExists_sTendangnhapSV </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static bool SinhVien_CheckExists_sTendangnhapSV(SinhVienEO _SinhVienEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists_sTendangnhapSV", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
+        /// <summary> 3. SinhVien_CheckExists_sEmailSV </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static bool SinhVien_CheckExists_sEmailSV(SinhVienEO _SinhVienEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists_sEmailSV", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sEmailSV", _SinhVienEO.sEmailSV));
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
+        /// <summary> 4. SinhVien_CheckExists_sCMNDSV </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static bool SinhVien_CheckExists_sCMNDSV(SinhVienEO _SinhVienEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_CheckExists_sCMNDSV", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sCMNDSV", _SinhVienEO.sCMNDSV));
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+        #endregion
+
+        #region "Insert, Update, Delete"
         /// <summary> 2. SinhVien_Insert </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>
@@ -220,13 +322,15 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Select"
         /// <summary> 6. SinhVien_SelectItem </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>
         public static SinhVienEO SinhVien_SelectItem(SinhVienEO _SinhVienEO)
         {
-            SinhVienEO output = new SinhVienEO();
+            SinhVienEO oOutput = new SinhVienEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -239,13 +343,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.SinhVien(ds);
-                    return output;
+                    oOutput = DataSet2Object.SinhVien(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -255,7 +359,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static SinhVienEO SinhVien_SelectBysTendangnhapSV(SinhVienEO _SinhVienEO)
         {
-            SinhVienEO output = new SinhVienEO();
+            SinhVienEO oOutput = new SinhVienEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -268,13 +372,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.SinhVien(ds);
-                    return output;
+                    oOutput = DataSet2Object.SinhVien(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -284,7 +388,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static SinhVienEO SinhVien_SelectBysEmailSVvssSdtSV(SinhVienEO _SinhVienEO)
         {
-            SinhVienEO output = new SinhVienEO();
+            SinhVienEO oOutput = new SinhVienEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -298,13 +402,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.SinhVien(ds);
-                    return output;
+                    oOutput = DataSet2Object.SinhVien(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -314,7 +418,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet SinhVien_SelectList()
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -322,15 +426,15 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -340,7 +444,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet SinhVien_Search(SinhVienEO _SinhVienEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -375,15 +479,15 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayCapTheSV", _SinhVienEO.tNgayCapTheSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkAvatarSV", _SinhVienEO.sLinkAvatarSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiSV", _SinhVienEO.iTrangThaiSV));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -393,7 +497,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet SinhVien_Login(SinhVienEO _SinhVienEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -404,17 +508,18 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapSV", _SinhVienEO.sTendangnhapSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sMatkhauSV", _SinhVienEO.sMatkhauSV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiSV", _SinhVienEO.iTrangThaiSV));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
+        #endregion
     }
 }

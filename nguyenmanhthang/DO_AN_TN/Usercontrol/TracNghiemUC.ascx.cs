@@ -48,21 +48,20 @@ namespace DO_AN_TN.UserControl
             List<int> b = Common.Get_List_ID_by_List_Index(a, CauHoiDAO.CauHoi_SelectList());
             List<string> l2 = b.ConvertAll<string>(x => x.ToString());
             string strID = String.Join(",", b.ToArray());
-            //string strIndexItem = string.Join(",", Shared_Libraries.Random_Array_Not_Duplicate(CauhoiDAO.CountAllQuestion(),3).ToArray());
             lvQuestion.DataSource = CauHoiDAO.CauHoi_SelectList_Question_by_Array_Cauhoi_ID(strID);
             lvQuestion.DataBind();
-            //Label1.Text = strID;
         }
 
         protected void Submit_Click(object sender, EventArgs e)
         {
             int true_false = 0;
-            Int16 key, value, dung;
+            CauHoiEO _CauHoiEO = new CauHoiEO();
+            Int16 dung;
             SortedList slCheck = new SortedList();
             for (int i = 0; i < lvQuestion.Items.Count; i++)
             {
                 dung = 0;
-                Label lblTemp = (Label)lvQuestion.Items[i].FindControl("questionID");
+                Label lblTemp = (Label)lvQuestion.Items[i].FindControl("lblPK_lCauhoi_ID");
                 RadioButton rbtnsCauhoi_A = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_A");
                 RadioButton rbtnsCauhoi_B = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_B");
                 RadioButton rbtnsCauhoi_C = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_C");
@@ -71,24 +70,24 @@ namespace DO_AN_TN.UserControl
                 if (rbtnsCauhoi_B.Checked == true) { dung = 2; }
                 if (rbtnsCauhoi_C.Checked == true) { dung = 3; }
                 if (rbtnsCauhoi_D.Checked == true) { dung = 4; }
-                value = dung;
-                key = Convert.ToInt16(lblTemp.Text.ToString());
-                slCheck.Add(key, value);
+                _CauHoiEO.iCauhoi_Dung = dung;
+                _CauHoiEO.PK_lCauhoi_ID = Convert.ToInt64(lblTemp.Text.ToString());
+                slCheck.Add(_CauHoiEO.PK_lCauhoi_ID, _CauHoiEO.iCauhoi_Dung);
 
                 Label lblResuilt = (Label)lvQuestion.Items[i].FindControl("lblResuilt");
-                if (CauHoiDAO.Check(key, value) != true)
+                if (CauHoiDAO.Check_Question_Answer(_CauHoiEO) != true)
                 {
-                    lblResuilt.Text = "Bạn đã trả lời sai";
+                    lblResuilt.Text = Messages.Tra_Loi_Sai;
                     lblResuilt.ForeColor = System.Drawing.Color.Red;
                 }
                 else
                 {
-                    lblResuilt.Text = "Bạn đã trả lời đúng";
+                    lblResuilt.Text = Messages.Tra_Loi_Dung;
                     lblResuilt.ForeColor = System.Drawing.Color.Blue;
                     true_false = true_false + 1;
                 }
             }
-            lblMsg.Text = "Bạn đã trả lời đúng: " + true_false + "/10";
+            lblMsg.Text = Messages.Ban_Da_Tra_Loi_Dung + true_false + "/10";
             DiemThiEO _DiemThiEO = new DiemThiEO();
             SinhVienEO _SinhVienEO = new SinhVienEO();
             _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
@@ -99,14 +98,12 @@ namespace DO_AN_TN.UserControl
             _DiemThiEO.iTrangThai = DiemThi_iTrangThai_C.Binh_Thuong;
             if (DiemThiDAO.DiemThi_Insert(_DiemThiEO) == true)
             {
-                lblMsg.Text = lblMsg.Text + "<br />" + "Chấm điểm thành công!";
+                lblMsg.Text = lblMsg.Text + "<br />" + Messages.Cham_Diem_Thanh_Cong;
             }
             else
             {
-                lblMsg.Text = lblMsg.Text + "<br />" + "Chấm điểm không thành công!";
+                lblMsg.Text = lblMsg.Text + "<br />" + Messages.Cham_Diem_Khong_Thanh_Cong;
             }
-            //Response.Write("<script>alert('Bạn đã trả lời đúng: " + true_false + "/10" + "')</script>");
-            //Response.Write("<script>alert('Cần cố gắng nhiều hơn nhoé')</script>");
         }
     }
 }

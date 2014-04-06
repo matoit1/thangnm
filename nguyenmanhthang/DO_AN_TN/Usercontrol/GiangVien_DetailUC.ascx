@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td>Mã giảng viên: </td>
-            <td><asp:TextBox ID="txtPK_sMaGV" runat="server" Width="400px" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_sMaGV" runat="server" Width="400px" Enabled="false" ></asp:TextBox></td>
             <td><asp:Label ID="lblPK_sMaGV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -32,7 +32,7 @@
         </tr>
         <tr>
             <td>Tên đăng nhập: </td>
-            <td><asp:TextBox ID="txtsTendangnhapGV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsTendangnhapGV" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblsTendangnhapGV" runat="server"></asp:Label></td>
         </tr>
         <tr>

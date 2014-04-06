@@ -10,6 +10,7 @@ namespace DataAccessObject
 {
     public class ErrorDAO
     {
+        #region "CheckExists"
         /// <summary> 1. Error_CheckExists </summary>
         /// <param name="_ErrorEO"></param>
         /// <returns></returns>
@@ -17,32 +18,31 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblError_CheckExists", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lErrorID", _ErrorEO.PK_lErrorID));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblError_CheckExists", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_lErrorID", _ErrorEO.PK_lErrorID));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
+        #endregion
 
+        #region "Insert, Update, Delete"
         /// <summary> 2. Error_Insert </summary>
         /// <param name="_ErrorEO"></param>
         /// <returns></returns>
@@ -152,13 +152,15 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Select"
         /// <summary> 6. Error_SelectItem </summary>
         /// <param name="_ErrorEO"></param>
         /// <returns></returns>
         public static ErrorEO Error_SelectItem(ErrorEO _ErrorEO)
         {
-            ErrorEO output = new ErrorEO();
+            ErrorEO oOutput = new ErrorEO();
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -170,13 +172,13 @@ namespace DataAccessObject
                     DataSet ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.Error(ds);
-                    return output = DataSet2Object.Error(ds);
+                    oOutput = DataSet2Object.Error(ds);
+                    return oOutput = DataSet2Object.Error(ds);
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -186,7 +188,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet Error_SelectList()
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -194,15 +196,15 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblError_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -212,7 +214,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet Error_Search(ErrorEO _ErrorEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -228,17 +230,18 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tTime", _ErrorEO.tTime));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tTimeCheck", _ErrorEO.tTimeCheck));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iStatus", _ErrorEO.iStatus));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
+        #endregion
     }
 }

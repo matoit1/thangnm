@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <td>Mã sinh viên: </td>
-            <td><asp:TextBox ID="txtPK_sMaSV" runat="server" Width="400px" ontextchanged="txtPK_sMaSV_TextChanged" AutoPostBack="true"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_sMaSV" runat="server" Width="400px" ontextchanged="txtPK_sMaSV_TextChanged" AutoPostBack="true" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_sMaSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -37,7 +37,7 @@
         </tr>
         <tr>
             <td>Tên đăng nhập: </td>
-            <td><asp:TextBox ID="txtsTendangnhapSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsTendangnhapSV" runat="server" Width="400px" ontextchanged="txtsTendangnhapSV_TextChanged" AutoPostBack="true" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblsTendangnhapSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -47,7 +47,7 @@
         </tr>
         <tr>
             <td>Địa chỉ Email: </td>
-            <td><asp:TextBox ID="txtsEmailSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsEmailSV" runat="server" Width="400px" ontextchanged="txtsEmailSV_TextChanged" AutoPostBack="true"></asp:TextBox></td>
             <td><asp:Label ID="lblsEmailSV" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -72,7 +72,7 @@
         </tr>
         <tr>
             <td>Số CMND: </td>
-            <td><asp:TextBox ID="txtsCMNDSV" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsCMNDSV" runat="server" Width="400px" ontextchanged="txtsCMNDSV_TextChanged" AutoPostBack="true"></asp:TextBox></td>
             <td><asp:Label ID="lblsCMNDSV" runat="server"></asp:Label></td>
         </tr>
         <tr>

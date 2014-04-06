@@ -16,7 +16,7 @@
         </LayoutTemplate>--%>
         <ItemTemplate>               
             <div class="style">
-                <p> <asp:Label ID="questionID" runat="server" text='<%# Eval("PK_lCauhoi_ID")%>' Font-Bold="true" ></asp:Label>: <b><%# Eval("sCauhoi_Cauhoi")%></b></p>
+                <p> <asp:Label ID="lblPK_lCauhoi_ID" runat="server" text='<%# Eval("PK_lCauhoi_ID")%>' Font-Bold="true" ></asp:Label>: <b><%# Eval("sCauhoi_Cauhoi")%></b></p>
                 <p>
                     <asp:RadioButton ID="rbtnsCauhoi_A" runat="server" GroupName="gnQuestion" /> <%# Eval("sCauhoi_A")%>
                     <asp:RadioButton ID="rbtnsCauhoi_B" runat="server" GroupName="gnQuestion" /> <%# Eval("sCauhoi_B")%>

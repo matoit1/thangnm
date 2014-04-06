@@ -10,6 +10,7 @@ namespace DataAccessObject
 {
     public class CauHoiDAO
     {
+        #region "CheckExists"
         /// <summary> 1. CauHoi_CheckExists </summary>
         /// <param name="_CauHoiEO"></param>
         /// <returns></returns>
@@ -17,32 +18,31 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_CheckExists", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblCauHoi_CheckExists", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
+        #endregion
 
+        #region "Insert, Update, Delete"
         /// <summary> 2. CauHoi_Insert </summary>
         /// <param name="_CauHoiEO"></param>
         /// <returns></returns>
@@ -160,13 +160,15 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Select"
         /// <summary> 6. CauHoi_SelectItem </summary>
         /// <param name="_CauHoiEO"></param>
         /// <returns></returns>
         public static CauHoiEO CauHoi_SelectItem(CauHoiEO _CauHoiEO)
         {
-            CauHoiEO output = new CauHoiEO();
+            CauHoiEO oOutput = new CauHoiEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -179,13 +181,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.CauHoi(ds);
-                    return output;
+                    oOutput = DataSet2Object.CauHoi(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -195,7 +197,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet CauHoi_SelectList()
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -203,15 +205,15 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -221,7 +223,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet CauHoi_Search(CauHoiEO _CauHoiEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -241,47 +243,52 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayTao", _CauHoiEO.tNgayTao));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayCapNhat", _CauHoiEO.tNgayCapNhat));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _CauHoiEO.iTrangThai));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
 
+        /// <summary> CauHoi_CountAll </summary>
+        /// <returns></returns>
         public static int CauHoi_CountAll()
         {
-            DataSet ds = null;
-            int count = 0;
+            int iOutput = 0;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
-                try
-                {
+                try{
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_CountAll", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblCauHoi_CountAll", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        iOutput = Convert.ToInt32(dr["return_value"]);
+                    }
                     conn.Close();
-                    count = Convert.ToInt32(ds.Tables[0].Rows[0]["SumQuestion"].ToString());
-                    return count;
+                    return iOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return count;
+                    return iOutput;
                 }
             }
         }
 
+        /// <summary>CauHoi_SelectList_Question_by_Array_Cauhoi_ID </summary>
+        /// <param name="ListPK_lCauhoi_ID"></param>
+        /// <returns></returns>
         public static DataSet CauHoi_SelectList_Question_by_Array_Cauhoi_ID(string ListPK_lCauhoi_ID)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -290,51 +297,49 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_SelectList_Question_by_Array_PK_lCauhoi_ID", conn);
                     da.SelectCommand.Parameters.Add(new SqlParameter("@ListPK_lCauhoi_ID", ListPK_lCauhoi_ID));
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
 
-        public static bool Check(Int64 PK_lCauhoi_ID, Int16 iCauhoi_Dung)
+        /// <summary> Check_Question_Answer </summary>
+        /// <param name="_CauHoiEO"></param>
+        /// <returns></returns>
+        public static bool Check_Question_Answer(CauHoiEO _CauHoiEO)
         {
-            DataSet ds = null;
-            Boolean kq = false;
+            Boolean bOutput = false;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblCauHoi_Check", conn);
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", PK_lCauhoi_ID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iCauhoi_Dung", iCauhoi_Dung));
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblCauHoi_Check_Question_Answer", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_lCauhoi_ID", _CauHoiEO.PK_lCauhoi_ID));
+                    cmd.Parameters.Add(new SqlParameter("@iCauhoi_Dung", _CauHoiEO.iCauhoi_Dung));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (ds.Tables[0].Rows.Count != 0)
-                    {
-                        kq = true;
-                    }
-                    else
-                    {
-                        kq = false;
-                    }
-                    return kq;
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return kq;
+                    return bOutput;
                 }
             }
         }
+        #endregion
     }
 }

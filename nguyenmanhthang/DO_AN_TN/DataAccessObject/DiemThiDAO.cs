@@ -10,6 +10,7 @@ namespace DataAccessObject
 {
     public class DiemThiDAO
     {
+        #region "CheckExists"
         /// <summary> 1. DiemThi_CheckExists </summary>
         /// <param name="_DiemThiEO"></param>
         /// <returns></returns>
@@ -17,34 +18,33 @@ namespace DataAccessObject
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
+                bool bOutput = false;
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblDiemThi_CheckExists", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaSV", _DiemThiEO.FK_sMaSV));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaMonhoc", _DiemThiEO.FK_sMaMonhoc));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iSolanhoc", _DiemThiEO.PK_iSolanhoc));
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                    SqlCommand cmd = new SqlCommand("tblDiemThi_CheckExists", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@FK_sMaSV", _DiemThiEO.FK_sMaSV));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sMaMonhoc", _DiemThiEO.FK_sMaMonhoc));
+                    cmd.Parameters.Add(new SqlParameter("@PK_iSolanhoc", _DiemThiEO.PK_iSolanhoc));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
                     conn.Close();
-                    if (Convert.ToInt32(ds.Tables[0].Rows.Count) > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return bOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return false;
+                    return bOutput;
                 }
             }
         }
+        #endregion
 
+        #region "Insert, Update, Delete"
         /// <summary> 2. DiemThi_Insert </summary>
         /// <param name="_DiemThiEO"></param>
         /// <returns></returns>
@@ -160,13 +160,15 @@ namespace DataAccessObject
                 }
             }
         }
+        #endregion
 
+        #region "Select"
         /// <summary> 6. DiemThi_SelectItem </summary>
         /// <param name="_DiemThiEO"></param>
         /// <returns></returns>
         public static DiemThiEO DiemThi_SelectItem(DiemThiEO _DiemThiEO)
         {
-            DiemThiEO output = new DiemThiEO();
+            DiemThiEO oOutput = new DiemThiEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -181,13 +183,13 @@ namespace DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    output = DataSet2Object.DiemThi(ds);
-                    return output;
+                    oOutput = DataSet2Object.DiemThi(ds);
+                    return oOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return output;
+                    return oOutput;
                 }
             }
         }
@@ -197,7 +199,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet DiemThi_SelectList()
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -205,15 +207,15 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblDiemThi_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
@@ -223,7 +225,7 @@ namespace DataAccessObject
         /// <returns></returns>
         public static DataSet DiemThi_Search(DiemThiEO _DiemThiEO)
         {
-            DataSet ds = null;
+            DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
@@ -239,17 +241,18 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@fDiemthilan1", _DiemThiEO.fDiemthilan1));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@fDiemthilan2", _DiemThiEO.fDiemthilan2));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _DiemThiEO.iTrangThai));
-                    ds = new DataSet();
-                    da.Fill(ds);
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
                 catch (Exception)
                 {
                     conn.Close();
-                    return ds;
+                    return dsOutput;
                 }
             }
         }
+        #endregion
     }
 }
