@@ -9,6 +9,7 @@ using System.IO;
 using Shared_Libraries;
 using DataAccessObject;
 using System.Data;
+using EntityObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -18,6 +19,12 @@ namespace DO_AN_TN.UserControl
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
+
+        public PhanCongCongTacEO objPhanCongCongTacEO
+        {
+            get { return (PhanCongCongTacEO)ViewState["objPhanCongCongTacEO"]; }
+            set { ViewState["objPhanCongCongTacEO"] = value; }
+        }
 
         private string _PK_sMaPCCT;
         public string PK_sMaPCCT
@@ -31,17 +38,18 @@ namespace DO_AN_TN.UserControl
         {
             if (!IsPostBack)
             {
-                BindData();
+                //BindData();
             }
         }
 
-        public void BindData()
+        public void BindData(PhanCongCongTacEO _PhanCongCongTacEO)
         {
+            objPhanCongCongTacEO = _PhanCongCongTacEO;
             grvListPhanCongCongTac.Visible = false;
             DataSet dsPhanCongCongTac = new DataSet();
             try
             {
-                dsPhanCongCongTac = PhanCongCongTacDAO.PhanCongCongTac_SelectList();
+                dsPhanCongCongTac = PhanCongCongTacDAO.PhanCongCongTac_SelectList(_PhanCongCongTacEO);
                 if (Convert.ToInt32(dsPhanCongCongTac.Tables[0].Rows.Count.ToString()) > 0)
                 {
                     grvListPhanCongCongTac.Visible = true;
@@ -93,7 +101,7 @@ namespace DO_AN_TN.UserControl
         protected void grvListPhanCongCongTac_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListPhanCongCongTac.PageIndex = e.NewPageIndex;
-            BindData();
+            BindData(objPhanCongCongTacEO);
         }
 
         protected void grvListPhanCongCongTac_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -118,7 +126,7 @@ namespace DO_AN_TN.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "ASC";
             }
-            DataSet dsPhanCongCongTac = PhanCongCongTacDAO.PhanCongCongTac_SelectList();
+            DataSet dsPhanCongCongTac = PhanCongCongTacDAO.PhanCongCongTac_SelectList(objPhanCongCongTacEO);
             DataView sortedView = new DataView(dsPhanCongCongTac.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;
@@ -144,12 +152,12 @@ namespace DO_AN_TN.UserControl
         #region "Event Button"
         protected void Search_Click(object sender, EventArgs e)
         {
-            BindData();
+            BindData(objPhanCongCongTacEO);
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
-            BindData();
+            BindData(objPhanCongCongTacEO);
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
@@ -183,7 +191,7 @@ namespace DO_AN_TN.UserControl
                 HtmlTextWriter hw = new HtmlTextWriter(sw);
                 //To Export all pages
                 grvListPhanCongCongTac.AllowPaging = false;
-                this.BindData();
+                this.BindData(objPhanCongCongTacEO);
 
                 grvListPhanCongCongTac.HeaderRow.BackColor = Color.White;
                 foreach (TableCell cell in grvListPhanCongCongTac.HeaderRow.Cells)

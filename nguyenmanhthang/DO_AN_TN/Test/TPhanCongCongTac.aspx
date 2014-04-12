@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TPhanCongCongTac.aspx.cs" Inherits="DO_AN_TN.Test.TPhanCongCongTac" MasterPageFile="~/Share_Interface/QuanTri_SI.Master"  EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TPhanCongCongTac.aspx.cs" Inherits="DO_AN_TN.Test.TPhanCongCongTac" MasterPageFile="~/Share_Interface/Test.Master"  EnableEventValidation="false" %>
 
 <%@ Register src="../UserControl/PhanCongCongTac_DetailUC.ascx" tagname="PhanCongCongTac_DetailUC" tagprefix="uc1" %>
 <%@ Register src="../UserControl/PhanCongCongTac_ListUC.ascx" tagname="PhanCongCongTac_ListUC" tagprefix="uc2" %>

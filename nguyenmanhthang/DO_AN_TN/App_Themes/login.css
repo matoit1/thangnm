@@ -8,11 +8,10 @@
 }
 
 .signin-card .profile-img {
-    border-radius: 50% 50% 50% 50%;
     display: block;
-    height: 96px;
+    height: 100px;
     margin: 0 auto 10px;
-    width: 96px;
+    width: 200px;
 }
 
 .signin-card .notificationError{color:#FF3366; font-weight: bold; text-align:center}

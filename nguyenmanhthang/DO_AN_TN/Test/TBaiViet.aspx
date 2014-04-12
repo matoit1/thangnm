@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TBaiViet.aspx.cs" Inherits="DO_AN_TN.Test.TBaiViet" MasterPageFile="~/Share_Interface/QuanTri_SI.Master"  EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TBaiViet.aspx.cs" Inherits="DO_AN_TN.Test.TBaiViet" MasterPageFile="~/Share_Interface/Test.Master"  EnableEventValidation="false" %>
 
 <%@ Register src="../UserControl/BaiViet_DetailUC.ascx" tagname="BaiViet_DetailUC" tagprefix="uc1" %>
 <%@ Register src="../UserControl/BaiViet_ListUC.ascx" tagname="BaiViet_ListUC" tagprefix="uc2" %>

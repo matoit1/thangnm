@@ -5,6 +5,7 @@ using System.Web;
 
 namespace EntityObject
 {
+    [Serializable()]
     public class LichDayVaHocEO
     {
         private string _FK_sMaPCCT;

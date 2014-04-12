@@ -35,6 +35,11 @@ namespace DO_AN_TN.UserControl
                 x.SoundLocation = Server.MapPath("\\Media\\Virus.WAV");
                 x.Play();
             }
+            if (CountDown == 1)
+            {
+                lblMsg.Text = Messages.Het_Thoi_Gian_Tra_Loi_Cau_Hoi;
+                ChamDiem();
+            }
             if (CountDown <= 0)
             {
                 btnTime.Text = "0";
@@ -54,56 +59,70 @@ namespace DO_AN_TN.UserControl
 
         protected void Submit_Click(object sender, EventArgs e)
         {
-            int true_false = 0;
-            CauHoiEO _CauHoiEO = new CauHoiEO();
-            Int16 dung;
-            SortedList slCheck = new SortedList();
-            for (int i = 0; i < lvQuestion.Items.Count; i++)
-            {
-                dung = 0;
-                Label lblTemp = (Label)lvQuestion.Items[i].FindControl("lblPK_lCauhoi_ID");
-                RadioButton rbtnsCauhoi_A = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_A");
-                RadioButton rbtnsCauhoi_B = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_B");
-                RadioButton rbtnsCauhoi_C = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_C");
-                RadioButton rbtnsCauhoi_D = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_D");
-                if (rbtnsCauhoi_A.Checked == true) { dung = 1; }
-                if (rbtnsCauhoi_B.Checked == true) { dung = 2; }
-                if (rbtnsCauhoi_C.Checked == true) { dung = 3; }
-                if (rbtnsCauhoi_D.Checked == true) { dung = 4; }
-                _CauHoiEO.iCauhoi_Dung = dung;
-                _CauHoiEO.PK_lCauhoi_ID = Convert.ToInt64(lblTemp.Text.ToString());
-                slCheck.Add(_CauHoiEO.PK_lCauhoi_ID, _CauHoiEO.iCauhoi_Dung);
+            ChamDiem();
+        }
 
-                Label lblResuilt = (Label)lvQuestion.Items[i].FindControl("lblResuilt");
-                if (CauHoiDAO.Check_Question_Answer(_CauHoiEO) != true)
+        public bool ChamDiem(){
+            try
+            {
+                int true_false = 0;
+                CauHoiEO _CauHoiEO = new CauHoiEO();
+                Int16 dung;
+                SortedList slCheck = new SortedList();
+                for (int i = 0; i < lvQuestion.Items.Count; i++)
                 {
-                    lblResuilt.Text = Messages.Tra_Loi_Sai;
-                    lblResuilt.ForeColor = System.Drawing.Color.Red;
+                    dung = 0;
+                    Label lblTemp = (Label)lvQuestion.Items[i].FindControl("lblPK_lCauhoi_ID");
+                    RadioButton rbtnsCauhoi_A = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_A");
+                    RadioButton rbtnsCauhoi_B = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_B");
+                    RadioButton rbtnsCauhoi_C = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_C");
+                    RadioButton rbtnsCauhoi_D = (RadioButton)lvQuestion.Items[i].FindControl("rbtnsCauhoi_D");
+                    if (rbtnsCauhoi_A.Checked == true) { dung = 1; }
+                    if (rbtnsCauhoi_B.Checked == true) { dung = 2; }
+                    if (rbtnsCauhoi_C.Checked == true) { dung = 3; }
+                    if (rbtnsCauhoi_D.Checked == true) { dung = 4; }
+                    _CauHoiEO.iCauhoi_Dung = dung;
+                    _CauHoiEO.PK_lCauhoi_ID = Convert.ToInt64(lblTemp.Text.ToString());
+                    slCheck.Add(_CauHoiEO.PK_lCauhoi_ID, _CauHoiEO.iCauhoi_Dung);
+
+                    Label lblResuilt = (Label)lvQuestion.Items[i].FindControl("lblResuilt");
+                    if (CauHoiDAO.Check_Question_Answer(_CauHoiEO) != true)
+                    {
+                        lblResuilt.Text = Messages.Tra_Loi_Sai;
+                        lblResuilt.ForeColor = System.Drawing.Color.Red;
+                    }
+                    else
+                    {
+                        lblResuilt.Text = Messages.Tra_Loi_Dung;
+                        lblResuilt.ForeColor = System.Drawing.Color.Blue;
+                        true_false = true_false + 1;
+                    }
+                }
+                lblMsg.Text = lblMsg.Text + Messages.Ban_Da_Tra_Loi_Dung + true_false + "/10";
+                DiemThiEO _DiemThiEO = new DiemThiEO();
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
+                _DiemThiEO.FK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
+                _DiemThiEO.FK_sMaMonhoc = "MH000004";
+                _DiemThiEO.PK_iSolanhoc = 1;
+                _DiemThiEO.fDiemgiuaky = true_false;
+                _DiemThiEO.iTrangThai = DiemThi_iTrangThai_C.Binh_Thuong;
+                if (DiemThiDAO.DiemThi_Insert(_DiemThiEO) == true)
+                {
+                    lblMsg.Text = lblMsg.Text + "<br />" + Messages.Cham_Diem_Thanh_Cong;
                 }
                 else
                 {
-                    lblResuilt.Text = Messages.Tra_Loi_Dung;
-                    lblResuilt.ForeColor = System.Drawing.Color.Blue;
-                    true_false = true_false + 1;
+                    lblMsg.Text = lblMsg.Text + "<br />" + Messages.Cham_Diem_Khong_Thanh_Cong;
                 }
+                return true;
             }
-            lblMsg.Text = Messages.Ban_Da_Tra_Loi_Dung + true_false + "/10";
-            DiemThiEO _DiemThiEO = new DiemThiEO();
-            SinhVienEO _SinhVienEO = new SinhVienEO();
-            _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
-            _DiemThiEO.FK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
-            _DiemThiEO.FK_sMaMonhoc = "MH000004";
-            _DiemThiEO.PK_iSolanhoc = 1;
-            _DiemThiEO.fDiemgiuaky = true_false;
-            _DiemThiEO.iTrangThai = DiemThi_iTrangThai_C.Binh_Thuong;
-            if (DiemThiDAO.DiemThi_Insert(_DiemThiEO) == true)
+            catch(Exception ex)
             {
-                lblMsg.Text = lblMsg.Text + "<br />" + Messages.Cham_Diem_Thanh_Cong;
-            }
-            else
-            {
-                lblMsg.Text = lblMsg.Text + "<br />" + Messages.Cham_Diem_Khong_Thanh_Cong;
+                lblMsg.Text = ex.Message;
+                return false;
             }
         }
+
     }
 }

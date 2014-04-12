@@ -1,11 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TracNghiemUC.ascx.cs" Inherits="DO_AN_TN.UserControl.TracNghiemUC" %>
 <div>
 <asp:ScriptManager ID="smQuestion" runat="server"></asp:ScriptManager>
-    <center><h1>AI LÀ TRIỆU PHÚ</h1>
-        <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
-    </center><br />
     <asp:UpdatePanel ID="upTime" runat="server">
         <ContentTemplate>
+            <center><h1><asp:Label ID="lblTitle" runat="server" Text="THI TRẮC NGHIỆM"></asp:Label></h1>
+                <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+            </center><br />
             <asp:Timer ID="tThoiGianTraLoiCauHoi" runat="server" ontick="tThoiGianTraLoiCauHoi_Tick"></asp:Timer>
             <asp:Button ID="btnTime" runat="server" BackColor="Blue" />
         </ContentTemplate>

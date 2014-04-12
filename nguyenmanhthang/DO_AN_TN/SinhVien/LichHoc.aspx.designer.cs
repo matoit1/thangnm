@@ -13,6 +13,33 @@ namespace DO_AN_TN.SinhVien {
     public partial class LichHoc {
         
         /// <summary>
+        /// smrMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager smrMain;
+        
+        /// <summary>
+        /// tcrMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabContainer tcrMain;
+        
+        /// <summary>
+        /// tplMonDangHoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tplMonDangHoc;
+        
+        /// <summary>
         /// LichDayVaHoc_ListUC1 control.
         /// </summary>
         /// <remarks>
@@ -20,5 +47,23 @@ namespace DO_AN_TN.SinhVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.LichDayVaHoc_ListUC LichDayVaHoc_ListUC1;
+        
+        /// <summary>
+        /// tplMonDaHoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tplMonDaHoc;
+        
+        /// <summary>
+        /// LichDayVaHoc_ListUC2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.LichDayVaHoc_ListUC LichDayVaHoc_ListUC2;
     }
 }

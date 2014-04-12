@@ -12,8 +12,17 @@ namespace DO_AN_TN.UserControl
 {
     public partial class BaiViet_DetailUC : System.Web.UI.UserControl
     {
+        #region "Properties & Event"
+        public Int16 iType
+        {
+            get { return (Int16)ViewState["iType"]; }
+            set { ViewState["iType"] = value; }
+        }
+        #endregion
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            loadCKEditor();
             if (!IsPostBack)
             {
                 ClearMessages();
@@ -35,6 +44,7 @@ namespace DO_AN_TN.UserControl
             catch { txttNgayViet.Text = ""; }
             try { txttNgayCapNhat.Text = Convert.ToString(_BaiVietEO.tNgayCapNhat.ToShortDateString()); }
             catch { txttNgayCapNhat.Text = ""; }
+            txtsMoTa.Text = Convert.ToString(_BaiVietEO.sMoTa);
             try { ddliTrangThai.SelectedValue = Convert.ToString(_BaiVietEO.iTrangThai); }
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
@@ -164,6 +174,26 @@ namespace DO_AN_TN.UserControl
             ClearMessages();
             BaiVietEO _BaiVietEO = new BaiVietEO();
             BindDataDetail(_BaiVietEO);
+        }
+        #endregion
+
+        #region "Config CKEditor"
+        protected void loadCKEditor()
+        {
+            txtsNoiDung.config.toolbar = new object[] { 
+              new object[] { "Save", "NewPage", "Preview", "-", "Templates" },
+                new object[] { "Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "-", "Print", "SpellChecker", "Scayt" },
+                new object[] { "Undo", "Redo", "-", "Find", "Replace", "-", "SelectAll", "RemoveFormat" },
+			
+                "/",
+                new object[] { "Bold", "Italic", "Underline", "Strike" },
+                new object[] { "NumberedList", "BulletedList", "-", "Outdent", "Indent", "Blockquote", "CreateDiv" },
+                new object[] { "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock" },
+                new object[] { "BidiLtr", "BidiRtl" },
+                new object[] { "Link", "Unlink", "Anchor" },
+                new object[] { "Image"},
+                "/"
+            };
         }
         #endregion
     }

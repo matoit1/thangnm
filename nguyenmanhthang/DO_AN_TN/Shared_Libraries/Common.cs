@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace Shared_Libraries
 {
@@ -202,6 +203,25 @@ namespace Shared_Libraries
         }
     }
 
+    public class RewriteUrl
+    {
+        public static string ConvertToUnSign(string text)
+        {
+            for (int i = 32; i < 48; i++)
+            {
+                text = text.Replace(((char)i).ToString(), " ");
+            }
+            text = text.Replace(".", "-");
+            text = text.Replace(" ", "-");
+            text = text.Replace(",", "-");
+            text = text.Replace(";", "-");
+            text = text.Replace(":", "-");
+            Regex regex = new Regex(@"\p{IsCombiningDiacriticalMarks}+");
+            string strFormD = text.Normalize(System.Text.NormalizationForm.FormD);
+            return regex.Replace(strFormD, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
+    }
+
     public class Messages
     {
         #region "Error"
@@ -244,11 +264,13 @@ namespace Shared_Libraries
         #endregion
 
         #region "tblCauHoi"
+        public const string Thi_Trac_Nghiem_Mon = "THI TRẮC NGHIỆM MÔN: ";
         public const string Ban_Da_Tra_Loi_Dung = "Bạn đã trả lời đúng: ";
         public const string Tra_Loi_Dung = "Bạn đã trả lời đúng!";
         public const string Tra_Loi_Sai = "Bạn đã trả lời sai!";
         public const string Cham_Diem_Thanh_Cong = "Chấm điểm thành công!";
         public const string Cham_Diem_Khong_Thanh_Cong = "Chấm điểm không thành công!";
+        public const string Het_Thoi_Gian_Tra_Loi_Cau_Hoi = "Hết thời gian trả lời câu hỏi! ";
         #endregion
     }
 }

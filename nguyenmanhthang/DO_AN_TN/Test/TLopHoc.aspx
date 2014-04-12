@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TLopHoc.aspx.cs" Inherits="DO_AN_TN.Test.TLopHoc" MasterPageFile="~/Share_Interface/QuanTri_SI.Master"  EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TLopHoc.aspx.cs" Inherits="DO_AN_TN.Test.TLopHoc" MasterPageFile="~/Share_Interface/Test.Master"  EnableEventValidation="false" %>
 
 <%@ Register src="../UserControl/LopHoc_DetailUC.ascx" tagname="LopHoc_DetailUC" tagprefix="uc1" %>
 <%@ Register src="../UserControl/LopHoc_ListUC.ascx" tagname="LopHoc_ListUC" tagprefix="uc2" %>

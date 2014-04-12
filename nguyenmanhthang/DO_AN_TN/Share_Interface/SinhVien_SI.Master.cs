@@ -19,7 +19,7 @@ namespace DO_AN_TN.Share_Interface
                 {
                     Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.AbsolutePath);
                 }
-                lblInfo.Text = "   Hi, " + Request.Cookies["sinhvien"].Value;
+                //lblInfo.Text = "   Hi, " + Request.Cookies["sinhvien"].Value;
             }
             catch
             {

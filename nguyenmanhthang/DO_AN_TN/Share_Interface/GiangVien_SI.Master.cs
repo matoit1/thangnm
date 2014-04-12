@@ -17,7 +17,7 @@ namespace DO_AN_TN.Share_Interface
                 {
                     Response.Redirect("~/GiangVien/Accounts/Login.aspx?Return_Url=" + Request.Url.AbsolutePath);
                 }
-                lblInfo.Text = "   Hi, " + Request.Cookies["giangvien"].Value;
+                //lblInfo.Text = "   Hi, " + Request.Cookies["giangvien"].Value;
             }
             catch
             {

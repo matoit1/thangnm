@@ -13,7 +13,8 @@ namespace DO_AN_TN.Test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DiemThiEO _DiemThiEO = new DiemThiEO();
+            DiemThi_ListUC1.BindData(_DiemThiEO);
         }
 
         public override void VerifyRenderingInServerForm(Control control)
@@ -49,7 +50,7 @@ namespace DO_AN_TN.Test
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vList);
-            DiemThi_ListUC1.BindData();
+            DiemThi_ListUC1.BindData(DiemThi_ListUC1.objDiemThiEO);
         }
     }
 }

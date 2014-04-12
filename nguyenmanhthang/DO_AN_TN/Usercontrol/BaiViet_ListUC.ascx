@@ -62,9 +62,9 @@
                         <asp:BoundField DataField="sTag" HeaderText="Tags" SortExpression="sTag">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sNoiDung" HeaderText="Nội dung" SortExpression="sNoiDung">
+                        <%--<asp:BoundField DataField="sNoiDung" HeaderText="Nội dung" SortExpression="sNoiDung">
                             <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>
+                        </asp:BoundField>--%>
                         <asp:BoundField DataField="iLuotXem" HeaderText="Lượt xem" SortExpression="iLuotXem">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>

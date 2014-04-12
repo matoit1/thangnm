@@ -197,7 +197,7 @@ namespace DataAccessObject
         /// <summary> 7. DiemThi_SelectList </summary>
         /// <param name="_DiemThiEO"></param>
         /// <returns></returns>
-        public static DataSet DiemThi_SelectList()
+        public static DataSet DiemThi_SelectList(DiemThiEO _DiemThiEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -207,6 +207,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblDiemThi_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaSV", (_DiemThiEO.FK_sMaSV == null) ? (object)DBNull.Value : _DiemThiEO.FK_sMaSV));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

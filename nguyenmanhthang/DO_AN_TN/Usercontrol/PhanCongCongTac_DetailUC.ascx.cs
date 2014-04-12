@@ -179,5 +179,10 @@ namespace DO_AN_TN.UserControl
             }
         }
         #endregion
+
+        protected void txtPK_sMaPCCT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

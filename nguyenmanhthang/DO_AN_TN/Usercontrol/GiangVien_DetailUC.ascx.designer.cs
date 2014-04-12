@@ -415,7 +415,7 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInsert;
+        public global::System.Web.UI.WebControls.Button btnInsert;
         
         /// <summary>
         /// btnUpdate control.
@@ -424,7 +424,7 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        public global::System.Web.UI.WebControls.Button btnUpdate;
         
         /// <summary>
         /// btnDelete control.
@@ -433,7 +433,7 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
+        public global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
         /// btnReset control.
@@ -442,6 +442,6 @@ namespace DO_AN_TN.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReset;
+        public global::System.Web.UI.WebControls.Button btnReset;
     }
 }

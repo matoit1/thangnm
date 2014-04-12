@@ -9,6 +9,7 @@ using System.IO;
 using Shared_Libraries;
 using System.Data;
 using DataAccessObject;
+using EntityObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -18,6 +19,12 @@ namespace DO_AN_TN.UserControl
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
+
+        public DiemThiEO objDiemThiEO
+        {
+            get { return (DiemThiEO)ViewState["objDiemThiEO"]; }
+            set { ViewState["objDiemThiEO"] = value; }
+        }
 
         private string _FK_sMaSV;
         public string FK_sMaSV
@@ -43,17 +50,18 @@ namespace DO_AN_TN.UserControl
         {
             if (!IsPostBack)
             {
-                BindData();
+                //BindData();
             }
         }
 
-        public void BindData()
+        public void BindData(DiemThiEO _DiemThiEO)
         {
+            objDiemThiEO = _DiemThiEO;
             grvListDiemThi.Visible = false;
             DataSet dsDiemThi = new DataSet();
             try
             {
-                dsDiemThi = DiemThiDAO.DiemThi_SelectList();
+                dsDiemThi = DiemThiDAO.DiemThi_SelectList(_DiemThiEO);
                 if (Convert.ToInt32(dsDiemThi.Tables[0].Rows.Count.ToString()) > 0)
                 {
                     grvListDiemThi.Visible = true;
@@ -109,7 +117,7 @@ namespace DO_AN_TN.UserControl
         protected void grvListDiemThi_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListDiemThi.PageIndex = e.NewPageIndex;
-            BindData();
+            BindData(objDiemThiEO);
         }
 
         protected void grvListDiemThi_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -134,7 +142,7 @@ namespace DO_AN_TN.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "ASC";
             }
-            DataSet dsDiemThi = DiemThiDAO.DiemThi_SelectList();
+            DataSet dsDiemThi = DiemThiDAO.DiemThi_SelectList(objDiemThiEO);
             DataView sortedView = new DataView(dsDiemThi.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;
@@ -160,12 +168,12 @@ namespace DO_AN_TN.UserControl
         #region "Event Button"
         protected void Search_Click(object sender, EventArgs e)
         {
-            BindData();
+            BindData(objDiemThiEO);
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
-            BindData();
+            BindData(objDiemThiEO);
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
@@ -199,7 +207,7 @@ namespace DO_AN_TN.UserControl
                 HtmlTextWriter hw = new HtmlTextWriter(sw);
                 //To Export all pages
                 grvListDiemThi.AllowPaging = false;
-                this.BindData();
+                this.BindData(objDiemThiEO);
 
                 grvListDiemThi.HeaderRow.BackColor = Color.White;
                 foreach (TableCell cell in grvListDiemThi.HeaderRow.Cells)

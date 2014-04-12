@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TDiemThi.aspx.cs" Inherits="DO_AN_TN.Test.TDiemThi" MasterPageFile="~/Share_Interface/QuanTri_SI.Master"  EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TDiemThi.aspx.cs" Inherits="DO_AN_TN.Test.TDiemThi" MasterPageFile="~/Share_Interface/Test.Master"  EnableEventValidation="false" %>
 
 <%@ Register src="../UserControl/DiemThi_DetailUC.ascx" tagname="DiemThi_DetailUC" tagprefix="uc1" %>
 <%@ Register src="../UserControl/DiemThi_ListUC.ascx" tagname="DiemThi_ListUC" tagprefix="uc2" %>
