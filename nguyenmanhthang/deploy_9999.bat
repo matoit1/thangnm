@@ -22,4 +22,15 @@ Xcopy /s /i /y "DO_AN_TN\*.png" "C:\inetpub\wwwroot\nguyenmanhthang.tk\"
 Xcopy /s /i /y "DO_AN_TN\*.gif" "C:\inetpub\wwwroot\nguyenmanhthang.tk\"
 Xcopy /s /i /y "DO_AN_TN\*.ico" "C:\inetpub\wwwroot\nguyenmanhthang.tk\"
 
+
+Xcopy /s /i /y "DO_AN_TN\*.sql" "C:\inetpub\wwwroot\nguyenmanhthang.tk\"
+Xcopy /s /i /y "DO_AN_TN\*.bak" "C:\inetpub\wwwroot\nguyenmanhthang.tk\"
+Xcopy /s /i /y "DO_AN_TN\*.rar" "C:\inetpub\wwwroot\nguyenmanhthang.tk\"
+
+Xcopy /s /i /y "DO_AN_TN\Upload\*" "C:\inetpub\wwwroot\nguyenmanhthang.tk\Upload\"
+Xcopy /s /i /y "DO_AN_TN\Medio\*" "C:\inetpub\wwwroot\nguyenmanhthang.tk\Medio\"
+Xcopy /s /i /y "DO_AN_TN\Flash\*" "C:\inetpub\wwwroot\nguyenmanhthang.tk\Flash\"
+Xcopy /s /i /y "DO_AN_TN\Images\*" "C:\inetpub\wwwroot\nguyenmanhthang.tk\Images\"
+Xcopy /s /i /y "DO_AN_TN\Other\*" "C:\inetpub\wwwroot\nguyenmanhthang.tk\Other\"
+
 pause
