@@ -1,4 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BaiViet_DetailUC.ascx.cs" Inherits="DO_AN_TN.UserControl.BaiViet_DetailUC" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
+
 <link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
 <script src="../Scripts/calendar1.js" type="text/javascript"></script>  
 <script src="../Scripts/calendar2.js" type="text/javascript"></script>
@@ -47,7 +49,9 @@
         </tr>
         <tr>
             <td>Nội dung: </td>
-            <td><asp:TextBox ID="txtsNoiDung" runat="server" Width="400px"></asp:TextBox></td>
+            <td>
+            <CKEditor:CKEditorControl ID="txtsNoiDung" runat="server" Width="800px"></CKEditor:CKEditorControl>
+            </td>
             <td><asp:Label ID="lblsNoiDung" runat="server"></asp:Label></td>
         </tr>
         <tr>

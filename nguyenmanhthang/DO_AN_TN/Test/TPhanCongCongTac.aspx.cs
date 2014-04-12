@@ -47,7 +47,7 @@ namespace DO_AN_TN.Test
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vList);
-            PhanCongCongTac_ListUC1.BindData();
+            PhanCongCongTac_ListUC1.BindData(PhanCongCongTac_ListUC1.objPhanCongCongTacEO);
         }
     }
 }

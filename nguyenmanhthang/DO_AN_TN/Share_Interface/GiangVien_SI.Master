@@ -4,9 +4,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Giảng viên</title>
+    <title>Giảng viên - Trung tâm đào tạo E-Learning</title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+
+    <%-- Tải Thư viện CSS - JAVASCRIPT--%>
+    <link href="../App_Themes/New/dockbar.css"  rel="stylesheet" />
+    <link href="../App_Themes/New/DA.css"  rel="stylesheet" />
+    <link href="../App_Themes/New/menucss3.css"  rel="stylesheet" />
     <link href="../App_Themes/public.css" rel="stylesheet" type="text/css" />
     <link href="../App_Themes/popup.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../Scripts/New/jquery-1.9.1.min.js"></script>
+	<script src="../Scripts/New/dockbar.js" type="text/javascript"></script>
     <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
     <script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
     <script type="text/javascript" src="../Scripts/popup.js"></script>
@@ -15,25 +24,64 @@
             $('form ~ div').hide();
         });
     </script>
-    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:Menu ID="Menu1" runat="server" ItemWrap="True" Orientation="Horizontal">
-            <Items>
-                <asp:MenuItem Text="|  Trang chủ" Value="TrangChu" NavigateUrl="~/Default.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Lớp học" Value="LopHoc" NavigateUrl="~/GiangVien/LopHoc.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Môn học" Value="MonHoc" NavigateUrl="~/GiangVien/MonHoc.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Giảng dạy" Value="GiangDay" NavigateUrl="~/GiangVien/GiangDay.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="|  Thông tin cá nhân" Value="ThongTinCaNhan" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx"></asp:MenuItem>
-             </Items>
-        </asp:Menu>
-        <asp:Label ID="lblInfo" runat="server"></asp:Label>
-        <asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click">Thoát</asp:LinkButton>
-        <hr /><hr /><br />
-        <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
-    </div>
+        <div id="idock">
+		    <div class="navbar">
+			    <div class="navbar-inner" id="show-unlogin">
+				    <ul class="nav">
+					    <li><a href="../Default.aspx">Trang chủ</a></li>
+					    <li><a href="../QuanTri/Default.aspx">Quản trị</a></li>
+					    <li class="active"><a href="../GiangVien/Default.aspx">Giảng viên</a></li>
+                        <li><a href="../SinhVien/Default.aspx">Sinh viên</a></li>
+                        <li><a href="http://forum.ehou.edu.vn/index.php" target="_blank">Diễn đàn</a></li>
+				    </ul>
+				    <ul class="nav pull-right social-icons">
+					    <li class="login"><a href="https://account.ehou.edu.vn" target="_blank" title="Trang cá nhân" id="name"><i class="icon-user icon-large" ></i> </a></li>
+					    <li class="login dropdown"><a href="#" title="Thông báo" class="dropdown-toggle" data-toggle="dropdown" id="number-notification"><i class="icon-bell-alt icon-large"></i></a>
+						    <ul id="notification" class="dropdown-menu">
+							    <li class="header" >Thông báo</li>
+							    <div class="dropdown-menu-item" data-load="0">
+								    <li class="loader"><img src="../Images/New/103.gif" /></li>
+							    </div>
+							    <li class="footer"><a href="https://account.ehou.edu.vn/common/notification.xhtml" target="_blank">Xem tất cả</a></li>
+						    </ul>
+					    </li>
+					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
+					    <li><a href="http://mail.ehou.edu.vn/" target="_blank" title="Hòm thư">Email</a></li>
+					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
+					    <li class="login" ><a href="#" id="signout"><i class="icon-signout"></i> Thoát</a></li>
+					    <li class="unlogin"><a href="../SinhVien/Accounts/Login.aspx"><i class="icon-signin"></i> Đăng nhập</a></li>
+				    </ul>
+			    </div>
+		    </div>
+	    </div>
+        <div class="wrapper">
+            <div class=" banner">
+                <img src="../Images/New/banner.png"/> </a>
+            </div> 
+            <div class="menu">
+                <div class="menuleft">                                                                                                                                                                                                                                                                                                                                                                                                                             <ul id="css3menu1" class="topmenu">
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/blue_circle - home2.png" AlternateText="Trang chủ" /> </asp:HyperLink>
+                    </li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/GiangVien/LopHoc.aspx">Lớp Học</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/GiangVien/MonHoc.aspx">Môn Học</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/GiangVien/LichDay.aspx">Lịch Dậy Học</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/GiangVien/GiangDay.aspx">Giảng dạy</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx">Thông Tin Cá Nhân</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx">Trợ giúp</asp:HyperLink></li>
+                </ul>
+                </div>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div class="footer">
+                <center>Xây dựng lớp học ảo truyền hình trực tuyến thời gian thực <br /> Nguyễn Mạnh Thắng - Nguyễn Thị Thùy Linh</center>
+            </div>
+        </div>
     </form>
 </body>
 </html>

@@ -261,6 +261,7 @@ namespace DataAccessObject
                 SinhVienEO output = new SinhVienEO();
                 foreach (DataRow dr in input.Tables[0].Rows)
                 {
+                    output.FK_sMaLop = Convert.ToString(dr["FK_sMaLop"]);
                     output.PK_sMaSV = Convert.ToString(dr["PK_sMaSV"]);
                     output.sHotenSV = Convert.ToString(dr["sHotenSV"]);
                     output.sTendangnhapSV = Convert.ToString(dr["sTendangnhapSV"]);

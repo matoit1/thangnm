@@ -15,6 +15,9 @@ namespace DO_AN_TN.SinhVien
         {
             try
             {
+                SinhVien_DetailUC1.btnDelete.Visible = false;
+                SinhVien_DetailUC1.btnInsert.Visible = false;
+                SinhVien_DetailUC1.btnReset.Visible = false;
                 SinhVienEO _SinhVienEO = new SinhVienEO();
                 _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
                 _SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);

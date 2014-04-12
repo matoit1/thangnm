@@ -17,7 +17,7 @@ namespace DO_AN_TN.Share_Interface
                 {
                     Response.Redirect("~/QuanTri/Accounts/Login.aspx?Return_Url=" + Request.Url.AbsolutePath);
                 }
-                lblInfo.Text = "   Hi, " + Request.Cookies["quantri"].Value;
+                //lblInfo.Text = "   Hi, " + Request.Cookies["quantri"].Value;
             }
             catch
             {

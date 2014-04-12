@@ -64,7 +64,8 @@ namespace DO_AN_TN.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddlFK_sMaPCCT.DataSource = PhanCongCongTacDAO.PhanCongCongTac_SelectList();
+            PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
+            ddlFK_sMaPCCT.DataSource = PhanCongCongTacDAO.PhanCongCongTac_SelectList(_PhanCongCongTacEO);
             ddlFK_sMaPCCT.DataTextField = "PK_sMaPCCT";
             ddlFK_sMaPCCT.DataValueField = "PK_sMaPCCT";
             ddlFK_sMaPCCT.DataBind();

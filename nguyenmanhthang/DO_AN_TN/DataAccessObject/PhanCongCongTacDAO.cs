@@ -187,7 +187,7 @@ namespace DataAccessObject
         /// <summary> 7. PhanCongCongTac_SelectList </summary>
         /// <param name="_PhanCongCongTacEO"></param>
         /// <returns></returns>
-        public static DataSet PhanCongCongTac_SelectList()
+        public static DataSet PhanCongCongTac_SelectList(PhanCongCongTacEO _PhanCongCongTacEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -197,6 +197,8 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblPhanCongCongTac_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaGV", (_PhanCongCongTacEO.FK_sMaGV == null) ? (object)DBNull.Value : _PhanCongCongTacEO.FK_sMaGV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaMonhoc", (_PhanCongCongTacEO.FK_sMaMonhoc == null) ? (object)DBNull.Value : _PhanCongCongTacEO.FK_sMaMonhoc));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

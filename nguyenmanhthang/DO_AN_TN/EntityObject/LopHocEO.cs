@@ -5,6 +5,7 @@ using System.Web;
 
 namespace EntityObject
 {
+    [Serializable()]
     public class LopHocEO
     {
         private string _PK_sMalop;

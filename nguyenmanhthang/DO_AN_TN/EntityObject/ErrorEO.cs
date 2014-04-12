@@ -6,6 +6,7 @@ using System.Data;
 
 namespace EntityObject
 {
+    [Serializable()]
     public class ErrorEO
     {
         private Int64 _PK_lErrorID;

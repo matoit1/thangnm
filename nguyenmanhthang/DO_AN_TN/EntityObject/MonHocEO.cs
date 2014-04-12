@@ -5,6 +5,7 @@ using System.Web;
 
 namespace EntityObject
 {
+    [Serializable()]
     public class MonHocEO
     {
         private string _PK_sMaMonhoc;

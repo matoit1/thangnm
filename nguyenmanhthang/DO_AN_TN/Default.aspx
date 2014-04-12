@@ -1,21 +1,31 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DO_AN_TN.Default" EnableEventValidation="false"  %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Đồ án tốt nghiệp - Lớp học ảo</title>
-    <%--<script type="text/javascript">
-        window.location.href = "../Test/TBaiViet.aspx"
-	</script>--%>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div style="width:500px; margin-top: 200px; margin-left:550px">
-            <asp:Button ID="btnTrangChu" runat="server" Text="Trang Chủ" onclick="btnTrangChu_Click" />
-            <asp:Button ID="btnQuanTri" runat="server" Text="Quản trị" onclick="btnQuanTri_Click" />
-            <asp:Button ID="btnGiangVien" runat="server" Text="Giảng viên" onclick="btnGiangVien_Click" />
-            <asp:Button ID="btnSinhVien" runat="server" Text="Sinh Viên" onclick="btnSinhVien_Click" />
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DO_AN_TN.Default" EnableEventValidation="false" MasterPageFile="~/Share_Interface/Home_SI.Master" %>
+<asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
+    <div style="margin: 5px 5px 5px 5px;">
+        <asp:Repeater ID="rpTopic" runat="server">
+            <ItemTemplate>
+                <div style="width: 700px; height: 210px;">
+                    <div style="float:left; width: 210px; padding: 2px">
+                        <asp:ImageButton ID="ibtnTopic_LinkImage" runat="server"  ImageUrl='<%#Eval("sLinkAnh")%>' width="200px" Height="200px" PostBackUrl='<%#"~/Topic.aspx?PK_lMaBaiViet=" +Eval("PK_lMaBaiViet")%>'/>
+                    </div>
+                    <div style="float:left; width: 425px; padding: 5px"">
+                        <asp:HiddenField ID="hfTopic_ID" runat="server" Value='<%#Eval("PK_lMaBaiViet")%>'></asp:HiddenField>
+                        <asp:Label ID="lblTopic_Title" runat="server" Text='<%#Eval("sTieuDe")%>' Font-Bold="true" Font-Size="20px"></asp:Label><br />
+                        <asp:Label ID="Label3" runat="server" Text='<%#Eval("sMoTa")%>'></asp:Label>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/Topic.aspx?PK_lMaBaiViet=" + Eval("PK_lMaBaiViet")%>'> Xem thêm...</asp:HyperLink><br /><br />
+                        <asp:Label ID="Label2" runat="server" Text='<%#"Tác giả: "+Eval("FK_sMaGV")%>'></asp:Label><br />
+                        <asp:Label ID="Label1" runat="server" Text='<%#"Tag: "+Eval("sTag")%>'></asp:Label><br />
+                        <asp:Label ID="lblTopic_Visit" runat="server" Text='<%#"Số lượt xem: "+Eval("iLuotXem")%>'></asp:Label><br />
+                        <i><asp:Label ID="lblWebsite_LastUpdate" runat="server" Text='<%#"Cập nhật lần cuối: "+Eval("tNgayCapNhat")%>'></asp:Label></i>
+                    </div>
+                </div><hr /><br />
+            </ItemTemplate>
+        </asp:Repeater>
+        <div style="overflow: hidden;">
+        <asp:Repeater ID="rptPages" runat="server" onitemcommand="rptPages_ItemCommand">
+            <ItemTemplate>
+                <asp:Button ID="btnPage" runat="server" Text="<%# Container.DataItem %>" CommandName="Page" CommandArgument="<%# Container.DataItem %>" />
+            </ItemTemplate>
+        </asp:Repeater>
     </div>
-    </form>
-</body>
-</html>
+    </div>
+</asp:Content>

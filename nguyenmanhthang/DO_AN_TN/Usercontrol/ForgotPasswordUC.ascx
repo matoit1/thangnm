@@ -8,7 +8,7 @@
         <ContentTemplate>
             <asp:Panel ID="Panel1" runat="server" DefaultButton="btnReset">
                 <div class="signin-card">
-                    <asp:ImageButton ID="imgProfile" CssClass="profile-img" ImageUrl="~/Images/Avatar/default.jpg" AlternateText="ThangNM" PostBackUrl="~/Default.aspx" runat="server" /><br />
+                    <asp:ImageButton ID="imgProfile" CssClass="profile-img" ImageUrl="~/Images/Avatar/default.png" AlternateText="ThangNM" PostBackUrl="~/Default.aspx" runat="server" /><br />
                     <asp:Label ID="lblMsg1" runat="server"></asp:Label>
                     <asp:TextBox ID="txtsTendangnhap" name="Username" type="text" placeholder="Tên đăng nhập" spellcheck="false" runat="server" Width="250px"></asp:TextBox>
                     <asp:TextBox ID="txtsEmail1" name="Email" type="email" placeholder="Email đăng ký" spellcheck="false" runat="server" Width="250px"></asp:TextBox>
@@ -29,7 +29,7 @@
         <ContentTemplate>
             <asp:Panel ID="Panel2" runat="server" DefaultButton="btnFindAccount">
                 <div class="signin-card">
-                    <asp:ImageButton ID="ImageButton1" CssClass="profile-img" ImageUrl="~/Images/Avatar/default.jpg" AlternateText="ThangNM" PostBackUrl="~/Default.aspx" runat="server" /><br />
+                    <asp:ImageButton ID="ImageButton1" CssClass="profile-img" ImageUrl="~/Images/Avatar/default.png" AlternateText="ThangNM" PostBackUrl="~/Default.aspx" runat="server" /><br />
                     <asp:Label ID="lblMsg2" runat="server"></asp:Label>
                     <asp:TextBox ID="txtsEmail2" name="Email" type="email" placeholder="Email đăng ký" spellcheck="false" runat="server" Width="250px"></asp:TextBox>
                     <asp:TextBox ID="txtsSdt" name="PhoneNumber" type="tel" placeholder="Số điện thoại đăng ký" spellcheck="false" runat="server" Width="250px"></asp:TextBox><br /><br />
