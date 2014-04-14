@@ -45,6 +45,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Other\DLL\CKFinder.dll</HintPath>
     </Reference>
+    <Reference Include="CuteWebUI.AjaxUploader, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bc00d4b0e43ec38d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Other\DLL\CuteWebUI.AjaxUploader.dll</HintPath>
+    </Reference>
     <Reference Include="SCS.Web.UI.WebControls.Toolbar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\SCS.Web.UI.WebControls.Toolbar.dll</HintPath>
@@ -108,6 +112,7 @@
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CKFinder.dll" />
+    <Content Include="Other\DLL\CuteWebUI.AjaxUploader.dll" />
     <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
     <Content Include="Other\DLL\FCAP.Controls.dll" />
     <Content Include="Other\DLL\Microsoft.Sharepoint.Sandbox.dll" />
@@ -326,6 +331,7 @@
     <Content Include="UserControl\SinhVien_ListUC.ascx" />
     <Content Include="UserControl\Thong_Tin_Lop_HocUC.ascx" />
     <Content Include="UserControl\TracNghiemUC.ascx" />
+    <Content Include="UserControl\UploadFileUC.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1087,6 +1093,13 @@
     </Compile>
     <Compile Include="UserControl\TracNghiemUC.ascx.designer.cs">
       <DependentUpon>TracNghiemUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UploadFileUC.ascx.cs">
+      <DependentUpon>UploadFileUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UploadFileUC.ascx.designer.cs">
+      <DependentUpon>UploadFileUC.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

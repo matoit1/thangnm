@@ -272,5 +272,9 @@ namespace Shared_Libraries
         public const string Cham_Diem_Khong_Thanh_Cong = "Chấm điểm không thành công!";
         public const string Het_Thoi_Gian_Tra_Loi_Cau_Hoi = "Hết thời gian trả lời câu hỏi! ";
         #endregion
+
+        #region "Upload"
+        public const string Tai_Len_Thanh_Cong = "Tải lên thành công!";
+        #endregion
     }
 }
