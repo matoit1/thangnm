@@ -7,45 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DO_AN_TN {
+namespace DO_AN_TN.UserControl {
     
     
-    public partial class Test1 {
+    public partial class UploadFileUC {
         
         /// <summary>
-        /// Attachments1 control.
+        /// myfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteWebUI.UploadAttachments Attachments1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile myfile;
         
         /// <summary>
-        /// ButtonDeleteAll control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonDeleteAll;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// ButtonTellme control.
+        /// Span1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonTellme;
-        
-        /// <summary>
-        /// ListBoxEvents control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListBoxEvents;
+        protected global::System.Web.UI.WebControls.Label Span1;
     }
 }
