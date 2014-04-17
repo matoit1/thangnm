@@ -193,7 +193,7 @@ namespace DataAccessObject
         /// <summary> 7. LichDayVaHoc_SelectList </summary>
         /// <param name="_LichDayVaHocEO"></param>
         /// <returns></returns>
-        public static DataSet LichDayVaHoc_SelectList(LichDayVaHocEO _LichDayVaHocEO, Int16 iType)
+        public static DataSet LichDayVaHoc_SelectList(PhanCongCongTacEO _PhanCongCongTacEO, LichDayVaHocEO _LichDayVaHocEO, Int16 iType)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -204,6 +204,7 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblLichDayVaHoc_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMalop", (_LichDayVaHocEO.FK_sMalop == null) ? (object)DBNull.Value : _LichDayVaHocEO.FK_sMalop));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaGV", (_PhanCongCongTacEO.FK_sMaGV == null) ? (object)DBNull.Value : _PhanCongCongTacEO.FK_sMaGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iType", iType));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);

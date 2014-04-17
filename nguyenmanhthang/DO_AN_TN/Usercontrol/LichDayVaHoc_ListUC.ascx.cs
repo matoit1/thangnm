@@ -20,6 +20,12 @@ namespace DO_AN_TN.UserControl
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
+        public PhanCongCongTacEO objPhanCongCongTacEO
+        {
+            get { return (PhanCongCongTacEO)ViewState["objPhanCongCongTacEO"]; }
+            set { ViewState["objPhanCongCongTacEO"] = value; }
+        }
+
         public LichDayVaHocEO objLichDayVaHocEO
         {
             get { return (LichDayVaHocEO)ViewState["objLichDayVaHocEO"]; }
@@ -54,15 +60,16 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-        public void BindData(LichDayVaHocEO _LichDayVaHocEO, Int16 _iType)
+        public void BindData(PhanCongCongTacEO _PhanCongCongTacEO, LichDayVaHocEO _LichDayVaHocEO, Int16 _iType)
         {
             iType = _iType;
             objLichDayVaHocEO = _LichDayVaHocEO;
+            objPhanCongCongTacEO = _PhanCongCongTacEO;
             grvListLichDayVaHoc.Visible = false;
             DataSet dsLichDayVaHoc = new DataSet();
             try
             {
-                dsLichDayVaHoc = LichDayVaHocDAO.LichDayVaHoc_SelectList(_LichDayVaHocEO, _iType);
+                dsLichDayVaHoc = LichDayVaHocDAO.LichDayVaHoc_SelectList(_PhanCongCongTacEO, _LichDayVaHocEO, _iType);
                 if (Convert.ToInt32(dsLichDayVaHoc.Tables[0].Rows.Count.ToString()) > 0)
                 {
                     grvListLichDayVaHoc.Visible = true;
@@ -117,7 +124,7 @@ namespace DO_AN_TN.UserControl
         protected void grvListLichDayVaHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListLichDayVaHoc.PageIndex = e.NewPageIndex;
-            BindData(objLichDayVaHocEO, iType);
+            BindData(objPhanCongCongTacEO, objLichDayVaHocEO, iType);
         }
 
         protected void grvListLichDayVaHoc_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -142,7 +149,7 @@ namespace DO_AN_TN.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "ASC";
             }
-            DataSet dsLichDayVaHoc = LichDayVaHocDAO.LichDayVaHoc_SelectList(objLichDayVaHocEO, iType);
+            DataSet dsLichDayVaHoc = LichDayVaHocDAO.LichDayVaHoc_SelectList(objPhanCongCongTacEO, objLichDayVaHocEO, iType);
             DataView sortedView = new DataView(dsLichDayVaHoc.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;
@@ -168,12 +175,12 @@ namespace DO_AN_TN.UserControl
         #region "Event Button"
         protected void Search_Click(object sender, EventArgs e)
         {
-            BindData(objLichDayVaHocEO, iType);
+            BindData(objPhanCongCongTacEO, objLichDayVaHocEO, iType);
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
-            BindData(objLichDayVaHocEO, iType);
+            BindData(objPhanCongCongTacEO, objLichDayVaHocEO, iType);
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
@@ -207,7 +214,7 @@ namespace DO_AN_TN.UserControl
                 HtmlTextWriter hw = new HtmlTextWriter(sw);
                 //To Export all pages
                 grvListLichDayVaHoc.AllowPaging = false;
-                this.BindData(objLichDayVaHocEO, iType);
+                this.BindData(objPhanCongCongTacEO, objLichDayVaHocEO, iType);
 
                 grvListLichDayVaHoc.HeaderRow.BackColor = Color.White;
                 foreach (TableCell cell in grvListLichDayVaHoc.HeaderRow.Cells)
