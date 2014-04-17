@@ -32,7 +32,7 @@ namespace DO_AN_TN
                 {
                     string filepath = Server.MapPath("~/Upload/DuongNH/");
                     lblFileName.Text = "Tên file: " + fuFile.PostedFile.FileName;
-                    lblFileClength.Text = "Kích thước file" + fuFile.PostedFile.ContentLength.ToString() + " Kb";
+                    lblFileClength.Text = "Kích thước file: " + fuFile.PostedFile.ContentLength.ToString() + " (Kb)";
                     filename = fuFile.PostedFile.FileName;
                     fuFile.SaveAs(filepath + "\\" + Path.GetFileName(fuFile.FileName));
                 }
@@ -59,25 +59,25 @@ namespace DO_AN_TN
                 {
                     File.Delete(sName_Command);
                 }
-                if ((File.Exists("E:\\" + sName_Folder + "\\" + sName_File + ".out")) == true)
+                if ((File.Exists(sName_Full_Path + sName_File + ".out")) == true)
                 {
-                    File.Delete("E:\\" + sName_Folder + "\\" + sName_File + ".out");
+                    File.Delete(sName_Full_Path + sName_File + ".out");
                 }
-                if ((File.Exists("E:\\" + sName_Folder + "\\" + sName_File + ".class")) == true)
+                if ((File.Exists(sName_Full_Path + sName_File + ".class")) == true)
                 {
-                    File.Delete("E:\\" + sName_Folder + "\\" + sName_File + ".class");
+                    File.Delete(sName_Full_Path + sName_File + ".class");
                 }
-                if ((File.Exists("E:\\" + sName_Folder + "\\" + sName_File + ".exe")) == true)
+                if ((File.Exists(sName_Full_Path + sName_File + ".exe")) == true)
                 {
-                    File.Delete("E:\\" + sName_Folder + "\\" + sName_File + ".exe");
+                    File.Delete(sName_Full_Path + sName_File + ".exe");
                 }
-                if ((File.Exists("E:\\" + sName_Folder + "\\result.txt")) == true)
+                if ((File.Exists(sName_Full_Path + "result.txt")) == true)
                 {
-                    File.Delete("E:\\" + sName_Folder + "\\result.txt");
+                    File.Delete(sName_Full_Path + "result.txt");
                 }
                 #endregion
 
-
+                #region "Check File Type"
                 Directory.CreateDirectory(sName_Full_Path);
                 switch (sName_Extend.ToString().ToUpper())
                 {
@@ -124,7 +124,9 @@ namespace DO_AN_TN
                         }
                         break;
                 }
+                #endregion
 
+                #region "Call Bat File - Excute"
                 Process proc = null;
                 string targetDir = string.Format(Server.MapPath("~/Upload/") + sName_Folder + "\\");//this is where mybatch.bat lies
                 proc = new Process();
@@ -134,6 +136,7 @@ namespace DO_AN_TN
                 proc.StartInfo.CreateNoWindow = false;
                 proc.Start();
                 //proc.WaitForExit();
+                #endregion
 
                 bool result = FileEquals(sName_Full_Path + "\\My_Program.ans", sName_Full_Path + "\\" + sName_File + ".out");
                 if (result == true)
@@ -146,17 +149,6 @@ namespace DO_AN_TN
                     lblResult.Text = "Kết quả không chính xác!";
                     lblResult.ForeColor = System.Drawing.Color.Red;
                 }
-                //using (System.IO.StreamWriter file = new System.IO.StreamWriter(sName_Full_Path + "\\result.txt", true))
-                //{
-                //    if (a == true)
-                //    {
-                //        file.WriteLine("True");
-                //    }
-                //    else
-                //    {
-                //        file.WriteLine("False");
-                //    }
-                //}
             }
             catch(Exception ex){
                 lblMsg.Text = ex.Message;

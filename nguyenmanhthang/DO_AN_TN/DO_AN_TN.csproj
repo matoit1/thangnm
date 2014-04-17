@@ -292,6 +292,8 @@
     <Content Include="Test\TSearch.aspx" />
     <Content Include="Test\TSinhVien.aspx" />
     <Content Include="Topic.aspx" />
+    <Content Include="Upload\DuongNH\My_Program.cpp" />
+    <Content Include="Upload\DuongNH\My_Program.exe" />
     <Content Include="UserControl\ASM_ClientUC.ascx" />
     <Content Include="UserControl\ASM_ServerUC.ascx" />
     <Content Include="UserControl\BaiViet_DetailUC.ascx" />
@@ -1120,6 +1122,14 @@
     <None Include="Other\ProjectManagement\General.xlsx" />
     <Content Include="Share_Interface\Home_SI.Master" />
     <Content Include="Share_Interface\Test.Master" />
+    <None Include="Upload\admin\DA_Bao_Cao_Lan_2.docx" />
+    <None Include="Upload\admin\do an.docx" />
+    <None Include="Upload\admin\System.Web.HttpCookie11.10B5.doc" />
+    <None Include="Upload\admin\XD lớp học ảo.docx" />
+    <None Include="Upload\DuongNH\excute_My_Program.cpp.bat" />
+    <None Include="Upload\DuongNH\My_Program.ans" />
+    <None Include="Upload\DuongNH\My_Program.inp" />
+    <None Include="Upload\DuongNH\My_Program.out" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
