@@ -22,6 +22,15 @@ namespace DO_AN_TN.SinhVien {
         protected global::System.Web.UI.ScriptManager scrAjax;
         
         /// <summary>
+        /// lblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
+        
+        /// <summary>
         /// ASM_ClientUC1 control.
         /// </summary>
         /// <remarks>

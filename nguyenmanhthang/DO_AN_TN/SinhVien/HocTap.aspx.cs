@@ -34,6 +34,7 @@ namespace DO_AN_TN.SinhVien
                             LopHocEO _LopHocEO = new LopHocEO();
                             PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
                             GiangVienEO _GiangVienEO = new GiangVienEO();
+                            LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
                             _LopHocEO.PK_sMalop = Request.QueryString["PK_sMalop"];
                             _PhanCongCongTacEO.PK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
                             Thong_Tin_Lop_HocUC1.BinData(LopHocDAO.LopHoc_SelectItem(_LopHocEO), PhanCongCongTacDAO.PhanCongCongTac_SelectItem(_PhanCongCongTacEO));
@@ -46,7 +47,7 @@ namespace DO_AN_TN.SinhVien
             }
             catch (Exception ex)
             {
-
+                lblMsg.Text = ex.Message;
             }
         }
 

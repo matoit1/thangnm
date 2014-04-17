@@ -28,7 +28,7 @@ namespace DO_AN_TN.GiangVien
 
         protected void ViewDetail_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/GiangVien/GiangDay.aspx?PK_sMalop=" + LichDayVaHoc_ListUC1.FK_sMalop + "&FK_sMaPCCT=" + LichDayVaHoc_ListUC1.FK_sMaPCCT);
+            Response.Redirect("~/GiangVien/GiangDay.aspx?FK_sMaPCCT=" + LichDayVaHoc_ListUC1.FK_sMaPCCT + "&PK_sMalop=" + LichDayVaHoc_ListUC1.FK_sMalop + "&iCaHoc=" + LichDayVaHoc_ListUC1.iCaHoc);
         }
     }
 }

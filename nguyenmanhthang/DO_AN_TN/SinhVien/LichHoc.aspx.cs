@@ -34,7 +34,7 @@ namespace DO_AN_TN.SinhVien
             //_LichDayVaHocEO.FK_sMalop = LichDayVaHoc_ListUC1.FK_sMalop;
             //_LichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(_LichDayVaHocEO);
             //LichDayVaHoc_ListUC1.BindDataDetail(_LichDayVaHocEO);
-            Response.Redirect("~/SinhVien/HocTap.aspx?PK_sMalop=" + LichDayVaHoc_ListUC1.FK_sMalop + "&FK_sMaPCCT=" + LichDayVaHoc_ListUC1.FK_sMaPCCT);
+            Response.Redirect("~/SinhVien/HocTap.aspx?FK_sMaPCCT=" + LichDayVaHoc_ListUC1.FK_sMaPCCT + "&PK_sMalop=" + LichDayVaHoc_ListUC1.FK_sMalop + "&iCaHoc="+ LichDayVaHoc_ListUC1.iCaHoc);
         }
     }
 }
