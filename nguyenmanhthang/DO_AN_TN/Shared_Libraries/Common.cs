@@ -242,6 +242,7 @@ namespace Shared_Libraries
         public const string Sua_That_Bai = "Sửa thất bại, vui lòng kiểm tra lại!";
         public const string Xoa_Thanh_Cong = "Xóa thành công!";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
+        public const string Ngay_Day_Khong_Hop_Le = "Ngày dạy phải nằm trong khoảng: ";
         #endregion
 
         #region "Security"

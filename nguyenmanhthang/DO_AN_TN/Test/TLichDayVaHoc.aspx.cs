@@ -14,7 +14,8 @@ namespace DO_AN_TN.Test
         protected void Page_Load(object sender, EventArgs e)
         {
             LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
-            LichDayVaHoc_ListUC1.BindData(_LichDayVaHocEO,3);
+            PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
+            LichDayVaHoc_ListUC1.BindData(_PhanCongCongTacEO, _LichDayVaHocEO, 3);
         }
 
         public override void VerifyRenderingInServerForm(Control control)
@@ -49,7 +50,7 @@ namespace DO_AN_TN.Test
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vList);
-            LichDayVaHoc_ListUC1.BindData(LichDayVaHoc_ListUC1.objLichDayVaHocEO, LichDayVaHoc_ListUC1.iType);
+            LichDayVaHoc_ListUC1.BindData(LichDayVaHoc_ListUC1.objPhanCongCongTacEO, LichDayVaHoc_ListUC1.objLichDayVaHocEO, LichDayVaHoc_ListUC1.iType);
         }
     }
 }

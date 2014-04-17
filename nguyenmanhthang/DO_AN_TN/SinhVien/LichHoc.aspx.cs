@@ -17,12 +17,13 @@ namespace DO_AN_TN.SinhVien
             LichDayVaHoc_ListUC1.btnDeleteList.Visible = false;
             if (!IsPostBack)
             {
+                PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
                 LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
                 SinhVienEO _SinhVienEO = new SinhVienEO();
                 _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
                 _LichDayVaHocEO.FK_sMalop = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).FK_sMaLop;
-                LichDayVaHoc_ListUC1.BindData(_LichDayVaHocEO, 1);
-                LichDayVaHoc_ListUC2.BindData(_LichDayVaHocEO, 2);
+                LichDayVaHoc_ListUC1.BindData(_PhanCongCongTacEO, _LichDayVaHocEO, 1);
+                LichDayVaHoc_ListUC2.BindData(_PhanCongCongTacEO, _LichDayVaHocEO, 2);
             }
         }
 

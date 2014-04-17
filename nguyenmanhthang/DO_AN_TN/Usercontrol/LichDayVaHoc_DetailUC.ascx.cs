@@ -103,13 +103,23 @@ namespace DO_AN_TN.UserControl
             ClearMessages();
             try
             {
-                if (LichDayVaHocDAO.LichDayVaHoc_Insert(getObject()) == true)
+                PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
+                _PhanCongCongTacEO.PK_sMaPCCT = Convert.ToString(ddlFK_sMaPCCT.SelectedValue);
+                _PhanCongCongTacEO = PhanCongCongTacDAO.PhanCongCongTac_SelectItem(_PhanCongCongTacEO);
+                if (_PhanCongCongTacEO.tNgayBatDau <= Convert.ToDateTime(txttNgayDay.Text) && Convert.ToDateTime(txttNgayDay.Text) <= _PhanCongCongTacEO.tNgayKetThuc)
                 {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                    if (LichDayVaHocDAO.LichDayVaHoc_Insert(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Them_Thanh_Cong;
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Them_That_Bai;
+                    }
                 }
                 else
                 {
-                    lblMsg.Text = Messages.Them_That_Bai;
+                    lbltNgayDay.Text = Messages.Ngay_Day_Khong_Hop_Le + _PhanCongCongTacEO.tNgayBatDau.ToShortDateString() + " - " + _PhanCongCongTacEO.tNgayKetThuc.ToShortDateString();
                 }
             }
             catch (Exception ex)

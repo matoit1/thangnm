@@ -52,6 +52,9 @@
                         <asp:BoundField DataField="FK_sMalop" HeaderText="Mã lớp học" SortExpression="FK_sMalop">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
+                        <asp:BoundField DataField="FK_sMaMonHoc" HeaderText="Mã môn học" SortExpression="FK_sMaMonHoc">
+                            <ItemStyle CssClass="GridItemText" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="iCaHoc" HeaderText="Ca học" SortExpression="iCaHoc">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
