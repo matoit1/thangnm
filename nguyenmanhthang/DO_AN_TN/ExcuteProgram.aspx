@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Label ID="lblMsg" runat="server"></asp:Label>
+        <asp:Label ID="lblResult" runat="server" Font-Size="Large"></asp:Label><br />
+        <asp:Label ID="lblMsg" runat="server"></asp:Label><br />
         <asp:FileUpload ID="fuFile" runat="server" />
         <asp:Button ID="btnUpload" runat="server" onclick="btnUpload_Click" Text="Upload" />
         <asp:Button ID="btnBuildCode" runat="server" Text="Build Code" onclick="btnBuildCode_Click" />

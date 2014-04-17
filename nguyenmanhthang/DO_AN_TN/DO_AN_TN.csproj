@@ -346,6 +346,7 @@
     <Compile Include="DataAccessObject\BaiVietDAO.cs" />
     <Compile Include="DataAccessObject\CauHoiDAO.cs" />
     <Compile Include="DataAccessObject\ConfigDAO.cs" />
+    <Compile Include="DataAccessObject\DataSet2LinQ.cs" />
     <Compile Include="DataAccessObject\ErrorDAO.cs" />
     <Compile Include="DataAccessObject\GiangVienDAO.cs" />
     <Compile Include="DataAccessObject\ConnectionDAO.cs" />

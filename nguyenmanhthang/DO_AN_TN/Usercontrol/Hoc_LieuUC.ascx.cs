@@ -5,28 +5,82 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using Shared_Libraries;
 
 namespace DO_AN_TN.UserControl
 {
     public partial class Hoc_LieuUC : System.Web.UI.UserControl
     {
-        protected void Page_Load(object sender, EventArgs e)
+        #region "Properties & Event"
+        public string sTendangnhapGV
         {
-            Load_HocLieu();
+            get { return (string)ViewState["sTendangnhapGV"]; }
+            set { ViewState["sTendangnhapGV"] = value; }
         }
 
-        private void Load_HocLieu()
-        {
-            string[] lstFile = Directory.GetFiles(Server.MapPath("~/Upload/"), "*.docx");
+        List<String> CheckedNodes = new List<String>();
+        #endregion
 
-            trvFileBackup.Nodes.Clear();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            lblMsg.Text = "";
+            if (!IsPostBack)
+            {
+                //Load_HocLieu();
+            }
+        }
+
+        public void BindData_HocLieu(string _sTendangnhapGV)
+        {
+            sTendangnhapGV = _sTendangnhapGV;
+            string[] lstFile = Directory.GetFiles(Server.MapPath("~/Upload/" + _sTendangnhapGV + "/"));
+            trvFileUpload.Nodes.Clear();
             foreach (string FileName in lstFile)
             {
                 FileInfo fInfo = new FileInfo(FileName);
+                TreeNode trNode = new TreeNode(fInfo.Name, fInfo.Name);
+                trNode.SelectAction = TreeNodeSelectAction.Select;
+                trNode.NavigateUrl = "~/Upload/" + _sTendangnhapGV + "/" + fInfo.Name;
+                trNode.PopulateOnDemand = true;
+                trvFileUpload.Nodes.Add(trNode);
+            }
+        }
 
-                TreeNode trNood = new TreeNode(fInfo.Name, fInfo.Name);
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string root = Server.MapPath("~/Upload/" + sTendangnhapGV + "/");
+                for (int i = 0; i < CheckedNodes.Count; i++)
+                {
+                    if ((File.Exists(root + CheckedNodes[i])) == true)
+                    {
+                        File.Delete(root + CheckedNodes[i]);
+                    }
+                }
+                BindData_HocLieu(sTendangnhapGV);
+                lblMsg.Text = Messages.Xoa_Thanh_Cong;
+            }
+            catch(Exception ex)
+            {
+                lblMsg.Text = ex.Message;
+            }
+        }
 
-                trvFileBackup.Nodes.Add(trNood);
+        protected void btnPermit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void trvFileUpload_TreeNodeCheckChanged(object sender, TreeNodeEventArgs e)
+        {
+            if (e.Node.Checked)
+            {
+                CheckedNodes.Add(e.Node.Value);
+            }
+            else
+            {
+                CheckedNodes.Remove(e.Node.Value);
             }
         }
     }

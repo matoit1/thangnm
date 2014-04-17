@@ -40,15 +40,6 @@ namespace DO_AN_TN.GiangVien {
         protected global::DO_AN_TN.UserControl.Thong_Tin_Lop_HocUC Thong_Tin_Lop_HocUC1;
         
         /// <summary>
-        /// UploadFileUC1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DO_AN_TN.UserControl.UploadFileUC UploadFileUC1;
-        
-        /// <summary>
         /// Hoc_LieuUC1 control.
         /// </summary>
         /// <remarks>
@@ -56,5 +47,14 @@ namespace DO_AN_TN.GiangVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.Hoc_LieuUC Hoc_LieuUC1;
+        
+        /// <summary>
+        /// UploadFileUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.UploadFileUC UploadFileUC1;
     }
 }

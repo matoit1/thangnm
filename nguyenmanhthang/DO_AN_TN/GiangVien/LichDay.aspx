@@ -4,6 +4,6 @@
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <div>
-        <uc1:LichDayVaHoc_ListUC ID="LichDayVaHoc_ListUC1" runat="server"/>
+        <uc1:LichDayVaHoc_ListUC ID="LichDayVaHoc_ListUC1" runat="server" OnViewDetail="ViewDetail_Click"/>
     </div>
 </asp:Content>
