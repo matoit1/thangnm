@@ -1156,7 +1156,7 @@
     <None Include="Upload\admin\video\movie.mkv" />
     <None Include="Upload\admin\video\movie.ogg" />
     <None Include="Upload\admin\video\movie.webm" />
-    <None Include="Upload\admin\video\wmpChrome.crx" />
+    <None Include="Other\wmpChrome.crx" />
     <None Include="Upload\DuongNH\excute_My_Program.cpp.bat" />
     <None Include="Upload\DuongNH\My_Program.ans" />
     <None Include="Upload\DuongNH\My_Program.inp" />

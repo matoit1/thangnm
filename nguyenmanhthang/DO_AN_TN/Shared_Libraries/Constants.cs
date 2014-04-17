@@ -274,6 +274,14 @@ namespace Shared_Libraries.Constants
     {
         public const string DISPLAY_NUMBER = "###,##0.######";
     }
+    #endregion
 
+    #region "II. Định dạng"
+        public class DateTimeCaHoc
+        {
+            public const string Ca_1 = "dd/MM/yyyy";
+            public const string Ca_2 = "dd/MM/yyyy HH:mm";
+            public const string Ca_3 = "dd/MM/yyyy HH:mm";
+        }
     #endregion
 }

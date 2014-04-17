@@ -50,6 +50,12 @@ namespace DO_AN_TN.UserControl
             get { return this._FK_sMalop; }
             set { _FK_sMalop = value; }
         }
+        private Int16 _iCaHoc;
+        public Int16 iCaHoc
+        {
+            get { return this._iCaHoc; }
+            set { _iCaHoc = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -97,6 +103,7 @@ namespace DO_AN_TN.UserControl
                 int index = Convert.ToInt16(e.CommandArgument) % grvListLichDayVaHoc.PageSize;
                 this.FK_sMaPCCT = Convert.ToString(grvListLichDayVaHoc.DataKeys[index].Values["FK_sMaPCCT"]);
                 this.FK_sMalop = Convert.ToString(grvListLichDayVaHoc.DataKeys[index].Values["FK_sMalop"]);
+                this.iCaHoc = Convert.ToInt16(grvListLichDayVaHoc.DataKeys[index].Values["iCaHoc"]);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);

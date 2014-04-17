@@ -6,6 +6,7 @@
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <asp:ScriptManager ID="scrAjax" runat="server"></asp:ScriptManager>
+    <asp:Label ID="lblMsg" runat="server"></asp:Label><br />
     <div class="livestream">
         <uc1:ASM_ClientUC ID="ASM_ClientUC1" runat="server" />
     </div>

@@ -23,7 +23,7 @@
             <td>
                 <asp:GridView ID="grvListLichDayVaHoc" runat="server" CssClass="mGrid" 
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                                FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_sMaPCCT, FK_sMalop"
+                                FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_sMaPCCT, FK_sMalop, iCaHoc"
                                 emptydatatext="Không có bản ghi nào." 
                     EnableModelValidation="True" onrowcommand="grvListLichDayVaHoc_RowCommand" 
                     onselectedindexchanged="grvListLichDayVaHoc_SelectedIndexChanged" 
