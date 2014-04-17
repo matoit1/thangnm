@@ -22,21 +22,21 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.HtmlControls.HtmlInputFile myfile;
         
         /// <summary>
-        /// Button1 control.
+        /// UploadFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button UploadFile;
         
         /// <summary>
-        /// Span1 control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Span1;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
     }
 }

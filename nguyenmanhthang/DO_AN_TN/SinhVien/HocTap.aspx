@@ -5,6 +5,7 @@
 <%@ Register src="../UserControl/Hoc_LieuUC.ascx" tagname="Hoc_LieuUC" tagprefix="uc4" %>
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
+    <asp:ScriptManager ID="scrAjax" runat="server"></asp:ScriptManager>
     <div class="livestream">
         <uc1:ASM_ClientUC ID="ASM_ClientUC1" runat="server" />
     </div>
@@ -16,6 +17,11 @@
         <uc3:thong_tin_lop_hocuc ID="Thong_Tin_Lop_HocUC1" runat="server" />
     </div>
     <div class="ebook">
-        <uc4:hoc_lieuuc ID="Hoc_LieuUC1" runat="server" />
+        <asp:UpdatePanel ID="udpSync" runat="server">
+            <ContentTemplate>
+                <asp:Timer ID="tSync" runat="server" Interval="5000" ontick="tSync_Tick"></asp:Timer>
+                <uc4:hoc_lieuuc ID="Hoc_LieuUC1" runat="server" />
+            </ContentTemplate>
+        </asp:UpdatePanel>
     </div>
 </asp:Content>

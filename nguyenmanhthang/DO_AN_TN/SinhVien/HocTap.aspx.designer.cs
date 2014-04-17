@@ -13,6 +13,15 @@ namespace DO_AN_TN.SinhVien {
     public partial class HocTap {
         
         /// <summary>
+        /// scrAjax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager scrAjax;
+        
+        /// <summary>
         /// ASM_ClientUC1 control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,24 @@ namespace DO_AN_TN.SinhVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.Thong_Tin_Lop_HocUC Thong_Tin_Lop_HocUC1;
+        
+        /// <summary>
+        /// udpSync control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel udpSync;
+        
+        /// <summary>
+        /// tSync control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.Timer tSync;
         
         /// <summary>
         /// Hoc_LieuUC1 control.

@@ -23,5 +23,10 @@ namespace DO_AN_TN.GiangVien
                 LichDayVaHoc_ListUC1.BindData(_LichDayVaHocEO, 1);
             }
         }
+
+        protected void ViewDetail_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/GiangVien/GiangDay.aspx?PK_sMalop=" + LichDayVaHoc_ListUC1.FK_sMalop + "&FK_sMaPCCT=" + LichDayVaHoc_ListUC1.FK_sMaPCCT);
+        }
     }
 }

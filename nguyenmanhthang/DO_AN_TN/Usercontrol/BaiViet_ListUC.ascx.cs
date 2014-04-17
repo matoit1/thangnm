@@ -9,6 +9,7 @@ using System.IO;
 using Shared_Libraries;
 using System.Data;
 using DataAccessObject;
+using DO_AN_TN.DataAccessObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -25,6 +26,12 @@ namespace DO_AN_TN.UserControl
             get { return this._PK_lMaBaiViet; }
             set { _PK_lMaBaiViet = value; }
         }
+
+        public string typesearch
+        {
+            get { return (string)ViewState["typesearch"]; }
+            set { ViewState["typesearch"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -38,16 +45,52 @@ namespace DO_AN_TN.UserControl
         public void BindData()
         {
             grvListBaiViet.Visible = false;
+            string keysearch = txtTextSearch.Text;
             DataSet dsBaiViet = new DataSet();
             try
             {
                 dsBaiViet = BaiVietDAO.BaiViet_SelectList();
-                if (Convert.ToInt32(dsBaiViet.Tables[0].Rows.Count.ToString()) > 0)
+                //var result = DataSet2LinQ.BaiViet(dsBaiViet);
+                var result =
+                from topic in dsBaiViet.Tables[0].AsEnumerable()
+                select new
+                    {
+                        FK_sMaGV = topic.Field<string>("FK_sMaGV"),
+                        PK_lMaBaiViet = topic.Field<Int64>("PK_lMaBaiViet"),
+                        sTieuDe = topic.Field<string>("sTieuDe"),
+                        sLinkAnh = topic.Field<string>("sLinkAnh"),
+                        sTag = topic.Field<string>("sTag"),
+                        sNoiDung = topic.Field<string>("sNoiDung"),
+                        iLuotXem = topic.Field<Int32>("iLuotXem"),
+                        tNgayViet = topic.Field<DateTime>("tNgayViet"),
+                        tNgayCapNhat = topic.Field<DateTime>("tNgayCapNhat"),
+                        sMoTa = topic.Field<string>("sMoTa"),
+                        iTrangThai = topic.Field<Int16>("iTrangThai")
+                    };
+                ddlTypeSearch.SelectedValue = typesearch;
+                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.PK_lMaBaiViet.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                else
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.sTieuDe.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+
+                if (result.Count() > 0)
                 {
                     grvListBaiViet.Visible = true;
-                    grvListBaiViet.DataSource = dsBaiViet;
+                    grvListBaiViet.DataSource = result.ToList();
                     grvListBaiViet.DataBind();
-                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + dsBaiViet.Tables[0].Rows.Count.ToString();
+                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + result.Count();
                 }
                 else
                 {
@@ -217,5 +260,15 @@ namespace DO_AN_TN.UserControl
             }
         }
         #endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)
+        {
+            typesearch = ddlTypeSearch.SelectedValue;
+        }
     }
 }
