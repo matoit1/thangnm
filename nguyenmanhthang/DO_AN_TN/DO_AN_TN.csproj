@@ -89,6 +89,7 @@
     <Content Include="Error\Dao_vang_I.swf" />
     <Content Include="Error\Default.aspx" />
     <Content Include="ExcuteProgram.aspx" />
+    <Content Include="Flash\FlashVideoPlayer.swf" />
     <Content Include="GiangVien\Accounts\ForgotPassword.aspx" />
     <Content Include="GiangVien\Accounts\Login.aspx" />
     <Content Include="GiangVien\Accounts\Register.aspx" />
@@ -291,7 +292,15 @@
     <Content Include="Test\TPhanCongCongTac.aspx" />
     <Content Include="Test\TSearch.aspx" />
     <Content Include="Test\TSinhVien.aspx" />
+    <Content Include="Test\TVideo.aspx" />
     <Content Include="Topic.aspx" />
+    <Content Include="Upload\admin\video\preview.jpg" />
+    <Content Include="Upload\admin\video\movie.3g2" />
+    <Content Include="Upload\admin\video\movie.avi" />
+    <Content Include="Upload\admin\video\movie.mov" />
+    <Content Include="Upload\admin\video\movie.mp4" />
+    <Content Include="Upload\admin\video\movie.mpg" />
+    <Content Include="Upload\admin\video\movie.wmv" />
     <Content Include="Upload\DuongNH\My_Program.cpp" />
     <Content Include="Upload\DuongNH\My_Program.exe" />
     <Content Include="UserControl\ASM_ClientUC.ascx" />
@@ -334,6 +343,7 @@
     <Content Include="UserControl\Thong_Tin_Lop_HocUC.ascx" />
     <Content Include="UserControl\TracNghiemUC.ascx" />
     <Content Include="UserControl\UploadFileUC.ascx" />
+    <Content Include="UserControl\VideoUC.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -817,6 +827,13 @@
     <Compile Include="Test\TSinhVien.aspx.designer.cs">
       <DependentUpon>TSinhVien.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Test\TVideo.aspx.cs">
+      <DependentUpon>TVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TVideo.aspx.designer.cs">
+      <DependentUpon>TVideo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Topic.aspx.cs">
       <DependentUpon>Topic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1104,10 +1121,18 @@
     <Compile Include="UserControl\UploadFileUC.ascx.designer.cs">
       <DependentUpon>UploadFileUC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\VideoUC.ascx.cs">
+      <DependentUpon>VideoUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\VideoUC.ascx.designer.cs">
+      <DependentUpon>VideoUC.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
     <Folder Include="Images\Temp\" />
+    <Folder Include="Upload\admin\example\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Share_Interface\GiangVien_SI.Master" />
@@ -1122,10 +1147,16 @@
     <None Include="Other\ProjectManagement\General.xlsx" />
     <Content Include="Share_Interface\Home_SI.Master" />
     <Content Include="Share_Interface\Test.Master" />
-    <None Include="Upload\admin\DA_Bao_Cao_Lan_2.docx" />
-    <None Include="Upload\admin\do an.docx" />
-    <None Include="Upload\admin\System.Web.HttpCookie11.10B5.doc" />
-    <None Include="Upload\admin\XD lớp học ảo.docx" />
+    <None Include="Upload\admin\ebook\DA_Bao_Cao_Lan_2.docx" />
+    <None Include="Upload\admin\ebook\do an.docx" />
+    <None Include="Upload\admin\ebook\System.Web.HttpCookie11.10B5.doc" />
+    <None Include="Upload\admin\ebook\XD lớp học ảo.docx" />
+    <None Include="Upload\admin\video\movie.f4v" />
+    <None Include="Upload\admin\video\movie.flv" />
+    <None Include="Upload\admin\video\movie.mkv" />
+    <None Include="Upload\admin\video\movie.ogg" />
+    <None Include="Upload\admin\video\movie.webm" />
+    <None Include="Upload\admin\video\wmpChrome.crx" />
     <None Include="Upload\DuongNH\excute_My_Program.cpp.bat" />
     <None Include="Upload\DuongNH\My_Program.ans" />
     <None Include="Upload\DuongNH\My_Program.inp" />
