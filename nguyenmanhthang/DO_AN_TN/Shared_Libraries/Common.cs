@@ -9,6 +9,29 @@ namespace Shared_Libraries
 {
     public class Common
     {
+        public static Int16 CaHocHienTai()
+        {
+            switch (DateTime.Now.Hour)
+            {
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11: return 1;
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                case 17: return 2;
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22: return 3;
+                default: return 0;
+            }
+        }
+
         /// <summary> RemoveHtmlTags (Loại bỏ thẻ html) </summary>
         /// <param name="htmlString"></param>
         /// <returns></returns>
@@ -235,6 +258,7 @@ namespace Shared_Libraries
         #endregion
 
         #region "Information"
+        public const string Chua_Den_Thoi_Gian_Hoc = "Chưa đến thời gian học!";
         public const string Tong_So_Ban_Ghi = "Tổng số bản ghi: ";
         public const string Them_Thanh_Cong = "Thêm thành công!";
         public const string Them_That_Bai = "Thêm thất bại, vui lòng kiểm tra lại!";

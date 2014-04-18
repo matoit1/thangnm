@@ -22,6 +22,15 @@ namespace DO_AN_TN.SinhVien {
         protected global::System.Web.UI.ScriptManager scrAjax;
         
         /// <summary>
+        /// lblTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTitle;
+        
+        /// <summary>
         /// lblMsg control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace DO_AN_TN.SinhVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.ASM_ClientUC ASM_ClientUC1;
+        
+        /// <summary>
+        /// DongHoUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.DongHoUC DongHoUC1;
         
         /// <summary>
         /// ChatUC1 control.

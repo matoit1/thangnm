@@ -312,6 +312,7 @@
     <Content Include="UserControl\ChatUC.ascx" />
     <Content Include="UserControl\DiemThi_DetailUC.ascx" />
     <Content Include="UserControl\DiemThi_ListUC.ascx" />
+    <Content Include="UserControl\DongHoUC.ascx" />
     <Content Include="UserControl\Error_DetailUC.ascx" />
     <Content Include="UserControl\Error_ListUC.ascx" />
     <Content Include="UserControl\ForgotPasswordUC.ascx" />
@@ -903,6 +904,13 @@
     </Compile>
     <Compile Include="UserControl\DiemThi_ListUC.ascx.designer.cs">
       <DependentUpon>DiemThi_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DongHoUC.ascx.cs">
+      <DependentUpon>DongHoUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DongHoUC.ascx.designer.cs">
+      <DependentUpon>DongHoUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\Error_DetailUC.ascx.cs">
       <DependentUpon>Error_DetailUC.ascx</DependentUpon>
