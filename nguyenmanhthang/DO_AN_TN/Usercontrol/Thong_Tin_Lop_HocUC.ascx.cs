@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using EntityObject;
+using DataAccessObject;
 
 namespace DO_AN_TN.UserControl
 {
@@ -12,15 +13,32 @@ namespace DO_AN_TN.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            tSyncCurrentTime.Interval = 1000;
         }
 
-        public void BinData(LopHocEO _LopHocEO, PhanCongCongTacEO _PhanCongCongTacEO)
+        public void BinData(GiangVienEO _GiangVienEO, LopHocEO _LopHocEO, PhanCongCongTacEO _PhanCongCongTacEO, LichDayVaHocEO _LichDayVaHocEO)
         {
-            lblsTenlop.Text = _LopHocEO.sTenlop;
+            MonHocEO _MonHocEO = new MonHocEO();
+            _MonHocEO.PK_sMaMonhoc = _PhanCongCongTacEO.FK_sMaMonhoc;
+            _MonHocEO = MonHocDAO.MonHoc_SelectItem(_MonHocEO);
+
+            //GiangVienEO _GiangVienEO = new GiangVienEO();
+            //_GiangVienEO.PK_sMaGV = _PhanCongCongTacEO.FK_sMaGV;
+            //_GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
+
+            lblsTenlop.Text = _LopHocEO.PK_sMalop + " - " + _LopHocEO.sTenlop;
+            lblsTenMonhoc.Text = _MonHocEO.PK_sMaMonhoc + " - " + _MonHocEO.sTenMonhoc;
+            lblsHoTenGV.Text = _GiangVienEO.PK_sMaGV + " - " + _GiangVienEO.sHotenGV;
             lbliSiso.Text = Convert.ToString(_LopHocEO.iSiso);
-            lblsHoTenGV.Text = _PhanCongCongTacEO.FK_sMaGV;
-            lblsTenMonhoc.Text = _PhanCongCongTacEO.FK_sMaMonhoc;
+            lbliCaHoc.Text = Convert.ToString(_LichDayVaHocEO.iCaHoc);
+            lbliSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
+            lbltNgayBatDau.Text = _PhanCongCongTacEO.tNgayBatDau.ToShortDateString();
+            lbltNgayKetThuc.Text = _PhanCongCongTacEO.tNgayKetThuc.ToShortDateString();
+        }
+
+        protected void tSyncCurrentTime_Tick(object sender, EventArgs e)
+        {
+            lblCurrentTime.Text = DateTime.Now.ToString();
         }
     }
 }

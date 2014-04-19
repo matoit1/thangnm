@@ -13,6 +13,15 @@ namespace DO_AN_TN.GiangVien {
     public partial class GiangDay {
         
         /// <summary>
+        /// scrAjax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager scrAjax;
+        
+        /// <summary>
         /// lblTitle control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,22 @@ namespace DO_AN_TN.GiangVien {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// pnlLimit1 control.
+        /// vLiveStream control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLimit1;
+        protected global::System.Web.UI.WebControls.MultiView vLiveStream;
+        
+        /// <summary>
+        /// vOnline control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vOnline;
         
         /// <summary>
         /// ASM_ServerUC1 control.
@@ -49,58 +67,40 @@ namespace DO_AN_TN.GiangVien {
         protected global::DO_AN_TN.UserControl.ASM_ServerUC ASM_ServerUC1;
         
         /// <summary>
-        /// smTime control.
+        /// vOffline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager smTime;
+        protected global::System.Web.UI.WebControls.View vOffline;
         
         /// <summary>
-        /// upTime control.
+        /// VideoUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upTime;
+        protected global::DO_AN_TN.UserControl.VideoUC VideoUC1;
         
         /// <summary>
-        /// tClock control.
+        /// vDefault control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.Timer tClock;
+        protected global::System.Web.UI.WebControls.View vDefault;
         
         /// <summary>
-        /// btnClock control.
+        /// lblNotify control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClock;
-        
-        /// <summary>
-        /// lblCaHoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCaHoc;
-        
-        /// <summary>
-        /// pnlLimit2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLimit2;
+        protected global::System.Web.UI.WebControls.Label lblNotify;
         
         /// <summary>
         /// ChatUC1 control.
@@ -110,15 +110,6 @@ namespace DO_AN_TN.GiangVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.ChatUC ChatUC1;
-        
-        /// <summary>
-        /// pnlLimit3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLimit3;
         
         /// <summary>
         /// Thong_Tin_Lop_HocUC1 control.
@@ -146,5 +137,14 @@ namespace DO_AN_TN.GiangVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.UploadFileUC UploadFileUC1;
+        
+        /// <summary>
+        /// UploadFileUC2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.UploadFileUC UploadFileUC2;
     }
 }

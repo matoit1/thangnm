@@ -64,7 +64,10 @@
                         <asp:BoundField DataField="iSoTietDay" HeaderText="Số tiết dạy" SortExpression="iSoTietDay">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sSinhVienNghi" HeaderText="Sinh viên nghỉ" SortExpression="iSoTietDay">
+                        <asp:BoundField DataField="sSinhVienNghi" HeaderText="Sinh viên nghỉ" SortExpression="sSinhVienNghi">
+                            <ItemStyle CssClass="GridItemText" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="sLinkVideo" HeaderText="Link Video" SortExpression="sLinkVideo">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                         <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThai">

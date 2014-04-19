@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccessObject;
 using EntityObject;
+using Shared_Libraries.Constants;
+using Shared_Libraries;
 
 namespace DO_AN_TN.SinhVien
 {
@@ -32,22 +34,43 @@ namespace DO_AN_TN.SinhVien
                         if (Request.QueryString["FK_sMaPCCT"] != null)
                         {
                             LopHocEO _LopHocEO = new LopHocEO();
-                            PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
-                            GiangVienEO _GiangVienEO = new GiangVienEO();
-                            LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
                             _LopHocEO.PK_sMalop = Request.QueryString["PK_sMalop"];
+                            _LopHocEO = LopHocDAO.LopHoc_SelectItem(_LopHocEO);
+
+                            PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
                             _PhanCongCongTacEO.PK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
-                            Thong_Tin_Lop_HocUC1.BinData(LopHocDAO.LopHoc_SelectItem(_LopHocEO), PhanCongCongTacDAO.PhanCongCongTac_SelectItem(_PhanCongCongTacEO));
-                            _GiangVienEO.PK_sMaGV = (PhanCongCongTacDAO.PhanCongCongTac_SelectItem(_PhanCongCongTacEO).FK_sMaGV);
-                            sTendangnhapGV = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO).sTendangnhapGV;
+                            _PhanCongCongTacEO = PhanCongCongTacDAO.PhanCongCongTac_SelectItem(_PhanCongCongTacEO);
+
+                            GiangVienEO _GiangVienEO = new GiangVienEO();
+                            _GiangVienEO.PK_sMaGV = _PhanCongCongTacEO.FK_sMaGV;
+                            _GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
+
+                            LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+                            _LichDayVaHocEO.FK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
+                            _LichDayVaHocEO.FK_sMalop = Request.QueryString["PK_sMalop"];
+                            _LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
+                            _LichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(_LichDayVaHocEO);
+
+                            sTendangnhapGV = _GiangVienEO.sTendangnhapGV;
                             Hoc_LieuUC1.BindData_HocLieu(sTendangnhapGV);
+
+                            //Kiểm tra trạng thái buổi học Online / Offline
+                            switch (_LichDayVaHocEO.iTrangThai)
+                            {
+                                case LichDayVaHoc_iTrangThai_C.Hoc: vLiveStream.ActiveViewIndex =0; break;
+                                case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1; break;
+                                case LichDayVaHoc_iTrangThai_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0; break;
+                                case LichDayVaHoc_iTrangThai_C.Nghi: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Buoi_Hoc_Hom_Nay_Duoc_Nghi; break;
+                                default: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Chua_Den_Thoi_Gian_Hoc; break;
+                            }
+                            Thong_Tin_Lop_HocUC1.BinData(_GiangVienEO, _LopHocEO, _PhanCongCongTacEO, _LichDayVaHocEO);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                lblMsg.Text = ex.Message;
+                lblMsg.Text = Messages.Loi + ex.Message;
             }
         }
 

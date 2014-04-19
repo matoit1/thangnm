@@ -102,7 +102,7 @@
                 <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
             </div>
             <div class="footer">
-                <center>Xây dựng lớp học ảo truyền hình trực tuyến thời gian thực <br /> Nguyễn Mạnh Thắng - Nguyễn Thị Thùy Linh</center>
+                <br /><center>Xây dựng lớp học ảo truyền hình trực tuyến thời gian thực <br /> Nguyễn Mạnh Thắng - Nguyễn Thị Thùy Linh</center>
             </div>
         </div>
     </form>

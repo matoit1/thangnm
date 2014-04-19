@@ -251,7 +251,7 @@ namespace Shared_Libraries
         {
             SortedList output = new SortedList();
             output.Add(LichDayVaHoc_iTrangThai_C.Hoc, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Hoc));
-            output.Add(LichDayVaHoc_iTrangThai_C.Day_Thay, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Day_Thay));
+            output.Add(LichDayVaHoc_iTrangThai_C.Day_Offline, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Day_Offline));
             output.Add(LichDayVaHoc_iTrangThai_C.Hoc_Bu, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Hoc_Bu));
             output.Add(LichDayVaHoc_iTrangThai_C.Nghi, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Nghi));
             output.Add(LichDayVaHoc_iTrangThai_C.Thi, GetTextConstants.LichDayVaHoc_iTrangThai_GTC(LichDayVaHoc_iTrangThai_C.Thi));

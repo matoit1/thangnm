@@ -13,6 +13,15 @@ namespace DO_AN_TN.UserControl {
     public partial class UploadFileUC {
         
         /// <summary>
+        /// lblTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        public global::System.Web.UI.WebControls.Label lblTitle;
+        
+        /// <summary>
         /// myfile control.
         /// </summary>
         /// <remarks>

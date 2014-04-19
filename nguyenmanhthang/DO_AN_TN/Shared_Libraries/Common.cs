@@ -258,7 +258,6 @@ namespace Shared_Libraries
         #endregion
 
         #region "Information"
-        public const string Chua_Den_Thoi_Gian_Hoc = "Chưa đến thời gian học!";
         public const string Tong_So_Ban_Ghi = "Tổng số bản ghi: ";
         public const string Them_Thanh_Cong = "Thêm thành công!";
         public const string Them_That_Bai = "Thêm thất bại, vui lòng kiểm tra lại!";
@@ -267,6 +266,12 @@ namespace Shared_Libraries
         public const string Xoa_Thanh_Cong = "Xóa thành công!";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
         public const string Ngay_Day_Khong_Hop_Le = "Ngày dạy phải nằm trong khoảng: ";
+        #endregion
+
+        #region "Information"
+        public const string Chua_Den_Thoi_Gian_Hoc = "Chưa đến thời gian học!";
+        public const string Buoi_Hoc_Hom_Nay_Duoc_Nghi = "Buổi học hôm nay được nghỉ!";
+        public const string Ca_Hoc_Hien_Tai_La = "Ca học hiện tại là: ";
         #endregion
 
         #region "Security"
@@ -299,6 +304,17 @@ namespace Shared_Libraries
         #endregion
 
         #region "Upload"
+        public const string sPrefixVideo = "VIDEO_";
+        public const string sPrefixEbook = "EBOOK_";
+        public const string sPrefixExample = "EXAMPLE_";
+
+        public const string Video = "Video/";
+        public const string Ebook = "Ebook/";
+        public const string Example = "Example/";
+        public const string Other = "Other/";
+        public const string Upload_Hoc_Lieu = "Upload học liệu";
+        public const string UpLoad_Video_Giang_Day = "Upload video giảng dạy";
+        public const string Upload_Bai_Kiem_Tra = "Upload bài kiểm tra";
         public const string Tai_Len_Thanh_Cong = "Tải lên thành công!";
         #endregion
     }

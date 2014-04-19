@@ -9,7 +9,7 @@
         width: 146px;
     }
 </style>
-<fieldset style="width: 270px; height:180px">
+<fieldset style="width: 270px; height:240px">
     <legend>Học liệu giảng viên cung cấp</legend>
     <asp:TreeView ID="trvFileUpload" runat="server" ImageSet="Events" Width="250px" 
         ShowCheckBoxes="All" 
