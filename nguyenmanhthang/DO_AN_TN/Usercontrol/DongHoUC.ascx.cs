@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Shared_Libraries;
 
 namespace DO_AN_TN.UserControl
 {
@@ -28,7 +29,7 @@ namespace DO_AN_TN.UserControl
 
         protected void tClock_Tick(object sender, EventArgs e)
         {
-            btnClock.Text = DateTime.Now.ToLongTimeString().ToString();
+            lblClock.Text = DateTime.Now.ToLongTimeString().ToString();
             switch (DateTime.Now.Hour)
             {
                 case 7:
@@ -47,7 +48,7 @@ namespace DO_AN_TN.UserControl
                 case 21:
                 case 22: current = 3; break;
             }
-            lblCaHoc.Text = current.ToString();
+            lblCaHoc.Text = Messages.Ca_Hoc_Hien_Tai_La + current.ToString();
         }
     }
 }

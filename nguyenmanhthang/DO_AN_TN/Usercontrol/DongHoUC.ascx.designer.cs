@@ -13,15 +13,6 @@ namespace DO_AN_TN.UserControl {
     public partial class DongHoUC {
         
         /// <summary>
-        /// smTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager smTime;
-        
-        /// <summary>
         /// upTime control.
         /// </summary>
         /// <remarks>
@@ -40,13 +31,13 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.Timer tClock;
         
         /// <summary>
-        /// btnClock control.
+        /// lblClock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClock;
+        protected global::System.Web.UI.WebControls.Label lblClock;
         
         /// <summary>
         /// lblCaHoc control.

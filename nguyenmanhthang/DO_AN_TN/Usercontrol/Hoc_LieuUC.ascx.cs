@@ -33,14 +33,14 @@ namespace DO_AN_TN.UserControl
         public void BindData_HocLieu(string _sTendangnhapGV)
         {
             sTendangnhapGV = _sTendangnhapGV;
-            string[] lstFile = Directory.GetFiles(Server.MapPath("~/Upload/" + _sTendangnhapGV + "/"));
+            string[] lstFile = Directory.GetFiles(Server.MapPath("~/Upload/" + _sTendangnhapGV + "/" + Messages.Ebook));
             trvFileUpload.Nodes.Clear();
             foreach (string FileName in lstFile)
             {
                 FileInfo fInfo = new FileInfo(FileName);
                 TreeNode trNode = new TreeNode(fInfo.Name, fInfo.Name);
                 trNode.SelectAction = TreeNodeSelectAction.Select;
-                trNode.NavigateUrl = "~/Upload/" + _sTendangnhapGV + "/" + fInfo.Name;
+                trNode.NavigateUrl = "~/Upload/" + _sTendangnhapGV + "/" + Messages.Ebook + fInfo.Name;
                 trNode.PopulateOnDemand = true;
                 trvFileUpload.Nodes.Add(trNode);
             }
@@ -50,7 +50,7 @@ namespace DO_AN_TN.UserControl
         {
             try
             {
-                string root = Server.MapPath("~/Upload/" + sTendangnhapGV + "/");
+                string root = Server.MapPath("~/Upload/" + sTendangnhapGV + "/" + Messages.Ebook);
                 for (int i = 0; i < CheckedNodes.Count; i++)
                 {
                     if ((File.Exists(root + CheckedNodes[i])) == true)

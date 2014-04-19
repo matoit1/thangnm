@@ -220,7 +220,7 @@ namespace Shared_Libraries.Constants
     public class LichDayVaHoc_iTrangThai_C
     {
         public const Int16 Hoc = 1;
-        public const Int16 Day_Thay = 2;
+        public const Int16 Day_Offline = 2;
         public const Int16 Hoc_Bu = 3;
         public const Int16 Nghi = 4;
         public const Int16 Thi = 5;

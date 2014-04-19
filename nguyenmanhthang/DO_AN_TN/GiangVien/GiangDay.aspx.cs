@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using EntityObject;
 using DataAccessObject;
 using Shared_Libraries;
+using Shared_Libraries.Constants;
 
 namespace DO_AN_TN.GiangVien
 {
@@ -31,59 +32,53 @@ namespace DO_AN_TN.GiangVien
                         if (Request.QueryString["FK_sMaPCCT"] != null)
                         {
                             LopHocEO _LopHocEO = new LopHocEO();
-                            PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
-                            GiangVienEO _GiangVienEO = new GiangVienEO();
                             _LopHocEO.PK_sMalop = Request.QueryString["PK_sMalop"];
+                            _LopHocEO = LopHocDAO.LopHoc_SelectItem(_LopHocEO);
+
+                            PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
                             _PhanCongCongTacEO.PK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
-                            Thong_Tin_Lop_HocUC1.BinData(LopHocDAO.LopHoc_SelectItem(_LopHocEO), PhanCongCongTacDAO.PhanCongCongTac_SelectItem(_PhanCongCongTacEO));
+                            _PhanCongCongTacEO = PhanCongCongTacDAO.PhanCongCongTac_SelectItem(_PhanCongCongTacEO);
+
+                            GiangVienEO _GiangVienEO = new GiangVienEO();
+                            _GiangVienEO.PK_sMaGV = _PhanCongCongTacEO.FK_sMaGV;
+                            _GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
+
+                            LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+                            _LichDayVaHocEO.FK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
+                            _LichDayVaHocEO.FK_sMalop = Request.QueryString["PK_sMalop"];
+                            _LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
+                            _LichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(_LichDayVaHocEO);
+
+                            //Kiểm tra trạng thái buổi học Online / Offline
+                            switch (_LichDayVaHocEO.iTrangThai)
+                            {
+                                case LichDayVaHoc_iTrangThai_C.Hoc: vLiveStream.ActiveViewIndex = 0;
+                                                                            UploadFileUC1.sPrefixFileName = Messages.sPrefixEbook;
+                                                                            UploadFileUC1.Visible = true; 
+                                                                            UploadFileUC2.Visible = false; break;
+                                case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1;
+                                                                            UploadFileUC1.sPrefixFileName = Messages.sPrefixEbook;
+                                                                            UploadFileUC2.sPrefixFileName = Messages.sPrefixVideo;
+                                                                            UploadFileUC1.Visible = true;
+                                                                            UploadFileUC2.Visible = true; break;
+                                case LichDayVaHoc_iTrangThai_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0;
+                                                                            UploadFileUC1.Visible = true; 
+                                                                            UploadFileUC2.Visible = false; break;
+                                case LichDayVaHoc_iTrangThai_C.Nghi: vLiveStream.ActiveViewIndex = 2;
+                                                                            lblNotify.Text = Messages.Buoi_Hoc_Hom_Nay_Duoc_Nghi;
+                                                                            UploadFileUC1.Visible = false; 
+                                                                            UploadFileUC2.Visible = false; break;
+                                default: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Chua_Den_Thoi_Gian_Hoc; break;
+                            }
+                            Thong_Tin_Lop_HocUC1.BinData(_GiangVienEO, _LopHocEO, _PhanCongCongTacEO, _LichDayVaHocEO);
                         }
                     }
                 }
                 LoadInfo();
             }
-            catch
+            catch(Exception ex)
             {
-            }
-            try
-            {
-                if (Request.QueryString["state"] != null)
-                {
-                    tClock.Enabled = true;
-                    tClock.Interval = 50000000;
-                }
-            }
-            catch
-            {
-            }
-            try
-            {
-                if (Common.CaHocHienTai() == Convert.ToInt16(Request.QueryString["iCaHoc"]))
-                {
-                    ASM_ServerUC1.Visible = true;
-                    ChatUC1.Visible = true;
-                    Thong_Tin_Lop_HocUC1.Visible = true;
-                    Hoc_LieuUC1.Visible = true;
-                    UploadFileUC1.Visible = true;
-                    lblTitle.Text = "";
-                }
-                else
-                {
-                    ASM_ServerUC1.Visible = false;
-                    ChatUC1.Visible = false;
-                    Thong_Tin_Lop_HocUC1.Visible = false;
-                    Hoc_LieuUC1.Visible = false;
-                    UploadFileUC1.Visible = false;
-                    lblTitle.Text = Messages.Chua_Den_Thoi_Gian_Hoc;
-                }
-            }
-            catch (Exception ex)
-            {
-                ASM_ServerUC1.Visible = false;
-                ChatUC1.Visible = false;
-                Thong_Tin_Lop_HocUC1.Visible = false;
-                Hoc_LieuUC1.Visible = false;
-                UploadFileUC1.Visible = false;
-                lblMsg.Text = ex.Message;
+                lblMsg.Text = Messages.Loi + ex.Message;
             }
         }
 
@@ -91,33 +86,23 @@ namespace DO_AN_TN.GiangVien
             try
             {
                 UploadFileUC1.sTendangnhapGV = Request.Cookies["giangvien"].Value;
+                UploadFileUC1.sTypeUpload = Messages.Ebook;
+                UploadFileUC1.lblTitle.Text = Messages.Upload_Hoc_Lieu;
+
+                UploadFileUC2.sTendangnhapGV = Request.Cookies["giangvien"].Value;
+                UploadFileUC2.sTypeUpload = Messages.Video;
+                UploadFileUC2.lblTitle.Text = Messages.UpLoad_Video_Giang_Day;
                 Hoc_LieuUC1.BindData_HocLieu(Request.Cookies["giangvien"].Value);
             }
-            catch
+            catch (Exception ex)
             {
+                lblMsg.Text = Messages.Loi + ex.Message;
             }
         }
 
         protected void Refresh_Click(object sender, EventArgs e)
         {
             LoadInfo();
-        }
-
-        protected void tClock_Tick(object sender, EventArgs e)
-        {
-            btnClock.Text = DateTime.Now.ToLongTimeString().ToString();
-            current = Common.CaHocHienTai();
-            lblCaHoc.Text = "Ca học: " + current.ToString();
-            try
-            {
-                if (current == Convert.ToInt16(Request.QueryString["iCaHoc"]))
-                {
-                    Response.Redirect(Request.Url.ToString()+"&state=1");
-                }
-            }
-            catch(Exception ex) {
-                lblMsg.Text = ex.Message;
-            }
         }
     }
 }

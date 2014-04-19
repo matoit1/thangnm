@@ -40,6 +40,24 @@ namespace DO_AN_TN.SinhVien {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
+        /// vLiveStream control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.MultiView vLiveStream;
+        
+        /// <summary>
+        /// vOnline control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vOnline;
+        
+        /// <summary>
         /// ASM_ClientUC1 control.
         /// </summary>
         /// <remarks>
@@ -49,13 +67,40 @@ namespace DO_AN_TN.SinhVien {
         protected global::DO_AN_TN.UserControl.ASM_ClientUC ASM_ClientUC1;
         
         /// <summary>
-        /// DongHoUC1 control.
+        /// vOffline control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DO_AN_TN.UserControl.DongHoUC DongHoUC1;
+        protected global::System.Web.UI.WebControls.View vOffline;
+        
+        /// <summary>
+        /// VideoUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.VideoUC VideoUC1;
+        
+        /// <summary>
+        /// vDefault control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vDefault;
+        
+        /// <summary>
+        /// lblNotify control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNotify;
         
         /// <summary>
         /// ChatUC1 control.

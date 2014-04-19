@@ -179,6 +179,7 @@ namespace DataAccessObject
                     output.tNgayDay = Convert.ToDateTime(dr["tNgayDay"]);
                     output.iSoTietDay = Convert.ToInt16(dr["iSoTietDay"]);
                     output.sSinhVienNghi = Convert.ToString(dr["sSinhVienNghi"]);
+                    output.sLinkVideo = Convert.ToString(dr["sLinkVideo"]);
                     output.iTrangThai = Convert.ToInt16(dr["iTrangThai"]);
                 }
                 return output;

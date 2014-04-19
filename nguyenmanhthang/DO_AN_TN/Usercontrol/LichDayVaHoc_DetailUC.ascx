@@ -51,6 +51,11 @@
             <td><asp:Label ID="lblsSinhVienNghi" runat="server"></asp:Label></td>
         </tr>
         <tr>
+            <td>Link Video: </td>
+            <td><asp:TextBox ID="txtsLinkVideo" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkVideo" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
             <td>Trạng thái: </td>
             <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>

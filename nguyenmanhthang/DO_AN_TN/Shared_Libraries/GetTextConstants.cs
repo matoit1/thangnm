@@ -357,7 +357,7 @@ namespace Shared_Libraries
             switch (input)
             {
                 case 1: output = "Học"; break;
-                case 2: output = "Dạy thay"; break;
+                case 2: output = "Dạy offline"; break;
                 case 3: output = "Học bù"; break;
                 case 4: output = "Nghỉ"; break;
                 case 5: output = "Thi"; break;

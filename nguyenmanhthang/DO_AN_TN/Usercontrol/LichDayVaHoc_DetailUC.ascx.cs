@@ -32,6 +32,7 @@ namespace DO_AN_TN.UserControl
             txttNgayDay.Text = Convert.ToString(_LichDayVaHocEO.tNgayDay.ToShortDateString());
             txtiSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
             txtsSinhVienNghi.Text = Convert.ToString(_LichDayVaHocEO.sSinhVienNghi);
+            txtsLinkVideo.Text = Convert.ToString(_LichDayVaHocEO.sLinkVideo);
             try { ddliTrangThai.SelectedValue = Convert.ToString(_LichDayVaHocEO.iTrangThai); }
             catch { ddliTrangThai.SelectedIndex = 0; lbliTrangThai.Text = Messages.Loi_Tai_Du_Lieu; }
         }
@@ -52,6 +53,7 @@ namespace DO_AN_TN.UserControl
                 try { _LichDayVaHocEO.iSoTietDay = Convert.ToInt16(txtiSoTietDay.Text); }
                 catch { lbliSoTietDay.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 _LichDayVaHocEO.sSinhVienNghi = Convert.ToString(txtsSinhVienNghi.Text);
+                _LichDayVaHocEO.sLinkVideo = Convert.ToString(txtsLinkVideo.Text);
                 try { _LichDayVaHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
                 catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _LichDayVaHocEO;
