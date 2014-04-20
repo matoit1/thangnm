@@ -109,6 +109,34 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 3. LichDayVaHoc_UpdateLinkVideo </summary>
+        /// <param name="_LichDayVaHocEO"></param>
+        /// <returns></returns>
+        public static bool LichDayVaHoc_UpdateLinkVideo(LichDayVaHocEO _LichDayVaHocEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblLichDayVaHoc_UpdateLinkVideo", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@FK_sMaPCCT", _LichDayVaHocEO.FK_sMaPCCT));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sMalop", _LichDayVaHocEO.FK_sMalop));
+                    cmd.Parameters.Add(new SqlParameter("@iCaHoc", _LichDayVaHocEO.iCaHoc));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkVideo", _LichDayVaHocEO.sLinkVideo));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
         /// <summary> 4. LichDayVaHoc_Delete </summary>
         /// <param name="_LichDayVaHocEO"></param>
         /// <returns></returns>
@@ -123,6 +151,7 @@ namespace DataAccessObject
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FK_sMaPCCT", _LichDayVaHocEO.FK_sMaPCCT));
                     cmd.Parameters.Add(new SqlParameter("@FK_sMalop", _LichDayVaHocEO.FK_sMalop));
+                    cmd.Parameters.Add(new SqlParameter("@iCaHoc", _LichDayVaHocEO.iCaHoc));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -178,6 +207,7 @@ namespace DataAccessObject
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaPCCT", _LichDayVaHocEO.FK_sMaPCCT));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMalop", _LichDayVaHocEO.FK_sMalop));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iCaHoc", _LichDayVaHocEO.iCaHoc));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

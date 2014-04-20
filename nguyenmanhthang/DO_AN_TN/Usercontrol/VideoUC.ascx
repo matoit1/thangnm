@@ -6,6 +6,6 @@
     <%-- End Thư viện CSS - JAVASCRIPT Video mp4/ogg/webm--%>
     <video id="video1" class="video-js vjs-default-skin" controls preload="auto" width="755" height="400" poster="../Images/Avatar/default.png"
         data-setup='{"controls" : true, "autoplay" : false, "preload" : "auto"}'>
-        <source src="../upload/admin/video/movie.flv" type="video/x-flv">
+        <source src='<%=sLinkVideo%>' type="video/x-flv">
         Trình duyệt của bạn không hỗ trợ xem video này!
     </video>

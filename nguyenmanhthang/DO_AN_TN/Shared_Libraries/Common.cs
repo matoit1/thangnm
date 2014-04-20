@@ -9,6 +9,24 @@ namespace Shared_Libraries
 {
     public class Common
     {
+        public static string ConvertToUnSign(string text)
+        {
+            for (int i = 32; i < 48; i++)
+            {
+                if(i!=46){
+                text = text.Replace(((char)i).ToString(), " ");
+                }
+            }
+            //text = text.Replace(".", "-");
+            text = text.Replace(" ", "-");
+            text = text.Replace(",", "-");
+            text = text.Replace(";", "-");
+            text = text.Replace(":", "-");
+            Regex regex = new Regex(@"\p{IsCombiningDiacriticalMarks}+");
+            string strFormD = text.Normalize(System.Text.NormalizationForm.FormD);
+            return regex.Replace(strFormD, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
+
         public static Int16 CaHocHienTai()
         {
             switch (DateTime.Now.Hour)
@@ -304,10 +322,6 @@ namespace Shared_Libraries
         #endregion
 
         #region "Upload"
-        public const string sPrefixVideo = "VIDEO_";
-        public const string sPrefixEbook = "EBOOK_";
-        public const string sPrefixExample = "EXAMPLE_";
-
         public const string Video = "Video/";
         public const string Ebook = "Ebook/";
         public const string Example = "Example/";
