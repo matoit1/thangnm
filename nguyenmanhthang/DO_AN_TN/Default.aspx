@@ -4,10 +4,10 @@
         <asp:Repeater ID="rpTopic" runat="server">
             <ItemTemplate>
                 <div style="width: 700px; height: 210px;">
-                    <div style="float:left; width: 210px; padding: 2px">
+                    <div style="float:left; width: 210px; height: 210px; padding: 2px">
                         <asp:ImageButton ID="ibtnTopic_LinkImage" runat="server"  ImageUrl='<%#Eval("sLinkAnh")%>' width="200px" Height="200px" PostBackUrl='<%#"~/Topic.aspx?PK_lMaBaiViet=" +Eval("PK_lMaBaiViet")%>'/>
                     </div>
-                    <div style="float:left; width: 425px; padding: 5px"">
+                    <div style="float:left; width: 425px; height: 210px; padding: 5px"">
                         <asp:HiddenField ID="hfTopic_ID" runat="server" Value='<%#Eval("PK_lMaBaiViet")%>'></asp:HiddenField>
                         <asp:Label ID="lblTopic_Title" runat="server" Text='<%#Eval("sTieuDe")%>' Font-Bold="true" Font-Size="20px"></asp:Label><br />
                         <asp:Label ID="Label3" runat="server" Text='<%#Eval("sMoTa")%>'></asp:Label>

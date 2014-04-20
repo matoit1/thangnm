@@ -15,7 +15,7 @@ namespace DO_AN_TN.UserControl
     {
         #region "Properties & Event"
         public event EventHandler Refresh;
-
+        public string linkfilevideo;
         public string sTendangnhapGV
         {
             get { return (string)ViewState["sTendangnhapGV"]; }
@@ -25,11 +25,6 @@ namespace DO_AN_TN.UserControl
         {
             get { return (string)ViewState["sTypeUpload"]; }
             set { ViewState["sTypeUpload"] = value; }
-        }
-        public string sPrefixFileName
-        {
-            get { return (string)ViewState["sPrefixFileName"]; }
-            set { ViewState["sPrefixFileName"] = value; }
         }
         #endregion
 
@@ -42,24 +37,18 @@ namespace DO_AN_TN.UserControl
         {
             string filepath = Server.MapPath("~/Upload/" + sTendangnhapGV + "/"+sTypeUpload);
             string filename ="";
-            
             HttpFileCollection uploadedFiles = Request.Files;
             lblMsg.Text = "";
             try
             {
-                
                 for (int i = 0; i < uploadedFiles.Count; i++)
                 {
                     HttpPostedFile userPostedFile = uploadedFiles[i];
                     if (userPostedFile.ContentLength > 0)
                     {
-                        switch (sTypeUpload) {
-                            case Messages.Ebook: filename = sPrefixFileName + userPostedFile.FileName; break;
-                            case Messages.Video: filename = sPrefixFileName + userPostedFile.FileName; break;
-                            case Messages.Example: filename = sPrefixFileName + userPostedFile.FileName; break;
-                            default: filename = userPostedFile.FileName; break;
-                        }
+                        filename = userPostedFile.FileName.Replace(",", "_");
                         userPostedFile.SaveAs(filepath + "\\" + Path.GetFileName(filename));
+                        linkfilevideo = linkfilevideo + "," + "../Upload/" + sTendangnhapGV + "/" + sTypeUpload + Path.GetFileName(filename);
                     }
                 }
                 lblMsg.Text = Messages.Tai_Len_Thanh_Cong;

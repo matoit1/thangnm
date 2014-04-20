@@ -53,12 +53,10 @@ namespace DO_AN_TN.GiangVien
                             switch (_LichDayVaHocEO.iTrangThai)
                             {
                                 case LichDayVaHoc_iTrangThai_C.Hoc: vLiveStream.ActiveViewIndex = 0;
-                                                                            UploadFileUC1.sPrefixFileName = Messages.sPrefixEbook;
                                                                             UploadFileUC1.Visible = true; 
                                                                             UploadFileUC2.Visible = false; break;
                                 case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1;
-                                                                            UploadFileUC1.sPrefixFileName = Messages.sPrefixEbook;
-                                                                            UploadFileUC2.sPrefixFileName = Messages.sPrefixVideo;
+                                                                            VideoUC1.sLinkVideo = _LichDayVaHocEO.sLinkVideo;
                                                                             UploadFileUC1.Visible = true;
                                                                             UploadFileUC2.Visible = true; break;
                                 case LichDayVaHoc_iTrangThai_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0;
@@ -100,9 +98,20 @@ namespace DO_AN_TN.GiangVien
             }
         }
 
-        protected void Refresh_Click(object sender, EventArgs e)
+        protected void Refresh1_Click(object sender, EventArgs e)
         {
             LoadInfo();
+        }
+
+        protected void Refresh2_Click(object sender, EventArgs e)
+        {
+            LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+            _LichDayVaHocEO.FK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
+            _LichDayVaHocEO.FK_sMalop = Request.QueryString["PK_sMalop"];
+            _LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
+            _LichDayVaHocEO.sLinkVideo = UploadFileUC2.linkfilevideo.Substring(1);
+            LichDayVaHocDAO.LichDayVaHoc_UpdateLinkVideo(_LichDayVaHocEO);
+            Response.Redirect(Request.Url.ToString());
         }
     }
 }

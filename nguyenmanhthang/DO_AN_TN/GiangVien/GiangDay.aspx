@@ -32,7 +32,7 @@
     </div>
     <div class="ebook">
         <uc4:Hoc_LieuUC ID="Hoc_LieuUC1" runat="server" /><br />
-        <uc6:UploadFileUC ID="UploadFileUC1" runat="server" OnRefresh="Refresh_Click" />
-        <uc6:UploadFileUC ID="UploadFileUC2" runat="server" OnRefresh="Refresh_Click" />
+        <uc6:UploadFileUC ID="UploadFileUC1" runat="server" OnRefresh="Refresh1_Click" />
+        <uc6:UploadFileUC ID="UploadFileUC2" runat="server" OnRefresh="Refresh2_Click" />
     </div>
 </asp:Content>
