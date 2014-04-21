@@ -21,6 +21,18 @@
         </tr>
         <tr>
             <td>
+                <asp:Panel ID="pnlSearch" runat="server" Visible="true">
+                        <asp:TextBox ID="txtTextSearch" runat="server"></asp:TextBox>
+                        <asp:DropDownList ID="ddlTypeSearch" runat="server" ontextchanged="ddlTypeSearch_TextChanged">
+                            <asp:ListItem Value="0">Tìm theo mã PCCT</asp:ListItem>
+                            <asp:ListItem Value="1">Tìm theo mã Lớp</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" onclick="btnSearch_Click" />
+                </asp:Panel>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <asp:GridView ID="grvListLichDayVaHoc" runat="server" CssClass="mGrid" 
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
                                 FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_sMaPCCT, FK_sMalop, iCaHoc"

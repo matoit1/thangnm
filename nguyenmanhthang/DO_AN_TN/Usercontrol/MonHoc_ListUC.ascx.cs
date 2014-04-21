@@ -27,6 +27,12 @@ namespace DO_AN_TN.UserControl
             get { return this._PK_sMaMonhoc; }
             set { _PK_sMaMonhoc = value; }
         }
+
+        public string typesearch
+        {
+            get { return (string)ViewState["typesearch"]; }
+            set { ViewState["typesearch"] = value; }
+        }
 #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -40,16 +46,45 @@ namespace DO_AN_TN.UserControl
         public void BindData()
         {
             grvListMonHoc.Visible = false;
+            string keysearch = txtTextSearch.Text;
             DataSet dsMonHoc = new DataSet();
             try
             {
                 dsMonHoc = MonHocDAO.MonHoc_SelectList();
-                if (Convert.ToInt32(dsMonHoc.Tables[0].Rows.Count.ToString()) > 0)
+                //var result = DataSet2LinQ.BaiViet(dsBaiViet);
+                var result =
+                from topic in dsMonHoc.Tables[0].AsEnumerable()
+                select new
+                {
+                    PK_sMaMonhoc = topic.Field<string>("PK_sMaMonhoc"),
+                    sTenMonhoc = topic.Field<string>("sTenMonhoc"),
+                    iSotrinh = topic.Field<Int16>("iSotrinh"),
+                    iSotietday = topic.Field<Int16>("iSotietday"),
+                    iTrangThai = topic.Field<Int16>("iTrangThai")
+                };
+                ddlTypeSearch.SelectedValue = typesearch;
+                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.PK_sMaMonhoc.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                else
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.sTenMonhoc.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                if (result.Count() > 0)
                 {
                     grvListMonHoc.Visible = true;
-                    grvListMonHoc.DataSource = dsMonHoc;
+                    grvListMonHoc.DataSource = result.ToList();
                     grvListMonHoc.DataBind();
-                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + dsMonHoc.Tables[0].Rows.Count.ToString();
+                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + result.Count();
                 }
                 else
                 {
@@ -280,5 +315,15 @@ namespace DO_AN_TN.UserControl
             }
         }
         #endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)
+        {
+            typesearch = ddlTypeSearch.SelectedValue;
+        }
     }
 }

@@ -11,5 +11,50 @@ namespace DO_AN_TN.UserControl {
     
     
     public partial class VideoUC {
+        
+        /// <summary>
+        /// mtvVideo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.MultiView mtvVideo;
+        
+        /// <summary>
+        /// vFLV_MP4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vFLV_MP4;
+        
+        /// <summary>
+        /// vOGG_WEBM_F4V_MKV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vOGG_WEBM_F4V_MKV;
+        
+        /// <summary>
+        /// vAVI_3G2_MOV_MPG_WMV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vAVI_3G2_MOV_MPG_WMV;
+        
+        /// <summary>
+        /// vNoSupport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vNoSupport;
     }
 }

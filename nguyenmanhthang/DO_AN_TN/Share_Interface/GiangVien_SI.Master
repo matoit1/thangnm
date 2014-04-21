@@ -51,8 +51,7 @@
 					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
 					    <li><a href="http://mail.ehou.edu.vn/" target="_blank" title="Hòm thư">Email</a></li>
 					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
-					    <li class="login" ><a href="#" id="signout"><i class="icon-signout"></i> Thoát</a></li>
-					    <li class="unlogin"><a href="../SinhVien/Accounts/Login.aspx"><i class="icon-signin"></i> Đăng nhập</a></li>
+					    <li><asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click"><i class="icon-signout"></i>Thoát</asp:LinkButton></li>
 				    </ul>
 			    </div>
 		    </div>
@@ -69,7 +68,6 @@
                     <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/GiangVien/LopHoc.aspx">Lớp Học</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/GiangVien/MonHoc.aspx">Môn Học</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/GiangVien/LichDay.aspx">Lịch Dậy Học</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/GiangVien/GiangDay.aspx">Giảng dạy</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx">Thông Tin Cá Nhân</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx">Trợ giúp</asp:HyperLink></li>
                 </ul>

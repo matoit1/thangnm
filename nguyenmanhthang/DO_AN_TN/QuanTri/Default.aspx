@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="cphHead">
     <script type="text/javascript">
-        window.location.href = "../QuanTri/ThongTinCaNhan.aspx"
+        window.location.href = "../QuanTri/Database.aspx"
 	</script>
 </asp:Content>
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">

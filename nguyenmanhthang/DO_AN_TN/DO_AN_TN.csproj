@@ -89,6 +89,7 @@
     <Content Include="Error\Dao_vang_I.swf" />
     <Content Include="Error\Default.aspx" />
     <Content Include="ExcuteProgram.aspx" />
+    <Content Include="FAQ.aspx" />
     <Content Include="Flash\FlashVideoPlayer.swf" />
     <Content Include="GiangVien\Accounts\ForgotPassword.aspx" />
     <Content Include="GiangVien\Accounts\Login.aspx" />
@@ -294,7 +295,6 @@
     <Content Include="Test\TSinhVien.aspx" />
     <Content Include="Test\TVideo.aspx" />
     <Content Include="Topic.aspx" />
-    <Content Include="Upload\admin\video\preview.jpg" />
     <Content Include="Upload\admin\video\movie.3g2" />
     <Content Include="Upload\admin\video\movie.avi" />
     <Content Include="Upload\admin\video\movie.mov" />
@@ -425,6 +425,13 @@
     </Compile>
     <Compile Include="ExcuteProgram.aspx.designer.cs">
       <DependentUpon>ExcuteProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiangVien\Accounts\ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
@@ -1157,7 +1164,6 @@
     <Content Include="Share_Interface\Test.Master" />
     <None Include="Upload\admin\ebook\DA_Bao_Cao_Lan_2.docx" />
     <None Include="Upload\admin\ebook\do an.docx" />
-    <None Include="Upload\admin\ebook\System.Web.HttpCookie11.10B5.doc" />
     <None Include="Upload\admin\ebook\XD lớp học ảo.docx" />
     <None Include="Upload\admin\video\movie.f4v" />
     <None Include="Upload\admin\video\movie.flv" />

@@ -170,7 +170,6 @@ namespace EntityObject
             get { return this._bKetnapDoanSV; }
             set { this._bKetnapDoanSV = value; }
         }
-        #endregion
 
         // 20. Xay dung cac phuong thuc set, get cho iNamketnapDoanSV
         public Int16 iNamketnapDoanSV
@@ -228,5 +227,6 @@ namespace EntityObject
             get { return this._iTrangThaiSV; }
             set { this._iTrangThaiSV = value; }
         }
+        #endregion
     }
 }

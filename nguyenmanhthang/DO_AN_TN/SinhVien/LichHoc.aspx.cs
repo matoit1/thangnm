@@ -13,18 +13,22 @@ namespace DO_AN_TN.SinhVien
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LichDayVaHoc_ListUC1.btnAddNew.Visible = false;
-            LichDayVaHoc_ListUC1.btnDeleteList.Visible = false;
-            if (!IsPostBack)
+            try
             {
-                PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
-                LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
-                SinhVienEO _SinhVienEO = new SinhVienEO();
-                _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
-                _LichDayVaHocEO.FK_sMalop = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).FK_sMaLop;
-                LichDayVaHoc_ListUC1.BindData(_PhanCongCongTacEO, _LichDayVaHocEO, 1);
-                LichDayVaHoc_ListUC2.BindData(_PhanCongCongTacEO, _LichDayVaHocEO, 2);
+                LichDayVaHoc_ListUC1.btnAddNew.Visible = false;
+                LichDayVaHoc_ListUC1.btnDeleteList.Visible = false;
+                if (!IsPostBack)
+                {
+                    PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
+                    LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+                    SinhVienEO _SinhVienEO = new SinhVienEO();
+                    _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
+                    _LichDayVaHocEO.FK_sMalop = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).FK_sMaLop;
+                    LichDayVaHoc_ListUC1.BindData(_PhanCongCongTacEO, _LichDayVaHocEO, 1);
+                    LichDayVaHoc_ListUC2.BindData(_PhanCongCongTacEO, _LichDayVaHocEO, 2);
+                }
             }
+            catch { }
         }
 
         protected void ViewDetail_Click(object sender, EventArgs e)

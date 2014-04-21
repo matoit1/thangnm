@@ -22,7 +22,6 @@ namespace DO_AN_TN.QuanTri
             }
             catch
             {
-                Response.Redirect("~/QuanTri/Default.aspx");
             }
         }
     }

@@ -41,8 +41,8 @@
 					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
 					    <li><a href="http://mail.ehou.edu.vn/" target="_blank" title="Hòm thư">Email</a></li>
 					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
-					    <li class="login" ><a href="#" id="signout"><i class="icon-signout"></i> Thoát</a></li>
-					    <li class="unlogin"><a href="../SinhVien/Accounts/Login.aspx"><i class="icon-signin"></i> Đăng nhập</a></li>
+					    <%--<li class="login" ><a href="#" id="signout"><i class="icon-signout"></i> Thoát</a></li>
+					    <li class="unlogin"><a href="../SinhVien/Accounts/Login.aspx"><i class="icon-signin"></i> Đăng nhập</a></li>--%>
 				    </ul>
 			    </div>
 		    </div>
@@ -82,8 +82,8 @@
                         <ul>
                             <li><asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="~/Admin/Setting.aspx">Đào tạo trực tuyến EHOU</asp:HyperLink></li>
                             <li><asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="~/Admin/Setting.aspx">HOU - TOPICA</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="~/Admin/Setting.aspx">Bồi dưỡng giáo viên tiếng anh - Đề án NNQG 2020</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Admin/Setting.aspx">Đề án GD vì sự phát triển bền vững (UNESSCO)</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="~/Admin/Setting.aspx">Bồi dưỡng giáo viên tiếng anh</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Admin/Setting.aspx">Đề án GD vì sự phát triển bền vững</asp:HyperLink></li>
                         </ul>
                     </li>
                     <li class="toproot"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/Admin/Setting.aspx">Tuyển sinh</asp:HyperLink>

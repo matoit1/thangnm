@@ -25,6 +25,12 @@ namespace DO_AN_TN.UserControl
             get { return this._PK_lCauhoi_ID; }
             set { _PK_lCauhoi_ID = value; }
         }
+
+        public string typesearch
+        {
+            get { return (string)ViewState["typesearch"]; }
+            set { ViewState["typesearch"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -38,16 +44,52 @@ namespace DO_AN_TN.UserControl
         public void BindData()
         {
             grvListCauHoi.Visible = false;
+            string keysearch = txtTextSearch.Text;
             DataSet dsCauHoi = new DataSet();
             try
             {
                 dsCauHoi = CauHoiDAO.CauHoi_SelectList();
-                if (Convert.ToInt32(dsCauHoi.Tables[0].Rows.Count.ToString()) > 0)
+                //var result = DataSet2LinQ.BaiViet(dsBaiViet);
+                var result =
+                from topic in dsCauHoi.Tables[0].AsEnumerable()
+                select new
+                {
+                    FK_sMaGV = topic.Field<string>("FK_sMaGV"),
+                    PK_lCauhoi_ID = topic.Field<Int64>("PK_lCauhoi_ID"),
+                    sCauhoi_Cauhoi = topic.Field<string>("sCauhoi_Cauhoi"),
+                    sCauhoi_A = topic.Field<string>("sCauhoi_A"),
+                    sCauhoi_B = topic.Field<string>("sCauhoi_B"),
+                    sCauhoi_C = topic.Field<string>("sCauhoi_C"),
+                    sCauhoi_D = topic.Field<string>("sCauhoi_D"),
+                    iCauhoi_Dung = topic.Field<Int16>("iCauhoi_Dung"),
+                    sBoCauHoi = topic.Field<string>("sBoCauHoi"),
+                    tNgayTao = topic.Field<DateTime>("tNgayTao"),
+                    tNgayCapNhat = topic.Field<DateTime>("tNgayCapNhat"),
+                    iTrangThai = topic.Field<Int16>("iTrangThai")
+                };
+                ddlTypeSearch.SelectedValue = typesearch;
+                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.PK_lCauhoi_ID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                else
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.sCauhoi_Cauhoi.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                if (result.Count() > 0)
                 {
                     grvListCauHoi.Visible = true;
-                    grvListCauHoi.DataSource = dsCauHoi;
+                    grvListCauHoi.DataSource = result.ToList();
                     grvListCauHoi.DataBind();
-                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + dsCauHoi.Tables[0].Rows.Count.ToString();
+                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + result.Count();
                 }
                 else
                 {
@@ -217,5 +259,15 @@ namespace DO_AN_TN.UserControl
             }
         }
         #endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)
+        {
+            typesearch = ddlTypeSearch.SelectedValue;
+        }
     }
 }

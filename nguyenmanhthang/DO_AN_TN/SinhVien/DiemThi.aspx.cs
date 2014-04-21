@@ -13,16 +13,20 @@ namespace DO_AN_TN.SinhVien
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DiemThi_ListUC1.btnAddNew.Visible = false;
-            DiemThi_ListUC1.btnDeleteList.Visible = false;
-            if (!IsPostBack)
+            try
             {
-                DiemThiEO _DiemThiEO = new DiemThiEO();
-                SinhVienEO _SinhVienEO = new SinhVienEO();
-                _SinhVienEO.sTendangnhapSV=Request.Cookies["sinhvien"].Value;
-                _DiemThiEO.FK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
-                DiemThi_ListUC1.BindData(_DiemThiEO);
+                DiemThi_ListUC1.btnAddNew.Visible = false;
+                DiemThi_ListUC1.btnDeleteList.Visible = false;
+                if (!IsPostBack)
+                {
+                    DiemThiEO _DiemThiEO = new DiemThiEO();
+                    SinhVienEO _SinhVienEO = new SinhVienEO();
+                    _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
+                    _DiemThiEO.FK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
+                    DiemThi_ListUC1.BindData(_DiemThiEO);
+                }
             }
+            catch { }
         }
     }
 }

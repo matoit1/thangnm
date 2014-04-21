@@ -56,6 +56,12 @@ namespace DO_AN_TN.UserControl
             get { return this._iCaHoc; }
             set { _iCaHoc = value; }
         }
+
+        public string typesearch
+        {
+            get { return (string)ViewState["typesearch"]; }
+            set { ViewState["typesearch"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -72,16 +78,53 @@ namespace DO_AN_TN.UserControl
             objLichDayVaHocEO = _LichDayVaHocEO;
             objPhanCongCongTacEO = _PhanCongCongTacEO;
             grvListLichDayVaHoc.Visible = false;
+            string keysearch = txtTextSearch.Text;
             DataSet dsLichDayVaHoc = new DataSet();
             try
             {
                 dsLichDayVaHoc = LichDayVaHocDAO.LichDayVaHoc_SelectList(_PhanCongCongTacEO, _LichDayVaHocEO, _iType);
-                if (Convert.ToInt32(dsLichDayVaHoc.Tables[0].Rows.Count.ToString()) > 0)
+                //var result = DataSet2LinQ.BaiViet(dsBaiViet);
+                var result =
+                from topic in dsLichDayVaHoc.Tables[0].AsEnumerable()
+                select new
+                {
+                    FK_sMaPCCT = topic.Field<string>("FK_sMaPCCT"),
+                    FK_sMalop = topic.Field<string>("FK_sMalop"),
+                    iCaHoc = topic.Field<Int16>("iCaHoc"),
+                    tNgayDay = topic.Field<DateTime>("tNgayDay"),
+                    iSoTietDay = topic.Field<Int16>("iSoTietDay"),
+                    sSinhVienNghi = topic.Field<string>("sSinhVienNghi"),
+                    sLinkVideo = topic.Field<string>("sLinkVideo"),
+                    iTrangThai = topic.Field<Int16>("iTrangThai"),
+
+                    FK_sMaGV = topic.Field<string>("FK_sMaGV"),
+                    FK_sMaMonhoc = topic.Field<string>("FK_sMaMonhoc"),
+                    tNgayBatDau = topic.Field<DateTime>("tNgayBatDau"),
+                    tNgayKetThuc = topic.Field<DateTime>("tNgayKetThuc")
+                };
+                ddlTypeSearch.SelectedValue = typesearch;
+                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.FK_sMaPCCT.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                else
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.FK_sMalop.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                if (result.Count() > 0)
                 {
                     grvListLichDayVaHoc.Visible = true;
-                    grvListLichDayVaHoc.DataSource = dsLichDayVaHoc;
+                    grvListLichDayVaHoc.DataSource = result.ToList();
                     grvListLichDayVaHoc.DataBind();
-                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + dsLichDayVaHoc.Tables[0].Rows.Count.ToString();
+                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + result.Count();
                 }
                 else
                 {
@@ -255,5 +298,15 @@ namespace DO_AN_TN.UserControl
             }
         }
         #endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindData(objPhanCongCongTacEO, objLichDayVaHocEO, iType);
+        }
+
+        protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)
+        {
+            typesearch = ddlTypeSearch.SelectedValue;
+        }
     }
 }
