@@ -25,6 +25,12 @@ namespace DO_AN_TN.UserControl
             get { return this._PK_sMaGV; }
             set { _PK_sMaGV = value; }
         }
+
+        public string typesearch
+        {
+            get { return (string)ViewState["typesearch"]; }
+            set { ViewState["typesearch"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -38,16 +44,61 @@ namespace DO_AN_TN.UserControl
         public void BindData()
         {
             grvListGiangVien.Visible = false;
+            string keysearch = txtTextSearch.Text;
             DataSet dsGiangVien = new DataSet();
             try
             {
                 dsGiangVien = GiangVienDAO.GiangVien_SelectList();
-                if (Convert.ToInt32(dsGiangVien.Tables[0].Rows.Count.ToString()) > 0)
+                //var result = DataSet2LinQ.BaiViet(dsBaiViet);
+                var result =
+                from topic in dsGiangVien.Tables[0].AsEnumerable()
+                select new
+                {
+                    PK_sMaGV = topic.Field<string>("PK_sMaGV"),
+                    sHotenGV = topic.Field<string>("sHotenGV"),
+                    sTendangnhapGV = topic.Field<string>("sTendangnhapGV"),
+                    sMatkhauGV = topic.Field<string>("sMatkhauGV"),
+                    sEmailGV = topic.Field<string>("sEmailGV"),
+                    sDiachiGV = topic.Field<string>("sDiachiGV"),
+                    sSdtGV = topic.Field<string>("sSdtGV"),
+                    tNgaysinhGV = topic.Field<DateTime>("tNgaysinhGV"),
+                    bGioitinhGV = topic.Field<bool>("bGioitinhGV"),
+                    sCMNDGV = topic.Field<string>("sCMNDGV"),
+                    tNgayCapCMNDGV = topic.Field<DateTime>("tNgayCapCMNDGV"),
+                    sNoiCapCMNDGV = topic.Field<string>("sNoiCapCMNDGV"),
+                    bHonNhanGV = topic.Field<bool>("bHonNhanGV"),
+                    tNgayNhanCongTacGV = topic.Field<DateTime>("tNgayNhanCongTacGV"),
+                    iChucVuGV = topic.Field<Int16>("iChucVuGV"),
+                    iHocViGV = topic.Field<Int16>("iHocViGV"),
+                    bCongChucGV = topic.Field<bool>("bCongChucGV"),
+                    sLinkChannelsGV = topic.Field<string>("sLinkChannelsGV"),
+                    sLinkChatRoomsGV = topic.Field<string>("sLinkChatRoomsGV"),
+                    sLinkAvatarGV = topic.Field<string>("sLinkAvatarGV"),
+                    iTrangThaiGV = topic.Field<Int16>("iTrangThaiGV")
+                };
+                ddlTypeSearch.SelectedValue = typesearch;
+                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.PK_sMaGV.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                else
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.sHotenGV.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                if (result.Count() > 0)
                 {
                     grvListGiangVien.Visible = true;
-                    grvListGiangVien.DataSource = dsGiangVien;
+                    grvListGiangVien.DataSource = result.ToList();
                     grvListGiangVien.DataBind();
-                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + dsGiangVien.Tables[0].Rows.Count.ToString();
+                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + result.Count();
                 }
                 else
                 {
@@ -217,5 +268,15 @@ namespace DO_AN_TN.UserControl
             }
         }
         #endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindData();
+        }
+
+        protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)
+        {
+            typesearch = ddlTypeSearch.SelectedValue;
+        }
     }
 }

@@ -44,6 +44,12 @@ namespace DO_AN_TN.UserControl
             get { return this._PK_iSolanhoc; }
             set { _PK_iSolanhoc = value; }
         }
+
+        public string typesearch
+        {
+            get { return (string)ViewState["typesearch"]; }
+            set { ViewState["typesearch"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -58,21 +64,66 @@ namespace DO_AN_TN.UserControl
         {
             objDiemThiEO = _DiemThiEO;
             grvListDiemThi.Visible = false;
+            string keysearch = txtTextSearch.Text;
             DataSet dsDiemThi = new DataSet();
             try
             {
                 dsDiemThi = DiemThiDAO.DiemThi_SelectList(_DiemThiEO);
-                if (Convert.ToInt32(dsDiemThi.Tables[0].Rows.Count.ToString()) > 0)
+                //var result = DataSet2LinQ.BaiViet(dsBaiViet);
+                var result =
+                from topic in dsDiemThi.Tables[0].AsEnumerable()
+                select new
+                {
+                    FK_sMaSV = topic.Field<string>("FK_sMaSV"),
+                    FK_sMaMonhoc = topic.Field<string>("FK_sMaMonhoc"),
+                    PK_iSolanhoc = topic.Field<Int16>("PK_iSolanhoc"),
+                    fDiemchuyencan = topic.Field<double>("fDiemchuyencan"),
+                    fDiemgiuaky = topic.Field<double>("fDiemgiuaky"),
+                    fDiemthilan1 = topic.Field<double>("fDiemthilan1"),
+                    fDiemthilan2 = topic.Field<double>("fDiemthilan2"),
+                    iTrangThai = topic.Field<Int16>("iTrangThai")
+                };
+                ddlTypeSearch.SelectedValue = typesearch;
+                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.FK_sMaSV.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                else
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.FK_sMaMonhoc.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                if (result.Count() > 0)
                 {
                     grvListDiemThi.Visible = true;
-                    grvListDiemThi.DataSource = dsDiemThi;
+                    grvListDiemThi.DataSource = result.ToList();
                     grvListDiemThi.DataBind();
-                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + dsDiemThi.Tables[0].Rows.Count.ToString();
+                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + result.Count();
                 }
                 else
                 {
                     lblTongSoBanGhi.Text = Messages.Khong_Thoa_Man_Dieu_Kien_Tim_Kiem;
                 }
+
+                //dsDiemThi = DiemThiDAO.DiemThi_SelectList(_DiemThiEO);
+                //if (Convert.ToInt32(dsDiemThi.Tables[0].Rows.Count.ToString()) > 0)
+                //{
+                //    grvListDiemThi.Visible = true;
+                //    grvListDiemThi.DataSource = dsDiemThi;
+                //    grvListDiemThi.DataBind();
+                //    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + dsDiemThi.Tables[0].Rows.Count.ToString();
+                //}
+                //else
+                //{
+                //    lblTongSoBanGhi.Text = Messages.Khong_Thoa_Man_Dieu_Kien_Tim_Kiem;
+                //}
             }
             catch (Exception ex)
             {
@@ -241,5 +292,15 @@ namespace DO_AN_TN.UserControl
             }
         }
         #endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindData(objDiemThiEO);
+        }
+
+        protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)
+        {
+            typesearch = ddlTypeSearch.SelectedValue;
+        }
     }
 }

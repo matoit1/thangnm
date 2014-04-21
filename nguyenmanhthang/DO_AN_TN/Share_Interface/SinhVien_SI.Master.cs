@@ -17,21 +17,21 @@ namespace DO_AN_TN.Share_Interface
             {
                 if (Request.Cookies["sinhvien"] == null)
                 {
-                    Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.AbsolutePath);
+                    Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
                 }
                 //lblInfo.Text = "   Hi, " + Request.Cookies["sinhvien"].Value;
             }
             catch
             {
                 Response.Cookies["sinhvien"].Expires = DateTime.Now.AddDays(-1);
-                Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.AbsolutePath);
+                Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
             }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)
         {
             Response.Cookies["sinhvien"].Expires = DateTime.Now.AddDays(-1);
-            Response.Redirect(Request.Url.AbsolutePath);
+            Response.Redirect(Request.Url.ToString());
         }
     }
 }

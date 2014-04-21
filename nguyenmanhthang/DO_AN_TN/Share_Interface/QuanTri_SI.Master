@@ -51,8 +51,7 @@
 					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
 					    <li><a href="http://mail.ehou.edu.vn/" title="Hòm thư" target="_blank">Email</a></li>
 					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
-					    <li class="login" ><a href="#" id="signout"><i class="icon-signout"></i> Thoát</a></li>
-					    <li class="unlogin"><a href="../SinhVien/Accounts/Login.aspx"><i class="icon-signin"></i> Đăng nhập</a></li>
+					    <li><asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click"><i class="icon-signout"></i>Thoát</asp:LinkButton></li>
 				    </ul>
 			    </div>
 		    </div>

@@ -58,7 +58,7 @@ namespace DO_AN_TN.SinhVien
                             switch (_LichDayVaHocEO.iTrangThai)
                             {
                                 case LichDayVaHoc_iTrangThai_C.Hoc: vLiveStream.ActiveViewIndex =0; break;
-                                case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1; break;
+                                case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1; VideoUC1.sLinkVideo = _LichDayVaHocEO.sLinkVideo; break;
                                 case LichDayVaHoc_iTrangThai_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0; break;
                                 case LichDayVaHoc_iTrangThai_C.Nghi: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Buoi_Hoc_Hom_Nay_Duoc_Nghi; break;
                                 default: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Chua_Den_Thoi_Gian_Hoc; break;

@@ -32,6 +32,12 @@ namespace DO_AN_TN.UserControl
             get { return this._PK_sMaPCCT; }
             set { _PK_sMaPCCT = value; }
         }
+
+        public string typesearch
+        {
+            get { return (string)ViewState["typesearch"]; }
+            set { ViewState["typesearch"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -46,16 +52,46 @@ namespace DO_AN_TN.UserControl
         {
             objPhanCongCongTacEO = _PhanCongCongTacEO;
             grvListPhanCongCongTac.Visible = false;
+            string keysearch = txtTextSearch.Text;
             DataSet dsPhanCongCongTac = new DataSet();
             try
             {
                 dsPhanCongCongTac = PhanCongCongTacDAO.PhanCongCongTac_SelectList(_PhanCongCongTacEO);
-                if (Convert.ToInt32(dsPhanCongCongTac.Tables[0].Rows.Count.ToString()) > 0)
+                //var result = DataSet2LinQ.BaiViet(dsBaiViet);
+                var result =
+                from topic in dsPhanCongCongTac.Tables[0].AsEnumerable()
+                select new
+                {
+                    PK_sMaPCCT = topic.Field<string>("PK_sMaPCCT"),
+                    FK_sMaGV = topic.Field<string>("FK_sMaGV"),
+                    FK_sMaMonhoc = topic.Field<string>("FK_sMaMonhoc"),
+                    tNgayBatDau = topic.Field<DateTime>("tNgayBatDau"),
+                    tNgayKetThuc = topic.Field<DateTime>("tNgayKetThuc"),
+                    iTrangThai = topic.Field<Int16>("iTrangThai")
+                };
+                ddlTypeSearch.SelectedValue = typesearch;
+                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.PK_sMaPCCT.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                else
+                {
+                    if (keysearch != "")
+                    {
+                        var search = (from item in result where item.FK_sMaGV.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        result = search;
+                    }
+                }
+                if (result.Count() > 0)
                 {
                     grvListPhanCongCongTac.Visible = true;
-                    grvListPhanCongCongTac.DataSource = dsPhanCongCongTac;
+                    grvListPhanCongCongTac.DataSource = result.ToList();
                     grvListPhanCongCongTac.DataBind();
-                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + dsPhanCongCongTac.Tables[0].Rows.Count.ToString();
+                    lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + result.Count();
                 }
                 else
                 {
@@ -225,5 +261,15 @@ namespace DO_AN_TN.UserControl
             }
         }
         #endregion
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindData(objPhanCongCongTacEO);
+        }
+
+        protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)
+        {
+            typesearch = ddlTypeSearch.SelectedValue;
+        }
     }
 }

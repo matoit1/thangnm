@@ -14,7 +14,11 @@ namespace DO_AN_TN.QuanTri
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DanhSachFileDaBackup();
+            try
+            {
+                DanhSachFileDaBackup();
+            }
+            catch { }
         }
 
         protected void btnBackup_Click(object sender, EventArgs e)

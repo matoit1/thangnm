@@ -84,7 +84,6 @@ namespace DO_AN_TN.UserControl
                         result = search;
                     }
                 }
-
                 if (result.Count() > 0)
                 {
                     grvListBaiViet.Visible = true;

@@ -25,7 +25,6 @@ namespace DO_AN_TN.GiangVien
             }
             catch
             {
-                Response.Redirect("~/GiangVien/Default.aspx");
             }
         }
     }
