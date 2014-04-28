@@ -14,7 +14,7 @@
 		<div class="dg-wrapper">
             <asp:Repeater ID="rptAdv" runat="server">
                 <ItemTemplate>
-                    <a href='<%#"../New/Product.aspx?Products_ID="+Eval("Products_ID")%>'><img src='<%#Eval("Products_Image1")%>' alt='<%#Eval("Products_Name")%>' width="260px" height="260px"><div><%#Eval("Products_Name")%></div></a>
+                    <a href='<%#"../Product.aspx?Products_ID="+Eval("Products_ID")%>'><img src='<%#Eval("Products_Image1")%>' alt='<%#Eval("Products_Name")%>' width="260px" height="260px"><div><%#Eval("Products_Name")%></div></a>
                 </ItemTemplate>
             </asp:Repeater>
 		</div>

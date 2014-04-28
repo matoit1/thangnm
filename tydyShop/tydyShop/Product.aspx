@@ -3,35 +3,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
     <link rel="stylesheet" type="text/css" href="../App_Themes/ZoomImage.css" />
     <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
-    <!-- You can download it from http://leaverou.github.com/prefixfree/ -->
- 
-    <!-- Time for jquery action -->
-    <script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript">
-    </script>
+    <script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-
         $(document).ready(function () {
-
             var native_width = 0;
             var native_height = 0;
-
             $(".magnify").mousemove(function (e) {
-
                 if (!native_width && !native_height) {
-
                     var image_object = new Image();
                     image_object.src = $(".small").attr("src");
-
                     native_width = image_object.width;
                     native_height = image_object.height;
                 }
                 else {
-
                     var magnify_offset = $(this).offset();
-
                     var mx = e.pageX - magnify_offset.left;
                     var my = e.pageY - magnify_offset.top;
-
                     if (mx < $(this).width() && my < $(this).height() && mx > 0 && my > 0) {
                         $(".large").fadeIn(100);
                     }
@@ -39,14 +26,11 @@
                         $(".large").fadeOut(100);
                     }
                     if ($(".large").is(":visible")) {
-
                         var rx = Math.round(mx / $(".small").width() * native_width - $(".large").width() / 2) * -1;
                         var ry = Math.round(my / $(".small").height() * native_height - $(".large").height() / 2) * -1;
                         var bgp = rx + "px " + ry + "px";
-
                         var px = mx - $(".large").width() / 2;
                         var py = my - $(".large").height() / 2;
-
                         $(".large").css({ left: px, top: py, backgroundPosition: bgp });
                     }
                 }
