@@ -65,15 +65,23 @@
     <Content Include="Client\Accounts\Login.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="GroupProduct.aspx" />
+    <Content Include="Images\Product\Ao_So_Mi.png" />
+    <Content Include="Images\Product\Chan_Vay.png" />
+    <Content Include="Images\Product\Vay_Dao_Pho.png" />
+    <Content Include="Images\Product\Vay_Cong_So.png" />
+    <Content Include="Label.aspx" />
+    <Content Include="Other\Pager.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\Gallery3D_1.js" />
     <Content Include="Scripts\Gallery3D_2.js" />
+    <Content Include="UserControl\FooterUC.ascx" />
     <Content Include="UserControl\Gallery3DUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="UserControl\MenuUC.ascx" />
+    <Content Include="UserControl\ShowAllProductUC.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -124,6 +132,20 @@
     <Compile Include="GroupProduct.aspx.designer.cs">
       <DependentUpon>GroupProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Label.aspx.cs">
+      <DependentUpon>Label.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Label.aspx.designer.cs">
+      <DependentUpon>Label.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Pager.aspx.cs">
+      <DependentUpon>Pager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Other\Pager.aspx.designer.cs">
+      <DependentUpon>Pager.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +190,13 @@
     <Compile Include="ShareInterface\ProductSI.Master.designer.cs">
       <DependentUpon>ProductSI.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\FooterUC.ascx.cs">
+      <DependentUpon>FooterUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\FooterUC.ascx.designer.cs">
+      <DependentUpon>FooterUC.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\Gallery3DUC.ascx.cs">
       <DependentUpon>Gallery3DUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,6 +217,13 @@
     </Compile>
     <Compile Include="UserControl\MenuUC.ascx.designer.cs">
       <DependentUpon>MenuUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ShowAllProductUC.ascx.cs">
+      <DependentUpon>ShowAllProductUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ShowAllProductUC.ascx.designer.cs">
+      <DependentUpon>ShowAllProductUC.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

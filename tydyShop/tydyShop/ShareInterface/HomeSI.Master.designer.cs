@@ -40,6 +40,24 @@ namespace tydyShop.ShareInterface {
         protected global::tydyShop.UserControl.MenuUC MenuUC1;
         
         /// <summary>
+        /// ShowAllProductUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::tydyShop.UserControl.ShowAllProductUC ShowAllProductUC1;
+        
+        /// <summary>
+        /// FooterUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::tydyShop.UserControl.FooterUC FooterUC1;
+        
+        /// <summary>
         /// cphBody control.
         /// </summary>
         /// <remarks>
