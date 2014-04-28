@@ -8,27 +8,34 @@
 	<!-- google_ad_section_start(name=default) -->
 		<div class="date-outer">
 			<div class="date-posts">
-				<div class="post-outer">
-					<div class="wrapfullpost">
-						<div class="post hentry">
-							<a name="5705322088157809118"></a>
-							<div class="entrybody">
-								<a href="http://tydyShop.tk/2013/11/giay-ep-7.html"><img src="../Images/NewInterface/simg_9154_thumb.jpg" class="postthumb" alt="Giày Đẹp 7"></a>
-							</div>
-							<h2 class="post-title entry-title">
-								<a href="http://tydyShop.tk/2013/11/giay-ep-7.html"><span class="border">Giày Đẹp 7</span></a>
-							</h2>
-							<div class="post-header-line-1"></div>
-							<div class="post-body entry-content"><div style="clear: both;"></div></div>
-							<div class="post-footer">
-								<div class="post-footer-line post-footer-line-"></div>
-								<div class="post-footer-line post-footer-line-2"></div>
-								<div class="post-footer-line post-footer-line-3"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="post-outer">
+                <asp:Repeater ID="rptLoadAllProduct" runat="server">
+                    <ItemTemplate>
+                        <div class="post-outer">
+					        <div class="wrapfullpost">
+						        <div class="post hentry">
+							        <a name="5705322088157809118"></a>
+							        <div class="entrybody">
+								        <a href='<%#"../Product.aspx?Products_ID="+Eval("Products_ID")%>'>
+                                            <img src='<%#Eval("Products_Image1")%>' class="postthumb" alt='<%#Eval("Products_Name")%>' title='<%#Eval("Products_Name")%>'>
+                                        </a>
+							        </div>
+							        <h2 class="post-title entry-title">
+								        <a href='<%#"../Product.aspx?Products_ID="+Eval("Products_ID")%>'><span class="border"><%#Eval("Products_Name")%></span></a>
+							        </h2>
+							        <div class="post-header-line-1"></div>
+							        <div class="post-body entry-content"><div style="clear: both;"></div></div>
+							        <div class="post-footer">
+								        <div class="post-footer-line post-footer-line-"></div>
+								        <div class="post-footer-line post-footer-line-2"></div>
+								        <div class="post-footer-line post-footer-line-3"></div>
+							        </div>
+						        </div>
+					        </div>
+				        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+				
+				<%--<div class="post-outer">
 					<div class="wrapfullpost">
 						<div class="post hentry">
 							<a name="9033113351030726402"></a>
@@ -188,7 +195,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>--%>
 			</div>
 		</div>
 		<!-- google_ad_section_end -->

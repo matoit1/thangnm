@@ -121,7 +121,7 @@ a img { border-width: 0px; }
 #slides .slidesjs-next { margin-right: 5px; float: left; }
 .slidesjs-pagination { margin: 6px 0px 0px; float: right; list-style: none outside none; }
 .slidesjs-pagination li { float: left; margin: 0px 1px; }
-.slidesjs-pagination li a { display: block; width: 13px; height: 0px; padding-top: 13px; background-image: url('../Images/NewInterface/pagination.png'); background-position: 0px 0px; float: left; overflow: hidden; }
+.slidesjs-pagination li a { display: block; width: 13px; height: 0px; padding-top: 13px; background-image: url('Images/Home_sprite.png'); background-position: 0px 0px; float: left; overflow: hidden; }
 .slidesjs-pagination li a.active, .slidesjs-pagination li a.active:hover { background-position: 0px -13px; }
 .slidesjs-pagination li a:hover { background-position: 0px -26px; }
 #slides a:link, #slides a:visited { color: rgb(51, 51, 51); }
@@ -158,16 +158,21 @@ ul.ticker-list { padding: 0px; }
 #rsidebar-wrapper .Label li { float: left; margin-right: 5px ! important; margin-bottom: 0px ! important; }
 #rsidebar-wrapper .Label li a { float: left; text-transform: capitalize; padding: 7px; background: none repeat scroll 0% 0% rgb(45, 62, 80); color: rgb(255, 255, 255); border-radius: 5px; }
 .Label { margin-bottom: 0px ! important; }
-.social_links li a:hover { opacity: 0.8; }
-.credts_right { float: right; width: 280px; }
+
+.credts_right { float: right; width: 400px;}
 .credts_left { float: left; margin-top: 8px; }
-.social_links li { float: left; display: block; margin-left: 10px; }
-.social_links .facebook a { background: url('Images/Home_social.png') no-repeat scroll -7px 0px transparent; width: 32px; height: 32px; float: left; text-indent: -99999px; }
-.social_links .twitter a { background: url('Images/Home_social.png') no-repeat scroll -44px 0px transparent; width: 32px; height: 32px; float: left; text-indent: -99999px; }
-.social_links .google a { background: url('Images/Home_social.png') no-repeat scroll -81px 0px transparent; width: 32px; height: 32px; float: left; text-indent: -99999px; }
-.social_links .pinterest a { background: url('Images/Home_social.png') no-repeat scroll -118px 0px transparent; width: 32px; height: 32px; float: left; text-indent: -99999px; }
-.social_links .vimeo a { background: url('Images/Home_social.png') no-repeat scroll -155px 0px transparent; width: 32px; height: 32px; float: left; text-indent: -99999px; }
-.social_links .rss a { background: url('Images/Home_social.png') no-repeat scroll -192px 0px transparent; width: 32px; height: 32px; float: left; text-indent: -99999px; }
+.credts_left a{text-decoration:none;}
+
+/* Social Settings */
+.social {width:350px; margin:0 auto; list-style: none;}
+.social-slide {height:48px; width:48px; float:left; margin:0px 5px; -webkit-transition:all ease 0.3s; -moz-transition:all ease 0.3s; -o-transition:all ease 0.3s; -ms-transition:all ease 0.3s; transition:all ease 0.3s;}
+.social-slide:hover {background-position: 0px -48px;}
+.twitter-hover {background-image: url(Images/Home_twitter-hover.png);}
+.facebook-hover {background-image: url(Images/Home_facebook-hover.png);}
+.google-hover {background-image: url(Images/Home_google-hover.png);}
+.pinterest-hover {background-image: url(Images/Home_pinterest-hover.png);}
+.tumblr-hover {background-image: url(Images/Home_tumblr-hover.png);}
+.instagram-hover {background-image: url(Images/Home_instagram-hover.png);}
 #newsletter { background: none repeat scroll 0% 0% rgb(251, 66, 72); width: 100%; float: left; padding-bottom: 20px; color: rgb(255, 255, 255); }
 #newsletter_wrapper { width: 980px; margin: auto; }
 #newsletter .FollowByEmail .follow-by-email-inner .follow-by-email-address { background: none repeat scroll 0% 0% rgb(225, 52, 58); border: 0px none; padding: 13px 10px 13.5px; width: 300px; border-radius: 4px 0px 0px 4px; font-family: open sans; float: left; color: rgb(251, 127, 127); font-size: 16px; }
