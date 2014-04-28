@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace tydyShop.ShareInterface {
+namespace tydyShop.Other {
     
     
-    public partial class ProductSI {
+    public partial class Pager {
         
         /// <summary>
-        /// cphHead control.
+        /// Head1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
         
         /// <summary>
         /// form1 control.
@@ -31,30 +31,21 @@ namespace tydyShop.ShareInterface {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// MenuUC1 control.
+        /// rpData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::tydyShop.UserControl.MenuUC MenuUC1;
+        protected global::System.Web.UI.WebControls.Repeater rpData;
         
         /// <summary>
-        /// cphBody control.
+        /// Paging control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
-        
-        /// <summary>
-        /// FooterUC1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::tydyShop.UserControl.FooterUC FooterUC1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Paging;
     }
 }

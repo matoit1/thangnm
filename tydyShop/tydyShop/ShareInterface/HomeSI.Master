@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeSI.master.cs" Inherits="tydyShop.ShareInterface.HomeSI" %>
 <%@ Register src="~/UserControl/MenuUC.ascx" tagname="MenuUC" tagprefix="uc1" %>
+<%@ Register src="~/UserControl/ShowAllProductUC.ascx" tagname="ShowAllProductUC" tagprefix="uc2" %>
+<%@ Register src="~/UserControl/FooterUC.ascx" tagname="FooterUC" tagprefix="uc3" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,833 +15,159 @@
 <body>
     <form id="form1" runat="server">
         <!-- Header [start] -->
-	<div id="main-head">
-        <uc1:MenuUC ID="MenuUC1" runat="server" />
-	</div>
-	<!-- Header [end] -->
-	<div style="clear: both;"></div>
-	<!-- Slidr[start] -->
-	<div id="slides-section">
-		<div style="overflow: hidden; display: block;" id="slides">
-			<div style="overflow: hidden; z-index: 1; position: relative; width: 1349px; height: 502.287px;" class="slidesjs-container">
-				<div style="position: relative; z-index: 1; left: 0px; width: 1349px; height: 502.287px;" class="slidesjs-control">
-					<img slidesjs-index="0" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 10;" class="slidesjs-slide" alt="tydyShop" src="../App_Themes/Images/Home_banner.jpg">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Slidr[end] -->
-	<!-- Ticker [start] -->
-	<div class="featurehomer section" id="featurehomer1">
-		<div class="widget HTML" id="HTML22">
-			<div class="widget-content">
-				<div class="featureticker-wrap">
-					<div id="featuresticker">
-						<div id="ticker">
-							<ul class="ticker-list">
-								<li>
-									<div class="ticker-head1">
-										<h3><strong>tydyShop !</strong> Thiên đường của thời trang</h3><p>Nơi cung cấp các sản phẩm thời trang <b style="color: teal;">Made in Việt Nam</b> chất lượng, mẫu mã được cập nhật liên tục, giá bán lẻ luôn ưu đãi, giá bán buôn luôn cạnh tranh.</p>
-									</div>
-									<div class="ticker-head2">
-										<div class="buttons buy"><a href="#">Xem Ngay</a></div>
-									</div>
-								</li>
-								<div style="clear: both;">
-								<li>
-									<div class="ticker-head1">
-										<h3><strong>Uy tín - Chất Lượng</strong> đó là điêu tôi đảm bảo</h3><p>Chúng tôi luôn đặt chữ tín lên hàng đầu và sản phẩn của chúng tôi là chất lượng nhất</p>
-									</div>
-									<div class="ticker-head2">
-										<div class="buttons buy"><a href="#">Xem Ngay</a></div>
-									</div>
-								</li>
-								<div style="clear: both;">
-								<li>
-									<div class="ticker-head1">
-										<h3><strong>Giá rẻ nhất?</strong> điều chúng tôi cam đoan</h3><p>Với những mặt hàng chất lượng chúng tôi cũng cam đoan rằng giá các sản phẩn của chúng tôi sẽ là rẻ nhất</p></div>
-									<div class="ticker-head2">
-										<div class="buttons buy"><a href="#">Xem Ngay</a></div>
-									</div>
-								</li>
-								<div style="clear: both;">
-								<li>
-									<div class="ticker-head1">
-										<h3><strong>Địa chỉ liên hệ</strong> trụ sở chính</h3><p>Tòa nhà chọc trời 2 tầng - 1000 Minh Khai - HBT - Hà Nội</p>
-									</div>
-									<div class="ticker-head2">
-										<div class="buttons buy"><a href="#">Đi ngay</a></div>
-									</div>
-								</li>
-								<div style="clear: both;">
-								<li>
-									<div class="ticker-head1">
-										<h3><strong>Địa chỉ liên hệ?</strong> hãy gửi mail cho Bít Tuốt:)</h3><p>Hãy liên hệ với tôi qua gmail: Seo.vnpro@gmail.com</p></div>
-									<div class="ticker-head2">
-										<div class="buttons buy"><a href="#">Gửi luôn</a></div>
-									</div>
-								</li>
-								<div style="clear: both;">
-								</div></div></div></div></div>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clear"></div>
-			<span class="widget-item-control">
-				<span class="item-control blog-admin">
-					<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML22&amp;action=editWidget&amp;sectionId=featurehomer1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML22&quot;));" target="configHTML22" title="Chỉnh sửa">
-						<img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-					</a>
-				</span>
-			</span>
-			<div class="clear"></div>
-		</div>
-	</div>
-	<!-- Ticker [end] -->
-	<!-- Featured Home Posts [start] -->
-	<div id="featuredhome">
-		<div id="featuredhome-wrap">
-			<div class="featurehomer section" id="featurehomer">
-				<div class="widget HTML" id="HTML2">
-					<h2 class="title">Featured Post (TOP)</h2>
-					<div class="widget-content">
-						<ul class="label_with_thumbs">
-							<li class="clearfix">
-								<a class="picturelabela" target="_top" href="../Default.aspx"><img class="label_thumb" src="../Images/NewInterface/1384900786.png"></a>
-								<strong><h2><a class="titlelabel" target="_top" href="../Default.aspx">Áo Sơ Mi</a></h2></strong>
-								<div class="contento">
-									Áo sơ mi công sở 2014. Áo đẹp thời trang! ...<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
-									<a class="url" target="_top" href="../Default.aspx">Chi Tiết »</a>
-								</div>
-							</li>
-							<li class="clearfix">
-								<a class="picturelabela" target="_top" href="../Default.aspx"><img class="label_thumb" src="../Images/NewInterface/vay.png"></a>
-								<strong><h2><a class="titlelabel" target="_top" href="../Default.aspx">Váy Công Sở</a></h2></strong>
-								<div class="contento">
-									Các mẫu váy tự thiết kế, váy công sở đẹp 2014. Trẻ trung, thanh lịch, kín đáo! ...<br />&nbsp;<br />&nbsp;<br />
-									<a class="url" target="_top" href="../Default.aspx">Chi Tiết »</a>
-								</div>
-							</li>
-							<li class="clearfix">
-								<a class="picturelabela" target="_top" href="#"><img class="label_thumb" src="../Images/NewInterface/quan.png"></a>
-								<strong><h2><a class="titlelabel" target="_top" href="../Default.aspx">Váy Dạo Phố</a></h2></strong>
-								<div class="contento">
-									Váy xòe dạo phố mùa hè đẹp dành cho các quý cô công sở. Vừa diện đi chơi lại phù hợp với văn phòng công sở!  ...<br />&nbsp;<br />
-									<a class="url" target="_top" href="../Default.aspx">Chi tiết »</a>
-								</div>
-							</li>
-							<li class="clearfix">
-								<a class="picturelabela" target="_top" href="../Default.aspx"><img class="label_thumb" src="../Images/NewInterface/giay.png"></a>
-								<strong><h2><a class="titlelabel" target="_top" href="../Default.aspx">Chân Váy</a></h2></strong>
-								<div class="contento">
-									Chân váy công sở đẹp hè 2014. Dáng đơn giản, thanh lịch, kín đáo!...<br />&nbsp;<br />&nbsp;<br />
-									<a class="url" target="_top" href="../Default.aspx">Chi tiết»</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-					<span class="widget-item-control">
-						<span class="item-control blog-admin">
-							<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML2&amp;action=editWidget&amp;sectionId=featurehomer" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML2&quot;));" target="configHTML2" title="Chỉnh sửa">
-								<img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-							</a>
-						</span>
-					</span>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Featured Home Posts [end] -->
-	<!-- Main Body [start] -->
-	<div id="body-wrapper">
+	    <div id="main-head">
+            <uc1:MenuUC ID="MenuUC1" runat="server" />
+	    </div>
+	    <!-- Header [end] -->
+	    <div style="clear: both;"></div>
+	    <!-- Slidr[start] -->
+	    <div id="slides-section">
+		    <div style="overflow: hidden; display: block;" id="slides">
+			    <div style="overflow: hidden; z-index: 1; position: relative; width: 1349px; height: 502.287px;" class="slidesjs-container">
+				    <div style="position: relative; z-index: 1; left: 0px; width: 1349px; height: 502.287px;" class="slidesjs-control">
+					    <img slidesjs-index="0" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 10;" class="slidesjs-slide" alt="tydyShop" src="../App_Themes/Images/Home_banner.jpg">
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	    <!-- Slidr[end] -->
+	    <!-- Ticker [start] -->
+	    <div class="featurehomer section" id="featurehomer1">
+		    <div class="widget HTML" id="HTML22">
+			    <div class="widget-content">
+				    <div class="featureticker-wrap">
+					    <div id="featuresticker">
+						    <div id="ticker">
+							    <ul class="ticker-list">
+								    <li>
+									    <div class="ticker-head1">
+										    <h3><strong>tydyShop !</strong> Thiên đường của thời trang</h3><p>Nơi cung cấp các sản phẩm thời trang <b style="color: teal;">Made in Việt Nam</b> chất lượng, mẫu mã được cập nhật liên tục, giá bán lẻ luôn ưu đãi, giá bán buôn luôn cạnh tranh.</p>
+									    </div>
+									    <div class="ticker-head2">
+										    <div class="buttons buy"><a href="#">Xem Ngay</a></div>
+									    </div>
+								    </li>
+								    <div style="clear: both;">
+								    <li>
+									    <div class="ticker-head1">
+										    <h3><strong>Uy tín - Chất Lượng</strong> đó là điêu tôi đảm bảo</h3><p>Chúng tôi luôn đặt chữ tín lên hàng đầu và sản phẩn của chúng tôi là chất lượng nhất</p>
+									    </div>
+									    <div class="ticker-head2">
+										    <div class="buttons buy"><a href="#">Xem Ngay</a></div>
+									    </div>
+								    </li>
+								    <div style="clear: both;">
+								    <li>
+									    <div class="ticker-head1">
+										    <h3><strong>Giá rẻ nhất?</strong> điều chúng tôi cam đoan</h3><p>Với những mặt hàng chất lượng chúng tôi cũng cam đoan rằng giá các sản phẩn của chúng tôi sẽ là rẻ nhất</p></div>
+									    <div class="ticker-head2">
+										    <div class="buttons buy"><a href="#">Xem Ngay</a></div>
+									    </div>
+								    </li>
+								    <div style="clear: both;">
+								    <li>
+									    <div class="ticker-head1">
+										    <h3><strong>Địa chỉ liên hệ</strong> trụ sở chính</h3><p>Tòa nhà chọc trời 2 tầng - 1000 Minh Khai - HBT - Hà Nội</p>
+									    </div>
+									    <div class="ticker-head2">
+										    <div class="buttons buy"><a href="#">Đi ngay</a></div>
+									    </div>
+								    </li>
+								    <div style="clear: both;">
+								    <li>
+									    <div class="ticker-head1">
+										    <h3><strong>Địa chỉ liên hệ?</strong> hãy gửi mail cho Bít Tuốt:)</h3><p>Hãy liên hệ với tôi qua gmail: Seo.vnpro@gmail.com</p></div>
+									    <div class="ticker-head2">
+										    <div class="buttons buy"><a href="#">Gửi luôn</a></div>
+									    </div>
+								    </li>
+								    <div style="clear: both;">
+								    </div></div></div></div></div>
+							    </ul>
+						    </div>
+					    </div>
+				    </div>
+			    </div>
+			    <div class="clear"></div>
+		    </div>
+	    </div>
+	    <!-- Ticker [end] -->
+	    <!-- Featured Home Posts [start] -->
+	    <div id="featuredhome">
+		    <div id="featuredhome-wrap">
+			    <div class="featurehomer section" id="featurehomer">
+				    <div class="widget HTML" id="HTML2">
+					    <h2 class="title">Featured Post (TOP)</h2>
+					    <div class="widget-content">
+						    <ul class="label_with_thumbs">
+							    <li class="clearfix">
+								    <a class="picturelabela" target="_top" href="../Default.aspx"><img class="label_thumb" src="../Images/Product/Ao_So_Mi.png" alt="Áo Sơ Mi" title="Áo Sơ Mi" /></a>
+								    <strong><h2><a class="titlelabel" target="_top" href="../Default.aspx">Áo Sơ Mi</a></h2></strong>
+								    <div class="contento">
+									    Áo sơ mi công sở 2014. Áo đẹp thời trang! ...<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
+									    <a class="url" target="_top" href="../Default.aspx">Chi Tiết »</a>
+								    </div>
+							    </li>
+							    <li class="clearfix">
+								    <a class="picturelabela" target="_top" href="../Default.aspx"><img class="label_thumb" src="../Images/Product/Vay_Cong_So.png" alt="Váy Công Sở" title="Váy Công Sở" /></a>
+								    <strong><h2><a class="titlelabel" target="_top" href="../Default.aspx">Váy Công Sở</a></h2></strong>
+								    <div class="contento">
+									    Các mẫu váy tự thiết kế, váy công sở đẹp 2014. Trẻ trung, thanh lịch, kín đáo! ...<br />&nbsp;<br />&nbsp;<br />
+									    <a class="url" target="_top" href="../Default.aspx">Chi Tiết »</a>
+								    </div>
+							    </li>
+							    <li class="clearfix">
+								    <a class="picturelabela" target="_top" href="#"><img class="label_thumb" src="../Images/Product/Vay_Dao_Pho.png" alt="Váy Dạo Phố" title="Váy Dạo Phố" /></a>
+								    <strong><h2><a class="titlelabel" target="_top" href="../Default.aspx">Váy Dạo Phố</a></h2></strong>
+								    <div class="contento">
+									    Váy xòe dạo phố mùa hè đẹp dành cho các quý cô công sở. Vừa diện đi chơi lại phù hợp với văn phòng công sở!  ...<br />&nbsp;<br />
+									    <a class="url" target="_top" href="../Default.aspx">Chi tiết »</a>
+								    </div>
+							    </li>
+							    <li class="clearfix">
+								    <a class="picturelabela" target="_top" href="../Default.aspx"><img class="label_thumb" src="../Images/Product/Chan_Vay.png" alt="Chân Váy" title="Chân Váy" /></a>
+								    <strong><h2><a class="titlelabel" target="_top" href="../Default.aspx">Chân Váy</a></h2></strong>
+								    <div class="contento">
+									    Chân váy công sở đẹp hè 2014. Dáng đơn giản, thanh lịch, kín đáo!...<br />&nbsp;<br />&nbsp;<br />
+									    <a class="url" target="_top" href="../Default.aspx">Chi tiết»</a>
+								    </div>
+							    </li>
+						    </ul>
+					    </div>
+					    <div class="clear"></div>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	    <!-- Featured Home Posts [end] -->
+	    <!-- Main Body [start] -->
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div id="body-wrapper">
 	    <div id="outer-wrapper">
 	        <div id="wrap2">
 	            <div id="content-wrapper">
-	                <!-- Main wapper [start] -->
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div id="main-wrapper">
-		<div id="home_navigation">
-			<h1 class="our_portfolio">tydyShop</h1>
-			<span class="line-home"></span>
-			<ul class="home_nav">
-                <li><a href="#">Xem Hàng</a></li>
-				<li><a href="#">Lựa Chọn Hàng</a></li>
-				<li><a href="#">Đặt Hàng</a></li>
-				<li><a href="#">Giao Hàng</a></li>
-				<li class="al"><a href="#">Thanh Toán</a></li>
-			</ul>
-		</div>
-		<div class="main section" id="main">
-			<div class="widget Blog" id="Blog1">
-				<div class="blog-posts hfeed">
-				<!-- google_ad_section_start(name=default) -->
-					<div class="date-outer">
-						<div class="date-posts">
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="5705322088157809118"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk/2013/11/giay-ep-7.html"><img src="../Images/NewInterface/simg_9154_thumb.jpg" class="postthumb" alt="Giày Đẹp 7"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk/2013/11/giay-ep-7.html"><span class="border">Giày Đẹp 7</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="9033113351030726402"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk/2013/11/vay-ep-6.html"><img src="../Images/NewInterface/simg_0188_thumb.jpg" class="postthumb" alt="Váy Đẹp 6"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk/2013/11/vay-ep-6.html"><span class="border">Váy Đẹp 6</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="9166836869562558608"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-1_26.html"><img src="../Images/NewInterface/simg_9023_thumb.jpg" class="postthumb" alt="Giày Đẹp 1"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-1_26.html"><span class="border">Giày Đẹp 1</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="530138046961333209"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-5.html"><img src="../Images/NewInterface/simg_0172_thumb.jpg" class="postthumb" alt="Váy Đẹp 5"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-5.html"><span class="border">Váy Đẹp 5</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="8572251406469636378"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-4.html"><img src="../Images/NewInterface/simg_9085_thumb.jpg" class="postthumb" alt="Giày Đẹp 4"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-4.html"><span class="border">Giày Đẹp 4</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="4752288051253889259"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-3.html"><img src="../Images/NewInterface/img_3834_thumb.jpg" class="postthumb" alt="Váy Đẹp 3"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-3.html"><span class="border">Váy Đẹp 3</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="1106052274658721219"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-2.html"><img src="../Images/NewInterface/img_3707_thumb.jpg" class="postthumb" alt="Váy Đẹp 2"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-2.html"><span class="border">Váy Đẹp 2</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="8858110963512416028"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-1.html"><img src="../Images/NewInterface/img_3803_thumb.jpg" class="postthumb" alt="Váy Đẹp 1"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-1.html"><span class="border">Váy Đẹp 1</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="post-outer">
-								<div class="wrapfullpost">
-									<div class="post hentry">
-										<a name="6796091944239114509"></a>
-										<div class="entrybody">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-1.html"><img src="../Images/NewInterface/simg_9035_thumb.jpg" class="postthumb" alt="Giày Đep 1"></a>
-										</div>
-										<h2 class="post-title entry-title">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-1.html"><span class="border">Giày Đep 1</span></a>
-										</h2>
-										<div class="post-header-line-1"></div>
-										<div class="post-body entry-content"><div style="clear: both;"></div></div>
-										<div class="post-footer">
-											<div class="post-footer-line post-footer-line-"></div>
-											<div class="post-footer-line post-footer-line-2"></div>
-											<div class="post-footer-line post-footer-line-3"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- google_ad_section_end -->
-				</div>
-				<div class="blog-pager" id="blog-pager">
-					<div class="showpageArea">
-						<span style="color: rgb(0, 0, 0);" class="showpageOf"> Pages (2)</span>
-						<span class="showpagePoint">1</span>
-						<span class="showpageNum"><a href="http://tydyShop.tk//search?updated-max=2013-11-26T00%3A15%3A00-08%3A00&amp;max-results=6">2</a></span>
-						<span class="showpage"><a href="http://tydyShop.tk//search?updated-max=2013-11-26T00%3A15%3A00-08%3A00&amp;max-results=6">Next</a></span>
-					</div>
-				</div>
-				<div class="clear"></div>
-				<div class="blog-feeds">
-					<div class="feed-links">Đăng ký:
-						<a class="feed-link" href="http://tydyShop.tk//feeds/posts/default" target="_top" type="application/atom+xml">Bài đăng (Atom)</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	                <!-- Main wapper [start] -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div id="main-wrapper">
+		            <div id="home_navigation">
+			            <h1 class="our_portfolio">tydyShop</h1>
+			            <span class="line-home"></span>
+			            <ul class="home_nav">
+                            <li><a href="#">Xem Hàng</a></li>
+				            <li><a href="#">Lựa Chọn Hàng</a></li>
+				            <li><a href="#">Đặt Hàng</a></li>
+				            <li><a href="#">Giao Hàng</a></li>
+				            <li class="al"><a href="#">Thanh Toán</a></li>
+			            </ul>
+		            </div>
+		            <div class="main section" id="main">
+			            <uc2:ShowAllProductUC ID="ShowAllProductUC1" runat="server" />
+		            </div>
 	                <!-- Main wapper [end] -->
-	                <!-- Sidebar [start] -->
-	                <div id="rsidebar-wrapper">
-		                <!-- Tab Widget [start] -->
-		                <div class="tabviewsection">
-			                                                                                <ul class="tabs-widget tabs-widget-widget-themater_tabs-1432447472-id">
-				<li class="about_tab"><a class="tabs-widget-current" href="#widget-themater_tabs-1432447472-id1">About</a></li>
-				<li class="tags_tab"><a href="#widget-themater_tabs-1432447472-id2">Tags</a></li>
-				<li class="laster"><a href="#widget-themater_tabs-1432447472-id3">Popular</a></li>
-			</ul>
-			                <!-- Tab Widget 1 -->
-			                                                                                                                                                                                                                                                                                                                                <div style="display: block;" class="tabs-widget-content tabs-widget-content-widget-themater_tabs-1432447472-id" id="widget-themater_tabs-1432447472-id1">
-				<div class="sidebar section" id="sidebartab1">
-					<div class="widget HTML" id="HTML4">
-						<h2 class="title">ADS</h2>
-						<div class="widget-content">
-							<!-- bittuot_main_Blog1_300x250_as -->
-							<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-5007377880654163" data-ad-slot="3587408732"><ins style="display: inline-table; border: medium none; height: 250px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 300px; background-color: transparent;"><ins id="aswift_0_anchor" style="display: block; border: medium none; height: 250px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 300px; background-color: transparent;"><iframe src="index_1.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" id="aswift_0" name="aswift_0" style="left: 0px; position: absolute; top: 0px;" frameborder="0" height="250" scrolling="no" width="300"></iframe></ins></ins></ins>
-						</div>
-						<div class="clear"></div>
-						<span class="widget-item-control">
-							<span class="item-control blog-admin">
-								<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML4&amp;action=editWidget&amp;sectionId=sidebartab1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML4&quot;));" target="configHTML4" title="Chỉnh sửa">
-									<img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-								</a>
-							</span>
-						</span>
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-			                <!-- Tab Widget 2 -->
-			                                                                                                                                                                                                                                                                                                                                                                                                                <div style="display: none;" class="tabs-widget-content tabs-widget-content-widget-themater_tabs-1432447472-id" id="widget-themater_tabs-1432447472-id2">
-				<div class="sidebar section" id="sidebartab2">
-					<div class="widget Label" id="Label11">
-						<h2>Labels</h2>
-						<div class="widget-content list-label-widget-content">
-							<ul>
-								<li><a dir="ltr" href="http://tydyShop.tk//search/label/Gi%C3%A0y?&amp;max-results=9">Giày</a></li>
-								<li><a dir="ltr" href="http://tydyShop.tk//search/label/Ph%E1%BB%A5%20Ki%E1%BB%87n?&amp;max-results=9">Phụ Kiện</a></li>
-								<li><a dir="ltr" href="http://tydyShop.tk//search/label/Qu%E1%BA%A7n?&amp;max-results=9">Quần</a></li>
-								<li><a dir="ltr" href="http://tydyShop.tk//search/label/V%C3%A1y?&amp;max-results=9">Váy</a></li>
-								<li><a dir="ltr" href="http://tydyShop.tk//search/label/%C3%81o?&amp;max-results=9">Áo</a></li>
-							</ul>
-							<div class="clear"></div>
-							<span class="widget-item-control">
-								<span class="item-control blog-admin">
-									<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=Label&amp;widgetId=Label11&amp;action=editWidget&amp;sectionId=sidebartab2" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Label11&quot;));" target="configLabel11" title="Chỉnh sửa">
-										<img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-									</a>
-								</span>
-							</span>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div style="display: none;" class="tabs-widget-content tabs-widget-content-widget-themater_tabs-1432447472-id" id="widget-themater_tabs-1432447472-id3">
-				<!-- Tab Widget 3 -->
-				<div class="sidebar section" id="sidebartab3">
-					<div class="widget PopularPosts" id="PopularPosts2">
-						<h2>Popular Posts</h2>
-						<div class="widget-content popular-posts">
-							<ul>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-6.html" target="_top"><img alt="" src="../Images/NewInterface/simg_0188_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-6.html">Váy Đẹp 6</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-7.html" target="_top"><img alt="" src="../Images/NewInterface/simg_9154_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-7.html">Giày Đẹp 7</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-5.html" target="_top"><img alt="" src="../Images/NewInterface/simg_0172_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-5.html">Váy Đẹp 5</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-1.html" target="_top"><img alt="" src="../Images/NewInterface/img_3803_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk//2013/11/vay-ep-1.html">Váy Đẹp 1</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-4.html" target="_top"><img alt="" src="../Images/NewInterface/simg_9085_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk//2013/11/giay-ep-4.html">Giày Đẹp 4</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk/2013/11/vay-ep-2.html" target="_top"><img alt="" src="../Images/NewInterface/img_3707_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk/2013/11/vay-ep-2.html">Váy Đẹp 2</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk/2013/11/vay-ep-3.html" target="_top"><img alt="" src="../Images/NewInterface/img_3834_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk/2013/11/vay-ep-3.html">Váy Đẹp 3</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk/2013/11/giay-ep-1_26.html" target="_top"><img alt="" src="../Images/NewInterface/simg_9023_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title"><a href="http://tydyShop.tk/2013/11/giay-ep-1_26.html">Giày Đẹp 1</a></div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk/2013/11/giay-ep-1.html" target="_top"><img alt="" src="../Images/NewInterface/simg_9035_thumb_001.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk/2013/11/giay-ep-1.html">Giày Đep 1</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-								<li>
-									<div class="item-content">
-										<div class="item-thumbnail">
-											<a href="http://tydyShop.tk/2013/11/anh-san-pham.html" target="_top"><img alt="" src="../Images/NewInterface/img_3707_thumb_002.jpg" border="0" height="72" width="72"></a>
-										</div>
-										<div class="item-title">
-											<a href="http://tydyShop.tk/2013/11/anh-san-pham.html">Ảnh sản phẩm</a>
-										</div>
-										<div class="item-snippet"></div>
-									</div>
-									<div style="clear: both;"></div>
-								</li>
-							</ul>
-							<div class="clear"></div>
-							<span class="widget-item-control">
-								<span class="item-control blog-admin">
-									<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=PopularPosts&amp;widgetId=PopularPosts2&amp;action=editWidget&amp;sectionId=sidebartab3" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;PopularPosts2&quot;));" target="configPopularPosts2" title="Chỉnh sửa">
-										<img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-									</a>
-								</span>
-							</span>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		                </div>
-		                <!-- Tab Widget [endt] -->
-		                <div style="clear: both;"></div>
-		                                                                                                                                                                                                                                                                                                <div class="sidebar section" id="sidebarright">
-			<div class="widget HTML" id="HTML8">
-				<h2 class="title">Đối Tác Shop</h2>
-				<div class="widget-content">
-					<!-- bittemplates_sidebarright_AdSense1_300x600_as -->
-					<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: inline-block; width: 300px; height: 600px;" data-ad-client="ca-pub-5007377880654163" data-ad-slot="3579552338"><ins style="display: inline-table; border: medium none; height: 600px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 300px; background-color: transparent;"><ins id="aswift_1_anchor" style="display: block; border: medium none; height: 600px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 300px; background-color: transparent;"><iframe src="index_6.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" id="aswift_1" name="aswift_1" style="left: 0px; position: absolute; top: 0px;" frameborder="0" height="600" scrolling="no" width="300"></iframe></ins></ins></ins>
-				</div>
-				<div class="clear"></div>
-				<span class="widget-item-control">
-					<span class="item-control blog-admin">
-						<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML8&amp;action=editWidget&amp;sectionId=sidebarright" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML8&quot;));" target="configHTML8" title="Chỉnh sửa">
-							<img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-						</a>
-					</span>
-				</span>
-				<div class="clear"></div>
-			</div>
-		</div>
-	                </div>
-	                <!-- Sidebar [end] -->
-	                <!-- spacer for skins that want sidebar and main to be the same height-->
-	                <div class="clear">&nbsp;</div>
 	            </div>
 	            <!-- end content-wrapper -->
-	        </div>
-        </div>
-	</div>
-	<!-- end outer-wrapper -->
-	<!-- Main Body [end] -->
-	<div style="clear: both;"></div>
-    <!-- Below Wrap [start] -->
-    <!--<div id="bottom_wrapper">
-        <div id="below">
-                                                                                                                            <div class="bottom section" id="bottom">
-        <div class="widget HTML" id="HTML3">
-            <h2 class="title">tydyShop</h2>
-        <div class="widget-content"></div>
-        <div class="clear"></div>
-        <span class="widget-item-control">
-            <span class="item-control blog-admin">
-                <a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML3&amp;action=editWidget&amp;sectionId=bottom" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML3&quot;));" target="configHTML3" title="Chỉnh sửa">
-                    <img alt="" src="icon18_wrench_allbkg.png" height="18" width="18">
-                </a>
-            </span>
-        </span>
-        <div class="clear"></div>
-        </div>
-    </div>
-                                                                                                                    <div class="bottom2 section" id="bottom2"><div class="widget HTML" id="HTML7">
-        <h2 class="title">Seo.vnpro@gmail.com</h2>
-        <div class="widget-content"></div>
-        <div class="clear"></div>
-        <span class="widget-item-control">
-            <span class="item-control blog-admin">
-                <a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML7&amp;action=editWidget&amp;sectionId=bottom2" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML7&quot;));" target="configHTML7" title="Chỉnh sửa">
-                    <img alt="" src="icon18_wrench_allbkg.png" height="18" width="18">
-                </a>
-            </span>
-        </span>
-        <div class="clear"></div>
-        </div>
-    </div>
-        <!-- slider -->
-                                                                                                                                                                            <div class="slider-container">
-       <!-- <div class="bx-wrapper" style="width: 840px; position: relative;">
-            <div class="bx-window" style="position: relative; overflow: hidden; width: 840px;">
-                <ul style="width: 999999px; position: relative; left: -322.09px;" id="slider">
-                    <li style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="8.jpg"></a></li>
-                    <li class="pager" style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="1.jpg"></a></li>
-                    <li class="pager" style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="2.jpg"></a></li>
-                    <li class="pager" style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="3.jpg"></a></li>
-                    <li class="pager" style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="4.jpg"></a></li>
-                    <li class="pager" style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="5.jpg"></a></li>
-                    <li class="pager" style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="6.jpg"></a></li>
-                    <li class="pager" style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="7.jpg"></a></li>
-                    <li class="pager" style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="8.jpg"></a></li>
-                    <li style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="1.jpg"></a></li>
-                    <li style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="2.jpg"></a></li>
-                    <li style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="3.jpg"></a></li>
-                    <li style="width: 210px; float: left; list-style: none outside none;"><a href="#"><img src="4.jpg"></a></li>
-                </ul>
+	            </div>
             </div>
-        </div>
-    </div><!-- /slider -->
-       <!-- </div>
-    </div>-->
-    <!-- Below Wrap [end] -->
-    <!-- Newsletter Wrap [start] -->
-    <!--<div id="newsletter">
-        <div id="newsletter_wrapper">
-                                                                                                                                                                                                                                                                                                    <div class="feedburner_letter section" id="feedburner_sub">
-        <div class="widget FollowByEmail" id="FollowByEmail2">
-            <h2 class="title">Theo dõi qua mail</h2>
-                                                                                                                                                                    <div class="widget-content">
-        <div class="follow-by-email-inner">
-            <form action="http://feedburner.google.com/fb/a/mailverify" method="post" onsubmit="window.open(&quot;http://feedburner.google.com/fb/a/mailverify?uri=ShopBtTut&quot;, &quot;popupwindow&quot;, &quot;scrollbars=yes,width=550,height=520&quot;); return true" target="popupwindow">
-                <table width="100%">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <input value="" class="follow-by-email-address" name="email" placeholder="Email address..." type="text">
-                            </td>
-                            <td width="64px">
-                                <input class="follow-by-email-submit" value="Submit" type="submit">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <input name="uri" value="ShopBtTut" type="hidden">
-                <input name="loc" value="en_US" type="hidden">
-            </form>
-        </div>
-    </div>
-            <span class="item-control blog-admin">
-                <div class="clear"></div>
-                <span class="widget-item-control">
-                    <span class="item-control blog-admin">
-                        <a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=FollowByEmail&amp;widgetId=FollowByEmail2&amp;action=editWidget&amp;sectionId=feedburner_sub" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;FollowByEmail2&quot;));" target="configFollowByEmail2" title="Chỉnh sửa">
-                            <img alt="" src="icon18_wrench_allbkg.png" height="18" width="18">
-                        </a>
-                    </span>
-                </span>
-                <div class="clear"></div>
-            </span>
-        </div>
-    </div>
-                                                                                                                                            <div class="secound_letter section" id="secound_sub">
-        <div class="widget HTML" id="HTML1">
-            <h2 class="title">Tại sao lại chọn Bít Tuốt?</h2>
-            <div class="widget-content">
-                tydyShop - Shop thời trang uy tín nhất tại Việt Nam chuyên cung cấp các mặt hàng thời trang chất lượng nhất,hợp xu hướng nhất. Chúng tôi luôn luôn đặt chữ TÍN lên hàng đầu và đảm bảo mua hàng tại shop chúng tôi sẽ là rẻ nhất .
-            </div>
-            <div class="clear"></div>
-            <span class="widget-item-control">
-                <span class="item-control blog-admin">
-                    <a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML1&amp;action=editWidget&amp;sectionId=secound_sub" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML1&quot;));" target="configHTML1" title="Chỉnh sửa">
-                        <img alt="" src="icon18_wrench_allbkg.png" height="18" width="18">
-                    </a>
-                </span>
-            </span>
-            <div class="clear"></div>
-        </div>
-    </div>
-        </div>
-    </div>-->
-    <!-- Newsletter Wrap [end] -->
-    <!-- FOOTER Wrap [start] -->
-    <div id="footer-widgets-container">
-    <div class="clearfix" id="footer-widgets">
-        <div class="footer-widget-box">
-            <ul class="widget-container">
-                <li>
-                    <div class="footersec section" id="footersec1"><div class="widget HTML" id="HTML5">
-                        <h2 class="title">Chúng Tôi Cam Kết</h2>
-                        <div class="widget-content">
-                            <div style="border-bottom: 1px solid rgb(174, 174, 174); color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; margin: 0px; outline: medium none; padding: 10px;">
-                            <span class="title" style="display: block; font-size: 15px; font-weight: bold; line-height: 25px; outline: medium none; padding: 2px 0px;"><span class="spriteIcon ship" style="background-color: transparent; background-image: url('Images/Home_sprite.png'); background-position: -28px -28px; background-repeat: no-repeat no-repeat; float: left; height: 25px; outline: medium none; width: 30px;"></span>Giao hàng toàn quốc</span><br>
-                            <div style="font-size: 14px; margin-bottom: 2px; margin-left: 30px; margin-top: 2px; outline: medium none; padding: 0px;">
-                            Chúng tôi giao hàng đến 64 tỉnh thành.</div>
-                            </div>
-                            <div style="border-bottom: 1px solid rgb(174, 174, 174); color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; margin: 0px; outline: medium none; padding: 10px;">
-                            <span class="title" style="display: block; font-size: 15px; font-weight: bold; line-height: 25px; outline: medium none; padding: 2px 0px;"><span class="spriteIcon rC" style="background-color: transparent; background-image: url('Images/Home_sprite.png'); background-position: 0px -30px; background-repeat: no-repeat no-repeat; float: left; height: 25px; outline: medium none; width: 30px;"></span>Miễn phí vận chuyển nội thành</span><br>
-                            <div style="font-size: 14px; margin-bottom: 2px; margin-left: 30px; margin-top: 2px; outline: medium none; padding: 0px;">
-                            Chúng tôi hiện đang miễn phí vận chuyển cho khách mua hàng trong nội thành Hà Nội</div>
-                            </div>
-                            <div style="border-bottom: 1px solid rgb(174, 174, 174); color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; margin: 0px; outline: medium none; padding: 10px;">
-                            <span class="spriteIcon support" style="background-color: transparent; background-image: url('Images/Home_sprite.png'); background-position: -255px -110px; background-repeat: no-repeat no-repeat; color: rgb(116, 116, 116); display: inline-block; font-size: 14px; line-height: 1.6em; outline: medium none; padding-left: 30px;">Hotline hỗ trợ<br><b>0166 379 6917</b></span></div>
-                        </div>
-                    <div class="clear"></div>
-                    <span class="widget-item-control">
-                    <span class="item-control blog-admin">
-                    <a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML5&amp;action=editWidget&amp;sectionId=footersec1" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML5&quot;));" target="configHTML5" title="Chỉnh sửa">
-                    <img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-                    </a>
-                    </span>
-                    </span>
-                    <div class="clear"></div>
-                    </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-widget-box">
-            <ul class="widget-container">
-                <li>
-                                                                                                                                                                                                                                                                                                                            <div class="footersec section" id="footersec2">
-        <div class="widget HTML" id="HTML9">
-            <h2 class="title">Liên hệ</h2>
-            <div class="widget-content">
-                <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">tydyShop - Classy Laydy</span><br>
-                <br style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">
-                <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Địa chỉ: Đông Mỹ - Thanh Trì - Hà Nội</span><br>
-                <br style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">
-                <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Hỗ trợ kinh doanh:&nbsp;</span><span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; line-height: 18.1875px; outline: medium none;"><strong>0166 379 6917</strong></span><br>
-                <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Hỗ trợ kĩ thuật:&nbsp;</span><span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; line-height: 18.1875px; outline: medium none;"><strong>0167 527 9562</strong></span><br>
-                <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Email:&nbsp;</span><span style="font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;"><span style="color: teal;">hoaiduong92@gmail.com</span></span>
-            </div>
-            <div class="clear"></div>
-            <span class="widget-item-control">
-                <span class="item-control blog-admin">
-                    <a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML9&amp;action=editWidget&amp;sectionId=footersec2" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML9&quot;));" target="configHTML9" title="Chỉnh sửa">
-                        <img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-                    </a>
-                </span>
-            </span>
-            <div class="clear"></div>
-        </div>
-    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-widget-box footer-widget-box-last">
-            <ul class="widget-container">
-                <li>
-                    <div class="footersec section" id="footersec3">
-                        <div class="widget Label" id="Label1">
-                            <h2>Từ khóa xem nhiều</h2>                                                                                                                                                                                                       <div class="widget-content list-label-widget-content">
-        <ul>
-            <li><a dir="ltr" href="http://tydyShop.tk/search/label/V%C3%A1y?&amp;max-results=9">Váy</a></li>
-            <li><a dir="ltr" href="http://tydyShop.tk/search/label/%C3%81o?&amp;max-results=9">Áo</a></li>
-        </ul>
-        <div class="clear"></div>
-        <span class="widget-item-control">
-            <span class="item-control blog-admin">
-                <a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=Label&amp;widgetId=Label1&amp;action=editWidget&amp;sectionId=footersec3" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Label1&quot;));" target="configLabel1" title="Chỉnh sửa">
-                    <img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-                </a>
-            </span>
-        </span>
-        <div class="clear"></div>
-    </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    </div>
-    <!-- FOOTER Wrap [start] -->
-    <div style="clear: both;"></div>
-    <!-- Copyrights [start] -->
-    <div id="copyrights">
-        <div id="credits">
-            <div class="credts_left">
-                Copyright © 2014
-                <a href="http://tydyShop.tk/">tydyShop</a> | Thiết kế và chỉnh sửa bởi <a href="https://plus.google.com/u/0/109664385150832451485">ThangNM</a>
-            </div>
-            <div class="credts_right">
-                <span class="social_links">
-                    <li class="facebook"><a href="https://www.facebook.com/share2everyone">Facebook</a></li>
-                    <li class="twitter"><a href="https://twitter.com/thangnm">Twitter</a></li>
-                    <li class="google"><a href="https://plus.google.com/u/0/109664385150832451485">Google+</a></li>
-                    <li class="pinterest"><a href="#">Pinterest</a></li>
-                    <li class="vimeo"><a href="#">Vimeo</a></li>
-                    <li class="rss"><a href="#">RSS</a></li>
-                </span>
-            </div>
-        </div>
-    </div>
-    <!-- Copyrights [end] -->
-    <div style="clear: both;"></div>
+	    </div>
+	    <!-- Main Body [end] -->
+        <uc3:FooterUC ID="FooterUC1" runat="server" />
         <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
     </form>
 </body>
