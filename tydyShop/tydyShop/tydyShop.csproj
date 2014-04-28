@@ -74,6 +74,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessObject\AccountsDAO.cs" />
+    <Compile Include="DataAccessObject\ConnectionDAO.cs" />
+    <Compile Include="DataAccessObject\DataSet2Object.cs" />
+    <Compile Include="DataAccessObject\ProductsDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -81,6 +85,15 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EntityObject\AccountsEO.cs" />
+    <Compile Include="EntityObject\AdvertisementEO.cs" />
+    <Compile Include="EntityObject\AnswersEO.cs" />
+    <Compile Include="EntityObject\OrdersDetailsEO.cs" />
+    <Compile Include="EntityObject\OrdersEO.cs" />
+    <Compile Include="EntityObject\PayEO.cs" />
+    <Compile Include="EntityObject\ProductsEO.cs" />
+    <Compile Include="EntityObject\SupportsEO.cs" />
+    <Compile Include="EntityObject\WebsiteEO.cs" />
     <Compile Include="GroupProduct.aspx.cs">
       <DependentUpon>GroupProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,8 +164,6 @@
     <Folder Include="Admin\" />
     <Folder Include="App_Data\" />
     <Folder Include="Client\" />
-    <Folder Include="DataAccessObject\" />
-    <Folder Include="EntityObject\" />
     <Folder Include="Images\" />
     <Folder Include="Other\" />
     <Folder Include="Product\" />
