@@ -170,7 +170,7 @@ namespace DataAccessObject
                     output.Products_Image2 = (dr["Products_Image2"] == DBNull.Value) ? "" : Convert.ToString(dr["Products_Image2"]);
                     output.Products_Image3 = (dr["Products_Image3"] == DBNull.Value) ? "" : Convert.ToString(dr["Products_Image3"]);
                     output.Products_Video = (dr["Products_Video"] == DBNull.Value) ? "" : Convert.ToString(dr["Products_Video"]);
-                    output.Products_LastUpdate = (dr["Products_LastUpdate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["Products_LastUpdate"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
+                    //output.Products_LastUpdate = (dr["Products_LastUpdate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["Products_LastUpdate"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
                     output.Products_Visible = (dr["Products_Visible"] == DBNull.Value) ? false : Convert.ToBoolean(dr["Products_Visible"]);
                 }
                 return output;
