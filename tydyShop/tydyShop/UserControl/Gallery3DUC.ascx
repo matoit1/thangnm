@@ -8,7 +8,7 @@
 	$(function() {
 		$('#dg-container').gallery();
 	});
-</script/>
+</script>
 <div class="container">
 	<section id="dg-container" class="dg-container">
 		<div class="dg-wrapper">
