@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Trang quản trị tydyShop</title>
+    <meta name="google-site-verification" content="KNqZ3EHJ81Xtlhn1S9qfb1MXdkJnscs9Ft61DFpMj1s" />
+    <link rel="author" href="https://plus.google.com/109664385150832451485" />
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>

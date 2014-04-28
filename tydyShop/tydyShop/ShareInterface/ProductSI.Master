@@ -9,6 +9,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link href="../favicon.ico" rel="icon" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="../App_Themes/Home.css" media="all" />
+    <meta name="google-site-verification" content="KNqZ3EHJ81Xtlhn1S9qfb1MXdkJnscs9Ft61DFpMj1s" />
+    <link rel="author" href="https://plus.google.com/109664385150832451485" />
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
