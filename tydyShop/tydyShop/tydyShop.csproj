@@ -56,7 +56,6 @@
     <Content Include="App_Themes\Images\Gallery3D_frames.png" />
     <Content Include="App_Themes\ZoomImage.css" />
     <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
     <Content Include="GroupProduct.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -165,10 +164,7 @@
     <Folder Include="Admin\" />
     <Folder Include="App_Data\" />
     <Folder Include="Client\" />
-    <Folder Include="Images\" />
-    <Folder Include="Other\" />
     <Folder Include="Product\" />
-    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ShareInterface\AdminSI.Master" />
