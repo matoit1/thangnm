@@ -78,8 +78,8 @@
     <Folder Include="EntityObject\" />
     <Folder Include="Images\" />
     <Folder Include="Other\" />
-    <Folder Include="Shared_Libraries\" />
-    <Folder Include="Share_Interface\" />
+    <Folder Include="SharedLibraries\" />
+    <Folder Include="ShareInterface\" />
     <Folder Include="Upload\" />
     <Folder Include="UserControl\" />
   </ItemGroup>
