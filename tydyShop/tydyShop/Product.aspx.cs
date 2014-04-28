@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections;
+using DataAccessObject;
+using EntityObject;
+using SharedLibraries;
 
 namespace tydyShop
 {
