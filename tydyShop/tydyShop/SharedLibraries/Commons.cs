@@ -309,7 +309,7 @@ namespace SharedLibraries
 
         #region "Format"
         public static readonly string DateTime_Temp = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
-        public static readonly string DateTime_Format = "dd/mm/yyyy";
+        public static readonly string DateTime_Format = "dd/MM/yyyy";
         #endregion
 
         #region "tblCauHoi"

@@ -18,56 +18,14 @@
 	</div>
 	<!-- Header [end] -->
 	<div style="clear: both;"></div>
-	<!-- ADS 728x60 [start] -->
-	<div id="adwrap_top_wrap">
-		<div id="adwrap_top">
-			<div class="ads728 section" id="ads728">
-				<div class="widget HTML" id="HTML12">
-					<h2 class="title">AD (728x60)</h2>
-					<div class="widget-content"></div>
-					<div class="clear"></div>
-					<span class="widget-item-control">
-						<span class="item-control blog-admin">
-							<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=HTML&amp;widgetId=HTML12&amp;action=editWidget&amp;sectionId=ads728" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML12&quot;));" target="configHTML12" title="Chỉnh sửa">
-								<img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-							</a>
-						</span>
-					</span>
-					<div class="clear"></div>
-				</div>
-				<div class="widget Attribution" id="Attribution1">
-					<div class="widget-content" style="text-align: center;">Cung cấp bởi <a href="http://www.blogger.com/" target="_top">Blogger</a>.</div>
-					<div class="clear"></div>
-					<span class="widget-item-control">
-						<span class="item-control blog-admin">
-							<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=3434875057559991662&amp;widgetType=Attribution&amp;widgetId=Attribution1&amp;action=editWidget&amp;sectionId=ads728" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Attribution1&quot;));" target="configAttribution1" title="Chỉnh sửa">
-								<img alt="" src="../Images/NewInterface/icon18_wrench_allbkg.png" height="18" width="18">
-							</a>
-						</span>
-					</span>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- ADS 728x60 [end] -->
 	<!-- Slidr[start] -->
 	<div id="slides-section">
 		<div style="overflow: hidden; display: block;" id="slides">
 			<div style="overflow: hidden; z-index: 1; position: relative; width: 1349px; height: 502.287px;" class="slidesjs-container">
 				<div style="position: relative; z-index: 1; left: 0px; width: 1349px; height: 502.287px;" class="slidesjs-control">
-					<img slidesjs-index="0" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 10;" class="slidesjs-slide" alt="tydyShop" src="../Images/NewInterface/alb_1384929312_229.jpg">
-					<img slidesjs-index="1" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 0; display: none;" class="slidesjs-slide" alt="tydyShop" src="../Images/NewInterface/alb_1385480472_199.jpg">
-					<img slidesjs-index="2" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 0; display: none;" class="slidesjs-slide" alt="tydyShop" src="../Images/NewInterface/alb_1385218706_333.jpg">
+					<img slidesjs-index="0" style="position: absolute; top: 0px; left: 0px; width: 100%; z-index: 10;" class="slidesjs-slide" alt="tydyShop" src="../App_Themes/Images/Home_banner.jpg">
 				</div>
 			</div>
-			<a class="slidesjs-previous slidesjs-navigation" href="#">PREVIOUS</a>
-			<a class="slidesjs-next slidesjs-navigation" href="#">NEXT</a>
-			<ul class="slidesjs-pagination">
-				<li class="slidesjs-pagination-item"><a class="active" data-slidesjs-item="0" href="#">1</a></li>
-				<li class="slidesjs-pagination-item"><a data-slidesjs-item="1" href="#">2</a></li>
-				<li class="slidesjs-pagination-item"><a data-slidesjs-item="2" href="#">3</a></li>
-			</ul>
 		</div>
 	</div>
 	<!-- Slidr[end] -->
@@ -777,17 +735,17 @@
                         <h2 class="title">Chúng Tôi Cam Kết</h2>
                         <div class="widget-content">
                             <div style="border-bottom: 1px solid rgb(174, 174, 174); color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; margin: 0px; outline: medium none; padding: 10px;">
-                            <span class="title" style="display: block; font-size: 15px; font-weight: bold; line-height: 25px; outline: medium none; padding: 2px 0px;"><span class="spriteIcon ship" style="background-color: transparent; background-image: url('../Images/NewInterface/spriteicon.png'); background-position: -28px -28px; background-repeat: no-repeat no-repeat; float: left; height: 25px; outline: medium none; width: 30px;"></span>Giao hàng toàn quốc</span><br>
+                            <span class="title" style="display: block; font-size: 15px; font-weight: bold; line-height: 25px; outline: medium none; padding: 2px 0px;"><span class="spriteIcon ship" style="background-color: transparent; background-image: url('Images/Home_sprite.png'); background-position: -28px -28px; background-repeat: no-repeat no-repeat; float: left; height: 25px; outline: medium none; width: 30px;"></span>Giao hàng toàn quốc</span><br>
                             <div style="font-size: 14px; margin-bottom: 2px; margin-left: 30px; margin-top: 2px; outline: medium none; padding: 0px;">
                             Chúng tôi giao hàng đến 64 tỉnh thành.</div>
                             </div>
                             <div style="border-bottom: 1px solid rgb(174, 174, 174); color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; margin: 0px; outline: medium none; padding: 10px;">
-                            <span class="title" style="display: block; font-size: 15px; font-weight: bold; line-height: 25px; outline: medium none; padding: 2px 0px;"><span class="spriteIcon rC" style="background-color: transparent; background-image: url('../Images/NewInterface/spriteicon.png'); background-position: 0px -30px; background-repeat: no-repeat no-repeat; float: left; height: 25px; outline: medium none; width: 30px;"></span>Miễn phí vận chuyển nội thành</span><br>
+                            <span class="title" style="display: block; font-size: 15px; font-weight: bold; line-height: 25px; outline: medium none; padding: 2px 0px;"><span class="spriteIcon rC" style="background-color: transparent; background-image: url('Images/Home_sprite.png'); background-position: 0px -30px; background-repeat: no-repeat no-repeat; float: left; height: 25px; outline: medium none; width: 30px;"></span>Miễn phí vận chuyển nội thành</span><br>
                             <div style="font-size: 14px; margin-bottom: 2px; margin-left: 30px; margin-top: 2px; outline: medium none; padding: 0px;">
                             Chúng tôi hiện đang miễn phí vận chuyển cho khách mua hàng trong nội thành Hà Nội</div>
                             </div>
                             <div style="border-bottom: 1px solid rgb(174, 174, 174); color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; margin: 0px; outline: medium none; padding: 10px;">
-                            <span class="spriteIcon support" style="background-color: transparent; background-image: url('../Images/NewInterface/spriteicon.png'); background-position: -255px -110px; background-repeat: no-repeat no-repeat; color: rgb(116, 116, 116); display: inline-block; font-size: 14px; line-height: 1.6em; outline: medium none; padding-left: 30px;">Hotline hỗ trợ<br><b>0166 379 6917</b></span></div>
+                            <span class="spriteIcon support" style="background-color: transparent; background-image: url('Images/Home_sprite.png'); background-position: -255px -110px; background-repeat: no-repeat no-repeat; color: rgb(116, 116, 116); display: inline-block; font-size: 14px; line-height: 1.6em; outline: medium none; padding-left: 30px;">Hotline hỗ trợ<br><b>0166 379 6917</b></span></div>
                         </div>
                     <div class="clear"></div>
                     <span class="widget-item-control">
