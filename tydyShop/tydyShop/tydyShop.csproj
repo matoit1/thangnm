@@ -78,11 +78,13 @@
     <Content Include="Label.aspx" />
     <Content Include="Other\Pager.aspx" />
     <Content Include="Product.aspx" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\Gallery3D_1.js" />
     <Content Include="Scripts\Gallery3D_2.js" />
+    <Content Include="sitemap.xml" />
     <Content Include="UserControl\FooterUC.ascx" />
     <Content Include="UserControl\Gallery3DUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
