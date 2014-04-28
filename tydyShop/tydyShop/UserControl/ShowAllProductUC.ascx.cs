@@ -13,10 +13,19 @@ namespace tydyShop.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
-            ds = ProductsDAO.getDataSetProducts(0);
-            rptLoadAllProduct.DataSource = ds;
-            rptLoadAllProduct.DataBind();
+            try
+            {
+                if (!IsPostBack)
+                {
+                    DataSet ds = new DataSet();
+                    ds = ProductsDAO.getDataSetProducts(0);
+                    rptLoadAllProduct.DataSource = ds;
+                    rptLoadAllProduct.DataBind();
+                }
+            }
+            catch
+            {
+            }
         }
     }
 }
