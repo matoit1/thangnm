@@ -17,10 +17,10 @@ namespace tydyShop
             {
                 if (!IsPostBack)
                 {
-                    if (Request.QueryString["Products_Group"] != null)
+                    if (Request.QueryString["lGroup"] != null)
                     {
                         ProductEO _ProductEO = new ProductEO();
-                        _ProductEO.lGroup = Convert.ToInt64(Request.QueryString["Products_Group"]);
+                        _ProductEO.lGroup = Convert.ToInt64(Request.QueryString["lGroup"]);
                         _ProductEO.bStatus = true;
                         Gallery3DUC1.BindData(ProductDAO.Product_SelectList_All_Product_In_Group(_ProductEO));
                     }

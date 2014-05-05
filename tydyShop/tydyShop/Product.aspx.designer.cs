@@ -13,76 +13,76 @@ namespace tydyShop {
     public partial class Product {
         
         /// <summary>
-        /// lblProducts_Name control.
+        /// lblsName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProducts_Name;
+        protected global::System.Web.UI.WebControls.Label lblsName;
         
         /// <summary>
-        /// lblProducts_LastUpdate control.
+        /// lbltLastUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProducts_LastUpdate;
+        protected global::System.Web.UI.WebControls.Label lbltLastUpdate;
         
         /// <summary>
-        /// imgProducts_Image1 control.
+        /// imgsLinkImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgProducts_Image1;
+        protected global::System.Web.UI.WebControls.Image imgsLinkImage;
         
         /// <summary>
-        /// lblProducts_Name1 control.
+        /// lblsName1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProducts_Name1;
+        protected global::System.Web.UI.WebControls.Label lblsName1;
         
         /// <summary>
-        /// lblProducts_Description control.
+        /// lblsDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProducts_Description;
+        protected global::System.Web.UI.WebControls.Label lblsDescription;
         
         /// <summary>
-        /// lblProducts_Info control.
+        /// lblsInfomation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProducts_Info;
+        protected global::System.Web.UI.WebControls.Label lblsInfomation;
         
         /// <summary>
-        /// lblProducts_Origin control.
+        /// lblsOrigin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProducts_Origin;
+        protected global::System.Web.UI.WebControls.Label lblsOrigin;
         
         /// <summary>
-        /// lblProducts_Price control.
+        /// lbllPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProducts_Price;
+        protected global::System.Web.UI.WebControls.Label lbllPrice;
         
         /// <summary>
         /// btnBuy control.

@@ -41,8 +41,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     <div class="phanchinh">
     <div class="thongtin">
-        <h1><asp:Label ID="lblProducts_Name" runat="server"></asp:Label></h1>
-        <h4><i><asp:Label ID="lblProducts_LastUpdate" runat="server"></asp:Label></i></h4>
+        <h1><asp:Label ID="lblsName" runat="server"></asp:Label></h1>
+        <h4><i><asp:Label ID="lbltLastUpdate" runat="server"></asp:Label></i></h4>
         <hr />
     </div>
     <div class="chiase">
@@ -52,31 +52,30 @@
         <div class="hinhanhmota">
             <div class="magnify">
                 <div class="large" style="background:url('<%=Url_Image%>') no-repeat;"></div><!-- đây là kính lúp-ảnh zoom-->
-                <asp:Image ID="imgProducts_Image1" runat="server" class="small"/>
-                <%--<img class="small" src="http://thecodeplayer.com/uploads/media/iphone.jpg" width="200" alt="tydyShop" />--%><!-- đây là ảnh sản phẩm -->
+                <asp:Image ID="imgsLinkImage" runat="server" class="small"/><!-- đây là ảnh sản phẩm -->
             </div>
         </div>
         <div class="thongtinsanpham">
             <table>
                 <tr >
                     <td>Tên sản phẩm: </td>
-                    <td><asp:Label ID="lblProducts_Name1" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lblsName1" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td>Mô tả: </td>
-                    <td><asp:Label ID="lblProducts_Description" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lblsDescription" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td>Thông tin: </td>
-                    <td><asp:Label ID="lblProducts_Info" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lblsInfomation" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td>Xuất xứ: </td>
-                    <td><asp:Label ID="lblProducts_Origin" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lblsOrigin" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td>Giá bán: </td>
-                    <td><asp:Label ID="lblProducts_Price" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lbllPrice" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td></td>

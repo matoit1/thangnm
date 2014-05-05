@@ -27,15 +27,15 @@ namespace tydyShop
             {
                 if (!IsPostBack)
                 {
-                    if (Request.QueryString["Products_ID"] != null)
+                    if (Request.QueryString["PK_lProductID"] != null)
                     {
-                        BindData(Convert.ToInt64(Request.QueryString["Products_ID"]));
+                        BindData(Convert.ToInt64(Request.QueryString["PK_lProductID"]));
                     }
                 }
             }
             catch (Exception ex)
             {
-                lblProducts_Name.Text = ex.Message;
+                lblsName.Text = ex.Message;
             }
         }
 
@@ -46,21 +46,21 @@ namespace tydyShop
                 ProductEO _ProductsEO = new ProductEO();
                 _ProductsEO.PK_lProductID = input;
                 _ProductsEO = ProductDAO.Product_SelectItem(_ProductsEO);
-                lblProducts_Name.Text = _ProductsEO.sName;
-                lblProducts_LastUpdate.Text = _ProductsEO.tLastUpdate.ToString(Messages.DateTime_Format);
-                lblProducts_Name1.Text = _ProductsEO.sName;
-                lblProducts_Description.Text = _ProductsEO.sDescription;
-                lblProducts_Info.Text = _ProductsEO.sInfomation;
-                lblProducts_Origin.Text = _ProductsEO.sOrigin;
-                lblProducts_Price.Text = _ProductsEO.lPrice.ToString();
-                imgProducts_Image1.ImageUrl = _ProductsEO.sLinkImage;
-                imgProducts_Image1.AlternateText = _ProductsEO.sName;
+                lblsName.Text = _ProductsEO.sName;
+                lblsName1.Text = _ProductsEO.sName;
+                lbltLastUpdate.Text = _ProductsEO.tLastUpdate.ToString(Messages.DateTime_Format);
+                lblsDescription.Text = _ProductsEO.sDescription;
+                lblsInfomation.Text = _ProductsEO.sInfomation;
+                lblsOrigin.Text = _ProductsEO.sOrigin;
+                lbllPrice.Text = _ProductsEO.lPrice.ToString();
+                imgsLinkImage.ImageUrl = _ProductsEO.sLinkImage;
+                imgsLinkImage.AlternateText = _ProductsEO.sName;
                 Url_Image = _ProductsEO.sLinkImage;
                 LoadDataListBox();
             }
             catch (Exception ex)
             {
-                lblProducts_Name.Text = ex.Message;
+                lblsName.Text = ex.Message;
             }
         }
 
