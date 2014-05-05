@@ -52,6 +52,7 @@
     <Content Include="App_Themes\Gallery3D_2.css" />
     <Content Include="App_Themes\Home.css" />
     <Content Include="App_Themes\Gallery3D_1.css" />
+    <Content Include="App_Themes\Images\Popup_CloseBox.png" />
     <Content Include="App_Themes\Images\Home_facebook-hover.png" />
     <Content Include="App_Themes\Images\Home_google-hover.png" />
     <Content Include="App_Themes\Images\Home_banner.jpg" />
@@ -67,6 +68,7 @@
     <Content Include="App_Themes\Images\Home_pinterest-hover.png" />
     <Content Include="App_Themes\Images\Home_tumblr-hover.png" />
     <Content Include="App_Themes\Images\Home_twitter-hover.png" />
+    <Content Include="App_Themes\Popup.css" />
     <Content Include="App_Themes\ZoomImage.css" />
     <Content Include="Client\Accounts\Login.aspx" />
     <Content Include="Default.aspx" />
@@ -78,13 +80,13 @@
     <Content Include="Label.aspx" />
     <Content Include="Other\Pager.aspx" />
     <Content Include="Product.aspx" />
-    <Content Include="robots.txt" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\Gallery3D_1.js" />
     <Content Include="Scripts\Gallery3D_2.js" />
-    <Content Include="sitemap.xml" />
+    <Content Include="Scripts\Popup.js" />
+    <Content Include="UserControl\AdvancedSearchUC.ascx" />
     <Content Include="UserControl\FooterUC.ascx" />
     <Content Include="UserControl\Gallery3DUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
@@ -113,10 +115,10 @@
     <Compile Include="Client\Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DataAccessObject\AccountsDAO.cs" />
+    <Compile Include="DataAccessObject\AccountDAO.cs" />
     <Compile Include="DataAccessObject\ConnectionDAO.cs" />
     <Compile Include="DataAccessObject\DataSet2Object.cs" />
-    <Compile Include="DataAccessObject\ProductsDAO.cs" />
+    <Compile Include="DataAccessObject\ProductDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -124,15 +126,8 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EntityObject\AccountsEO.cs" />
-    <Compile Include="EntityObject\AdvertisementEO.cs" />
-    <Compile Include="EntityObject\AnswersEO.cs" />
-    <Compile Include="EntityObject\OrdersDetailsEO.cs" />
-    <Compile Include="EntityObject\OrdersEO.cs" />
-    <Compile Include="EntityObject\PayEO.cs" />
-    <Compile Include="EntityObject\ProductsEO.cs" />
-    <Compile Include="EntityObject\SupportsEO.cs" />
-    <Compile Include="EntityObject\WebsiteEO.cs" />
+    <Compile Include="EntityObject\AccountEO.cs" />
+    <Compile Include="EntityObject\ProductEO.cs" />
     <Compile Include="GroupProduct.aspx.cs">
       <DependentUpon>GroupProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,6 +164,7 @@
     <Compile Include="SharedLibraries\Constants.cs" />
     <Compile Include="SharedLibraries\GetListConstants.cs" />
     <Compile Include="SharedLibraries\GetTextConstants.cs" />
+    <Compile Include="SharedLibraries\RewriteUrl.cs" />
     <Compile Include="SharedLibraries\Security.cs" />
     <Compile Include="ShareInterface\AdminSI.Master.cs">
       <DependentUpon>AdminSI.Master</DependentUpon>
@@ -197,6 +193,13 @@
     </Compile>
     <Compile Include="ShareInterface\ProductSI.Master.designer.cs">
       <DependentUpon>ProductSI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\AdvancedSearchUC.ascx.cs">
+      <DependentUpon>AdvancedSearchUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\AdvancedSearchUC.ascx.designer.cs">
+      <DependentUpon>AdvancedSearchUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\FooterUC.ascx.cs">
       <DependentUpon>FooterUC.ascx</DependentUpon>

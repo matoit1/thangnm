@@ -13,5 +13,10 @@ namespace tydyShop.UserControl
         {
 
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Label.aspx?keyword=" +txtKeyWord.Text);
+        }
     }
 }

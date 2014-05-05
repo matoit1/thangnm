@@ -19,7 +19,7 @@ namespace DataAccessObject
         {
             try
             {
-                return new SqlConnection(connectdb);
+                return new SqlConnection(connectdb_x84);
             }
             catch (Exception ex)
             {

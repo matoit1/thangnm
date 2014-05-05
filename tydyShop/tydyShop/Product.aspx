@@ -39,7 +39,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-<div class="phanchinh">
+    <div class="phanchinh">
     <div class="thongtin">
         <h1><asp:Label ID="lblProducts_Name" runat="server"></asp:Label></h1>
         <h4><i><asp:Label ID="lblProducts_LastUpdate" runat="server"></asp:Label></i></h4>
@@ -58,7 +58,7 @@
         </div>
         <div class="thongtinsanpham">
             <table>
-                <tr>
+                <tr >
                     <td>Tên sản phẩm: </td>
                     <td><asp:Label ID="lblProducts_Name1" runat="server"></asp:Label></td>
                 </tr>

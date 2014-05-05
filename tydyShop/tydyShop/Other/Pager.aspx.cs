@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccessObject;
 using System.Data;
+using EntityObject;
 
 namespace tydyShop.Other
 {
@@ -89,7 +90,9 @@ namespace tydyShop.Other
 
         private void LoadData()
         {
-            DataTable dt = ProductsDAO.getDataSetGroupProductsShow(Convert.ToInt64(4)).Tables[0];
+            ProductEO _ProductEO = new ProductEO();
+            _ProductEO.bStatus = true;
+            DataTable dt = ProductDAO.Product_SelectList_All_Product(_ProductEO).Tables[0];
             //var _userBll = new UserBLL(getCurrentConnection());
             //var dt = _userBll.GetAllUserForGridView(PageIndex, PageSize, -1);
             rpData.DataSource = dt;
