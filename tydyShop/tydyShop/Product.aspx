@@ -41,15 +41,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
     <div class="phanchinh">
     <div class="thongtin">
-        <h1><asp:Label ID="lblsName" runat="server"></asp:Label></h1>
-        <h4><i><asp:Label ID="lbltLastUpdate" runat="server"></asp:Label></i></h4>
+        <h1 style="line-height:30px"><asp:Label ID="lblsName" runat="server"></asp:Label></h1>
+        <i><asp:Label ID="lbltLastUpdate" runat="server"></asp:Label></i>
         <hr />
     </div>
     <div class="sanpham">
         <div class="hinhanhmota">
             <div class="magnify">
                 <div class="large" style="background:url('<%=Url_Image%>') no-repeat;"></div><!-- đây là kính lúp-ảnh zoom-->
-                <asp:Image ID="imgsLinkImage" runat="server" class="small" Width="600px" Height="370px" /><!-- đây là ảnh sản phẩm -->
+                <asp:Image ID="imgsLinkImage" runat="server" class="small" Width="450px" Height="300px" /><!-- đây là ảnh sản phẩm -->
             </div>
             <div class="binhchon">
                 <asp:Label ID="lblVote" runat="server" Text="Đánh giá sản phẩm: "></asp:Label><asp:Label ID="Label2" runat="server" CssClass="rw-js-container"></asp:Label>
@@ -93,6 +93,10 @@
                 <tr>
                     <td class="tieudesanpham">Giá bán: </td>
                     <td><asp:Label ID="lbllPrice" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td class="tieudesanpham">Trạng thái</td>
+                    <td><asp:Label ID="lblbStatus" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham"></td>

@@ -314,25 +314,10 @@ namespace SharedLibraries
         public static readonly string Viet_Nam_Dong = " VNĐ";
         #endregion
 
-        #region "tblCauHoi"
-        public const string Thi_Trac_Nghiem_Mon = "THI TRẮC NGHIỆM MÔN: ";
-        public const string Ban_Da_Tra_Loi_Dung = "Bạn đã trả lời đúng: ";
-        public const string Tra_Loi_Dung = "Bạn đã trả lời đúng!";
-        public const string Tra_Loi_Sai = "Bạn đã trả lời sai!";
-        public const string Cham_Diem_Thanh_Cong = "Chấm điểm thành công!";
-        public const string Cham_Diem_Khong_Thanh_Cong = "Chấm điểm không thành công!";
-        public const string Het_Thoi_Gian_Tra_Loi_Cau_Hoi = "Hết thời gian trả lời câu hỏi! ";
+        #region "tblProduct"
+        public const string tblProduct_Con_Hang = "Còn Hàng !";
+        public const string tblProduct_Het_Hang = "Hết Hàng !";
         #endregion
 
-        #region "Upload"
-        public const string Video = "Video/";
-        public const string Ebook = "Ebook/";
-        public const string Example = "Example/";
-        public const string Other = "Other/";
-        public const string Upload_Hoc_Lieu = "Upload học liệu";
-        public const string UpLoad_Video_Giang_Day = "Upload video giảng dạy";
-        public const string Upload_Bai_Kiem_Tra = "Upload bài kiểm tra";
-        public const string Tai_Len_Thanh_Cong = "Tải lên thành công!";
-        #endregion
     }
 }

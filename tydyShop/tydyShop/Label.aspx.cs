@@ -30,6 +30,7 @@ namespace tydyShop
                     if (Request.QueryString["keyword"] != null)
                     {
                         keyword = Request.QueryString["keyword"];
+                        txtKeyWord.Text = keyword;
                         DataSet ds = ProductDAO.Product_Search(RewriteUrl.Remove_Unicode_Character(Request.QueryString["keyword"]));
                         rptResultSearch.DataSource = ds;
                         rptResultSearch.DataBind();
@@ -46,17 +47,21 @@ namespace tydyShop
         {
             Label lblsName = ((Label)(e.Item.FindControl("lblsName")));
             Label lblsDescription = ((Label)(e.Item.FindControl("lblsDescription")));
+            HyperLink hplChiTietSanPham = ((HyperLink)(e.Item.FindControl("hplChiTietSanPham")));
             lblsName.Text = RewriteUrl.HighLightKeyWords(RewriteUrl.Remove_Unicode_Character(lblsName.Text), RewriteUrl.Remove_Unicode_Character(keyword), "#3333FF");
             lblsDescription.Text = RewriteUrl.HighLightKeyWords(RewriteUrl.Remove_Unicode_Character(lblsDescription.Text), RewriteUrl.Remove_Unicode_Character(keyword), "#3333FF");
+            hplChiTietSanPham.NavigateUrl = "~/San_Pham/" + hplChiTietSanPham.NavigateUrl + "/" + RewriteUrl.ConvertToUnSign(hplChiTietSanPham.ImageUrl) + ".html";
+            hplChiTietSanPham.ImageUrl = "";
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            keyword = txtKeyWord.Text;
-            DataSet ds = ProductDAO.Product_Search(RewriteUrl.Remove_Unicode_Character(txtKeyWord.Text));
-            rptResultSearch.DataSource = ds;
-            rptResultSearch.DataBind();
-            lblMsg.Text = "Tìm thấy " + ds.Tables[0].Rows.Count + " kết quả  (0,99 giây)";
+            Response.Redirect("~/Label.aspx?keyword=" + txtKeyWord.Text);
+            //keyword = txtKeyWord.Text;
+            //DataSet ds = ProductDAO.Product_Search(RewriteUrl.Remove_Unicode_Character(txtKeyWord.Text));
+            //rptResultSearch.DataSource = ds;
+            //rptResultSearch.DataBind();
+            //lblMsg.Text = "Tìm thấy " + ds.Tables[0].Rows.Count + " kết quả  (0,99 giây)";
         }
 
         protected void lbtnAdvancedSearch_Click(object sender, EventArgs e)
