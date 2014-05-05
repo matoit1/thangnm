@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccessObject;
+using EntityObject;
 
 namespace tydyShop
 {
@@ -18,7 +19,10 @@ namespace tydyShop
                 {
                     if (Request.QueryString["Products_Group"] != null)
                     {
-                        Gallery3DUC1.BindData(ProductsDAO.getDataSetGroupProductsShow(Convert.ToInt64(Request.QueryString["Products_Group"])));
+                        ProductEO _ProductEO = new ProductEO();
+                        _ProductEO.lGroup = Convert.ToInt64(Request.QueryString["Products_Group"]);
+                        _ProductEO.bStatus = true;
+                        Gallery3DUC1.BindData(ProductDAO.Product_SelectList_All_Product_In_Group(_ProductEO));
                     }
                 }
             }

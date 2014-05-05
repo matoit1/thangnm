@@ -34,13 +34,11 @@
     </div>
     <!-- MENU [end] -->
 	<!-- Search [start] -->
-	<form _lpchecked="1" action="http://tydyShop.tk/search" class="search-form" id="search_mini_form" method="get">
 		<div id="search">
 			<div class="search-input form-search">
-				<input id="s" name="q" onblur="if (this.value == '') {this.value = 'Search the site';}" onfocus="if (this.value == 'Search the site') {this.value = '';}" value="Search the site" type="text">
-				<input id="buttonsinput" style="vertical-align: top;" value="Search!" type="submit">
+                <asp:TextBox ID="txtKeyWord" CssClass="keyword" runat="server" placeholder="Tìm kiếm sản phẩm?" ></asp:TextBox>
+                <asp:Button ID="btnSearch" CssClass="btnSearch" runat="server" Text="Button" style="vertical-align: top;" onclick="btnSearch_Click" />
 			</div>
 		</div>
-	</form>
 	<!-- Search [end] -->
 </div>

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using DataAccessObject;
+using EntityObject;
 
 namespace tydyShop.UserControl
 {
@@ -18,7 +19,9 @@ namespace tydyShop.UserControl
                 if (!IsPostBack)
                 {
                     DataSet ds = new DataSet();
-                    ds = ProductsDAO.getDataSetProducts(0);
+                    ProductEO _ProductEO = new ProductEO();
+                    _ProductEO.bStatus = true;
+                    ds = ProductDAO.Product_SelectList_All_Product(_ProductEO);
                     rptLoadAllProduct.DataSource = ds;
                     rptLoadAllProduct.DataBind();
                 }

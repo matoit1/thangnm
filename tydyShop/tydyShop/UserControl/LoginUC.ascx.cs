@@ -35,22 +35,22 @@ namespace tydyShop.UserControl
             DataSet dsOutput = null;
             try
             {
-                AccountsEO _AccountsEO = new AccountsEO();
+                AccountEO _AccountsEO = new AccountEO();
 
                 switch (iType)
                 {
-                    case 1: _AccountsEO.Accounts_Username = txtsTendangnhap.Text;   //Khách hàng
-                        _AccountsEO.Accounts_Password = Security.EnCrypt(txtsMatkhau.Text);
-                        _AccountsEO.Accounts_Permission = 1;
-                        dsOutput = AccountsDAO.LoginAccountsAdmin(_AccountsEO); break;
-                    case 2: _AccountsEO.Accounts_Username = txtsTendangnhap.Text; //Nhân viên
-                        _AccountsEO.Accounts_Password = Security.EnCrypt(txtsMatkhau.Text);
-                        _AccountsEO.Accounts_Permission = 2;
-                        dsOutput = AccountsDAO.LoginAccountsAdmin(_AccountsEO); break;
-                    case 3: _AccountsEO.Accounts_Username = txtsTendangnhap.Text; //Quản trị
-                        _AccountsEO.Accounts_Password = Security.EnCrypt(txtsMatkhau.Text);
-                        _AccountsEO.Accounts_Permission = 3;
-                        dsOutput = AccountsDAO.LoginAccountsAdmin(_AccountsEO); break;
+                    case 1: _AccountsEO.sUsername = txtsTendangnhap.Text;   //Khách hàng
+                        _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
+                        _AccountsEO.iPermission = 1;
+                        dsOutput = AccountDAO.Account_Login(_AccountsEO); break;
+                    case 2: _AccountsEO.sUsername = txtsTendangnhap.Text; //Nhân viên
+                        _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
+                        _AccountsEO.iPermission = 2;
+                        dsOutput = AccountDAO.Account_Login(_AccountsEO); break;
+                    case 3: _AccountsEO.sUsername = txtsTendangnhap.Text; //Quản trị
+                        _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
+                        _AccountsEO.iPermission = 3;
+                        dsOutput = AccountDAO.Account_Login(_AccountsEO); break;
                 }
             }
             catch (Exception ex)
