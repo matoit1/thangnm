@@ -56,25 +56,12 @@ namespace tydyShop
                 imgsLinkImage.ImageUrl = _ProductsEO.sLinkImage;
                 imgsLinkImage.AlternateText = _ProductsEO.sName;
                 Url_Image = _ProductsEO.sLinkImage;
-                LoadDataListBox();
+                lblVote.CssClass = "rw-ui-container rw-urid-" + _ProductsEO.PK_lProductID;
             }
             catch (Exception ex)
             {
                 lblsName.Text = ex.Message;
             }
-        }
-
-        public void LoadDataListBox()
-        {
-            SortedList slTag = new SortedList();
-            slTag.Add(1, "Phụ kiện");
-            slTag.Add(2, "Quần");
-            slTag.Add(3, "Váy");
-            slTag.Add(4, "Áo");
-            lstbTag.DataSource = slTag;
-            lstbTag.DataTextField = "Value";
-            lstbTag.DataValueField = "Key";
-            lstbTag.DataBind();
         }
     }
 }

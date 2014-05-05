@@ -86,6 +86,7 @@
     <Content Include="Scripts\Gallery3D_1.js" />
     <Content Include="Scripts\Gallery3D_2.js" />
     <Content Include="Scripts\Popup.js" />
+    <Content Include="Scripts\Vote.js" />
     <Content Include="UserControl\AdvancedSearchUC.ascx" />
     <Content Include="UserControl\FooterUC.ascx" />
     <Content Include="UserControl\Gallery3DUC.ascx" />

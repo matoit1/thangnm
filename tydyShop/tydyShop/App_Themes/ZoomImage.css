@@ -1,6 +1,6 @@
 ﻿    /*Some CSS*/
 * {margin: 0; padding: 0;}
-.magnify {width: 200px; margin: 50px auto; position: relative;}
+.magnify {width: 300px; margin: 0px 50px 50px 50px; position: relative;}
  
 /*Đoạn code này cho phép bạn tạo ra kính lup*/
 .large {
@@ -29,35 +29,38 @@
 {
     margin: 0px auto 50px auto;
     padding: 10px;
-    width: 700px;  
+    width: 1024px;  
 }
 
 .thongtin
 {
     height: 120px;
 }
-
-.chiase
-{
-    height: 30px;
-}
-
 .sanpham
 {
-    height: 500px;
+    height: 370px;
 }
 .hinhanhmota
 {
-    width: 800px;
+    width: 500px;
     float: left;
+}
+.binhchon
+{
+    padding: 0px 0px 50px 50px;
 }
 .thongtinsanpham
 {
-    width: 300px;
+    width: 524px;
     float: right;
 }
-.ganthe
+.tieudesanpham
 {
+    width: 90px;
+}
+.binhluan
+{
+    padding: 50px;
     width: 700px;
-    height: 50px;    
+    height: 500px;    
 }
