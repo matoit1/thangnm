@@ -25,9 +25,9 @@ namespace DataAccessObject
                     output.sEmail = (dr["sEmail"] == DBNull.Value) ? "" : Convert.ToString(dr["sEmail"]);
                     output.sAddress = (dr["sAddress"] == DBNull.Value) ? "" : Convert.ToString(dr["sAddress"]);
                     output.sPhoneNumber = (dr["sPhoneNumber"] == DBNull.Value) ? "" : Convert.ToString(dr["sPhoneNumber"]);
-                    output.tDateOfBirth = (dr["tDateOfBirth"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tDateOfBirth"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
+                    output.tDateOfBirth = (dr["tDateOfBirth"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tDateOfBirth"].ToString(), Messages.Format_DateTime, CultureInfo.InvariantCulture);
                     output.iPermission = (dr["iPermission"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iPermission"]);
-                    output.tRegisterDate = (dr["tRegisterDate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tRegisterDate"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
+                    output.tRegisterDate = (dr["tRegisterDate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tRegisterDate"].ToString(), Messages.Format_DateTime, CultureInfo.InvariantCulture);
                     output.sLinkAvatar = (dr["sLinkAvatar"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkAvatar"]);
                     output.bStatus = (dr["bStatus"] == DBNull.Value) ? false : Convert.ToBoolean(dr["bStatus"]);
                 }

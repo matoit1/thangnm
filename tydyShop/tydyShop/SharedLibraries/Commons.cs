@@ -308,8 +308,10 @@ namespace SharedLibraries
         #endregion
 
         #region "Format"
-        public static readonly string DateTime_Temp = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
-        public static readonly string DateTime_Format = "dd/MM/yyyy";
+        public static readonly string Format_DateTime_Temp = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
+        public static readonly string Format_DateTime = "dd/MM/yyyy";
+        public static readonly string Format_Number = "###,##0.######";
+        public static readonly string Viet_Nam_Dong = " VNĐ";
         #endregion
 
         #region "tblCauHoi"

@@ -48,11 +48,11 @@ namespace tydyShop
                 _ProductsEO = ProductDAO.Product_SelectItem(_ProductsEO);
                 lblsName.Text = _ProductsEO.sName;
                 lblsName1.Text = _ProductsEO.sName;
-                lbltLastUpdate.Text = _ProductsEO.tLastUpdate.ToString(Messages.DateTime_Format);
+                lbltLastUpdate.Text = _ProductsEO.tLastUpdate.ToString(Messages.Format_DateTime);
                 lblsDescription.Text = _ProductsEO.sDescription;
                 lblsInfomation.Text = _ProductsEO.sInfomation;
                 lblsOrigin.Text = _ProductsEO.sOrigin;
-                lbllPrice.Text = _ProductsEO.lPrice.ToString();
+                lbllPrice.Text = _ProductsEO.lPrice.ToString(Messages.Format_Number) + Messages.Viet_Nam_Dong;
                 imgsLinkImage.ImageUrl = _ProductsEO.sLinkImage;
                 imgsLinkImage.AlternateText = _ProductsEO.sName;
                 Url_Image = _ProductsEO.sLinkImage;
