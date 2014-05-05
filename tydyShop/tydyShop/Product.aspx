@@ -45,51 +45,76 @@
         <h4><i><asp:Label ID="lbltLastUpdate" runat="server"></asp:Label></i></h4>
         <hr />
     </div>
-    <div class="chiase">
-        Facebook | Google + | ZingMe
-    </div>
     <div class="sanpham">
         <div class="hinhanhmota">
             <div class="magnify">
                 <div class="large" style="background:url('<%=Url_Image%>') no-repeat;"></div><!-- đây là kính lúp-ảnh zoom-->
-                <asp:Image ID="imgsLinkImage" runat="server" class="small"/><!-- đây là ảnh sản phẩm -->
+                <asp:Image ID="imgsLinkImage" runat="server" class="small" Width="600px" Height="370px" /><!-- đây là ảnh sản phẩm -->
             </div>
+            <div class="binhchon">
+                <asp:Label ID="lblVote" runat="server" Text="Đánh giá sản phẩm: "></asp:Label><asp:Label ID="Label2" runat="server" CssClass="rw-js-container"></asp:Label>
+                <script language="javascript" src="../Scripts/Vote.js" type="text/javascript"></script>
+            </div>
+            
         </div>
         <div class="thongtinsanpham">
             <table>
+                <tr>
+                    <td colspan="2">
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                        <a class="addthis_button_preferred_1"></a>
+                        <a class="addthis_button_preferred_2"></a>
+                        <a class="addthis_button_preferred_3"></a>
+                        <a class="addthis_button_preferred_4"></a>
+                        <a class="addthis_button_compact"></a>
+                        <a class="addthis_counter addthis_bubble_style"></a>
+                        </div>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5367abe75d8d9028"></script>
+                        <!-- AddThis Button END -->
+                    </td>
+                </tr>
                 <tr >
-                    <td>Tên sản phẩm: </td>
+                    <td class="tieudesanpham">Tên sản phẩm: </td>
                     <td><asp:Label ID="lblsName1" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td>Mô tả: </td>
+                    <td class="tieudesanpham">Mô tả: </td>
                     <td><asp:Label ID="lblsDescription" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td>Thông tin: </td>
+                    <td class="tieudesanpham">Thông tin: </td>
                     <td><asp:Label ID="lblsInfomation" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td>Xuất xứ: </td>
+                    <td class="tieudesanpham">Xuất xứ: </td>
                     <td><asp:Label ID="lblsOrigin" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td>Giá bán: </td>
+                    <td class="tieudesanpham">Giá bán: </td>
                     <td><asp:Label ID="lbllPrice" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td class="tieudesanpham"></td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td class="tieudesanpham"></td>
                     <td><asp:Button ID="btnBuy" runat="server" Text="Mua hàng" /></td>
-                    <td></td>
                 </tr>
             </table>
         </div>
     </div>
-    <div class="ganthe">
-        <asp:ListBox ID="lstbTag" runat="server"></asp:ListBox>
+    <div class="binhluan">
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=432781806807255&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));</script>
+        <div class="fb-comments" data-href="<%=Request.Url.AbsoluteUri.ToString()%>" data-colorscheme="light" data-numposts="10" data-width="700"></div>
     </div>
 </div>
 </asp:Content>
