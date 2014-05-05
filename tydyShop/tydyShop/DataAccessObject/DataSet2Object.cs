@@ -169,7 +169,7 @@ namespace DataAccessObject
                     output.iQuantity = (dr["iQuantity"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["iQuantity"]);
                     output.sLinkImage = (dr["sLinkImage"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkImage"]);
                     output.sLinkImageThumbnail = (dr["sLinkImageThumbnail"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkImageThumbnail"]);
-                    output.tLastUpdate = (dr["tLastUpdate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tLastUpdate"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
+                    //output.tLastUpdate = (dr["tLastUpdate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tLastUpdate"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
                     output.bStatus = (dr["bStatus"] == DBNull.Value) ? false : Convert.ToBoolean(dr["bStatus"]);
                 }
                 return output;
