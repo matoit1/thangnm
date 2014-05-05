@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevNET.URLRewriter, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Other\DevNET.URLRewriter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -78,6 +82,7 @@
     <Content Include="Images\Product\Vay_Dao_Pho.png" />
     <Content Include="Images\Product\Vay_Cong_So.png" />
     <Content Include="Label.aspx" />
+    <Content Include="Other\DevNET.URLRewriter.dll" />
     <Content Include="Other\Pager.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />

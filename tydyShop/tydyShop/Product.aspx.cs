@@ -56,6 +56,7 @@ namespace tydyShop
                 imgsLinkImage.ImageUrl = _ProductsEO.sLinkImage;
                 imgsLinkImage.AlternateText = _ProductsEO.sName;
                 Url_Image = _ProductsEO.sLinkImage;
+                lblbStatus.Text = _ProductsEO.bStatus == true ? Messages.tblProduct_Con_Hang:Messages.tblProduct_Het_Hang;
                 lblVote.CssClass = "rw-ui-container rw-urid-" + _ProductsEO.PK_lProductID;
             }
             catch (Exception ex)
