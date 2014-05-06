@@ -50,7 +50,7 @@ namespace tydyShop
             HyperLink hplChiTietSanPham = ((HyperLink)(e.Item.FindControl("hplChiTietSanPham")));
             lblsName.Text = RewriteUrl.HighLightKeyWords(RewriteUrl.Remove_Unicode_Character(lblsName.Text), RewriteUrl.Remove_Unicode_Character(keyword), "#3333FF");
             lblsDescription.Text = RewriteUrl.HighLightKeyWords(RewriteUrl.Remove_Unicode_Character(lblsDescription.Text), RewriteUrl.Remove_Unicode_Character(keyword), "#3333FF");
-            hplChiTietSanPham.NavigateUrl = "~/San_Pham/" + hplChiTietSanPham.NavigateUrl + "/" + RewriteUrl.ConvertToUnSign(hplChiTietSanPham.ImageUrl) + ".html";
+            hplChiTietSanPham.NavigateUrl = "~/" + hplChiTietSanPham.NavigateUrl + "/" + RewriteUrl.ConvertToUnSign(hplChiTietSanPham.ImageUrl) + ".html";
             hplChiTietSanPham.ImageUrl = "";
         }
 
