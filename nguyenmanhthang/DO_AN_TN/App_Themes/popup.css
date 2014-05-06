@@ -45,7 +45,7 @@
 	z-index: 2;
 }
 div.close {
-	background: url("http://localhost:1766/Images/Icon/closebox.png") no-repeat scroll 0 0 transparent;
+	background: url("../Images/Icon/closebox.png") no-repeat scroll 0 0 transparent;
 	cursor: pointer;
 	height: 30px;
 	position: absolute;

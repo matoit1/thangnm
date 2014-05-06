@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Services;
+using Shared_Libraries.ChatLIB;
 
 namespace DO_AN_TN.Test
 {
@@ -11,7 +13,7 @@ namespace DO_AN_TN.Test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

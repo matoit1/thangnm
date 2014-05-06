@@ -655,6 +655,8 @@
     <Content Include="bin\DO_AN_TN.dll" />
     <Content Include="bin\DO_AN_TN.pdb" />
     <Content Include="bin\SCS.Web.UI.WebControls.Toolbar.dll" />
+    <Content Include="Chat\Chat.aspx" />
+    <Content Include="Chat\Default.aspx" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\CHANGES.html" />
     <Content Include="ckeditor\ckeditor.js" />
@@ -1444,6 +1446,7 @@
     <Content Include="GiangVien\LopHoc.aspx" />
     <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Images\Avatar\default.png" />
     <Content Include="Images\Icon\closebox.png" />
     <Content Include="Images\New\103.gif" />
@@ -1612,6 +1615,8 @@
     <Content Include="Scripts\jquery.tablesorter.min.js" />
     <Content Include="Scripts\New\dockbar.js" />
     <Content Include="Scripts\New\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\New\ChatRoom.js" />
+    <Content Include="App_Themes\New\ChatRoom.css" />
     <Content Include="Scripts\popup.js" />
     <Content Include="SinhVien\Accounts\ForgotPassword.aspx" />
     <Content Include="SinhVien\Accounts\Login.aspx" />
@@ -1707,6 +1712,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chat\Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chat\Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chat\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chat\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessObject\BaiVietDAO.cs" />
     <Compile Include="DataAccessObject\CauHoiDAO.cs" />
     <Compile Include="DataAccessObject\ConfigDAO.cs" />
@@ -1847,6 +1866,9 @@
     <Compile Include="GiangVien\ThongTinCaNhan.aspx.designer.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanTri\Accounts\ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
@@ -1935,6 +1957,10 @@
     <Compile Include="Shared_Libraries\CaptchaProvider.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Shared_Libraries\ChatLIB\ChatEngine.cs" />
+    <Compile Include="Shared_Libraries\ChatLIB\ChatRoom.cs" />
+    <Compile Include="Shared_Libraries\ChatLIB\ChatUser.cs" />
+    <Compile Include="Shared_Libraries\ChatLIB\Message.cs" />
     <Compile Include="Shared_Libraries\Constants.cs" />
     <Compile Include="DataAccessObject\DataSet2Object.cs" />
     <Compile Include="Shared_Libraries\GetListConstants.cs" />

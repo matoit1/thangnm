@@ -22,21 +22,12 @@ namespace DO_AN_TN.Test {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// hplLogin control.
+        /// hdnRoomID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplLogin;
-        
-        /// <summary>
-        /// SinhVien_SearchUC1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DO_AN_TN.UserControl.Search.SinhVien_SearchUC SinhVien_SearchUC1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hdnRoomID;
     }
 }
