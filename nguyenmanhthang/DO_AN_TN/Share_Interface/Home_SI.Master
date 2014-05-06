@@ -57,44 +57,44 @@
                     <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
                         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/blue_circle - home2.png" AlternateText="Trang chủ" /> </asp:HyperLink>
                     </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Admin/Setting.aspx">Giới thiệu</asp:HyperLink>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Topic.aspx">Giới thiệu</asp:HyperLink>
                         <ul>
-                            <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/Admin/Setting.aspx">Viện Đại học Mở Hà Nội</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/Admin/Setting.aspx">Trung tâm đào tạo E-Learning</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/Admin/Setting.aspx">Công nghệ và học liệu</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/Setting.aspx">Định hướng phát triển</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/Topic.aspx">Viện Đại học Mở Hà Nội</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/Topic.aspx">Trung tâm đào tạo E-Learning</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/Topic.aspx">Công nghệ và học liệu</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Topic.aspx">Định hướng phát triển</asp:HyperLink></li>
                         </ul>
                     </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/Admin/Setting.aspx">Thông báo - Tin tức</asp:HyperLink>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/Topic.aspx">Thông báo - Tin tức</asp:HyperLink>
                         <ul>
-                            <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/Admin/Setting.aspx">Thông báo</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Admin/Setting.aspx">Tin tức</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/Topic.aspx">Thông báo</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Topic.aspx">Tin tức</asp:HyperLink></li>
                         </ul>
                     </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/Admin/Setting.aspx">Đào tạo</asp:HyperLink>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/Topic.aspx">Đào tạo</asp:HyperLink>
                         <ul>
-                            <li><asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="~/Admin/Setting.aspx">Các ngành đào tạo</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="~/Admin/Setting.aspx">Chương trình đào tạo</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="~/Admin/Setting.aspx">Các khóa đào tạo ngắn hạn</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="~/Topic.aspx">Các ngành đào tạo</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="~/Topic.aspx">Chương trình đào tạo</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="~/Topic.aspx">Các khóa đào tạo ngắn hạn</asp:HyperLink></li>
                         </ul>
                     </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/Admin/Setting.aspx">Chương trình</asp:HyperLink>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/Topic.aspx">Chương trình</asp:HyperLink>
                         <ul>
-                            <li><asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="~/Admin/Setting.aspx">Đào tạo trực tuyến EHOU</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="~/Admin/Setting.aspx">HOU - TOPICA</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="~/Admin/Setting.aspx">Bồi dưỡng giáo viên tiếng anh</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Admin/Setting.aspx">Đề án GD vì sự phát triển bền vững</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="~/Topic.aspx">Đào tạo trực tuyến EHOU</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="~/Topic.aspx">HOU - TOPICA</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="~/Topic.aspx">Bồi dưỡng giáo viên tiếng anh</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Topic.aspx">Đề án GD vì sự phát triển bền vững</asp:HyperLink></li>
                         </ul>
                     </li>
-                    <li class="toproot"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/Admin/Setting.aspx">Tuyển sinh</asp:HyperLink>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/Topic.aspx">Tuyển sinh</asp:HyperLink>
                         <ul>
-                            <li><asp:HyperLink ID="HyperLink36" runat="server" NavigateUrl="~/UngDung/Chat_Room.aspx">Thông báo tuyển sinh</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="~/UngDung/Photoshop/editor.aspx">Hướng dẫn đăng ký học</asp:HyperLink></li>
-                            <li><asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="~/UngDung/Chuyen_dinh_dang_file.aspx">Các câu hỏi thường gặp</asp:HyperLink></li></li>
+                            <li><asp:HyperLink ID="HyperLink36" runat="server" NavigateUrl="~/Topic.aspx">Thông báo tuyển sinh</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="~/Topic.aspx">Hướng dẫn đăng ký học</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="~/Topic.aspx">Các câu hỏi thường gặp</asp:HyperLink></li></li>
                         </ul>
                     </li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink7" runat="server" Target="_blank" NavigateUrl="~/SinhVien/Accounts/Register.aspx">Đăng ký online</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Contact.aspx">Liên hệ</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Topic.aspx">Liên hệ</asp:HyperLink></li>
                 </ul>
                 </div>
             </div>
