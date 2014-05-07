@@ -297,5 +297,26 @@ namespace DataAccessObject
                 throw;
             }
         }
+
+        public static TinNhanEO TinNhan(DataSet input)
+        {
+            try
+            {
+                TinNhanEO output = new TinNhanEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.PK_lTinNhan = Convert.ToInt64(dr["PK_lTinNhan"]);
+                    output.FK_sPhongChat = Convert.ToString(dr["FK_sPhongChat"]);
+                    output.FK_sNguoiGui = Convert.ToString(dr["FK_sNguoiGui"]);
+                    output.sNoidung = Convert.ToString(dr["sNoidung"]);
+                    output.iTrangThai = Convert.ToInt16(dr["iTrangThai"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

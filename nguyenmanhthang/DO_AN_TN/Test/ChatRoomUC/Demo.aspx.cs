@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Shared_Libraries.Constants;
+using EntityObject;
 
 namespace DO_AN_TN.Test.ChatRoomUC
 {
@@ -14,10 +15,11 @@ namespace DO_AN_TN.Test.ChatRoomUC
         {
             try
             {
-                Session["UserName"] = Request.Cookies["sinhvien"].Value;
-                ChatUC1.sUser = Request.Cookies["sinhvien"].Value;
-                ChatUC1.sRoom = "TTHCM";
-                ChatUC1.iType = Quyen_Han_C.Sinh_Vien;
+                TinNhanEO _TinNhanEO = new TinNhanEO();
+                _TinNhanEO.FK_sPhongChat = "TTHCM";
+                _TinNhanEO.FK_sNguoiGui = Request.Cookies["sinhvien"].Value;
+                _TinNhanEO.iTrangThai = 1;
+                ChatUC1.objTinNhanEO = _TinNhanEO;
             }
             catch { }
         }
