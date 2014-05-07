@@ -266,6 +266,8 @@ namespace Shared_Libraries
     public class Messages
     {
         #region "ChatRoom"
+        public const string ChatRoom_Fail = "Gửi tin nhắn không thành công !";
+        public const string ChatRoom_Limit = "Bạn không được phép gửi tin nhắn nữa !";
         public const int ChatRoom_MaxRooms = 10;
         public const int ChatRoom_SessionTimeout = 5;
         public const int ChatRoom_MaxUsers = 50;

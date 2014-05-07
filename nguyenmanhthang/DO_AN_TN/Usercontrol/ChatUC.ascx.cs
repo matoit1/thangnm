@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Services;
 using Shared_Libraries.ChatLIB;
+using EntityObject;
+using DataAccessObject;
+using Shared_Libraries;
 
 namespace DO_AN_TN.UserControl
 {
@@ -13,16 +16,11 @@ namespace DO_AN_TN.UserControl
     {
         #region "Properties & Event"
         //public event EventHandler ViewDetail;
-        
-        public string sRoom
+        public static int indexrow =10;
+        public TinNhanEO objTinNhanEO
         {
-            get { return (string)ViewState["sRoom"]; }
-            set { ViewState["sRoom"] = value; }
-        }
-        public string sUser
-        {
-            get { return (string)ViewState["sUser"]; }
-            set { ViewState["sUser"] = value; }
+            get { return (TinNhanEO)ViewState["objTinNhanEO"]; }
+            set { ViewState["objTinNhanEO"] = value; }
         }
         public int iType
         {
@@ -33,135 +31,62 @@ namespace DO_AN_TN.UserControl
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["UserName"] = sUser;
-            //if (string.IsNullOrEmpty(sUser))
-            //    Response.Redirect("~/Test/ChatRoomUC/Default.aspx");
-            //if (string.IsNullOrEmpty(sRoom))
-            //    Response.Redirect("~/Test/ChatRoomUC/Default.aspx");
-
-            txtMsg.Attributes.Add("onkeypress", "return clickButton(event,'btn')");
             if (!IsPostBack)
             {
-                //hdnRoomID.Value = sRoom;
-                ChatRoom room = ChatEngine.GetRoom(sRoom);
-                string prevMsgs = room.JoinRoom(sUser, sUser);
-                txt.Text = prevMsgs;
-                foreach (string s in room.GetRoomUsersNames())
-                {
-                    lstMembers.Items.Add(new ListItem(s, s));
-                }
-
+                rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
+                rptDialog.DataBind();
+                tAutoUpdateMessage.Interval = 5000;
             }
         }
 
-        #region Script Callback functions
-
-        /// <summary>
-        /// This function is called from the client script 
-        /// </summary>
-        /// <param name="msg"></param>
-        /// <param name="roomID"></param>
-        /// <returns></returns>
-        [WebMethod]
-        static public string SendMessage(string msg, string roomID)
+        protected void btnSent_Click(object sender, EventArgs e)
         {
+            lblMsg.Text = "";
             try
             {
-                ChatRoom room = ChatEngine.GetRoom(roomID);
-                string res = "";
-                if (room != null)
+                lblMsg.Text = string.Empty;
+                objTinNhanEO.sNoidung = Convert.ToString(txtsNoidung.Text);
+                if (string.IsNullOrEmpty(txtsNoidung.Text) == false)
                 {
-                    res = room.SendMessage(msg, HttpContext.Current.Session["UserName"].ToString());
-                }
-                return res;
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return "";
-        }
-
-
-        /// <summary>
-        /// This function is called peridically called from the user to update the messages
-        /// </summary>
-        /// <param name="otherUserID"></param>
-        /// <returns></returns>
-        [WebMethod]
-        static public string UpdateUser(string roomID)
-        {
-            try
-            {
-                ChatRoom room = ChatEngine.GetRoom(roomID);
-                if (room != null)
-                {
-                    string res = "";
-                    if (room != null)
+                    if (TinNhanDAO.TinNhan_Insert(objTinNhanEO) == false)
                     {
-                        res = room.UpdateUser(HttpContext.Current.Session["UserName"].ToString());
+                        lblMsg.Text = Messages.ChatRoom_Fail;
                     }
-                    return res;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return "";
-        }
-
-
-        /// <summary>
-        /// This function is called from the client when the user is about to leave the room
-        /// </summary>
-        /// <param name="otherUser"></param>
-        /// <returns></returns>
-        [WebMethod]
-        static public string LeaveRoom(string roomID)
-        {
-            try
-            {
-                ChatRoom room = ChatEngine.GetRoom(roomID);
-                if (room != null)
-                    room.LeaveRoom(HttpContext.Current.Session["UserName"].ToString());
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return "";
-        }
-
-
-        /// <summary>
-        /// Returns a comma separated string containing the names of the users currently online
-        /// </summary>
-        /// <param name="roomID"></param>
-        /// <returns></returns>
-        [WebMethod]
-        static public string UpdateRoomMembers(string roomID)
-        {
-            try
-            {
-                ChatRoom room = ChatEngine.GetRoom(roomID);
-                if (room != null)
-                {
-                    IEnumerable<string> users = room.GetRoomUsersNames();
-                    string res = "";
-
-                    foreach (string s in users)
+                    else
                     {
-                        res += s + ",";
+                        txtsNoidung.Text = "";
                     }
-                    return res;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+                throw;
             }
-            return "";
         }
-        #endregion
+
+        protected void tAutoUpdateMessage_Tick(object sender, EventArgs e)
+        {
+            rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
+            rptDialog.DataBind();
+        }
+
+        public string GetRowColor(object obj)
+        {
+            string color = "white";
+            if (!string.IsNullOrEmpty(obj.ToString()))
+            {
+                int status =Convert.ToInt32(obj) % 2;
+                switch (status)
+                {
+                    case 0:
+                        color = "#0000FF "; break;
+                    case 1:
+                        color = "#FF0000"; break;
+                    default:
+                        color = "#CC66FF"; break;
+                }
+            }
+            return color;
+        }
     }
 }

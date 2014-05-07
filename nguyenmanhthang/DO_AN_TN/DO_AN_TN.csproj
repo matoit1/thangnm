@@ -72,8 +72,10 @@
   <ItemGroup>
     <Content Include="App_Data\QuangCao.xml" />
     <Content Include="App_Themes\calendar.css" />
+    <Content Include="App_Themes\Chat.css" />
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\login.css" />
+    <Content Include="Images\New\NewNotification.png" />
     <Content Include="App_Themes\New\DA.css" />
     <Content Include="App_Themes\New\dockbar.css" />
     <Content Include="App_Themes\New\menucss3.css" />
@@ -1604,6 +1606,7 @@
     <Content Include="QuanTri\ThongTinCaNhan.aspx" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
+    <Content Include="Scripts\chat.js" />
     <Content Include="Scripts\hideshow.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -1633,6 +1636,7 @@
     <Content Include="Test\AMS_Client.aspx" />
     <Content Include="Test\Captcha.aspx" />
     <Content Include="Test\ChatRoomUC\Chat.aspx" />
+    <Content Include="Test\ChatRoomUC\ChatDB.aspx" />
     <Content Include="Test\ChatRoomUC\Default.aspx" />
     <Content Include="Test\ChatRoomUC\Demo.aspx" />
     <Content Include="Test\ChatRoomUC\scripts.js" />
@@ -1730,6 +1734,7 @@
     <Compile Include="DataAccessObject\SinhVienDAO.cs" />
     <Compile Include="DataAccessObject\LichDayVaHocDAO.cs" />
     <Compile Include="DataAccessObject\DiemThiDAO.cs" />
+    <Compile Include="DataAccessObject\TinNhanDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -1748,6 +1753,7 @@
     <Compile Include="EntityObject\MonHocEO.cs" />
     <Compile Include="EntityObject\PhanCongCongTacEO.cs" />
     <Compile Include="EntityObject\SinhVienEO.cs" />
+    <Compile Include="EntityObject\TinNhanEO.cs" />
     <Compile Include="Error\401.aspx.cs">
       <DependentUpon>401.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2098,6 +2104,13 @@
     </Compile>
     <Compile Include="Test\ChatRoomUC\Chat.aspx.designer.cs">
       <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\ChatRoomUC\ChatDB.aspx.cs">
+      <DependentUpon>ChatDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\ChatRoomUC\ChatDB.aspx.designer.cs">
+      <DependentUpon>ChatDB.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test\ChatRoomUC\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
