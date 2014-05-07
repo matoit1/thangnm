@@ -265,6 +265,12 @@ namespace Shared_Libraries
 
     public class Messages
     {
+        #region "ChatRoom"
+        public const int ChatRoom_MaxRooms = 10;
+        public const int ChatRoom_SessionTimeout = 5;
+        public const int ChatRoom_MaxUsers = 50;
+        #endregion
+
         #region "Error"
         public const string Khong_Thoa_Man_Dieu_Kien_Tim_Kiem = "Không thỏa mãn điều kiện tìm kiếm!";
         public const string Loi = "Lỗi: ";

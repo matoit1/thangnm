@@ -1,4 +1,23 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ChatUC.ascx.cs" Inherits="DO_AN_TN.UserControl.ChatUC" %>
 <div>
-    <script id="sid0010000022441419647">(function () { function async_load() { s.id = "cid0010000022441419647"; s.src = 'http://st.chatango.com/js/gz/emb.js'; s.style.cssText = "width:300px;height:400px;"; s.async = true; s.text = '{"handle":"thangnm","styles":{"b":60,"f":50,"l":"999999","p":"14","q":"999999","r":100,"s":1}}'; var ss = document.getElementsByTagName('script'); for (var i = 0, l = ss.length; i < l; i++) { if (ss[i].id == 'sid0010000022441419647') { ss[i].id += '_'; ss[i].parentNode.insertBefore(s, ss[i]); break; } } } var s = document.createElement('script'); if (s.async == undefined) { if (window.addEventListener) { addEventListener('load', async_load, false); } else if (window.attachEvent) { attachEvent('onload', async_load); } } else { async_load(); } })();</script>
+    <link href="http://localhost:1766/App_Themes/New/ChatRoom.css" type="text/css" rel="stylesheet" />
+   
+    <asp:ScriptManager ID="ScriptManager1" runat="server"  EnablePartialRendering="True" EnablePageMethods="True">
+        <Scripts>
+            <asp:ScriptReference Path="~/Scripts/chatroom.js" />
+        </Scripts>
+    </asp:ScriptManager>
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="80%">
+                <asp:textbox runat="server" TextMode="MultiLine" id="txt" style="WIDTH: 690px; HEIGHT: 260px" rows="16" Columns="79" ></asp:textbox>&nbsp;
+                <br />
+                <asp:TextBox id="txtMsg" Width="400" Runat="server"></asp:TextBox>&nbsp;&nbsp; <input id="btn" onclick="button_clicked()" type="button" value="SEND" class="btn"/>
+            </td>
+            <td width="20%" rowspan="2" valign="top">
+                Room Members <br />&nbsp;
+                <asp:ListBox runat="server" Width="100" ID="lstMembers" Enabled="false" Height="249px"></asp:ListBox>
+            </td>
+        </tr>
+    </table>
 </div>
