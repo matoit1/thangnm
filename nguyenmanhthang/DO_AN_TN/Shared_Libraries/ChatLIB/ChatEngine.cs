@@ -12,8 +12,10 @@ namespace Shared_Libraries.ChatLIB
     public static class ChatEngine
     {
         #region Members
-        private static Dictionary<string, ChatRoom> Rooms = new Dictionary<string, ChatRoom>(Int32.Parse(System.Configuration.ConfigurationManager.AppSettings["MaxChatRooms"]));
-        private static int userChatRoomSessionTimeout = Int32.Parse(System.Configuration.ConfigurationManager.AppSettings["UserChatRoomSessionTimeout"]);
+        //private static Dictionary<string, ChatRoom> Rooms = new Dictionary<string, ChatRoom>(Int32.Parse(System.Configuration.ConfigurationManager.AppSettings["MaxChatRooms"]));
+        //private static int userChatRoomSessionTimeout = Int32.Parse(System.Configuration.ConfigurationManager.AppSettings["UserChatRoomSessionTimeout"]);
+        private static Dictionary<string, ChatRoom> Rooms = new Dictionary<string, ChatRoom>(Messages.ChatRoom_MaxRooms);
+        private static int userChatRoomSessionTimeout = Messages.ChatRoom_SessionTimeout;
         #endregion
 
 

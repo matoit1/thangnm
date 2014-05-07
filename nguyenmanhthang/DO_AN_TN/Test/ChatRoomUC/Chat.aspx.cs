@@ -1,50 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data;
+using System.Configuration;
+using System.Collections;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
 using System.Web.Services;
+using System.Web.Script.Services;
+using System.Web.Script;
+using System.Collections;
+using System.Collections.Generic;
 using Shared_Libraries.ChatLIB;
 
-namespace DO_AN_TN.UserControl
+namespace DO_AN_TN.Test.ChatRoomUC
 {
-    public partial class ChatUC : System.Web.UI.UserControl
+    public partial class Chat : System.Web.UI.Page
     {
-        #region "Properties & Event"
-        //public event EventHandler ViewDetail;
-        
-        public string sRoom
-        {
-            get { return (string)ViewState["sRoom"]; }
-            set { ViewState["sRoom"] = value; }
-        }
-        public string sUser
-        {
-            get { return (string)ViewState["sUser"]; }
-            set { ViewState["sUser"] = value; }
-        }
-        public int iType
-        {
-            get { return (int)ViewState["iType"]; }
-            set { ViewState["iType"] = value; }
-        }
-        #endregion
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["UserName"] = sUser;
-            //if (string.IsNullOrEmpty(sUser))
-            //    Response.Redirect("~/Test/ChatRoomUC/Default.aspx");
-            //if (string.IsNullOrEmpty(sRoom))
-            //    Response.Redirect("~/Test/ChatRoomUC/Default.aspx");
+            if (Session["UserName"] == null)
+                Response.Redirect("~/Test/ChatRoomUC/Default.aspx");
+            if (string.IsNullOrEmpty(Request.QueryString["rid"]))
+                Response.Redirect("~/Test/ChatRoomUC/Default.aspx");
 
             txtMsg.Attributes.Add("onkeypress", "return clickButton(event,'btn')");
             if (!IsPostBack)
             {
-                //hdnRoomID.Value = sRoom;
-                ChatRoom room = ChatEngine.GetRoom(sRoom);
-                string prevMsgs = room.JoinRoom(sUser, sUser);
+                hdnRoomID.Value = Request.QueryString["rid"];
+                ChatRoom room = ChatEngine.GetRoom(hdnRoomID.Value);
+                string prevMsgs = room.JoinRoom(Session["UserName"].ToString(), Session["UserName"].ToString());
                 txt.Text = prevMsgs;
                 foreach (string s in room.GetRoomUsersNames())
                 {
@@ -52,7 +39,10 @@ namespace DO_AN_TN.UserControl
                 }
 
             }
+
+
         }
+
 
         #region Script Callback functions
 

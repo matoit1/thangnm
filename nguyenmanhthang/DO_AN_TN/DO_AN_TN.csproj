@@ -655,8 +655,6 @@
     <Content Include="bin\DO_AN_TN.dll" />
     <Content Include="bin\DO_AN_TN.pdb" />
     <Content Include="bin\SCS.Web.UI.WebControls.Toolbar.dll" />
-    <Content Include="Chat\Chat.aspx" />
-    <Content Include="Chat\Default.aspx" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\CHANGES.html" />
     <Content Include="ckeditor\ckeditor.js" />
@@ -1618,6 +1616,7 @@
     <Content Include="Scripts\New\ChatRoom.js" />
     <Content Include="App_Themes\New\ChatRoom.css" />
     <Content Include="Scripts\popup.js" />
+    <Content Include="Scripts\chatroom.js" />
     <Content Include="SinhVien\Accounts\ForgotPassword.aspx" />
     <Content Include="SinhVien\Accounts\Login.aspx" />
     <Content Include="SinhVien\Accounts\Register.aspx" />
@@ -1633,6 +1632,11 @@
     <Content Include="Test\AMS_Server.aspx" />
     <Content Include="Test\AMS_Client.aspx" />
     <Content Include="Test\Captcha.aspx" />
+    <Content Include="Test\ChatRoomUC\Chat.aspx" />
+    <Content Include="Test\ChatRoomUC\Default.aspx" />
+    <Content Include="Test\ChatRoomUC\Demo.aspx" />
+    <Content Include="Test\ChatRoomUC\scripts.js" />
+    <Content Include="Test\ChatRoomUC\StyleSheet.css" />
     <Content Include="Test\Drop.aspx" />
     <Content Include="Test\ItemObject.aspx" />
     <Content Include="Test\List.aspx" />
@@ -1666,6 +1670,7 @@
     <Content Include="UserControl\CauHoi_DetailUC.ascx" />
     <Content Include="UserControl\CauHoi_ListUC.ascx" />
     <Content Include="UserControl\ChatUC.ascx" />
+    <Content Include="UserControl\ChatUC_Flash.ascx" />
     <Content Include="UserControl\DiemThi_DetailUC.ascx" />
     <Content Include="UserControl\DiemThi_ListUC.ascx" />
     <Content Include="UserControl\DongHoUC.ascx" />
@@ -1712,20 +1717,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chat\Chat.aspx.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Chat\Chat.aspx.designer.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Chat\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Chat\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DataAccessObject\BaiVietDAO.cs" />
     <Compile Include="DataAccessObject\CauHoiDAO.cs" />
     <Compile Include="DataAccessObject\ConfigDAO.cs" />
@@ -1868,6 +1859,7 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanTri\Accounts\ForgotPassword.aspx.cs">
@@ -2100,6 +2092,27 @@
     <Compile Include="Test\Captcha.aspx.designer.cs">
       <DependentUpon>Captcha.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Test\ChatRoomUC\Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\ChatRoomUC\Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\ChatRoomUC\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\ChatRoomUC\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\ChatRoomUC\Demo.aspx.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\ChatRoomUC\Demo.aspx.designer.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Test\Drop.aspx.cs">
       <DependentUpon>Drop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2274,6 +2287,13 @@
     </Compile>
     <Compile Include="UserControl\ChatUC.ascx.designer.cs">
       <DependentUpon>ChatUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ChatUC_Flash.ascx.cs">
+      <DependentUpon>ChatUC_Flash.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ChatUC_Flash.ascx.designer.cs">
+      <DependentUpon>ChatUC_Flash.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\DiemThi_DetailUC.ascx.cs">
       <DependentUpon>DiemThi_DetailUC.ascx</DependentUpon>

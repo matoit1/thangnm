@@ -37,8 +37,8 @@ namespace Shared_Libraries.ChatLIB
         {
             this.messages = new List<Message>();
             this.RoomID = roomID;
-            userChatRoomSessionTimeout = Int32.Parse(System.Configuration.ConfigurationManager.AppSettings["UserChatRoomSessionTimeout"]);
-            RoomUsers = new Dictionary<string, ChatUser>(Int32.Parse(System.Configuration.ConfigurationManager.AppSettings["ChatRoomMaxUsers"]));
+            userChatRoomSessionTimeout = Messages.ChatRoom_SessionTimeout;
+            RoomUsers = new Dictionary<string, ChatUser>(Messages.ChatRoom_MaxUsers);
         }
         #endregion
 
