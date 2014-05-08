@@ -51,22 +51,22 @@ namespace DO_AN_TN.QuanTri
 
         protected void btnRestore_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string path = "D:\\backupDoAn_LopHocAo.bak";
-                string sqlRestore = "Use master Restore Database [DoAn_LopHocAo] from disk='" + path + "'";
-                SqlConnection conn = ConnectionDAO.getConnection();
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(sqlRestore, conn);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                Response.Write("<script>alert('Khôi phục Dữ liệu thành công!!!')</script>");
-            }
-            catch
-            {
-                Response.Write("<script>alert('ERROR: Sao lưu Dữ liệu không thành công, Vui lòng kiểm tra lại Kết nối và Đường dẫn.')</script>");
-                return;
-            }
+            //try
+            //{
+            //    string path = "D:\\backupDoAn_LopHocAo.bak";
+            //    string sqlRestore = "Use master Restore Database [DoAn_LopHocAo] from disk='" + path + "'";
+            //    SqlConnection conn = ConnectionDAO.getConnection();
+            //    conn.Open();
+            //    SqlCommand cmd = new SqlCommand(sqlRestore, conn);
+            //    cmd.ExecuteNonQuery();
+            //    conn.Close();
+            //    Response.Write("<script>alert('Khôi phục Dữ liệu thành công!!!')</script>");
+            //}
+            //catch
+            //{
+            //    Response.Write("<script>alert('ERROR: Sao lưu Dữ liệu không thành công, Vui lòng kiểm tra lại Kết nối và Đường dẫn.')</script>");
+            //    return;
+            //}
         }
 
         private void DanhSachFileDaBackup()

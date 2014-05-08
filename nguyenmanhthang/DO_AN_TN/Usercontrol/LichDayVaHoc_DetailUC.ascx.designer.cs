@@ -139,6 +139,24 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.Label lblsSinhVienNghi;
         
         /// <summary>
+        /// txtsSinhVienChan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsSinhVienChan;
+        
+        /// <summary>
+        /// lblsSinhVienChan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsSinhVienChan;
+        
+        /// <summary>
         /// txtsLinkVideo control.
         /// </summary>
         /// <remarks>
