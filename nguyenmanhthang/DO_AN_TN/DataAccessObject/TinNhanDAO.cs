@@ -58,6 +58,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@FK_sPhongChat", _TinNhanEO.FK_sPhongChat));
                     cmd.Parameters.Add(new SqlParameter("@FK_sNguoiGui", _TinNhanEO.FK_sNguoiGui));
                     cmd.Parameters.Add(new SqlParameter("@sNoidung", _TinNhanEO.sNoidung));
+                    //cmd.Parameters.Add(new SqlParameter("@tNgayGui", _TinNhanEO.tNgayGui));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _TinNhanEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -87,6 +88,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@FK_sPhongChat", _TinNhanEO.FK_sPhongChat));
                     cmd.Parameters.Add(new SqlParameter("@FK_sNguoiGui", _TinNhanEO.FK_sNguoiGui));
                     cmd.Parameters.Add(new SqlParameter("@sNoidung", _TinNhanEO.sNoidung));
+                    //cmd.Parameters.Add(new SqlParameter("@tNgayGui", _TinNhanEO.tNgayGui));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _TinNhanEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -223,8 +225,9 @@ namespace DataAccessObject
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lTinNhan", _TinNhanEO.PK_lTinNhan));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sPhongChat", _TinNhanEO.FK_sPhongChat));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaGV", _TinNhanEO.FK_sNguoiGui));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTieuDe", _TinNhanEO.sNoidung));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sNguoiGui", _TinNhanEO.FK_sNguoiGui));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sNoidung", _TinNhanEO.sNoidung));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayGui", _TinNhanEO.tNgayGui));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _TinNhanEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);

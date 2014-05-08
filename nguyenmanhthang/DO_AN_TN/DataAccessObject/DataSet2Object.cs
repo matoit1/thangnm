@@ -309,6 +309,7 @@ namespace DataAccessObject
                     output.FK_sPhongChat = Convert.ToString(dr["FK_sPhongChat"]);
                     output.FK_sNguoiGui = Convert.ToString(dr["FK_sNguoiGui"]);
                     output.sNoidung = Convert.ToString(dr["sNoidung"]);
+                    output.tNgayGui = Convert.ToDateTime(dr["tNgayGui"]);
                     output.iTrangThai = Convert.ToInt16(dr["iTrangThai"]);
                 }
                 return output;

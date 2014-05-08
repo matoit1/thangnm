@@ -15,11 +15,17 @@ namespace DO_AN_TN.Test.ChatRoomUC
         {
             try
             {
-                TinNhanEO _TinNhanEO = new TinNhanEO();
-                _TinNhanEO.FK_sPhongChat = "TTHCM";
-                _TinNhanEO.FK_sNguoiGui = Request.Cookies["sinhvien"].Value;
-                _TinNhanEO.iTrangThai = 1;
-                ChatUC1.objTinNhanEO = _TinNhanEO;
+                if (!IsPostBack)
+                {
+                    SinhVienEO _SinhVienEO = new SinhVienEO();
+                    TinNhanEO _TinNhanEO = new TinNhanEO();
+                    _TinNhanEO.FK_sPhongChat = "TTHCM";
+                    _TinNhanEO.FK_sNguoiGui = Request.Cookies["sinhvien"].Value;
+                    _TinNhanEO.iTrangThai = 1;
+                    ChatUC1.objTinNhanEO = _TinNhanEO;
+                    _SinhVienEO.FK_sMaLop = "LH00010B1";
+                    DanhSachSinhVienLopHoc1.BindData(_SinhVienEO);
+                }
             }
             catch { }
         }
