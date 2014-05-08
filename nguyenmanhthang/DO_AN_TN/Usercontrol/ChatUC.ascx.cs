@@ -129,25 +129,23 @@ namespace DO_AN_TN.UserControl
                         break;
                     case "ibntHideAcc":
                         sAccountDisabe = lblFK_sNguoiGui;
-                        
-                        
-                        File.AppendAllText(path, acc_id + Environment.NewLine);
+                        //File.AppendAllText(path, acc_id + Environment.NewLine);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         break;
                     case "ibntShowAcc":
                         sAccountDisabe = "";
-                        string line = null;
-                        using (StreamReader reader = new StreamReader(path)) {
-                            using (StreamWriter writer = new StreamWriter(path))
-                            {
-                                while ((line = reader.ReadLine()) != null) {
-                                    if (String.Equals(line, acc_id) == false)
-                                        continue;
-                                    writer.WriteLine(line);
-                                }
-                            }
-                        }
+                        //string line = null;
+                        //using (StreamReader reader = new StreamReader(path)) {
+                        //    using (StreamWriter writer = new StreamWriter(path))
+                        //    {
+                        //        while ((line = reader.ReadLine()) != null) {
+                        //            if (String.Equals(line, acc_id) == false)
+                        //                continue;
+                        //            writer.WriteLine(line);
+                        //        }
+                        //    }
+                        //}
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
                         break;

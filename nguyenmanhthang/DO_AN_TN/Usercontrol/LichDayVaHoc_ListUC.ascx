@@ -79,6 +79,9 @@
                         <asp:BoundField DataField="sSinhVienNghi" HeaderText="Sinh viên nghỉ" SortExpression="sSinhVienNghi">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
+                        <asp:BoundField DataField="sSinhVienChan" HeaderText="Sinh viên chặn" SortExpression="sSinhVienChan">
+                            <ItemStyle CssClass="GridItemText" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="sLinkVideo" HeaderText="Link Video" SortExpression="sLinkVideo">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>

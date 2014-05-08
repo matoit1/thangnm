@@ -63,6 +63,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@tNgayDay", _LichDayVaHocEO.tNgayDay));
                     cmd.Parameters.Add(new SqlParameter("@iSoTietDay", _LichDayVaHocEO.iSoTietDay));
                     cmd.Parameters.Add(new SqlParameter("@sSinhVienNghi", _LichDayVaHocEO.sSinhVienNghi));
+                    cmd.Parameters.Add(new SqlParameter("@sSinhVienChan", _LichDayVaHocEO.sSinhVienChan));
                     cmd.Parameters.Add(new SqlParameter("@sLinkVideo", _LichDayVaHocEO.sLinkVideo));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _LichDayVaHocEO.iTrangThai));
                     cmd.ExecuteNonQuery();
@@ -95,6 +96,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@tNgayDay", _LichDayVaHocEO.tNgayDay));
                     cmd.Parameters.Add(new SqlParameter("@iSoTietDay", _LichDayVaHocEO.iSoTietDay));
                     cmd.Parameters.Add(new SqlParameter("@sSinhVienNghi", _LichDayVaHocEO.sSinhVienNghi));
+                    cmd.Parameters.Add(new SqlParameter("@sSinhVienChan", _LichDayVaHocEO.sSinhVienChan));
                     cmd.Parameters.Add(new SqlParameter("@sLinkVideo", _LichDayVaHocEO.sLinkVideo));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _LichDayVaHocEO.iTrangThai));
                     cmd.ExecuteNonQuery();
@@ -270,6 +272,7 @@ namespace DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayDay", _LichDayVaHocEO.tNgayDay));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iSoTietDay", _LichDayVaHocEO.iSoTietDay));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sSinhVienNghi", _LichDayVaHocEO.sSinhVienNghi));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sSinhVienChan", _LichDayVaHocEO.sSinhVienChan));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkVideo", _LichDayVaHocEO.sLinkVideo));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _LichDayVaHocEO.iTrangThai));
                     dsOutput = new DataSet();

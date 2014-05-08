@@ -94,6 +94,7 @@ namespace DO_AN_TN.UserControl
                     tNgayDay = topic.Field<DateTime>("tNgayDay"),
                     iSoTietDay = topic.Field<Int16>("iSoTietDay"),
                     sSinhVienNghi = topic.Field<string>("sSinhVienNghi"),
+                    sSinhVienChan = topic.Field<string>("sSinhVienChan"),
                     sLinkVideo = topic.Field<string>("sLinkVideo"),
                     iTrangThai = topic.Field<Int16>("iTrangThai"),
 
