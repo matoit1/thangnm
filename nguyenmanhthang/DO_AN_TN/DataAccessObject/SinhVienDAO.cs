@@ -401,6 +401,34 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 8. SinhVien_SelectByFK_sMaLop </summary>
+        /// <param name="_SinhVienEO"></param>
+        /// <returns></returns>
+        public static DataSet SinhVien_SelectByFK_sMaLop(SinhVienEO _SinhVienEO)
+        {
+            SinhVienEO oOutput = new SinhVienEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSinhVien_SelectByFK_sMaLop", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sMaLop", _SinhVienEO.FK_sMaLop));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
+
         /// <summary> 8. SinhVien_SelectList </summary>
         /// <param name="_SinhVienEO"></param>
         /// <returns></returns>

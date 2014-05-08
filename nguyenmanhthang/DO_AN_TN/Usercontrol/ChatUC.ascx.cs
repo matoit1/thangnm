@@ -9,6 +9,7 @@ using Shared_Libraries.ChatLIB;
 using EntityObject;
 using DataAccessObject;
 using Shared_Libraries;
+using System.IO;
 
 namespace DO_AN_TN.UserControl
 {
@@ -16,16 +17,17 @@ namespace DO_AN_TN.UserControl
     {
         #region "Properties & Event"
         //public event EventHandler ViewDetail;
+        public static string path = HttpContext.Current.Request.MapPath("~/Upload/BlackList.txt");
         public static int indexrow =10;
         public TinNhanEO objTinNhanEO
         {
             get { return (TinNhanEO)ViewState["objTinNhanEO"]; }
             set { ViewState["objTinNhanEO"] = value; }
         }
-        public int iType
+        public string sAccountDisabe
         {
-            get { return (int)ViewState["iType"]; }
-            set { ViewState["iType"] = value; }
+            get { return (string)ViewState["sAccountDisabe"]; }
+            set { ViewState["sAccountDisabe"] = value; }
         }
         #endregion
 
@@ -44,18 +46,25 @@ namespace DO_AN_TN.UserControl
             lblMsg.Text = "";
             try
             {
-                lblMsg.Text = string.Empty;
-                objTinNhanEO.sNoidung = Convert.ToString(txtsNoidung.Text);
-                if (string.IsNullOrEmpty(txtsNoidung.Text) == false)
+                if (string.IsNullOrEmpty(sAccountDisabe) == true)
                 {
-                    if (TinNhanDAO.TinNhan_Insert(objTinNhanEO) == false)
+                    lblMsg.Text = string.Empty;
+                    objTinNhanEO.sNoidung = Convert.ToString(txtsNoidung.Text);
+                    if (string.IsNullOrEmpty(txtsNoidung.Text) == false)
                     {
-                        lblMsg.Text = Messages.ChatRoom_Fail;
+                        if (TinNhanDAO.TinNhan_Insert(objTinNhanEO) == false)
+                        {
+                            lblMsg.Text = Messages.ChatRoom_Fail;
+                        }
+                        else
+                        {
+                            txtsNoidung.Text = "";
+                        }
                     }
-                    else
-                    {
-                        txtsNoidung.Text = "";
-                    }
+                }
+                else
+                {
+                    lblMsg.Text = Messages.ChatRoom_Limit;
                 }
             }
             catch (Exception)
@@ -66,8 +75,15 @@ namespace DO_AN_TN.UserControl
 
         protected void tAutoUpdateMessage_Tick(object sender, EventArgs e)
         {
-            rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
-            rptDialog.DataBind();
+            try
+            {
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                _SinhVienEO.FK_sMaLop = "LH00010B1";
+                lblSumOnline.Text = SinhVienDAO.SinhVien_SelectByFK_sMaLop(_SinhVienEO).Tables[0].Rows.Count.ToString();
+                rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
+                rptDialog.DataBind();
+            }
+            catch { }
         }
 
         public string GetRowColor(object obj)
@@ -87,6 +103,60 @@ namespace DO_AN_TN.UserControl
                 }
             }
             return color;
+        }
+
+        protected void rptDialog_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            try
+            {
+                string lblFK_sNguoiGui = ((Label)e.Item.FindControl("lblFK_sNguoiGui")).Text;
+                SinhVienEO _SinhVienEO = new SinhVienEO();
+                _SinhVienEO.sTendangnhapSV = lblFK_sNguoiGui;
+                string acc_id = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
+                switch (e.CommandName)
+                {
+                    case "ibntTool": break;
+                    case "ibntDeleteMessage":
+                        objTinNhanEO.PK_lTinNhan = Convert.ToInt64(((HiddenField)e.Item.FindControl("hfdPK_lTinNhan")).Value);
+                        if (TinNhanDAO.TinNhan_Delete(objTinNhanEO) == false)
+                        {
+                            lblMsg.Text = Messages.ChatRoom_Hide_Fail;
+                        }
+                        else
+                        {
+                            txtsNoidung.Text = Messages.ChatRoom_Hide_Success;
+                        }
+                        break;
+                    case "ibntHideAcc":
+                        sAccountDisabe = lblFK_sNguoiGui;
+                        
+                        
+                        File.AppendAllText(path, acc_id + Environment.NewLine);
+                        ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
+                        ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
+                        break;
+                    case "ibntShowAcc":
+                        sAccountDisabe = "";
+                        string line = null;
+                        using (StreamReader reader = new StreamReader(path)) {
+                            using (StreamWriter writer = new StreamWriter(path))
+                            {
+                                while ((line = reader.ReadLine()) != null) {
+                                    if (String.Equals(line, acc_id) == false)
+                                        continue;
+                                    writer.WriteLine(line);
+                                }
+                            }
+                        }
+                        ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
+                        ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
+                        break;
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

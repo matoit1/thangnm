@@ -12,6 +12,7 @@ namespace EntityObject
         private string _FK_sPhongChat;
         private string _FK_sNguoiGui;
         private string _sNoidung;
+        private DateTime _tNgayGui;
         private Int16 _iTrangThai;
 
         #region "Properties"
@@ -43,7 +44,14 @@ namespace EntityObject
             set { this._sNoidung = value; }
         }
 
-        // 5. Xay dung cac phuong thuc set, get cho iTrangThai
+        // 5. Xay dung cac phuong thuc set, get cho tNgayGui
+        public DateTime tNgayGui
+        {
+            get { return this._tNgayGui; }
+            set { this._tNgayGui = value; }
+        }
+
+        // 6. Xay dung cac phuong thuc set, get cho iTrangThai
         public Int16 iTrangThai
         {
             get { return this._iTrangThai; }
