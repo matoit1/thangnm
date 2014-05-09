@@ -110,7 +110,7 @@ namespace DO_AN_TN.GiangVien
             _LichDayVaHocEO.FK_sMalop = Request.QueryString["PK_sMalop"];
             _LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
             _LichDayVaHocEO.sLinkVideo = UploadFileUC2.linkfilevideo.Substring(1);
-            LichDayVaHocDAO.LichDayVaHoc_UpdateLinkVideo(_LichDayVaHocEO);
+            LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(_LichDayVaHocEO);
             Response.Redirect(Request.Url.ToString());
         }
     }

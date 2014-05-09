@@ -114,7 +114,7 @@ namespace DataAccessObject
         /// <summary> 3. LichDayVaHoc_UpdateLinkVideo </summary>
         /// <param name="_LichDayVaHocEO"></param>
         /// <returns></returns>
-        public static bool LichDayVaHoc_UpdateLinkVideo(LichDayVaHocEO _LichDayVaHocEO)
+        public static bool LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(LichDayVaHocEO _LichDayVaHocEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
