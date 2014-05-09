@@ -13,7 +13,11 @@ namespace DO_AN_TN.Test
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
+                PhanCongCongTac_ListUC1.BindData(_PhanCongCongTacEO);
+            }
         }
 
         public override void VerifyRenderingInServerForm(Control control)

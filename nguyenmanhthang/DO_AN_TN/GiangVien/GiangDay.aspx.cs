@@ -54,14 +54,14 @@ namespace DO_AN_TN.GiangVien
                             {
                                 case LichDayVaHoc_iTrangThai_C.Hoc: vLiveStream.ActiveViewIndex = 0;
                                                                             UploadFileUC1.Visible = true; 
-                                                                            UploadFileUC2.Visible = false; break;
+                                                                            UploadFileUC2.Visible = true; break;
                                 case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1;
                                                                             VideoUC1.sLinkVideo = _LichDayVaHocEO.sLinkVideo;
                                                                             UploadFileUC1.Visible = true;
                                                                             UploadFileUC2.Visible = true; break;
                                 case LichDayVaHoc_iTrangThai_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0;
                                                                             UploadFileUC1.Visible = true; 
-                                                                            UploadFileUC2.Visible = false; break;
+                                                                            UploadFileUC2.Visible = true; break;
                                 case LichDayVaHoc_iTrangThai_C.Nghi: vLiveStream.ActiveViewIndex = 2;
                                                                             lblNotify.Text = Messages.Buoi_Hoc_Hom_Nay_Duoc_Nghi;
                                                                             UploadFileUC1.Visible = false; 
