@@ -85,6 +85,15 @@ namespace DO_AN_TN.UserControl {
         protected global::System.Web.UI.WebControls.TextBox txtsNoidung;
         
         /// <summary>
+        /// ibtnSmileys control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ibtnSmileys;
+        
+        /// <summary>
         /// btnSent control.
         /// </summary>
         /// <remarks>
