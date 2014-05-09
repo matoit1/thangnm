@@ -8,8 +8,8 @@ using System.Web.Services;
 using Shared_Libraries.ChatLIB;
 using EntityObject;
 using DataAccessObject;
-using Shared_Libraries;
 using System.IO;
+using Shared_Libraries;
 
 namespace DO_AN_TN.UserControl
 {
@@ -53,6 +53,7 @@ namespace DO_AN_TN.UserControl
 
             if (!IsPostBack)
             {
+                loadDataToDropDownList();
                 iType = 1;
                 rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
                 rptDialog.DataBind();
@@ -69,7 +70,7 @@ namespace DO_AN_TN.UserControl
                 if (lstAcc.Any(s => s.Equals("SV100000")) == true)
                 {
                     lblMsg.Text = string.Empty;
-                    objTinNhanEO.sNoidung = Common.ShowIconByKey(Convert.ToString(txtsNoidung.Text));
+                    objTinNhanEO.sNoidung = Common.ReplaceKeyByEmoticons(Convert.ToString(txtsNoidung.Text));
                     if (string.IsNullOrEmpty(txtsNoidung.Text) == false)
                     {
                         if (TinNhanDAO.TinNhan_Insert(objTinNhanEO) == false)
@@ -221,29 +222,28 @@ namespace DO_AN_TN.UserControl
             if (ddlSmiley.Visible == false)
             {
                 ddlSmiley.Visible = true;
-                txtsNoidung.Visible = false;
+                txtsNoidung.Width = 175;
             }
             else
             {
                 ddlSmiley.Visible = false;
-                txtsNoidung.Visible = true;
+                txtsNoidung.Width = 235;
             }
         }
 
         protected void ddlSmiley_TextChanged(object sender, EventArgs e)
         {
-            //if (ddlSmiley.Visible == false)
-            //{
-            //    ddlSmiley.Visible = true;
-            //    txtsNoidung.Visible = false;
-            //}
-            //else
-            //{
-            //    ddlSmiley.Visible = false;
-            //    txtsNoidung.Visible = true;
-                
-            //}
-            txtsNoidung.Text = ddlSmiley.SelectedValue;
+            txtsNoidung.Text = txtsNoidung.Text + ddlSmiley.SelectedValue;
+            txtsNoidung.Focus();
+        }
+
+        public void loadDataToDropDownList()
+        {
+
+            ddlSmiley.DataSource = GetListConstants.Emoticons_GLC();
+            ddlSmiley.DataTextField = "Key";
+            ddlSmiley.DataValueField = "Key";
+            ddlSmiley.DataBind();
         }
     }
 }

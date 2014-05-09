@@ -52,12 +52,9 @@
                     <div style="padding-top:8px">
                         <asp:Label ID="lblMsg" runat="server"></asp:Label>
                         <asp:TextBox id="txtsNoidung" Width="235" Height="22px" Runat="server" Font-Size="16px"></asp:TextBox>
-                        <asp:DropDownList ID="ddlSmiley" runat="server" Visible="false" Width="235" 
-                            Height="22px" ontextchanged="ddlSmiley_TextChanged">
-                            <asp:ListItem Value=":D">Icon 1</asp:ListItem>
-                            <asp:ListItem Value=":))">Icon 2</asp:ListItem>
+                        <asp:DropDownList ID="ddlSmiley" runat="server" Visible="false" Width="40" Height="29px" ontextchanged="ddlSmiley_TextChanged" AutoPostBack="true">
                         </asp:DropDownList>
-                        <asp:ImageButton ID="ibtnSmileys" runat="server" ImageUrl="~/Images/Smileys/1.gif" onclick="ibtnSmileys_Click" />
+                        <asp:ImageButton ID="ibtnSmileys" runat="server" ImageUrl="~/Images/Smileys/Icon_2.gif" onclick="ibtnSmileys_Click" />
                         <asp:Button ID="btnSent" runat="server" Width="50px" Height="27px" Text="Gửi" class="btn" onclick="btnSent_Click"/>
                     </div>
                 </asp:Panel>
@@ -67,7 +64,7 @@
     </div>
 </div>
 <div class="chat-box" onclick="clickx()" style="bottom: 500px;" id="taskx">
-    <center> ChatRoom - Trung tâm đào tạo E-Learning<span style="float: right;">X</span></center>
+    <center>Trung tâm đào tạo E-Learning<span style="float: right;"><img src="../../Images/Icon/closebox.png" width="21px" /></span></center>
 	<div class="notification" style="display:none" id="notif">
     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
         <ContentTemplate>

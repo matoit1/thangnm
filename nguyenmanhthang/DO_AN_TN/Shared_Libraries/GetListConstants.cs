@@ -295,5 +295,23 @@ namespace Shared_Libraries
             return output;
         }
         #endregion
+
+
+        /// <summary> Emoticons_GLC (Biểu tượng cảm xúc) </summary>
+        /// <returns></returns>
+        public static SortedList Emoticons_GLC()
+        {
+            SortedList output = new SortedList();
+            output.Add(Emoticons_C.Icon_1, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_1));
+            output.Add(Emoticons_C.Icon_2, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_2));
+            output.Add(Emoticons_C.Icon_3, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_3));
+            output.Add(Emoticons_C.Icon_4, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_4));
+            output.Add(Emoticons_C.Icon_5, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_5));
+            output.Add(Emoticons_C.Icon_6, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_6));
+            output.Add(Emoticons_C.Icon_7, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_7));
+            output.Add(Emoticons_C.Icon_8, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_8));
+            output.Add(Emoticons_C.Icon_9, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_9));
+            return output;
+        }
     }
 }

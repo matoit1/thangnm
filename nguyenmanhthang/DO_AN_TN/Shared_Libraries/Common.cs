@@ -4,19 +4,24 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Text.RegularExpressions;
+using Shared_Libraries.Constants;
 
 namespace Shared_Libraries
 {
     public class Common
     {
-        public static string ShowIconByKey(string sInput){
+        public static string ReplaceKeyByEmoticons(string sInput)
+        {
             string sOutput = "";
-            sOutput = sInput.Replace(":)", "<img src=\"../../Images/Smileys/1.gif\" />");
-            sOutput = sOutput.Replace(":(", "<img src=\"../../Images/Smileys/2.gif\" />");
-            sOutput = sOutput.Replace(":))", "<img src=\"../../Images/Smileys/3.gif\" />");
-            sOutput = sOutput.Replace(":D", "<img src=\"../../Images/Smileys/4.gif\" />");
-            sOutput = sOutput.Replace("=))", "<img src=\"../../Images/Smileys/5.gif\" />");
-            sOutput = sOutput.Replace("<3", "<img src=\"../../Images/Smileys/6.gif\" />");
+            sOutput = sInput.Replace(Emoticons_C.Icon_1, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_1));
+            sOutput = sOutput.Replace(Emoticons_C.Icon_2, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_2));
+            sOutput = sOutput.Replace(Emoticons_C.Icon_3, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_3));
+            sOutput = sOutput.Replace(Emoticons_C.Icon_4, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_4));
+            sOutput = sOutput.Replace(Emoticons_C.Icon_5, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_5));
+            sOutput = sOutput.Replace(Emoticons_C.Icon_6, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_6));
+            sOutput = sOutput.Replace(Emoticons_C.Icon_7, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_7));
+            sOutput = sOutput.Replace(Emoticons_C.Icon_8, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_8));
+            sOutput = sOutput.Replace(Emoticons_C.Icon_9, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_9));
             return sOutput;
         }
 
