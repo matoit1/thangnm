@@ -414,5 +414,27 @@ namespace Shared_Libraries
             return output;
         }
 
+
+        /// <summary> Emoticons_GTC (Biểu tượng cảm xúc) </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string Emoticons_GTC(string input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case "<3": output = "<img src=\"../../Images/Smileys/Icon_1.gif\" />"; break;
+                case ":D": output = "<img src=\"../../Images/Smileys/Icon_2.gif\" />"; break;
+                case ":))": output = "<img src=\"../../Images/Smileys/Icon_3.gif\" />"; break;
+                case ":)": output = "<img src=\"../../Images/Smileys/Icon_4.gif\" />"; break;
+                case "=))": output = "<img src=\"../../Images/Smileys/Icon_5.gif\" />"; break;
+                case "X-(": output = "<img src=\"../../Images/Smileys/Icon_6.gif\" />"; break;
+                case ":X": output = "<img src=\"../../Images/Smileys/Icon_7.gif\" />"; break;
+                case "(*)": output = "<img src=\"../../Images/Smileys/Icon_8.gif\" />"; break;
+                case ":(": output = "<img src=\"../../Images/Smileys/Icon_9.gif\" />"; break;
+            }
+            return output;
+        }
+
     }
 }

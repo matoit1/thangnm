@@ -259,6 +259,23 @@ namespace Shared_Libraries.Constants
     #endregion
 
 
+
+    /// <summary> Emoticons_C (Biểu tượng cảm xúc) </summary>
+    /// 
+    public class Emoticons_C
+    {
+        public const string Icon_1 = "<3";
+        public const string Icon_2 = ":D";
+        public const string Icon_3 = ":))";
+        public const string Icon_4 = ":)";
+        public const string Icon_5 = "=))";
+        public const string Icon_6 = "X-(";
+        public const string Icon_7 = ":X";
+        public const string Icon_8 = "(*)";
+        public const string Icon_9 = ":(";
+    }
+
+
     #region "II. Định dạng"
     /// <summary> II.1. DateTimeFomat (Định dạng ngày giờ) </summary>
     /// 
