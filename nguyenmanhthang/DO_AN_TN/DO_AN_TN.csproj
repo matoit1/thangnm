@@ -75,6 +75,13 @@
     <Content Include="App_Themes\Chat.css" />
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\login.css" />
+    <Content Include="Images\New\banner.png" />
+    <Content Include="Images\Smileys\1.gif" />
+    <Content Include="Images\Smileys\2.gif" />
+    <Content Include="Images\Smileys\3.gif" />
+    <Content Include="Images\Smileys\5.gif" />
+    <Content Include="Images\Smileys\4.gif" />
+    <Content Include="Images\Smileys\6.gif" />
     <Content Include="Images\New\NewNotification.png" />
     <Content Include="App_Themes\New\DA.css" />
     <Content Include="App_Themes\New\dockbar.css" />
@@ -1450,7 +1457,6 @@
     <Content Include="Images\Avatar\default.png" />
     <Content Include="Images\Icon\closebox.png" />
     <Content Include="Images\New\103.gif" />
-    <Content Include="Images\New\banner.png" />
     <Content Include="Images\New\bg-active.png" />
     <Content Include="Images\New\blue_circle - home2.png" />
     <Content Include="Images\New\conversation.png" />

@@ -3,7 +3,7 @@
     <div style="margin: 5px 5px 5px 5px;">
         <asp:Repeater ID="rpTopic" runat="server">
             <ItemTemplate>
-                <div style="width: 700px; height: 210px;">
+                <div style="width: 700px; height: 215px;">
                     <div style="float:left; width: 210px; height: 210px; padding: 2px">
                         <asp:ImageButton ID="ibtnTopic_LinkImage" runat="server"  ImageUrl='<%#Eval("sLinkAnh")%>' width="200px" Height="200px" PostBackUrl='<%#"~/Topic.aspx?PK_lMaBaiViet=" +Eval("PK_lMaBaiViet")%>'/>
                     </div>

@@ -37,7 +37,7 @@ namespace DO_AN_TN.UserControl
             {
                 rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
                 rptDialog.DataBind();
-                tAutoUpdateMessage.Interval = 5000;
+                tAutoUpdateMessage.Interval = 1000;
             }
         }
 
@@ -49,7 +49,7 @@ namespace DO_AN_TN.UserControl
                 if (string.IsNullOrEmpty(sAccountDisabe) == true)
                 {
                     lblMsg.Text = string.Empty;
-                    objTinNhanEO.sNoidung = Convert.ToString(txtsNoidung.Text);
+                    objTinNhanEO.sNoidung = Common.ShowIconByKey(Convert.ToString(txtsNoidung.Text));
                     if (string.IsNullOrEmpty(txtsNoidung.Text) == false)
                     {
                         if (TinNhanDAO.TinNhan_Insert(objTinNhanEO) == false)
@@ -59,6 +59,7 @@ namespace DO_AN_TN.UserControl
                         else
                         {
                             txtsNoidung.Text = "";
+                            txtsNoidung.Focus();
                         }
                     }
                 }

@@ -9,6 +9,17 @@ namespace Shared_Libraries
 {
     public class Common
     {
+        public static string ShowIconByKey(string sInput){
+            string sOutput = "";
+            sOutput = sInput.Replace(":)", "<img src=\"../../Images/Smileys/1.gif\" />");
+            sOutput = sOutput.Replace(":(", "<img src=\"../../Images/Smileys/2.gif\" />");
+            sOutput = sOutput.Replace(":))", "<img src=\"../../Images/Smileys/3.gif\" />");
+            sOutput = sOutput.Replace(":D", "<img src=\"../../Images/Smileys/4.gif\" />");
+            sOutput = sOutput.Replace("=))", "<img src=\"../../Images/Smileys/5.gif\" />");
+            sOutput = sOutput.Replace("<3", "<img src=\"../../Images/Smileys/6.gif\" />");
+            return sOutput;
+        }
+
         public static string ConvertToUnSign(string text)
         {
             for (int i = 32; i < 48; i++)
