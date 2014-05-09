@@ -4,8 +4,11 @@
     .divmain{height: 478px;}
     .divhide{display:none;}
     .divshow:hover .divhide{display:inline}
+    
 </style>
-
+<%--.divsmiley{position: absolute; top: 343px; left: 68px; width: 232px; height: 185px; display:none;}
+    .divshowsmiley{position: absolute; top: 343px; left: 68px; width: 232px; height: 185px; display:block; z-index: 100; }
+    .divshowsmiley:hover .divsmiley{display:block;}--%>
 <div class="chat" style="display: block; bottom: 0px;" id="chat-box">
 	<div style="width: 350px; height: 500px; ">
     <fieldset class="divmain">
@@ -14,7 +17,8 @@
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
                 <asp:Timer ID="tAutoUpdateMessage" runat="server" ontick="tAutoUpdateMessage_Tick"></asp:Timer>
-                <asp:Repeater ID="rptDialog" runat="server" onitemcommand="rptDialog_ItemCommand">
+                <asp:Repeater ID="rptDialog" runat="server" 
+                    onitemcommand="rptDialog_ItemCommand" onitemdatabound="rptDialog_ItemDataBound">
                 <HeaderTemplate>
                 <div style="width:300px; padding: 5px; border :3px double black; height: 400px; overflow:auto;">
                 </HeaderTemplate>
@@ -29,6 +33,7 @@
                         <asp:Label ID="lblsNoidung" runat="server" Text='<%#Eval("sNoidung")%>'></asp:Label>
                         <div class="divshow">
                             <asp:ImageButton ID="ibntTool" CommandName="ibntTool" runat="server" Width="15px" ImageUrl="~/Images/Icon/info.gif" AlternateText="Tiện ích" ToolTip="Tiện ích !" />
+                            <asp:Label ID="lblMsg" runat="server"></asp:Label>
                             <div class="divhide">
                                 <asp:ImageButton ID="ibntDeleteMessage" CommandName="ibntDeleteMessage" runat="server" Width="15px" ImageUrl="~/Images/Icon/trash.gif" AlternateText="Xóa tin nhắn này !" ToolTip="Xóa tin nhắn này !" />
                                 <asp:ImageButton ID="ibntHideAcc" CommandName="ibntHideAcc" runat="server" Width="15px" ImageUrl="~/Images/Icon/ico_on.gif" AlternateText="Chặn người dùng này !" ToolTip="Chặn người dùng này !" />
@@ -47,7 +52,12 @@
                     <div style="padding-top:8px">
                         <asp:Label ID="lblMsg" runat="server"></asp:Label>
                         <asp:TextBox id="txtsNoidung" Width="235" Height="22px" Runat="server" Font-Size="16px"></asp:TextBox>
-                        <asp:ImageButton ID="ibtnSmileys" runat="server" ImageUrl="~/Images/Smileys/1.gif" />
+                        <asp:DropDownList ID="ddlSmiley" runat="server" Visible="false" Width="235" 
+                            Height="22px" ontextchanged="ddlSmiley_TextChanged">
+                            <asp:ListItem Value=":D">Icon 1</asp:ListItem>
+                            <asp:ListItem Value=":))">Icon 2</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:ImageButton ID="ibtnSmileys" runat="server" ImageUrl="~/Images/Smileys/1.gif" onclick="ibtnSmileys_Click" />
                         <asp:Button ID="btnSent" runat="server" Width="50px" Height="27px" Text="Gửi" class="btn" onclick="btnSent_Click"/>
                     </div>
                 </asp:Panel>

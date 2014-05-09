@@ -17,27 +17,46 @@ namespace DO_AN_TN.UserControl
     {
         #region "Properties & Event"
         //public event EventHandler ViewDetail;
-        public static string path = HttpContext.Current.Request.MapPath("~/Upload/BlackList.txt");
+        //public static string path = HttpContext.Current.Request.MapPath("~/Upload/BlackList.txt");
         public static int indexrow =10;
         public TinNhanEO objTinNhanEO
         {
             get { return (TinNhanEO)ViewState["objTinNhanEO"]; }
             set { ViewState["objTinNhanEO"] = value; }
         }
+
+        public LichDayVaHocEO objLichDayVaHocEO
+        {
+            get { return (LichDayVaHocEO)ViewState["objLichDayVaHocEO"]; }
+            set { ViewState["objLichDayVaHocEO"] = value; }
+        }
+        
         public string sAccountDisabe
         {
             get { return (string)ViewState["sAccountDisabe"]; }
             set { ViewState["sAccountDisabe"] = value; }
         }
+        public int iType
+        {
+            get { return (int)ViewState["iType"]; }
+            set { ViewState["iType"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            objLichDayVaHocEO = new LichDayVaHocEO();
+            objLichDayVaHocEO.FK_sMaPCCT = "PCCT000001";
+            objLichDayVaHocEO.FK_sMalop = "LH00010B1";
+            objLichDayVaHocEO.iCaHoc = 2;
+            objLichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
+
             if (!IsPostBack)
             {
+                iType = 1;
                 rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
                 rptDialog.DataBind();
-                tAutoUpdateMessage.Interval = 1000;
+                tAutoUpdateMessage.Interval = 5000;
             }
         }
 
@@ -46,7 +65,8 @@ namespace DO_AN_TN.UserControl
             lblMsg.Text = "";
             try
             {
-                if (string.IsNullOrEmpty(sAccountDisabe) == true)
+                List<string> lstAcc = objLichDayVaHocEO.sSinhVienChan.Split(',').ToList<string>();
+                if (lstAcc.Any(s => s.Equals("SV100000")) == true)
                 {
                     lblMsg.Text = string.Empty;
                     objTinNhanEO.sNoidung = Common.ShowIconByKey(Convert.ToString(txtsNoidung.Text));
@@ -113,7 +133,7 @@ namespace DO_AN_TN.UserControl
                 string lblFK_sNguoiGui = ((Label)e.Item.FindControl("lblFK_sNguoiGui")).Text;
                 SinhVienEO _SinhVienEO = new SinhVienEO();
                 _SinhVienEO.sTendangnhapSV = lblFK_sNguoiGui;
-                string acc_id = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
+                string PK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
                 switch (e.CommandName)
                 {
                     case "ibntTool": break;
@@ -121,32 +141,26 @@ namespace DO_AN_TN.UserControl
                         objTinNhanEO.PK_lTinNhan = Convert.ToInt64(((HiddenField)e.Item.FindControl("hfdPK_lTinNhan")).Value);
                         if (TinNhanDAO.TinNhan_Delete(objTinNhanEO) == false)
                         {
-                            lblMsg.Text = Messages.ChatRoom_Hide_Fail;
+                            ((Label)e.Item.FindControl("lblMsg")).Text = Messages.ChatRoom_Hide_Fail;
                         }
                         else
                         {
-                            txtsNoidung.Text = Messages.ChatRoom_Hide_Success;
+                            ((Label)e.Item.FindControl("lblMsg")).Text = Messages.ChatRoom_Hide_Success;
                         }
                         break;
                     case "ibntHideAcc":
-                        sAccountDisabe = lblFK_sNguoiGui;
-                        //File.AppendAllText(path, acc_id + Environment.NewLine);
+                        sAccountDisabe = PK_sMaSV;
+
+                        objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan + sAccountDisabe + ",";
+                        LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(objLichDayVaHocEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         break;
                     case "ibntShowAcc":
+                        sAccountDisabe = PK_sMaSV;
+                        objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan.Replace("," + sAccountDisabe + ",", ",");
                         sAccountDisabe = "";
-                        //string line = null;
-                        //using (StreamReader reader = new StreamReader(path)) {
-                        //    using (StreamWriter writer = new StreamWriter(path))
-                        //    {
-                        //        while ((line = reader.ReadLine()) != null) {
-                        //            if (String.Equals(line, acc_id) == false)
-                        //                continue;
-                        //            writer.WriteLine(line);
-                        //        }
-                        //    }
-                        //}
+                        LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(objLichDayVaHocEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
                         break;
@@ -156,6 +170,80 @@ namespace DO_AN_TN.UserControl
             {
 
             }
+        }
+
+        protected void rptDialog_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            try{
+                if (iType == 1)
+                {
+                    LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+                    _LichDayVaHocEO.FK_sMaPCCT = "PCCT000001";
+                    _LichDayVaHocEO.FK_sMalop = "LH00010B1";
+                    _LichDayVaHocEO.iCaHoc = 2;
+                    _LichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(_LichDayVaHocEO);
+                    Label lblFK_sNguoiGui = ((Label)e.Item.FindControl("lblFK_sNguoiGui"));
+                    ImageButton ibntTool = ((ImageButton)e.Item.FindControl("ibntTool"));
+                    ImageButton ibntDeleteMessage = ((ImageButton)e.Item.FindControl("ibntDeleteMessage"));
+                    ImageButton ibntHideAcc = ((ImageButton)e.Item.FindControl("ibntHideAcc"));
+                    ImageButton ibntShowAcc = ((ImageButton)e.Item.FindControl("ibntShowAcc"));
+                    if (ibntTool != null) { ibntTool.Visible = true; } else { ibntTool.Visible = false; }
+                    if (ibntDeleteMessage != null) { ibntDeleteMessage.Visible = true; } else { ibntDeleteMessage.Visible = false; }
+                    if (ibntHideAcc != null) { ibntHideAcc.Visible = true; } else { ibntHideAcc.Visible = false; }
+                    if (ibntShowAcc != null) { ibntShowAcc.Visible = true; } else { ibntShowAcc.Visible = false; }
+                    if (lblFK_sNguoiGui != null)
+                    {
+                        SinhVienEO _SinhVienEO = new SinhVienEO();
+                        _SinhVienEO.sTendangnhapSV = lblFK_sNguoiGui.Text;
+                        string PK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
+                        List<string> lstAcc = _LichDayVaHocEO.sSinhVienChan.Split(',').ToList<string>();
+                        if (lstAcc.Any(s => s.Equals(PK_sMaSV)) == true)
+                        {
+                            sAccountDisabe = PK_sMaSV;
+                            ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
+                            ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
+                        }
+                        else
+                        {
+                            sAccountDisabe = PK_sMaSV;
+                            ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
+                            ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
+                        }
+                    }
+                }
+            }
+            catch{
+            }
+        }
+
+        protected void ibtnSmileys_Click(object sender, ImageClickEventArgs e)
+        {
+            if (ddlSmiley.Visible == false)
+            {
+                ddlSmiley.Visible = true;
+                txtsNoidung.Visible = false;
+            }
+            else
+            {
+                ddlSmiley.Visible = false;
+                txtsNoidung.Visible = true;
+            }
+        }
+
+        protected void ddlSmiley_TextChanged(object sender, EventArgs e)
+        {
+            //if (ddlSmiley.Visible == false)
+            //{
+            //    ddlSmiley.Visible = true;
+            //    txtsNoidung.Visible = false;
+            //}
+            //else
+            //{
+            //    ddlSmiley.Visible = false;
+            //    txtsNoidung.Visible = true;
+                
+            //}
+            txtsNoidung.Text = ddlSmiley.SelectedValue;
         }
     }
 }
