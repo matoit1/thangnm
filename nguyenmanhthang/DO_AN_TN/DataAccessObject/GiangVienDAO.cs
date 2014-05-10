@@ -447,6 +447,7 @@ namespace DataAccessObject
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sTendangnhapGV", _GiangVienEO.sTendangnhapGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sMatkhauGV", _GiangVienEO.sMatkhauGV));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iChucVuGV", (_GiangVienEO.iChucVuGV == 0) ? (object)DBNull.Value : _GiangVienEO.iChucVuGV));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThaiGV", _GiangVienEO.iTrangThaiGV));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
