@@ -4,6 +4,8 @@
 <%@ Register src="../UserControl/Thong_Tin_Lop_HocUC.ascx" tagname="Thong_Tin_Lop_HocUC" tagprefix="uc3" %>
 <%@ Register src="../UserControl/Hoc_LieuUC.ascx" tagname="Hoc_LieuUC" tagprefix="uc4" %>
 <%@ Register src="../UserControl/VideoUC.ascx" tagname="VideoUC" tagprefix="uc5" %>
+<%@ Register src="../UserControl/DongHoUC.ascx" tagname="DongHoUC" tagprefix="uc7" %>
+<%@ Register src="../UserControl/DanhSachLopHocUC.ascx" tagname="DanhSachLopHocUC" tagprefix="uc8" %>
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <asp:ScriptManager ID="scrAjax" runat="server"></asp:ScriptManager>
@@ -23,7 +25,8 @@
         </asp:MultiView>
     </div>
     <div class="chatroom">
-        <%--<uc2:chatuc ID="ChatUC1" runat="server" />--%>
+        <uc7:DongHoUC ID="DongHoUC1" runat="server" /><br />
+        <uc8:DanhSachLopHocUC ID="DanhSachLopHocUC1" runat="server" /><br />
     </div>
     <div class="clear"></div>
     <div class="infor">

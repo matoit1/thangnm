@@ -1684,7 +1684,7 @@
     <Content Include="UserControl\CauHoi_ListUC.ascx" />
     <Content Include="UserControl\ChatUC.ascx" />
     <Content Include="UserControl\ChatUC_Flash.ascx" />
-    <Content Include="UserControl\DanhSachSinhVienLopHoc.ascx" />
+    <Content Include="UserControl\DanhSachLopHocUC.ascx" />
     <Content Include="UserControl\DiemThi_DetailUC.ascx" />
     <Content Include="UserControl\DiemThi_ListUC.ascx" />
     <Content Include="UserControl\DongHoUC.ascx" />
@@ -2318,12 +2318,12 @@
     <Compile Include="UserControl\ChatUC_Flash.ascx.designer.cs">
       <DependentUpon>ChatUC_Flash.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\DanhSachSinhVienLopHoc.ascx.cs">
-      <DependentUpon>DanhSachSinhVienLopHoc.ascx</DependentUpon>
+    <Compile Include="UserControl\DanhSachLopHocUC.ascx.cs">
+      <DependentUpon>DanhSachLopHocUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\DanhSachSinhVienLopHoc.ascx.designer.cs">
-      <DependentUpon>DanhSachSinhVienLopHoc.ascx</DependentUpon>
+    <Compile Include="UserControl\DanhSachLopHocUC.ascx.designer.cs">
+      <DependentUpon>DanhSachLopHocUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\DiemThi_DetailUC.ascx.cs">
       <DependentUpon>DiemThi_DetailUC.ascx</DependentUpon>

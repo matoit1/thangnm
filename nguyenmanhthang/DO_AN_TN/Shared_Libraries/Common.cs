@@ -288,6 +288,7 @@ namespace Shared_Libraries
         public const string ChatRoom_Limit = "Bạn không được phép gửi tin nhắn nữa !";
         public const string ChatRoom_BlackList_Fail = "Chặn không thành công !";
         public const string ChatRoom_BlackList_Success = "Chặn thành công !";
+        public const string ChatRoom_GiangVien = "Giảng Viên";
         public const int ChatRoom_MaxRooms = 10;
         public const int ChatRoom_SessionTimeout = 5;
         public const int ChatRoom_MaxUsers = 50;

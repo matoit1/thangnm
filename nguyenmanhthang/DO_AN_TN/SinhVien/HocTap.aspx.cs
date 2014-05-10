@@ -65,6 +65,8 @@ namespace DO_AN_TN.SinhVien
                             sTendangnhapGV = _GiangVienEO.sTendangnhapGV;
                             Hoc_LieuUC1.BindData_HocLieu(sTendangnhapGV);
 
+                            DanhSachLopHocUC1.BindData(_SinhVienEO);
+
                             //Kiểm tra trạng thái buổi học Online / Offline
                             switch (_LichDayVaHocEO.iTrangThai)
                             {
