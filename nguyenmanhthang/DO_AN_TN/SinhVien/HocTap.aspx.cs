@@ -51,6 +51,17 @@ namespace DO_AN_TN.SinhVien
                             _LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
                             _LichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(_LichDayVaHocEO);
 
+                            SinhVienEO _SinhVienEO = new SinhVienEO();
+                            _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
+                            _SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);
+                            TinNhanEO _TinNhanEO = new TinNhanEO();
+                            _TinNhanEO.FK_sPhongChat = _LichDayVaHocEO.FK_sMalop;
+                            _TinNhanEO.FK_sNguoiGui = _SinhVienEO.PK_sMaSV;
+                            _TinNhanEO.iTrangThai = 1;
+                            ChatUC1.objTinNhanEO = _TinNhanEO;
+                            ChatUC1.objLichDayVaHocEO = _LichDayVaHocEO;
+                            ChatUC1.iTypeUser = Messages.ChatRoom_TypeUser_SinhVien;
+
                             sTendangnhapGV = _GiangVienEO.sTendangnhapGV;
                             Hoc_LieuUC1.BindData_HocLieu(sTendangnhapGV);
 
@@ -77,6 +88,7 @@ namespace DO_AN_TN.SinhVien
         protected void tSync_Tick(object sender, EventArgs e)
         {
             Hoc_LieuUC1.BindData_HocLieu(sTendangnhapGV);
+            //ChatUC1.tAutoUpdateMessage_Tick(sender, e);
         }
     }
 }

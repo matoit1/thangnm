@@ -13,13 +13,13 @@
 	<div style="width: 350px; height: 500px; ">
     <fieldset class="divmain">
         <legend>Chatroom</legend>
-        <asp:ScriptManager ID="ScriptManager1" runat="server"  EnablePartialRendering="True" EnablePageMethods="True"></asp:ScriptManager>
+        <%--<asp:ScriptManager ID="ScriptManager1" runat="server"  EnablePartialRendering="True" EnablePageMethods="True"></asp:ScriptManager>--%>
         <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="udpnlChatRoom">
             <ProgressTemplate>
             <img src="https://ssl.gstatic.com/s2/oz/images/notifications/spinner_32_041dcfce66a2d43215abb96b38313ba0.gif" />
             </ProgressTemplate>
         </asp:UpdateProgress>
-        <asp:UpdatePanel ID="udpnlChatRoom" runat="server">
+        <asp:UpdatePanel ID="udpnlChatRoom" runat="server" UpdateMode="Conditional" >
             <ContentTemplate>
                 <asp:Timer ID="tAutoUpdateMessage" runat="server" ontick="tAutoUpdateMessage_Tick"></asp:Timer>
                 <asp:Repeater ID="rptDialog" runat="server" onitemcommand="rptDialog_ItemCommand" onitemdatabound="rptDialog_ItemDataBound">

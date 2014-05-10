@@ -49,6 +49,14 @@ namespace DO_AN_TN.GiangVien
                             _LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
                             _LichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(_LichDayVaHocEO);
 
+                            TinNhanEO _TinNhanEO = new TinNhanEO();
+                            _TinNhanEO.FK_sPhongChat = _LichDayVaHocEO.FK_sMalop;
+                            _TinNhanEO.FK_sNguoiGui = _GiangVienEO.PK_sMaGV;
+                            _TinNhanEO.iTrangThai = 1;
+                            ChatUC1.objTinNhanEO = _TinNhanEO;
+                            ChatUC1.objLichDayVaHocEO = _LichDayVaHocEO;
+                            ChatUC1.iTypeUser = Messages.ChatRoom_TypeUser_GiangVien;
+
                             //Kiểm tra trạng thái buổi học Online / Offline
                             switch (_LichDayVaHocEO.iTrangThai)
                             {

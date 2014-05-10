@@ -4,8 +4,8 @@
 <%@ Register src="../../UserControl/DongHoUC.ascx" tagname="DongHoUC" tagprefix="uc3" %>
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
-    <link href="../../App_Themes/Chat.css" rel="stylesheet" type="text/css"/>
     <uc3:DongHoUC ID="DongHoUC1" runat="server" />
+    <link href="../../App_Themes/Chat.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../../Scripts/chat.js"></script>
     <div>
         <uc2:DanhSachSinhVienLopHoc ID="DanhSachSinhVienLopHoc1" runat="server" />

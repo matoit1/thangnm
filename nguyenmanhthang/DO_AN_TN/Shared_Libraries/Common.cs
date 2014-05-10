@@ -291,6 +291,8 @@ namespace Shared_Libraries
         public const int ChatRoom_MaxRooms = 10;
         public const int ChatRoom_SessionTimeout = 5;
         public const int ChatRoom_MaxUsers = 50;
+        public const int ChatRoom_TypeUser_GiangVien = 1;
+        public const int ChatRoom_TypeUser_SinhVien = 2;
         #endregion
 
         #region "Error"
