@@ -103,6 +103,24 @@ namespace DO_AN_TN.GiangVien {
         protected global::System.Web.UI.WebControls.Label lblNotify;
         
         /// <summary>
+        /// DongHoUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.DongHoUC DongHoUC1;
+        
+        /// <summary>
+        /// DanhSachLopHocUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.DanhSachLopHocUC DanhSachLopHocUC1;
+        
+        /// <summary>
         /// Thong_Tin_Lop_HocUC1 control.
         /// </summary>
         /// <remarks>

@@ -25,19 +25,16 @@ namespace DO_AN_TN.UserControl
             get { return (TinNhanEO)ViewState["objTinNhanEO"]; }
             set { ViewState["objTinNhanEO"] = value; }
         }
-
         public LichDayVaHocEO objLichDayVaHocEO
         {
             get { return (LichDayVaHocEO)ViewState["objLichDayVaHocEO"]; }
             set { ViewState["objLichDayVaHocEO"] = value; }
         }
-
         public string sColor
         {
             get { return (string)ViewState["sColor"]; }
             set { ViewState["sColor"] = value; }
         }
-
         public int iTypeUser
         {
             get { return (int)ViewState["iTypeUser"]; }
@@ -239,6 +236,18 @@ namespace DO_AN_TN.UserControl
                     if (lblsNoidung != null && objTinNhanEO.FK_sNguoiGui == lblFK_sNguoiGui.Text)
                     {
                         lblsNoidung.ForeColor = System.Drawing.ColorTranslator.FromHtml(sColor);
+                    }
+                    if (lblFK_sNguoiGui != null && objTinNhanEO.FK_sNguoiGui == lblFK_sNguoiGui.Text)
+                    {
+                        if (iTypeUser == Messages.ChatRoom_TypeUser_GiangVien)
+                        {
+                            lblFK_sNguoiGui.ForeColor = System.Drawing.Color.Red;
+                            lblFK_sNguoiGui.ToolTip = Messages.ChatRoom_GiangVien;
+                        }
+                        else
+                        {
+                            lblFK_sNguoiGui.ForeColor = System.Drawing.Color.Blue;
+                        }
                     }
                 //}
             }

@@ -57,6 +57,10 @@ namespace DO_AN_TN.GiangVien
                             ChatUC1.objLichDayVaHocEO = _LichDayVaHocEO;
                             ChatUC1.iTypeUser = Messages.ChatRoom_TypeUser_GiangVien;
 
+                            SinhVienEO _SinhVienEO = new SinhVienEO();
+                            _SinhVienEO.FK_sMaLop = _LichDayVaHocEO.FK_sMalop;
+                            DanhSachLopHocUC1.BindData(_SinhVienEO);
+
                             //Kiểm tra trạng thái buổi học Online / Offline
                             switch (_LichDayVaHocEO.iTrangThai)
                             {

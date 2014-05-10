@@ -7,36 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DO_AN_TN.Test.ChatRoomUC {
+namespace DO_AN_TN.UserControl {
     
     
-    public partial class Demo {
+    public partial class DanhSachLopHocUC {
         
         /// <summary>
-        /// DongHoUC1 control.
+        /// cblDanhSachLop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DO_AN_TN.UserControl.DongHoUC DongHoUC1;
+        protected global::System.Web.UI.WebControls.CheckBoxList cblDanhSachLop;
         
         /// <summary>
-        /// DanhSachSinhVienLopHoc1 control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DO_AN_TN.UserControl.DanhSachLopHocUC DanhSachSinhVienLopHoc1;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// ChatUC1 control.
+        /// btnBlackList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DO_AN_TN.UserControl.ChatUC ChatUC1;
+        protected global::System.Web.UI.WebControls.Button btnBlackList;
+        
+        /// <summary>
+        /// ddlTextFile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTextFile;
     }
 }

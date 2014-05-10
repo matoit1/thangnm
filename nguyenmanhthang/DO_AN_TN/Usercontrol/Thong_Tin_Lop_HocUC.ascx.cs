@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using EntityObject;
 using DataAccessObject;
+using Shared_Libraries;
 
 namespace DO_AN_TN.UserControl
 {
@@ -34,11 +35,7 @@ namespace DO_AN_TN.UserControl
             lbliSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
             lbltNgayBatDau.Text = _PhanCongCongTacEO.tNgayBatDau.ToShortDateString();
             lbltNgayKetThuc.Text = _PhanCongCongTacEO.tNgayKetThuc.ToShortDateString();
-        }
-
-        protected void tSyncCurrentTime_Tick(object sender, EventArgs e)
-        {
-            lblCurrentTime.Text = DateTime.Now.ToString();
+            lbliTrangThai.Text = GetTextConstants.LichDayVaHoc_iTrangThai_GTC(_LichDayVaHocEO.iTrangThai);
         }
     }
 }
