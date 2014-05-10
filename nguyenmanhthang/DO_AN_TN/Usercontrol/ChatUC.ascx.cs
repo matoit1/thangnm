@@ -10,6 +10,7 @@ using EntityObject;
 using DataAccessObject;
 using System.IO;
 using Shared_Libraries;
+using System.Data;
 
 namespace DO_AN_TN.UserControl
 {
@@ -41,21 +42,28 @@ namespace DO_AN_TN.UserControl
             get { return (int)ViewState["iType"]; }
             set { ViewState["iType"] = value; }
         }
+        public int iSumMessage
+        {
+            get { return (int)ViewState["iSumMessage"]; }
+            set { ViewState["iSumMessage"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            objLichDayVaHocEO = new LichDayVaHocEO();
-            objLichDayVaHocEO.FK_sMaPCCT = "PCCT000001";
-            objLichDayVaHocEO.FK_sMalop = "LH00010B1";
-            objLichDayVaHocEO.iCaHoc = 2;
-            objLichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
-
             if (!IsPostBack)
             {
+                objLichDayVaHocEO = new LichDayVaHocEO();
+                objLichDayVaHocEO.FK_sMaPCCT = "PCCT000001";
+                objLichDayVaHocEO.FK_sMalop = "LH00010B1";
+                objLichDayVaHocEO.iCaHoc = 2;
+                objLichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
+
                 loadDataToDropDownList();
                 iType = 1;
-                rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
+                DataSet ds = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
+                iSumMessage = ds.Tables[0].Rows.Count;
+                rptDialog.DataSource = ds;
                 rptDialog.DataBind();
                 tAutoUpdateMessage.Interval = 5000;
             }
@@ -99,11 +107,15 @@ namespace DO_AN_TN.UserControl
         {
             try
             {
-                SinhVienEO _SinhVienEO = new SinhVienEO();
-                _SinhVienEO.FK_sMaLop = "LH00010B1";
-                lblSumOnline.Text = SinhVienDAO.SinhVien_SelectByFK_sMaLop(_SinhVienEO).Tables[0].Rows.Count.ToString();
-                rptDialog.DataSource = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
-                rptDialog.DataBind();
+                DataSet ds = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
+                if (iSumMessage != ds.Tables[0].Rows.Count)
+                {
+                    SinhVienEO _SinhVienEO = new SinhVienEO();
+                    _SinhVienEO.FK_sMaLop = "LH00010B1";
+                    lblSumOnline.Text = SinhVienDAO.SinhVien_SelectByFK_sMaLop(_SinhVienEO).Tables[0].Rows.Count.ToString();
+                    rptDialog.DataSource = ds;
+                    rptDialog.DataBind();
+                }
             }
             catch { }
         }

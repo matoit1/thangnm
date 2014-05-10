@@ -14,14 +14,18 @@
     <fieldset class="divmain">
         <legend>Chatroom</legend>
         <asp:ScriptManager ID="ScriptManager1" runat="server"  EnablePartialRendering="True" EnablePageMethods="True"></asp:ScriptManager>
-        <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="udpnlChatRoom">
+            <ProgressTemplate>
+            <img src="https://ssl.gstatic.com/s2/oz/images/notifications/spinner_32_041dcfce66a2d43215abb96b38313ba0.gif" />
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <asp:UpdatePanel ID="udpnlChatRoom" runat="server">
             <ContentTemplate>
                 <asp:Timer ID="tAutoUpdateMessage" runat="server" ontick="tAutoUpdateMessage_Tick"></asp:Timer>
-                <asp:Repeater ID="rptDialog" runat="server" 
-                    onitemcommand="rptDialog_ItemCommand" onitemdatabound="rptDialog_ItemDataBound">
-                <HeaderTemplate>
-                <div style="width:300px; padding: 5px; border :3px double black; height: 400px; overflow:auto;">
-                </HeaderTemplate>
+                <asp:Repeater ID="rptDialog" runat="server" onitemcommand="rptDialog_ItemCommand" onitemdatabound="rptDialog_ItemDataBound">
+                    <HeaderTemplate>
+                        <div style="width:300px; padding: 5px; border :3px double black; height: 400px; overflow:auto;">
+                    </HeaderTemplate>
                     <ItemTemplate>
                         <asp:HiddenField ID="hfdPK_lTinNhan" runat="server" Value='<%#Eval("PK_lTinNhan")%>' />
                         <span style="color: <%# GetRowColor(Container.ItemIndex) %>">
@@ -41,12 +45,16 @@
                             </div>
                         </div><br />
                     </ItemTemplate>
-                    <FooterTemplate></div>
+                    <FooterTemplate>
+                        </div>
                     </FooterTemplate>
                 </asp:Repeater>
             </ContentTemplate>
+<%--            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="tAutoUpdateMessage" EventName="Tick" />
+            </Triggers>--%>
         </asp:UpdatePanel>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+        <asp:UpdatePanel ID="udpnlFormChat" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
                 <asp:Panel ID="Panel1" runat="server" DefaultButton="btnSent">
                     <div style="padding-top:8px">
