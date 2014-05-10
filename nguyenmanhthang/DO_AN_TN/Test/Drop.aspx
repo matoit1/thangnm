@@ -9,7 +9,16 @@
 <body>
     <form id="form1" runat="server">
     <div>
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        
+        <br />
+        <asp:TextBox ID="txtColor" runat="server" type="color" ontextchanged="txtColor_TextChanged" AutoPostBack="true"></asp:TextBox>
+        <asp:Label ID="lblColor" runat="server" Text="Color"></asp:Label>
+
         <table>
+            
             <tr>
                 <td>Quyền hạn:</td>
                 <td><asp:DropDownList ID="ddlSelectList1" runat="server"></asp:DropDownList></td>

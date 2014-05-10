@@ -31,12 +31,12 @@ namespace DO_AN_TN.UserControl
             get { return (LichDayVaHocEO)ViewState["objLichDayVaHocEO"]; }
             set { ViewState["objLichDayVaHocEO"] = value; }
         }
-        
-        //public string sAccountDisabe
-        //{
-        //    get { return (string)ViewState["sAccountDisabe"]; }
-        //    set { ViewState["sAccountDisabe"] = value; }
-        //}
+
+        public string sColor
+        {
+            get { return (string)ViewState["sColor"]; }
+            set { ViewState["sColor"] = value; }
+        }
 
         public int iTypeUser
         {
@@ -61,7 +61,7 @@ namespace DO_AN_TN.UserControl
                     //objLichDayVaHocEO.FK_sMalop = "LH00010B1";
                     //objLichDayVaHocEO.iCaHoc = 2;
                     //objLichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
-
+                    sColor = "#000000";
                     loadDataToDropDownList();
                     DataSet ds = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
                     iSumMessage = ds.Tables[0].Rows.Count;
@@ -154,8 +154,8 @@ namespace DO_AN_TN.UserControl
         {
             try
             {
-                string sAccountDisabe;
-                string lblFK_sNguoiGui = ((Label)e.Item.FindControl("lblFK_sNguoiGui")).Text;
+                //string sAccountDisabe;
+                Label lblFK_sNguoiGui = (Label)e.Item.FindControl("lblFK_sNguoiGui");
                 switch (e.CommandName)
                 {
                     case "ibntTool": break;
@@ -173,16 +173,16 @@ namespace DO_AN_TN.UserControl
                         break;
                     case "ibntHideAcc":
                         iSumMessage = 0;
-                        sAccountDisabe = lblFK_sNguoiGui;
-                        objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan + sAccountDisabe + ",";
+                        //sAccountDisabe = lblFK_sNguoiGui;
+                        objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan + lblFK_sNguoiGui.Text + ",";
                         LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(objLichDayVaHocEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         break;
                     case "ibntShowAcc":
                         iSumMessage = 0;
-                        sAccountDisabe = lblFK_sNguoiGui;
-                        objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan.Replace("," + sAccountDisabe + ",", ",");
+                       // sAccountDisabe = lblFK_sNguoiGui;
+                        objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan.Replace("," + lblFK_sNguoiGui.Text + ",", ",");
                         LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(objLichDayVaHocEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
@@ -198,7 +198,7 @@ namespace DO_AN_TN.UserControl
         protected void rptDialog_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             try{
-                string sAccountDisabe;
+                //string sAccountDisabe;
                 //if (iTypeUser == Messages.ChatRoom_TypeUser_GiangVien)
                 //{
                     LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
@@ -206,7 +206,8 @@ namespace DO_AN_TN.UserControl
                     //_LichDayVaHocEO.FK_sMalop = "LH00010B1";
                     //_LichDayVaHocEO.iCaHoc = 2;
                     _LichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
-                    Label lblFK_sNguoiGui = ((Label)e.Item.FindControl("lblFK_sNguoiGui"));
+                    Label lblFK_sNguoiGui = (Label)e.Item.FindControl("lblFK_sNguoiGui");
+                    Label lblsNoidung = (Label)e.Item.FindControl("lblsNoidung");
                     ImageButton ibntTool = ((ImageButton)e.Item.FindControl("ibntTool"));
                     ImageButton ibntDeleteMessage = ((ImageButton)e.Item.FindControl("ibntDeleteMessage"));
                     ImageButton ibntHideAcc = ((ImageButton)e.Item.FindControl("ibntHideAcc"));
@@ -224,16 +225,20 @@ namespace DO_AN_TN.UserControl
                         List<string> lstAcc = _LichDayVaHocEO.sSinhVienChan.Split(',').ToList<string>();
                         if ((lstAcc.Any(s => s.Contains(lblFK_sNguoiGui.Text))) == true)
                         {
-                            sAccountDisabe = lblFK_sNguoiGui.Text;
+                           // sAccountDisabe = lblFK_sNguoiGui.Text;
                             ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                             ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         }
                         else
                         {
-                            sAccountDisabe = lblFK_sNguoiGui.Text;
+                            //sAccountDisabe = lblFK_sNguoiGui.Text;
                             ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                             ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
                         }
+                    }
+                    if (lblsNoidung != null && objTinNhanEO.FK_sNguoiGui == lblFK_sNguoiGui.Text)
+                    {
+                        lblsNoidung.ForeColor = System.Drawing.ColorTranslator.FromHtml(sColor);
                     }
                 //}
             }
@@ -246,12 +251,12 @@ namespace DO_AN_TN.UserControl
             if (ddlSmiley.Visible == false)
             {
                 ddlSmiley.Visible = true;
-                txtsNoidung.Width = 175;
+                txtsNoidung.Width = 140;
             }
             else
             {
                 ddlSmiley.Visible = false;
-                txtsNoidung.Width = 235;
+                txtsNoidung.Width = 210;
             }
         }
 
@@ -271,6 +276,12 @@ namespace DO_AN_TN.UserControl
                 ddlSmiley.DataBind();
             }
             catch { }
+        }
+
+        protected void txtColor_TextChanged(object sender, EventArgs e)
+        {
+            sColor = txtColor.Text;
+            iSumMessage = 0;
         }
     }
 }

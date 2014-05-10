@@ -150,5 +150,10 @@ namespace DO_AN_TN.Test
             lblMsg12.Text = ddlSelectList12.SelectedItem.Value.ToString() + " <=> " + ddlSelectList12.SelectedItem.Text.ToString();
             lblMsg13.Text = ddlSelectList13.SelectedItem.Value.ToString() + " <=> " + ddlSelectList13.SelectedItem.Text.ToString();
         }
+
+        protected void txtColor_TextChanged(object sender, EventArgs e)
+        {
+            lblColor.Text = txtColor.Text;
+        }
     }
 }
