@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=3.0.20820.28318, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>Other\DLL\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="CKEditor.NET, Version=3.6.2.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -1465,6 +1466,7 @@
     <Content Include="Images\New\unpin.png" />
     <Content Include="Images\New\up.png" />
     <Content Include="Media\Virus.WAV" />
+    <Content Include="Other\DLL\AjaxControlToolkit_Old.dll" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CKFinder.dll" />
