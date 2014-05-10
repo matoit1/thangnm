@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiangDay.aspx.cs" Inherits="DO_AN_TN.GiangVien.GiangDay" MasterPageFile="~/Share_Interface/GiangVien_SI.Master" %>
 <%@ Register src="../UserControl/ASM_ServerUC.ascx" tagname="ASM_ServerUC" tagprefix="uc1" %>
-<%--<%@ Register src="../UserControl/ChatUC.ascx" tagname="ChatUC" tagprefix="uc2" %>--%>
+<%@ Register src="../UserControl/ChatUC.ascx" tagname="ChatUC" tagprefix="uc2" %>
 <%@ Register src="../UserControl/Thong_Tin_Lop_HocUC.ascx" tagname="Thong_Tin_Lop_HocUC" tagprefix="uc3" %>
 <%@ Register src="../UserControl/Hoc_LieuUC.ascx" tagname="Hoc_LieuUC" tagprefix="uc4" %>
 <%@ Register src="../UserControl/VideoUC.ascx" tagname="VideoUC" tagprefix="uc5" %>
@@ -35,4 +35,5 @@
         <uc6:UploadFileUC ID="UploadFileUC1" runat="server" OnRefresh="Refresh1_Click" />
         <uc6:UploadFileUC ID="UploadFileUC2" runat="server" OnRefresh="Refresh2_Click" />
     </div>
+    <uc2:ChatUC ID="ChatUC1" runat="server" />
 </asp:Content>

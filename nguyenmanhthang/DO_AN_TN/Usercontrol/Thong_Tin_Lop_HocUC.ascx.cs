@@ -13,7 +13,7 @@ namespace DO_AN_TN.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            tSyncCurrentTime.Interval = 1000;
+            //tSyncCurrentTime.Interval = 1000;
         }
 
         public void BinData(GiangVienEO _GiangVienEO, LopHocEO _LopHocEO, PhanCongCongTacEO _PhanCongCongTacEO, LichDayVaHocEO _LichDayVaHocEO)

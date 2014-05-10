@@ -137,5 +137,14 @@ namespace DO_AN_TN.SinhVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DO_AN_TN.UserControl.Hoc_LieuUC Hoc_LieuUC1;
+        
+        /// <summary>
+        /// ChatUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DO_AN_TN.UserControl.ChatUC ChatUC1;
     }
 }

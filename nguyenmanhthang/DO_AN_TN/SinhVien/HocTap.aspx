@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HocTap.aspx.cs" Inherits="DO_AN_TN.SinhVien.HocTap" MasterPageFile="~/Share_Interface/SinhVien_SI.Master" %>
 <%@ Register src="../UserControl/ASM_ClientUC.ascx" tagname="ASM_ClientUC" tagprefix="uc1" %>
-<%--<%@ Register src="../UserControl/ChatUC.ascx" tagname="ChatUC" tagprefix="uc2" %>--%>
+<%@ Register src="../UserControl/ChatUC.ascx" tagname="ChatUC" tagprefix="uc2" %>
 <%@ Register src="../UserControl/Thong_Tin_Lop_HocUC.ascx" tagname="Thong_Tin_Lop_HocUC" tagprefix="uc3" %>
 <%@ Register src="../UserControl/Hoc_LieuUC.ascx" tagname="Hoc_LieuUC" tagprefix="uc4" %>
 <%@ Register src="../UserControl/VideoUC.ascx" tagname="VideoUC" tagprefix="uc5" %>
@@ -37,4 +37,5 @@
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
+    <uc2:ChatUC ID="ChatUC1" runat="server" />
 </asp:Content>
