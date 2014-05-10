@@ -8,6 +8,7 @@ using System.Data;
 using DataAccessObject;
 using EntityObject;
 using Shared_Libraries;
+using Shared_Libraries.Constants;
 
 namespace DO_AN_TN.UserControl
 {
@@ -97,6 +98,7 @@ namespace DO_AN_TN.UserControl
                         dsOutput = GiangVienDAO.GiangVien_Login(_GiangVienEO); break;
                     case 3: _GiangVienEO.sTendangnhapGV = txtsTendangnhap.Text;
                         _GiangVienEO.sMatkhauGV =  Security.EnCrypt(txtsMatkhau.Text);
+                        _GiangVienEO.iChucVuGV = GiangVien_iChucVuGV_C.Vien_Truong;
                         _GiangVienEO.iTrangThaiGV = 1;
                         dsOutput = GiangVienDAO.GiangVien_Login(_GiangVienEO); break;
                 }
