@@ -11,41 +11,5 @@ namespace DO_AN_TN.UserControl {
     
     
     public partial class DongHoUC {
-        
-        /// <summary>
-        /// upTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upTime;
-        
-        /// <summary>
-        /// tClock control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.Timer tClock;
-        
-        /// <summary>
-        /// lblClock control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblClock;
-        
-        /// <summary>
-        /// lblCaHoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCaHoc;
     }
 }
