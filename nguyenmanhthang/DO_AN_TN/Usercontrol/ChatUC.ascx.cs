@@ -110,6 +110,7 @@ namespace DO_AN_TN.UserControl
                 DataSet ds = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
                 if (iSumMessage != ds.Tables[0].Rows.Count)
                 {
+                    iSumMessage = ds.Tables[0].Rows.Count;
                     SinhVienEO _SinhVienEO = new SinhVienEO();
                     _SinhVienEO.FK_sMaLop = "LH00010B1";
                     lblSumOnline.Text = SinhVienDAO.SinhVien_SelectByFK_sMaLop(_SinhVienEO).Tables[0].Rows.Count.ToString();
@@ -151,6 +152,7 @@ namespace DO_AN_TN.UserControl
                 {
                     case "ibntTool": break;
                     case "ibntDeleteMessage":
+                        iSumMessage = 0;
                         objTinNhanEO.PK_lTinNhan = Convert.ToInt64(((HiddenField)e.Item.FindControl("hfdPK_lTinNhan")).Value);
                         if (TinNhanDAO.TinNhan_Delete(objTinNhanEO) == false)
                         {
@@ -162,14 +164,15 @@ namespace DO_AN_TN.UserControl
                         }
                         break;
                     case "ibntHideAcc":
+                        iSumMessage = 0;
                         sAccountDisabe = PK_sMaSV;
-
                         objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan + sAccountDisabe + ",";
                         LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(objLichDayVaHocEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         break;
                     case "ibntShowAcc":
+                        iSumMessage = 0;
                         sAccountDisabe = PK_sMaSV;
                         objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan.Replace("," + sAccountDisabe + ",", ",");
                         sAccountDisabe = "";
