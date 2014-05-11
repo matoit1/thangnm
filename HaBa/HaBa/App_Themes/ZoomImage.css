@@ -1,0 +1,66 @@
+﻿    /*Some CSS*/
+* {margin: 0; padding: 0;}
+.magnify {width: 300px; margin: 0px 50px 50px 50px; position: relative;}
+ 
+/*Đoạn code này cho phép bạn tạo ra kính lup*/
+.large {
+    width: 175px; height: 175px;
+    position: absolute;
+    border-radius: 100%;
+ 
+    /*Tạo ra hiệu ứng kính*/
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
+    0 0 7px 7px rgba(0, 0, 0, 0.25), 
+    inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+ 
+    /*1 phần của ảnh sẽ được zoom*/
+    
+ 
+    /*ẩn kính theo mặc định*/
+    display: none;
+}
+ 
+.small { display: block; }
+
+
+/* ================================================================================= */
+
+.phanchinh
+{
+    margin: 0px auto 50px auto;
+    padding: 10px;
+    width: 1024px;  
+}
+
+.thongtin
+{
+    height: 120px;
+}
+.sanpham
+{
+    height: 370px;
+}
+.hinhanhmota
+{
+    width: 500px;
+    float: left;
+}
+.binhchon
+{
+    padding: 0px 0px 50px 50px;
+}
+.thongtinsanpham
+{
+    width: 524px;
+    float: right;
+}
+.tieudesanpham
+{
+    width: 90px;
+}
+.binhluan
+{
+    padding: 50px;
+    width: 700px;
+    height: 500px;    
+}
