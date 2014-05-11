@@ -53,10 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Accounts\Login.aspx" />
-    <Content Include="App_Data\HaBa.mdf" />
-    <Content Include="App_Data\HaBa_log.ldf">
-      <DependentUpon>HaBa.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Themes\Gallery3D_1.css" />
     <Content Include="App_Themes\Gallery3D_2.css" />
     <Content Include="App_Themes\Home.css" />
@@ -125,6 +121,11 @@
     </Compile>
     <Compile Include="Client\Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\dsHaBa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHaBa.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataAccessObject\ConnectionDAO.cs" />
     <Compile Include="DataAccessObject\DataSet2Object.cs" />
@@ -256,6 +257,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\HaBa_12-05-2014_02AM.bak" />
+    <None Include="App_Data\dsHaBa.xsc">
+      <DependentUpon>dsHaBa.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\dsHaBa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHaBa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Data\dsHaBa.xss">
+      <DependentUpon>dsHaBa.xsd</DependentUpon>
+    </None>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="ShareInterface\AdminSI.Master" />
     <Content Include="ShareInterface\ClientSI.Master" />
