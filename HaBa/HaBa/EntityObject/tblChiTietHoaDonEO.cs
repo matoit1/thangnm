@@ -8,45 +8,37 @@ namespace HaBa.EntityObject
     [Serializable()]
     public class tblChiTietHoaDonEO
     {
-        private Int64 _OrdersDetails_ID;
-        private Int64 _Orders_ID;
-        private Int64 _Pro_ID;
-        private Int64 _OrdersDetails_UnitPrice;
-        private int _OrdersDetails_Quantity;
+        private Int64 _FK_lHoaDonID;
+        private Int64 _FK_lSanPhamID;
+        private Int64 _lGiaBan;
+        private Int16 _iSoLuong;
 
-        // 1. Xay dung cac phuong thuc set, get cho OrdersDetails_ID
-        public Int64 OrdersDetails_ID
+        // 1. Xay dung cac phuong thuc set, get cho FK_lHoaDonID
+        public Int64 FK_lHoaDonID
         {
-            get { return this._OrdersDetails_ID; }
-            set { this._OrdersDetails_ID = value; }
+            get { return this._FK_lHoaDonID; }
+            set { this._FK_lHoaDonID = value; }
         }
 
-        // 2. Xay dung cac phuong thuc set, get cho Orders_ID
-        public Int64 Orders_ID
+        // 2. Xay dung cac phuong thuc set, get cho FK_lSanPhamID
+        public Int64 FK_lSanPhamID
         {
-            get { return this._Orders_ID; }
-            set { this._Orders_ID = value; }
+            get { return this._FK_lSanPhamID; }
+            set { this._FK_lSanPhamID = value; }
         }
 
-        // 3. Xay dung cac phuong thuc set, get cho Pro_ID
-        public Int64 Pro_ID
+        // 3. Xay dung cac phuong thuc set, get cho lGiaBan
+        public Int64 lGiaBan
         {
-            get { return this._Pro_ID; }
-            set { this._Pro_ID = value; }
+            get { return this._lGiaBan; }
+            set { this._lGiaBan = value; }
         }
 
-        // 4. Xay dung cac phuong thuc set, get cho OrdersDetails_UnitPrice
-        public Int64 OrdersDetails_UnitPrice
+        // 4. Xay dung cac phuong thuc set, get cho iSoLuong
+        public Int16 iSoLuong
         {
-            get { return this._OrdersDetails_UnitPrice; }
-            set { this._OrdersDetails_UnitPrice = value; }
-        }
-
-        // 5. Xay dung cac phuong thuc set, get cho OrdersDetails_Quantity
-        public int OrdersDetails_Quantity
-        {
-            get { return this._OrdersDetails_Quantity; }
-            set { this._OrdersDetails_Quantity = value; }
+            get { return this._iSoLuong; }
+            set { this._iSoLuong = value; }
         }
     }
 }

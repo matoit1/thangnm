@@ -31,67 +31,49 @@ namespace HaBa.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtPK_lProductID control.
+        /// txtPK_lSanPhamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPK_lProductID;
+        protected global::System.Web.UI.WebControls.TextBox txtPK_lSanPhamID;
         
         /// <summary>
-        /// txtsName control.
+        /// txtsTenSanPham control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsName;
+        protected global::System.Web.UI.WebControls.TextBox txtsTenSanPham;
         
         /// <summary>
-        /// txtlPrice1 control.
+        /// txtlGiaBan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtlPrice1;
+        protected global::System.Web.UI.WebControls.TextBox txtlGiaBan;
         
         /// <summary>
-        /// txtlPrice2 control.
+        /// txtsMoTa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtlPrice2;
+        protected global::System.Web.UI.WebControls.TextBox txtsMoTa;
         
         /// <summary>
-        /// txtsDescription control.
+        /// txtsXuatXu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsDescription;
-        
-        /// <summary>
-        /// txtsInfomation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsInfomation;
-        
-        /// <summary>
-        /// txtsOrigin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsOrigin;
+        protected global::System.Web.UI.WebControls.TextBox txtsXuatXu;
         
         /// <summary>
         /// btnSearch control.

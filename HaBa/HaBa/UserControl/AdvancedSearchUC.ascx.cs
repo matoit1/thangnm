@@ -45,23 +45,21 @@ namespace HaBa.UserControl
 
         public void getObject()
         {
-            objtblSanPhamEO.PK_lProductID = Convert.ToInt64(txtPK_lProductID.Text);
-            objtblSanPhamEO.sName = txtsName.Text;
-            objtblSanPhamEO.lPrice = Convert.ToInt64(txtlPrice1.Text);
-            objtblSanPhamEO.sDescription = txtsDescription.Text;
-            objtblSanPhamEO.sInfomation = txtsInfomation.Text;
-            objtblSanPhamEO.sOrigin = txtsOrigin.Text;
+            objtblSanPhamEO.PK_lSanPhamID = Convert.ToInt64(txtPK_lSanPhamID.Text);
+            objtblSanPhamEO.sTenSanPham = txtsTenSanPham.Text;
+            objtblSanPhamEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
+            objtblSanPhamEO.sMoTa = txtsMoTa.Text;
+            objtblSanPhamEO.sXuatXu = txtsXuatXu.Text;
         }
 
         public void clearObject()
         {
             objtblSanPhamEO = null;
-            txtPK_lProductID.Text ="";
-            txtsName.Text ="";
-            txtlPrice1.Text ="";
-            txtsDescription.Text ="";
-            txtsInfomation.Text ="";
-            txtsOrigin.Text ="";
+            txtPK_lSanPhamID.Text = "";
+            txtsTenSanPham.Text = "";
+            txtlGiaBan.Text = "";
+            txtsMoTa.Text = "";
+            txtsXuatXu.Text = "";
         }
     }
 }

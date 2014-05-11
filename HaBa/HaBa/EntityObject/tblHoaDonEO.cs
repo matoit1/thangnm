@@ -8,94 +8,101 @@ namespace HaBa.EntityObject
     [Serializable()]
     public class tblHoaDonEO
     {
-        private Int64 _Orders_ID;
-        private int _Client_ID;
-        private int _Pay_ID;
-        private string _Pay_Email;
-        private string _Pay_FullName;
-        private string _Pay_Address;
-        private string _Pay_PhoneNumber;
-        private string _Pay_Note;
-        private bool _Pay_Status;
-        private DateTime _Pay_DateOfStart;
-        private DateTime _Pay_DateOfFinish;
+        private Int64 _PK_lHoaDonID;
+        private int _FK_iTaiKhoanID_Giao;
+        private int _FK_iTaiKhoanID_Nhan;
+        private Int16 _FK_iThanhToanID;
+        private string _sHoTen;
+        private string _sEmail;
+        private string _sDiaChi;
+        private string _sSoDienThoai;
+        private string _sGhiChu;
+        private DateTime _tNgayDatHang;
+        private DateTime _tNgayGiaoHang;
+        private Int16 _iTrangThai;
 
-
-        // 1. Xay dung cac phuong thuc set, get cho Orders_ID
-        public Int64 Orders_ID
+        // 1. Xay dung cac phuong thuc set, get cho PK_lHoaDonID
+        public Int64 PK_lHoaDonID
         {
-            get { return this._Orders_ID; }
-            set { this._Orders_ID = value; }
+            get { return this._PK_lHoaDonID; }
+            set { this._PK_lHoaDonID = value; }
         }
 
-        // 2. Xay dung cac phuong thuc set, get cho Client_ID
-        public int Client_ID
+        // 2. Xay dung cac phuong thuc set, get cho FK_iTaiKhoanID_Giao
+        public int FK_iTaiKhoanID_Giao
         {
-            get { return this._Client_ID; }
-            set { this._Client_ID = value; }
+            get { return this._FK_iTaiKhoanID_Giao; }
+            set { this._FK_iTaiKhoanID_Giao = value; }
         }
 
-        // 3. Xay dung cac phuong thuc set, get cho Pay_ID
-        public int Pay_ID
+        // 3. Xay dung cac phuong thuc set, get cho FK_iTaiKhoanID_Nhan
+        public int FK_iTaiKhoanID_Nhan
         {
-            get { return this._Pay_ID; }
-            set { this._Pay_ID = value; }
+            get { return this._FK_iTaiKhoanID_Nhan; }
+            set { this._FK_iTaiKhoanID_Nhan = value; }
         }
 
-        // 4. Xay dung cac phuong thuc set, get cho Pay_Email
-        public string Pay_Email
+        // 4. Xay dung cac phuong thuc set, get cho Pay_ID
+        public Int16 FK_iThanhToanID
         {
-            get { return this._Pay_Email; }
-            set { this._Pay_Email = value; }
+            get { return this._FK_iThanhToanID; }
+            set { this._FK_iThanhToanID = value; }
         }
 
-        // 5. Xay dung cac phuong thuc set, get cho Pay_FullName
-        public string Pay_FullName
+        // 5. Xay dung cac phuong thuc set, get cho sHoTen
+        public string sHoTen
         {
-            get { return this._Pay_FullName; }
-            set { this._Pay_FullName = value; }
+            get { return this._sHoTen; }
+            set { this._sHoTen = value; }
         }
 
-        // 6. Xay dung cac phuong thuc set, get cho Pay_Address
-        public string Pay_Address
+        // 6. Xay dung cac phuong thuc set, get cho sEmail
+        public string sEmail
         {
-            get { return this._Pay_Address; }
-            set { this._Pay_Address = value; }
+            get { return this._sEmail; }
+            set { this._sEmail = value; }
         }
 
-        // 7. Xay dung cac phuong thuc set, get cho Pay_PhoneNumber
-        public string Pay_PhoneNumber
+        // 7. Xay dung cac phuong thuc set, get cho sDiaChi
+        public string sDiaChi
         {
-            get { return this._Pay_PhoneNumber; }
-            set { this._Pay_PhoneNumber = value; }
+            get { return this._sDiaChi; }
+            set { this._sDiaChi = value; }
         }
 
-        // 8. Xay dung cac phuong thuc set, get cho Pay_Note
-        public string Pay_Note
+        // 8. Xay dung cac phuong thuc set, get cho sSoDienThoai
+        public string sSoDienThoai
         {
-            get { return this._Pay_Note; }
-            set { this._Pay_Note = value; }
+            get { return this._sSoDienThoai; }
+            set { this._sSoDienThoai = value; }
         }
 
-        // 9. Xay dung cac phuong thuc set, get cho Pay_Status
-        public bool Pay_Status
+        // 9. Xay dung cac phuong thuc set, get cho sGhiChu
+        public string sGhiChu
         {
-            get { return this._Pay_Status; }
-            set { this._Pay_Status = value; }
+            get { return this._sGhiChu; }
+            set { this._sGhiChu = value; }
         }
 
-        // 10. Xay dung cac phuong thuc set, get cho Pay_DateOfStart
-        public DateTime Pay_DateOfStart
+        // 11. Xay dung cac phuong thuc set, get cho tNgayDatHang
+        public DateTime tNgayDatHang
         {
-            get { return this._Pay_DateOfStart; }
-            set { this._Pay_DateOfStart = value; }
+            get { return this._tNgayDatHang; }
+            set { this._tNgayDatHang = value; }
         }
 
-        // 11. Xay dung cac phuong thuc set, get cho Pay_DateOfFinish
-        public DateTime Pay_DateOfFinish
+        // 12. Xay dung cac phuong thuc set, get cho tNgayGiaoHang
+        public DateTime tNgayGiaoHang
         {
-            get { return this._Pay_DateOfFinish; }
-            set { this._Pay_DateOfFinish = value; }
+            get { return this._tNgayGiaoHang; }
+            set { this._tNgayGiaoHang = value; }
+        }
+
+        // 13. Xay dung cac phuong thuc set, get cho iTrangThai
+        public Int16 iTrangThai
+        {
+            get { return this._iTrangThai; }
+            set { this._iTrangThai = value; }
         }
     }
 }

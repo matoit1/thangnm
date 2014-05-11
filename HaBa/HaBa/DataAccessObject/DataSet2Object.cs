@@ -6,6 +6,7 @@ using System.Data;
 using System.Globalization;
 using HaBa.SharedLibraries;
 using HaBa.EntityObject;
+using System.Data.SqlTypes;
 
 namespace HaBa.DataAccessObject
 {
@@ -18,18 +19,20 @@ namespace HaBa.DataAccessObject
                 tblTaiKhoanEO output = new tblTaiKhoanEO();
                 foreach (DataRow dr in input.Tables[0].Rows)
                 {
-                    output.PK_iAccountID = (dr["PK_iAccountID"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["PK_iAccountID"]);
-                    output.sFullName = (dr["sFullName"] == DBNull.Value) ? "" : Convert.ToString(dr["sFullName"]);
-                    output.sUsername = (dr["sUsername"] == DBNull.Value) ? "" : Convert.ToString(dr["sUsername"]);
-                    output.sPassword = (dr["sPassword"] == DBNull.Value) ? "" : Convert.ToString(dr["sPassword"]);
+                    output.PK_iTaiKhoanID = (dr["PK_iTaiKhoanID"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["PK_iTaiKhoanID"]);
+                    output.sTenDangNhap = (dr["sTenDangNhap"] == DBNull.Value) ? "" : Convert.ToString(dr["sTenDangNhap"]);
+                    output.sMatKhau = (dr["sMatKhau"] == DBNull.Value) ? "" : Convert.ToString(dr["sMatKhau"]);
+                    output.sHoTen = (dr["sHoTen"] == DBNull.Value) ? "" : Convert.ToString(dr["sHoTen"]);
                     output.sEmail = (dr["sEmail"] == DBNull.Value) ? "" : Convert.ToString(dr["sEmail"]);
-                    output.sAddress = (dr["sAddress"] == DBNull.Value) ? "" : Convert.ToString(dr["sAddress"]);
-                    output.sPhoneNumber = (dr["sPhoneNumber"] == DBNull.Value) ? "" : Convert.ToString(dr["sPhoneNumber"]);
-                    output.tDateOfBirth = (dr["tDateOfBirth"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tDateOfBirth"].ToString(), Messages.Format_DateTime, CultureInfo.InvariantCulture);
-                    output.iPermission = (dr["iPermission"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iPermission"]);
-                    output.tRegisterDate = (dr["tRegisterDate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tRegisterDate"].ToString(), Messages.Format_DateTime, CultureInfo.InvariantCulture);
+                    output.sDiaChi = (dr["sDiaChi"] == DBNull.Value) ? "" : Convert.ToString(dr["sDiaChi"]);
+                    output.sSoDienThoai = (dr["sSoDienThoai"] == DBNull.Value) ? "" : Convert.ToString(dr["sSoDienThoai"]);
                     output.sLinkAvatar = (dr["sLinkAvatar"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkAvatar"]);
-                    output.bStatus = (dr["bStatus"] == DBNull.Value) ? false : Convert.ToBoolean(dr["bStatus"]);
+                    output.tNgaySinh = (dr["tNgaySinh"] == DBNull.Value) ? SqlDateTime.MinValue.Value : Convert.ToDateTime(dr["tNgaySinh"]);
+                    output.tNgayDangKy = (dr["tNgayDangKy"] == DBNull.Value) ? SqlDateTime.MinValue.Value : Convert.ToDateTime(dr["tNgayDangKy"]);
+                    //output.tNgaySinh = (dr["tDateOfBirth"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tDateOfBirth"].ToString(), Messages.Format_DateTime, CultureInfo.InvariantCulture);
+                    //output.tNgayDangKy = (dr["tRegisterDate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tRegisterDate"].ToString(), Messages.Format_DateTime, CultureInfo.InvariantCulture);
+                    output.iQuyenHan = (dr["iQuyenHan"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iQuyenHan"]);
+                    output.iTrangThai = (dr["iTrangThai"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iTrangThai"]);
                 }
                 return output;
             }
@@ -156,21 +159,20 @@ namespace HaBa.DataAccessObject
                 tblSanPhamEO output = new tblSanPhamEO();
                 foreach (DataRow dr in input.Tables[0].Rows)
                 {
-                    output.PK_lProductID = (dr["PK_lProductID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["PK_lProductID"]);
-                    output.lGroup = (dr["lGroup"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["lGroup"]);
-                    output.lParent = (dr["lParent"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["lParent"]);
-                    output.sName = (dr["sName"] == DBNull.Value) ? "" : Convert.ToString(dr["sName"]);
-                    output.lPrice = (dr["lPrice"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["lPrice"]);
-                    output.lSale = (dr["lSale"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["lSale"]);
-                    output.bVAT = (dr["bVAT"] == DBNull.Value) ? false : Convert.ToBoolean(dr["bVAT"]);
-                    output.sDescription = (dr["sDescription"] == DBNull.Value) ? "" : Convert.ToString(dr["sDescription"]);
-                    output.sInfomation = (dr["sInfomation"] == DBNull.Value) ? "" : Convert.ToString(dr["sInfomation"]);
-                    output.sOrigin = (dr["sOrigin"] == DBNull.Value) ? "" : Convert.ToString(dr["sOrigin"]);
-                    output.iQuantity = (dr["iQuantity"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["iQuantity"]);
+                    output.PK_lSanPhamID = (dr["PK_lSanPhamID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["PK_lSanPhamID"]);
+                    output.FK_iNhomSanPhamID = (dr["FK_iNhomSanPhamID"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["FK_iNhomSanPhamID"]);
+                    output.sTenSanPham = (dr["sTenSanPham"] == DBNull.Value) ? "" : Convert.ToString(dr["sTenSanPham"]);
+                    output.sMoTa = (dr["sMoTa"] == DBNull.Value) ? "" : Convert.ToString(dr["sMoTa"]);
+                    output.sXuatXu = (dr["sXuatXu"] == DBNull.Value) ? "" : Convert.ToString(dr["sXuatXu"]);
                     output.sLinkImage = (dr["sLinkImage"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkImage"]);
-                    output.sLinkImageThumbnail = (dr["sLinkImageThumbnail"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkImageThumbnail"]);
-                    //output.tLastUpdate = (dr["tLastUpdate"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tLastUpdate"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
-                    output.bStatus = (dr["bStatus"] == DBNull.Value) ? false : Convert.ToBoolean(dr["bStatus"]);
+                    output.lGiaBan = (dr["lGiaBan"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["lGiaBan"]);
+                    output.iVAT = (dr["iVAT"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iVAT"]);
+                    output.iDoTuoi = (dr["iDoTuoi"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iDoTuoi"]);
+                    output.iGioiTinh = (dr["iGioiTinh"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iGioiTinh"]);
+                    output.iSoLuong = (dr["iSoLuong"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iSoLuong"]);
+                    output.tNgayCapNhat = (dr["tNgayCapNhat"] == DBNull.Value) ? SqlDateTime.MinValue.Value : Convert.ToDateTime(dr["tNgayCapNhat"]);
+                    //output.tNgayCapNhat = (dr["tNgayCapNhat"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["tNgayCapNhat"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
+                    output.iTrangThai = (dr["iTrangThai"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iTrangThai"]);
                 }
                 return output;
             }

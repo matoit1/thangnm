@@ -24,7 +24,7 @@ namespace HaBa.Admin.Accounts
                 dsInput = LoginUC1.Check(3);
                 if (dsInput.Tables[0].Rows.Count > 0)
                 {
-                    Response.Cookies["HaBa_secret"].Value = LoginUC1.txtsTendangnhap.Text;
+                    Response.Cookies["HaBa_secret"].Value = LoginUC1.txtsTenDangNhap.Text;
                     if (LoginUC1.chkRememberMe.Checked == true)
                     {
                         Response.Cookies["HaBa_secret"].Expires = DateTime.Now.AddDays(10);

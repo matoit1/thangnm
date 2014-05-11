@@ -43,20 +43,19 @@ namespace HaBa
             try
             {
                 tblSanPhamEO _ProductsEO = new tblSanPhamEO();
-                _ProductsEO.PK_lProductID = input;
+                _ProductsEO.PK_lSanPhamID = input;
                 _ProductsEO = tblSanPhamDAO.Product_SelectItem(_ProductsEO);
-                lblsName.Text = _ProductsEO.sName;
-                lblsName1.Text = _ProductsEO.sName;
-                lbltLastUpdate.Text = _ProductsEO.tLastUpdate.ToString(Messages.Format_DateTime);
-                lblsDescription.Text = _ProductsEO.sDescription;
-                lblsInfomation.Text = _ProductsEO.sInfomation;
-                lblsOrigin.Text = _ProductsEO.sOrigin;
-                lbllPrice.Text = _ProductsEO.lPrice.ToString(Messages.Format_Number) + Messages.Viet_Nam_Dong;
+                lblsName.Text = _ProductsEO.sTenSanPham;
+                lblsName1.Text = _ProductsEO.sTenSanPham;
+                lbltLastUpdate.Text = _ProductsEO.tNgayCapNhat.ToString(Messages.Format_DateTime);
+                lblsDescription.Text = _ProductsEO.sMoTa;
+                lblsOrigin.Text = _ProductsEO.sXuatXu;
+                lbllPrice.Text = _ProductsEO.lGiaBan.ToString(Messages.Format_Number) + Messages.Viet_Nam_Dong;
                 imgsLinkImage.ImageUrl = _ProductsEO.sLinkImage;
-                imgsLinkImage.AlternateText = _ProductsEO.sName;
+                imgsLinkImage.AlternateText = _ProductsEO.sTenSanPham;
                 Url_Image = _ProductsEO.sLinkImage;
-                lblbStatus.Text = _ProductsEO.bStatus == true ? Messages.tblProduct_Con_Hang : Messages.tblProduct_Het_Hang;
-                lblVote.CssClass = "rw-ui-container rw-urid-" + _ProductsEO.PK_lProductID;
+                lblbStatus.Text = _ProductsEO.iTrangThai == 1 ? Messages.tblProduct_Con_Hang : Messages.tblProduct_Het_Hang;
+                lblVote.CssClass = "rw-ui-container rw-urid-" + _ProductsEO.PK_lSanPhamID;
             }
             catch (Exception ex)
             {

@@ -40,22 +40,22 @@ namespace HaBa.UserControl {
         public global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtsTendangnhap control.
+        /// txtsTenDangNhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.TextBox txtsTendangnhap;
+        public global::System.Web.UI.WebControls.TextBox txtsTenDangNhap;
         
         /// <summary>
-        /// txtsMatkhau control.
+        /// txtsMatKhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.TextBox txtsMatkhau;
+        protected global::System.Web.UI.WebControls.TextBox txtsMatKhau;
         
         /// <summary>
         /// chkRememberMe control.

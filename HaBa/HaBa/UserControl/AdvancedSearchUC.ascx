@@ -14,29 +14,24 @@
                 </tr>
                 <tr>
                     <td>Mã Sản Phẩm</td>
-                    <td><asp:TextBox ID="txtPK_lProductID" runat="server" Width="250px"></asp:TextBox></td>
+                    <td><asp:TextBox ID="txtPK_lSanPhamID" runat="server" Width="250px"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Tên sản phẩm</td>
-                    <td><asp:TextBox ID="txtsName" runat="server" Width="250px"></asp:TextBox></td>
+                    <td><asp:TextBox ID="txtsTenSanPham" runat="server" Width="250px"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Giá bán từ</td>
-                    <td><asp:TextBox ID="txtlPrice1" runat="server" Width="90px"></asp:TextBox>đến
-                        <asp:TextBox ID="txtlPrice2" runat="server" Width="90px"></asp:TextBox>
+                    <td><asp:TextBox ID="txtlGiaBan" runat="server" Width="90px" type="range" min="1" max="10"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>Mô tả</td>
-                    <td><asp:TextBox ID="txtsDescription" runat="server" Width="250px"></asp:TextBox></td>
-                </tr>
-                <tr>
-                    <td>Thông tin</td>
-                    <td><asp:TextBox ID="txtsInfomation" runat="server" Width="250px"></asp:TextBox></td>
+                    <td><asp:TextBox ID="txtsMoTa" runat="server" Width="250px"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Xuất xứ</td>
-                    <td><asp:TextBox ID="txtsOrigin" runat="server" Width="250px"></asp:TextBox></td>
+                    <td><asp:TextBox ID="txtsXuatXu" runat="server" Width="250px"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td></td>

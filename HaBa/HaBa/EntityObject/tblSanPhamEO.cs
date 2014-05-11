@@ -8,125 +8,109 @@ namespace HaBa.EntityObject
     [Serializable()]
     public class tblSanPhamEO
     {
-        private Int64 _PK_lProductID;
-        private Int64 _lGroup;
-        private Int64 _lParent;
-        private string _sName;
-        private Int64 _lPrice;
-        private Int64 _lSale;
-        private bool _bVAT;
-        private string _sDescription;
-        private string _sInfomation;
-        private string _sOrigin;
-        private int _iQuantity;
+        private Int64 _PK_lSanPhamID;
+        private Int16 _FK_iNhomSanPhamID;
+        private string _sTenSanPham;
+        private string _sMoTa;
+        private string _sXuatXu;
         private string _sLinkImage;
-        private string _sLinkImageThumbnail;
-        private DateTime _tLastUpdate;
-        private bool _bStatus;
+        private Int64 _lGiaBan;
+        private Int16 _iVAT;
+        private Int16 _iDoTuoi;
+        private Int16 _iGioiTinh;
+        private Int16 _iSoLuong;
+        private DateTime _tNgayCapNhat;
+        private Int16 _iTrangThai;
 
-        // 1. Xay dung cac phuong thuc set, get cho PK_lProductID
-        public Int64 PK_lProductID
+        // 1. Xay dung cac phuong thuc set, get cho PK_lSanPhamID
+        public Int64 PK_lSanPhamID
         {
-            get { return this._PK_lProductID; }
-            set { this._PK_lProductID = value; }
+            get { return this._PK_lSanPhamID; }
+            set { this._PK_lSanPhamID = value; }
         }
 
-        // 2. Xay dung cac phuong thuc set, get cho lGroup
-        public Int64 lGroup
+        // 2. Xay dung cac phuong thuc set, get cho FK_iNhomSanPhamID
+        public Int16 FK_iNhomSanPhamID
         {
-            get { return this._lGroup; }
-            set { this._lGroup = value; }
+            get { return this._FK_iNhomSanPhamID; }
+            set { this._FK_iNhomSanPhamID = value; }
         }
 
-        // 3. Xay dung cac phuong thuc set, get cho lParent
-        public Int64 lParent
+        // 3. Xay dung cac phuong thuc set, get cho sTenSanPham
+        public string sTenSanPham
         {
-            get { return this._lParent; }
-            set { this._lParent = value; }
+            get { return this._sTenSanPham; }
+            set { this._sTenSanPham = value; }
         }
 
-        // 4. Xay dung cac phuong thuc set, get cho sName
-        public string sName
+        // 4. Xay dung cac phuong thuc set, get cho sMoTa
+        public string sMoTa
         {
-            get { return this._sName; }
-            set { this._sName = value; }
+            get { return this._sMoTa; }
+            set { this._sMoTa = value; }
         }
 
-        // 5. Xay dung cac phuong thuc set, get cho lPrice
-        public Int64 lPrice
+        // 5. Xay dung cac phuong thuc set, get cho sXuatXu
+        public string sXuatXu
         {
-            get { return this._lPrice; }
-            set { this._lPrice = value; }
+            get { return this._sXuatXu; }
+            set { this._sXuatXu = value; }
         }
 
-        // 6. Xay dung cac phuong thuc set, get cho lSale
-        public Int64 lSale
-        {
-            get { return this._lSale; }
-            set { this._lSale = value; }
-        }
-
-        // 7. Xay dung cac phuong thuc set, get cho bVAT
-        public bool bVAT
-        {
-            get { return this._bVAT; }
-            set { this._bVAT = value; }
-        }
-
-        // 8. Xay dung cac phuong thuc set, get cho sDescription
-        public string sDescription
-        {
-            get { return this._sDescription; }
-            set { this._sDescription = value; }
-        }
-
-        // 9. Xay dung cac phuong thuc set, get cho sInfomation
-        public string sInfomation
-        {
-            get { return this._sInfomation; }
-            set { this._sInfomation = value; }
-        }
-
-        // 10. Xay dung cac phuong thuc set, get cho sOrigin
-        public string sOrigin
-        {
-            get { return this._sOrigin; }
-            set { this._sOrigin = value; }
-        }
-
-        // 11. Xay dung cac phuong thuc set, get cho iQuantity
-        public int iQuantity
-        {
-            get { return this._iQuantity; }
-            set { this._iQuantity = value; }
-        }
-
-        // 12. Xay dung cac phuong thuc set, get cho sLinkImage
+        // 6. Xay dung cac phuong thuc set, get cho sLinkImage
         public string sLinkImage
         {
             get { return this._sLinkImage; }
             set { this._sLinkImage = value; }
         }
 
-        // 13. Xay dung cac phuong thuc set, get cho sLinkImageThumbnail
-        public string sLinkImageThumbnail
+        // 7. Xay dung cac phuong thuc set, get cho lGiaBan
+        public Int64 lGiaBan
         {
-            get { return this._sLinkImageThumbnail; }
-            set { this._sLinkImageThumbnail = value; }
+            get { return this._lGiaBan; }
+            set { this._lGiaBan = value; }
         }
 
-        // 14. Xay dung cac phuong thuc set, get cho tLastUpdate
-        public DateTime tLastUpdate
+        // 8. Xay dung cac phuong thuc set, get cho iVAT
+        public Int16 iVAT
         {
-            get { return this._tLastUpdate; }
-            set { this._tLastUpdate = value; }
+            get { return this._iVAT; }
+            set { this._iVAT = value; }
         }
 
-        // 15. Xay dung cac phuong thuc set, get cho bStatus
-        public bool bStatus
+        // 9. Xay dung cac phuong thuc set, get cho iDoTuoi
+        public Int16 iDoTuoi
         {
-            get { return this._bStatus; }
-            set { this._bStatus = value; }
+            get { return this._iDoTuoi; }
+            set { this._iDoTuoi = value; }
+        }
+
+        // 10. Xay dung cac phuong thuc set, get cho iGioiTinh
+        public Int16 iGioiTinh
+        {
+            get { return this._iGioiTinh; }
+            set { this._iGioiTinh = value; }
+        }
+
+        // 11. Xay dung cac phuong thuc set, get cho iSoLuong
+        public Int16 iSoLuong
+        {
+            get { return this._iSoLuong; }
+            set { this._iSoLuong = value; }
+        }
+
+        // 12. Xay dung cac phuong thuc set, get cho tNgayCapNhat
+        public DateTime tNgayCapNhat
+        {
+            get { return this._tNgayCapNhat; }
+            set { this._tNgayCapNhat = value; }
+        }
+
+        // 13. Xay dung cac phuong thuc set, get cho iTrangThai
+        public Int16 iTrangThai
+        {
+            get { return this._iTrangThai; }
+            set { this._iTrangThai = value; }
         }
     }
 }
