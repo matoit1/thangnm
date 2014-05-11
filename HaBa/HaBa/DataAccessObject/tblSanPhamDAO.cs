@@ -24,7 +24,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblProduct_CheckExists_PK_lProductID", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_lProductID", _tblSanPhamEO.PK_lProductID));
+                    cmd.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -55,21 +55,19 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblProduct_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_lProductID", _tblSanPhamEO.PK_lProductID));
-                    cmd.Parameters.Add(new SqlParameter("@lGroup", _tblSanPhamEO.lGroup));
-                    cmd.Parameters.Add(new SqlParameter("@lParent", _tblSanPhamEO.lParent));
-                    cmd.Parameters.Add(new SqlParameter("@sName", _tblSanPhamEO.sName));
-                    cmd.Parameters.Add(new SqlParameter("@lPrice", _tblSanPhamEO.lPrice));
-                    cmd.Parameters.Add(new SqlParameter("@lSale", _tblSanPhamEO.lSale));
-                    cmd.Parameters.Add(new SqlParameter("@bVAT", _tblSanPhamEO.bVAT));
-                    cmd.Parameters.Add(new SqlParameter("@sDescription", _tblSanPhamEO.sDescription));
-                    cmd.Parameters.Add(new SqlParameter("@sInfomation", _tblSanPhamEO.sInfomation));
-                    cmd.Parameters.Add(new SqlParameter("@sOrigin", _tblSanPhamEO.sOrigin));
-                    cmd.Parameters.Add(new SqlParameter("@iQuantity", _tblSanPhamEO.iQuantity));
+                    cmd.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
+                    cmd.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
+                    cmd.Parameters.Add(new SqlParameter("@sTenSanPham", _tblSanPhamEO.sTenSanPham));
+                    cmd.Parameters.Add(new SqlParameter("@sMoTa", _tblSanPhamEO.sMoTa));
+                    cmd.Parameters.Add(new SqlParameter("@sXuatXu", _tblSanPhamEO.sXuatXu));
                     cmd.Parameters.Add(new SqlParameter("@sLinkImage", _tblSanPhamEO.sLinkImage));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkImageThumbnail", _tblSanPhamEO.sLinkImageThumbnail));
-                    cmd.Parameters.Add(new SqlParameter("@tLastUpdate", _tblSanPhamEO.tLastUpdate));
-                    cmd.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.bStatus));
+                    cmd.Parameters.Add(new SqlParameter("@lGiaBan", _tblSanPhamEO.lGiaBan));
+                    cmd.Parameters.Add(new SqlParameter("@iVAT", _tblSanPhamEO.iVAT));
+                    cmd.Parameters.Add(new SqlParameter("@iDoTuoi", _tblSanPhamEO.iDoTuoi));
+                    cmd.Parameters.Add(new SqlParameter("@iGioiTinh", _tblSanPhamEO.iGioiTinh));
+                    cmd.Parameters.Add(new SqlParameter("@iSoLuong", _tblSanPhamEO.iSoLuong));
+                    cmd.Parameters.Add(new SqlParameter("@tNgayCapNhat", _tblSanPhamEO.tNgayCapNhat));
+                    cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -94,21 +92,19 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblProduct_Update", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_lProductID", _tblSanPhamEO.PK_lProductID));
-                    cmd.Parameters.Add(new SqlParameter("@lGroup", _tblSanPhamEO.lGroup));
-                    cmd.Parameters.Add(new SqlParameter("@lParent", _tblSanPhamEO.lParent));
-                    cmd.Parameters.Add(new SqlParameter("@sName", _tblSanPhamEO.sName));
-                    cmd.Parameters.Add(new SqlParameter("@lPrice", _tblSanPhamEO.lPrice));
-                    cmd.Parameters.Add(new SqlParameter("@lSale", _tblSanPhamEO.lSale));
-                    cmd.Parameters.Add(new SqlParameter("@bVAT", _tblSanPhamEO.bVAT));
-                    cmd.Parameters.Add(new SqlParameter("@sDescription", _tblSanPhamEO.sDescription));
-                    cmd.Parameters.Add(new SqlParameter("@sInfomation", _tblSanPhamEO.sInfomation));
-                    cmd.Parameters.Add(new SqlParameter("@sOrigin", _tblSanPhamEO.sOrigin));
-                    cmd.Parameters.Add(new SqlParameter("@iQuantity", _tblSanPhamEO.iQuantity));
+                    cmd.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
+                    cmd.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
+                    cmd.Parameters.Add(new SqlParameter("@sTenSanPham", _tblSanPhamEO.sTenSanPham));
+                    cmd.Parameters.Add(new SqlParameter("@sMoTa", _tblSanPhamEO.sMoTa));
+                    cmd.Parameters.Add(new SqlParameter("@sXuatXu", _tblSanPhamEO.sXuatXu));
                     cmd.Parameters.Add(new SqlParameter("@sLinkImage", _tblSanPhamEO.sLinkImage));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkImage1", _tblSanPhamEO.sLinkImageThumbnail));
-                    cmd.Parameters.Add(new SqlParameter("@tLastUpdate", _tblSanPhamEO.tLastUpdate));
-                    cmd.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.bStatus));
+                    cmd.Parameters.Add(new SqlParameter("@lGiaBan", _tblSanPhamEO.lGiaBan));
+                    cmd.Parameters.Add(new SqlParameter("@iVAT", _tblSanPhamEO.iVAT));
+                    cmd.Parameters.Add(new SqlParameter("@iDoTuoi", _tblSanPhamEO.iDoTuoi));
+                    cmd.Parameters.Add(new SqlParameter("@iGioiTinh", _tblSanPhamEO.iGioiTinh));
+                    cmd.Parameters.Add(new SqlParameter("@iSoLuong", _tblSanPhamEO.iSoLuong));
+                    cmd.Parameters.Add(new SqlParameter("@tNgayCapNhat", _tblSanPhamEO.tNgayCapNhat));
+                    cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -133,7 +129,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblProduct_Delete", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_lProductID", _tblSanPhamEO.PK_lProductID));
+                    cmd.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -149,7 +145,7 @@ namespace HaBa.DataAccessObject
         /// <summary> 5. Product_DeleteList </summary>
         /// <param name="_ListPK_sMaMonhoc"></param>
         /// <returns></returns>
-        public static bool Product_DeleteList(String _ListPK_lProductID)
+        public static bool Product_DeleteList(String _ListPK_lSanPhamID)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -158,7 +154,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblProduct_DeleteList", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@ListPK_lProductID", _ListPK_lProductID));
+                    cmd.Parameters.Add(new SqlParameter("@ListPK_lSanPhamID", _ListPK_lSanPhamID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -187,7 +183,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lProductID", _tblSanPhamEO.PK_lProductID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
@@ -241,8 +237,8 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList_All_Group", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@lGroup", _tblSanPhamEO.lGroup));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.bStatus));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
@@ -269,8 +265,8 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList_All_Parent_In_Group", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@lGroup", _tblSanPhamEO.lGroup));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.bStatus));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
@@ -297,7 +293,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList_All_Product", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.bStatus));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
@@ -324,8 +320,8 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList_All_Product_In_Group", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@lGroup", _tblSanPhamEO.lGroup));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.bStatus));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

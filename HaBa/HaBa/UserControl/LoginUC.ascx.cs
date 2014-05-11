@@ -19,7 +19,7 @@ namespace HaBa.UserControl
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtsTendangnhap.Focus();
+            txtsTenDangNhap.Focus();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -39,17 +39,17 @@ namespace HaBa.UserControl
 
                 switch (iType)
                 {
-                    case 1: _AccountsEO.sUsername = txtsTendangnhap.Text;   //Khách hàng
-                        _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
-                        _AccountsEO.iPermission = 1;
+                    case 1: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text;   //Khách hàng
+                        _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
+                        _AccountsEO.iQuyenHan = 1;
                         dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
-                    case 2: _AccountsEO.sUsername = txtsTendangnhap.Text; //Nhân viên
-                        _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
-                        _AccountsEO.iPermission = 2;
+                    case 2: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text; //Nhân viên
+                        _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
+                        _AccountsEO.iQuyenHan = 2;
                         dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
-                    case 3: _AccountsEO.sUsername = txtsTendangnhap.Text; //Quản trị
-                        _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
-                        _AccountsEO.iPermission = 3;
+                    case 3: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text; //Quản trị
+                        _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
+                        _AccountsEO.iQuyenHan = 3;
                         dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
                 }
             }

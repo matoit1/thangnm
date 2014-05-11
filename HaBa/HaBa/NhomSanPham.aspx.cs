@@ -17,11 +17,11 @@ namespace HaBa
             {
                 if (!IsPostBack)
                 {
-                    if (Request.QueryString["lGroup"] != null)
+                    if (Request.QueryString["FK_iNhomSanPhamID"] != null)
                     {
                         tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
-                        _tblSanPhamEO.lGroup = Convert.ToInt64(Request.QueryString["lGroup"]);
-                        _tblSanPhamEO.bStatus = true;
+                        _tblSanPhamEO.FK_iNhomSanPhamID = Convert.ToInt16(Request.QueryString["FK_iNhomSanPhamID"]);
+                        _tblSanPhamEO.iTrangThai = 1;
                         Gallery3DUC1.BindData(tblSanPhamDAO.Product_SelectList_All_Product_In_Group(_tblSanPhamEO));
                     }
                 }

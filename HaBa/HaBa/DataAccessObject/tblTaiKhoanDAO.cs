@@ -24,7 +24,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblAccount_CheckExists_PK_iAccountID", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iAccountID));
+                    cmd.Parameters.Add(new SqlParameter("@PK_iTaiKhoanID", _tblTaiKhoanEO.PK_iTaiKhoanID));
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -54,7 +54,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblAccount_CheckExists_sUsername", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@sUsername", _tblTaiKhoanEO.sUsername));
+                    cmd.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -115,18 +115,18 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblAccount_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iAccountID));
-                    cmd.Parameters.Add(new SqlParameter("@sFullName", _tblTaiKhoanEO.sFullName));
-                    cmd.Parameters.Add(new SqlParameter("@sUsername", _tblTaiKhoanEO.sUsername));
-                    cmd.Parameters.Add(new SqlParameter("@sPassword", _tblTaiKhoanEO.sPassword));
+                    cmd.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iTaiKhoanID));
+                    cmd.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
+                    cmd.Parameters.Add(new SqlParameter("@sMatKhau", _tblTaiKhoanEO.sMatKhau));
+                    cmd.Parameters.Add(new SqlParameter("@sHoTen", _tblTaiKhoanEO.sHoTen));
                     cmd.Parameters.Add(new SqlParameter("@sEmail", _tblTaiKhoanEO.sEmail));
-                    cmd.Parameters.Add(new SqlParameter("@sAddress", _tblTaiKhoanEO.sAddress));
-                    cmd.Parameters.Add(new SqlParameter("@sPhoneNumber", _tblTaiKhoanEO.sPhoneNumber));
-                    cmd.Parameters.Add(new SqlParameter("@tDateOfBirth", _tblTaiKhoanEO.tDateOfBirth));
-                    cmd.Parameters.Add(new SqlParameter("@iPermission", _tblTaiKhoanEO.iPermission));
-                    cmd.Parameters.Add(new SqlParameter("@tRegisterDate", _tblTaiKhoanEO.tRegisterDate));
+                    cmd.Parameters.Add(new SqlParameter("@sDiaChi", _tblTaiKhoanEO.sDiaChi));
+                    cmd.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblTaiKhoanEO.sSoDienThoai));
                     cmd.Parameters.Add(new SqlParameter("@sLinkAvatar", _tblTaiKhoanEO.sLinkAvatar));
-                    cmd.Parameters.Add(new SqlParameter("@bStatus", _tblTaiKhoanEO.bStatus));
+                    cmd.Parameters.Add(new SqlParameter("@tNgaySinh", _tblTaiKhoanEO.tNgaySinh));
+                    cmd.Parameters.Add(new SqlParameter("@tNgayDangKy", _tblTaiKhoanEO.tNgayDangKy));
+                    cmd.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
+                    cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblTaiKhoanEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -151,18 +151,18 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblAccount_Update", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iAccountID));
-                    cmd.Parameters.Add(new SqlParameter("@sFullName", _tblTaiKhoanEO.sFullName));
-                    cmd.Parameters.Add(new SqlParameter("@sUsername", _tblTaiKhoanEO.sUsername));
-                    cmd.Parameters.Add(new SqlParameter("@sPassword", _tblTaiKhoanEO.sPassword));
+                    cmd.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iTaiKhoanID));
+                    cmd.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
+                    cmd.Parameters.Add(new SqlParameter("@sMatKhau", _tblTaiKhoanEO.sMatKhau));
+                    cmd.Parameters.Add(new SqlParameter("@sHoTen", _tblTaiKhoanEO.sHoTen));
                     cmd.Parameters.Add(new SqlParameter("@sEmail", _tblTaiKhoanEO.sEmail));
-                    cmd.Parameters.Add(new SqlParameter("@sAddress", _tblTaiKhoanEO.sAddress));
-                    cmd.Parameters.Add(new SqlParameter("@sPhoneNumber", _tblTaiKhoanEO.sPhoneNumber));
-                    cmd.Parameters.Add(new SqlParameter("@tDateOfBirth", _tblTaiKhoanEO.tDateOfBirth));
-                    cmd.Parameters.Add(new SqlParameter("@iPermission", _tblTaiKhoanEO.iPermission));
-                    cmd.Parameters.Add(new SqlParameter("@tRegisterDate", _tblTaiKhoanEO.tRegisterDate));
+                    cmd.Parameters.Add(new SqlParameter("@sDiaChi", _tblTaiKhoanEO.sDiaChi));
+                    cmd.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblTaiKhoanEO.sSoDienThoai));
                     cmd.Parameters.Add(new SqlParameter("@sLinkAvatar", _tblTaiKhoanEO.sLinkAvatar));
-                    cmd.Parameters.Add(new SqlParameter("@bStatus", _tblTaiKhoanEO.bStatus));
+                    cmd.Parameters.Add(new SqlParameter("@tNgaySinh", _tblTaiKhoanEO.tNgaySinh));
+                    cmd.Parameters.Add(new SqlParameter("@tNgayDangKy", _tblTaiKhoanEO.tNgayDangKy));
+                    cmd.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
+                    cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblTaiKhoanEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -187,8 +187,8 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblAccount_ResetPassword", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@sUsername", _tblTaiKhoanEO.sUsername));
-                    cmd.Parameters.Add(new SqlParameter("@sPassword", _tblTaiKhoanEO.sPassword));
+                    cmd.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
+                    cmd.Parameters.Add(new SqlParameter("@sMatKhau", _tblTaiKhoanEO.sMatKhau));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -213,7 +213,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblAccount_Delete", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iAccountID));
+                    cmd.Parameters.Add(new SqlParameter("@PK_iTaiKhoanID", _tblTaiKhoanEO.PK_iTaiKhoanID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -229,7 +229,7 @@ namespace HaBa.DataAccessObject
         /// <summary> 5. Account_DeleteList </summary>
         /// <param name="_ListPK_sMaMonhoc"></param>
         /// <returns></returns>
-        public static bool Account_DeleteList(String _ListPK_iAccountID)
+        public static bool Account_DeleteList(String _ListPK_iTaiKhoanID)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -238,7 +238,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblAccount_DeleteList", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@ListPK_iAccountID", _ListPK_iAccountID));
+                    cmd.Parameters.Add(new SqlParameter("@ListPK_iTaiKhoanID", _ListPK_iTaiKhoanID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -267,7 +267,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblAccount_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iAccountID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iTaiKhoanID", _tblTaiKhoanEO.PK_iTaiKhoanID));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
@@ -296,7 +296,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblAccount_SelectBysUsername", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sUsername", _tblTaiKhoanEO.sUsername));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
@@ -326,7 +326,7 @@ namespace HaBa.DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblAccount_SelectBysEmailvssPhoneNumber", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sEmail", _tblTaiKhoanEO.sEmail));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sPhoneNumber", _tblTaiKhoanEO.sPhoneNumber));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblTaiKhoanEO.sSoDienThoai));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
@@ -380,18 +380,18 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblAccount_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iAccountID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sFullName", _tblTaiKhoanEO.sFullName));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sUsername", _tblTaiKhoanEO.sUsername));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sPassword", _tblTaiKhoanEO.sPassword));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iAccountID", _tblTaiKhoanEO.PK_iTaiKhoanID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sMatKhau", _tblTaiKhoanEO.sMatKhau));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sHoTen", _tblTaiKhoanEO.sHoTen));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sEmail", _tblTaiKhoanEO.sEmail));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sAddress", _tblTaiKhoanEO.sAddress));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sPhoneNumber", _tblTaiKhoanEO.sPhoneNumber));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@tDateOfBirth", _tblTaiKhoanEO.tDateOfBirth));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iPermission", _tblTaiKhoanEO.iPermission));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@tRegisterDate", _tblTaiKhoanEO.tRegisterDate));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sDiaChi", _tblTaiKhoanEO.sDiaChi));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblTaiKhoanEO.sSoDienThoai));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkAvatar", _tblTaiKhoanEO.sLinkAvatar));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblTaiKhoanEO.bStatus));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@tNgaySinh", _tblTaiKhoanEO.tNgaySinh));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@tNgayDangKy", _tblTaiKhoanEO.tNgayDangKy));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblTaiKhoanEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
@@ -418,9 +418,9 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblAccount_Login", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sUsername", _tblTaiKhoanEO.sUsername));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sPassword", _tblTaiKhoanEO.sPassword));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iPermission", _tblTaiKhoanEO.iPermission));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sMatKhau", _tblTaiKhoanEO.sMatKhau));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
