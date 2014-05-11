@@ -77,6 +77,7 @@
     <Content Include="bin\HaBa.dll" />
     <Content Include="bin\HaBa.pdb" />
     <Content Include="Client\Accounts\Login.aspx" />
+    <Content Include="Client\Default.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\Product\Ao_So_Mi.png" />
     <Content Include="Images\Product\Chan_Vay.png" />
@@ -126,6 +127,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsHaBa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataAccessObject\ConnectionDAO.cs" />
     <Compile Include="DataAccessObject\DataSet2Object.cs" />
