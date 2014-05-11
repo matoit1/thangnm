@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClientSI.master.cs" Inherits="HaBa.ShareInterface.ClientSI" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Trang khách hàng HaBa</title>
+    <meta name="google-site-verification" content="KNqZ3EHJ81Xtlhn1S9qfb1MXdkJnscs9Ft61DFpMj1s" />
+    <link rel="author" href="https://plus.google.com/109664385150832451485" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
