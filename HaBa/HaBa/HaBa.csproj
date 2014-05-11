@@ -118,6 +118,8 @@
     <Compile Include="Client\Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataAccessObject\ConnectionDAO.cs" />
+    <Compile Include="DataAccessObject\DataSet2Object.cs" />
     <Compile Include="DataAccessObject\tblChiTietHoaDonDAO.cs" />
     <Compile Include="DataAccessObject\tblHoaDonDAO.cs" />
     <Compile Include="DataAccessObject\tblNhomSanPhamDAO.cs" />

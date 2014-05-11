@@ -19,7 +19,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLogin;
+        public global::System.Web.UI.WebControls.Panel pnlLogin;
         
         /// <summary>
         /// imgProfile control.
@@ -28,7 +28,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgProfile;
+        public global::System.Web.UI.WebControls.ImageButton imgProfile;
         
         /// <summary>
         /// lblMsg control.
@@ -37,7 +37,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg;
+        public global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
         /// txtsTendangnhap control.
@@ -46,7 +46,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsTendangnhap;
+        public global::System.Web.UI.WebControls.TextBox txtsTendangnhap;
         
         /// <summary>
         /// txtsMatkhau control.
@@ -55,7 +55,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsMatkhau;
+        public global::System.Web.UI.WebControls.TextBox txtsMatkhau;
         
         /// <summary>
         /// chkRememberMe control.
@@ -64,7 +64,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkRememberMe;
+        public global::System.Web.UI.WebControls.CheckBox chkRememberMe;
         
         /// <summary>
         /// hplLost control.
@@ -73,7 +73,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplLost;
+        public global::System.Web.UI.WebControls.HyperLink hplLost;
         
         /// <summary>
         /// btnLogin control.
@@ -82,7 +82,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        public global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
         /// hplHelp control.
@@ -91,6 +91,6 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplHelp;
+        public global::System.Web.UI.WebControls.HyperLink hplHelp;
     }
 }

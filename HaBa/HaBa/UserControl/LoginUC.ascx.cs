@@ -35,22 +35,22 @@ namespace HaBa.UserControl
             DataSet dsOutput = null;
             try
             {
-                AccountEO _AccountsEO = new AccountEO();
+                tblTaiKhoanEO _AccountsEO = new tblTaiKhoanEO();
 
                 switch (iType)
                 {
                     case 1: _AccountsEO.sUsername = txtsTendangnhap.Text;   //Khách hàng
                         _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
                         _AccountsEO.iPermission = 1;
-                        dsOutput = AccountDAO.Account_Login(_AccountsEO); break;
+                        dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
                     case 2: _AccountsEO.sUsername = txtsTendangnhap.Text; //Nhân viên
                         _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
                         _AccountsEO.iPermission = 2;
-                        dsOutput = AccountDAO.Account_Login(_AccountsEO); break;
+                        dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
                     case 3: _AccountsEO.sUsername = txtsTendangnhap.Text; //Quản trị
                         _AccountsEO.sPassword = Security.EnCrypt(txtsMatkhau.Text);
                         _AccountsEO.iPermission = 3;
-                        dsOutput = AccountDAO.Account_Login(_AccountsEO); break;
+                        dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
                 }
             }
             catch (Exception ex)
