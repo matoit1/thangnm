@@ -1466,6 +1466,9 @@
     <Content Include="Images\New\unpin.png" />
     <Content Include="Images\New\up.png" />
     <Content Include="Media\Virus.WAV" />
+    <Content Include="obj\Debug\DO_AN_TN.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DO_AN_TN.dll" />
+    <Content Include="obj\Debug\DO_AN_TN.pdb" />
     <Content Include="Other\DLL\AjaxControlToolkit_Old.dll" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
@@ -2589,6 +2592,7 @@
     <None Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\preview.jsp" />
     <None Include="ckeditor\.htaccess" />
     <None Include="ckfinder\plugins\fileeditor\codemirror\LICENSE" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Other\ProjectManagement\General.xlsx" />
     <Content Include="Share_Interface\Home_SI.Master" />
     <Content Include="Share_Interface\Test.Master" />
