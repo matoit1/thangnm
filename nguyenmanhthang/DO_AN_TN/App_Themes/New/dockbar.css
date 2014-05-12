@@ -25,6 +25,7 @@ body {
 
 #idock .nav>li>a {
     display: block;
+    font-weight:bold;
 }
 
 #idock .nav>li>a:hover,#idock .nav>li>a:focus {
