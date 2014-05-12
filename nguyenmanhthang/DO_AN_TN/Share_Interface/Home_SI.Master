@@ -55,7 +55,7 @@
                 <div class="menuleft">
                                                                                                                                                                                                                                                                                                                                                                                                                                                     <ul id="css3menu1" class="topmenu">
                     <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
-                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/blue_circle - home2.png" AlternateText="Trang chủ" /> </asp:HyperLink>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/home.png" AlternateText="Trang chủ" /> </asp:HyperLink>
                     </li>
                     <li class="toproot"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Topic.aspx">Giới thiệu</asp:HyperLink>
                         <ul>

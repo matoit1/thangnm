@@ -1,5 +1,5 @@
 ul#css3menu1,ul#css3menu1 ul{
-	margin:0;list-style:none;background-color:#005588;border-width:0;border-style:solid;border-color:;}
+	margin:0;list-style:none;background-color:#29878F;border-width:0;border-style:solid;border-color:;}
 ul#css3menu1 ul{
 	display:none;position:absolute;left:0;top:100%;padding:0 5px 5px;background-color:#3EC2C5;border-radius:0 5px 5px 5px;-moz-border-radius:0 5px 5px 5px;-webkit-border-radius:0;-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;-webkit-border-bottom-left-radius:5px; width: 250px}
 ul#css3menu1 li:hover>*{
@@ -19,7 +19,7 @@ ul#css3menu1 ul>li{
 ul#css3menu1 a:active, ul#css3menu1 a:focus{
 	outline-style:none;}
 ul#css3menu1 a{
-	display:block;vertical-align:middle;text-align:left;text-decoration:none;font:bold 15px Times,sans-serif;color:White;text-shadow:#232323 0px -1px 1px;cursor:pointer;padding:9px 10px 9px 15px;background-color:#3E3E3E;background-image:url("mainbk.png");background-repeat:no-repeat;background-position:0 50%;border-width:1px 1px 0 1px;border-style:solid;border-color:#3E3E3E;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
+	display:block;vertical-align:middle;text-align:left;text-decoration:none;font:bold 15px Times,sans-serif;color:White;text-shadow:#232323 0px -1px 1px;cursor:pointer;padding:9px 10px 9px 15px;background-color:#29878F;background-image:url("mainbk.png");background-repeat:no-repeat;background-position:0 50%;border-width:1px 1px 0 1px;border-color:#3E3E3E;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
 ul#css3menu1 ul li{
 	float:none;}
 ul#css3menu1 ul a{

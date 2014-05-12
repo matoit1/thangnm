@@ -77,6 +77,7 @@
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\login.css" />
     <Content Include="Images\New\banner.png" />
+    <Content Include="Images\New\home.png" />
     <Content Include="Images\Smileys\1.gif" />
     <Content Include="Images\Smileys\2.gif" />
     <Content Include="Images\Smileys\3.gif" />
@@ -1459,7 +1460,6 @@
     <Content Include="Images\Icon\closebox.png" />
     <Content Include="Images\New\103.gif" />
     <Content Include="Images\New\bg-active.png" />
-    <Content Include="Images\New\blue_circle - home2.png" />
     <Content Include="Images\New\conversation.png" />
     <Content Include="Images\New\dockblue-bg.png" />
     <Content Include="Images\New\pin.png" />
