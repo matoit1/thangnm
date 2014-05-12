@@ -29,6 +29,7 @@
                     <ItemTemplate>
                         <asp:HiddenField ID="hfdPK_lTinNhan" runat="server" Value='<%#Eval("PK_lTinNhan")%>' />
                        <%-- <span style="color: <%=sColor%>">--%>
+                        <asp:HiddenField ID="hfFK_sNguoiGui" runat="server" Value='<%#Eval("FK_sNguoiGui")%>' />
                             <asp:Label ID="lblFK_sNguoiGui" runat="server" Text='<%#Eval("FK_sNguoiGui")%>' Font-Bold="true"></asp:Label>
                         <%--</span>--%>
                         <span style="font-size:10px">

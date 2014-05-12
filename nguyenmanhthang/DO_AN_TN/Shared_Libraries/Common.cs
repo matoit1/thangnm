@@ -294,6 +294,7 @@ namespace Shared_Libraries
         public const int ChatRoom_MaxUsers = 50;
         public const int ChatRoom_TypeUser_GiangVien = 1;
         public const int ChatRoom_TypeUser_SinhVien = 2;
+        public const string Chat_An_Danh = "Ẩn danh! ";
         #endregion
 
         #region "Error"
