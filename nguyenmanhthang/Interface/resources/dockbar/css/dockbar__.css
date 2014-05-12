@@ -1,0 +1,333 @@
+body {
+    margin: 0 0;
+}
+#idock {
+    color: #333333;
+    font-family: "lucida grande", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 10px;
+    
+
+}
+
+#idock li {
+    line-height: 20px;
+}
+#idock ul.unstyled,#idock ol.unstyled {
+    margin-left: 0;
+    list-style: none;
+}
+#idock .nav {
+    margin-left: 0;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+#idock .nav>li>a {
+    display: block;
+}
+
+#idock .nav>li>a:hover,#idock .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #eeeeee;
+}
+
+#idock .nav>li>a>img {
+    max-width: none;
+}
+
+#idock .nav>.pull-right {
+    float: right;
+}
+
+#idock .navbar {
+    overflow: visible;
+
+    *position: relative;
+    *z-index: 2;
+}
+
+#idock .navbar-inner {
+    min-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #2c539e; /* Old browsers */
+    background: -moz-linear-gradient(top, #2c539e 0%, #2c539e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c539e), color-stop(100%,#2c539e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #2c539e 0%,#2c539e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #2c539e 0%,#2c539e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #2c539e 0%,#2c539e 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #2c539e 0%,#2c539e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#2c539e',GradientType=0 ); /* IE6-9 */
+    border: none;
+    border-radius:0;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    *zoom: 1;
+}
+
+#idock .navbar-inner:before,#idock .navbar-inner:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+#idock .navbar-inner:after {
+    clear: both;
+}
+
+#idock .navbar .container {
+    width: auto;
+}
+#idock .navbar .nav {
+    position: relative;
+    left: 0;
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+}
+#idock .navbar .nav.pull-right {
+    float: right;
+    margin-right: 0;
+}
+#idock .navbar .nav>li {
+    float: left;
+}
+
+#idock .navbar .nav>li>a {
+    float: none;
+    padding: 6px 15px 4px;
+    color: #D8DFEA;
+    text-decoration: none;
+    text-shadow: none;
+}
+#idock .navbar .nav>li>a:focus,#idock .navbar .nav>li>a:hover {
+    background-color: #4B67A1;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#idock .navbar .nav>.active>a,#idock .navbar .nav>.active>a:hover,#idock .navbar .nav>.active>a:focus
+{
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #4B67A1;
+    -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
+#idock .btn-navbar .icon-bar+.icon-bar {
+    margin-top: 3px;
+}
+#idock .navbar .nav>li>.dropdown-menu:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -7px;
+    left: 9px;
+}
+#idock .navbar .nav>li>.dropdown-menu:after {
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    position: absolute;
+    top: -6px;
+    left: auto;
+    right: 13px;
+
+}
+#idock .navbar .pull-right>li>.dropdown-menu, #idock .navbar .nav>li>.dropdown-menu.pull-right
+{
+    left: auto;
+    right: 0;
+}
+
+#idock .navbar .pull-right>li>.dropdown-menu:before,#idock .navbar .nav>li>.dropdown-menu.pull-right:before
+{
+    left: auto;
+    right: 12px;
+}
+
+#idock.navbar .pull-right>li>.dropdown-menu:after,#idock .navbar .nav>li>.dropdown-menu.pull-right:after
+{
+    left: auto;
+    right: 13px;
+}
+
+#idock .navbar .pull-right>li>.dropdown-menu .dropdown-menu,#idock .navbar .nav>li>.dropdown-menu.pull-right .dropdown-menu
+{
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: -1px;
+
+}
+
+#idock .dropdown {
+    position: relative;
+}
+#idock .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 0;
+    margin: 2px 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+#idock .dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+}
+
+#idock .dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: #333333;
+    white-space: nowrap;
+}
+
+#idock .dropdown-menu>li>a:hover,#idock .dropdown-menu>li>a:focus,#idock .dropdown-submenu:hover>a,#idock .dropdown-submenu:focus>a
+{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0081c2;
+    background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc),
+        to(#0077b3));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+    background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc',
+        endColorstr='#ff0077b3', GradientType=0);
+}
+
+#idock .dropdown-menu>.active>a,#idock .dropdown-menu>.active>a:hover,#idock .dropdown-menu>.active>a:focus
+{
+    color: #ffffff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #0081c2;
+    background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc),
+        to(#0077b3));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+    background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc',
+        endColorstr='#ff0077b3', GradientType=0);
+}
+
+#idock .dropdown-menu>.disabled>a,#idock .dropdown-menu>.disabled>a:hover,#idock .dropdown-menu>.disabled>a:focus
+{
+    color: #999999;
+}
+
+#idock .dropdown-menu>.disabled>a:hover,#idock .dropdown-menu>.disabled>a:focus {
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=  false);
+    cursor: default;
+}
+
+#idock .open {
+    *z-index: 1000;
+}
+
+#idock .open>.dropdown-menu {
+    display: block;
+}
+
+#idock .pull-right>.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+#idock #notification.dropdown-menu li.header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    padding: 7px 10px;
+    text-align: left;
+}
+
+#idock #notification.dropdown-menu .dropdown-menu-item {
+    min-height: 60px;
+	max-height:200px;
+    overflow: auto;
+    width:230px;
+}#idock #notification.dropdown-menu li.unread a {
+    background: none repeat scroll 0 0 #F9F9F9;
+}
+#idock #notification.dropdown-menu li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0;
+    text-align: left;
+    word-wrap: break-word;
+	padding: 6px 10px;
+	color: #0088CC;
+    text-decoration: none;
+}
+
+#idock #notification.dropdown-menu li.loader {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#idock #notification.dropdown-menu li.footer a {
+    background: linear-gradient(to bottom, #F9F9F9 0%, #EEEEEE 100%) repeat scroll 0 0 transparent;
+    border-bottom: medium none;
+    border-radius: 0 0 3px 3px;
+    color: #888888;
+    padding: 7px 0;
+    text-align: center;
+}
+#idock #notification.dropdown-menu li a .detail .datetime {
+    color: #999999;
+    display: block;
+    font-size: 10px;
+}
+#idock #notification.dropdown-menu li a .detail .message {
+    color: #333333;
+    display: block;
+    font-size: 12px;
+}
+#idock .number-notification{
+	background: #E83737;
+	color: #FFFFFF;
+	padding:1px 4px 1px 4px;
+	font-size:12px;
+	border-radius:6px;
+	margin-bottom: 5px;
+}
+#idock #show-unlogin .login,#show-login .unlogin{
+	display:none;
+}
+#idock #show-unlogin .unlogin,#show-login .login{
+	display:block;
+}

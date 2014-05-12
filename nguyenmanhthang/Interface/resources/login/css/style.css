@@ -1,0 +1,193 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 14px;
+}
+
+body {
+	line-height: 1;
+	font-size: 12px;
+	font-family: Tahoma, "Times New Roman", Verdana, Georgia;
+	min-width: 1100px;
+	min-height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6s {
+	font-size: 100%;
+	padding: 5px 0;
+	margin: 0 15px;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+.stylebold {
+	font-weight: bold;
+}
+
+.hidden {
+	display: none;
+}
+
+.noborderright {
+	border-right: 0 !important;
+}
+
+.styleblack {
+	color: black
+}
+
+#body_login {
+	background: url(../photos/background.png) repeat-x;
+}
+
+#backgroundtop {
+	height: 100px;
+	background: url(../photos/background1.png) top right no-repeat;
+}
+
+#bodylogin {
+	width: 1000px;
+	height: 550px;
+	margin: 0 auto;
+}
+
+#bodylogin1 {
+	float: left;
+	color: #009140;
+	width: 500px;
+	text-align: right;
+}
+
+#bodylogin1 img {
+	vertical-align: baseline;
+	width: 100px;
+	margin-right: 45px;
+}
+
+div#bodylogin1_a_1 {
+	font-size: 22px;
+	font-weight: bold;
+	color: #009140;
+}
+
+#bodylogin1 ul {
+	margin-top: 40px;
+}
+
+#bodylogin1 ul li {
+	margin: 20px 0;
+}
+
+#bodylogin1 ul li {
+	color: #3f3f3f;
+}
+
+#bodylogin1 li#li1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #3f3f3f;
+}
+
+#bodylogin1 p {
+	margin-top: 10px;
+	font-size: 20px;
+	margin-bottom: 50px;
+	background: url(../photos/textde.png) bottom;
+	padding-bottom: 10px;
+	width: 218px;
+	margin-left: 280px;
+}
+
+#bodylogin2 {
+	width: 400px;
+	float: right;
+	margin-top: 80px;
+	padding: 10px 10px;
+}
+
+#bodylogin2 p#p_dangnhap {
+	font-weight: bold;
+	font-size: 14px;
+	
+}
+
+#dangnhap {
+	margin-top: 50px;
+	border-left: solid 1px #CCCCCC;
+	padding: 0 25px;
+	margin-left: -25px;
+}
+
+#dangnhap p {
+	margin-bottom: 10px;
+}
+
+#dangnhap input {
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+#dangnhap span {
+	color: #666666;
+}
+
+#dangnhap input[type="submit"] {
+	padding: 3px 10px;
+}
+
+#dangnhap a {
+	color: #0066cc;
+}
+
+#loginfoot {
+	
+	
+	 border-top: 1px solid #CDDDF4;
+    color: #3F3F3F;
+    margin: 10px auto 5px;
+    padding: 5px 159px;
+}
+
+#loginfoot a {
+	color: #3f3f3f;
+	padding: 0 5px;
+}
+
+.button {
+	background: none repeat scroll 0 0 #ECECEC;
+	border: 1px solid #ACACAC;
+	color: #000000;
+	font-size: 13px;
+	padding: 5px 17px;
+}
+
+.fail {
+	color: red !important;
+	font-style: italic;
+}
