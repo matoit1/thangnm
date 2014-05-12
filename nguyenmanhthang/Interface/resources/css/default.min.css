@@ -1,0 +1,351 @@
+validationEngine.jquery.css.doc-grid {
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	margin-bottom: 5px;
+	width: 100%;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: #eee;
+	text-align: center
+}
+
+#footerWrapper {
+	background: none repeat scroll 0 0 #BDBFC1;
+	border-top: 10px solid #848688;
+	font-size: 13px;
+	margin-top: 40px;
+	padding:0 20px;
+}
+
+#footerWrapper a {
+	color: #F8B800;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#footerWrapper h1 {
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 0 12px;
+}
+
+#footerWrapper h1 a {
+	color: #ED3237;
+}
+
+.navbar-inner {
+	border-radius: 0;
+}
+
+#mydockbar {
+	height: 27px;
+}
+
+
+
+#wrapper {
+	/* height: 75%; */
+	
+}
+
+#wrapper-inner {
+	/* width: 1170px; */
+	margin: 0 auto;
+	/* min-height: 100%; */
+}
+
+#main-body {
+	/* background:
+		url("../img/wash-white-30.png")
+		repeat scroll 0 0 transparent; */
+	width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	padding-left: 25px;
+}
+
+body {
+	 background-color: #8EC1DA;
+
+
+}
+
+.well {
+	/* 	padding: 8px 0;
+	margin-bottom: 10px; */
+	background-color: #FFFFFF;
+}
+
+.form-actions {
+	background-color: #FFFFFF;
+}
+
+select,textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],.uneditable-input
+	{
+	height: 27px;
+	color: #333333;
+}
+span.fieldValue{
+	line-height: 27px;
+}
+.main-title{
+	border-bottom: 1px solid #E8E8E8;
+	margin-bottom: 20px;
+}
+#social-icons i,#user-links i,#user-links li a {
+    color: #333333;
+}
+#user-links li a:hover,#social-icons a:hover {
+    text-decoration: none;
+}
+
+.dl-horizontal dt {
+    clear: left;
+    float: left;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+}
+.dl-horizontal dt {
+    clear: left;
+    float: left;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+}
+dt {
+    font-weight: bold;
+}
+dt, dd {
+    line-height: 20px;
+}
+
+
+.dl-horizontal dd {
+    margin-left: 180px;
+}
+dd.divider {
+    display: inline-block;
+    margin-top: 15px;
+    
+}
+.dl-horizontal dd {
+    margin-left: 180px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+#navColumns ul {
+    margin-left:0;
+}
+#navColumns ul li a,#navColumns ul li {
+    color: #5D5D5D ;
+    font-weight:bold;
+    list-style: none;
+}
+.main-title h3 {
+	color: #0136DE;
+	font-size:20px;
+}
+.table th, .table td{
+	padding:4px;
+	font-size:13px;
+}
+.navbar-inner{
+	margin-right:23px;
+}
+.navbar-inverse .navbar-inner {
+	background-image: none;
+	background-color: #29878F;
+	border: none;
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+	color:#FFFFFF;
+	font-size:14px;
+	font-weight: bold;
+}
+.navbar a.brand {
+	background-image: url("../image/home.png");
+	background-repeat: no-repeat;
+	background-position: 16px 7px;
+	background-color:#359BED;
+	width:20px;
+	height:20px;
+}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+	background-color: #359BED;
+}
+#header {
+    height: 110px;
+    padding: 10px;
+    margin-right:23px;
+    background:#C8E9EF;
+    position:relative;
+}
+
+#header .social {
+    float: right;
+    margin-top: 50px;
+    width: 167px;
+}
+#header .logo {
+    float: left;
+    width: 167px;
+}
+
+#header .logo img {
+    height: 85px;
+    margin-right: 0;
+    width: auto;
+    float: left;
+}
+
+#header .logo_text {
+    float: left;
+    padding-top: 19px;
+    width: 523px;
+}
+#header .logo_text img {
+
+    width: 350px;
+}
+
+#header .social {
+    margin-top: 50px;
+    float: right;
+}
+#header .social ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#header .social ul li:first-child {
+    margin-left: 0;
+    float: left;
+}
+#header .social ul li a {
+	height: 35px;
+    width: 35px;
+    transition: all 0.3s ease 0s;
+    margin-left: 4px;
+    display: block;
+    float: left;
+    height: 35px;
+    text-indent: -999em;
+    width: 35px;
+    
+}
+#header .social ul li a.youtube {
+    background: url("../image/youtube.png") no-repeat ;
+    background-size:cover;
+}
+
+#header .social ul li a.fb {
+    background: url("../image/facebook.png") no-repeat ;
+    background-size:cover;
+}
+
+#header .social ul li a.gmail {
+    background: url("../image/gmail.png") no-repeat;
+    background-size:cover;
+}
+
+#searchform .searchfield {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-font-feature-settings: inherit;
+    -moz-font-language-override: inherit;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #D4D4D4 -moz-use-text-color #D4D4D4 #D4D4D4;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #999999;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px !important;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 7px 10px;
+    width: 176px;
+}
+
+#header .search {
+    bottom: 25px;
+    position: absolute;
+    right: 190px;
+}
+
+
+#searchform .searchfield {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-font-feature-settings: inherit;
+    -moz-font-language-override: inherit;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #D4D4D4 -moz-use-text-color #D4D4D4 #D4D4D4;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #999999;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px !important;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 16px 10px;
+    width: 176px;
+    border-radius:0;
+}
+
+#searchform .submit {
+    background: url("../image/search.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    border: medium none;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 33px;
+    text-indent: -999em;
+    width: 33px;
+}
+/* 
+ #container {
+    box-shadow: 0 0 10px #CCCCCC;
+    margin-right: 20px;
+    padding: 10px;
+	background:url("../image/nentongquat.png") bottom right no-repeat;
+}  */
+
+#backelc {
+	background:url(http://elc.ehou.edu.vn/elcnormalthemeblue-theme/images/backgrounds/bg_noise.png);
+}
+
+.export-bill th{
+	text-align: left;
+}
