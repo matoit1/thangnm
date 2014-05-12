@@ -95,6 +95,12 @@
     <Content Include="Scripts\Popup.js" />
     <Content Include="Scripts\Vote.js" />
     <Content Include="UserControl\AdvancedSearchUC.ascx" />
+    <Content Include="UserControl\tblChiTietHoaDon_ListUC.ascx" />
+    <Content Include="UserControl\tblHoaDon_ListUC.ascx" />
+    <Content Include="UserControl\tblNhomSanPham_ListUC.ascx" />
+    <Content Include="UserControl\tblSanPham_ListUC.ascx" />
+    <Content Include="UserControl\tblTaiKhoan_ListUC.ascx" />
+    <Content Include="UserControl\tblThanhToan_ListUC.ascx" />
     <Content Include="UserControl\FooterUC.ascx" />
     <Content Include="UserControl\Gallery3DUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
@@ -227,6 +233,48 @@
     </Compile>
     <Compile Include="UserControl\AdvancedSearchUC.ascx.designer.cs">
       <DependentUpon>AdvancedSearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblChiTietHoaDon_ListUC.ascx.cs">
+      <DependentUpon>tblChiTietHoaDon_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblChiTietHoaDon_ListUC.ascx.designer.cs">
+      <DependentUpon>tblChiTietHoaDon_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblHoaDon_ListUC.ascx.cs">
+      <DependentUpon>tblHoaDon_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblHoaDon_ListUC.ascx.designer.cs">
+      <DependentUpon>tblHoaDon_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblNhomSanPham_ListUC.ascx.cs">
+      <DependentUpon>tblNhomSanPham_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblNhomSanPham_ListUC.ascx.designer.cs">
+      <DependentUpon>tblNhomSanPham_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblSanPham_ListUC.ascx.cs">
+      <DependentUpon>tblSanPham_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblSanPham_ListUC.ascx.designer.cs">
+      <DependentUpon>tblSanPham_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblTaiKhoan_ListUC.ascx.cs">
+      <DependentUpon>tblTaiKhoan_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblTaiKhoan_ListUC.ascx.designer.cs">
+      <DependentUpon>tblTaiKhoan_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblThanhToan_ListUC.ascx.cs">
+      <DependentUpon>tblThanhToan_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblThanhToan_ListUC.ascx.designer.cs">
+      <DependentUpon>tblThanhToan_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\FooterUC.ascx.cs">
       <DependentUpon>FooterUC.ascx</DependentUpon>
