@@ -100,6 +100,12 @@
     <Content Include="UserControl\LoginUC.ascx" />
     <Content Include="UserControl\MenuUC.ascx" />
     <Content Include="UserControl\ShowAllProductUC.ascx" />
+    <Content Include="UserControl\tblChiTietHoaDon_DetailUC.ascx" />
+    <Content Include="UserControl\tblHoaDon_DetailUC.ascx" />
+    <Content Include="UserControl\tblNhomSanPham_DetailUC.ascx" />
+    <Content Include="UserControl\tblSanPham_DetailUC.ascx" />
+    <Content Include="UserControl\tblTaiKhoan_DetailUC.ascx" />
+    <Content Include="UserControl\tblThanhToan_DetailUC.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -256,6 +262,48 @@
     </Compile>
     <Compile Include="UserControl\ShowAllProductUC.ascx.designer.cs">
       <DependentUpon>ShowAllProductUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblChiTietHoaDon_DetailUC.ascx.cs">
+      <DependentUpon>tblChiTietHoaDon_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblChiTietHoaDon_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblChiTietHoaDon_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblHoaDon_DetailUC.ascx.cs">
+      <DependentUpon>tblHoaDon_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblHoaDon_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblHoaDon_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblNhomSanPham_DetailUC.ascx.cs">
+      <DependentUpon>tblNhomSanPham_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblNhomSanPham_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblNhomSanPham_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblSanPham_DetailUC.ascx.cs">
+      <DependentUpon>tblSanPham_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblSanPham_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblSanPham_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblTaiKhoan_DetailUC.ascx.cs">
+      <DependentUpon>tblTaiKhoan_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblTaiKhoan_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblTaiKhoan_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblThanhToan_DetailUC.ascx.cs">
+      <DependentUpon>tblThanhToan_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblThanhToan_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblThanhToan_DetailUC.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
