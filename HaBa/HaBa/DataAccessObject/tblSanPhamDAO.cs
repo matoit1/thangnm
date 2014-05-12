@@ -187,7 +187,7 @@ namespace HaBa.DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    oOutput = DataSet2Object.Product(ds);
+                    oOutput = DataSet2Object.SanPhamDO(ds);
                     return oOutput;
                 }
                 catch (Exception)

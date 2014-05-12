@@ -271,7 +271,7 @@ namespace HaBa.DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    oOutput = DataSet2Object.Account(ds);
+                    oOutput = DataSet2Object.TaiKhoanDO(ds);
                     return oOutput;
                 }
                 catch (Exception)
@@ -300,7 +300,7 @@ namespace HaBa.DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    oOutput = DataSet2Object.Account(ds);
+                    oOutput = DataSet2Object.TaiKhoanDO(ds);
                     return oOutput;
                 }
                 catch (Exception)
@@ -330,7 +330,7 @@ namespace HaBa.DataAccessObject
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    oOutput = DataSet2Object.Account(ds);
+                    oOutput = DataSet2Object.TaiKhoanDO(ds);
                     return oOutput;
                 }
                 catch (Exception)
