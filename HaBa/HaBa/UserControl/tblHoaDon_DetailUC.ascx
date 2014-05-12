@@ -1,1 +1,99 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblHoaDon_DetailUC.ascx.cs" Inherits="HaBa.UserControl.tblHoaDon_DetailUC" %>
+<link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
+<script src="../Scripts/calendar1.js" type="text/javascript"></script>  
+<script src="../Scripts/calendar2.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".startdate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+        $(".enddate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+    });
+</script>
+<div>
+    <table>
+        <tr>
+            <td></td>
+            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Câu hỏi"></asp:Label></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="center"><asp:Label ID="lblMsg" runat="server"></asp:Label></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mã sản phẩm: </td>
+            <td><asp:TextBox ID="txtPK_lHoaDonID" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:Label ID="lblPK_lHoaDonID" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Nhóm sản phẩm: </td>
+            <td><asp:DropDownList ID="ddlFK_iTaiKhoanID_Giao" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:Label ID="lblFK_iTaiKhoanID_Giao" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Nhóm sản phẩm: </td>
+            <td><asp:DropDownList ID="ddlFK_iTaiKhoanID_Nhan" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:Label ID="lblFK_iTaiKhoanID_Nhan" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Nhóm sản phẩm: </td>
+            <td><asp:DropDownList ID="ddlFK_iThanhToanID" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:Label ID="lblFK_iThanhToanID" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Tên sản phẩm: </td>
+            <td><asp:TextBox ID="txtsHoTen" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsHoTen" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Mô tả: </td>
+            <td><asp:TextBox ID="txtsEmail" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:Label ID="lblsEmail" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Xuất xứ: </td>
+            <td><asp:TextBox ID="txtsDiaChi" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsDiaChi" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Link hình ảnh: </td>
+            <td><asp:TextBox ID="txtsSoDienThoai" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:Label ID="lblsSoDienThoai" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Giá bán: </td>
+            <td><asp:TextBox ID="txtsGhiChu" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsGhiChu" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Thuế giá trị gia tăng VAT: </td>
+            <td><asp:TextBox ID="txttNgayDatHang" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:Label ID="lbltNgayDatHang" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Số lượng: </td>
+            <td><asp:TextBox ID="txttNgayGiaoHang" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lbltNgayGiaoHang" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Trạng thái: </td>
+            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <asp:Button ID="btnInsert" runat="server" Text="Insert" onclick="btnInsert_Click" />
+                <asp:Button ID="btnUpdate" runat="server" Text="Update" onclick="btnUpdate_Click" />
+                <asp:Button ID="btnDelete" runat="server" Text="Delete" onclick="btnDelete_Click" />
+                <asp:Button ID="btnReset" runat="server" Text="Reset" onclick="btnReset_Click" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</div>

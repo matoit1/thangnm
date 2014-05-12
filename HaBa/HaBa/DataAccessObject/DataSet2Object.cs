@@ -12,7 +12,7 @@ namespace HaBa.DataAccessObject
 {
     public class DataSet2Object
     {
-        public static tblTaiKhoanEO Account(DataSet input)
+        public static tblTaiKhoanEO TaiKhoanDO(DataSet input)
         {
             try
             {
@@ -85,74 +85,77 @@ namespace HaBa.DataAccessObject
         //    }
         //}
 
-        //public static OrdersEO Orders(DataSet input)
-        //{
-        //    try
-        //    {
-        //        OrdersEO output = new OrdersEO();
-        //        foreach (DataRow dr in input.Tables[0].Rows)
-        //        {
-        //            output.Orders_ID = (dr["Orders_ID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["Orders_ID"]);
-        //            output.Client_ID = (dr["Client_ID"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["Client_ID"]);
-        //            output.Pay_ID = (dr["Pay_ID"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["Pay_ID"]);
-        //            output.Pay_Email = (dr["Pay_Email"] == DBNull.Value) ? "" : Convert.ToString(dr["Pay_Email"]);
-        //            output.Pay_FullName = (dr["Pay_FullName"] == DBNull.Value) ? "" : Convert.ToString(dr["Pay_FullName"]);
-        //            output.Pay_Address = (dr["Pay_Address"] == DBNull.Value) ? "" : Convert.ToString(dr["Pay_Address"]);
-        //            output.Pay_PhoneNumber = (dr["Pay_PhoneNumber"] == DBNull.Value) ? "" : Convert.ToString(dr["Pay_PhoneNumber"]);
-        //            output.Pay_Note = (dr["Pay_Note"] == DBNull.Value) ? "" : Convert.ToString(dr["Pay_Note"]);
-        //            output.Pay_Status = (dr["Pay_Status"] == DBNull.Value) ? false : Convert.ToBoolean(dr["Pay_Status"]);
-        //            output.Pay_DateOfStart = (dr["Pay_DateOfStart"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["Pay_DateOfStart"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
-        //            output.Pay_DateOfFinish = (dr["Pay_DateOfFinish"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["Pay_DateOfFinish"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
-        //        }
-        //        return output;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+        public static tblHoaDonEO HoaDonDO(DataSet input)
+        {
+            try
+            {
+                tblHoaDonEO output = new tblHoaDonEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.PK_lHoaDonID = (dr["PK_lHoaDonID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["PK_lHoaDonID"]);
+                    output.FK_iTaiKhoanID_Giao = (dr["FK_iTaiKhoanID_Giao"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["FK_iTaiKhoanID_Giao"]);
+                    output.FK_iTaiKhoanID_Nhan = (dr["FK_iTaiKhoanID_Nhan"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["FK_iTaiKhoanID_Nhan"]);
+                    output.FK_iThanhToanID = (dr["FK_iThanhToanID"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["FK_iThanhToanID"]);
+                    output.sHoTen = (dr["sHoTen"] == DBNull.Value) ? "" : Convert.ToString(dr["sHoTen"]);
+                    output.sEmail = (dr["sEmail"] == DBNull.Value) ? "" : Convert.ToString(dr["sEmail"]);
+                    output.sDiaChi = (dr["sDiaChi"] == DBNull.Value) ? "" : Convert.ToString(dr["sDiaChi"]);
+                    output.sSoDienThoai = (dr["sSoDienThoai"] == DBNull.Value) ? "" : Convert.ToString(dr["sSoDienThoai"]);
+                    output.sGhiChu = (dr["sGhiChu"] == DBNull.Value) ? "" : Convert.ToString(dr["sGhiChu"]);
+                    output.tNgayDatHang = (dr["tNgayDatHang"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(dr["tNgayDatHang"]);
+                    output.tNgayGiaoHang = (dr["tNgayGiaoHang"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(dr["tNgayGiaoHang"]);
 
-        //public static OrdersDetailsEO OrdersDetails(DataSet input)
-        //{
-        //    try
-        //    {
-        //        OrdersDetailsEO output = new OrdersDetailsEO();
-        //        foreach (DataRow dr in input.Tables[0].Rows)
-        //        {
-        //            output.OrdersDetails_ID = (dr["OrdersDetails_ID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["OrdersDetails_ID"]);
-        //            output.Orders_ID = (dr["Orders_ID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["Orders_ID"]);
-        //            output.Pro_ID = (dr["Pro_ID"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["Pro_ID"]);
-        //            output.OrdersDetails_UnitPrice = (dr["OrdersDetails_UnitPrice"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["OrdersDetails_UnitPrice"]);
-        //            output.OrdersDetails_Quantity = (dr["OrdersDetails_Quantity"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["OrdersDetails_Quantity"]);
-        //        }
-        //        return output;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+                    //output.tNgayDatHang = (dr["Pay_DateOfStart"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["Pay_DateOfStart"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
+                    //output.tNgayGiaoHang = (dr["Pay_DateOfFinish"] == DBNull.Value) ? DateTime.MinValue : DateTime.ParseExact(dr["Pay_DateOfFinish"].ToString(), Messages.DateTime_Format, CultureInfo.InvariantCulture);
+                    output.iTrangThai = (dr["iTrangThai"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iTrangThai"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
-        //public static PayEO Pay(DataSet input)
-        //{
-        //    try
-        //    {
-        //        PayEO output = new PayEO();
-        //        foreach (DataRow dr in input.Tables[0].Rows)
-        //        {
-        //            output.Pay_ID = (dr["Pay_ID"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["Pay_ID"]);
-        //            output.Pay_Name = (dr["Pay_Name"] == DBNull.Value) ? "" : Convert.ToString(dr["Pay_Name"]);
-        //            output.Pay_Visible = (dr["Pay_Visible"] == DBNull.Value) ? false : Convert.ToBoolean(dr["Pay_Visible"]);
-        //        }
-        //        return output;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+        public static tblChiTietHoaDonEO ChiTietHoaDonDO(DataSet input)
+        {
+            try
+            {
+                tblChiTietHoaDonEO output = new tblChiTietHoaDonEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.FK_lHoaDonID = (dr["FK_lHoaDonID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["FK_lHoaDonID"]);
+                    output.FK_lSanPhamID = (dr["FK_lSanPhamID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["FK_lSanPhamID"]);
+                    output.lGiaBan = (dr["lGiaBan"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["lGiaBan"]);
+                    output.iSoLuong = (dr["iSoLuong"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iSoLuong"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
-        public static tblSanPhamEO Product(DataSet input)
+        public static tblThanhToanEO ThanhToanDO(DataSet input)
+        {
+            try
+            {
+                tblThanhToanEO output = new tblThanhToanEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.PK_iThanhToanID = (dr["PK_iThanhToanID"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["PK_iThanhToanID"]);
+                    output.sTenThanhToan = (dr["sTenThanhToan"] == DBNull.Value) ? "" : Convert.ToString(dr["sTenThanhToan"]);
+                    output.iTrangThai = (dr["iTrangThai"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iTrangThai"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static tblSanPhamEO SanPhamDO(DataSet input)
         {
             try
             {
