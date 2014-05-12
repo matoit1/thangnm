@@ -175,13 +175,21 @@ namespace DO_AN_TN.UserControl
             ClearMessages();
             try
             {
-                if (GiangVienDAO.GiangVien_Update(getObject()) == true)
+                if (string.IsNullOrEmpty(txtsMatkhauGV.Text) != true)
                 {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    if (GiangVienDAO.GiangVien_Update(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Sua_That_Bai;
+                    }
                 }
                 else
                 {
-                    lblMsg.Text = Messages.Sua_That_Bai;
+                    lblsMatkhauGV.Text = Messages.Mat_Khau_Empty;
+                    txtsMatkhauGV.Focus();
                 }
             }
             catch (Exception ex)

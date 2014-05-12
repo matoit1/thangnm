@@ -203,13 +203,20 @@ namespace DO_AN_TN.UserControl
             ClearMessages();
             try
             {
-                if (SinhVienDAO.SinhVien_Update(getObject()) == true)
+                if (string.IsNullOrEmpty(txtsMatkhauSV.Text) != true)
                 {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    if (SinhVienDAO.SinhVien_Update(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Sua_That_Bai;
+                    }
                 }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
+                else{
+                    lblsMatkhauSV.Text = Messages.Mat_Khau_Empty;
+                    txtsMatkhauSV.Focus();
                 }
             }
             catch (Exception ex)
