@@ -1,5 +1,5 @@
 body{background-color: #8EC1DA;}
-.wrapper {width: 1100px; height: 1000px; background-color: #FFFFFF; margin: auto; padding:0;}
+.wrapper {width: 1100px; height:auto; max-height:2000px; min-height: 1125px; background-color: #FFFFFF; margin: auto; padding:0;}
 .banner {width: 1100px; height: 150px; background-color: #005588;}
 .menu { width: 1100px; height: 50px; background-color: #29878F;}
 .content {width: 1100px; min-height: 920px; max-height: 2000px; height:auto; background-color: #FFFFFF;}
@@ -8,15 +8,75 @@ body{background-color: #8EC1DA;}
 .time {width: 300px; height: 30px;}
 .infor {width: 755px; height: 260px; float: left; border: 1px solid #CDCDCD; padding: 10px;}
 .ebook {width: 300px; height: 260px; background-color: #eeeff0; border: 1px solid #CDCDCD; float:right; padding: 10px;}
-.footer { width: 1100px; height: 80px; background-color: #3399FF; color: White; font-size: 18px}
+.footer { width: 100%; height: 80px; background-color: #092F40; color: White; font-size: 18px;
+          
+          margin: 0;
+    top: 0;}
 .clear {clear: both;}
 
 
 
 
+#footer_wrapper {
+    background: url("footer_bg.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    height: 140px;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+#footer_water {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#waves_back {
+    animation: 5s ease-in-out 0s normal none infinite wavesBackground;
+}
+#waves_back {
+    background: url("wave_back.png") repeat-x scroll -20px 0 rgba(0, 0, 0, 0);
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: -9px;
+    width: 100%;
+}
+
+#waves_fore {
+    animation: 5s linear 0s normal none infinite wavesForeground;
+}
+#waves_fore {
+    background: url("wave_front.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+}
 
 
+#footer_ship {
+    animation: 5s ease-in-out 0s normal none infinite rockTheBoat;
+    transform-origin: 40px 60px 0;
+}
+#footer_ship {
+    background: url("footer_ship.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 66px;
+    margin: -58px auto 0;
+    position: relative;
+    width: 81px;
+    z-index: 102;
+}
 
 
-
-
+.footer_inner02_sec1 {
+    float: left;
+    padding: 0 0 0 40px;
+    position: relative;
+    width: 29%;
+}
+#footer_inner
+{
+   width: 1100px; margin: auto; padding:0; color:#495875;
+}

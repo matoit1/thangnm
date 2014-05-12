@@ -76,6 +76,10 @@
     <Content Include="App_Themes\Chat.css" />
     <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\login.css" />
+    <Content Include="App_Themes\New\footer_bg.png" />
+    <Content Include="App_Themes\New\footer_ship.png" />
+    <Content Include="App_Themes\New\wave_back.png" />
+    <Content Include="App_Themes\New\wave_front.png" />
     <Content Include="Images\New\banner.png" />
     <Content Include="Images\New\home.png" />
     <Content Include="Images\Smileys\1.gif" />
