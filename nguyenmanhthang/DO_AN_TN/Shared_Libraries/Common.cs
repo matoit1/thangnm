@@ -315,6 +315,7 @@ namespace Shared_Libraries
         public const string Xoa_Thanh_Cong = "Xóa thành công!";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
         public const string Ngay_Day_Khong_Hop_Le = "Ngày dạy phải nằm trong khoảng: ";
+        public const string Mat_Khau_Empty = "Mật khẩu không được bỏ trống !";
         #endregion
 
         #region "Information"
