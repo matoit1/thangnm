@@ -101,8 +101,35 @@
             <div class="content">
                 <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
             </div>
-            <div class="footer">
-                <br /><center>Xây dựng lớp học ảo truyền hình trực tuyến thời gian thực <br /> Nguyễn Mạnh Thắng - Nguyễn Thị Thùy Linh</center>
+        </div>
+        <div id="footer_wrapper">
+            <div id="footer_water">
+                <div id="waves_back"></div>
+                <div id="waves_fore">
+                    <div id="footer_ship"> </div>
+                </div>
+                <div id="footer_inner">
+                    <div class="footer_inner02_sec1">
+                        ĐỊA CHỈ<br /><br />
+                        TRUNG TÂM ĐÀO TẠO ELEARNING<br />
+                        VIỆN ĐẠI HỌC MỞ HÀ NỘI<br />
+                        Tầng 3 Nhà B - B101 - Đường Nguyễn Hiền<br />
+                        - Quận Hai Bà Trưng - Thành Phố Hà Nội
+                    </div>
+                    <div class="footer_inner02_sec1">
+                        THÔNG TIN LIÊN HỆ<br /><br /><br />
+                        - Điện thoại: 04 3623 1474 - 04 3623 1741<br />
+                        - Website: elc.ehou.edu.vn<br />
+                        - Email: info@ehou.edu.vn
+                    </div>
+                    <div class="footer_inner02_sec1">
+                        CÁC LIÊN KẾT<br /><br />
+                        - Viện Đại học Mở Hà Nội<br />
+                        - Bộ Giáo dục và Đào tạo<br />
+                        - Trung tâm Đào tạo E-learning<br />
+                        - Trung tâm Thư viện
+                    </div>
+                </div>
             </div>
         </div>
     </form>
