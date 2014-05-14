@@ -155,22 +155,22 @@ namespace DO_AN_TN.UserControl
             }
         }
 
-        protected void grvListLichDayVaHoc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            foreach (GridViewRow row in grvListLichDayVaHoc.Rows)
-            {
-                if (row.RowIndex == grvListLichDayVaHoc.SelectedIndex)
-                {
-                    row.BackColor = ColorTranslator.FromHtml("#A1DCF2");
-                    row.ToolTip = string.Empty;
-                }
-                else
-                {
-                    row.BackColor = ColorTranslator.FromHtml("#FFFFFF");
-                    row.ToolTip = "Click to select this row.";
-                }
-            }
-        }
+        //protected void grvListLichDayVaHoc_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    foreach (GridViewRow row in grvListLichDayVaHoc.Rows)
+        //    {
+        //        if (row.RowIndex == grvListLichDayVaHoc.SelectedIndex)
+        //        {
+        //            row.BackColor = ColorTranslator.FromHtml("#A1DCF2");
+        //            row.ToolTip = string.Empty;
+        //        }
+        //        else
+        //        {
+        //            row.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+        //            row.ToolTip = "Click to select this row.";
+        //        }
+        //    }
+        //}
 
         protected void grvListLichDayVaHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -178,14 +178,14 @@ namespace DO_AN_TN.UserControl
             BindData(objPhanCongCongTacEO, objLichDayVaHocEO, iType);
         }
 
-        protected void grvListLichDayVaHoc_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(grvListLichDayVaHoc, "Select$" + e.Row.RowIndex);
-                e.Row.ToolTip = "Click to select this row.";
-            }
-        }
+        //protected void grvListLichDayVaHoc_RowDataBound(object sender, GridViewRowEventArgs e)
+        //{
+        //    if (e.Row.RowType == DataControlRowType.DataRow)
+        //    {
+        //        e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(grvListLichDayVaHoc, "Select$" + e.Row.RowIndex);
+        //        e.Row.ToolTip = "Click to select this row.";
+        //    }
+        //}
 
         protected void grvListLichDayVaHoc_Sorting(object sender, GridViewSortEventArgs e)
         {
