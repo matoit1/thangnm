@@ -50,6 +50,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Other\DLL\CuteWebUI.AjaxUploader.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Other\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SCS.Web.UI.WebControls.Toolbar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\SCS.Web.UI.WebControls.Toolbar.dll</HintPath>
@@ -1482,6 +1486,7 @@
     <Content Include="Other\DLL\FCAP.Controls.dll" />
     <Content Include="Other\DLL\Microsoft.Sharepoint.Sandbox.dll" />
     <Content Include="Other\DLL\MSCaptcha.dll" />
+    <Content Include="Other\DLL\Newtonsoft.Json.dll" />
     <Content Include="Other\DLL\Recaptcha.dll" />
     <Content Include="Other\DLL\SCS.Web.UI.WebControls.Toolbar.dll" />
     <Content Include="Default.aspx" />
@@ -1659,6 +1664,7 @@
     <Content Include="Test\Drop.aspx" />
     <Content Include="Test\ItemObject.aspx" />
     <Content Include="Test\List.aspx" />
+    <Content Include="Test\Read_Content.aspx" />
     <Content Include="Test\TBaiViet.aspx" />
     <Content Include="Test\TCauHoi.aspx" />
     <Content Include="Test\TDiemThi.aspx" />
@@ -2164,6 +2170,13 @@
     <Compile Include="Test\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Test\Read_Content.aspx.cs">
+      <DependentUpon>Read_Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\Read_Content.aspx.designer.cs">
+      <DependentUpon>Read_Content.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Test\TBaiViet.aspx.cs">
       <DependentUpon>TBaiViet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2627,11 +2640,10 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1766</DevelopmentServerPort>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>18504</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost/DO_AN_TN</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

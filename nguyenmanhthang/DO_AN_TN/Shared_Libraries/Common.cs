@@ -5,11 +5,24 @@ using System.Web;
 using System.Data;
 using System.Text.RegularExpressions;
 using Shared_Libraries.Constants;
+using System.Net;
+using System.IO;
+using System.Text;
 
 namespace Shared_Libraries
 {
     public class Common
     {
+        public static string ReadTextFromUrl(string url)
+        {
+            using (var client = new WebClient())
+            using (var stream = client.OpenRead(url))
+            using (var textReader = new StreamReader(stream, Encoding.UTF8, true))
+            {
+                return textReader.ReadToEnd();
+            }
+        }
+
         public static string ReplaceKeyByEmoticons(string sInput)
         {
             string sOutput = "";
