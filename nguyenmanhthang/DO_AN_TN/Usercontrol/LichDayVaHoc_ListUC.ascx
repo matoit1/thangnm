@@ -38,9 +38,9 @@
                                 FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_sMaPCCT, FK_sMalop, iCaHoc"
                                 emptydatatext="Không có bản ghi nào." 
                     EnableModelValidation="True" onrowcommand="grvListLichDayVaHoc_RowCommand" 
-                    onselectedindexchanged="grvListLichDayVaHoc_SelectedIndexChanged" 
+                    
                     onpageindexchanging="grvListLichDayVaHoc_PageIndexChanging" 
-                    onrowdatabound="grvListLichDayVaHoc_RowDataBound"  PageSize="5" 
+                     PageSize="5" 
                     AllowSorting="true" onsorting="grvListLichDayVaHoc_Sorting">
                     <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                     <Columns>
