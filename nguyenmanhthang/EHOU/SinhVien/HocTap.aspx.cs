@@ -47,6 +47,14 @@ namespace EHOU.SinhVien
                         _tblSubjectEO.PK_sSubject = Request.QueryString["PK_sSubject"];
                         _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(_tblSubjectEO);
                         sTendangnhapGV = _tblSubjectEO.FK_sTeacher;
+
+                        tblDetailEO _tblDetailEO = new tblDetailEO();
+                        _tblDetailEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
+                        _tblDetailEO.FK_sStudent =  Session["account_sv"].ToString();
+                        if (tblDetailDAO.Detail_CheckExists(_tblDetailEO) !=true)
+                        {
+                            Response.Redirect("~/Access_Denied.aspx");
+                        }
                         //SinhVienEO _SinhVienEO = new SinhVienEO();
                         //_SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
                         //_SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);
