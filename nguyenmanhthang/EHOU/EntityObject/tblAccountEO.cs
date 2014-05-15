@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace EHOU.EntityObject
+namespace EntityObject
 {
     [Serializable()]
     public class tblAccountEO

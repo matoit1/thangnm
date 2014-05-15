@@ -320,5 +320,87 @@ namespace DataAccessObject
                 throw;
             }
         }
+
+        public static tblAccountEO Account(DataSet input)
+        {
+            try
+            {
+                tblAccountEO output = new tblAccountEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.PK_sUsername = Convert.ToString(dr["PK_sUsername"]);
+                    output.sPassword = Convert.ToString(dr["sPassword"]);
+                    output.sEmail = Convert.ToString(dr["sEmail"]);
+                    output.iType = Convert.ToInt16(dr["iType"]);
+                    output.iStatus = Convert.ToInt16(dr["iStatus"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static tblDetailEO Detail(DataSet input)
+        {
+            try
+            {
+                tblDetailEO output = new tblDetailEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.FK_sSubject = Convert.ToString(dr["FK_sSubject"]);
+                    output.FK_sStudent = Convert.ToString(dr["FK_sStudent"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static tblMessageEO Message(DataSet input)
+        {
+            try
+            {
+                tblMessageEO output = new tblMessageEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.PK_lMessage = Convert.ToInt64(dr["PK_lMessage"]);
+                    output.FK_sRoom = Convert.ToString(dr["FK_sRoom"]);
+                    output.FK_sUsername = Convert.ToString(dr["FK_sUsername"]);
+                    output.sContent = Convert.ToString(dr["sContent"]);
+                    output.tDateSent = Convert.ToDateTime(dr["tDateSent"]);
+                    output.iStatus = Convert.ToInt16(dr["iStatus"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static tblSubjectEO Subject(DataSet input)
+        {
+            try
+            {
+                tblSubjectEO output = new tblSubjectEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.PK_sSubject = Convert.ToString(dr["PK_sSubject"]);
+                    output.sName = Convert.ToString(dr["sName"]);
+                    output.FK_sTeacher = Convert.ToString(dr["FK_sTeacher"]);
+                    output.sBlackList = Convert.ToString(dr["sBlackList"]);
+                    output.iStatus = Convert.ToInt16(dr["iStatus"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
