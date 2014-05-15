@@ -19,7 +19,6 @@ namespace DO_AN_TN.Test
             try
             {
                 string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/"+ Request.Cookies["LOGINID"].Value);
-                WebClient webClient = new WebClient();
                 JObject o = JObject.Parse(data);
                 if (o["username"] != null)
                 {
