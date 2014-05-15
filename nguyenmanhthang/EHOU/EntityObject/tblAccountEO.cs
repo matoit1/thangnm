@@ -6,7 +6,7 @@ using System.Web;
 namespace EHOU.EntityObject
 {
     [Serializable()]
-    public class tblAccount
+    public class tblAccountEO
     {
         private string _PK_sUsername;
         private string _sPassword;
