@@ -2600,6 +2600,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="EHOU\LIB\" />
     <Folder Include="Images\Temp\" />
     <Folder Include="Upload\LongDT\example\" />
   </ItemGroup>
