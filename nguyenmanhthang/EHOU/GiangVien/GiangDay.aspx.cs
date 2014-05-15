@@ -44,6 +44,10 @@ namespace EHOU.GiangVien
                         tblSubjectEO _tblSubjectEO = new tblSubjectEO();
                         _tblSubjectEO.PK_sSubject = Request.QueryString["PK_sSubject"];
                         _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(_tblSubjectEO);
+                        if (Session["account_gv"].ToString() != _tblSubjectEO.FK_sTeacher)
+                        {
+                            Response.Redirect("~/Access_Denied.aspx");
+                        }
 
                             tblMessageEO _tblMessageEO = new tblMessageEO();
                             _tblMessageEO.FK_sRoom = _tblSubjectEO.PK_sSubject;
