@@ -19,7 +19,7 @@ namespace DO_AN_TN {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteWebUI.UploadAttachments Attachments1;
+        //protected global::CuteWebUI.UploadAttachments Attachments1;
         
         /// <summary>
         /// ButtonDeleteAll control.

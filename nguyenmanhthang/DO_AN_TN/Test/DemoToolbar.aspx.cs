@@ -14,9 +14,9 @@ namespace DO_AN_TN.Test
 
         }
 
-        protected void Toolbar1_ButtonClicked(object sender, SCS.Web.UI.WebControls.ButtonEventArgs e)
-        {
-            lblMsg.Text = lblMsg.Text + e.CommandName.ToString();
-        }
+        //protected void Toolbar1_ButtonClicked(object sender, SCS.Web.UI.WebControls.ButtonEventArgs e)
+        //{
+        //    lblMsg.Text = lblMsg.Text + e.CommandName.ToString();
+        //}
     }
 }
