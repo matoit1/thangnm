@@ -17,25 +17,25 @@ namespace EHOU.UserControl
             //tSyncCurrentTime.Interval = 1000;
         }
 
-        public void BinData(GiangVienEO _GiangVienEO, LopHocEO _LopHocEO, PhanCongCongTacEO _PhanCongCongTacEO, LichDayVaHocEO _LichDayVaHocEO)
+        public void BinData(tblSubjectEO _tblSubjectEO)
         {
-            MonHocEO _MonHocEO = new MonHocEO();
-            _MonHocEO.PK_sMaMonhoc = _PhanCongCongTacEO.FK_sMaMonhoc;
-            _MonHocEO = MonHocDAO.MonHoc_SelectItem(_MonHocEO);
+            //MonHocEO _MonHocEO = new MonHocEO();
+            //_MonHocEO.PK_sMaMonhoc = _PhanCongCongTacEO.FK_sMaMonhoc;
+            //_MonHocEO = MonHocDAO.MonHoc_SelectItem(_MonHocEO);
 
             //GiangVienEO _GiangVienEO = new GiangVienEO();
             //_GiangVienEO.PK_sMaGV = _PhanCongCongTacEO.FK_sMaGV;
             //_GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
 
-            lblsTenlop.Text = _LopHocEO.PK_sMalop + " - " + _LopHocEO.sTenlop;
-            lblsTenMonhoc.Text = _MonHocEO.PK_sMaMonhoc + " - " + _MonHocEO.sTenMonhoc;
-            lblsHoTenGV.Text = _GiangVienEO.PK_sMaGV + " - " + _GiangVienEO.sHotenGV;
-            lbliSiso.Text = Convert.ToString(_LopHocEO.iSiso);
-            lbliCaHoc.Text = Convert.ToString(_LichDayVaHocEO.iCaHoc);
-            lbliSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
-            lbltNgayBatDau.Text = _PhanCongCongTacEO.tNgayBatDau.ToShortDateString();
-            lbltNgayKetThuc.Text = _PhanCongCongTacEO.tNgayKetThuc.ToShortDateString();
-            lbliTrangThai.Text = GetTextConstants.LichDayVaHoc_iTrangThai_GTC(_LichDayVaHocEO.iTrangThai);
+            //lblsTenlop.Text = _LopHocEO.PK_sMalop + " - " + _LopHocEO.sTenlop;
+            lblsTenMonhoc.Text = _tblSubjectEO.PK_sSubject + " - " + _tblSubjectEO.sName;
+            lblsHoTenGV.Text = _tblSubjectEO.FK_sTeacher + " - " + _tblSubjectEO.FK_sTeacher;
+            //lbliSiso.Text = Convert.ToString(_LopHocEO.iSiso);
+            //lbliCaHoc.Text = Convert.ToString(_LichDayVaHocEO.iCaHoc);
+            //lbliSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
+            //lbltNgayBatDau.Text = _PhanCongCongTacEO.tNgayBatDau.ToShortDateString();
+            //lbltNgayKetThuc.Text = _PhanCongCongTacEO.tNgayKetThuc.ToShortDateString();
+            lbliTrangThai.Text = GetTextConstants.LichDayVaHoc_iTrangThai_GTC(_tblSubjectEO.iStatus);
         }
     }
 }

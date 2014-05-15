@@ -11,19 +11,20 @@ namespace EHOU.Share_Interface
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                if (Request.Cookies["giangvien"] == null)
-                {
-                    Response.Redirect("~/GiangVien/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
-                }
-                //lblInfo.Text = "   Hi, " + Request.Cookies["giangvien"].Value;
-            }
-            catch
-            {
-                Response.Cookies["giangvien"].Expires = DateTime.Now.AddDays(-1);
-                Response.Redirect("~/GiangVien/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
-            }
+            Session["account_gv"] = "gv1";
+            //try
+            //{
+            //    if (Request.Cookies["giangvien"] == null)
+            //    {
+            //        Response.Redirect("~/GiangVien/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
+            //    }
+            //    //lblInfo.Text = "   Hi, " + Request.Cookies["giangvien"].Value;
+            //}
+            //catch
+            //{
+            //    Response.Cookies["giangvien"].Expires = DateTime.Now.AddDays(-1);
+            //    Response.Redirect("~/GiangVien/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
+            //}
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)

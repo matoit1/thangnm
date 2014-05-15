@@ -27,15 +27,15 @@
                         <div style="width:300px; padding: 5px; border :3px double black; height: 390px; overflow:auto;">
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <asp:HiddenField ID="hfdPK_lTinNhan" runat="server" Value='<%#Eval("PK_lTinNhan")%>' />
+                        <asp:HiddenField ID="hfdPK_lMessage" runat="server" Value='<%#Eval("PK_lMessage")%>' />
                        <%-- <span style="color: <%=sColor%>">--%>
-                        <asp:HiddenField ID="hfFK_sNguoiGui" runat="server" Value='<%#Eval("FK_sNguoiGui")%>' />
-                            <asp:Label ID="lblFK_sNguoiGui" runat="server" Text='<%#Eval("FK_sNguoiGui")%>' Font-Bold="true"></asp:Label>
+                        <asp:HiddenField ID="hfFK_sUsername" runat="server" Value='<%#Eval("FK_sUsername")%>' />
+                            <asp:Label ID="lblFK_sUsername" runat="server" Text='<%#Eval("FK_sUsername")%>' Font-Bold="true"></asp:Label>
                         <%--</span>--%>
                         <span style="font-size:10px">
-                            (<asp:Label ID="lbltNgayGui" runat="server" Text='<%#Eval("tNgayGui")%>'></asp:Label>)
+                            (<asp:Label ID="lbltDateSent" runat="server" Text='<%#Eval("tDateSent")%>'></asp:Label>)
                         </span>: 
-                        <asp:Label ID="lblsNoidung" runat="server" Text='<%#Eval("sNoidung")%>'></asp:Label>
+                        <asp:Label ID="lblsContent" runat="server" Text='<%#Eval("sContent")%>'></asp:Label>
                         <div class="divshow">
                             <asp:ImageButton ID="ibntTool" CommandName="ibntTool" runat="server" Width="15px" ImageUrl="~/Images/Icon/info.gif" AlternateText="Tiện ích" ToolTip="Tiện ích !" />
                             <asp:Label ID="lblMsg" runat="server"></asp:Label>
@@ -60,7 +60,7 @@
                 <asp:Panel ID="Panel1" runat="server" DefaultButton="btnSent">
                     <div style="padding-top:8px">
                         <asp:Label ID="lblMsg" runat="server"></asp:Label>
-                        <asp:TextBox id="txtsNoidung" Width="205" Height="22px" Runat="server" Font-Size="16px"></asp:TextBox>
+                        <asp:TextBox id="txtsContent" Width="205" Height="22px" Runat="server" Font-Size="16px"></asp:TextBox>
                         <asp:DropDownList ID="ddlSmiley" runat="server" Visible="false" Width="40" Height="29px" ontextchanged="ddlSmiley_TextChanged" AutoPostBack="true"></asp:DropDownList>
                         <asp:TextBox ID="txtColor" runat="server" type="color" ontextchanged="txtColor_TextChanged" AutoPostBack="true" Width="18px" Height="22px"></asp:TextBox>
                         <asp:ImageButton ID="ibtnSmileys" runat="server" ImageUrl="~/Images/Smileys/Icon_2.gif" onclick="ibtnSmileys_Click" Width="18px" />

@@ -11,6 +11,7 @@ namespace EntityObject
         private string _PK_sSubject;
         private string _sName;
         private string _FK_sTeacher;
+        private string _sLinkVideo;
         private string _sBlackList;
         private Int16 _iStatus;
 
@@ -34,6 +35,13 @@ namespace EntityObject
         {
             get { return this._FK_sTeacher; }
             set { this._FK_sTeacher = value; }
+        }
+
+        // 4. Xay dung cac phuong thuc set, get cho sLinkVideo
+        public string sLinkVideo
+        {
+            get { return this._sLinkVideo; }
+            set { this._sLinkVideo = value; }
         }
 
         // 4. Xay dung cac phuong thuc set, get cho sBlackList
