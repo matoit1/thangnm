@@ -17,7 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DO_AN_TN", "DO_AN_TN\DO_AN_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETChat", "ChatRoom\ASPNETChat.csproj", "{E1F75931-414B-48A2-AE5E-DADEFF278C85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EHOU", "EHOU\EHOU.csproj", "{7128A28B-E620-4FCA-B88E-35EE6F7B8135}"
+EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -55,12 +61,12 @@ Global
 		{E1F75931-414B-48A2-AE5E-DADEFF278C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1F75931-414B-48A2-AE5E-DADEFF278C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1F75931-414B-48A2-AE5E-DADEFF278C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7128A28B-E620-4FCA-B88E-35EE6F7B8135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7128A28B-E620-4FCA-B88E-35EE6F7B8135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7128A28B-E620-4FCA-B88E-35EE6F7B8135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7128A28B-E620-4FCA-B88E-35EE6F7B8135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal

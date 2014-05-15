@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home_SI.master.cs" Inherits="EHOU.Share_Interface.Home_SI" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Trang chủ - Trung tâm đào tạo E-Learning</title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+
+    <%-- Tải Thư viện CSS - JAVASCRIPT--%>
+    <link href="../App_Themes/New/dockbar.css"  rel="stylesheet" />
+    <link href="../App_Themes/New/DA.css"  rel="stylesheet" />
+    <link href="../App_Themes/New/menucss3.css"  rel="stylesheet" />
+
+    <script type="text/javascript" src="../Scripts/New/jquery-1.9.1.min.js"></script>
+	<script src="../Scripts/New/dockbar.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="idock">
+		    <div class="navbar">
+			    <div class="navbar-inner" id="show-unlogin">
+				    <ul class="nav">
+					    <li class="active"><a href="../Default.aspx">Trang chủ</a></li>
+					    <li><a href="../QuanTri/Default.aspx">Quản trị</a></li>
+					    <li><a href="../GiangVien/Default.aspx">Giảng viên</a></li>
+                        <li><a href="../SinhVien/Default.aspx">Sinh viên</a></li>
+                        <li><a href="http://forum.ehou.edu.vn/index.php" target="_blank">Diễn đàn</a></li>
+				    </ul>
+				    <ul class="nav pull-right social-icons">
+					    <li class="login"><a href="https://account.ehou.edu.vn" target="_blank" title="Trang cá nhân" id="name"><i class="icon-user icon-large" ></i> </a></li>
+					    <li class="login dropdown"><a href="#" title="Thông báo" class="dropdown-toggle" data-toggle="dropdown" id="number-notification"><i class="icon-bell-alt icon-large"></i></a>
+						    <ul id="notification" class="dropdown-menu">
+							    <li class="header" >Thông báo</li>
+							    <div class="dropdown-menu-item" data-load="0">
+								    <li class="loader"><img src="../Images/New/103.gif" /></li>
+							    </div>
+							    <li class="footer"><a href="https://account.ehou.edu.vn/common/notification.xhtml" target="_blank">Xem tất cả</a></li>
+						    </ul>
+					    </li>
+					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
+					    <li><a href="http://mail.ehou.edu.vn/" target="_blank" title="Hòm thư">Email</a></li>
+					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
+					    <%--<li class="login" ><a href="#" id="signout"><i class="icon-signout"></i> Thoát</a></li>
+					    <li class="unlogin"><a href="../SinhVien/Accounts/Login.aspx"><i class="icon-signin"></i> Đăng nhập</a></li>--%>
+				    </ul>
+			    </div>
+		    </div>
+	    </div>
+        <div class="wrapper">
+            <div class=" banner">
+                <img src="../Images/New/banner.png"/> </a>
+            </div> 
+            <div class="menu">
+                <div class="menuleft">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <ul id="css3menu1" class="topmenu">
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/home.png" AlternateText="Trang chủ" /> </asp:HyperLink>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Topic.aspx">Giới thiệu</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/Topic.aspx">Viện Đại học Mở Hà Nội</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/Topic.aspx">Trung tâm đào tạo E-Learning</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/Topic.aspx">Công nghệ và học liệu</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Topic.aspx">Định hướng phát triển</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/Topic.aspx">Thông báo - Tin tức</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/Topic.aspx">Thông báo</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Topic.aspx">Tin tức</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/Topic.aspx">Đào tạo</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="~/Topic.aspx">Các ngành đào tạo</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="~/Topic.aspx">Chương trình đào tạo</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="~/Topic.aspx">Các khóa đào tạo ngắn hạn</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/Topic.aspx">Chương trình</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink33" runat="server" NavigateUrl="~/Topic.aspx">Đào tạo trực tuyến EHOU</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink34" runat="server" NavigateUrl="~/Topic.aspx">HOU - TOPICA</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink43" runat="server" NavigateUrl="~/Topic.aspx">Bồi dưỡng giáo viên tiếng anh</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Topic.aspx">Đề án GD vì sự phát triển bền vững</asp:HyperLink></li>
+                        </ul>
+                    </li>
+                    <li class="toproot"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/Topic.aspx">Tuyển sinh</asp:HyperLink>
+                        <ul>
+                            <li><asp:HyperLink ID="HyperLink36" runat="server" NavigateUrl="~/Topic.aspx">Thông báo tuyển sinh</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="~/Topic.aspx">Hướng dẫn đăng ký học</asp:HyperLink></li>
+                            <li><asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="~/Topic.aspx">Các câu hỏi thường gặp</asp:HyperLink></li></li>
+                        </ul>
+                    </li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink7" runat="server" Target="_blank" NavigateUrl="~/SinhVien/Accounts/Register.aspx">Đăng ký online</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Topic.aspx">Liên hệ</asp:HyperLink></li>
+                </ul>
+                </div>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="footer_wrapper">
+            <div id="footer_water">
+                <div id="waves_back"></div>
+                <div id="waves_fore">
+                    <div id="footer_ship"> </div>
+                </div>
+                <div id="footer_inner">
+                    <div class="footer_inner02_sec1">
+                        ĐỊA CHỈ<br /><br />
+                        TRUNG TÂM ĐÀO TẠO ELEARNING<br />
+                        VIỆN ĐẠI HỌC MỞ HÀ NỘI<br />
+                        Tầng 3 Nhà B - B101 - Đường Nguyễn Hiền<br />
+                        - Quận Hai Bà Trưng - Thành Phố Hà Nội
+                    </div>
+                    <div class="footer_inner02_sec1">
+                        THÔNG TIN LIÊN HỆ<br /><br /><br />
+                        - Điện thoại: 04 3623 1474 - 04 3623 1741<br />
+                        - Website: elc.ehou.edu.vn<br />
+                        - Email: info@ehou.edu.vn
+                    </div>
+                    <div class="footer_inner02_sec1">
+                        CÁC LIÊN KẾT<br /><br />
+                        - Viện Đại học Mở Hà Nội<br />
+                        - Bộ Giáo dục và Đào tạo<br />
+                        - Trung tâm Đào tạo E-learning<br />
+                        - Trung tâm Thư viện
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
