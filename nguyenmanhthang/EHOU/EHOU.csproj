@@ -366,6 +366,10 @@
     <Compile Include="EntityObject\MonHocEO.cs" />
     <Compile Include="EntityObject\PhanCongCongTacEO.cs" />
     <Compile Include="EntityObject\SinhVienEO.cs" />
+    <Compile Include="EntityObject\tblAccount.cs" />
+    <Compile Include="EntityObject\tblDetail.cs" />
+    <Compile Include="EntityObject\tblMessage.cs" />
+    <Compile Include="EntityObject\tblSubject.cs" />
     <Compile Include="EntityObject\TinNhanEO.cs" />
     <Compile Include="GiangVien\Accounts\ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
