@@ -6,7 +6,7 @@ using System.Web;
 namespace EHOU.EntityObject
 {
     [Serializable()]
-    public class tblMessage
+    public class tblMessageEO
     {
         private Int64 _PK_lMessage;
         private string _FK_sRoom;

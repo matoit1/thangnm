@@ -6,7 +6,7 @@ using System.Web;
 namespace EHOU.EntityObject
 {
     [Serializable()]
-    public class tblSubject
+    public class tblSubjectEO
     {
         private string _PK_sSubject;
         private string _sName;
