@@ -347,6 +347,10 @@
     <Compile Include="DataAccessObject\MonHocDAO.cs" />
     <Compile Include="DataAccessObject\PhanCongCongTacDAO.cs" />
     <Compile Include="DataAccessObject\SinhVienDAO.cs" />
+    <Compile Include="DataAccessObject\tblAccountDAO.cs" />
+    <Compile Include="DataAccessObject\tblDetailDAO.cs" />
+    <Compile Include="DataAccessObject\tblMessageDAO.cs" />
+    <Compile Include="DataAccessObject\tblSubjectDAO.cs" />
     <Compile Include="DataAccessObject\TinNhanDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
