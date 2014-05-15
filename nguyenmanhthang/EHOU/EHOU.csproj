@@ -42,6 +42,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Other\DLL\CKEditor.NET.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Other\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -272,14 +276,14 @@
     <Content Include="SinhVien\ThongTinCaNhan.aspx" />
     <Content Include="SinhVien\User.aspx" />
     <Content Include="Upload\BlackList.txt" />
-    <Content Include="Upload\DuongNH\My_Program.cpp" />
-    <Content Include="Upload\DuongNH\My_Program.exe" />
-    <Content Include="Upload\LongDT\video\movie.3g2" />
-    <Content Include="Upload\LongDT\video\movie.avi" />
-    <Content Include="Upload\LongDT\video\movie.mov" />
-    <Content Include="Upload\LongDT\video\movie.mp4" />
-    <Content Include="Upload\LongDT\video\movie.mpg" />
-    <Content Include="Upload\LongDT\video\movie.wmv" />
+    <Content Include="Upload\DUONG\My_Program.cpp" />
+    <Content Include="Upload\DUONG\My_Program.exe" />
+    <Content Include="Upload\gv1\video\movie.3g2" />
+    <Content Include="Upload\gv1\video\movie.avi" />
+    <Content Include="Upload\gv1\video\movie.mov" />
+    <Content Include="Upload\gv1\video\movie.mp4" />
+    <Content Include="Upload\gv1\video\movie.mpg" />
+    <Content Include="Upload\gv1\video\movie.wmv" />
     <Content Include="Usercontrol\ASM_ClientUC.ascx" />
     <Content Include="Usercontrol\ASM_ServerUC.ascx" />
     <Content Include="Usercontrol\BaiViet_DetailUC.ascx" />
@@ -953,7 +957,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Images\Smileys\" />
     <Folder Include="Images\Temp\" />
-    <Folder Include="Upload\LongDT\example\" />
+    <Folder Include="Upload\gv1\example\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Other\ProjectManagement\General.xlsx" />
@@ -967,20 +971,20 @@
     <Content Include="Share_Interface\QuanTri_SI.Master" />
     <Content Include="Share_Interface\SinhVien_SI.Master" />
     <Content Include="Share_Interface\Test.Master" />
-    <None Include="Upload\DuongNH\excute_My_Program.cpp.bat" />
-    <None Include="Upload\DuongNH\My_Program.ans" />
-    <None Include="Upload\DuongNH\My_Program.inp" />
-    <None Include="Upload\DuongNH\My_Program.out" />
-    <None Include="Upload\LongDT\ebook\Bao_Cao.xlsx" />
-    <None Include="Upload\LongDT\ebook\DA_Bao_Cao_Lan_2.docx" />
-    <None Include="Upload\LongDT\ebook\do an.docx" />
-    <None Include="Upload\LongDT\ebook\System.Web.HttpCookie11.10B5.doc" />
-    <None Include="Upload\LongDT\ebook\XD lớp học ảo.docx" />
-    <None Include="Upload\LongDT\video\movie.f4v" />
-    <None Include="Upload\LongDT\video\movie.flv" />
-    <None Include="Upload\LongDT\video\movie.mkv" />
-    <None Include="Upload\LongDT\video\movie.ogg" />
-    <None Include="Upload\LongDT\video\movie.webm" />
+    <None Include="Upload\DUONG\excute_My_Program.cpp.bat" />
+    <None Include="Upload\DUONG\My_Program.ans" />
+    <None Include="Upload\DUONG\My_Program.inp" />
+    <None Include="Upload\DUONG\My_Program.out" />
+    <None Include="Upload\gv1\ebook\Bao_Cao.xlsx" />
+    <None Include="Upload\gv1\ebook\DA_Bao_Cao_Lan_2.docx" />
+    <None Include="Upload\gv1\ebook\do an.docx" />
+    <None Include="Upload\gv1\ebook\System.Web.HttpCookie11.10B5.doc" />
+    <None Include="Upload\gv1\ebook\XD lớp học ảo.docx" />
+    <None Include="Upload\gv1\video\movie.f4v" />
+    <None Include="Upload\gv1\video\movie.flv" />
+    <None Include="Upload\gv1\video\movie.mkv" />
+    <None Include="Upload\gv1\video\movie.ogg" />
+    <None Include="Upload\gv1\video\movie.webm" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

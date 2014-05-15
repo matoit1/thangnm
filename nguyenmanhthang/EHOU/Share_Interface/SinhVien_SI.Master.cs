@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using DataAccessObject;
+using Shared_Libraries;
+using Newtonsoft.Json.Linq;
 
 namespace EHOU.Share_Interface
 {
@@ -13,19 +15,27 @@ namespace EHOU.Share_Interface
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                if (Request.Cookies["sinhvien"] == null)
-                {
-                    Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
-                }
-                //lblInfo.Text = "   Hi, " + Request.Cookies["sinhvien"].Value;
-            }
-            catch
-            {
-                Response.Cookies["sinhvien"].Expires = DateTime.Now.AddDays(-1);
-                Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
-            }
+            Session["account_sv"] = "sv1";
+            //try
+            //{
+            //    string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + Request.Cookies["LOGINID"].Value);
+            //    JObject o = JObject.Parse(data);
+            //    if (o["username"] == null)
+            //    {
+            //        //Success!
+            //        Session["account"] = o["username"];
+            //    }
+            //    else
+            //    {
+            //        //Fail!
+            //        Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+            //    }
+            //}
+            //catch
+            //{
+            //    //Error!
+            //    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+            //}
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)

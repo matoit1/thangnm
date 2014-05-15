@@ -76,13 +76,13 @@ namespace EHOU.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtsNoidung control.
+        /// txtsContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsNoidung;
+        protected global::System.Web.UI.WebControls.TextBox txtsContent;
         
         /// <summary>
         /// ddlSmiley control.

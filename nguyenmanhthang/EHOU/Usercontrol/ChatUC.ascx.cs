@@ -20,15 +20,15 @@ namespace EHOU.UserControl
         //public event EventHandler ViewDetail;
         //public static string path = HttpContext.Current.Request.MapPath("~/Upload/BlackList.txt");
         public static int indexrow =10;
-        public TinNhanEO objTinNhanEO
+        public tblMessageEO objtblMessageEO
         {
-            get { return (TinNhanEO)ViewState["objTinNhanEO"]; }
+            get { return (tblMessageEO)ViewState["objTinNhanEO"]; }
             set { ViewState["objTinNhanEO"] = value; }
         }
-        public LichDayVaHocEO objLichDayVaHocEO
+        public tblSubjectEO objtblSubjectEO
         {
-            get { return (LichDayVaHocEO)ViewState["objLichDayVaHocEO"]; }
-            set { ViewState["objLichDayVaHocEO"] = value; }
+            get { return (tblSubjectEO)ViewState["objtblSubjectEO"]; }
+            set { ViewState["objtblSubjectEO"] = value; }
         }
         public string sColor
         {
@@ -60,7 +60,7 @@ namespace EHOU.UserControl
                     //objLichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
                     sColor = "#000000";
                     loadDataToDropDownList();
-                    DataSet ds = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
+                    DataSet ds = tblMessageDAO.Message_SelectList(objtblMessageEO);
                     iSumMessage = ds.Tables[0].Rows.Count;
                     rptDialog.DataSource = ds;
                     rptDialog.DataBind();
@@ -75,21 +75,21 @@ namespace EHOU.UserControl
             lblMsg.Text = "";
             try
             {
-                List<string> lstAcc = objLichDayVaHocEO.sSinhVienChan.Split(',').ToList<string>();
-                if (lstAcc.Any(s => s.Equals(objTinNhanEO.FK_sNguoiGui)) == false)
+                List<string> lstAcc = objtblSubjectEO.sBlackList.Split(',').ToList<string>();
+                if (lstAcc.Any(s => s.Equals(objtblMessageEO.FK_sUsername)) == false)
                 {
                     lblMsg.Text = string.Empty;
-                    objTinNhanEO.sNoidung = Common.ReplaceKeyByEmoticons(Convert.ToString(txtsNoidung.Text));
-                    if (string.IsNullOrEmpty(txtsNoidung.Text) == false)
+                    objtblMessageEO.sContent = Common.ReplaceKeyByEmoticons(Convert.ToString(txtsContent.Text));
+                    if (string.IsNullOrEmpty(txtsContent.Text) == false)
                     {
-                        if (TinNhanDAO.TinNhan_Insert(objTinNhanEO) == false)
+                        if (tblMessageDAO.Message_Insert(objtblMessageEO) == false)
                         {
                             lblMsg.Text = Messages.ChatRoom_Fail;
                         }
                         else
                         {
-                            txtsNoidung.Text = "";
-                            txtsNoidung.Focus();
+                            txtsContent.Text = "";
+                            txtsContent.Focus();
                         }
                     }
                 }
@@ -108,14 +108,14 @@ namespace EHOU.UserControl
         {
             try
             {
-                objLichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
-                DataSet ds = TinNhanDAO.TinNhan_SelectList(objTinNhanEO);
+                objtblSubjectEO = tblSubjectDAO.Subject_SelectItem(objtblSubjectEO);
+                DataSet ds = tblMessageDAO.Message_SelectList(objtblMessageEO);
                 if (iSumMessage != ds.Tables[0].Rows.Count)
                 {
                     iSumMessage = ds.Tables[0].Rows.Count;
                     SinhVienEO _SinhVienEO = new SinhVienEO();
-                    _SinhVienEO.FK_sMaLop = objLichDayVaHocEO.FK_sMalop;
-                    lblSumOnline.Text = SinhVienDAO.SinhVien_SelectByFK_sMaLop(_SinhVienEO).Tables[0].Rows.Count.ToString();
+                    _SinhVienEO.FK_sMaLop = objtblSubjectEO.PK_sSubject;
+                    //lblSumOnline.Text = SinhVienDAO.SinhVien_SelectByFK_sMaLop(_SinhVienEO).Tables[0].Rows.Count.ToString();
                     rptDialog.DataSource = ds;
                     rptDialog.DataBind();
                 }
@@ -152,14 +152,14 @@ namespace EHOU.UserControl
             try
             {
                 //string sAccountDisabe;
-                HiddenField hfFK_sNguoiGui = (HiddenField)e.Item.FindControl("hfFK_sNguoiGui");
+                HiddenField hfFK_sUsername = (HiddenField)e.Item.FindControl("hfFK_sUsername");
                 switch (e.CommandName)
                 {
                     case "ibntTool": break;
                     case "ibntDeleteMessage":
                         iSumMessage = 0;
-                        objTinNhanEO.PK_lTinNhan = Convert.ToInt64(((HiddenField)e.Item.FindControl("hfdPK_lTinNhan")).Value);
-                        if (TinNhanDAO.TinNhan_Delete(objTinNhanEO) == false)
+                        objtblMessageEO.PK_lMessage = Convert.ToInt64(((HiddenField)e.Item.FindControl("hfdPK_lMessage")).Value);
+                        if (tblMessageDAO.Message_Delete(objtblMessageEO) == false)
                         {
                             ((Label)e.Item.FindControl("lblMsg")).Text = Messages.ChatRoom_Hide_Fail;
                         }
@@ -170,17 +170,17 @@ namespace EHOU.UserControl
                         break;
                     case "ibntHideAcc":
                         iSumMessage = 0;
-                        //sAccountDisabe = lblFK_sNguoiGui;
-                        objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan + hfFK_sNguoiGui.Value + ",";
-                        LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(objLichDayVaHocEO);
+                        //sAccountDisabe = lblFK_sUsername;
+                        objtblSubjectEO.sBlackList = objtblSubjectEO.sBlackList + hfFK_sUsername.Value + ",";
+                        tblSubjectDAO.Subject_Update_sLinkVideo_sBlackList(objtblSubjectEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         break;
                     case "ibntShowAcc":
                         iSumMessage = 0;
-                       // sAccountDisabe = lblFK_sNguoiGui;
-                        objLichDayVaHocEO.sSinhVienChan = objLichDayVaHocEO.sSinhVienChan.Replace("," + hfFK_sNguoiGui.Value + ",", ",");
-                        LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(objLichDayVaHocEO);
+                       // sAccountDisabe = lblFK_sUsername;
+                        objtblSubjectEO.sBlackList = objtblSubjectEO.sBlackList.Replace("," + hfFK_sUsername.Value + ",", ",");
+                        tblSubjectDAO.Subject_Update_sLinkVideo_sBlackList(objtblSubjectEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
                         break;
@@ -198,14 +198,14 @@ namespace EHOU.UserControl
                 //string sAccountDisabe;
                 //if (iTypeUser == Messages.ChatRoom_TypeUser_GiangVien)
                 //{
-                    LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+                    tblSubjectEO _tblSubjectEO = new tblSubjectEO();
                     //_LichDayVaHocEO.FK_sMaPCCT = "PCCT000001";
                     //_LichDayVaHocEO.FK_sMalop = "LH00010B1";
                     //_LichDayVaHocEO.iCaHoc = 2;
-                    _LichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
-                    HiddenField hfFK_sNguoiGui = (HiddenField)e.Item.FindControl("hfFK_sNguoiGui");
-                    Label lblFK_sNguoiGui = (Label)e.Item.FindControl("lblFK_sNguoiGui");
-                    Label lblsNoidung = (Label)e.Item.FindControl("lblsNoidung");
+                    _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(objtblSubjectEO);
+                    HiddenField hfFK_sUsername = (HiddenField)e.Item.FindControl("hfFK_sUsername");
+                    Label lblFK_sUsername = (Label)e.Item.FindControl("lblFK_sUsername");
+                    Label lblsContent = (Label)e.Item.FindControl("lblsContent");
                     ImageButton ibntTool = ((ImageButton)e.Item.FindControl("ibntTool"));
                     ImageButton ibntDeleteMessage = ((ImageButton)e.Item.FindControl("ibntDeleteMessage"));
                     ImageButton ibntHideAcc = ((ImageButton)e.Item.FindControl("ibntHideAcc"));
@@ -214,71 +214,71 @@ namespace EHOU.UserControl
                     if (ibntDeleteMessage != null && iTypeUser == Messages.ChatRoom_TypeUser_GiangVien) { ibntDeleteMessage.Visible = true; } else { ibntDeleteMessage.Visible = false; }
                     if (ibntHideAcc != null && iTypeUser == Messages.ChatRoom_TypeUser_GiangVien) { ibntHideAcc.Visible = true; } else { ibntHideAcc.Visible = false; }
                     if (ibntShowAcc != null && iTypeUser == Messages.ChatRoom_TypeUser_GiangVien) { ibntShowAcc.Visible = true; } else { ibntShowAcc.Visible = false; }
-                    if (hfFK_sNguoiGui != null)
+                    if (hfFK_sUsername != null)
                     {
                         //SinhVienEO _SinhVienEO = new SinhVienEO();
-                        //_SinhVienEO.sTendangnhapSV = lblFK_sNguoiGui.Text;
+                        //_SinhVienEO.sTendangnhapSV = lblFK_sUsername.Text;
                         //string PK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
 
-                        List<string> lstAcc = _LichDayVaHocEO.sSinhVienChan.Split(',').ToList<string>();
-                        if ((lstAcc.Any(s => s.Contains(hfFK_sNguoiGui.Value))) == true)
+                        List<string> lstAcc = _tblSubjectEO.sBlackList.Split(',').ToList<string>();
+                        if ((lstAcc.Any(s => s.Contains(hfFK_sUsername.Value))) == true)
                         {
-                           // sAccountDisabe = lblFK_sNguoiGui.Text;
+                           // sAccountDisabe = lblFK_sUsername.Text;
                             ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                             ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         }
                         else
                         {
-                            //sAccountDisabe = lblFK_sNguoiGui.Text;
+                            //sAccountDisabe = lblFK_sUsername.Text;
                             ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                             ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
                         }
                     }
-                    if (lblFK_sNguoiGui != null)
+                    if (lblFK_sUsername != null)
                     {
                         GiangVienEO _GiangVienEO = new GiangVienEO();
-                        _GiangVienEO.PK_sMaGV = lblFK_sNguoiGui.Text;
+                        _GiangVienEO.PK_sMaGV = lblFK_sUsername.Text;
                         _GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
 
                         SinhVienEO _SinhVienEO = new SinhVienEO();
-                        _SinhVienEO.PK_sMaSV = lblFK_sNguoiGui.Text;
+                        _SinhVienEO.PK_sMaSV = lblFK_sUsername.Text;
                         _SinhVienEO = SinhVienDAO.SinhVien_SelectItem(_SinhVienEO);
                         
                         if (_GiangVienEO.PK_sMaGV != null)
                         {
-                            lblFK_sNguoiGui.Text = _GiangVienEO.sHotenGV;
-                            if(_GiangVienEO.PK_sMaGV != objTinNhanEO.FK_sNguoiGui){
-                                lblFK_sNguoiGui.Font.Underline = true;
-                                lblFK_sNguoiGui.ForeColor = System.Drawing.Color.Blue;
+                            lblFK_sUsername.Text = _GiangVienEO.sHotenGV;
+                            if(_GiangVienEO.PK_sMaGV != objtblMessageEO.FK_sUsername){
+                                lblFK_sUsername.Font.Underline = true;
+                                lblFK_sUsername.ForeColor = System.Drawing.Color.Blue;
                             }
                         }
                         else
                         {
                             if (_SinhVienEO.PK_sMaSV != null)
                             {
-                                lblFK_sNguoiGui.Text = _SinhVienEO.sHotenSV;
+                                lblFK_sUsername.Text = _SinhVienEO.sHotenSV;
                             }
                             else
                             {
-                                lblFK_sNguoiGui.Text = Messages.Chat_An_Danh;
+                                lblFK_sUsername.Text = Messages.Chat_An_Danh;
                             }
                         }
                     }
 
-                    if (lblsNoidung != null && objTinNhanEO.FK_sNguoiGui == hfFK_sNguoiGui.Value)
+                    if (lblsContent != null && objtblMessageEO.FK_sUsername == hfFK_sUsername.Value)
                     {
-                        lblsNoidung.ForeColor = System.Drawing.ColorTranslator.FromHtml(sColor);
+                        lblsContent.ForeColor = System.Drawing.ColorTranslator.FromHtml(sColor);
                     }
-                    if (lblFK_sNguoiGui != null && objTinNhanEO.FK_sNguoiGui == hfFK_sNguoiGui.Value)
+                    if (lblFK_sUsername != null && objtblMessageEO.FK_sUsername == hfFK_sUsername.Value)
                     {
                         if (iTypeUser == Messages.ChatRoom_TypeUser_GiangVien)
                         {
-                            lblFK_sNguoiGui.ForeColor = System.Drawing.Color.Blue;
-                            lblFK_sNguoiGui.ToolTip = Messages.ChatRoom_GiangVien;
+                            lblFK_sUsername.ForeColor = System.Drawing.Color.Blue;
+                            lblFK_sUsername.ToolTip = Messages.ChatRoom_GiangVien;
                         }
                         else
                         {
-                            lblFK_sNguoiGui.ForeColor = System.Drawing.Color.LightSkyBlue;
+                            lblFK_sUsername.ForeColor = System.Drawing.Color.LightSkyBlue;
                         }
                     }
                 //}
@@ -292,19 +292,19 @@ namespace EHOU.UserControl
             if (ddlSmiley.Visible == false)
             {
                 ddlSmiley.Visible = true;
-                txtsNoidung.Width = 140;
+                txtsContent.Width = 140;
             }
             else
             {
                 ddlSmiley.Visible = false;
-                txtsNoidung.Width = 210;
+                txtsContent.Width = 210;
             }
         }
 
         protected void ddlSmiley_TextChanged(object sender, EventArgs e)
         {
-            txtsNoidung.Text = txtsNoidung.Text + ddlSmiley.SelectedValue;
-            txtsNoidung.Focus();
+            txtsContent.Text = txtsContent.Text + ddlSmiley.SelectedValue;
+            txtsContent.Focus();
         }
 
         public void loadDataToDropDownList()
