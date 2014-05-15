@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SinhVien_SI.master.cs" Inherits="EHOU.Share_Interface.SinhVien_SI" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Sinh Viên - Trung tâm đào tạo E-Learning</title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+
+    <%-- Tải Thư viện CSS - JAVASCRIPT--%>
+    <link href="../App_Themes/New/dockbar.css"  rel="stylesheet" />
+    <link href="../App_Themes/New/DA.css"  rel="stylesheet" />
+    <link href="../App_Themes/New/menucss3.css"  rel="stylesheet" />
+    <link href="../App_Themes/public.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/popup.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Chat.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="../Scripts/chat.js"></script>
+    <script type="text/javascript" src="../Scripts/New/jquery-1.9.1.min.js"></script>
+	<script src="../Scripts/New/dockbar.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../Scripts/jquery-1.4.1.min.js"> </script>
+    <script type="text/javascript" src="../Scripts/popup.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('form ~ div').hide();
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="idock">
+		    <div class="navbar">
+			    <div class="navbar-inner" id="show-unlogin">
+				    <ul class="nav">
+					    <li><a href="../Default.aspx">Trang chủ</a></li>
+					    <li><a href="../QuanTri/Default.aspx">Quản trị</a></li>
+					    <li><a href="../GiangVien/Default.aspx">Giảng viên</a></li>
+                        <li class="active"><a href="../SinhVien/Default.aspx">Sinh viên</a></li>
+                        <li><a href="http://forum.ehou.edu.vn/index.php" target="_blank">Diễn đàn</a></li>
+				    </ul>
+				    <ul class="nav pull-right social-icons">
+					    <li class="login"><a href="https://account.ehou.edu.vn" target="_blank" title="Trang cá nhân" id="name"><i class="icon-user icon-large" ></i> </a></li>
+					    <li class="login dropdown"><a href="#" title="Thông báo" class="dropdown-toggle" data-toggle="dropdown" id="number-notification"><i class="icon-bell-alt icon-large"></i></a>
+						    <ul id="notification" class="dropdown-menu">
+							    <li class="header" >Thông báo</li>
+							    <div class="dropdown-menu-item" data-load="0">
+								    <li class="loader"><img src="../Images/New/103.gif" /></li>
+							    </div>
+							    <li class="footer"><a href="https://account.ehou.edu.vn/common/notification.xhtml" target="_blank">Xem tất cả</a></li>
+						    </ul>
+					    </li>
+					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
+					    <li><a href="http://mail.ehou.edu.vn/" target="_blank" title="Hòm thư">Email</a></li>
+					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
+					    <li><asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click"><i class="icon-signout"></i>Thoát</asp:LinkButton></li>
+				    </ul>
+			    </div>
+		    </div>
+	    </div>
+        <div class="wrapper">
+            <div class=" banner">
+                <img src="../Images/New/banner.png"/> </a>
+            </div> 
+            <div class="menu">
+                <div class="menuleft">
+                    <ul id="css3menu1" class="topmenu">
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/home.png" AlternateText="Trang chủ" /></asp:HyperLink>
+                        </li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/SinhVien/LichHoc.aspx">Lịch Học - Lịch Thi</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/SinhVien/DiemThi.aspx">Kết quả học tập</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/SinhVien/ThongTinCaNhan.aspx">Thông tin cá nhân</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/FAQ.aspx">Sinh viên cần biết</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/FAQ.aspx">Trợ giúp</asp:HyperLink></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="footer_wrapper">
+            <div id="footer_water">
+                <div id="waves_back"></div>
+                <div id="waves_fore">
+                    <div id="footer_ship"> </div>
+                </div>
+                <div id="footer_inner">
+                    <div class="footer_inner02_sec1">
+                        ĐỊA CHỈ<br /><br />
+                        TRUNG TÂM ĐÀO TẠO ELEARNING<br />
+                        VIỆN ĐẠI HỌC MỞ HÀ NỘI<br />
+                        Tầng 3 Nhà B - B101 - Đường Nguyễn Hiền<br />
+                        - Quận Hai Bà Trưng - Thành Phố Hà Nội
+                    </div>
+                    <div class="footer_inner02_sec1">
+                        THÔNG TIN LIÊN HỆ<br /><br /><br />
+                        - Điện thoại: 04 3623 1474 - 04 3623 1741<br />
+                        - Website: elc.ehou.edu.vn<br />
+                        - Email: info@ehou.edu.vn
+                    </div>
+                    <div class="footer_inner02_sec1">
+                        CÁC LIÊN KẾT<br /><br />
+                        - Viện Đại học Mở Hà Nội<br />
+                        - Bộ Giáo dục và Đào tạo<br />
+                        - Trung tâm Đào tạo E-learning<br />
+                        - Trung tâm Thư viện
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
