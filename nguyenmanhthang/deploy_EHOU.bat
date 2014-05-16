@@ -1,36 +1,36 @@
-Xcopy /s /i /y "DO_AN_TN\bin\*.dll" "C:\inetpub\wwwroot\EHOU\bin\"
+Xcopy /s /i /y "EHOU\bin\*.dll" "C:\inetpub\wwwroot\EHOU\bin\"
 
-Xcopy /s /i /y "DO_AN_TN\*.Master" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.ascx" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.aspx" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.asax" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.rpt" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.xsd" "C:\inetpub\wwwroot\EHOU\"
-
-
-Xcopy /s /i /y "DO_AN_TN\*.html" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.htm" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.css" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.js" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.xml" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.htaccess" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.txt" "C:\inetpub\wwwroot\EHOU\"
-
-Xcopy /s /i /y "DO_AN_TN\*.swf" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.jpg" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.png" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.gif" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.ico" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.Master" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.ascx" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.aspx" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.asax" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.rpt" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.xsd" "C:\inetpub\wwwroot\EHOU\"
 
 
-Xcopy /s /i /y "DO_AN_TN\*.sql" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.bak" "C:\inetpub\wwwroot\EHOU\"
-Xcopy /s /i /y "DO_AN_TN\*.rar" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.html" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.htm" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.css" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.js" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.xml" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.htaccess" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.txt" "C:\inetpub\wwwroot\EHOU\"
 
-Xcopy /s /i /y "DO_AN_TN\Upload\*" "C:\inetpub\wwwroot\EHOU\Upload\"
-Xcopy /s /i /y "DO_AN_TN\Medio\*" "C:\inetpub\wwwroot\EHOU\Medio\"
-Xcopy /s /i /y "DO_AN_TN\Flash\*" "C:\inetpub\wwwroot\EHOU\Flash\"
-Xcopy /s /i /y "DO_AN_TN\Images\*" "C:\inetpub\wwwroot\EHOU\Images\"
-Xcopy /s /i /y "DO_AN_TN\Other\*" "C:\inetpub\wwwroot\EHOU\Other\"
+Xcopy /s /i /y "EHOU\*.swf" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.jpg" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.png" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.gif" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.ico" "C:\inetpub\wwwroot\EHOU\"
+
+
+Xcopy /s /i /y "EHOU\*.sql" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.bak" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.rar" "C:\inetpub\wwwroot\EHOU\"
+
+Xcopy /s /i /y "EHOU\Upload\*" "C:\inetpub\wwwroot\EHOU\Upload\"
+Xcopy /s /i /y "EHOU\Medio\*" "C:\inetpub\wwwroot\EHOU\Medio\"
+Xcopy /s /i /y "EHOU\Flash\*" "C:\inetpub\wwwroot\EHOU\Flash\"
+Xcopy /s /i /y "EHOU\Images\*" "C:\inetpub\wwwroot\EHOU\Images\"
+Xcopy /s /i /y "EHOU\Other\*" "C:\inetpub\wwwroot\EHOU\Other\"
 
 pause
