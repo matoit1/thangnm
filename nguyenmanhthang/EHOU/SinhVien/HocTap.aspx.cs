@@ -29,7 +29,7 @@ namespace EHOU.SinhVien
                 Hoc_LieuUC1.btnPermit.Visible = false;
                 if (!IsPostBack)
                 {
-                    if (Request.QueryString["PK_sSubject"] != null)
+                    if (Request.QueryString["PK_sSubject"] != null && Request.QueryString["lCaHoc"] != null)
                     {
                         //LopHocEO _LopHocEO = new LopHocEO();
                         //_LopHocEO.PK_sMalop = Request.QueryString["PK_sMalop"];
@@ -51,6 +51,7 @@ namespace EHOU.SinhVien
                         tblDetailEO _tblDetailEO = new tblDetailEO();
                         _tblDetailEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
                         _tblDetailEO.FK_sStudent =  Session["account_sv"].ToString();
+                        _tblDetailEO.PK_lCaHoc = Convert.ToInt64(Request.QueryString["lCaHoc"].ToString());
                         if (tblDetailDAO.Detail_CheckExists(_tblDetailEO) !=true)
                         {
                             Response.Redirect("~/Access_Denied.aspx");

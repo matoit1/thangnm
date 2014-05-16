@@ -236,27 +236,30 @@ namespace EHOU.UserControl
                     }
                     if (lblFK_sUsername != null)
                     {
-                        GiangVienEO _GiangVienEO = new GiangVienEO();
-                        _GiangVienEO.PK_sMaGV = lblFK_sUsername.Text;
-                        _GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
+                        //GiangVienEO _GiangVienEO = new GiangVienEO();
+                        //_GiangVienEO.PK_sMaGV = lblFK_sUsername.Text;
+                        //_GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
 
-                        SinhVienEO _SinhVienEO = new SinhVienEO();
-                        _SinhVienEO.PK_sMaSV = lblFK_sUsername.Text;
-                        _SinhVienEO = SinhVienDAO.SinhVien_SelectItem(_SinhVienEO);
+                        //SinhVienEO _SinhVienEO = new SinhVienEO();
+                        //_SinhVienEO.PK_sMaSV = lblFK_sUsername.Text;
+                        //_SinhVienEO = SinhVienDAO.SinhVien_SelectItem(_SinhVienEO);
+
+                        tblDetailEO _tblDetailEO = new tblDetailEO();
                         
-                        if (_GiangVienEO.PK_sMaGV != null)
+                        if (objtblMessageEO.FK_sUsername != null)
                         {
-                            lblFK_sUsername.Text = _GiangVienEO.sHotenGV;
-                            if(_GiangVienEO.PK_sMaGV != objtblMessageEO.FK_sUsername){
+                            lblFK_sUsername.Text = objtblMessageEO.FK_sUsername;
+                            if (_tblDetailEO.FK_sStudent != objtblMessageEO.FK_sUsername)
+                            {
                                 lblFK_sUsername.Font.Underline = true;
                                 lblFK_sUsername.ForeColor = System.Drawing.Color.Blue;
                             }
                         }
                         else
                         {
-                            if (_SinhVienEO.PK_sMaSV != null)
+                            if (_tblDetailEO.FK_sStudent != null)
                             {
-                                lblFK_sUsername.Text = _SinhVienEO.sHotenSV;
+                                lblFK_sUsername.Text = _tblDetailEO.FK_sStudent;
                             }
                             else
                             {
