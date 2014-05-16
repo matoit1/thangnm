@@ -79,8 +79,11 @@
     <Content Include="App_Themes\popup.css" />
     <Content Include="App_Themes\public.css" />
     <Content Include="App_Themes\Toolbar.css" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\CKEditor.NET.dll" />
     <Content Include="bin\EHOU.dll" />
     <Content Include="bin\EHOU.pdb" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
     <Content Include="Default.aspx" />
     <Content Include="Flash\FlashVideoPlayer.swf" />
     <Content Include="Flash\LiveSample.swf" />
