@@ -15,27 +15,28 @@ namespace EHOU.Share_Interface
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            Session["account_sv"] = "sv1";
-            //try
-            //{
-            //    string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + Request.Cookies["LOGINID"].Value);
-            //    JObject o = JObject.Parse(data);
-            //    if (o["username"] == null)
-            //    {
-            //        //Success!
-            //        Session["account"] = o["username"];
-            //    }
-            //    else
-            //    {
-            //        //Fail!
-            //        Response.Redirect("https://account.dev.ehou.edu.vn/auth");
-            //    }
-            //}
-            //catch
-            //{
-            //    //Error!
-            //    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
-            //}
+            //Session["account_sv"] = "sv1";
+            try
+            {
+                string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + Request.Cookies["LOGINID"].Value);
+                JObject o = JObject.Parse(data);
+                if (o["username"] != null && o["type"].ToString() == "1")
+                {
+                    //Success!
+                    Session["account_sv"] = o["username"];
+                }
+                else
+                {
+                    //Fail!
+                    //Response.Write("<script>alert('Error 1: " + o["username"] + "')</script>");
+                    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+                }
+            }
+            catch(Exception ex)
+            {
+                //Error!
+                Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+            }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)

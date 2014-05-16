@@ -11,12 +11,16 @@ namespace EHOU.SinhVien
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["PK_sSubject"] != null)
+            try
             {
-                CaHocUC1.Visible = true;
-                CaHocUC1.FK_sSubject = Request.QueryString["PK_sSubject"];
-                CaHocUC1.FK_sStudent = Session["account_sv"].ToString();
+                if (Request.QueryString["PK_sSubject"] != null)
+                {
+                    CaHocUC1.Visible = true;
+                    CaHocUC1.FK_sSubject = Request.QueryString["PK_sSubject"];
+                    CaHocUC1.FK_sStudent = Session["account_sv"].ToString();
+                }
             }
+            catch { }
         }
 
         protected void GoClass_Click(object sender, EventArgs e)
