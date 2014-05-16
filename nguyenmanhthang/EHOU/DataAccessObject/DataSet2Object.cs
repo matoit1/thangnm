@@ -349,8 +349,12 @@ namespace DataAccessObject
                 tblDetailEO output = new tblDetailEO();
                 foreach (DataRow dr in input.Tables[0].Rows)
                 {
+                    output.PK_lCaHoc = Convert.ToInt64(dr["PK_lCaHoc"]);
                     output.FK_sSubject = Convert.ToString(dr["FK_sSubject"]);
                     output.FK_sStudent = Convert.ToString(dr["FK_sStudent"]);
+                    output.sTitle = Convert.ToString(dr["FK_sSubject"]);
+                    output.tDateStart = Convert.ToDateTime(dr["tDateStart"]);
+                    output.tDateEnd = Convert.ToDateTime(dr["tDateEnd"]);
                 }
                 return output;
             }

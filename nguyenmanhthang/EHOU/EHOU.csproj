@@ -269,6 +269,7 @@
     <Content Include="SinhVien\Accounts\ForgotPassword.aspx" />
     <Content Include="SinhVien\Accounts\Login.aspx" />
     <Content Include="SinhVien\Accounts\Register.aspx" />
+    <Content Include="SinhVien\ChonLop.aspx" />
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="SinhVien\DiemThi.aspx" />
     <Content Include="SinhVien\HocTap.aspx" />
@@ -289,6 +290,7 @@
     <Content Include="Usercontrol\ASM_ServerUC.ascx" />
     <Content Include="Usercontrol\BaiViet_DetailUC.ascx" />
     <Content Include="Usercontrol\BaiViet_ListUC.ascx" />
+    <Content Include="Usercontrol\CaHocUC.ascx" />
     <Content Include="Usercontrol\CauHoi_DetailUC.ascx" />
     <Content Include="Usercontrol\CauHoi_ListUC.ascx" />
     <Content Include="Usercontrol\ChatUC.ascx" />
@@ -603,6 +605,13 @@
     <Compile Include="SinhVien\Accounts\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SinhVien\ChonLop.aspx.cs">
+      <DependentUpon>ChonLop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\ChonLop.aspx.designer.cs">
+      <DependentUpon>ChonLop.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SinhVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -679,6 +688,13 @@
     </Compile>
     <Compile Include="Usercontrol\BaiViet_ListUC.ascx.designer.cs">
       <DependentUpon>BaiViet_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\CaHocUC.ascx.cs">
+      <DependentUpon>CaHocUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\CaHocUC.ascx.designer.cs">
+      <DependentUpon>CaHocUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\CauHoi_DetailUC.ascx.cs">
       <DependentUpon>CauHoi_DetailUC.ascx</DependentUpon>
