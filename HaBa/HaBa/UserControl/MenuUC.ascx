@@ -15,7 +15,7 @@
 	<!-- MENU [start] -->
     <div class="menu-secondary-container">
 	    <ul class="menus menu-secondary">
-		    <li class="curent"><a href="../Default.aspx">Home</a></li>
+		    
 		    <li><a href="../GroupProduct.aspx?lGroup=1">Áo</a>
 			    <ul class="children">
 				    <li><a href="../GroupProduct.aspx?lGroup=2">Áo sơ mi</a></li>

@@ -40,6 +40,15 @@ namespace HaBa.ShareInterface {
         protected global::HaBa.UserControl.MenuUC MenuUC1;
         
         /// <summary>
+        /// ProducGroupUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HaBa.UserControl.ProducGroupUC ProducGroupUC1;
+        
+        /// <summary>
         /// ShowAllProductUC1 control.
         /// </summary>
         /// <remarks>
