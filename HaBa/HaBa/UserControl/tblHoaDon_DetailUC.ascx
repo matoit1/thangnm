@@ -67,12 +67,12 @@
         </tr>
         <tr>
             <td>Ngày đặt hàng: </td>
-            <td><asp:TextBox ID="txttNgayDatHang" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayDatHang" runat="server" Width="400px" CssClass="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayDatHang" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày giao hàng: </td>
-            <td><asp:TextBox ID="txttNgayGiaoHang" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayGiaoHang" runat="server" Width="400px" CssClass="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayGiaoHang" runat="server"></asp:Label></td>
         </tr>
         <tr>
