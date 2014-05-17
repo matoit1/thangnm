@@ -57,37 +57,37 @@
                                 </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center"  />
                         </asp:TemplateField>
-                        <asp:BoundField  DataField="PK_iTaiKhoanID"  HeaderText="Mã giáo viên" SortExpression="PK_iTaiKhoanID">
+                        <asp:BoundField  DataField="PK_iTaiKhoanID"  HeaderText="Mã tài khoản" SortExpression="PK_iTaiKhoanID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField  DataField="sTenDangNhap"  HeaderText="Mã bài viết" SortExpression="sTenDangNhap">
+                        <asp:BoundField  DataField="sTenDangNhap"  HeaderText="Tên đăng nhập" SortExpression="sTenDangNhap">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField DataField="sMatKhau" HeaderText="Tiêu đề" SortExpression="sMatKhau">
+                        <asp:BoundField DataField="sMatKhau" HeaderText="Mật khẩu" SortExpression="sMatKhau">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sHoTen" HeaderText="Link ảnh" SortExpression="sHoTen">
+                        <asp:BoundField DataField="sHoTen" HeaderText="Họ và Tên" SortExpression="sHoTen">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sEmail" HeaderText="Tags" SortExpression="sEmail">
+                        <asp:BoundField DataField="sEmail" HeaderText="Email" SortExpression="sEmail">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sDiaChi" HeaderText="Nội dung" SortExpression="sDiaChi">
+                        <asp:BoundField DataField="sDiaChi" HeaderText="Địa chị" SortExpression="sDiaChi">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sSoDienThoai" HeaderText="Lượt xem" SortExpression="sSoDienThoai">
+                        <asp:BoundField DataField="sSoDienThoai" HeaderText="Số điện thoại" SortExpression="sSoDienThoai">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sLinkAvatar" HeaderText="Ngày viết" SortExpression="sLinkAvatar">
+                        <asp:BoundField DataField="sLinkAvatar" HeaderText="Link Avatar" SortExpression="sLinkAvatar">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField  DataField="tNgaySinh"  HeaderText="Ngày cập nhật" SortExpression="tNgaySinh">
+                        <asp:BoundField  DataField="tNgaySinh"  HeaderText="Ngày sinh" SortExpression="tNgaySinh">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField DataField="tNgayDangKy" HeaderText="Mô tả" SortExpression="tNgayDangKy">
+                        <asp:BoundField DataField="tNgayDangKy" HeaderText="Ngày đăng ký" SortExpression="tNgayDangKy">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="iQuyenHan" HeaderText="Mô tả" SortExpression="iQuyenHan">
+                        <asp:BoundField DataField="iQuyenHan" HeaderText="Quyền hạn" SortExpression="iQuyenHan">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                         <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThai">

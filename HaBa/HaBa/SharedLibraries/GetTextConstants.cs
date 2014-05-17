@@ -54,20 +54,6 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.5. GiangVien_bCongChucGV_GTC (Công Chức) </summary>
-        /// <param name="input"></param>
-        /// <returns>output</returns>
-        public static string GiangVien_bCongChucGV_GTC(bool input)
-        {
-            string output = "";
-            switch (input)
-            {
-                case true: output = "Đã có công chức"; break;
-                case false: output = "Chưa có công chức"; break;
-            }
-            return output;
-        }
-
         /// <summary> I.6. GiangVien_iTrangThaiGV_GTC (Trạng Thái Giáo Viên) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
@@ -198,6 +184,22 @@ namespace HaBa.SharedLibraries
                 case 1: output = "Quản trị"; break;
                 case 2: output = "Nhân Viên"; break;
                 case 3: output = "Khách Hàng"; break;
+                default: output = "N/A"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.5. HoaDon_iTrangThai_GTC (Công Chức) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string HoaDon_iTrangThai_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Chưa giao hàng"; break;
+                case 2: output = "Đã giao hàng"; break;
+                case 3: output = "Hủy"; break;
                 default: output = "N/A"; break;
             }
             return output;

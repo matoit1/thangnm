@@ -66,12 +66,12 @@
                         <asp:BoundField DataField="sTenSanPham" HeaderText="Tên sản phẩm" SortExpression="sTenSanPham">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sMoTa" HeaderText="Mô tả" SortExpression="sMoTa">
+                        <%--<asp:BoundField DataField="sMoTa" HeaderText="Mô tả" SortExpression="sMoTa">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                         <asp:BoundField DataField="sThongTin" HeaderText="Thông tin" SortExpression="sThongTin">
                             <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>
+                        </asp:BoundField>--%>
                         <asp:BoundField DataField="sXuatXu" HeaderText="Xuất xứ" SortExpression="sXuatXu">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>

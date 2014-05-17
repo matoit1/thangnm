@@ -30,11 +30,9 @@
             <td><asp:TextBox ID="txtsTenDangNhap" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsTenDangNhap" runat="server"></asp:Label></td>
         </tr>
-
-        
         <tr>
             <td>Mật khẩu: </td>
-            <td><asp:TextBox ID="txtsMatKhau" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsMatKhau" runat="server" Width="400px" TextMode="Password"></asp:TextBox></td>
             <td><asp:Label ID="lblsMatKhau" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -69,7 +67,7 @@
         </tr>
         <tr>
             <td>Ngày đăng ký: </td>
-            <td><asp:TextBox ID="txttNgayDangKy" runat="server" Width="400px" CssClass="startdate"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayDangKy" runat="server" Width="400px" CssClass="startdate" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayDangKy" runat="server"></asp:Label></td>
         </tr>
         <tr>

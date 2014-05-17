@@ -65,7 +65,7 @@ namespace HaBa.UserControl
                     sGhiChu = topic.Field<string>("sGhiChu"),
                     tNgayDatHang = topic.Field<DateTime>("tNgayDatHang"),
                     tNgayGiaoHang = topic.Field<DateTime>("tNgayGiaoHang"),
-                    iTrangThai = topic.Field<Int16>("iTrangThai")
+                    iTrangThai = GetTextConstants.HoaDon_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

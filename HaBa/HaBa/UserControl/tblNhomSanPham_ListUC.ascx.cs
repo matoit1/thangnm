@@ -57,7 +57,7 @@ namespace HaBa.UserControl
                     PK_iNhomSanPhamID = topic.Field<Int16>("PK_iNhomSanPhamID"),
                     iNhomCon = topic.Field<Int16>("iNhomCon"),
                     sTenNhom = topic.Field<string>("sTenNhom"),
-                    iTrangThai = GetTextConstants.NhomSanPham_iTrangThai_GTC(topic.Field<Int16>("iTrangThai")),
+                    iTrangThai = GetTextConstants.NhomSanPham_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
