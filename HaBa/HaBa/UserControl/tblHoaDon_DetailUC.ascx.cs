@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using HaBa.EntityObject;
 using HaBa.SharedLibraries;
 using HaBa.DataAccessObject;
+using HaBa.SharedLibraries.Constants;
 
 namespace HaBa.UserControl
 {
@@ -44,17 +45,20 @@ namespace HaBa.UserControl
             txtsEmail.Text = Convert.ToString(_tblHoaDonEO.sDiaChi);
             txtsHoTen.Text = Convert.ToString(_tblHoaDonEO.sSoDienThoai);
             txtsEmail.Text = Convert.ToString(_tblHoaDonEO.sGhiChu);
-            txttNgayDatHang.Text = Convert.ToString(_tblHoaDonEO.tNgayDatHang);
-            txttNgayGiaoHang.Text = Convert.ToString(_tblHoaDonEO.tNgayGiaoHang);
+            if (_tblHoaDonEO.tNgayDatHang == DateTime.MinValue) { txttNgayDatHang.Text = DateTime.Now.ToString("dd/MM/yyyy"); } else { txttNgayDatHang.Text = Convert.ToString(_tblHoaDonEO.tNgayDatHang); }
+            if (_tblHoaDonEO.tNgayGiaoHang == DateTime.MinValue) { txttNgayGiaoHang.Text = DateTime.Now.ToString("dd/MM/yyyy"); } else { txttNgayGiaoHang.Text = Convert.ToString(_tblHoaDonEO.tNgayGiaoHang); }
+
+            //txttNgayDatHang.Text = Convert.ToString(_tblHoaDonEO.tNgayDatHang);
+            //txttNgayGiaoHang.Text = Convert.ToString(_tblHoaDonEO.tNgayGiaoHang);
             try { ddliTrangThai.SelectedValue = Convert.ToString(_tblHoaDonEO.iTrangThai); }
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
         private tblHoaDonEO getObject()
         {
+            tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
             try
             {
-                tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
                 _tblHoaDonEO.PK_lHoaDonID = Convert.ToInt64(txtPK_lHoaDonID.Text);
                 try { _tblHoaDonEO.FK_iTaiKhoanID_Giao = Convert.ToInt32(ddlFK_iTaiKhoanID_Giao.SelectedValue); }
                 catch { lblFK_iTaiKhoanID_Giao.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblHoaDonEO.FK_iTaiKhoanID_Giao = 0; }
@@ -72,33 +76,44 @@ namespace HaBa.UserControl
                 catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblHoaDonEO.iTrangThai = 0; }
                 return _tblHoaDonEO;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                lblMsg.Text = Messages.Loi + ex.Message;
+                return _tblHoaDonEO;
             }
         }
 
         public void loadDataToDropDownList()
         {
-            ddlFK_iTaiKhoanID_Giao.DataSource = tblHoaDonDAO.HoaDon_SelectList();
-            ddlFK_iTaiKhoanID_Giao.DataTextField = "FK_iTaiKhoanID_Nhan";
-            ddlFK_iTaiKhoanID_Giao.DataValueField = "PK_lHoaDonID";
-            ddlFK_iTaiKhoanID_Giao.DataBind();
+            try
+            {
+                tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                _tblTaiKhoanEO.iQuyenHan = TaiKhoan_iQuyenHan_C.Nhan_Vien;
+                ddlFK_iTaiKhoanID_Giao.DataSource = tblTaiKhoanDAO.TaiKhoan_SelectListByiQuyenHan(_tblTaiKhoanEO);
+                ddlFK_iTaiKhoanID_Giao.DataTextField = "sHoTen";
+                ddlFK_iTaiKhoanID_Giao.DataValueField = "PK_iTaiKhoanID";
+                ddlFK_iTaiKhoanID_Giao.DataBind();
 
-            ddlFK_iTaiKhoanID_Nhan.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddlFK_iTaiKhoanID_Nhan.DataTextField = "sTenSanPham";
-            ddlFK_iTaiKhoanID_Nhan.DataValueField = "PK_sSanPhamID";
-            ddlFK_iTaiKhoanID_Nhan.DataBind();
+                _tblTaiKhoanEO.iQuyenHan = TaiKhoan_iQuyenHan_C.Khach_Hang;
+                ddlFK_iTaiKhoanID_Nhan.DataSource = tblTaiKhoanDAO.TaiKhoan_SelectListByiQuyenHan(_tblTaiKhoanEO);
+                ddlFK_iTaiKhoanID_Nhan.DataTextField = "sHoTen";
+                ddlFK_iTaiKhoanID_Nhan.DataValueField = "PK_iTaiKhoanID";
+                ddlFK_iTaiKhoanID_Nhan.DataBind();
 
-            ddlFK_iThanhToanID.DataSource = tblHoaDonDAO.HoaDon_SelectList();
-            ddlFK_iThanhToanID.DataTextField = "FK_iTaiKhoanID_Nhan";
-            ddlFK_iThanhToanID.DataValueField = "PK_lHoaDonID";
-            ddlFK_iThanhToanID.DataBind();
+                ddlFK_iThanhToanID.DataSource = tblThanhToanDAO.ThanhToan_SelectList();
+                ddlFK_iThanhToanID.DataTextField = "sTenThanhToan";
+                ddlFK_iThanhToanID.DataValueField = "PK_iThanhToanID";
+                ddlFK_iThanhToanID.DataBind();
 
-            ddliTrangThai.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddliTrangThai.DataTextField = "sTenSanPham";
-            ddliTrangThai.DataValueField = "PK_sSanPhamID";
-            ddliTrangThai.DataBind();
+                ddliTrangThai.DataSource = GetListConstants.HoaDon_iTrangThai_GLC();
+                ddliTrangThai.DataTextField = "Value";
+                ddliTrangThai.DataValueField = "Key";
+                ddliTrangThai.DataBind();
+            }
+            catch(Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
         }
 
         private void ClearMessages()

@@ -56,7 +56,8 @@ namespace HaBa.UserControl
                 {
                     PK_iTaiKhoanID = topic.Field<Int32>("PK_iTaiKhoanID"),
                     sTenDangNhap = topic.Field<string>("sTenDangNhap"),
-                    sMatKhau = topic.Field<string>("sMatKhau"),
+                    sMatKhau = "******",
+                    //sMatKhau = topic.Field<string>("sMatKhau"),
                     sHoTen = topic.Field<string>("sHoTen"),
                     sEmail = topic.Field<string>("sEmail"),
                     sDiaChi = topic.Field<string>("sDiaChi"),
@@ -64,8 +65,8 @@ namespace HaBa.UserControl
                     sLinkAvatar = topic.Field<string>("sLinkAvatar"),
                     tNgaySinh = topic.Field<DateTime>("tNgaySinh"),
                     tNgayDangKy = topic.Field<DateTime>("tNgayDangKy"),
-                    iQuyenHan = topic.Field<Int16>("iQuyenHan"),
-                    iTrangThai = topic.Field<Int16>("iTrangThai")
+                    iQuyenHan = GetTextConstants.TaiKhoan_iQuyenHan_GTC(topic.Field<Int16>("iQuyenHan")),
+                    iTrangThai = GetTextConstants.TaiKhoan_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

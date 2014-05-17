@@ -70,18 +70,19 @@ namespace HaBa.SharedLibraries.Constants
         public const Int16 Nhan_Vien = 2;
         public const Int16 Khach_Hang = 3;
     }
+
+    /// <summary> I.5. HoaDon_iTrangThai_C (Công Chức) </summary>
+    /// 
+    public class HoaDon_iTrangThai_C
+    {
+        public const Int16 Chua_Giao_Hang = 1;
+        public const Int16 Da_Giao_Hang = 2;
+        public const Int16 Huy = 3;
+    }
     #endregion
 
 
     #region "II. Giảng Viên"
-
-    /// <summary> I.5. GiangVien_bCongChucGV_C (Công Chức) </summary>
-    /// 
-    public class GiangVien_bCongChucGV_C
-    {
-        public const Boolean Da_Co_Cong_Chuc = true;
-        public const Boolean Chua_Co_Cong_Chuc = false;
-    }
 
     /// <summary> I.6. GiangVien_iTrangThaiGV_C (Trạng Thái Giáo Viên) </summary>
     /// 

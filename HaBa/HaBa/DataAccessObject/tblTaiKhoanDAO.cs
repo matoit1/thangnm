@@ -365,6 +365,33 @@ namespace HaBa.DataAccessObject
             }
         }
 
+        /// <summary> 8. TaiKhoan_SelectListByiQuyenHan </summary>
+        /// <param name="_tblTaiKhoanEO"></param>
+        /// <returns></returns>
+        public static DataSet TaiKhoan_SelectListByiQuyenHan(tblTaiKhoanEO _tblTaiKhoanEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblTaiKhoan_SelectListByiQuyenHan", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
         /// <summary> 9. TaiKhoan_Search </summary>
         /// <param name="_tblTaiKhoanEO"></param>
         /// <returns></returns>

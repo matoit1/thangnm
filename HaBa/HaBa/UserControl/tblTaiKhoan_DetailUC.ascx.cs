@@ -25,7 +25,17 @@ namespace HaBa.UserControl
         {
             txtPK_iTaiKhoanID.Text = Convert.ToString(_tblTaiKhoanEO.PK_iTaiKhoanID);
             txtsTenDangNhap.Text = Convert.ToString(_tblTaiKhoanEO.sTenDangNhap);
-            try { ddliTrangThai.SelectedValue = _tblTaiKhoanEO.iTrangThai.ToString(); }
+            txtsMatKhau.Text = Convert.ToString(_tblTaiKhoanEO.sMatKhau);
+            txtsHoTen.Text = Convert.ToString(_tblTaiKhoanEO.sHoTen);
+            txtsEmail.Text = Convert.ToString(_tblTaiKhoanEO.sEmail);
+            txtsDiaChi.Text = Convert.ToString(_tblTaiKhoanEO.sDiaChi);
+            txtsSoDienThoai.Text = Convert.ToString(_tblTaiKhoanEO.sSoDienThoai);
+            txtsLinkAvatar.Text = Convert.ToString(_tblTaiKhoanEO.sLinkAvatar);
+            txttNgaySinh.Text = Convert.ToString(_tblTaiKhoanEO.tNgaySinh);
+            txttNgayDangKy.Text = Convert.ToString(_tblTaiKhoanEO.tNgayDangKy);
+            try { ddliQuyenHan.SelectedValue = Convert.ToString(_tblTaiKhoanEO.iQuyenHan); }
+            catch { ddliQuyenHan.SelectedIndex = 0; }
+            try { ddliTrangThai.SelectedValue = Convert.ToString(_tblTaiKhoanEO.iTrangThai); }
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
@@ -37,6 +47,16 @@ namespace HaBa.UserControl
                 try { _tblTaiKhoanEO.PK_iTaiKhoanID = Convert.ToInt16(txtPK_iTaiKhoanID.Text); }
                 catch { lblPK_iTaiKhoanID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblTaiKhoanEO.PK_iTaiKhoanID = 0; }
                 _tblTaiKhoanEO.sTenDangNhap = Convert.ToString(txtsTenDangNhap.Text);
+                _tblTaiKhoanEO.sMatKhau = Security.EnCrypt(Convert.ToString(txtsMatKhau.Text));
+                _tblTaiKhoanEO.sHoTen = Convert.ToString(txtsHoTen.Text);
+                _tblTaiKhoanEO.sEmail = Convert.ToString(txtsEmail.Text);
+                _tblTaiKhoanEO.sDiaChi = Convert.ToString(txtsDiaChi.Text);
+                _tblTaiKhoanEO.sSoDienThoai = Convert.ToString(txtsSoDienThoai.Text);
+                _tblTaiKhoanEO.sLinkAvatar = Convert.ToString(txtsLinkAvatar.Text);
+                _tblTaiKhoanEO.tNgaySinh = Convert.ToDateTime(txttNgaySinh.Text);
+                _tblTaiKhoanEO.tNgayDangKy = Convert.ToDateTime(txttNgayDangKy.Text);
+                try { _tblTaiKhoanEO.iQuyenHan = Convert.ToInt16(ddliQuyenHan.SelectedValue); }
+                catch { lbliQuyenHan.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 try { _tblTaiKhoanEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
                 catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _tblTaiKhoanEO;
@@ -45,6 +65,19 @@ namespace HaBa.UserControl
             {
                 throw;
             }
+        }
+
+        private bool CheckValidation()
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(txtsMatKhau.Text) == true)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch { return false; }
         }
 
         public void loadDataToDropDownList()

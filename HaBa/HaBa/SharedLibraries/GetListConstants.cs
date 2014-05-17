@@ -43,13 +43,14 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.5. GiangVien_bCongChucGV_GLC (Công Chức) </summary>
+        /// <summary> I.5. HoaDon_iTrangThai_GLC (Công Chức) </summary>
         /// <returns></returns>
-        public static SortedList GiangVien_bCongChucGV_GLC()
+        public static SortedList HoaDon_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(GiangVien_bCongChucGV_C.Da_Co_Cong_Chuc, GetTextConstants.GiangVien_bCongChucGV_GTC(GiangVien_bCongChucGV_C.Da_Co_Cong_Chuc));
-            output.Add(GiangVien_bCongChucGV_C.Chua_Co_Cong_Chuc, GetTextConstants.GiangVien_bCongChucGV_GTC(GiangVien_bCongChucGV_C.Chua_Co_Cong_Chuc));
+            output.Add(HoaDon_iTrangThai_C.Chua_Giao_Hang, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Chua_Giao_Hang));
+            output.Add(HoaDon_iTrangThai_C.Da_Giao_Hang, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Da_Giao_Hang));
+            output.Add(HoaDon_iTrangThai_C.Huy, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Huy));
             return output;
         }
 
