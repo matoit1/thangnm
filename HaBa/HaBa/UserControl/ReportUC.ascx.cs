@@ -8,6 +8,7 @@ using System.Data;
 using HaBa.DataAccessObject;
 using HaBa.Report;
 using HaBa.EntityObject;
+using log4net;
 
 namespace HaBa.UserControl
 {
