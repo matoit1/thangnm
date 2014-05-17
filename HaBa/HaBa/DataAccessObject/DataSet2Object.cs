@@ -162,10 +162,11 @@ namespace HaBa.DataAccessObject
                 tblSanPhamEO output = new tblSanPhamEO();
                 foreach (DataRow dr in input.Tables[0].Rows)
                 {
-                    output.PK_lSanPhamID = (dr["PK_lSanPhamID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["PK_lSanPhamID"]);
+                    output.PK_sSanPhamID = (dr["PK_sSanPhamID"] == DBNull.Value) ? "" : Convert.ToString(dr["PK_sSanPhamID"]);
                     output.FK_iNhomSanPhamID = (dr["FK_iNhomSanPhamID"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["FK_iNhomSanPhamID"]);
                     output.sTenSanPham = (dr["sTenSanPham"] == DBNull.Value) ? "" : Convert.ToString(dr["sTenSanPham"]);
                     output.sMoTa = (dr["sMoTa"] == DBNull.Value) ? "" : Convert.ToString(dr["sMoTa"]);
+                    output.sThongTin = (dr["sThongTin"] == DBNull.Value) ? "" : Convert.ToString(dr["sThongTin"]);
                     output.sXuatXu = (dr["sXuatXu"] == DBNull.Value) ? "" : Convert.ToString(dr["sXuatXu"]);
                     output.sLinkImage = (dr["sLinkImage"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkImage"]);
                     output.lGiaBan = (dr["lGiaBan"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["lGiaBan"]);

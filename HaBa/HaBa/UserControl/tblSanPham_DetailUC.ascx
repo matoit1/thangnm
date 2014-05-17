@@ -1,4 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblSanPham_DetailUC.ascx.cs" Inherits="HaBa.UserControl.tblSanPham_DetailUC" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
+
 <link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
 <script src="../Scripts/calendar1.js" type="text/javascript"></script>  
 <script src="../Scripts/calendar2.js" type="text/javascript"></script>
@@ -22,8 +24,8 @@
         </tr>
         <tr>
             <td>Mã sản phẩm: </td>
-            <td><asp:TextBox ID="txtPK_lSanPhamID" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
-            <td><asp:Label ID="lblPK_lSanPhamID" runat="server"></asp:Label></td>
+            <td><asp:TextBox ID="txtPK_sSanPhamID" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:Label ID="lblPK_sSanPhamID" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Nhóm sản phẩm: </td>
@@ -37,8 +39,13 @@
         </tr>
         <tr>
             <td>Mô tả: </td>
-            <td><asp:TextBox ID="txtsMoTa" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsMoTa" runat="server" Width="400px" TextMode="MultiLine" Rows="3" ></asp:TextBox></td>
             <td><asp:Label ID="lblsMoTa" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Thông tin: </td>
+            <td><CKEditor:CKEditorControl ID="txtsThongTin" runat="server" Width="800px"></CKEditor:CKEditorControl></td>
+            <td><asp:Label ID="lblsThongTin" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Xuất xứ: </td>
@@ -77,7 +84,7 @@
         </tr>
         <tr>
             <td>Ngày cập nhật: </td>
-            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px" class="startdate" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayCapNhat" runat="server"></asp:Label></td>
         </tr>
         <tr>

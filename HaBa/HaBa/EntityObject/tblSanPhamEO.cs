@@ -8,10 +8,11 @@ namespace HaBa.EntityObject
     [Serializable()]
     public class tblSanPhamEO
     {
-        private Int64 _PK_lSanPhamID;
+        private string _PK_sSanPhamID;
         private Int16 _FK_iNhomSanPhamID;
         private string _sTenSanPham;
         private string _sMoTa;
+        private string _sThongTin;
         private string _sXuatXu;
         private string _sLinkImage;
         private Int64 _lGiaBan;
@@ -22,11 +23,11 @@ namespace HaBa.EntityObject
         private DateTime _tNgayCapNhat;
         private Int16 _iTrangThai;
 
-        // 1. Xay dung cac phuong thuc set, get cho PK_lSanPhamID
-        public Int64 PK_lSanPhamID
+        // 1. Xay dung cac phuong thuc set, get cho PK_sSanPhamID
+        public string PK_sSanPhamID
         {
-            get { return this._PK_lSanPhamID; }
-            set { this._PK_lSanPhamID = value; }
+            get { return this._PK_sSanPhamID; }
+            set { this._PK_sSanPhamID = value; }
         }
 
         // 2. Xay dung cac phuong thuc set, get cho FK_iNhomSanPhamID
@@ -48,6 +49,13 @@ namespace HaBa.EntityObject
         {
             get { return this._sMoTa; }
             set { this._sMoTa = value; }
+        }
+
+        // 4. Xay dung cac phuong thuc set, get cho sThongTin
+        public string sThongTin
+        {
+            get { return this._sThongTin; }
+            set { this._sThongTin = value; }
         }
 
         // 5. Xay dung cac phuong thuc set, get cho sXuatXu

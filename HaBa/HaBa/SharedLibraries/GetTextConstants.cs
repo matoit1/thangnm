@@ -121,53 +121,50 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.8. SinhVien_bKetnapDoanSV_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+        /// <summary> I.8. SanPham_iTrangThai_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string SinhVien_bKetnapDoanSV_GTC(bool input)
+        public static string SanPham_iTrangThai_GTC(Int16 input)
         {
             string output = "";
             switch (input)
             {
-                case true: output = "Đã vào đoàn"; break;
-                case false: output = "Chưa vào đoàn"; break;
+                case 1: output = "Mở"; break;
+                case 2: output = "Hết hàng"; break;
+                case 3: output = "Khóa"; break;
+                default: output = "N/A"; break;
             }
             return output;
         }
 
-        /// <summary> I.9. SinhVien_iQuanHeVoiNguoiLienHeSV_GTC (Quan hệ với người liên hệ) </summary>
+        /// <summary> I.9. SanPham_iDoTuoi_GTC (Quan hệ với người liên hệ) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(Int16 input)
+        public static string SanPham_iDoTuoi_GTC(Int16 input)
         {
             string output = "";
             switch (input)
             {
-                case 1: output = "Bố"; break;
-                case 2: output = "Mẹ"; break;
-                case 3: output = "Anh"; break;
-                case 4: output = "Chị"; break;
-                case 5: output = "Bác"; break;
-                case 6: output = "Chú"; break;
-                case 7: output = "Cô"; break;
-                case 8: output = "Dì"; break;
-                case 9: output = "N/A"; break;
+                case 1: output = "Dưới 1 tuổi"; break;
+                case 2: output = "Từ 1 đến 2 tuổi"; break;
+                case 3: output = "Từ 2 đến 3 tuổi"; break;
+                case 4: output = "Từ 3 đến 5 tuổi"; break;
+                case 5: output = "Trên 5 tuổi"; break;
             }
             return output;
         }
 
-        /// <summary>  I.10 He_So_Tinh_Diem_GTC (Hệ số tính điểm)  </summary>
+        /// <summary>  I.10 SanPham_iGioiTinh_GTC (Hệ số tính điểm)  </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string He_So_Tinh_Diem_GTC(double input)
+        public static string SanPham_iGioiTinh_GTC(Int16 input)
         {
-            int medial = Convert.ToInt32(input * 10);
-            string output;
-            switch (medial)
+            string output = "";
+            switch (input)
             {
-                case 1: output = "Điểm chuyên cần"; break;
-                case 2: output = "Điểm giữa kỳ"; break;
-                case 7: output = "Điểm thi"; break;
+                case 1: output = "Nam"; break;
+                case 2: output = "Nữ"; break;
+                case 7: output = "Cả Nam và Nữ"; break;
                 default: output = "N/A"; break;
             }
             return output;

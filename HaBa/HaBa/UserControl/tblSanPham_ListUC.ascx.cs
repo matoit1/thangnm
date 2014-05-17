@@ -19,11 +19,11 @@ namespace HaBa.UserControl
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
-        private Int64 _PK_lSanPhamID;
-        public Int64 PK_lSanPhamID
+        private string _PK_sSanPhamID;
+        public string PK_sSanPhamID
         {
-            get { return this._PK_lSanPhamID; }
-            set { _PK_lSanPhamID = value; }
+            get { return this._PK_sSanPhamID; }
+            set { _PK_sSanPhamID = value; }
         }
 
         public string typesearch
@@ -54,16 +54,19 @@ namespace HaBa.UserControl
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
-                    FK_sMaGV = topic.Field<string>("FK_sMaGV"),
-                    PK_lMaBaiViet = topic.Field<Int64>("PK_lMaBaiViet"),
-                    sTieuDe = topic.Field<string>("sTieuDe"),
-                    sLinkAnh = topic.Field<string>("sLinkAnh"),
-                    sTag = topic.Field<string>("sTag"),
-                    sNoiDung = topic.Field<string>("sNoiDung"),
-                    iLuotXem = topic.Field<Int32>("iLuotXem"),
-                    tNgayViet = topic.Field<DateTime>("tNgayViet"),
-                    tNgayCapNhat = topic.Field<DateTime>("tNgayCapNhat"),
+                    PK_sSanPhamID = topic.Field<string>("PK_sSanPhamID"),
+                    FK_iNhomSanPhamID = topic.Field<Int16>("FK_iNhomSanPhamID"),
+                    sTenSanPham = topic.Field<string>("sTenSanPham"),
                     sMoTa = topic.Field<string>("sMoTa"),
+                    sThongTin = topic.Field<string>("sThongTin"),
+                    sXuatXu = topic.Field<string>("sXuatXu"),
+                    sLinkImage = topic.Field<string>("sLinkImage"),
+                    lGiaBan = topic.Field<Int64>("lGiaBan"),
+                    iVAT = topic.Field<Int16>("iVAT"),
+                    iDoTuoi = topic.Field<Int16>("iDoTuoi"),
+                    iGioiTinh = topic.Field<Int16>("iGioiTinh"),
+                    iSoLuong = topic.Field<Int16>("iSoLuong"),
+                    tNgayCapNhat = topic.Field<DateTime>("tNgayCapNhat"),
                     iTrangThai = topic.Field<Int16>("iTrangThai")
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
@@ -71,7 +74,7 @@ namespace HaBa.UserControl
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.PK_lMaBaiViet.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.PK_sSanPhamID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -79,7 +82,7 @@ namespace HaBa.UserControl
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.sTieuDe.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.sTenSanPham.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -106,7 +109,7 @@ namespace HaBa.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                this.PK_lSanPhamID = Convert.ToInt64(e.CommandArgument);
+                this.PK_sSanPhamID = Convert.ToString(e.CommandArgument);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);

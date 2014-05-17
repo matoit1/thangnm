@@ -31,22 +31,22 @@ namespace HaBa.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtPK_lSanPhamID control.
+        /// txtPK_sSanPhamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPK_lSanPhamID;
+        protected global::System.Web.UI.WebControls.TextBox txtPK_sSanPhamID;
         
         /// <summary>
-        /// lblPK_lSanPhamID control.
+        /// lblPK_sSanPhamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPK_lSanPhamID;
+        protected global::System.Web.UI.WebControls.Label lblPK_sSanPhamID;
         
         /// <summary>
         /// ddlFK_iNhomSanPhamID control.
@@ -101,6 +101,24 @@ namespace HaBa.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblsMoTa;
+        
+        /// <summary>
+        /// txtsThongTin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CKEditor.NET.CKEditorControl txtsThongTin;
+        
+        /// <summary>
+        /// lblsThongTin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsThongTin;
         
         /// <summary>
         /// txtsXuatXu control.

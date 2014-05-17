@@ -31,13 +31,13 @@ namespace HaBa.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtPK_lSanPhamID control.
+        /// txtPK_sSanPhamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPK_lSanPhamID;
+        protected global::System.Web.UI.WebControls.TextBox txtPK_sSanPhamID;
         
         /// <summary>
         /// txtsTenSanPham control.

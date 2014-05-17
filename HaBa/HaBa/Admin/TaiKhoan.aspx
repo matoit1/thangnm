@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TaiKhoan.aspx.cs" Inherits="HaBa.Admin.TaiKhoan" MasterPageFile="~/ShareInterface/AdminSI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TaiKhoan.aspx.cs" Inherits="HaBa.Admin.TaiKhoan" MasterPageFile="~/ShareInterface/AdminSI.Master" EnableEventValidation="false" %>
 
 <%@ Register src="~/UserControl/tblTaiKhoan_ListUC.ascx" tagname="tblTaiKhoan_ListUC" tagprefix="uc1" %>
 <%@ Register src="~/UserControl/tblTaiKhoan_DetailUC.ascx" tagname="tblTaiKhoan_DetailUC" tagprefix="uc2" %>

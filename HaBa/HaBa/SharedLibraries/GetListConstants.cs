@@ -92,41 +92,38 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.8. SinhVien_bKetnapDoanSV_GLC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+        /// <summary> I.8. SanPham_iTrangThai_GLC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
         /// <returns></returns>
-        public static SortedList SinhVien_bKetnapDoanSV_GLC()
+        public static SortedList SanPham_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(SinhVien_bKetnapDoanSV_C.Da_Vao_Doan, GetTextConstants.SinhVien_bKetnapDoanSV_GTC(SinhVien_bKetnapDoanSV_C.Da_Vao_Doan));
-            output.Add(SinhVien_bKetnapDoanSV_C.Chua_Vao_Doan, GetTextConstants.SinhVien_bKetnapDoanSV_GTC(SinhVien_bKetnapDoanSV_C.Chua_Vao_Doan));
+            output.Add(SanPham_iTrangThai_C.Mo, GetTextConstants.SanPham_iTrangThai_GTC(SanPham_iTrangThai_C.Mo));
+            output.Add(SanPham_iTrangThai_C.Het_Hang, GetTextConstants.SanPham_iTrangThai_GTC(SanPham_iTrangThai_C.Het_Hang));
+            output.Add(SanPham_iTrangThai_C.Khoa, GetTextConstants.SanPham_iTrangThai_GTC(SanPham_iTrangThai_C.Khoa));
             return output;
         }
 
-        /// <summary> I.9. SinhVien_iQuanHeVoiNguoiLienHeSV_GLC (Quan hệ với người liên hệ) </summary>
+        /// <summary> I.9. SanPham_iDoTuoi_GLC (Quan hệ với người liên hệ) </summary>
         /// <returns></returns>
-        public static SortedList SinhVien_iQuanHeVoiNguoiLienHeSV_GLC()
+        public static SortedList SanPham_iDoTuoi_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Bo, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Bo));
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Me, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Me));
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Anh, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Anh));
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Chi, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Chi));
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Bac, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Bac));
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Chu, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Chu));
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Co, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Co));
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Di, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Di));
-            output.Add(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Khac, GetTextConstants.SinhVien_iQuanHeVoiNguoiLienHeSV_GTC(SinhVien_iQuanHeVoiNguoiLienHeSV_C.Khac));
+            output.Add(SanPham_iDoTuoi_C.Loai1, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai1));
+            output.Add(SanPham_iDoTuoi_C.Loai2, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai2));
+            output.Add(SanPham_iDoTuoi_C.Loai3, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai3));
+            output.Add(SanPham_iDoTuoi_C.Loai4, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai4));
+            output.Add(SanPham_iDoTuoi_C.Loai5, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai5));
             return output;
         }
 
-        /// <summary> I.10 He_So_Tinh_Diem_GLC (Hệ số tính điểm) </summary>
+        /// <summary> I.10 SanPham_iGioiTinh_GLC (Hệ số tính điểm) </summary>
         /// <returns></returns>
-        public static SortedList He_So_Tinh_Diem_GLC()
+        public static SortedList SanPham_iGioiTinh_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(He_So_Tinh_Diem_C.Diem_Chuyen_Can, GetTextConstants.He_So_Tinh_Diem_GTC(He_So_Tinh_Diem_C.Diem_Chuyen_Can));
-            output.Add(He_So_Tinh_Diem_C.Diem_Giua_Ky, GetTextConstants.He_So_Tinh_Diem_GTC(He_So_Tinh_Diem_C.Diem_Giua_Ky));
-            output.Add(He_So_Tinh_Diem_C.Diem_Thi, GetTextConstants.He_So_Tinh_Diem_GTC(He_So_Tinh_Diem_C.Diem_Thi));
+            output.Add(SanPham_iGioiTinh_C.Nam, GetTextConstants.SanPham_iGioiTinh_GTC(SanPham_iGioiTinh_C.Nam));
+            output.Add(SanPham_iGioiTinh_C.Nu, GetTextConstants.SanPham_iGioiTinh_GTC(SanPham_iGioiTinh_C.Nu));
+            output.Add(SanPham_iGioiTinh_C.Nam_Nu, GetTextConstants.SanPham_iGioiTinh_GTC(SanPham_iGioiTinh_C.Nam_Nu));
             return output;
         }
 

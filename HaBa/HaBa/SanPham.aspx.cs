@@ -28,7 +28,7 @@ namespace HaBa
                 {
                     if (Request.QueryString["PK_lProductID"] != null)
                     {
-                        BindData(Convert.ToInt64(Request.QueryString["PK_lProductID"]));
+                        BindData(Convert.ToString(Request.QueryString["PK_lProductID"]));
                     }
                 }
             }
@@ -38,12 +38,12 @@ namespace HaBa
             }
         }
 
-        public void BindData(Int64 input)
+        public void BindData(string input)
         {
             try
             {
                 tblSanPhamEO _ProductsEO = new tblSanPhamEO();
-                _ProductsEO.PK_lSanPhamID = input;
+                _ProductsEO.PK_sSanPhamID = input;
                 _ProductsEO = tblSanPhamDAO.SanPham_SelectItem(_ProductsEO);
                 lblsName.Text = _ProductsEO.sTenSanPham;
                 lblsName1.Text = _ProductsEO.sTenSanPham;
@@ -55,7 +55,7 @@ namespace HaBa
                 imgsLinkImage.AlternateText = _ProductsEO.sTenSanPham;
                 Url_Image = _ProductsEO.sLinkImage;
                 lblbStatus.Text = _ProductsEO.iTrangThai == 1 ? Messages.tblProduct_Con_Hang : Messages.tblProduct_Het_Hang;
-                lblVote.CssClass = "rw-ui-container rw-urid-" + _ProductsEO.PK_lSanPhamID;
+                lblVote.CssClass = "rw-ui-container rw-urid-" + _ProductsEO.PK_sSanPhamID;
             }
             catch (Exception ex)
             {

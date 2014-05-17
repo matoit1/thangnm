@@ -27,15 +27,17 @@ namespace HaBa.UserControl
                 ClearMessages();
                 loadDataToDropDownList();
             }
+            loadCKEditor();
         }
 
         public void BindDataDetail(tblSanPhamEO _tblSanPhamEO)
         {
-            txtPK_lSanPhamID.Text = Convert.ToString(_tblSanPhamEO.PK_lSanPhamID);
+            txtPK_sSanPhamID.Text = Convert.ToString(_tblSanPhamEO.PK_sSanPhamID);
             try { ddlFK_iNhomSanPhamID.SelectedValue = Convert.ToString(_tblSanPhamEO.FK_iNhomSanPhamID); }
             catch { ddlFK_iNhomSanPhamID.SelectedIndex = 0; }
             txtsTenSanPham.Text = Convert.ToString(_tblSanPhamEO.sTenSanPham);
             txtsMoTa.Text = Convert.ToString(_tblSanPhamEO.sMoTa);
+            txtsThongTin.Text = Convert.ToString(_tblSanPhamEO.sThongTin);
             txtsXuatXu.Text = Convert.ToString(_tblSanPhamEO.sXuatXu);
             txtsLinkImage.Text = Convert.ToString(_tblSanPhamEO.sLinkImage);
             txtlGiaBan.Text = Convert.ToString(_tblSanPhamEO.lGiaBan);
@@ -56,11 +58,12 @@ namespace HaBa.UserControl
             try
             {
                 tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
-                _tblSanPhamEO.PK_lSanPhamID = Convert.ToInt64(txtPK_lSanPhamID.Text);
+                _tblSanPhamEO.PK_sSanPhamID = Convert.ToString(txtPK_sSanPhamID.Text);
                 try { _tblSanPhamEO.FK_iNhomSanPhamID = Convert.ToInt16(ddlFK_iNhomSanPhamID.SelectedValue); }
                 catch { lblFK_iNhomSanPhamID.Text = Messages.Ma_Khong_Hop_Le; }
                 _tblSanPhamEO.sTenSanPham = Convert.ToString(txtsTenSanPham.Text);
                 _tblSanPhamEO.sMoTa = Convert.ToString(txtsMoTa.Text);
+                _tblSanPhamEO.sThongTin = Convert.ToString(txtsThongTin.Text);
                 _tblSanPhamEO.sXuatXu = Convert.ToString(txtsXuatXu.Text);
                 _tblSanPhamEO.sLinkImage = Convert.ToString(txtsLinkImage.Text);
                 _tblSanPhamEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
@@ -83,34 +86,35 @@ namespace HaBa.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddlFK_iNhomSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddlFK_iNhomSanPhamID.DataTextField = "FK_iTaiKhoanID_Nhan";
-            ddlFK_iNhomSanPhamID.DataValueField = "PK_lHoaDonID";
+            ddlFK_iNhomSanPhamID.DataSource = tblNhomSanPhamDAO.NhomSanPham_SelectList();
+            ddlFK_iNhomSanPhamID.DataTextField = "sTenNhom";
+            ddlFK_iNhomSanPhamID.DataValueField = "PK_iNhomSanPhamID";
             ddlFK_iNhomSanPhamID.DataBind();
 
-            ddliDoTuoi.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddliDoTuoi.DataTextField = "sTenSanPham";
-            ddliDoTuoi.DataValueField = "PK_lSanPhamID";
+            ddliDoTuoi.DataSource = GetListConstants.SanPham_iDoTuoi_GLC();
+            ddliDoTuoi.DataTextField = "Value";
+            ddliDoTuoi.DataValueField = "Key";
             ddliDoTuoi.DataBind();
 
-            ddliGioiTinh.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddliGioiTinh.DataTextField = "FK_iTaiKhoanID_Nhan";
-            ddliGioiTinh.DataValueField = "PK_lHoaDonID";
+            ddliGioiTinh.DataSource = GetListConstants.SanPham_iGioiTinh_GLC();
+            ddliGioiTinh.DataTextField = "Value";
+            ddliGioiTinh.DataValueField = "Key";
             ddliGioiTinh.DataBind();
 
-            ddliTrangThai.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddliTrangThai.DataTextField = "sTenSanPham";
-            ddliTrangThai.DataValueField = "PK_lSanPhamID";
+            ddliTrangThai.DataSource = GetListConstants.SanPham_iTrangThai_GLC();
+            ddliTrangThai.DataTextField = "Value";
+            ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
         }
 
         private void ClearMessages()
         {
             lblMsg.Text = "";
-            lblPK_lSanPhamID.Text = "";
+            lblPK_sSanPhamID.Text = "";
             lblFK_iNhomSanPhamID.Text = "";
             lblsTenSanPham.Text = "";
             lblsMoTa.Text = "";
+            lblsThongTin.Text = "";
             lblsXuatXu.Text = "";
             lblsLinkImage.Text = "";
             lbllGiaBan.Text = "";
@@ -188,6 +192,26 @@ namespace HaBa.UserControl
             ClearMessages();
             tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
             BindDataDetail(_tblSanPhamEO);
+        }
+        #endregion
+
+        #region "Config CKEditor"
+        protected void loadCKEditor()
+        {
+            txtsThongTin.config.toolbar = new object[] { 
+              new object[] { "Save", "NewPage", "Preview", "-", "Templates" },
+                new object[] { "Cut", "Copy", "Paste", "PasteText", "PasteFromWord", "-", "Print", "SpellChecker", "Scayt" },
+                new object[] { "Undo", "Redo", "-", "Find", "Replace", "-", "SelectAll", "RemoveFormat" },
+			
+                "/",
+                new object[] { "Bold", "Italic", "Underline", "Strike" },
+                new object[] { "NumberedList", "BulletedList", "-", "Outdent", "Indent", "Blockquote", "CreateDiv" },
+                new object[] { "JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock" },
+                new object[] { "BidiLtr", "BidiRtl" },
+                new object[] { "Link", "Unlink", "Anchor" },
+                new object[] { "Image"},
+                "/"
+            };
         }
         #endregion
     }
