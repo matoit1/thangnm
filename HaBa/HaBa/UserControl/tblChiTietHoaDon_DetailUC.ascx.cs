@@ -33,8 +33,8 @@ namespace HaBa.UserControl
         {
             try { ddlFK_lHoaDonID.SelectedValue = Convert.ToString(_tblChiTietHoaDonEO.FK_lHoaDonID); }
             catch { ddlFK_lHoaDonID.SelectedIndex = 0; }
-            try { ddlFK_lSanPhamID.SelectedValue = Convert.ToString(_tblChiTietHoaDonEO.FK_lSanPhamID); }
-            catch { ddlFK_lSanPhamID.SelectedIndex = 0; }
+            try { ddlFK_sSanPhamID.SelectedValue = Convert.ToString(_tblChiTietHoaDonEO.FK_sSanPhamID); }
+            catch { ddlFK_sSanPhamID.SelectedIndex = 0; }
             txtlGiaBan.Text = Convert.ToString(_tblChiTietHoaDonEO.lGiaBan);
             txtiSoLuong.Text = Convert.ToString(_tblChiTietHoaDonEO.iSoLuong);
         }
@@ -46,8 +46,8 @@ namespace HaBa.UserControl
                 tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
                 try { _tblChiTietHoaDonEO.FK_lHoaDonID = Convert.ToInt64(ddlFK_lHoaDonID.SelectedValue); }
                 catch { lblFK_lHoaDonID.Text = Messages.Ma_Khong_Hop_Le; }
-                try { _tblChiTietHoaDonEO.FK_lSanPhamID = Convert.ToInt64(ddlFK_lSanPhamID.SelectedValue); }
-                catch { lblFK_lSanPhamID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblChiTietHoaDonEO.FK_lSanPhamID = 0; }
+                try { _tblChiTietHoaDonEO.FK_sSanPhamID = Convert.ToString(ddlFK_sSanPhamID.SelectedValue); }
+                catch { lblFK_sSanPhamID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblChiTietHoaDonEO.FK_sSanPhamID = ""; }
                 _tblChiTietHoaDonEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
                 _tblChiTietHoaDonEO.iSoLuong = Convert.ToInt16(txtiSoLuong.Text);
                 return _tblChiTietHoaDonEO;
@@ -65,17 +65,17 @@ namespace HaBa.UserControl
             ddlFK_lHoaDonID.DataValueField = "PK_lHoaDonID";
             ddlFK_lHoaDonID.DataBind();
 
-            ddlFK_lSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddlFK_lSanPhamID.DataTextField = "sTenSanPham";
-            ddlFK_lSanPhamID.DataValueField = "PK_sSanPhamID";
-            ddlFK_lSanPhamID.DataBind();
+            ddlFK_sSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddlFK_sSanPhamID.DataTextField = "sTenSanPham";
+            ddlFK_sSanPhamID.DataValueField = "PK_sSanPhamID";
+            ddlFK_sSanPhamID.DataBind();
         }
 
         private void ClearMessages()
         {
             lblMsg.Text = "";
             lblFK_lHoaDonID.Text = "";
-            lblFK_lSanPhamID.Text = "";
+            lblFK_sSanPhamID.Text = "";
             lbllGiaBan.Text = "";
             lbliSoLuong.Text = "";
         }

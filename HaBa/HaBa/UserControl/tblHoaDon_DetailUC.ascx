@@ -4,8 +4,8 @@
 <script src="../Scripts/calendar2.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
-        $(".startdate").datepicker({ dateFormat: "dd/mm/yy" }).val()
-        $(".enddate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+        $(".startdate").datepicker({ dateFormat: "mm/dd/yy" }).val()
+        $(".enddate").datepicker({ dateFormat: "mm/dd/yy" }).val()
     });
 </script>
 <div>
@@ -26,17 +26,17 @@
             <td><asp:Label ID="lblPK_lHoaDonID" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Mã tài khoản giao: </td>
+            <td>Nhân viên: </td>
             <td><asp:DropDownList ID="ddlFK_iTaiKhoanID_Giao" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_iTaiKhoanID_Giao" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Mã tài khoản nhận: </td>
+            <td>Khách Hàng: </td>
             <td><asp:DropDownList ID="ddlFK_iTaiKhoanID_Nhan" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_iTaiKhoanID_Nhan" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Mã thanh toán: </td>
+            <td>Hình thức thanh toán: </td>
             <td><asp:DropDownList ID="ddlFK_iThanhToanID" runat="server" Width="405px"></asp:DropDownList></td>
             <td><asp:Label ID="lblFK_iThanhToanID" runat="server"></asp:Label></td>
         </tr>

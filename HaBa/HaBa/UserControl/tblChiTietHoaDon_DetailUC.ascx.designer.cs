@@ -49,22 +49,22 @@ namespace HaBa.UserControl {
         protected global::System.Web.UI.WebControls.Label lblFK_lHoaDonID;
         
         /// <summary>
-        /// ddlFK_lSanPhamID control.
+        /// ddlFK_sSanPhamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFK_lSanPhamID;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_sSanPhamID;
         
         /// <summary>
-        /// lblFK_lSanPhamID control.
+        /// lblFK_sSanPhamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFK_lSanPhamID;
+        protected global::System.Web.UI.WebControls.Label lblFK_sSanPhamID;
         
         /// <summary>
         /// txtlGiaBan control.

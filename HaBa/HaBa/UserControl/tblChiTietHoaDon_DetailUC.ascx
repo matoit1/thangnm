@@ -4,8 +4,8 @@
 <script src="../Scripts/calendar2.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
-        $(".startdate").datepicker({ dateFormat: "dd/mm/yy" }).val()
-        $(".enddate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+        $(".startdate").datepicker({ dateFormat: "mm/dd/yy" }).val()
+        $(".enddate").datepicker({ dateFormat: "mm/dd/yy" }).val()
     });
 </script>
 <div>
@@ -27,8 +27,8 @@
         </tr>
         <tr>
             <td>Mã sản phẩm: </td>
-            <td><asp:DropDownList ID="ddlFK_lSanPhamID" runat="server" Width="405px"></asp:DropDownList></td>
-            <td><asp:Label ID="lblFK_lSanPhamID" runat="server"></asp:Label></td>
+            <td><asp:DropDownList ID="ddlFK_sSanPhamID" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:Label ID="lblFK_sSanPhamID" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Giá bán: </td>

@@ -34,8 +34,8 @@
             <td>
                 <asp:GridView ID="grvListChiTietHoaDon" runat="server" CssClass="mGrid" 
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                    FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_lHoaDonID,FK_lSanPhamID"
-                    emptydatatext="Không có bản ghi nào."   PageSize="5" 
+                    FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_lHoaDonID,FK_sSanPhamID"
+                    emptydatatext="Không có bản ghi nào."   PageSize="10" 
                     EnableModelValidation="True" onrowcommand="grvListChiTietHoaDon_RowCommand" 
                     onselectedindexchanged="grvListChiTietHoaDon_SelectedIndexChanged" 
                     onpageindexchanging="grvListChiTietHoaDon_PageIndexChanging" 
@@ -60,7 +60,7 @@
                         <asp:BoundField  DataField="FK_lHoaDonID"  HeaderText="Mã hóa đơn" SortExpression="FK_lHoaDonID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField  DataField="FK_lSanPhamID"  HeaderText="Mã sản phẩm" SortExpression="FK_lSanPhamID">
+                        <asp:BoundField  DataField="FK_sSanPhamID"  HeaderText="Mã sản phẩm" SortExpression="FK_sSanPhamID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
                         <asp:BoundField DataField="lGiaBan" HeaderText="Giá bán" SortExpression="lGiaBan">

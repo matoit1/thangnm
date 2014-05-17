@@ -360,7 +360,7 @@ namespace HaBa.App_Data {
             this.Relations.Add(this.relationFK_tblChiTietHoaDon_tblHoaDon);
             this.relationFK_tblChiTietHoaDon_tblSanPham = new global::System.Data.DataRelation("FK_tblChiTietHoaDon_tblSanPham", new global::System.Data.DataColumn[] {
                         this.tabletblSanPham.PK_sSanPhamIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletblChiTietHoaDon.FK_lSanPhamIDColumn}, false);
+                        this.tabletblChiTietHoaDon.FK_sSanPhamIDColumn}, false);
             this.Relations.Add(this.relationFK_tblChiTietHoaDon_tblSanPham);
             this.relationFK_tblHoaDon_tblTaiKhoan1 = new global::System.Data.DataRelation("FK_tblHoaDon_tblTaiKhoan1", new global::System.Data.DataColumn[] {
                         this.tabletblTaiKhoan.PK_iTaiKhoanIDColumn}, new global::System.Data.DataColumn[] {
@@ -498,7 +498,7 @@ namespace HaBa.App_Data {
             
             private global::System.Data.DataColumn columnFK_lHoaDonID;
             
-            private global::System.Data.DataColumn columnFK_lSanPhamID;
+            private global::System.Data.DataColumn columnFK_sSanPhamID;
             
             private global::System.Data.DataColumn columnlGiaBan;
             
@@ -547,9 +547,9 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FK_lSanPhamIDColumn {
+            public global::System.Data.DataColumn FK_sSanPhamIDColumn {
                 get {
-                    return this.columnFK_lSanPhamID;
+                    return this.columnFK_sSanPhamID;
                 }
             }
             
@@ -626,10 +626,10 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblChiTietHoaDonRow FindByFK_lHoaDonIDFK_lSanPhamID(long FK_lHoaDonID, long FK_lSanPhamID) {
+            public tblChiTietHoaDonRow FindByFK_lHoaDonIDFK_sSanPhamID(long FK_lHoaDonID, long FK_sSanPhamID) {
                 return ((tblChiTietHoaDonRow)(this.Rows.Find(new object[] {
                             FK_lHoaDonID,
-                            FK_lSanPhamID})));
+                            FK_sSanPhamID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -650,7 +650,7 @@ namespace HaBa.App_Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnFK_lHoaDonID = base.Columns["FK_lHoaDonID"];
-                this.columnFK_lSanPhamID = base.Columns["FK_lSanPhamID"];
+                this.columnFK_sSanPhamID = base.Columns["FK_sSanPhamID"];
                 this.columnlGiaBan = base.Columns["lGiaBan"];
                 this.columniSoLuong = base.Columns["iSoLuong"];
             }
@@ -660,17 +660,17 @@ namespace HaBa.App_Data {
             private void InitClass() {
                 this.columnFK_lHoaDonID = new global::System.Data.DataColumn("FK_lHoaDonID", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFK_lHoaDonID);
-                this.columnFK_lSanPhamID = new global::System.Data.DataColumn("FK_lSanPhamID", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFK_lSanPhamID);
+                this.columnFK_sSanPhamID = new global::System.Data.DataColumn("FK_sSanPhamID", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFK_sSanPhamID);
                 this.columnlGiaBan = new global::System.Data.DataColumn("lGiaBan", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlGiaBan);
                 this.columniSoLuong = new global::System.Data.DataColumn("iSoLuong", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columniSoLuong);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFK_lHoaDonID,
-                                this.columnFK_lSanPhamID}, true));
+                                this.columnFK_sSanPhamID}, true));
                 this.columnFK_lHoaDonID.AllowDBNull = false;
-                this.columnFK_lSanPhamID.AllowDBNull = false;
+                this.columnFK_sSanPhamID.AllowDBNull = false;
                 this.columnlGiaBan.AllowDBNull = false;
                 this.columniSoLuong.AllowDBNull = false;
             }
@@ -2744,12 +2744,12 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public long FK_lSanPhamID {
+            public long FK_sSanPhamID {
                 get {
-                    return ((long)(this[this.tabletblChiTietHoaDon.FK_lSanPhamIDColumn]));
+                    return ((long)(this[this.tabletblChiTietHoaDon.FK_sSanPhamIDColumn]));
                 }
                 set {
-                    this[this.tabletblChiTietHoaDon.FK_lSanPhamIDColumn] = value;
+                    this[this.tabletblChiTietHoaDon.FK_sSanPhamIDColumn] = value;
                 }
             }
             
@@ -3916,39 +3916,39 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "tblChiTietHoaDon";
             tableMapping.ColumnMappings.Add("FK_lHoaDonID", "FK_lHoaDonID");
-            tableMapping.ColumnMappings.Add("FK_lSanPhamID", "FK_lSanPhamID");
+            tableMapping.ColumnMappings.Add("FK_sSanPhamID", "FK_sSanPhamID");
             tableMapping.ColumnMappings.Add("lGiaBan", "lGiaBan");
             tableMapping.ColumnMappings.Add("iSoLuong", "iSoLuong");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblChiTietHoaDon] WHERE (([FK_lHoaDonID] = @Original_FK_lHoaDo" +
-                "nID) AND ([FK_lSanPhamID] = @Original_FK_lSanPhamID))";
+                "nID) AND ([FK_sSanPhamID] = @Original_FK_sSanPhamID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_lHoaDonID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_lHoaDonID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_lSanPhamID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_lSanPhamID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_sSanPhamID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_sSanPhamID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblChiTietHoaDon] ([FK_lHoaDonID], [FK_lSanPhamID], [lGiaBan]," +
-                " [iSoLuong]) VALUES (@FK_lHoaDonID, @FK_lSanPhamID, @lGiaBan, @iSoLuong)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblChiTietHoaDon] ([FK_lHoaDonID], [FK_sSanPhamID], [lGiaBan]," +
+                " [iSoLuong]) VALUES (@FK_lHoaDonID, @FK_sSanPhamID, @lGiaBan, @iSoLuong)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_lHoaDonID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_lHoaDonID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_lSanPhamID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_lSanPhamID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_sSanPhamID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_sSanPhamID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lGiaBan", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lGiaBan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iSoLuong", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iSoLuong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblChiTietHoaDon] SET [FK_lHoaDonID] = @FK_lHoaDonID, [FK_lSanPhamI" +
-                "D] = @FK_lSanPhamID, [lGiaBan] = @lGiaBan, [iSoLuong] = @iSoLuong WHERE (([FK_lH" +
-                "oaDonID] = @Original_FK_lHoaDonID) AND ([FK_lSanPhamID] = @Original_FK_lSanPhamI" +
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblChiTietHoaDon] SET [FK_lHoaDonID] = @FK_lHoaDonID, [FK_sSanPhamI" +
+                "D] = @FK_sSanPhamID, [lGiaBan] = @lGiaBan, [iSoLuong] = @iSoLuong WHERE (([FK_lH" +
+                "oaDonID] = @Original_FK_lHoaDonID) AND ([FK_sSanPhamID] = @Original_FK_sSanPhamI" +
                 "D))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_lHoaDonID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_lHoaDonID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_lSanPhamID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_lSanPhamID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_sSanPhamID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_sSanPhamID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lGiaBan", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lGiaBan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@iSoLuong", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "iSoLuong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_lHoaDonID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_lHoaDonID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_lSanPhamID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_lSanPhamID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_sSanPhamID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_sSanPhamID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3964,7 +3964,7 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT FK_lHoaDonID, FK_lSanPhamID, lGiaBan, iSoLuong FROM dbo.tblChiTietHoaDon";
+            this._commandCollection[0].CommandText = "SELECT FK_lHoaDonID, FK_sSanPhamID, lGiaBan, iSoLuong FROM dbo.tblChiTietHoaDon";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4025,9 +4025,9 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_FK_lHoaDonID, long Original_FK_lSanPhamID) {
+        public virtual int Delete(long Original_FK_lHoaDonID, long Original_FK_sSanPhamID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_FK_lHoaDonID));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((long)(Original_FK_lSanPhamID));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((long)(Original_FK_sSanPhamID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4048,9 +4048,9 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(long FK_lHoaDonID, long FK_lSanPhamID, long lGiaBan, short iSoLuong) {
+        public virtual int Insert(long FK_lHoaDonID, long FK_sSanPhamID, long lGiaBan, short iSoLuong) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((long)(FK_lHoaDonID));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((long)(FK_lSanPhamID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((long)(FK_sSanPhamID));
             this.Adapter.InsertCommand.Parameters[2].Value = ((long)(lGiaBan));
             this.Adapter.InsertCommand.Parameters[3].Value = ((short)(iSoLuong));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
@@ -4073,13 +4073,13 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(long FK_lHoaDonID, long FK_lSanPhamID, long lGiaBan, short iSoLuong, long Original_FK_lHoaDonID, long Original_FK_lSanPhamID) {
+        public virtual int Update(long FK_lHoaDonID, long FK_sSanPhamID, long lGiaBan, short iSoLuong, long Original_FK_lHoaDonID, long Original_FK_sSanPhamID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((long)(FK_lHoaDonID));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((long)(FK_lSanPhamID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((long)(FK_sSanPhamID));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((long)(lGiaBan));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(iSoLuong));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(Original_FK_lHoaDonID));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(Original_FK_lSanPhamID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(Original_FK_sSanPhamID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4100,8 +4100,8 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(long lGiaBan, short iSoLuong, long Original_FK_lHoaDonID, long Original_FK_lSanPhamID) {
-            return this.Update(Original_FK_lHoaDonID, Original_FK_lSanPhamID, lGiaBan, iSoLuong, Original_FK_lHoaDonID, Original_FK_lSanPhamID);
+        public virtual int Update(long lGiaBan, short iSoLuong, long Original_FK_lHoaDonID, long Original_FK_sSanPhamID) {
+            return this.Update(Original_FK_lHoaDonID, Original_FK_sSanPhamID, lGiaBan, iSoLuong, Original_FK_lHoaDonID, Original_FK_sSanPhamID);
         }
     }
     

@@ -45,8 +45,8 @@ namespace HaBa.UserControl
             txtsEmail.Text = Convert.ToString(_tblHoaDonEO.sDiaChi);
             txtsHoTen.Text = Convert.ToString(_tblHoaDonEO.sSoDienThoai);
             txtsEmail.Text = Convert.ToString(_tblHoaDonEO.sGhiChu);
-            if (_tblHoaDonEO.tNgayDatHang == DateTime.MinValue) { txttNgayDatHang.Text = DateTime.Now.ToString("dd/MM/yyyy"); } else { txttNgayDatHang.Text = Convert.ToString(_tblHoaDonEO.tNgayDatHang); }
-            if (_tblHoaDonEO.tNgayGiaoHang == DateTime.MinValue) { txttNgayGiaoHang.Text = DateTime.Now.ToString("dd/MM/yyyy"); } else { txttNgayGiaoHang.Text = Convert.ToString(_tblHoaDonEO.tNgayGiaoHang); }
+            if (_tblHoaDonEO.tNgayDatHang == DateTime.MinValue) { txttNgayDatHang.Text = DateTime.Now.ToString(); } else { txttNgayDatHang.Text = Convert.ToString(_tblHoaDonEO.tNgayDatHang); }
+            if (_tblHoaDonEO.tNgayGiaoHang == DateTime.MinValue) { txttNgayGiaoHang.Text = DateTime.Now.ToString(); } else { txttNgayGiaoHang.Text = Convert.ToString(_tblHoaDonEO.tNgayGiaoHang); }
 
             //txttNgayDatHang.Text = Convert.ToString(_tblHoaDonEO.tNgayDatHang);
             //txttNgayGiaoHang.Text = Convert.ToString(_tblHoaDonEO.tNgayGiaoHang);
@@ -66,12 +66,12 @@ namespace HaBa.UserControl
                 catch { lblFK_iTaiKhoanID_Nhan.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblHoaDonEO.FK_iTaiKhoanID_Nhan = 0; }
                 _tblHoaDonEO.FK_iThanhToanID = Convert.ToInt16(ddlFK_iThanhToanID.Text);
                 _tblHoaDonEO.sHoTen = Convert.ToString(txtsHoTen.Text);
-                _tblHoaDonEO.sEmail = Convert.ToString(txtsHoTen.Text);
-                _tblHoaDonEO.sDiaChi = Convert.ToString(txtsHoTen.Text);
-                _tblHoaDonEO.sSoDienThoai = Convert.ToString(txtsHoTen.Text);
-                _tblHoaDonEO.sGhiChu = Convert.ToString(txtsHoTen.Text);
-                _tblHoaDonEO.tNgayDatHang = Convert.ToDateTime(txtsHoTen.Text);
-                _tblHoaDonEO.tNgayGiaoHang = Convert.ToDateTime(txtsHoTen.Text);
+                _tblHoaDonEO.sEmail = Convert.ToString(txtsEmail.Text);
+                _tblHoaDonEO.sDiaChi = Convert.ToString(txtsDiaChi.Text);
+                _tblHoaDonEO.sSoDienThoai = Convert.ToString(txtsSoDienThoai.Text);
+                _tblHoaDonEO.sGhiChu = Convert.ToString(txtsGhiChu.Text);
+                _tblHoaDonEO.tNgayDatHang = Convert.ToDateTime(txttNgayDatHang.Text);
+                _tblHoaDonEO.tNgayGiaoHang = Convert.ToDateTime(txttNgayGiaoHang.Text);
                 try { _tblHoaDonEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
                 catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblHoaDonEO.iTrangThai = 0; }
                 return _tblHoaDonEO;
