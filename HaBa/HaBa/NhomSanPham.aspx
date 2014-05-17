@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NhomSanPham.aspx.cs" Inherits="HaBa.NhomSanPham" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NhomSanPham.aspx.cs" Inherits="HaBa.NhomSanPham" MasterPageFile="~/ShareInterface/ProductSI.Master" %>
 <%@ Register src="~/UserControl/Gallery3DUC.ascx" tagname="Gallery3DUC" tagprefix="uc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">

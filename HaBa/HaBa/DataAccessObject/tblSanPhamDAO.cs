@@ -335,10 +335,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 12. SanPham_SelectList_All_SanPham_In_Group </summary>
+        /// <summary> 12. SanPham_SelectByFK_iNhomSanPhamID </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet SanPham_SelectList_All_SanPham_In_Group(tblSanPhamEO _tblSanPhamEO)
+        public static DataSet SanPham_SelectByFK_iNhomSanPhamID(tblSanPhamEO _tblSanPhamEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -346,10 +346,9 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList_All_SanPham_In_Group", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectByFK_iNhomSanPhamID", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
