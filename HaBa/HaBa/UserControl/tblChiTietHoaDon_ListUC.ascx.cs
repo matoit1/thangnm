@@ -25,11 +25,11 @@ namespace HaBa.UserControl
             get { return this._FK_lHoaDonID; }
             set { _FK_lHoaDonID = value; }
         }
-        private Int64 _FK_lSanPhamID;
-        public Int64 FK_lSanPhamID
+        private string _FK_sSanPhamID;
+        public string FK_sSanPhamID
         {
-            get { return this._FK_lSanPhamID; }
-            set { _FK_lSanPhamID = value; }
+            get { return this._FK_sSanPhamID; }
+            set { _FK_sSanPhamID = value; }
         }
 
         public string typesearch
@@ -108,7 +108,7 @@ namespace HaBa.UserControl
                 GridViewRow row = this.grvListChiTietHoaDon.SelectedRow;
                 int index = Convert.ToInt16(e.CommandArgument) % grvListChiTietHoaDon.PageSize;
                 this.FK_lHoaDonID = Convert.ToInt64(grvListChiTietHoaDon.DataKeys[index].Values["FK_lHoaDonID"]);
-                this.FK_lSanPhamID = Convert.ToInt64(grvListChiTietHoaDon.DataKeys[index].Values["FK_lSanPhamID"]);
+                this.FK_sSanPhamID = Convert.ToString(grvListChiTietHoaDon.DataKeys[index].Values["FK_sSanPhamID"]);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);

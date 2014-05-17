@@ -35,7 +35,7 @@ namespace HaBa.Admin
             tblChiTietHoaDon_DetailUC1.btnDelete.Visible = true;
             tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
             _tblChiTietHoaDonEO.FK_lHoaDonID = tblChiTietHoaDon_ListUC1.FK_lHoaDonID;
-            _tblChiTietHoaDonEO.FK_lSanPhamID = tblChiTietHoaDon_ListUC1.FK_lSanPhamID;
+            _tblChiTietHoaDonEO.FK_sSanPhamID = tblChiTietHoaDon_ListUC1.FK_sSanPhamID;
             _tblChiTietHoaDonEO = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectItem(_tblChiTietHoaDonEO);
             tblChiTietHoaDon_DetailUC1.BindDataDetail(_tblChiTietHoaDonEO);
         }

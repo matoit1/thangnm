@@ -784,6 +784,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\Avatar\" />
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>

@@ -81,22 +81,4 @@ namespace HaBa.SharedLibraries.Constants
         public const Int16 Khoa = 3;
     }
     #endregion
-
-
-    #region "II. Định dạng"
-    /// <summary> II.1. DateTimeFomat (Định dạng ngày giờ) </summary>
-    /// 
-    public class DateTimeFomat
-    {
-        public const string DISPLAY_DATE_FORMAT = "dd/MM/yyyy";
-        public const string DISPLAY_DATETIME_FORMAT = "dd/MM/yyyy HH:mm";
-    }
-
-    /// <summary> II.2. NumberFomat (Định dạng số) </summary>
-    /// 
-    public class NumberFomat
-    {
-        public const string DISPLAY_NUMBER = "###,##0.######";
-    }
-    #endregion
 }

@@ -30,9 +30,12 @@ namespace HaBa.UserControl
             txtsEmail.Text = Convert.ToString(_tblTaiKhoanEO.sEmail);
             txtsDiaChi.Text = Convert.ToString(_tblTaiKhoanEO.sDiaChi);
             txtsSoDienThoai.Text = Convert.ToString(_tblTaiKhoanEO.sSoDienThoai);
-            txtsLinkAvatar.Text = Convert.ToString(_tblTaiKhoanEO.sLinkAvatar);
-            txttNgaySinh.Text = Convert.ToString(_tblTaiKhoanEO.tNgaySinh);
-            txttNgayDangKy.Text = Convert.ToString(_tblTaiKhoanEO.tNgayDangKy);
+            if (String.IsNullOrEmpty(_tblTaiKhoanEO.sLinkAvatar) == true) { txtsLinkAvatar.Text = "~/Images/Avatar/Default.jpg"; } else { txtsLinkAvatar.Text = Convert.ToString(_tblTaiKhoanEO.sLinkAvatar); }
+            if (_tblTaiKhoanEO.tNgaySinh == DateTime.MinValue) { txttNgaySinh.Text = DateTime.Now.ToString(); } else { txttNgaySinh.Text = Convert.ToString(_tblTaiKhoanEO.tNgaySinh); }
+            if (_tblTaiKhoanEO.tNgayDangKy == DateTime.MinValue) { txttNgayDangKy.Text = DateTime.Now.ToString(); } else { txttNgayDangKy.Text = Convert.ToString(_tblTaiKhoanEO.tNgayDangKy); }
+            //txtsLinkAvatar.Text = Convert.ToString(_tblTaiKhoanEO.sLinkAvatar);
+            //txttNgaySinh.Text = Convert.ToString(_tblTaiKhoanEO.tNgaySinh);
+            //txttNgayDangKy.Text = Convert.ToString(_tblTaiKhoanEO.tNgayDangKy);
             try { ddliQuyenHan.SelectedValue = Convert.ToString(_tblTaiKhoanEO.iQuyenHan); }
             catch { ddliQuyenHan.SelectedIndex = 0; }
             try { ddliTrangThai.SelectedValue = Convert.ToString(_tblTaiKhoanEO.iTrangThai); }

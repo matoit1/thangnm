@@ -124,7 +124,7 @@ namespace HaBa.DataAccessObject
                 foreach (DataRow dr in input.Tables[0].Rows)
                 {
                     output.FK_lHoaDonID = (dr["FK_lHoaDonID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["FK_lHoaDonID"]);
-                    output.FK_lSanPhamID = (dr["FK_lSanPhamID"] == DBNull.Value) ? 0 : Convert.ToInt64(dr["FK_lSanPhamID"]);
+                    output.FK_sSanPhamID = (dr["FK_sSanPhamID"] == DBNull.Value) ? "" : Convert.ToString(dr["FK_sSanPhamID"]);
                     output.lGiaBan = (dr["lGiaBan"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["lGiaBan"]);
                     output.iSoLuong = (dr["iSoLuong"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iSoLuong"]);
                 }

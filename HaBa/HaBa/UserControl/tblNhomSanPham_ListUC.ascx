@@ -35,7 +35,7 @@
                 <asp:GridView ID="grvListBaiViet" runat="server" CssClass="mGrid" 
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
                     FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_iNhomSanPhamID"
-                    emptydatatext="Không có bản ghi nào."   PageSize="5" 
+                    emptydatatext="Không có bản ghi nào."   PageSize="10" 
                     EnableModelValidation="True" onrowcommand="grvListBaiViet_RowCommand" 
                     onselectedindexchanged="grvListBaiViet_SelectedIndexChanged" 
                     onpageindexchanging="grvListBaiViet_PageIndexChanging" 

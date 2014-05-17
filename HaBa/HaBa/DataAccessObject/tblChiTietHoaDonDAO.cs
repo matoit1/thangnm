@@ -56,7 +56,7 @@ namespace HaBa.DataAccessObject
                     SqlCommand cmd = new SqlCommand("tblChiTietHoaDon_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FK_lHoaDonID", _tblChiTietHoaDonEO.FK_lHoaDonID));
-                    cmd.Parameters.Add(new SqlParameter("@FK_lSanPhamID", _tblChiTietHoaDonEO.FK_lSanPhamID));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sSanPhamID", _tblChiTietHoaDonEO.FK_sSanPhamID));
                     cmd.Parameters.Add(new SqlParameter("@lGiaBan", _tblChiTietHoaDonEO.lGiaBan));
                     cmd.Parameters.Add(new SqlParameter("@iSoLuong", _tblChiTietHoaDonEO.iSoLuong));
                     cmd.ExecuteNonQuery();
@@ -84,7 +84,7 @@ namespace HaBa.DataAccessObject
                     SqlCommand cmd = new SqlCommand("tblChiTietHoaDon_Update", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FK_lHoaDonID", _tblChiTietHoaDonEO.FK_lHoaDonID));
-                    cmd.Parameters.Add(new SqlParameter("@FK_lSanPhamID", _tblChiTietHoaDonEO.FK_lSanPhamID));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sSanPhamID", _tblChiTietHoaDonEO.FK_sSanPhamID));
                     cmd.Parameters.Add(new SqlParameter("@lGiaBan", _tblChiTietHoaDonEO.lGiaBan));
                     cmd.Parameters.Add(new SqlParameter("@iSoLuong", _tblChiTietHoaDonEO.iSoLuong));
                     cmd.ExecuteNonQuery();
@@ -166,7 +166,7 @@ namespace HaBa.DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblChiTietHoaDon_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_lHoaDonID", _tblChiTietHoaDonEO.FK_lHoaDonID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_lSanPhamID", _tblChiTietHoaDonEO.FK_lSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSanPhamID", _tblChiTietHoaDonEO.FK_sSanPhamID));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
@@ -221,7 +221,7 @@ namespace HaBa.DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblChiTietHoaDon_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_lHoaDonID", _tblChiTietHoaDonEO.FK_lHoaDonID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_lSanPhamID", _tblChiTietHoaDonEO.FK_lSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSanPhamID", _tblChiTietHoaDonEO.FK_sSanPhamID));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@lGiaBan", _tblChiTietHoaDonEO.lGiaBan));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iSoLuong", _tblChiTietHoaDonEO.iSoLuong));
                     dsOutput = new DataSet();
@@ -251,7 +251,7 @@ namespace HaBa.DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblChiTietHoaDon_Login", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_lHoaDonID", _tblChiTietHoaDonEO.FK_lHoaDonID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_lSanPhamID", _tblChiTietHoaDonEO.FK_lSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSanPhamID", _tblChiTietHoaDonEO.FK_sSanPhamID));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@lGiaBan", _tblChiTietHoaDonEO.lGiaBan));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iSoLuong", _tblChiTietHoaDonEO.iSoLuong));
                     dsOutput = new DataSet();

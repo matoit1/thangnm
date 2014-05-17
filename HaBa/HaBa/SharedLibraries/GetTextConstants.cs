@@ -83,7 +83,7 @@ namespace HaBa.SharedLibraries
             {
                 case 1: output = "Nam"; break;
                 case 2: output = "Nữ"; break;
-                case 7: output = "Cả Nam và Nữ"; break;
+                case 3: output = "Cả Nam và Nữ"; break;
                 default: output = "N/A"; break;
             }
             return output;

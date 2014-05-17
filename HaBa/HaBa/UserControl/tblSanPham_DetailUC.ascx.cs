@@ -39,7 +39,8 @@ namespace HaBa.UserControl
             txtsMoTa.Text = Convert.ToString(_tblSanPhamEO.sMoTa);
             txtsThongTin.Text = Convert.ToString(_tblSanPhamEO.sThongTin);
             txtsXuatXu.Text = Convert.ToString(_tblSanPhamEO.sXuatXu);
-            txtsLinkImage.Text = Convert.ToString(_tblSanPhamEO.sLinkImage);
+            if (String.IsNullOrEmpty(_tblSanPhamEO.sLinkImage) == true) { txtsLinkImage.Text = "~/Images/Product/"; } else { txtsLinkImage.Text = Convert.ToString(_tblSanPhamEO.sLinkImage); }
+            //txtsLinkImage.Text = Convert.ToString(_tblSanPhamEO.sLinkImage);
             txtlGiaBan.Text = Convert.ToString(_tblSanPhamEO.lGiaBan);
             txtiVAT.Text = Convert.ToString(_tblSanPhamEO.iVAT);
             try { ddliDoTuoi.SelectedValue = Convert.ToString(_tblSanPhamEO.iDoTuoi); }
@@ -47,7 +48,7 @@ namespace HaBa.UserControl
             try { ddliGioiTinh.SelectedValue = Convert.ToString(_tblSanPhamEO.iGioiTinh); }
             catch { ddliGioiTinh.SelectedIndex = 0; }
             txtiSoLuong.Text = Convert.ToString(_tblSanPhamEO.iSoLuong);
-            if (_tblSanPhamEO.tNgayCapNhat == DateTime.MinValue) { txttNgayCapNhat.Text = DateTime.Now.ToString("dd/MM/yyyy"); } else { txttNgayCapNhat.Text = Convert.ToString(_tblSanPhamEO.tNgayCapNhat); }
+            if (_tblSanPhamEO.tNgayCapNhat == DateTime.MinValue) { txttNgayCapNhat.Text = DateTime.Now.ToString(); } else { txttNgayCapNhat.Text = Convert.ToString(_tblSanPhamEO.tNgayCapNhat); }
             try { ddliTrangThai.SelectedValue = Convert.ToString(_tblSanPhamEO.iTrangThai); }
             catch { ddliTrangThai.SelectedIndex = 0; }
             

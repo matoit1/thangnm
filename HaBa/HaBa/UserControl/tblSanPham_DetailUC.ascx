@@ -6,8 +6,8 @@
 <script src="../Scripts/calendar2.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
-        $(".startdate").datepicker({ dateFormat: "dd/mm/yy" }).val()
-        $(".enddate").datepicker({ dateFormat: "dd/mm/yy" }).val()
+        $(".startdate").datepicker({ dateFormat: "mm/dd/yy" }).val()
+        $(".enddate").datepicker({ dateFormat: "mm/dd/yy" }).val()
     });
 </script>
 <div>
