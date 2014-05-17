@@ -22,7 +22,9 @@
                 </tr>
                 <tr>
                     <td>Giá bán từ</td>
-                    <td><asp:TextBox ID="txtlGiaBan" runat="server" Width="90px" type="range" min="1" max="10"></asp:TextBox>
+                    <td>
+                        50.000 VNĐ <input id="txtlGiaBan" name="txtlGiaBan" width="90px" type="range" min="50000" max="2000000" /> 2.000.000 VNĐ
+                    <%--<asp:TextBox ID="txtlGiaBan" runat="server" Width="90px" type="range" min="0" max="10"></asp:TextBox>--%>
                     </td>
                 </tr>
                 <tr>

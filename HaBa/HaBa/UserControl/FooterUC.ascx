@@ -74,7 +74,7 @@
     <div id="credits">
         <div class="credts_left">
             Copyright © 2014
-            <a href="http://HaBa.com">HaBa - Shop Trẻ Thơ</a> | Thiết kế và chỉnh sửa bởi <a href="https://plus.google.com/108721004231457882522">HaBa</a>
+            <a href="http://HaBa.com">HaBa - Vũ Bá Hà</a> | Thiết kế và chỉnh sửa bởi <a href="https://plus.google.com/108721004231457882522">HaBa</a>
         </div>
         <div class="credts_right">
             <ul class="social">

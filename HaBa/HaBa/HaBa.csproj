@@ -428,6 +428,10 @@
     <Content Include="Client\Default.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Images\Avatar\Default.jpg" />
+    <Content Include="Images\Product\1.jpg" />
+    <Content Include="Images\Product\10.jpg" />
+    <Content Include="Images\Product\15.jpg" />
+    <Content Include="Images\Product\3.jpg" />
     <Content Include="Images\Product\Ao_So_Mi.png" />
     <Content Include="Images\Product\Chan_Vay.png" />
     <Content Include="Images\Product\SP000001.jpg" />
@@ -518,6 +522,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Accounts\Login.aspx.cs">
@@ -827,6 +832,13 @@
     </Compile>
     <Compile Include="UserControl\tblThanhToan_DetailUC.ascx.designer.cs">
       <DependentUpon>tblThanhToan_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

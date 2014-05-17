@@ -4,23 +4,23 @@
 		<div class="widget HTML" id="HTML2">
 			<h2 class="title">Featured Post (TOP)</h2>
 			<div class="widget-content">
-            <marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" truespeed="" scrollamount="1" scrolldelay="30" direction="up">
+            <%--<marquee behavior="scroll" onmouseout="this.start()" onmouseover="this.stop()" truespeed="" scrollamount="1" scrolldelay="30" direction="up">--%>
             <ul class="label_with_thumbs">
                 <asp:Repeater ID="rptLoadProductGroup" runat="server" >
                     <ItemTemplate>
                         <li class="clearfix">
 					        <a class="picturelabela" target="_top" href="../Default.aspx">
-                            <img class="label_thumb" src="../Images/Product/Ao_So_Mi.png" alt="Áo Sơ Mi" title="Áo Sơ Mi" /></a>
+                            <img class="label_thumb" src='<%#"../Images/Product/"+ Eval("PK_iNhomSanPhamID")+".jpg"%>' alt='<%#Eval("sTenNhom")%>' title='<%#Eval("sTenNhom")%>' /></a>
 					        <strong><h2><a class="titlelabel" target="_top" href="../Default.aspx"><%#Eval("sTenNhom")%></a></h2></strong>
-					        <div class="contento">
+					        <%--<div class="contento">
 						        Áo sơ mi công sở 2014. Áo đẹp thời trang! ...<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
 						        <a class="url" target="_top" href="../Default.aspx">Chi Tiết »</a>
-					        </div>
+					        </div>--%>
 				        </li>
                     </ItemTemplate>
                </asp:Repeater>
 			</ul>
-            </marquee>
+            <%--</marquee>--%>
 			</div>
 			<div class="clear"></div>
 		</div>

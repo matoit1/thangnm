@@ -4,7 +4,7 @@
 		<div class="widget Header" id="Header1">
 			<div id="header-inner">
 				<div class="titlewrapper">
-					<h2 style="font-family:'Mr Dafoe', cursive; text-transform:none;"><a href="../Default.aspx">Shop Trẻ Thơ</a></h2>
+					<h2 style="font-family:'Mr Dafoe', cursive; text-transform:none;"><a href="../Default.aspx">HaBa</a></h2>
 				</div>
 				<div class="descriptionwrapper">
 					<p class="description"><span></span></p>
@@ -15,7 +15,21 @@
 	<!-- MENU [start] -->
     <div class="menu-secondary-container">
 	    <ul class="menus menu-secondary">
-		    
+		    <asp:Repeater ID="rptRoot" runat="server" OnItemDataBound="rptRoot_ItemDataBound">
+                <ItemTemplate>
+                    <li><asp:HyperLink ID="hplPK_iNhomSanPhamID" runat="server" NavigateUrl='<%#"~/Group.aspx?Products_ID="+Eval("PK_iNhomSanPhamID")%>'><%#Eval("sTenNhom")%></asp:HyperLink>
+                        <asp:Repeater ID="rptiNhomCon" runat="server">
+                            <HeaderTemplate><ul></HeaderTemplate>
+                            <ItemTemplate>
+                                <li><asp:HyperLink ID="hpliNhomCon" runat="server" NavigateUrl='<%#"~/Group.aspx?PK_iNhomSanPhamID="+Eval("PK_iNhomSanPhamID")+"&iNhomCon="+Eval("iNhomCon")%>'><%#Eval("sTenNhom")%></asp:HyperLink></li>
+                            </ItemTemplate>
+                            <FooterTemplate></ul></FooterTemplate>
+                        </asp:Repeater>
+                    </li>
+                    <asp:HiddenField ID="hrfPK_iNhomSanPhamID" runat="server" Value='<%#Eval("PK_iNhomSanPhamID")%>' />
+                </ItemTemplate>
+            </asp:Repeater>
+<%--
 		    <li><a href="../GroupProduct.aspx?lGroup=1">Áo</a>
 			    <ul class="children">
 				    <li><a href="../GroupProduct.aspx?lGroup=2">Áo sơ mi</a></li>
@@ -29,7 +43,7 @@
 				    <li><a href="../GroupProduct.aspx?lGroup=7">Váy khác</a></li>
 			    </ul>
 		    </li>
-		    <li><a href="../GroupProduct.aspx?lGroup=8">Phong cách +</a></li>
+		    <li><a href="../GroupProduct.aspx?lGroup=8">Phong cách +</a></li>--%>
 	    </ul>
     </div>
     <!-- MENU [end] -->
