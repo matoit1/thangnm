@@ -4,7 +4,7 @@
 		<div class="widget Header" id="Header1">
 			<div id="header-inner">
 				<div class="titlewrapper">
-					<h2 style="font-family:'Mr Dafoe', cursive; text-transform:none;"><a href="../Default.aspx">HaBa</a></h2>
+					<h2 style="font-family:'Mr Dafoe', cursive; text-transform:none;"><a href="../Default.aspx">Shop Trẻ Thơ</a></h2>
 				</div>
 				<div class="descriptionwrapper">
 					<p class="description"><span></span></p>

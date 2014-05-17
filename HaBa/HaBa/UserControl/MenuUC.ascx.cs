@@ -16,7 +16,7 @@ namespace HaBa.UserControl
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Label.aspx?keyword=" +txtKeyWord.Text);
+            Response.Redirect("~/Nhan.aspx?keyword=" +txtKeyWord.Text);
         }
     }
 }

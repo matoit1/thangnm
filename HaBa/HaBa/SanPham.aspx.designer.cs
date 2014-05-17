@@ -58,58 +58,58 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// lblsName1 control.
+        /// lblsTenSanPham control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsName1;
+        protected global::System.Web.UI.WebControls.Label lblsTenSanPham;
         
         /// <summary>
-        /// lblsDescription control.
+        /// lblsMoTa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsDescription;
+        protected global::System.Web.UI.WebControls.Label lblsMoTa;
         
         /// <summary>
-        /// lblsInfomation control.
+        /// lblsThongTin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsInfomation;
+        protected global::System.Web.UI.WebControls.Label lblsThongTin;
         
         /// <summary>
-        /// lblsOrigin control.
+        /// lblsXuatXu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsOrigin;
+        protected global::System.Web.UI.WebControls.Label lblsXuatXu;
         
         /// <summary>
-        /// lbllPrice control.
+        /// lbllGiaBan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbllPrice;
+        protected global::System.Web.UI.WebControls.Label lbllGiaBan;
         
         /// <summary>
-        /// lblbStatus control.
+        /// lbliTrangThai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblbStatus;
+        protected global::System.Web.UI.WebControls.Label lbliTrangThai;
         
         /// <summary>
         /// btnBuy control.
