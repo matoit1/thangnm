@@ -30,6 +30,9 @@ namespace HaBa.Admin
         protected void ViewDetail_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
+            tblChiTietHoaDon_DetailUC1.btnInsert.Visible = false;
+            tblChiTietHoaDon_DetailUC1.btnUpdate.Visible = true;
+            tblChiTietHoaDon_DetailUC1.btnDelete.Visible = true;
             tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
             _tblChiTietHoaDonEO.FK_lHoaDonID = tblChiTietHoaDon_ListUC1.FK_lHoaDonID;
             _tblChiTietHoaDonEO.FK_lSanPhamID = tblChiTietHoaDon_ListUC1.FK_lSanPhamID;
@@ -40,6 +43,9 @@ namespace HaBa.Admin
         protected void AddNew_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
+            tblChiTietHoaDon_DetailUC1.btnInsert.Visible = true;
+            tblChiTietHoaDon_DetailUC1.btnUpdate.Visible = false;
+            tblChiTietHoaDon_DetailUC1.btnDelete.Visible = false;
             tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
             tblChiTietHoaDon_DetailUC1.BindDataDetail(_tblChiTietHoaDonEO);
         }

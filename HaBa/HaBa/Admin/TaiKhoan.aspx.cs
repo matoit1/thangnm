@@ -30,6 +30,9 @@ namespace HaBa.Admin
         protected void ViewDetail_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
+            tblTaiKhoan_DetailUC1.btnInsert.Visible = false;
+            tblTaiKhoan_DetailUC1.btnUpdate.Visible = true;
+            tblTaiKhoan_DetailUC1.btnDelete.Visible = true;
             tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
             _tblTaiKhoanEO.PK_iTaiKhoanID = tblTaiKhoan_ListUC1.PK_iTaiKhoanID;
             _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItem(_tblTaiKhoanEO);
@@ -39,6 +42,9 @@ namespace HaBa.Admin
         protected void AddNew_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
+            tblTaiKhoan_DetailUC1.btnInsert.Visible = true;
+            tblTaiKhoan_DetailUC1.btnUpdate.Visible = false;
+            tblTaiKhoan_DetailUC1.btnDelete.Visible = false;
             tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
             tblTaiKhoan_DetailUC1.BindDataDetail(_tblTaiKhoanEO);
         }

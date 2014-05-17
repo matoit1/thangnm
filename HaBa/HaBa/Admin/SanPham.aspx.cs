@@ -30,6 +30,9 @@ namespace HaBa.Admin
         protected void ViewDetail_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
+            tblSanPham_DetailUC1.btnInsert.Visible = false;
+            tblSanPham_DetailUC1.btnUpdate.Visible = true;
+            tblSanPham_DetailUC1.btnDelete.Visible = true;
             tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
             _tblSanPhamEO.PK_lSanPhamID = tblSanPham_ListUC1.PK_lSanPhamID;
             _tblSanPhamEO = tblSanPhamDAO.SanPham_SelectItem(_tblSanPhamEO);
@@ -39,6 +42,9 @@ namespace HaBa.Admin
         protected void AddNew_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
+            tblSanPham_DetailUC1.btnInsert.Visible = true;
+            tblSanPham_DetailUC1.btnUpdate.Visible = false;
+            tblSanPham_DetailUC1.btnDelete.Visible = false;
             tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
             tblSanPham_DetailUC1.BindDataDetail(_tblSanPhamEO);
         }
