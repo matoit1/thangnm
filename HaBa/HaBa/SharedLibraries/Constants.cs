@@ -6,17 +6,12 @@ using System.Web;
 namespace HaBa.SharedLibraries.Constants
 {
     #region "I. Sinh Viên"
-    /// <summary> I.7. SinhVien_iTrangThaiSV_C (Trạng Thái Sinh Viên) </summary>
+    /// <summary> I.7. NhomSanPham_iTrangThai_C (Trạng Thái Nhóm Sản Phẩm) </summary>
     /// 
-    public class SinhVien_iTrangThaiSV_C
+    public class NhomSanPham_iTrangThai_C
     {
-        public const Int16 Dang_Hoc = 1;
-        public const Int16 Chuyen_Truong = 2;
-        public const Int16 Chuyen_Lop = 3;
-        public const Int16 Bao_Luu_Ket_Qua = 4;
-        public const Int16 Bo_Hoc = 5;
-        public const Int16 Luu_Ban = 6;
-        public const Int16 Duoi_Hoc = 7;
+        public const Int16 Mo = 1;
+        public const Int16 Khoa = 2;
     }
 
     /// <summary> I.8. SinhVien_bKetnapDoanSV_C (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using HaBa.EntityObject;
 using HaBa.SharedLibraries;
 using HaBa.DataAccessObject;
+using System.Data;
 
 namespace HaBa.UserControl
 {
@@ -60,14 +61,21 @@ namespace HaBa.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddliNhomCon.DataSource = tblHoaDonDAO.HoaDon_SelectList();
-            ddliNhomCon.DataTextField = "FK_iTaiKhoanID_Nhan";
-            ddliNhomCon.DataValueField = "PK_lHoaDonID";
+            DataSet ds = tblNhomSanPhamDAO.NhomSanPham_SelectList();
+            DataRow dr = ds.Tables[0].NewRow();
+            dr[0] = 0;
+            dr[2] = "Không nằm trong nhóm con nào!";
+            ds.Tables[0].Rows.Add(dr);
+
+            ds.Tables[0].Rows.Add();
+            ddliNhomCon.DataSource = ds;
+            ddliNhomCon.DataTextField = "sTenNhom";
+            ddliNhomCon.DataValueField = "PK_iNhomSanPhamID";
             ddliNhomCon.DataBind();
 
-            ddliTrangThai.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddliTrangThai.DataTextField = "sTenSanPham";
-            ddliTrangThai.DataValueField = "PK_lSanPhamID";
+            ddliTrangThai.DataSource = GetListConstants.NhomSanPham_iTrangThai_GLC();
+            ddliTrangThai.DataTextField = "Value";
+            ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
         }
 
