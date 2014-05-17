@@ -427,8 +427,46 @@
     <Content Include="Client\Accounts\Login.aspx" />
     <Content Include="Client\Default.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\Avatar\Default.jpg" />
     <Content Include="Images\Product\Ao_So_Mi.png" />
     <Content Include="Images\Product\Chan_Vay.png" />
+    <Content Include="Images\Product\SP000001.jpg" />
+    <Content Include="Images\Product\SP000002.jpg" />
+    <Content Include="Images\Product\SP000003.jpg" />
+    <Content Include="Images\Product\SP000004.jpg" />
+    <Content Include="Images\Product\SP000005.jpg" />
+    <Content Include="Images\Product\SP000006.jpg" />
+    <Content Include="Images\Product\SP000007.jpg" />
+    <Content Include="Images\Product\SP000008.jpg" />
+    <Content Include="Images\Product\SP000009.jpg" />
+    <Content Include="Images\Product\SP000010.jpg" />
+    <Content Include="Images\Product\SP000011.jpg" />
+    <Content Include="Images\Product\SP000012.jpg" />
+    <Content Include="Images\Product\SP000013.jpg" />
+    <Content Include="Images\Product\SP000014.jpg" />
+    <Content Include="Images\Product\SP000015.jpg" />
+    <Content Include="Images\Product\SP000016.jpg" />
+    <Content Include="Images\Product\SP000017.jpg" />
+    <Content Include="Images\Product\SP000018.jpg" />
+    <Content Include="Images\Product\SP000019.jpg" />
+    <Content Include="Images\Product\SP000020.jpg" />
+    <Content Include="Images\Product\SP000021.jpg" />
+    <Content Include="Images\Product\SP000022.jpg" />
+    <Content Include="Images\Product\SP000023.jpg" />
+    <Content Include="Images\Product\SP000024.jpg" />
+    <Content Include="Images\Product\SP000025.jpg" />
+    <Content Include="Images\Product\SP000026.jpg" />
+    <Content Include="Images\Product\SP000027.jpg" />
+    <Content Include="Images\Product\SP000028.jpg" />
+    <Content Include="Images\Product\SP000029.jpg" />
+    <Content Include="Images\Product\SP000030.jpg" />
+    <Content Include="Images\Product\SP000031.jpg" />
+    <Content Include="Images\Product\SP000032.jpg" />
+    <Content Include="Images\Product\SP000033.jpg" />
+    <Content Include="Images\Product\SP000034.jpg" />
+    <Content Include="Images\Product\SP000035.jpg" />
+    <Content Include="Images\Product\SP000036.jpg" />
+    <Content Include="Images\Product\SP000037.jpg" />
     <Content Include="Images\Product\Vay_Cong_So.png" />
     <Content Include="Images\Product\Vay_Dao_Pho.png" />
     <Content Include="Nhan.aspx" />
@@ -792,7 +830,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\Avatar\" />
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
