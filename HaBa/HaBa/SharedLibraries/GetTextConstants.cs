@@ -106,21 +106,16 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.7. SinhVien_iTrangThaiSV_GTC (Trạng Thái Sinh Viên) </summary>
+        /// <summary> I.7. NhomSanPham_iTrangThai_GTC (Trạng Thái Nhóm Sản Phẩm) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string SinhVien_iTrangThaiSV_GTC(Int16 input)
+        public static string NhomSanPham_iTrangThai_GTC(Int16 input)
         {
             string output = "";
             switch (input)
             {
-                case 1: output = "Đang học"; break;
-                case 2: output = "Chuyển trường"; break;
-                case 3: output = "Chuyển lớp"; break;
-                case 4: output = "Bảo lưu kết quả"; break;
-                case 5: output = "Bỏ học"; break;
-                case 6: output = "Lưu ban"; break;
-                case 7: output = "Đuổi học"; break;
+                case 1: output = "Mở"; break;
+                case 2: output = "Khóa"; break;
                 default: output = "N/A"; break;
             }
             return output;

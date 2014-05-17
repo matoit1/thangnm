@@ -82,18 +82,13 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.7. SinhVien_iTrangThaiSV_GLC (Trạng Thái Sinh Viên) </summary>
+        /// <summary> I.7. NhomSanPham_iTrangThai_GLC (Trạng Thái Nhóm Sản Phẩm) </summary>
         /// <returns></returns>
-        public static SortedList SinhVien_iTrangThaiSV_GLC()
+        public static SortedList NhomSanPham_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(SinhVien_iTrangThaiSV_C.Dang_Hoc, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Dang_Hoc));
-            output.Add(SinhVien_iTrangThaiSV_C.Chuyen_Truong, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Chuyen_Truong));
-            output.Add(SinhVien_iTrangThaiSV_C.Chuyen_Lop, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Chuyen_Lop));
-            output.Add(SinhVien_iTrangThaiSV_C.Bao_Luu_Ket_Qua, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Bao_Luu_Ket_Qua));
-            output.Add(SinhVien_iTrangThaiSV_C.Bo_Hoc, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Bo_Hoc));
-            output.Add(SinhVien_iTrangThaiSV_C.Luu_Ban, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Luu_Ban));
-            output.Add(SinhVien_iTrangThaiSV_C.Duoi_Hoc, GetTextConstants.SinhVien_iTrangThaiSV_GTC(SinhVien_iTrangThaiSV_C.Duoi_Hoc));
+            output.Add(NhomSanPham_iTrangThai_C.Mo, GetTextConstants.NhomSanPham_iTrangThai_GTC(NhomSanPham_iTrangThai_C.Mo));
+            output.Add(NhomSanPham_iTrangThai_C.Khoa, GetTextConstants.NhomSanPham_iTrangThai_GTC(NhomSanPham_iTrangThai_C.Khoa));
             return output;
         }
 
