@@ -180,6 +180,34 @@ namespace HaBa.DataAccessObject
                 }
             }
         }
+        /// <summary> 6. NhomSanPham_SelectItem_By_PK_iNhomSanPhamID </summary>
+        /// <param name="_tblNhomSanPhamEO"></param>
+        /// <returns></returns>
+        public static tblNhomSanPhamEO NhomSanPham_SelectItem_By_PK_iNhomSanPhamID(Int16 _PK_iNhomSanPhamID)
+        {
+            tblNhomSanPhamEO oOutput = new tblNhomSanPhamEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblNhomSanPham_SelectItem", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iNhomSanPhamID", _PK_iNhomSanPhamID));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    oOutput = DataSet2Object.NhomSanPhamDO(ds);
+                    return oOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return oOutput;
+                }
+            }
+        }
         
 
         /// <summary> 8. NhomSanPham_SelectList </summary>

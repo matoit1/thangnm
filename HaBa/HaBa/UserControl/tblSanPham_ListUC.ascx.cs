@@ -55,7 +55,7 @@ namespace HaBa.UserControl
                 select new
                 {
                     PK_sSanPhamID = topic.Field<string>("PK_sSanPhamID"),
-                    FK_iNhomSanPhamID = topic.Field<Int16>("FK_iNhomSanPhamID"),
+                    FK_iNhomSanPhamID =  tblNhomSanPhamDAO.NhomSanPham_SelectItem_By_PK_iNhomSanPhamID(topic.Field<Int16>("FK_iNhomSanPhamID")).sTenNhom,
                     sTenSanPham = topic.Field<string>("sTenSanPham"),
                     sMoTa = topic.Field<string>("sMoTa"),
                     sThongTin = topic.Field<string>("sThongTin"),
@@ -63,11 +63,11 @@ namespace HaBa.UserControl
                     sLinkImage = topic.Field<string>("sLinkImage"),
                     lGiaBan = topic.Field<Int64>("lGiaBan"),
                     iVAT = topic.Field<Int16>("iVAT"),
-                    iDoTuoi = topic.Field<Int16>("iDoTuoi"),
-                    iGioiTinh = topic.Field<Int16>("iGioiTinh"),
+                    iDoTuoi = GetTextConstants.SanPham_iDoTuoi_GTC(topic.Field<Int16>("iDoTuoi")),
+                    iGioiTinh = GetTextConstants.SanPham_iGioiTinh_GTC(topic.Field<Int16>("iGioiTinh")),
                     iSoLuong = topic.Field<Int16>("iSoLuong"),
                     tNgayCapNhat = topic.Field<DateTime>("tNgayCapNhat"),
-                    iTrangThai = topic.Field<Int16>("iTrangThai")
+                    iTrangThai = GetTextConstants.SanPham_iTrangThai_GTC (topic.Field<Int16>("iTrangThai"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

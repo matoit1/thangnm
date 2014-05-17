@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td>Mã sản phẩm: </td>
-            <td><asp:TextBox ID="txtPK_sSanPhamID" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtPK_sSanPhamID" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_sSanPhamID" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -39,7 +39,7 @@
         </tr>
         <tr>
             <td>Mô tả: </td>
-            <td><asp:TextBox ID="txtsMoTa" runat="server" Width="400px" TextMode="MultiLine" Rows="3" ></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsMoTa" runat="server" Width="400px" TextMode="MultiLine" Rows="3" Enabled = "false" ></asp:TextBox></td>
             <td><asp:Label ID="lblsMoTa" runat="server"></asp:Label></td>
         </tr>
         <tr>

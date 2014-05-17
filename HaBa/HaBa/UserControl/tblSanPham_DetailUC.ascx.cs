@@ -62,7 +62,7 @@ namespace HaBa.UserControl
                 try { _tblSanPhamEO.FK_iNhomSanPhamID = Convert.ToInt16(ddlFK_iNhomSanPhamID.SelectedValue); }
                 catch { lblFK_iNhomSanPhamID.Text = Messages.Ma_Khong_Hop_Le; }
                 _tblSanPhamEO.sTenSanPham = Convert.ToString(txtsTenSanPham.Text);
-                _tblSanPhamEO.sMoTa = Convert.ToString(txtsMoTa.Text);
+                _tblSanPhamEO.sMoTa = Commons.RemoveHtmlTagsUsingCharArray(Convert.ToString(txtsThongTin.Text));
                 _tblSanPhamEO.sThongTin = Convert.ToString(txtsThongTin.Text);
                 _tblSanPhamEO.sXuatXu = Convert.ToString(txtsXuatXu.Text);
                 _tblSanPhamEO.sLinkImage = Convert.ToString(txtsLinkImage.Text);
