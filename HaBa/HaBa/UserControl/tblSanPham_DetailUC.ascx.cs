@@ -73,7 +73,7 @@ namespace HaBa.UserControl
                 try { _tblSanPhamEO.iGioiTinh = Convert.ToInt16(ddliGioiTinh.SelectedValue); }
                 catch { lbliGioiTinh.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblSanPhamEO.iGioiTinh = 0; }
                 _tblSanPhamEO.iSoLuong = Convert.ToInt16(txtiSoLuong.Text);
-                _tblSanPhamEO.tNgayCapNhat = Convert.ToDateTime(txttNgayCapNhat.Text);
+                //_tblSanPhamEO.tNgayCapNhat = Convert.ToDateTime(txttNgayCapNhat.Text);
                 try { _tblSanPhamEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
                 catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblSanPhamEO.iTrangThai = 0; }
                 return _tblSanPhamEO;

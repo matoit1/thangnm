@@ -23,20 +23,6 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.2. GiangVien_iHocViGV_GLC (Học vị) </summary>
-        /// <returns></returns>
-        public static SortedList GiangVien_iHocViGV_GLC()
-        {
-            SortedList output = new SortedList();
-            output.Add(GiangVien_iHocViGV_C.Tu_Tai, GetTextConstants.GiangVien_iHocViGV_GTC(GiangVien_iHocViGV_C.Tu_Tai));
-            output.Add(GiangVien_iHocViGV_C.Cu_Nhan, GetTextConstants.GiangVien_iHocViGV_GTC(GiangVien_iHocViGV_C.Cu_Nhan));
-            output.Add(GiangVien_iHocViGV_C.Ky_Su, GetTextConstants.GiangVien_iHocViGV_GTC(GiangVien_iHocViGV_C.Ky_Su));
-            output.Add(GiangVien_iHocViGV_C.Thac_Si, GetTextConstants.GiangVien_iHocViGV_GTC(GiangVien_iHocViGV_C.Thac_Si));
-            output.Add(GiangVien_iHocViGV_C.Tien_Si, GetTextConstants.GiangVien_iHocViGV_GTC(GiangVien_iHocViGV_C.Tien_Si));
-            output.Add(GiangVien_iHocViGV_C.Tien_Si_Khoa_Hoc, GetTextConstants.GiangVien_iHocViGV_GTC(GiangVien_iHocViGV_C.Tien_Si_Khoa_Hoc));
-            return output;
-        }
-
         /// <summary> I.3. Gioi_Tinh_GLC (Giới tính) </summary>
         /// <returns></returns>
         public static SortedList Gioi_Tinh_GLC()
@@ -92,7 +78,7 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.8. SanPham_iTrangThai_GLC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+        /// <summary> I.8. SanPham_iTrangThai_GLC (Trạng Thái Sản Phẩm) </summary>
         /// <returns></returns>
         public static SortedList SanPham_iTrangThai_GLC()
         {
@@ -103,7 +89,7 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.9. SanPham_iDoTuoi_GLC (Quan hệ với người liên hệ) </summary>
+        /// <summary> I.9. SanPham_iDoTuoi_GLC (Độ Tuổi Sản Phẩm) </summary>
         /// <returns></returns>
         public static SortedList SanPham_iDoTuoi_GLC()
         {
@@ -116,7 +102,7 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.10 SanPham_iGioiTinh_GLC (Hệ số tính điểm) </summary>
+        /// <summary> I.10 SanPham_iGioiTinh_GLC (Giới Tính Sản Phẩm) </summary>
         /// <returns></returns>
         public static SortedList SanPham_iGioiTinh_GLC()
         {
@@ -127,31 +113,36 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.11. Xep_Loai_Ket_Qua_Hoc_Tap_GLC (Xếp loại kết quả học tập) </summary>
+        /// <summary> I.11. ThanhToan_iTrangThai_GLC (Trạng Thái Thanh Toán) </summary>
         /// <returns></returns>
-        public static SortedList Xep_Loai_Ket_Qua_Hoc_Tap_GLC()
+        public static SortedList ThanhToan_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(Xep_Loai_Ket_Qua_Hoc_Tap_C.Xuat_Sac, GetTextConstants.Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Xep_Loai_Ket_Qua_Hoc_Tap_C.Xuat_Sac));
-            output.Add(Xep_Loai_Ket_Qua_Hoc_Tap_C.Gioi, GetTextConstants.Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Xep_Loai_Ket_Qua_Hoc_Tap_C.Gioi));
-            output.Add(Xep_Loai_Ket_Qua_Hoc_Tap_C.Kha, GetTextConstants.Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Xep_Loai_Ket_Qua_Hoc_Tap_C.Kha));
-            output.Add(Xep_Loai_Ket_Qua_Hoc_Tap_C.Trung_Binh_Kha, GetTextConstants.Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Xep_Loai_Ket_Qua_Hoc_Tap_C.Trung_Binh_Kha));
-            output.Add(Xep_Loai_Ket_Qua_Hoc_Tap_C.Trung_Binh, GetTextConstants.Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Xep_Loai_Ket_Qua_Hoc_Tap_C.Trung_Binh));
-            output.Add(Xep_Loai_Ket_Qua_Hoc_Tap_C.Yeu, GetTextConstants.Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Xep_Loai_Ket_Qua_Hoc_Tap_C.Yeu));
-            output.Add(Xep_Loai_Ket_Qua_Hoc_Tap_C.Kem, GetTextConstants.Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Xep_Loai_Ket_Qua_Hoc_Tap_C.Kem));
+            output.Add(ThanhToan_iTrangThai_C.Mo, GetTextConstants.ThanhToan_iTrangThai_GTC(ThanhToan_iTrangThai_C.Mo));
+            output.Add(ThanhToan_iTrangThai_C.Xem_Xet, GetTextConstants.ThanhToan_iTrangThai_GTC(ThanhToan_iTrangThai_C.Xem_Xet));
+            output.Add(ThanhToan_iTrangThai_C.Khoa, GetTextConstants.ThanhToan_iTrangThai_GTC(ThanhToan_iTrangThai_C.Khoa));
             return output;
         }
 
-        /// <summary>  I.12. Tinh_Diem_Chuyen_Can_GLC (Tính điểm chuyên cần) </summary>
+        /// <summary>  I.12. TaiKhoan_iTrangThai_GLC (Trạng Thái Tài Khoản) </summary>
         /// <returns></returns>
-        public static SortedList Tinh_Diem_Chuyen_Can_GLC()
+        public static SortedList TaiKhoan_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(Tinh_Diem_Chuyen_Can_C.Mot_Buoi, GetTextConstants.Tinh_Diem_Chuyen_Can_GTC(Tinh_Diem_Chuyen_Can_C.Mot_Buoi));
-            output.Add(Tinh_Diem_Chuyen_Can_C.Hai_Buoi, GetTextConstants.Tinh_Diem_Chuyen_Can_GTC(Tinh_Diem_Chuyen_Can_C.Hai_Buoi));
-            output.Add(Tinh_Diem_Chuyen_Can_C.Ba_Buoi, GetTextConstants.Tinh_Diem_Chuyen_Can_GTC(Tinh_Diem_Chuyen_Can_C.Ba_Buoi));
-            output.Add(Tinh_Diem_Chuyen_Can_C.Bon_Buoi, GetTextConstants.Tinh_Diem_Chuyen_Can_GTC(Tinh_Diem_Chuyen_Can_C.Bon_Buoi));
-            output.Add(Tinh_Diem_Chuyen_Can_C.Nam_Buoi, GetTextConstants.Tinh_Diem_Chuyen_Can_GTC(Tinh_Diem_Chuyen_Can_C.Nam_Buoi));
+            output.Add(TaiKhoan_iTrangThai_C.Mo, GetTextConstants.TaiKhoan_iTrangThai_GTC(TaiKhoan_iTrangThai_C.Mo));
+            output.Add(TaiKhoan_iTrangThai_C.Xem_Xet, GetTextConstants.TaiKhoan_iTrangThai_GTC(TaiKhoan_iTrangThai_C.Xem_Xet));
+            output.Add(TaiKhoan_iTrangThai_C.Khoa, GetTextConstants.TaiKhoan_iTrangThai_GTC(TaiKhoan_iTrangThai_C.Khoa));
+            return output;
+        }
+
+        /// <summary> I.2. TaiKhoan_iQuyenHan_GLC (Quyền Hạn Tài Khoản) </summary>
+        /// <returns></returns>
+        public static SortedList TaiKhoan_iQuyenHan_GLC()
+        {
+            SortedList output = new SortedList();
+            output.Add(TaiKhoan_iQuyenHan_C.QuanTri, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.QuanTri));
+            output.Add(TaiKhoan_iQuyenHan_C.Nhan_Vien, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.Nhan_Vien));
+            output.Add(TaiKhoan_iQuyenHan_C.Khach_Hang, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.Khach_Hang));
             return output;
         }
 

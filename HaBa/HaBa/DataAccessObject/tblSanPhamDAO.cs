@@ -55,6 +55,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblSanPham_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_sSanPhamID", _tblSanPhamEO.PK_sSanPhamID));
                     cmd.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
                     cmd.Parameters.Add(new SqlParameter("@sTenSanPham", _tblSanPhamEO.sTenSanPham));
                     cmd.Parameters.Add(new SqlParameter("@sMoTa", _tblSanPhamEO.sMoTa));
