@@ -19,7 +19,7 @@ namespace HaBa.DataAccessObject
         {
             try
             {
-                return new SqlConnection(connectdb_x64);
+                return new SqlConnection(connectdb_internet);
             }
             catch (Exception ex)
             {

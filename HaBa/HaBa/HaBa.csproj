@@ -459,7 +459,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
@@ -475,7 +474,6 @@
     <None Include="App_Data\dsHaBa.xss">
       <DependentUpon>dsHaBa.xsd</DependentUpon>
     </None>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="ShareInterface\AdminSI.Master" />
     <Content Include="ShareInterface\ClientSI.Master" />
     <Content Include="ShareInterface\HomeSI.Master" />
