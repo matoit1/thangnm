@@ -17,12 +17,12 @@ namespace HaBa
             {
                 if (!IsPostBack)
                 {
-                    if (Request.QueryString["FK_iNhomSanPhamID"] != null)
+                    if (Request.QueryString["PK_iNhomSanPhamID"] != null)
                     {
                         tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
-                        _tblSanPhamEO.FK_iNhomSanPhamID = Convert.ToInt16(Request.QueryString["FK_iNhomSanPhamID"]);
+                        _tblSanPhamEO.FK_iNhomSanPhamID = Convert.ToInt16(Request.QueryString["PK_iNhomSanPhamID"]);
                         _tblSanPhamEO.iTrangThai = 1;
-                        Gallery3DUC1.BindData(tblSanPhamDAO.SanPham_SelectList_All_SanPham_In_Group(_tblSanPhamEO));
+                        Gallery3DUC1.BindData(tblSanPhamDAO.SanPham_SelectByFK_iNhomSanPhamID(_tblSanPhamEO));
                     }
                 }
             }

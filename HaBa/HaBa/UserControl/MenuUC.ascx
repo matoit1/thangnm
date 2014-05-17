@@ -17,11 +17,11 @@
 	    <ul class="menus menu-secondary">
 		    <asp:Repeater ID="rptRoot" runat="server" OnItemDataBound="rptRoot_ItemDataBound">
                 <ItemTemplate>
-                    <li><asp:HyperLink ID="hplPK_iNhomSanPhamID" runat="server" NavigateUrl='<%#"~/Group.aspx?Products_ID="+Eval("PK_iNhomSanPhamID")%>'><%#Eval("sTenNhom")%></asp:HyperLink>
+                    <li><asp:HyperLink ID="hplPK_iNhomSanPhamID" runat="server" NavigateUrl='<%#"~/NhomSanPham.aspx?PK_iNhomSanPhamID="+Eval("PK_iNhomSanPhamID")%>'><%#Eval("sTenNhom")%></asp:HyperLink>
                         <asp:Repeater ID="rptiNhomCon" runat="server">
                             <HeaderTemplate><ul></HeaderTemplate>
                             <ItemTemplate>
-                                <li><asp:HyperLink ID="hpliNhomCon" runat="server" NavigateUrl='<%#"~/Group.aspx?PK_iNhomSanPhamID="+Eval("PK_iNhomSanPhamID")+"&iNhomCon="+Eval("iNhomCon")%>'><%#Eval("sTenNhom")%></asp:HyperLink></li>
+                                <li><asp:HyperLink ID="hpliNhomCon" runat="server" NavigateUrl='<%#"~/NhomSanPham.aspx?PK_iNhomSanPhamID="+Eval("iNhomCon")%>'><%#Eval("sTenNhom")%></asp:HyperLink></li>
                             </ItemTemplate>
                             <FooterTemplate></ul></FooterTemplate>
                         </asp:Repeater>
