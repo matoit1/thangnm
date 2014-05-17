@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChiTietHoaDon.aspx.cs" Inherits="HaBa.Admin.ChiTietHoaDon" MasterPageFile="~/ShareInterface/AdminSI.Master" %>
 <%@ Register src="~/UserControl/tblChiTietHoaDon_ListUC.ascx" tagname="tblChiTietHoaDon_ListUC" tagprefix="uc1" %>
-<%@ Register src="~/UserControl/tblChiTietHoaDon_DetailUC.ascx"" tagname="tblChiTietHoaDon_DetailUC" tagprefix="uc2" %>
+<%@ Register src="~/UserControl/tblChiTietHoaDon_DetailUC.ascx" tagname="tblChiTietHoaDon_DetailUC" tagprefix="uc2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
     <asp:MultiView ID="mtvMain" runat="server" ActiveViewIndex="0">

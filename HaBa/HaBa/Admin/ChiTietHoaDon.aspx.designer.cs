@@ -38,7 +38,6 @@ namespace HaBa.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::HaBa.UserControl.tblChiTietHoaDon_ListUC tblChiTietHoaDon_ListUC1;
-        protected global::HaBa.UserControl.tblChiTietHoaDon_DetailUC tblChiTietHoaDon_DetailUC1;
         
         /// <summary>
         /// vDetail control.
@@ -57,5 +56,14 @@ namespace HaBa.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
+        
+        /// <summary>
+        /// tblChiTietHoaDon_DetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HaBa.UserControl.tblChiTietHoaDon_DetailUC tblChiTietHoaDon_DetailUC1;
     }
 }

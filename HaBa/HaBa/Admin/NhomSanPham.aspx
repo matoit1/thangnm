@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NhomSanPham.aspx.cs" Inherits="HaBa.Admin.NhomSanPham" MasterPageFile="~/ShareInterface/AdminSI.Master" %>
 
 <%@ Register src="~/UserControl/tblNhomSanPham_ListUC.ascx" tagname="tblNhomSanPham_ListUC" tagprefix="uc1" %>
-<%@ Register src="~/UserControl/tblNhomSanPham_DetailUC.ascx"" tagname="tblNhomSanPham_DetailUC" tagprefix="uc2" %>
+<%@ Register src="~/UserControl/tblNhomSanPham_DetailUC.ascx" tagname="tblNhomSanPham_DetailUC" tagprefix="uc2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
     <asp:MultiView ID="mtvMain" runat="server" ActiveViewIndex="0">
