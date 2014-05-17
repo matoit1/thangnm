@@ -60,10 +60,10 @@ namespace HaBa.UserControl
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
-                    FK_lHoaDonID = topic.Field<string>("FK_lHoaDonID"),
-                    FK_sSanPhamID = topic.Field<Int64>("FK_sSanPhamID"),
-                    lGiaBan = topic.Field<string>("lGiaBan"),
-                    iSoLuong = topic.Field<string>("iSoLuong")
+                    FK_lHoaDonID = topic.Field<Int64>("FK_lHoaDonID"),
+                    FK_sSanPhamID = tblSanPhamDAO.SanPham_SelectItemPK_sSanPhamID(topic.Field<string>("FK_sSanPhamID")).sTenSanPham,
+                    lGiaBan = topic.Field<Int64>("lGiaBan"),
+                    iSoLuong = topic.Field<Int16>("iSoLuong")
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

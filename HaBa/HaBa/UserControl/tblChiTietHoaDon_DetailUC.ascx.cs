@@ -61,7 +61,7 @@ namespace HaBa.UserControl
         public void loadDataToDropDownList()
         {
             ddlFK_lHoaDonID.DataSource = tblHoaDonDAO.HoaDon_SelectList();
-            ddlFK_lHoaDonID.DataTextField = "FK_iTaiKhoanID_Nhan";
+            ddlFK_lHoaDonID.DataTextField = "PK_lHoaDonID";
             ddlFK_lHoaDonID.DataValueField = "PK_lHoaDonID";
             ddlFK_lHoaDonID.DataBind();
 

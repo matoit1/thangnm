@@ -56,7 +56,7 @@ namespace HaBa.UserControl
                 {
                     PK_iThanhToanID = topic.Field<Int16>("PK_iThanhToanID"),
                     sTenThanhToan = topic.Field<string>("sTenThanhToan"),
-                    iTrangThai = topic.Field<Int16>("iTrangThai")
+                    iTrangThai = GetTextConstants.ThanhToan_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

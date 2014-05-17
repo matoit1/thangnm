@@ -279,6 +279,34 @@ namespace HaBa.DataAccessObject
                 }
             }
         }
+        /// <summary> 6. TaiKhoan_SelectItemByPK_iTaiKhoanID </summary>
+        /// <param name="_tblTaiKhoanEO"></param>
+        /// <returns></returns>
+        public static tblTaiKhoanEO TaiKhoan_SelectItemByPK_iTaiKhoanID(Int32 _PK_iTaiKhoanID)
+        {
+            tblTaiKhoanEO oOutput = new tblTaiKhoanEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblTaiKhoan_SelectItemByPK_iTaiKhoanID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iTaiKhoanID", _PK_iTaiKhoanID));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    oOutput = DataSet2Object.TaiKhoanDO(ds);
+                    return oOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return oOutput;
+                }
+            }
+        }
 
         /// <summary> 7. TaiKhoan_SelectBysUsername </summary>
         /// <param name="_tblTaiKhoanEO"></param>

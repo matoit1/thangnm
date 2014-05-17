@@ -148,6 +148,34 @@ namespace HaBa.DataAccessObject
                 }
             }
         }
+        /// <summary> 6. ThanhToan_SelectItemByPK_iThanhToanID </summary>
+        /// <param name="_tblThanhToanEO"></param>
+        /// <returns></returns>
+        public static tblThanhToanEO ThanhToan_SelectItemByPK_iThanhToanID(Int16 _PK_iThanhToanID)
+        {
+            tblThanhToanEO oOutput = new tblThanhToanEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblThanhToan_SelectItemByPK_iThanhToanID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iThanhToanID", _PK_iThanhToanID));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    oOutput = DataSet2Object.ThanhToanDO(ds);
+                    return oOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return oOutput;
+                }
+            }
+        }
 
         /// <summary> 8. ThanhToan_SelectList </summary>
         /// <param name="_tblThanhToanEO"></param>

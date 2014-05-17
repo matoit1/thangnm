@@ -26,9 +26,9 @@ namespace HaBa
             {
                 if (!IsPostBack)
                 {
-                    if (Request.QueryString["PK_lProductID"] != null)
+                    if (Request.QueryString["PK_sSanPhamID"] != null)
                     {
-                        BindData(Convert.ToString(Request.QueryString["PK_lProductID"]));
+                        BindData(Convert.ToString(Request.QueryString["PK_sSanPhamID"]));
                     }
                 }
             }

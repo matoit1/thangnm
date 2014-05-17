@@ -15,12 +15,12 @@
 						        <div class="post hentry">
 							        <a name="5705322088157809118"></a>
 							        <div class="entrybody">
-								        <a href='<%#"../Product.aspx?PK_lProductID="+Eval("PK_lProductID")%>'>
-                                            <img src='<%#Eval("sLinkImage")%>' class="postthumb" alt='<%#Eval("sName")%>' title='<%#Eval("sName")%>'>
+								        <a href='<%#"../Product.aspx?PK_sSanPhamID="+Eval("PK_sSanPhamID")%>'>
+                                            <img src='<%#Eval("sLinkImage")%>' class="postthumb" alt='<%#Eval("sTenSanPham")%>' title='<%#Eval("sTenSanPham")%>'>
                                         </a>
 							        </div>
 							        <h2 class="post-title entry-title">
-								        <a href='<%#"../Product.aspx?PK_lProductID="+Eval("PK_lProductID")%>'><span class="border"><%#Eval("sName")%></span></a>
+								        <a href='<%#"../Product.aspx?PK_sSanPhamID="+Eval("PK_sSanPhamID")%>'><span class="border"><%#Eval("sTenSanPham")%></span></a>
 							        </h2>
 							        <div class="post-header-line-1"></div>
 							        <div class="post-body entry-content"><div style="clear: both;"></div></div>
