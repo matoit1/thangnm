@@ -57,7 +57,7 @@
                                 </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center"  />
                         </asp:TemplateField>
-                        <asp:BoundField  DataField="PK_iNhomSanPhamID"  HeaderText="Mã sản phẩm" SortExpression="PK_iNhomSanPhamID">
+                        <asp:BoundField  DataField="PK_iNhomSanPhamID"  HeaderText="Mã nhóm sản phẩm" SortExpression="PK_iNhomSanPhamID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
                         <asp:BoundField  DataField="iNhomCon"  HeaderText="Nhóm con" SortExpression="iNhomCon">
