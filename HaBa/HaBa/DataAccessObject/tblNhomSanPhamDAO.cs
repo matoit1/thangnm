@@ -55,7 +55,6 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblNhomSanPham_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iNhomSanPhamID", _tblNhomSanPhamEO.PK_iNhomSanPhamID));
                     cmd.Parameters.Add(new SqlParameter("@iNhomCon", _tblNhomSanPhamEO.iNhomCon));
                     cmd.Parameters.Add(new SqlParameter("@sTenNhom", _tblNhomSanPhamEO.sTenNhom));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblNhomSanPhamEO.iTrangThai));
@@ -167,7 +166,7 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblNhomSanPham_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iTaiKhoanID", _tblNhomSanPhamEO.PK_iNhomSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iNhomSanPhamID", _tblNhomSanPhamEO.PK_iNhomSanPhamID));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

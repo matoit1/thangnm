@@ -11,12 +11,12 @@
     <form id="form1" runat="server">
     <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
         <Items>
-            <asp:MenuItem Text="Chi tiết Hóa đơn" Value=" Chi tiết Hóa đơn " NavigateUrl="~/Admin/ChiTietHoaDon.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="Hóa Đơn" Value=" Hóa Đơn " NavigateUrl="~/Admin/HoaDon.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="Nhóm Sản phẩm" Value=" Nhóm Sản phẩm " NavigateUrl="~/Admin/NhomSanPham.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="Sản phẩm" Value=" Sản phẩm " NavigateUrl="~/Admin/SanPham.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="Tài Khoản" Value=" Tài Khoản " NavigateUrl="~/Admin/TaiKhoan.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="Thanh Toán" Value=" Thanh Toán " NavigateUrl="~/Admin/ThanhToan.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||  Chi tiết Hóa đơn" Value=" Chi tiết Hóa đơn " NavigateUrl="~/Admin/ChiTietHoaDon.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||  Hóa Đơn" Value=" Hóa Đơn " NavigateUrl="~/Admin/HoaDon.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||  Nhóm Sản phẩm" Value=" Nhóm Sản phẩm " NavigateUrl="~/Admin/NhomSanPham.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||  Sản phẩm" Value=" Sản phẩm " NavigateUrl="~/Admin/SanPham.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||  Tài Khoản" Value=" Tài Khoản " NavigateUrl="~/Admin/TaiKhoan.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||  Thanh Toán" Value=" Thanh Toán " NavigateUrl="~/Admin/ThanhToan.aspx"></asp:MenuItem>
         </Items>
     </asp:Menu>
     <div>

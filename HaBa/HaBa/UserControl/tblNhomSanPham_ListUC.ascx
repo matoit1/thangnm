@@ -34,7 +34,7 @@
             <td>
                 <asp:GridView ID="grvListBaiViet" runat="server" CssClass="mGrid" 
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                    FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_lMaBaiViet"
+                    FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_iNhomSanPhamID"
                     emptydatatext="Không có bản ghi nào."   PageSize="5" 
                     EnableModelValidation="True" onrowcommand="grvListBaiViet_RowCommand" 
                     onselectedindexchanged="grvListBaiViet_SelectedIndexChanged" 
@@ -53,38 +53,17 @@
                        </asp:TemplateField>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("PK_lMaBaiViet")%>'>Chi tiết</asp:LinkButton>
+                                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("PK_iNhomSanPhamID")%>'>Chi tiết</asp:LinkButton>
                                 </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center"  />
                         </asp:TemplateField>
-                        <asp:BoundField  DataField="FK_sMaGV"  HeaderText="Mã giáo viên" SortExpression="FK_sMaGV">
+                        <asp:BoundField  DataField="PK_iNhomSanPhamID"  HeaderText="Mã sản phẩm" SortExpression="PK_iNhomSanPhamID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField  DataField="PK_lMaBaiViet"  HeaderText="Mã bài viết" SortExpression="PK_lMaBaiViet">
+                        <asp:BoundField  DataField="iNhomCon"  HeaderText="Nhóm con" SortExpression="iNhomCon">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField DataField="sTieuDe" HeaderText="Tiêu đề" SortExpression="sTieuDe">
-                            <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="sLinkAnh" HeaderText="Link ảnh" SortExpression="sLinkAnh">
-                            <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="sTag" HeaderText="Tags" SortExpression="sTag">
-                            <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>
-                        <%--<asp:BoundField DataField="sNoiDung" HeaderText="Nội dung" SortExpression="sNoiDung">
-                            <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>--%>
-                        <asp:BoundField DataField="iLuotXem" HeaderText="Lượt xem" SortExpression="iLuotXem">
-                            <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="tNgayViet" HeaderText="Ngày viết" SortExpression="tNgayViet">
-                            <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>
-                        <asp:BoundField  DataField="tNgayCapNhat"  HeaderText="Ngày cập nhật" SortExpression="tNgayCapNhat">
-                            <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
-                        </asp:BoundField>
-                        <asp:BoundField DataField="sMoTa" HeaderText="Mô tả" SortExpression="sMoTa">
+                        <asp:BoundField DataField="sTenNhom" HeaderText="Tên nhóm sản phẩm" SortExpression="sTenNhom">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                         <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThai">
