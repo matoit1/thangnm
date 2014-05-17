@@ -76,27 +76,27 @@
                 </tr>
                 <tr >
                     <td class="tieudesanpham">Tên sản phẩm: </td>
-                    <td><asp:Label ID="lblsName1" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lblsTenSanPham" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham">Mô tả: </td>
-                    <td><asp:Label ID="lblsDescription" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lblsMoTa" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham">Thông tin: </td>
-                    <td><asp:Label ID="lblsInfomation" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lblsThongTin" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham">Xuất xứ: </td>
-                    <td><asp:Label ID="lblsOrigin" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lblsXuatXu" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham">Giá bán: </td>
-                    <td><asp:Label ID="lbllPrice" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lbllGiaBan" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham">Trạng thái</td>
-                    <td><asp:Label ID="lblbStatus" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham"></td>

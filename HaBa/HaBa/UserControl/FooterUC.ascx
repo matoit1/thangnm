@@ -22,7 +22,7 @@
                                 Chúng tôi hiện đang miễn phí vận chuyển cho khách mua hàng trong nội thành Hà Nội</div>
                                 </div>
                                 <div style="border-bottom: 1px solid rgb(174, 174, 174); color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; margin: 0px; outline: medium none; padding: 10px;">
-                                <span class="spriteIcon support" style="background-color: transparent; background-image: url('../App_Themes/Images/Home_sprite.png'); background-position: -255px -110px; background-repeat: no-repeat no-repeat; color: rgb(116, 116, 116); display: inline-block; font-size: 14px; line-height: 1.6em; outline: medium none; padding-left: 30px;">Hotline hỗ trợ<br><b>0166 379 6917</b></span></div>
+                                <span class="spriteIcon support" style="background-color: transparent; background-image: url('../App_Themes/Images/Home_sprite.png'); background-position: -255px -110px; background-repeat: no-repeat no-repeat; color: rgb(116, 116, 116); display: inline-block; font-size: 14px; line-height: 1.6em; outline: medium none; padding-left: 30px;">Hotline hỗ trợ<br><b>0977 894 936</b></span></div>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -36,13 +36,13 @@
                     <div class="widget HTML" id="HTML9">
                         <h2 class="title">Liên hệ</h2>
                         <div class="widget-content">
-                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">HaBa - Classy Laydy</span><br>
+                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">HaBa - Shop Trẻ Thơ</span><br>
                             <br style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">
-                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Địa chỉ: Đông Mỹ - Thanh Trì - Hà Nội</span><br>
+                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Địa chỉ: Thường Tín - Hà Nội</span><br>
                             <br style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">
-                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Hỗ trợ kinh doanh:&nbsp;</span><span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; line-height: 18.1875px; outline: medium none;"><strong>0166 379 6917</strong></span><br>
-                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Hỗ trợ kĩ thuật:&nbsp;</span><span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; line-height: 18.1875px; outline: medium none;"><strong>0167 527 9562</strong></span><br>
-                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Email:&nbsp;</span><span style="font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;"><span style="color: teal;">hoaiduong92@gmail.com</span></span>
+                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Hỗ trợ kinh doanh:&nbsp;</span><span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; line-height: 18.1875px; outline: medium none;"><strong>0977 894 936</strong></span><br>
+                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Hỗ trợ kĩ thuật:&nbsp;</span><span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 16px; line-height: 18.1875px; outline: medium none;"><strong>0977 894 936</strong></span><br>
+                            <span style="color: rgb(202, 206, 209); font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;">Email:&nbsp;</span><span style="font-family: SFUHelveticaCondensed,Arial,sans-serif; font-size: 14px; line-height: 18.1875px;"><span style="color: teal;">haba171291@gmail.com</span></span>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -56,8 +56,8 @@
                         <div class="widget Label" id="Label1">
                             <h2>Từ khóa xem nhiều</h2>                                                                                                                                                                                                       <div class="widget-content list-label-widget-content">
                             <ul>
-                                <li><a dir="ltr" href="../Label.aspx?keyword=Vay">Váy</a></li>
-                                <li><a dir="ltr" href="../Label.aspx?keyword=Ao">Áo</a></li>
+                                <li><a dir="ltr" href="../Nhan.aspx?keyword=May Bay">Máy bay</a></li>
+                                <li><a dir="ltr" href="../Nhan.aspx?keyword=Dan">Đàn</a></li>
                             </ul>
                             <div class="clear"></div>
                         </div>
@@ -74,13 +74,13 @@
     <div id="credits">
         <div class="credts_left">
             Copyright © 2014
-            <a href="http://HaBa.tk/">HaBa</a> | Thiết kế và chỉnh sửa bởi <a href="https://plus.google.com/u/0/109664385150832451485">ThangNM</a>
+            <a href="http://HaBa.com">HaBa - Shop Trẻ Thơ</a> | Thiết kế và chỉnh sửa bởi <a href="https://plus.google.com/108721004231457882522">HaBa</a>
         </div>
         <div class="credts_right">
             <ul class="social">
                 <a href="http://fb.com/share2everyone" target="_blank"><li class="facebook-hover social-slide"></li></a>
-                <a href="https://twitter.com/thang_991992" target="_blank"><li class="twitter-hover social-slide"></li></a>
-                <a href="https://plus.google.com/u/0/109664385150832451485" target="_blank"><li class="google-hover social-slide"></li></a>
+                <a href="https://twitter.com/haba" target="_blank"><li class="twitter-hover social-slide"></li></a>
+                <a href="https://plus.google.com/108721004231457882522" target="_blank"><li class="google-hover social-slide"></li></a>
                 <a href="#" target="_blank"><li class="pinterest-hover social-slide"></li></a>
                 <a href="#" target="_blank"><li class="instagram-hover social-slide"></li></a>
                 <a href="#" target="_blank"><li class="tumblr-hover social-slide"></li></a>

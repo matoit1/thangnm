@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using HaBa.DataAccessObject;
 using System.Data;
+using HaBa.SharedLibraries;
 
 namespace HaBa
 {
@@ -33,6 +34,7 @@ namespace HaBa
                         rptResultSearch.DataSource = ds;
                         rptResultSearch.DataBind();
                         lblMsg.Text = "Tìm thấy " + ds.Tables[0].Rows.Count + " kết quả  (0,99 giây)";
+                        
                     }
                 }
             }
@@ -44,18 +46,18 @@ namespace HaBa
 
         protected void rptResultSearch_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            Label lblsName = ((Label)(e.Item.FindControl("lblsName")));
-            Label lblsDescription = ((Label)(e.Item.FindControl("lblsDescription")));
+            Label lblsTenSanPham = ((Label)(e.Item.FindControl("lblsTenSanPham")));
+            Label lblsMoTa = ((Label)(e.Item.FindControl("lblsMoTa")));
             HyperLink hplChiTietSanPham = ((HyperLink)(e.Item.FindControl("hplChiTietSanPham")));
-            lblsName.Text = RewriteUrl.HighLightKeyWords(RewriteUrl.Remove_Unicode_Character(lblsName.Text), RewriteUrl.Remove_Unicode_Character(keyword), "#3333FF");
-            lblsDescription.Text = RewriteUrl.HighLightKeyWords(RewriteUrl.Remove_Unicode_Character(lblsDescription.Text), RewriteUrl.Remove_Unicode_Character(keyword), "#3333FF");
-            hplChiTietSanPham.NavigateUrl = "~/" + hplChiTietSanPham.NavigateUrl + "/" + RewriteUrl.ConvertToUnSign(hplChiTietSanPham.ImageUrl) + ".html";
-            hplChiTietSanPham.ImageUrl = "";
+            lblsTenSanPham.Text = RewriteUrl.HighLightKeyWords(RewriteUrl.Remove_Unicode_Character(lblsTenSanPham.Text), RewriteUrl.Remove_Unicode_Character(keyword), "#3333FF");
+            lblsMoTa.Text = RewriteUrl.HighLightKeyWords(RewriteUrl.Remove_Unicode_Character(lblsMoTa.Text), RewriteUrl.Remove_Unicode_Character(keyword), "#3333FF");
+            //hplChiTietSanPham.NavigateUrl = "~/" + hplChiTietSanPham.NavigateUrl + "/" + RewriteUrl.ConvertToUnSign(hplChiTietSanPham.ImageUrl) + ".html";
+            //hplChiTietSanPham.ImageUrl = "";
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Label.aspx?keyword=" + txtKeyWord.Text);
+            Response.Redirect("~/Nhan.aspx?keyword=" + txtKeyWord.Text);
             //keyword = txtKeyWord.Text;
             //DataSet ds = tblSanPhamDAO.Product_Search(RewriteUrl.Remove_Unicode_Character(txtKeyWord.Text));
             //rptResultSearch.DataSource = ds;

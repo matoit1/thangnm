@@ -15,12 +15,13 @@
 						        <div class="post hentry">
 							        <a name="5705322088157809118"></a>
 							        <div class="entrybody">
-								        <a href='<%#"../Product.aspx?PK_sSanPhamID="+Eval("PK_sSanPhamID")%>'>
-                                            <img src='<%#Eval("sLinkImage")%>' class="postthumb" alt='<%#Eval("sTenSanPham")%>' title='<%#Eval("sTenSanPham")%>'>
+								        <a href='<%#"../SanPham.aspx?PK_sSanPhamID="+Eval("PK_sSanPhamID")%>'>
+                                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("sLinkImage")%>' class="postthumb" ToolTip='<%#Eval("sTenSanPham")%>' AlternateText='<%#Eval("sTenSanPham")%>' />
+                                            <%--<img src='<%#Eval("sLinkImage")%>' class="postthumb" alt='<%#Eval("sTenSanPham")%>' title='<%#Eval("sTenSanPham")%>'>--%>
                                         </a>
 							        </div>
 							        <h2 class="post-title entry-title">
-								        <a href='<%#"../Product.aspx?PK_sSanPhamID="+Eval("PK_sSanPhamID")%>'><span class="border"><%#Eval("sTenSanPham")%></span></a>
+								        <a href='<%#"../SanPham.aspx?PK_sSanPhamID="+Eval("PK_sSanPhamID")%>'><span class="border"><%#Eval("sTenSanPham")%></span></a>
 							        </h2>
 							        <div class="post-header-line-1"></div>
 							        <div class="post-body entry-content"><div style="clear: both;"></div></div>

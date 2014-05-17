@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Nhan.aspx.cs" Inherits="HaBa.Nhan" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Nhan.aspx.cs" Inherits="HaBa.Nhan" MasterPageFile="~/ShareInterface/ProductSI.Master" %>
 <%@ Register src="UserControl/AdvancedSearchUC.ascx" tagname="AdvancedSearchUC" tagprefix="uc1" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
@@ -42,18 +42,19 @@
     <asp:Repeater ID="rptResultSearch" runat="server" onitemdatabound="rptResultSearch_ItemDataBound">
         <ItemTemplate>
             <fieldset class="style1">
-                <legend><asp:Label ID="lblPK_sSanPhamID" runat="server" Text='<%# Eval("PK_sSanPhamID") %>'></asp:Label> - <asp:Label ID="lblsName" runat="server" Text='<%# Eval("sName") %>'></asp:Label></legend>
-                <asp:HyperLink ID="hplChiTietSanPham" runat="server" NavigateUrl='<%# Eval("PK_sSanPhamID")%>' ImageUrl='<%# Eval("sName") %>'>
+                <legend><asp:Label ID="lblPK_sSanPhamID" runat="server" Text='<%# Eval("PK_sSanPhamID") %>'></asp:Label> - <asp:Label ID="lblsTenSanPham" runat="server" Text='<%# Eval("sTenSanPham") %>'></asp:Label></legend>
+                <asp:HyperLink ID="hplChiTietSanPham" runat="server" NavigateUrl='<%#"../SanPham.aspx?PK_sSanPhamID="+Eval("PK_sSanPhamID")%>'>
                 
                     <div class="tableft">
-                        <img src='<%# Eval("sLinkImage")%>' alt='<%# Eval("sName")%>' width="100px" height="100px" />
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("sLinkImage")%>' AlternateText='<%# Eval("sTenSanPham")%>' Width="100px" Height="100px" />
+                        <%--<img src='<%# Eval("sLinkImage")%>' alt='<%# Eval("sTenSanPham")%>' width="100px" height="100px" />--%>
                     </div>
                     <div class="tabright">
-                        <asp:Label ID="lblsDescription" runat="server" Text='<%# Eval("sDescription") %>'></asp:Label><br />
-                        <asp:Label ID="lblsInfomation" runat="server" Text='<%# Eval("sInfomation") %>'></asp:Label><br />
-                        <asp:Label ID="lblsOrigin" runat="server" Text='<%# Eval("sOrigin") %>'></asp:Label><br />
-                        <asp:Label ID="lbllPrice" runat="server" Text='<%# Eval("lPrice") %>'></asp:Label><br />
-                        <asp:Label ID="lblbStatus" runat="server" Text='<%#(Boolean)Eval("bStatus")==true?"Còn hàng":"Hết hàng"%>'></asp:Label><br />
+                        <asp:Label ID="lblsMoTa" runat="server" Text='<%# Eval("sMoTa") %>'></asp:Label><br />
+                        <%--<asp:Label ID="lblsInfomation" runat="server" Text='<%# Eval("sInfomation") %>'></asp:Label><br />--%>
+                        <asp:Label ID="lblsXuatXu" runat="server" Text='<%# Eval("sXuatXu") %>'></asp:Label><br />
+                        <asp:Label ID="lbllGiaBan" runat="server" Text='<%# Eval("lGiaBan") %>'></asp:Label><br />
+                        <asp:Label ID="lbliTrangThai" runat="server" Text='<%# Eval("iTrangThai")%>'></asp:Label><br />
                     </div>
                 </asp:HyperLink>
             </fieldset>
