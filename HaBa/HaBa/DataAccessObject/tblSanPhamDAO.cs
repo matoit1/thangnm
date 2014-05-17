@@ -197,6 +197,34 @@ namespace HaBa.DataAccessObject
                 }
             }
         }
+        /// <summary> 6. SanPham_SelectItemPK_sSanPhamID </summary>
+        /// <param name="_tblSanPhamEO"></param>
+        /// <returns></returns>
+        public static tblSanPhamEO SanPham_SelectItemPK_sSanPhamID(string _PK_sSanPhamID)
+        {
+            tblSanPhamEO oOutput = new tblSanPhamEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectItemByPK_sSanPhamID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sSanPhamID", _PK_sSanPhamID));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    oOutput = DataSet2Object.SanPhamDO(ds);
+                    return oOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return oOutput;
+                }
+            }
+        }
 
         /// <summary> 8. SanPham_SelectList </summary>
         /// <param name="_tblSanPhamEO"></param>
@@ -283,7 +311,7 @@ namespace HaBa.DataAccessObject
         /// <summary> 11. SanPham_SelectList_All_SanPham </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet SanPham_SelectList_All_SanPham(tblSanPhamEO _tblSanPhamEO)
+        public static DataSet SanPham_SelectListByiTrangThai(tblSanPhamEO _tblSanPhamEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -291,9 +319,9 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList_All_SanPham", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectListByiTrangThai", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.iTrangThai));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

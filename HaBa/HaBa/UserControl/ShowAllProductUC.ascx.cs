@@ -21,7 +21,7 @@ namespace HaBa.UserControl
                     DataSet ds = new DataSet();
                     tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
                     _tblSanPhamEO.iTrangThai = 1;
-                    ds = tblSanPhamDAO.SanPham_SelectList_All_SanPham(_tblSanPhamEO);
+                    ds = tblSanPhamDAO.SanPham_SelectListByiTrangThai(_tblSanPhamEO);
                     rptLoadAllProduct.DataSource = ds;
                     rptLoadAllProduct.DataBind();
                 }

@@ -42,8 +42,8 @@
     <asp:Repeater ID="rptResultSearch" runat="server" onitemdatabound="rptResultSearch_ItemDataBound">
         <ItemTemplate>
             <fieldset class="style1">
-                <legend><asp:Label ID="lblPK_lProductID" runat="server" Text='<%# Eval("PK_lProductID") %>'></asp:Label> - <asp:Label ID="lblsName" runat="server" Text='<%# Eval("sName") %>'></asp:Label></legend>
-                <asp:HyperLink ID="hplChiTietSanPham" runat="server" NavigateUrl='<%# Eval("PK_lProductID")%>' ImageUrl='<%# Eval("sName") %>'>
+                <legend><asp:Label ID="lblPK_sSanPhamID" runat="server" Text='<%# Eval("PK_sSanPhamID") %>'></asp:Label> - <asp:Label ID="lblsName" runat="server" Text='<%# Eval("sName") %>'></asp:Label></legend>
+                <asp:HyperLink ID="hplChiTietSanPham" runat="server" NavigateUrl='<%# Eval("PK_sSanPhamID")%>' ImageUrl='<%# Eval("sName") %>'>
                 
                     <div class="tableft">
                         <img src='<%# Eval("sLinkImage")%>' alt='<%# Eval("sName")%>' width="100px" height="100px" />
