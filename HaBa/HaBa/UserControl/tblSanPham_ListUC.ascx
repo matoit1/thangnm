@@ -60,7 +60,7 @@
                         <asp:BoundField  DataField="PK_sSanPhamID"  HeaderText="Mã sản phẩm" SortExpression="PK_sSanPhamID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField  DataField="FK_iNhomSanPhamID"  HeaderText="Mã nhóm sản phẩm" SortExpression="FK_iNhomSanPhamID">
+                        <asp:BoundField  DataField="FK_iNhomSanPhamID"  HeaderText="Nhóm sản phẩm" SortExpression="FK_iNhomSanPhamID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
                         <asp:BoundField DataField="sTenSanPham" HeaderText="Tên sản phẩm" SortExpression="sTenSanPham">
