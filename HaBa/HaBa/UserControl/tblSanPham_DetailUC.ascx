@@ -14,7 +14,7 @@
     <table>
         <tr>
             <td></td>
-            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Câu hỏi"></asp:Label></td>
+            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Thông tin sản phẩm"  CssClass="form_tittle"></asp:Label></td>
             <td></td>
         </tr>
         <tr>
@@ -59,12 +59,12 @@
         </tr>
         <tr>
             <td>Giá bán: </td>
-            <td><asp:TextBox ID="txtlGiaBan" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtlGiaBan" runat="server" Width="400px"></asp:TextBox> VNĐ</td>
             <td><asp:Label ID="lbllGiaBan" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Thuế giá trị gia tăng VAT: </td>
-            <td><asp:TextBox ID="txtiVAT" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtiVAT" runat="server" Width="400px"></asp:TextBox> %</td>
             <td><asp:Label ID="lbliVAT" runat="server"></asp:Label></td>
         </tr>
         <tr>

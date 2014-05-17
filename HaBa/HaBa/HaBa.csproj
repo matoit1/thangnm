@@ -94,6 +94,7 @@
     <Content Include="App_Themes\Images\Home_twitter-hover.png" />
     <Content Include="App_Themes\Images\Popup_CloseBox.png" />
     <Content Include="App_Themes\Popup.css" />
+    <Content Include="App_Themes\public.css" />
     <Content Include="App_Themes\ZoomImage.css" />
     <Content Include="bin\CrystalDecisions.CrystalReports.Engine.dll" />
     <Content Include="bin\CrystalDecisions.ReportAppServer.Controllers.dll" />

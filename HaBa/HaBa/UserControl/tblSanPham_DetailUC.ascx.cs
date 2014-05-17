@@ -47,7 +47,7 @@ namespace HaBa.UserControl
             try { ddliGioiTinh.SelectedValue = Convert.ToString(_tblSanPhamEO.iGioiTinh); }
             catch { ddliGioiTinh.SelectedIndex = 0; }
             txtiSoLuong.Text = Convert.ToString(_tblSanPhamEO.iSoLuong);
-            txttNgayCapNhat.Text = Convert.ToString(_tblSanPhamEO.tNgayCapNhat);
+            if (_tblSanPhamEO.tNgayCapNhat == DateTime.MinValue) { txttNgayCapNhat.Text = DateTime.Now.ToString("dd/MM/yyyy"); } else { txttNgayCapNhat.Text = Convert.ToString(_tblSanPhamEO.tNgayCapNhat); }
             try { ddliTrangThai.SelectedValue = Convert.ToString(_tblSanPhamEO.iTrangThai); }
             catch { ddliTrangThai.SelectedIndex = 0; }
             

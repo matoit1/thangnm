@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Trang quản trị HaBa</title>
+    <link rel="stylesheet" type="text/css" href="../App_Themes/public.css" />
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
