@@ -33,9 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web">
+      <HintPath>Other\DLL\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
     <Reference Include="DevNET.URLRewriter, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Other\DevNET.URLRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -53,6 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Accounts\Login.aspx" />
+    <Content Include="Admin\ChiTietHoaDon.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\HoaDon.aspx" />
+    <Content Include="Admin\NhomSanPham.aspx" />
+    <Content Include="Admin\SanPham.aspx" />
+    <Content Include="Admin\TaiKhoan.aspx" />
+    <Content Include="Admin\ThanhToan.aspx" />
     <Content Include="App_Themes\calendar.css" />
     <Content Include="App_Themes\Gallery3D_1.css" />
     <Content Include="App_Themes\Gallery3D_2.css" />
@@ -86,7 +102,11 @@
     <Content Include="Images\Product\Vay_Dao_Pho.png" />
     <Content Include="Nhan.aspx" />
     <Content Include="NhomSanPham.aspx" />
-    <Content Include="Other\DevNET.URLRewriter.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportSource.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.Shared.dll" />
+    <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
+    <Content Include="Product\Bao_Cao.aspx" />
     <Content Include="SanPham.aspx" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
@@ -98,6 +118,7 @@
     <Content Include="Scripts\Popup.js" />
     <Content Include="Scripts\Vote.js" />
     <Content Include="UserControl\AdvancedSearchUC.ascx" />
+    <Content Include="UserControl\ReportUC.ascx" />
     <Content Include="UserControl\tblChiTietHoaDon_ListUC.ascx" />
     <Content Include="UserControl\tblHoaDon_ListUC.ascx" />
     <Content Include="UserControl\tblNhomSanPham_ListUC.ascx" />
@@ -130,6 +151,55 @@
     </Compile>
     <Compile Include="Admin\Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChiTietHoaDon.aspx.cs">
+      <DependentUpon>ChiTietHoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChiTietHoaDon.aspx.designer.cs">
+      <DependentUpon>ChiTietHoaDon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HoaDon.aspx.cs">
+      <DependentUpon>HoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HoaDon.aspx.designer.cs">
+      <DependentUpon>HoaDon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NhomSanPham.aspx.cs">
+      <DependentUpon>NhomSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NhomSanPham.aspx.designer.cs">
+      <DependentUpon>NhomSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SanPham.aspx.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SanPham.aspx.designer.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TaiKhoan.aspx.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TaiKhoan.aspx.designer.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThanhToan.aspx.cs">
+      <DependentUpon>ThanhToan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThanhToan.aspx.designer.cs">
+      <DependentUpon>ThanhToan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Client\Accounts\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -185,7 +255,20 @@
     <Compile Include="NhomSanPham.aspx.designer.cs">
       <DependentUpon>NhomSanPham.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Product\Bao_Cao.aspx.cs">
+      <DependentUpon>Bao_Cao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\Bao_Cao.aspx.designer.cs">
+      <DependentUpon>Bao_Cao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\SanPhamRP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanPhamRP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SanPham.aspx.cs">
       <DependentUpon>SanPham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,6 +319,13 @@
     </Compile>
     <Compile Include="UserControl\AdvancedSearchUC.ascx.designer.cs">
       <DependentUpon>AdvancedSearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ReportUC.ascx.cs">
+      <DependentUpon>ReportUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ReportUC.ascx.designer.cs">
+      <DependentUpon>ReportUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\tblChiTietHoaDon_ListUC.ascx.cs">
       <DependentUpon>tblChiTietHoaDon_ListUC.ascx</DependentUpon>
@@ -359,7 +449,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Product\" />
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
@@ -380,6 +469,15 @@
     <Content Include="ShareInterface\ClientSI.Master" />
     <Content Include="ShareInterface\HomeSI.Master" />
     <Content Include="ShareInterface\ProductSI.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\SanPhamRP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SanPhamRP.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

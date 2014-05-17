@@ -78,7 +78,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblTaiKhoanDAO.Account_Insert(getObject()) == true)
+                if (tblTaiKhoanDAO.TaiKhoan_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
                 }
@@ -98,7 +98,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblTaiKhoanDAO.Account_Update(getObject()) == true)
+                if (tblTaiKhoanDAO.TaiKhoan_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
                 }
@@ -118,7 +118,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblTaiKhoanDAO.Account_Delete(getObject()) == true)
+                if (tblTaiKhoanDAO.TaiKhoan_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
                 }
