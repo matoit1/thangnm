@@ -44,7 +44,7 @@ namespace HaBa
             {
                 tblSanPhamEO _ProductsEO = new tblSanPhamEO();
                 _ProductsEO.PK_lSanPhamID = input;
-                _ProductsEO = tblSanPhamDAO.Product_SelectItem(_ProductsEO);
+                _ProductsEO = tblSanPhamDAO.SanPham_SelectItem(_ProductsEO);
                 lblsName.Text = _ProductsEO.sTenSanPham;
                 lblsName1.Text = _ProductsEO.sTenSanPham;
                 lbltLastUpdate.Text = _ProductsEO.tNgayCapNhat.ToString(Messages.Format_DateTime);

@@ -4,14 +4,149 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HaBa.EntityObject;
+using HaBa.SharedLibraries;
+using HaBa.DataAccessObject;
 
 namespace HaBa.UserControl
 {
     public partial class tblNhomSanPham_DetailUC : System.Web.UI.UserControl
     {
+        #region "Properties & Event"
+        public Int16 iType
+        {
+            get { return (Int16)ViewState["iType"]; }
+            set { ViewState["iType"] = value; }
+        }
+        #endregion
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ClearMessages();
+                loadDataToDropDownList();
+            }
         }
+
+        public void BindDataDetail(tblNhomSanPhamEO _tblNhomSanPhamEO)
+        {
+            try { ddlFK_lHoaDonID.SelectedValue = Convert.ToString(_tblNhomSanPhamEO.FK_lHoaDonID); }
+            catch { ddlFK_lHoaDonID.SelectedIndex = 0; }
+            try { ddlFK_lSanPhamID.SelectedValue = Convert.ToString(_tblNhomSanPhamEO.FK_lSanPhamID); }
+            catch { ddlFK_lSanPhamID.SelectedIndex = 0; }
+            txtlGiaBan.Text = Convert.ToString(_tblNhomSanPhamEO.lGiaBan);
+            txtiSoLuong.Text = Convert.ToString(_tblNhomSanPhamEO.iSoLuong);
+        }
+
+        private tblNhomSanPhamEO getObject()
+        {
+            try
+            {
+                tblNhomSanPhamEO _tblNhomSanPhamEO = new tblNhomSanPhamEO();
+                try { _tblNhomSanPhamEO.FK_lHoaDonID = Convert.ToInt64(ddlFK_lHoaDonID.SelectedValue); }
+                catch { lblFK_lHoaDonID.Text = Messages.Ma_Khong_Hop_Le; }
+                try { _tblNhomSanPhamEO.FK_lSanPhamID = Convert.ToInt64(ddlFK_lSanPhamID.SelectedValue); }
+                catch { lblFK_lSanPhamID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblNhomSanPhamEO.FK_lSanPhamID = 0; }
+                _tblNhomSanPhamEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
+                _tblNhomSanPhamEO.iSoLuong = Convert.ToInt16(txtiSoLuong.Text);
+                return _tblNhomSanPhamEO;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void loadDataToDropDownList()
+        {
+            ddlFK_lHoaDonID.DataSource = tblHoaDonDAO.HoaDon_SelectList();
+            ddlFK_lHoaDonID.DataTextField = "FK_iTaiKhoanID_Nhan";
+            ddlFK_lHoaDonID.DataValueField = "PK_lHoaDonID";
+            ddlFK_lHoaDonID.DataBind();
+
+            ddlFK_lSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddlFK_lSanPhamID.DataTextField = "sTenSanPham";
+            ddlFK_lSanPhamID.DataValueField = "PK_lSanPhamID";
+            ddlFK_lSanPhamID.DataBind();
+        }
+
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblFK_lHoaDonID.Text = "";
+            lblFK_lSanPhamID.Text = "";
+            lbllGiaBan.Text = "";
+            lbliSoLuong.Text = "";
+        }
+
+        #region "Event Button"
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Them_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Update(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Sua_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            try
+            {
+                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Delete(getObject()) == true)
+                {
+                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Xoa_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            tblNhomSanPhamEO _tblNhomSanPhamEO = new tblNhomSanPhamEO();
+            BindDataDetail(_tblNhomSanPhamEO);
+        }
+        #endregion
     }
 }

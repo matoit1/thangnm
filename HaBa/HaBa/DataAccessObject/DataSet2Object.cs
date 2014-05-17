@@ -42,25 +42,25 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        //public static AdvertisementEO Advertisement(DataSet input)
-        //{
-        //    try
-        //    {
-        //        AdvertisementEO output = new AdvertisementEO();
-        //        foreach (DataRow dr in input.Tables[0].Rows)
-        //        {
-        //            output.PK_iAdvID = Convert.ToInt32(dr["PK_iAdvID"]);
-        //            output.sTitle = Convert.ToString(dr["sTitle"]);
-        //            output.sLink = Convert.ToString(dr["sLink"]);
-        //            output.sImage = Convert.ToString(dr["sImage"]);
-        //        }
-        //        return output;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+        public static tblNhomSanPhamEO NhomSanPhamDO(DataSet input)
+        {
+            try
+            {
+                tblNhomSanPhamEO output = new tblNhomSanPhamEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.PK_iNhomSanPhamID = Convert.ToInt16(dr["PK_iNhomSanPhamID"]);
+                    output.iNhomCon = Convert.ToInt16(dr["iNhomCon"]);
+                    output.sTenNhom = Convert.ToString(dr["sTenNhom"]);
+                    output.iTrangThai = Convert.ToInt16(dr["iTrangThai"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         //public static AnswersEO Answers(DataSet input)
         //{

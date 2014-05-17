@@ -29,7 +29,7 @@ namespace HaBa
                     {
                         keyword = Request.QueryString["keyword"];
                         txtKeyWord.Text = keyword;
-                        DataSet ds = tblSanPhamDAO.Product_Search(RewriteUrl.Remove_Unicode_Character(Request.QueryString["keyword"]));
+                        DataSet ds = tblSanPhamDAO.SanPham_Search(RewriteUrl.Remove_Unicode_Character(Request.QueryString["keyword"]));
                         rptResultSearch.DataSource = ds;
                         rptResultSearch.DataBind();
                         lblMsg.Text = "Tìm thấy " + ds.Tables[0].Rows.Count + " kết quả  (0,99 giây)";

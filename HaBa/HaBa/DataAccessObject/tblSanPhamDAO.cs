@@ -11,10 +11,10 @@ namespace HaBa.DataAccessObject
     public class tblSanPhamDAO
     {
         #region "CheckExists"
-        /// <summary> 1. Product_CheckExists_PK_lProductID </summary>
+        /// <summary> 1. SanPham_CheckExists_PK_lSanPhamID </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static bool Product_CheckExists_PK_lProductID(tblSanPhamEO _tblSanPhamEO)
+        public static bool SanPham_CheckExists_PK_lSanPhamID(tblSanPhamEO _tblSanPhamEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -22,7 +22,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblProduct_CheckExists_PK_lProductID", conn);
+                    SqlCommand cmd = new SqlCommand("tblSanPham_CheckExists_PK_lSanPhamID", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -43,17 +43,17 @@ namespace HaBa.DataAccessObject
         #endregion
 
         #region "Insert, Update, Delete"
-        /// <summary> 2. Product_Insert </summary>
+        /// <summary> 2. SanPham_Insert </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static bool Product_Insert(tblSanPhamEO _tblSanPhamEO)
+        public static bool SanPham_Insert(tblSanPhamEO _tblSanPhamEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblProduct_Insert", conn);
+                    SqlCommand cmd = new SqlCommand("tblSanPham_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     cmd.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
@@ -80,17 +80,17 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 3. Product_Update </summary>
+        /// <summary> 3. SanPham_Update </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static bool Product_Update(tblSanPhamEO _tblSanPhamEO)
+        public static bool SanPham_Update(tblSanPhamEO _tblSanPhamEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblProduct_Update", conn);
+                    SqlCommand cmd = new SqlCommand("tblSanPham_Update", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     cmd.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
@@ -117,17 +117,17 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 4. Product_Delete </summary>
+        /// <summary> 4. SanPham_Delete </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static bool Product_Delete(tblSanPhamEO _tblSanPhamEO)
+        public static bool SanPham_Delete(tblSanPhamEO _tblSanPhamEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblProduct_Delete", conn);
+                    SqlCommand cmd = new SqlCommand("tblSanPham_Delete", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     cmd.ExecuteNonQuery();
@@ -142,17 +142,17 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 5. Product_DeleteList </summary>
+        /// <summary> 5. SanPham_DeleteList </summary>
         /// <param name="_ListPK_sMaMonhoc"></param>
         /// <returns></returns>
-        public static bool Product_DeleteList(String _ListPK_lSanPhamID)
+        public static bool SanPham_DeleteList(String _ListPK_lSanPhamID)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblProduct_DeleteList", conn);
+                    SqlCommand cmd = new SqlCommand("tblSanPham_DeleteList", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@ListPK_lSanPhamID", _ListPK_lSanPhamID));
                     cmd.ExecuteNonQuery();
@@ -169,10 +169,10 @@ namespace HaBa.DataAccessObject
         #endregion
 
         #region "Select"
-        /// <summary> 6. Product_SelectItem </summary>
+        /// <summary> 6. SanPham_SelectItem </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static tblSanPhamEO Product_SelectItem(tblSanPhamEO _tblSanPhamEO)
+        public static tblSanPhamEO SanPham_SelectItem(tblSanPhamEO _tblSanPhamEO)
         {
             tblSanPhamEO oOutput = new tblSanPhamEO();
             DataSet ds = null;
@@ -181,7 +181,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectItem", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     ds = new DataSet();
@@ -198,10 +198,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 8. Product_SelectList </summary>
+        /// <summary> 8. SanPham_SelectList </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet Product_SelectList()
+        public static DataSet SanPham_SelectList()
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -209,7 +209,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
@@ -224,10 +224,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 9. Product_SelectList_All_Group </summary>
+        /// <summary> 9. SanPham_SelectList_All_Group </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet Product_SelectList_All_Group(tblSanPhamEO _tblSanPhamEO)
+        public static DataSet SanPham_SelectList_All_Group(tblSanPhamEO _tblSanPhamEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -235,35 +235,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList_All_Group", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
-                    dsOutput = new DataSet();
-                    da.Fill(dsOutput);
-                    conn.Close();
-                    return dsOutput;
-                }
-                catch (Exception)
-                {
-                    conn.Close();
-                    return dsOutput;
-                }
-            }
-        }
-
-        /// <summary> 10. Product_SelectList_All_Parent_In_Group </summary>
-        /// <param name="_tblSanPhamEO"></param>
-        /// <returns></returns>
-        public static DataSet Product_SelectList_All_Parent_In_Group(tblSanPhamEO _tblSanPhamEO)
-        {
-            DataSet dsOutput = null;
-            using (SqlConnection conn = ConnectionDAO.getConnection())
-            {
-                try
-                {
-                    conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList_All_Parent_In_Group", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList_All_Group", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
@@ -280,10 +252,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 11. Product_SelectList_All_Product </summary>
+        /// <summary> 10. SanPham_SelectList_All_Parent_In_Group </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet Product_SelectList_All_Product(tblSanPhamEO _tblSanPhamEO)
+        public static DataSet SanPham_SelectList_All_Parent_In_Group(tblSanPhamEO _tblSanPhamEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -291,7 +263,35 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList_All_Product", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList_All_Parent_In_Group", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
+        /// <summary> 11. SanPham_SelectList_All_SanPham </summary>
+        /// <param name="_tblSanPhamEO"></param>
+        /// <returns></returns>
+        public static DataSet SanPham_SelectList_All_SanPham(tblSanPhamEO _tblSanPhamEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList_All_SanPham", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.iTrangThai));
                     dsOutput = new DataSet();
@@ -307,10 +307,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 12. Product_SelectList_All_Product_In_Group </summary>
+        /// <summary> 12. SanPham_SelectList_All_SanPham_In_Group </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet Product_SelectList_All_Product_In_Group(tblSanPhamEO _tblSanPhamEO)
+        public static DataSet SanPham_SelectList_All_SanPham_In_Group(tblSanPhamEO _tblSanPhamEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -318,7 +318,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblProduct_SelectList_All_Product_In_Group", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList_All_SanPham_In_Group", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
@@ -335,10 +335,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 13. Product_Search </summary>
+        /// <summary> 13. SanPham_Search </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet Product_Search(string keyword)
+        public static DataSet SanPham_Search(string keyword)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -346,11 +346,11 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblProduct_Search", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@keyword", keyword));
 
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lProductID", _tblSanPhamEO.PK_lProductID));
+                    //da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lSanPhamID", _tblSanPhamEO.PK_lSanPhamID));
                     //da.SelectCommand.Parameters.Add(new SqlParameter("@lGroup", _tblSanPhamEO.lGroup));
                     //da.SelectCommand.Parameters.Add(new SqlParameter("@lParent", _tblSanPhamEO.lParent));
                     //da.SelectCommand.Parameters.Add(new SqlParameter("@sName", _tblSanPhamEO.sName));

@@ -42,15 +42,15 @@ namespace HaBa.UserControl
                     case 1: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text;   //Khách hàng
                         _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
                         _AccountsEO.iQuyenHan = 1;
-                        dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
+                        dsOutput = tblTaiKhoanDAO.TaiKhoan_Login(_AccountsEO); break;
                     case 2: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text; //Nhân viên
                         _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
                         _AccountsEO.iQuyenHan = 2;
-                        dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
+                        dsOutput = tblTaiKhoanDAO.TaiKhoan_Login(_AccountsEO); break;
                     case 3: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text; //Quản trị
                         _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
                         _AccountsEO.iQuyenHan = 3;
-                        dsOutput = tblTaiKhoanDAO.Account_Login(_AccountsEO); break;
+                        dsOutput = tblTaiKhoanDAO.TaiKhoan_Login(_AccountsEO); break;
                 }
             }
             catch (Exception ex)

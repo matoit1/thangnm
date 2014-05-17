@@ -22,7 +22,7 @@ namespace HaBa
                         tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
                         _tblSanPhamEO.FK_iNhomSanPhamID = Convert.ToInt16(Request.QueryString["FK_iNhomSanPhamID"]);
                         _tblSanPhamEO.iTrangThai = 1;
-                        Gallery3DUC1.BindData(tblSanPhamDAO.Product_SelectList_All_Product_In_Group(_tblSanPhamEO));
+                        Gallery3DUC1.BindData(tblSanPhamDAO.SanPham_SelectList_All_SanPham_In_Group(_tblSanPhamEO));
                     }
                 }
             }
