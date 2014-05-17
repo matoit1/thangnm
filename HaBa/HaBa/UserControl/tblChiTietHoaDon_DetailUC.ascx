@@ -32,7 +32,7 @@
         </tr>
         <tr>
             <td>Giá bán: </td>
-            <td><asp:TextBox ID="txtlGiaBan" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtlGiaBan" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lbllGiaBan" runat="server"></asp:Label></td>
         </tr>
         <tr>

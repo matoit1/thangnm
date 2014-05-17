@@ -37,7 +37,7 @@
         </tr>
         <tr>
             <td>Mô tả: </td>
-            <td><asp:TextBox ID="txtsMoTa" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsMoTa" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsMoTa" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -47,7 +47,7 @@
         </tr>
         <tr>
             <td>Link hình ảnh: </td>
-            <td><asp:TextBox ID="txtsLinkImage" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsLinkImage" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsLinkImage" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -57,7 +57,7 @@
         </tr>
         <tr>
             <td>Thuế giá trị gia tăng VAT: </td>
-            <td><asp:TextBox ID="txtiVAT" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtiVAT" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lbliVAT" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -77,7 +77,7 @@
         </tr>
         <tr>
             <td>Ngày cập nhật: </td>
-            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayCapNhat" runat="server"></asp:Label></td>
         </tr>
         <tr>
