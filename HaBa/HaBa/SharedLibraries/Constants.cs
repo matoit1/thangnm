@@ -14,36 +14,34 @@ namespace HaBa.SharedLibraries.Constants
         public const Int16 Khoa = 2;
     }
 
-    /// <summary> I.8. SinhVien_bKetnapDoanSV_C (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+    /// <summary> I.8. SanPham_iTrangThai_C (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
     /// 
-    public class SinhVien_bKetnapDoanSV_C
+    public class SanPham_iTrangThai_C
     {
-        public const Boolean Da_Vao_Doan = true;
-        public const Boolean Chua_Vao_Doan = false;
+        public const Int16 Mo = 1;
+        public const Int16 Het_Hang = 2;
+        public const Int16 Khoa = 3;
+
     }
 
-    /// <summary> I.9. SinhVien_iQuanHeVoiNguoiLienHeSV_C (Quan hệ với người liên hệ) </summary>
+    /// <summary> I.9. SanPham_iDoTuoi_C (Quan hệ với người liên hệ) </summary>
     /// 
-    public class SinhVien_iQuanHeVoiNguoiLienHeSV_C
+    public class SanPham_iDoTuoi_C
     {
-        public const Int16 Bo = 1;
-        public const Int16 Me = 2;
-        public const Int16 Anh = 3;
-        public const Int16 Chi = 4;
-        public const Int16 Bac = 5;
-        public const Int16 Chu = 6;
-        public const Int16 Co = 7;
-        public const Int16 Di = 8;
-        public const Int16 Khac = 9;
+        public const Int16 Loai1 = 1;
+        public const Int16 Loai2 = 2;
+        public const Int16 Loai3 = 3;
+        public const Int16 Loai4 = 4;
+        public const Int16 Loai5 = 5;
     }
 
-    /// <summary> I.10 He_So_Tinh_Diem_C (Hệ số tính điểm) </summary>
+    /// <summary> I.10 SanPham_iGioiTinh_C (Hệ số tính điểm) </summary>
     /// 
-    public class He_So_Tinh_Diem_C
+    public class SanPham_iGioiTinh_C
     {
-        public const double Diem_Chuyen_Can = 0.1;
-        public const double Diem_Giua_Ky = 0.2;
-        public const double Diem_Thi = 0.7;
+        public const Int16 Nam = 1;
+        public const Int16 Nu = 2;
+        public const Int16 Nam_Nu = 3;
     }
 
     /// <summary> I.11. Xep_Loai_Ket_Qua_Hoc_Tap_C (Xếp loại kết quả học tập) </summary>

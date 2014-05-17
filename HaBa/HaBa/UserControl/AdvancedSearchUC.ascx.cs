@@ -45,7 +45,7 @@ namespace HaBa.UserControl
 
         public void getObject()
         {
-            objtblSanPhamEO.PK_lSanPhamID = Convert.ToInt64(txtPK_lSanPhamID.Text);
+            objtblSanPhamEO.PK_sSanPhamID = Convert.ToString(txtPK_sSanPhamID.Text);
             objtblSanPhamEO.sTenSanPham = txtsTenSanPham.Text;
             objtblSanPhamEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
             objtblSanPhamEO.sMoTa = txtsMoTa.Text;
@@ -55,7 +55,7 @@ namespace HaBa.UserControl
         public void clearObject()
         {
             objtblSanPhamEO = null;
-            txtPK_lSanPhamID.Text = "";
+            txtPK_sSanPhamID.Text = "";
             txtsTenSanPham.Text = "";
             txtlGiaBan.Text = "";
             txtsMoTa.Text = "";

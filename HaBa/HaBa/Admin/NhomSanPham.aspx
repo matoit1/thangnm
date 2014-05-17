@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NhomSanPham.aspx.cs" Inherits="HaBa.Admin.NhomSanPham" MasterPageFile="~/ShareInterface/AdminSI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NhomSanPham.aspx.cs" Inherits="HaBa.Admin.NhomSanPham" MasterPageFile="~/ShareInterface/AdminSI.Master" EnableEventValidation="false"%>
 
 <%@ Register src="~/UserControl/tblNhomSanPham_ListUC.ascx" tagname="tblNhomSanPham_ListUC" tagprefix="uc1" %>
 <%@ Register src="~/UserControl/tblNhomSanPham_DetailUC.ascx" tagname="tblNhomSanPham_DetailUC" tagprefix="uc2" %>

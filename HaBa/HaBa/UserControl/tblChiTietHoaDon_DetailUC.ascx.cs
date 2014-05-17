@@ -67,7 +67,7 @@ namespace HaBa.UserControl
 
             ddlFK_lSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
             ddlFK_lSanPhamID.DataTextField = "sTenSanPham";
-            ddlFK_lSanPhamID.DataValueField = "PK_lSanPhamID";
+            ddlFK_lSanPhamID.DataValueField = "PK_sSanPhamID";
             ddlFK_lSanPhamID.DataBind();
         }
 

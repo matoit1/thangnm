@@ -87,7 +87,7 @@ namespace HaBa.UserControl
 
             ddlFK_iTaiKhoanID_Nhan.DataSource = tblSanPhamDAO.SanPham_SelectList();
             ddlFK_iTaiKhoanID_Nhan.DataTextField = "sTenSanPham";
-            ddlFK_iTaiKhoanID_Nhan.DataValueField = "PK_lSanPhamID";
+            ddlFK_iTaiKhoanID_Nhan.DataValueField = "PK_sSanPhamID";
             ddlFK_iTaiKhoanID_Nhan.DataBind();
 
             ddlFK_iThanhToanID.DataSource = tblHoaDonDAO.HoaDon_SelectList();
@@ -97,7 +97,7 @@ namespace HaBa.UserControl
 
             ddliTrangThai.DataSource = tblSanPhamDAO.SanPham_SelectList();
             ddliTrangThai.DataTextField = "sTenSanPham";
-            ddliTrangThai.DataValueField = "PK_lSanPhamID";
+            ddliTrangThai.DataValueField = "PK_sSanPhamID";
             ddliTrangThai.DataBind();
         }
 

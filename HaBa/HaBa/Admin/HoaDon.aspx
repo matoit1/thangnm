@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HoaDon.aspx.cs" Inherits="HaBa.Admin.HoaDon" MasterPageFile="~/ShareInterface/AdminSI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HoaDon.aspx.cs" Inherits="HaBa.Admin.HoaDon" MasterPageFile="~/ShareInterface/AdminSI.Master" EnableEventValidation="false" %>
 
 <%@ Register src="~/UserControl/tblHoaDon_ListUC.ascx" tagname="tblHoaDon_ListUC" tagprefix="uc1" %>
 <%@ Register src="~/UserControl/tblHoaDon_DetailUC.ascx" tagname="tblHoaDon_DetailUC" tagprefix="uc2" %>

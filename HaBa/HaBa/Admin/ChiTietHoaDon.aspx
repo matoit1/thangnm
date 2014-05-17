@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChiTietHoaDon.aspx.cs" Inherits="HaBa.Admin.ChiTietHoaDon" MasterPageFile="~/ShareInterface/AdminSI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChiTietHoaDon.aspx.cs" Inherits="HaBa.Admin.ChiTietHoaDon" MasterPageFile="~/ShareInterface/AdminSI.Master" EnableEventValidation="false"%>
 <%@ Register src="~/UserControl/tblChiTietHoaDon_ListUC.ascx" tagname="tblChiTietHoaDon_ListUC" tagprefix="uc1" %>
 <%@ Register src="~/UserControl/tblChiTietHoaDon_DetailUC.ascx" tagname="tblChiTietHoaDon_DetailUC" tagprefix="uc2" %>
 

@@ -22,13 +22,13 @@ namespace HaBa.UserControl
         {
             try
             {
-                ShowReport(Convert.ToInt64(Request.QueryString["PK_lSanPhamID"]));
+                ShowReport(Convert.ToInt64(Request.QueryString["PK_sSanPhamID"]));
                 crvReport.Attributes.Add("onclick", "window.setTimeout(function() { _spFormOnSubmitCalled = false; }, 10);");
             }
             catch { }
         }
 
-        private void ShowReport(Int64 _PK_lSanPhamID)
+        private void ShowReport(Int64 _PK_sSanPhamID)
         {
             try 
 	        {	        

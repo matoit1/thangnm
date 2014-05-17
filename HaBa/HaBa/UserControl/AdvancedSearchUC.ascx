@@ -14,7 +14,7 @@
                 </tr>
                 <tr>
                     <td>Mã Sản Phẩm</td>
-                    <td><asp:TextBox ID="txtPK_lSanPhamID" runat="server" Width="250px"></asp:TextBox></td>
+                    <td><asp:TextBox ID="txtPK_sSanPhamID" runat="server" Width="250px"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Tên sản phẩm</td>

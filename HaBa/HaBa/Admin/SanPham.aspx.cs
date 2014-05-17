@@ -34,7 +34,7 @@ namespace HaBa.Admin
             tblSanPham_DetailUC1.btnUpdate.Visible = true;
             tblSanPham_DetailUC1.btnDelete.Visible = true;
             tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
-            _tblSanPhamEO.PK_lSanPhamID = tblSanPham_ListUC1.PK_lSanPhamID;
+            _tblSanPhamEO.PK_sSanPhamID = tblSanPham_ListUC1.PK_sSanPhamID;
             _tblSanPhamEO = tblSanPhamDAO.SanPham_SelectItem(_tblSanPhamEO);
             tblSanPham_DetailUC1.BindDataDetail(_tblSanPhamEO);
         }
