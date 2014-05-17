@@ -91,6 +91,13 @@
     <Content Include="App_Themes\Images\Popup_CloseBox.png" />
     <Content Include="App_Themes\Popup.css" />
     <Content Include="App_Themes\ZoomImage.css" />
+    <Content Include="bin\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.Controllers.dll" />
+    <Content Include="bin\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
+    <Content Include="bin\CrystalDecisions.ReportSource.dll" />
+    <Content Include="bin\CrystalDecisions.Shared.dll" />
+    <Content Include="bin\CrystalDecisions.Web.dll" />
+    <Content Include="bin\DevNET.URLRewriter.dll" />
     <Content Include="bin\HaBa.dll" />
     <Content Include="bin\HaBa.pdb" />
     <Content Include="Client\Accounts\Login.aspx" />
@@ -104,6 +111,9 @@
     <Content Include="Nhan.aspx" />
     <Content Include="NhomSanPham.aspx" />
     <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.Controllers.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
     <Content Include="Other\DLL\CrystalDecisions.ReportSource.dll" />
     <Content Include="Other\DLL\CrystalDecisions.Shared.dll" />
     <Content Include="Other\DLL\CrystalDecisions.Web.dll" />
