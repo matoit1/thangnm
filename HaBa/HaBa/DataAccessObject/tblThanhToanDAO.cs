@@ -27,7 +27,6 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblThanhToan_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iThanhToanID", _tblThanhToanEO.PK_iThanhToanID));
                     cmd.Parameters.Add(new SqlParameter("@sTenThanhToan", _tblThanhToanEO.sTenThanhToan));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblThanhToanEO.iTrangThai));
                     cmd.ExecuteNonQuery();

@@ -64,12 +64,12 @@
         </tr>
         <tr>
             <td>Ngày sinh: </td>
-            <td><asp:TextBox ID="txttNgaySinh" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgaySinh" runat="server" Width="400px" CssClass="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgaySinh" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày đăng ký: </td>
-            <td><asp:TextBox ID="txttNgayDangKy" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayDangKy" runat="server" Width="400px" CssClass="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayDangKy" runat="server"></asp:Label></td>
         </tr>
         <tr>

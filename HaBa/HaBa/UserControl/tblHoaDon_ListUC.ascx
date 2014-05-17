@@ -57,34 +57,37 @@
                                 </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center"  />
                         </asp:TemplateField>
-                        <asp:BoundField  DataField="PK_lHoaDonID"  HeaderText="Mã giáo viên" SortExpression="PK_lHoaDonID">
+                        <asp:BoundField  DataField="PK_lHoaDonID"  HeaderText="Mã hóa đơn" SortExpression="PK_lHoaDonID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField  DataField="FK_iTaiKhoanID_Giao"  HeaderText="Mã bài viết" SortExpression="FK_iTaiKhoanID_Giao">
+                        <asp:BoundField  DataField="FK_iTaiKhoanID_Giao"  HeaderText="Người giao" SortExpression="FK_iTaiKhoanID_Giao">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField DataField="FK_iTaiKhoanID_Nhan" HeaderText="Tiêu đề" SortExpression="FK_iTaiKhoanID_Nhan">
+                        <asp:BoundField DataField="FK_iTaiKhoanID_Nhan" HeaderText="Người nhận" SortExpression="FK_iTaiKhoanID_Nhan">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="FK_iThanhToanID" HeaderText="Link ảnh" SortExpression="FK_iThanhToanID">
+                        <asp:BoundField DataField="FK_iThanhToanID" HeaderText="Hình thức thanh toán" SortExpression="FK_iThanhToanID">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="sHoTen" HeaderText="Tags" SortExpression="sHoTen">
+                        <asp:BoundField DataField="sHoTen" HeaderText="Họ tên người nhận" SortExpression="sHoTen">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <%--<asp:BoundField DataField="sNoiDung" HeaderText="Nội dung" SortExpression="sNoiDung">
-                            <ItemStyle CssClass="GridItemText" />
-                        </asp:BoundField>--%>
-                        <asp:BoundField DataField="iLuotXem" HeaderText="Lượt xem" SortExpression="iLuotXem">
+                        <asp:BoundField DataField="sEmail" HeaderText="Địa chỉ Email" SortExpression="sEmail">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="tNgayViet" HeaderText="Ngày viết" SortExpression="tNgayViet">
+                        <asp:BoundField DataField="sDiaChi" HeaderText="Địa chỉ" SortExpression="sDiaChi">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
-                        <asp:BoundField  DataField="tNgayCapNhat"  HeaderText="Ngày cập nhật" SortExpression="tNgayCapNhat">
+                        <asp:BoundField  DataField="sSoDienThoai"  HeaderText="Số điện thoại" SortExpression="sSoDienThoai">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField DataField="sMoTa" HeaderText="Mô tả" SortExpression="sMoTa">
+                        <asp:BoundField DataField="sGhiChu" HeaderText="Ghi chú" SortExpression="sGhiChu">
+                            <ItemStyle CssClass="GridItemText" />
+                        </asp:BoundField>
+                        <asp:BoundField  DataField="tNgayDatHang"  HeaderText="Ngày đặt hàng" SortExpression="tNgayDatHang">
+                            <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="tNgayGiaoHang" HeaderText="Ngày giao hàng" SortExpression="tNgayGiaoHang">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                         <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThai">

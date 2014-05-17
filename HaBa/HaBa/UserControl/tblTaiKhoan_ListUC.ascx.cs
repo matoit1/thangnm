@@ -54,16 +54,17 @@ namespace HaBa.UserControl
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
-                    FK_sMaGV = topic.Field<string>("FK_sMaGV"),
-                    PK_lMaBaiViet = topic.Field<Int64>("PK_lMaBaiViet"),
-                    sTieuDe = topic.Field<string>("sTieuDe"),
-                    sLinkAnh = topic.Field<string>("sLinkAnh"),
-                    sTag = topic.Field<string>("sTag"),
-                    sNoiDung = topic.Field<string>("sNoiDung"),
-                    iLuotXem = topic.Field<Int32>("iLuotXem"),
-                    tNgayViet = topic.Field<DateTime>("tNgayViet"),
-                    tNgayCapNhat = topic.Field<DateTime>("tNgayCapNhat"),
-                    sMoTa = topic.Field<string>("sMoTa"),
+                    PK_iTaiKhoanID = topic.Field<Int32>("PK_iTaiKhoanID"),
+                    sTenDangNhap = topic.Field<string>("sTenDangNhap"),
+                    sMatKhau = topic.Field<string>("sMatKhau"),
+                    sHoTen = topic.Field<string>("sHoTen"),
+                    sEmail = topic.Field<string>("sEmail"),
+                    sDiaChi = topic.Field<string>("sDiaChi"),
+                    sSoDienThoai = topic.Field<string>("sSoDienThoai"),
+                    sLinkAvatar = topic.Field<string>("sLinkAvatar"),
+                    tNgaySinh = topic.Field<DateTime>("tNgaySinh"),
+                    tNgayDangKy = topic.Field<DateTime>("tNgayDangKy"),
+                    iQuyenHan = topic.Field<Int16>("iQuyenHan"),
                     iTrangThai = topic.Field<Int16>("iTrangThai")
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
@@ -71,7 +72,7 @@ namespace HaBa.UserControl
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.PK_lMaBaiViet.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.PK_iTaiKhoanID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -79,7 +80,7 @@ namespace HaBa.UserControl
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.sTieuDe.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.sHoTen.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }

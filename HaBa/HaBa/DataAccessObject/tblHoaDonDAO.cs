@@ -55,7 +55,6 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblHoaDon_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_lHoaDonID", _tblHoaDonEO.PK_lHoaDonID));
                     cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID_Giao", _tblHoaDonEO.FK_iTaiKhoanID_Giao));
                     cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID_Nhan", _tblHoaDonEO.FK_iTaiKhoanID_Nhan));
                     cmd.Parameters.Add(new SqlParameter("@FK_iThanhToanID", _tblHoaDonEO.FK_iThanhToanID));
@@ -64,7 +63,6 @@ namespace HaBa.DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sDiaChi", _tblHoaDonEO.sDiaChi));
                     cmd.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblHoaDonEO.sSoDienThoai));
                     cmd.Parameters.Add(new SqlParameter("@sGhiChu", _tblHoaDonEO.sGhiChu));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayDatHang", _tblHoaDonEO.tNgayDatHang));
                     cmd.Parameters.Add(new SqlParameter("@tNgayGiaoHang", _tblHoaDonEO.tNgayGiaoHang));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblHoaDonEO.iTrangThai));
                     cmd.ExecuteNonQuery();

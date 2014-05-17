@@ -115,7 +115,6 @@ namespace HaBa.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblTaiKhoan_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iTaiKhoanID", _tblTaiKhoanEO.PK_iTaiKhoanID));
                     cmd.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
                     cmd.Parameters.Add(new SqlParameter("@sMatKhau", _tblTaiKhoanEO.sMatKhau));
                     cmd.Parameters.Add(new SqlParameter("@sHoTen", _tblTaiKhoanEO.sHoTen));
@@ -124,7 +123,6 @@ namespace HaBa.DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblTaiKhoanEO.sSoDienThoai));
                     cmd.Parameters.Add(new SqlParameter("@sLinkAvatar", _tblTaiKhoanEO.sLinkAvatar));
                     cmd.Parameters.Add(new SqlParameter("@tNgaySinh", _tblTaiKhoanEO.tNgaySinh));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayDangKy", _tblTaiKhoanEO.tNgayDangKy));
                     cmd.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblTaiKhoanEO.iTrangThai));
                     cmd.ExecuteNonQuery();
