@@ -31,12 +31,24 @@ namespace HaBa.UserControl
 
         public void BindDataDetail(tblSanPhamEO _tblSanPhamEO)
         {
-            try { ddlFK_lHoaDonID.SelectedValue = Convert.ToString(_tblSanPhamEO.FK_lHoaDonID); }
-            catch { ddlFK_lHoaDonID.SelectedIndex = 0; }
-            try { ddlFK_lSanPhamID.SelectedValue = Convert.ToString(_tblSanPhamEO.FK_lSanPhamID); }
-            catch { ddlFK_lSanPhamID.SelectedIndex = 0; }
+            txtPK_lSanPhamID.Text = Convert.ToString(_tblSanPhamEO.PK_lSanPhamID);
+            try { ddlFK_iNhomSanPhamID.SelectedValue = Convert.ToString(_tblSanPhamEO.FK_iNhomSanPhamID); }
+            catch { ddlFK_iNhomSanPhamID.SelectedIndex = 0; }
+            txtsTenSanPham.Text = Convert.ToString(_tblSanPhamEO.sTenSanPham);
+            txtsMoTa.Text = Convert.ToString(_tblSanPhamEO.sMoTa);
+            txtsXuatXu.Text = Convert.ToString(_tblSanPhamEO.sXuatXu);
+            txtsLinkImage.Text = Convert.ToString(_tblSanPhamEO.sLinkImage);
             txtlGiaBan.Text = Convert.ToString(_tblSanPhamEO.lGiaBan);
+            txtiVAT.Text = Convert.ToString(_tblSanPhamEO.iVAT);
+            try { ddliDoTuoi.SelectedValue = Convert.ToString(_tblSanPhamEO.iDoTuoi); }
+            catch { ddliDoTuoi.SelectedIndex = 0; }
+            try { ddliGioiTinh.SelectedValue = Convert.ToString(_tblSanPhamEO.iGioiTinh); }
+            catch { ddliGioiTinh.SelectedIndex = 0; }
             txtiSoLuong.Text = Convert.ToString(_tblSanPhamEO.iSoLuong);
+            txttNgayCapNhat.Text = Convert.ToString(_tblSanPhamEO.tNgayCapNhat);
+            try { ddliTrangThai.SelectedValue = Convert.ToString(_tblSanPhamEO.iTrangThai); }
+            catch { ddliTrangThai.SelectedIndex = 0; }
+            
         }
 
         private tblSanPhamEO getObject()
@@ -44,12 +56,23 @@ namespace HaBa.UserControl
             try
             {
                 tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
-                try { _tblSanPhamEO.FK_lHoaDonID = Convert.ToInt64(ddlFK_lHoaDonID.SelectedValue); }
-                catch { lblFK_lHoaDonID.Text = Messages.Ma_Khong_Hop_Le; }
-                try { _tblSanPhamEO.FK_lSanPhamID = Convert.ToInt64(ddlFK_lSanPhamID.SelectedValue); }
-                catch { lblFK_lSanPhamID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblSanPhamEO.FK_lSanPhamID = 0; }
+                _tblSanPhamEO.PK_lSanPhamID = Convert.ToInt64(txtPK_lSanPhamID.Text);
+                try { _tblSanPhamEO.FK_iNhomSanPhamID = Convert.ToInt16(ddlFK_iNhomSanPhamID.SelectedValue); }
+                catch { lblFK_iNhomSanPhamID.Text = Messages.Ma_Khong_Hop_Le; }
+                _tblSanPhamEO.sTenSanPham = Convert.ToString(txtsTenSanPham.Text);
+                _tblSanPhamEO.sMoTa = Convert.ToString(txtsMoTa.Text);
+                _tblSanPhamEO.sXuatXu = Convert.ToString(txtsXuatXu.Text);
+                _tblSanPhamEO.sLinkImage = Convert.ToString(txtsLinkImage.Text);
                 _tblSanPhamEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
+                _tblSanPhamEO.iVAT = Convert.ToInt16(txtiVAT.Text);
+                try { _tblSanPhamEO.iDoTuoi = Convert.ToInt16(ddliDoTuoi.SelectedValue); }
+                catch { lbliDoTuoi.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblSanPhamEO.iDoTuoi = 0; }
+                try { _tblSanPhamEO.iGioiTinh = Convert.ToInt16(ddliGioiTinh.SelectedValue); }
+                catch { lbliGioiTinh.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblSanPhamEO.iGioiTinh = 0; }
                 _tblSanPhamEO.iSoLuong = Convert.ToInt16(txtiSoLuong.Text);
+                _tblSanPhamEO.tNgayCapNhat = Convert.ToDateTime(txttNgayCapNhat.Text);
+                try { _tblSanPhamEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
+                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblSanPhamEO.iTrangThai = 0; }
                 return _tblSanPhamEO;
             }
             catch (Exception)
@@ -60,24 +83,43 @@ namespace HaBa.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddlFK_lHoaDonID.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddlFK_lHoaDonID.DataTextField = "FK_iTaiKhoanID_Nhan";
-            ddlFK_lHoaDonID.DataValueField = "PK_lHoaDonID";
-            ddlFK_lHoaDonID.DataBind();
+            ddlFK_iNhomSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddlFK_iNhomSanPhamID.DataTextField = "FK_iTaiKhoanID_Nhan";
+            ddlFK_iNhomSanPhamID.DataValueField = "PK_lHoaDonID";
+            ddlFK_iNhomSanPhamID.DataBind();
 
-            ddlFK_lSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddlFK_lSanPhamID.DataTextField = "sTenSanPham";
-            ddlFK_lSanPhamID.DataValueField = "PK_lSanPhamID";
-            ddlFK_lSanPhamID.DataBind();
+            ddliDoTuoi.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddliDoTuoi.DataTextField = "sTenSanPham";
+            ddliDoTuoi.DataValueField = "PK_lSanPhamID";
+            ddliDoTuoi.DataBind();
+
+            ddliGioiTinh.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddliGioiTinh.DataTextField = "FK_iTaiKhoanID_Nhan";
+            ddliGioiTinh.DataValueField = "PK_lHoaDonID";
+            ddliGioiTinh.DataBind();
+
+            ddliTrangThai.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddliTrangThai.DataTextField = "sTenSanPham";
+            ddliTrangThai.DataValueField = "PK_lSanPhamID";
+            ddliTrangThai.DataBind();
         }
 
         private void ClearMessages()
         {
             lblMsg.Text = "";
-            lblFK_lHoaDonID.Text = "";
-            lblFK_lSanPhamID.Text = "";
+            lblPK_lSanPhamID.Text = "";
+            lblFK_iNhomSanPhamID.Text = "";
+            lblsTenSanPham.Text = "";
+            lblsMoTa.Text = "";
+            lblsXuatXu.Text = "";
+            lblsLinkImage.Text = "";
             lbllGiaBan.Text = "";
+            lbliVAT.Text = "";
+            lbliDoTuoi.Text = "";
+            lbliGioiTinh.Text = "";
             lbliSoLuong.Text = "";
+            lbltNgayCapNhat.Text = "";
+            lbliTrangThai.Text = "";
         }
 
         #region "Event Button"
