@@ -38,7 +38,7 @@ namespace HaBa.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::HaBa.UserControl.tblSanPham_ListUC tblSanPham_ListUC1;
-        protected global::HaBa.UserControl.tblSanPham_DetailUC tblSanPham_DetailUC1;
+        
         /// <summary>
         /// vDetail control.
         /// </summary>
@@ -56,5 +56,14 @@ namespace HaBa.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
+        
+        /// <summary>
+        /// tblSanPham_DetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HaBa.UserControl.tblSanPham_DetailUC tblSanPham_DetailUC1;
     }
 }

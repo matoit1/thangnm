@@ -103,7 +103,6 @@
     <Content Include="Client\Accounts\Login.aspx" />
     <Content Include="Client\Default.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="demo.aspx" />
     <Content Include="Images\Product\Ao_So_Mi.png" />
     <Content Include="Images\Product\Chan_Vay.png" />
     <Content Include="Images\Product\Vay_Cong_So.png" />
@@ -246,13 +245,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="demo.aspx.cs">
-      <DependentUpon>demo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="demo.aspx.designer.cs">
-      <DependentUpon>demo.aspx</DependentUpon>
     </Compile>
     <Compile Include="EntityObject\tblChiTietHoaDonEO.cs" />
     <Compile Include="EntityObject\tblHoaDonEO.cs" />
