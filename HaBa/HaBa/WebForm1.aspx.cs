@@ -4,21 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using HaBa.EntityObject;
 using System.Data;
 using HaBa.DataAccessObject;
+using HaBa.EntityObject;
 using HaBa.SharedLibraries.Constants;
 
-namespace HaBa.UserControl
+namespace HaBa
 {
-    public partial class MenuUC : System.Web.UI.UserControl
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                Load_ParentProduct();
-            }
+            Load_ParentProduct();
         }
 
         protected void Load_ParentProduct() // Hien cac danh muc lon Menu
@@ -30,7 +27,7 @@ namespace HaBa.UserControl
             rptRoot.DataBind();
         }
 
-        protected void rptRoot_ItemDataBound(object sender, RepeaterItemEventArgs e)    // Hien cac danh muc con Menu
+        protected void rpListParentProduct_ItemDataBound(object sender, RepeaterItemEventArgs e)    // Hien cac danh muc con Menu
         {
             //---tuong ung voi mot san pham A duoc dua ra, hien thi danh sach san pham con cua A
             HiddenField hrfPK_iNhomSanPhamID = (HiddenField)e.Item.FindControl("hrfPK_iNhomSanPhamID"); //--- day la Id cua loai san pham A---
@@ -43,11 +40,6 @@ namespace HaBa.UserControl
                 rpChildrent.DataSource = ds.Tables[0];
                 rpChildrent.DataBind();
             }
-        }
-
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Nhan.aspx?keyword=" +txtKeyWord.Text);
         }
     }
 }

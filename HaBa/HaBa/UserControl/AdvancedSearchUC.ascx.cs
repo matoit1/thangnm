@@ -29,6 +29,8 @@ namespace HaBa.UserControl
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            string strValue = Page.Request.Form["txtlGiaBan"].ToString();
+            lblMsg.Text = strValue; 
             if (Search != null)
             {
                 Search(this, EventArgs.Empty);
@@ -47,7 +49,7 @@ namespace HaBa.UserControl
         {
             objtblSanPhamEO.PK_sSanPhamID = Convert.ToString(txtPK_sSanPhamID.Text);
             objtblSanPhamEO.sTenSanPham = txtsTenSanPham.Text;
-            objtblSanPhamEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
+            objtblSanPhamEO.lGiaBan = Convert.ToInt64(Page.Request.Form["txtlGiaBan"].ToString());
             objtblSanPhamEO.sMoTa = txtsMoTa.Text;
             objtblSanPhamEO.sXuatXu = txtsXuatXu.Text;
         }
@@ -57,7 +59,7 @@ namespace HaBa.UserControl
             objtblSanPhamEO = null;
             txtPK_sSanPhamID.Text = "";
             txtsTenSanPham.Text = "";
-            txtlGiaBan.Text = "";
+            //txtlGiaBan.Text = "";
             txtsMoTa.Text = "";
             txtsXuatXu.Text = "";
         }
