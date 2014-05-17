@@ -102,9 +102,7 @@
     <Content Include="Images\Product\Vay_Dao_Pho.png" />
     <Content Include="Nhan.aspx" />
     <Content Include="NhomSanPham.aspx" />
-    <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
-    <Content Include="Other\DLL\CrystalDecisions.ReportSource.dll" />
-    <Content Include="Other\DLL\CrystalDecisions.Shared.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.Web.dll" />
     <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
     <Content Include="Product\Bao_Cao.aspx" />
     <Content Include="SanPham.aspx" />
