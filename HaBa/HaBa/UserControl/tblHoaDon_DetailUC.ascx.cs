@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using HaBa.EntityObject;
 using HaBa.SharedLibraries;
+using HaBa.DataAccessObject;
 
 namespace HaBa.UserControl
 {
@@ -79,24 +80,42 @@ namespace HaBa.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddlFK_lHoaDonID.DataSource = tblHoaDonDAO.HoaDon_SelectList();
-            ddlFK_lHoaDonID.DataTextField = "FK_iTaiKhoanID_Nhan";
-            ddlFK_lHoaDonID.DataValueField = "PK_lHoaDonID";
-            ddlFK_lHoaDonID.DataBind();
+            ddlFK_iTaiKhoanID_Giao.DataSource = tblHoaDonDAO.HoaDon_SelectList();
+            ddlFK_iTaiKhoanID_Giao.DataTextField = "FK_iTaiKhoanID_Nhan";
+            ddlFK_iTaiKhoanID_Giao.DataValueField = "PK_lHoaDonID";
+            ddlFK_iTaiKhoanID_Giao.DataBind();
 
-            ddlFK_lSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddlFK_lSanPhamID.DataTextField = "sTenSanPham";
-            ddlFK_lSanPhamID.DataValueField = "PK_lSanPhamID";
-            ddlFK_lSanPhamID.DataBind();
+            ddlFK_iTaiKhoanID_Nhan.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddlFK_iTaiKhoanID_Nhan.DataTextField = "sTenSanPham";
+            ddlFK_iTaiKhoanID_Nhan.DataValueField = "PK_lSanPhamID";
+            ddlFK_iTaiKhoanID_Nhan.DataBind();
+
+            ddlFK_iThanhToanID.DataSource = tblHoaDonDAO.HoaDon_SelectList();
+            ddlFK_iThanhToanID.DataTextField = "FK_iTaiKhoanID_Nhan";
+            ddlFK_iThanhToanID.DataValueField = "PK_lHoaDonID";
+            ddlFK_iThanhToanID.DataBind();
+
+            ddliTrangThai.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddliTrangThai.DataTextField = "sTenSanPham";
+            ddliTrangThai.DataValueField = "PK_lSanPhamID";
+            ddliTrangThai.DataBind();
         }
 
         private void ClearMessages()
         {
             lblMsg.Text = "";
-            lblFK_lHoaDonID.Text = "";
-            lblFK_lSanPhamID.Text = "";
-            lbllGiaBan.Text = "";
-            lbliSoLuong.Text = "";
+            lblPK_lHoaDonID.Text = "";
+            lblFK_iTaiKhoanID_Giao.Text = "";
+            lblFK_iTaiKhoanID_Nhan.Text = "";
+            lblFK_iThanhToanID.Text = "";
+            lblsHoTen.Text = "";
+            lblsEmail.Text = "";
+            lblsDiaChi.Text = "";
+            lblsSoDienThoai.Text = "";
+            lblsGhiChu.Text = "";
+            lbltNgayDatHang.Text = "";
+            lbltNgayGiaoHang.Text = "";
+            lbliTrangThai.Text = "";
         }
 
         #region "Event Button"
@@ -105,7 +124,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(getObject()) == true)
+                if (tblHoaDonDAO.HoaDon_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
                 }
@@ -125,7 +144,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Update(getObject()) == true)
+                if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
                 }
@@ -145,7 +164,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Delete(getObject()) == true)
+                if (tblHoaDonDAO.HoaDon_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
                 }

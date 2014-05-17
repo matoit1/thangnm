@@ -99,6 +99,32 @@ namespace HaBa.DataAccessObject
             }
         }
 
+
+        /// <summary> 5. NhomSanPham_Delete </summary>
+        /// <param name="_ListPK_sMaMonhoc"></param>
+        /// <returns></returns>
+        public static bool NhomSanPham_Delete(tblNhomSanPhamEO _tblNhomSanPhamEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblNhomSanPham_Delete", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_iNhomSanPhamID", _tblNhomSanPhamEO.PK_iNhomSanPhamID));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
         
         /// <summary> 5. NhomSanPham_DeleteList </summary>
         /// <param name="_ListPK_sMaMonhoc"></param>

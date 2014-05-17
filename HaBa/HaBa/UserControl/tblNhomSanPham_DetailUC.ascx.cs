@@ -31,12 +31,12 @@ namespace HaBa.UserControl
 
         public void BindDataDetail(tblNhomSanPhamEO _tblNhomSanPhamEO)
         {
-            try { ddlFK_lHoaDonID.SelectedValue = Convert.ToString(_tblNhomSanPhamEO.FK_lHoaDonID); }
-            catch { ddlFK_lHoaDonID.SelectedIndex = 0; }
-            try { ddlFK_lSanPhamID.SelectedValue = Convert.ToString(_tblNhomSanPhamEO.FK_lSanPhamID); }
-            catch { ddlFK_lSanPhamID.SelectedIndex = 0; }
-            txtlGiaBan.Text = Convert.ToString(_tblNhomSanPhamEO.lGiaBan);
-            txtiSoLuong.Text = Convert.ToString(_tblNhomSanPhamEO.iSoLuong);
+            txtPK_iNhomSanPhamID.Text = Convert.ToString(_tblNhomSanPhamEO.PK_iNhomSanPhamID);
+            try { ddliNhomCon.SelectedValue = Convert.ToString(_tblNhomSanPhamEO.iNhomCon); }
+            catch { ddliNhomCon.SelectedIndex = 0; }
+            txtsTenNhom.Text = Convert.ToString(_tblNhomSanPhamEO.sTenNhom);
+            try { ddliTrangThai.SelectedValue = Convert.ToString(_tblNhomSanPhamEO.iTrangThai); }
+            catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
         private tblNhomSanPhamEO getObject()
@@ -44,12 +44,12 @@ namespace HaBa.UserControl
             try
             {
                 tblNhomSanPhamEO _tblNhomSanPhamEO = new tblNhomSanPhamEO();
-                try { _tblNhomSanPhamEO.FK_lHoaDonID = Convert.ToInt64(ddlFK_lHoaDonID.SelectedValue); }
-                catch { lblFK_lHoaDonID.Text = Messages.Ma_Khong_Hop_Le; }
-                try { _tblNhomSanPhamEO.FK_lSanPhamID = Convert.ToInt64(ddlFK_lSanPhamID.SelectedValue); }
-                catch { lblFK_lSanPhamID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblNhomSanPhamEO.FK_lSanPhamID = 0; }
-                _tblNhomSanPhamEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
-                _tblNhomSanPhamEO.iSoLuong = Convert.ToInt16(txtiSoLuong.Text);
+                _tblNhomSanPhamEO.PK_iNhomSanPhamID = Convert.ToInt16(txtPK_iNhomSanPhamID.Text);
+                try { _tblNhomSanPhamEO.iNhomCon = Convert.ToInt16(ddliNhomCon.SelectedValue); }
+                catch { lbliNhomCon.Text = Messages.Ma_Khong_Hop_Le; }
+                _tblNhomSanPhamEO.sTenNhom = Convert.ToString(txtsTenNhom.Text);
+                try { _tblNhomSanPhamEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
+                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblNhomSanPhamEO.iTrangThai = 0; }
                 return _tblNhomSanPhamEO;
             }
             catch (Exception)
@@ -60,24 +60,24 @@ namespace HaBa.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddlFK_lHoaDonID.DataSource = tblHoaDonDAO.HoaDon_SelectList();
-            ddlFK_lHoaDonID.DataTextField = "FK_iTaiKhoanID_Nhan";
-            ddlFK_lHoaDonID.DataValueField = "PK_lHoaDonID";
-            ddlFK_lHoaDonID.DataBind();
+            ddliNhomCon.DataSource = tblHoaDonDAO.HoaDon_SelectList();
+            ddliNhomCon.DataTextField = "FK_iTaiKhoanID_Nhan";
+            ddliNhomCon.DataValueField = "PK_lHoaDonID";
+            ddliNhomCon.DataBind();
 
-            ddlFK_lSanPhamID.DataSource = tblSanPhamDAO.SanPham_SelectList();
-            ddlFK_lSanPhamID.DataTextField = "sTenSanPham";
-            ddlFK_lSanPhamID.DataValueField = "PK_lSanPhamID";
-            ddlFK_lSanPhamID.DataBind();
+            ddliTrangThai.DataSource = tblSanPhamDAO.SanPham_SelectList();
+            ddliTrangThai.DataTextField = "sTenSanPham";
+            ddliTrangThai.DataValueField = "PK_lSanPhamID";
+            ddliTrangThai.DataBind();
         }
 
         private void ClearMessages()
         {
             lblMsg.Text = "";
-            lblFK_lHoaDonID.Text = "";
-            lblFK_lSanPhamID.Text = "";
-            lbllGiaBan.Text = "";
-            lbliSoLuong.Text = "";
+            lblPK_iNhomSanPhamID.Text = "";
+            lbliNhomCon.Text = "";
+            lblsTenNhom.Text = "";
+            lbliTrangThai.Text = "";
         }
 
         #region "Event Button"
@@ -86,7 +86,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(getObject()) == true)
+                if (tblNhomSanPhamDAO.NhomSanPham_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
                 }
@@ -106,7 +106,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Update(getObject()) == true)
+                if (tblNhomSanPhamDAO.NhomSanPham_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
                 }
@@ -126,7 +126,7 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
-                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Delete(getObject()) == true)
+                if (tblNhomSanPhamDAO.NhomSanPham_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
                 }

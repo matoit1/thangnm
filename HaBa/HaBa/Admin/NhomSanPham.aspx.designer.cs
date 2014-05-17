@@ -38,7 +38,7 @@ namespace HaBa.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::HaBa.UserControl.tblNhomSanPham_ListUC tblNhomSanPham_ListUC1;
-        
+        protected global::HaBa.UserControl.tblNhomSanPham_DetailUC tblNhomSanPham_DetailUC1;
         /// <summary>
         /// vDetail control.
         /// </summary>
