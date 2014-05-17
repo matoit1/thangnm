@@ -34,7 +34,7 @@
         
         <tr>
             <td>Mật khẩu: </td>
-            <td><asp:TextBox ID="txtsMatKhau" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsMatKhau" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsMatKhau" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -44,7 +44,7 @@
         </tr>
         <tr>
             <td>Địa chỉ Email: </td>
-            <td><asp:TextBox ID="txtsEmail" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsEmail" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsEmail" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -54,7 +54,7 @@
         </tr>
         <tr>
             <td>Số điện thoại: </td>
-            <td><asp:TextBox ID="txtsSoDienThoai" runat="server" Width="400px" Enabled="false" MaxLength="13"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsSoDienThoai" runat="server" Width="400px" MaxLength="13"></asp:TextBox></td>
             <td><asp:Label ID="lblsSoDienThoai" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -64,7 +64,7 @@
         </tr>
         <tr>
             <td>Ngày sinh: </td>
-            <td><asp:TextBox ID="txttNgaySinh" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgaySinh" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgaySinh" runat="server"></asp:Label></td>
         </tr>
         <tr>

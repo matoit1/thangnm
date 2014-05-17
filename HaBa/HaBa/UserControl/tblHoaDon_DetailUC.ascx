@@ -47,7 +47,7 @@
         </tr>
         <tr>
             <td>Địa chỉ Email: </td>
-            <td><asp:TextBox ID="txtsEmail" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsEmail" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsEmail" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -57,7 +57,7 @@
         </tr>
         <tr>
             <td>Số điện thoại: </td>
-            <td><asp:TextBox ID="txtsSoDienThoai" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsSoDienThoai" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lblsSoDienThoai" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -67,7 +67,7 @@
         </tr>
         <tr>
             <td>Ngày đặt hàng: </td>
-            <td><asp:TextBox ID="txttNgayDatHang" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayDatHang" runat="server" Width="400px"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayDatHang" runat="server"></asp:Label></td>
         </tr>
         <tr>
