@@ -26,24 +26,6 @@ namespace HaBa.SharedLibraries
             return ouput;
         }
 
-        /// <summary> I.2. GiangVien_iHocViGV_GTC (Học vị) </summary>
-        /// <param name="input"></param>
-        /// <returns>output</returns>
-        public static string GiangVien_iHocViGV_GTC(Int16 input)
-        {
-            string output="";
-            switch (input){
-                case 1: output = "Tú Tài"; break;
-                case 2: output = "Cử Nhân"; break;
-                case 3: output = "Kỹ Sư"; break;
-                case 4: output = "Thạc Sĩ"; break;
-                case 5: output = "Tiến Sĩ"; break;
-                case 6: output = "Tiến Sĩ Khoa Học"; break;
-                default: output = "N/A"; break;
-            }
-            return output;
-        }
-
         /// <summary> I.3. Gioi_Tinh_GTC (Giới tính) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
@@ -121,7 +103,7 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.8. SanPham_iTrangThai_GTC (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+        /// <summary> I.8. SanPham_iTrangThai_GTC (Trạng Thái Sản Phẩm) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
         public static string SanPham_iTrangThai_GTC(Int16 input)
@@ -137,7 +119,7 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary> I.9. SanPham_iDoTuoi_GTC (Quan hệ với người liên hệ) </summary>
+        /// <summary> I.9. SanPham_iDoTuoi_GTC (Độ Tuổi Sản Phẩm) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
         public static string SanPham_iDoTuoi_GTC(Int16 input)
@@ -154,7 +136,7 @@ namespace HaBa.SharedLibraries
             return output;
         }
 
-        /// <summary>  I.10 SanPham_iGioiTinh_GTC (Hệ số tính điểm)  </summary>
+        /// <summary>  I.10 SanPham_iGioiTinh_GTC (Giới Tính Sản Phẩm)  </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
         public static string SanPham_iGioiTinh_GTC(Int16 input)
@@ -172,49 +154,51 @@ namespace HaBa.SharedLibraries
 
 
 
-        /// <summary> I.11. Xep_Loai_Ket_Qua_Hoc_Tap_GTC (Xếp loại kết quả học tập) </summary>
-        /// a) Loại đạt:Từ 9 đến 10:Xuất sắc
-        /// Từ 8 đến cận 9:Giỏi
-        /// Từ 7 đến cận 8:Khá
-        /// Từ 6 đến cận 7:Trung bình khá
-        /// Từ 5 đến cận 6:Trung bình
-        /// b) Loại không đạt:Từ 4 đến cận 5:Yếu
-        /// Dưới 4:Kém
-        /// </summary>
+        /// <summary> I.11. ThanhToan_iTrangThai_GTC (Trạng Thái Thanh Toán) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string Xep_Loai_Ket_Qua_Hoc_Tap_GTC(Int16 input)
+        public static string ThanhToan_iTrangThai_GTC(Int16 input)
         {
             string output = "";
             switch (input)
             {
-                case 9: output = "Xuất Sắc"; break;
-                case 8: output = "Giỏi"; break;
-                case 7: output = "Khá"; break;
-                case 6: output = "Trung Bình Khá"; break;
-                case 5: output = "Trung Bình"; break;
-                case 4: output = "Yếu"; break;
-                case 3: output = "Kém"; break;
+                case 1: output = "Mở"; break;
+                case 2: output = "Xem xét"; break;
+                case 3: output = "Khóa"; break;
                 default: output = "N/A"; break;
             }
             return output;
         }
         #endregion
 
-        /// <summary> I.12. Tinh_Diem_Chuyen_Can_GTC (Tính điểm chuyên cần) </summary>
+        /// <summary> I.12. TaiKhoan_iTrangThai_GTC (Trạng Thái Tài Khoản) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static Int16 Tinh_Diem_Chuyen_Can_GTC(Int16 input)
+        public static string TaiKhoan_iTrangThai_GTC(Int16 input)
         {
-            Int16 output;
+            string output = "";
             switch (input)
             {
-                case 1: output = 10; break;
-                case 2: output = 9; break;
-                case 3: output = 8; break;
-                case 4: output = 7; break;
-                case 5: output = 0; break;
-                default: output = 0; break;
+                case 1: output = "Mở"; break;
+                case 2: output = "Xem xét"; break;
+                case 3: output = "Khóa"; break;
+                default: output = "N/A"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.2. TaiKhoan_iQuyenHan_GTC (Quyền Hạn Tài Khoản) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string TaiKhoan_iQuyenHan_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Quản trị"; break;
+                case 2: output = "Nhân Viên"; break;
+                case 3: output = "Khách Hàng"; break;
+                default: output = "N/A"; break;
             }
             return output;
         }

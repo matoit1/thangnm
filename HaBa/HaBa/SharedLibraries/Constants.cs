@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HaBa.SharedLibraries.Constants
 {
-    #region "I. Sinh Viên"
+    #region "I. "
     /// <summary> I.7. NhomSanPham_iTrangThai_C (Trạng Thái Nhóm Sản Phẩm) </summary>
     /// 
     public class NhomSanPham_iTrangThai_C
@@ -14,7 +14,7 @@ namespace HaBa.SharedLibraries.Constants
         public const Int16 Khoa = 2;
     }
 
-    /// <summary> I.8. SanPham_iTrangThai_C (Đoàn thanh niên cộng sản Hồ Chí Minh) </summary>
+    /// <summary> I.8. SanPham_iTrangThai_C (Trạng Thái Sản Phẩm) </summary>
     /// 
     public class SanPham_iTrangThai_C
     {
@@ -24,7 +24,7 @@ namespace HaBa.SharedLibraries.Constants
 
     }
 
-    /// <summary> I.9. SanPham_iDoTuoi_C (Quan hệ với người liên hệ) </summary>
+    /// <summary> I.9. SanPham_iDoTuoi_C (Độ Tuổi Sản Phẩm) </summary>
     /// 
     public class SanPham_iDoTuoi_C
     {
@@ -35,7 +35,7 @@ namespace HaBa.SharedLibraries.Constants
         public const Int16 Loai5 = 5;
     }
 
-    /// <summary> I.10 SanPham_iGioiTinh_C (Hệ số tính điểm) </summary>
+    /// <summary> I.10 SanPham_iGioiTinh_C (Giới Tính Sản Phẩm) </summary>
     /// 
     public class SanPham_iGioiTinh_C
     {
@@ -44,44 +44,36 @@ namespace HaBa.SharedLibraries.Constants
         public const Int16 Nam_Nu = 3;
     }
 
-    /// <summary> I.11. Xep_Loai_Ket_Qua_Hoc_Tap_C (Xếp loại kết quả học tập) </summary>
+    /// <summary> I.11. ThanhToan_iTrangThai_C (Trạng Thái Thanh Toán) </summary>
     /// 
-    public class Xep_Loai_Ket_Qua_Hoc_Tap_C
+    public class ThanhToan_iTrangThai_C
     {
-        public const Int16 Xuat_Sac = 9;
-        public const Int16 Gioi = 8;
-        public const Int16 Kha = 7;
-        public const Int16 Trung_Binh_Kha = 6;
-        public const Int16 Trung_Binh = 5;
-        public const Int16 Yeu = 4;
-        public const Int16 Kem = 3;
+        public const Int16 Mo = 1;
+        public const Int16 Xem_Xet = 2;
+        public const Int16 Khoa = 3;
     }
 
-    /// <summary> I.12. Tinh_Diem_Chuyen_Can_C (Tính điểm chuyên cần) </summary>
+    /// <summary> I.12. TaiKhoan_iTrangThai_C (Trạng Thái Tài Khoản) </summary>
     /// 
-    public class Tinh_Diem_Chuyen_Can_C
+    public class TaiKhoan_iTrangThai_C
     {
-        public const Int16 Mot_Buoi = 1;
-        public const Int16 Hai_Buoi = 2;
-        public const Int16 Ba_Buoi = 3;
-        public const Int16 Bon_Buoi = 4;
-        public const Int16 Nam_Buoi = 5;
+        public const Int16 Mo = 1;
+        public const Int16 Xem_Xet = 2;
+        public const Int16 Khoa = 3;
+    }
+
+    /// <summary> I.13. TaiKhoan_iQuyenHan_C (Quyền Hạn Tài Khoản) </summary>
+    /// 
+    public class TaiKhoan_iQuyenHan_C
+    {
+        public const Int16 QuanTri = 1;
+        public const Int16 Nhan_Vien = 2;
+        public const Int16 Khach_Hang = 3;
     }
     #endregion
 
 
     #region "II. Giảng Viên"
-    /// <summary> I.2. GiangVien_iHocViGV_C (Học vị) </summary>
-    /// 
-    public class GiangVien_iHocViGV_C
-    {
-        public const Int16 Tu_Tai = 1;
-        public const Int16 Cu_Nhan = 2;
-        public const Int16 Ky_Su = 3;
-        public const Int16 Thac_Si = 4;
-        public const Int16 Tien_Si = 5;
-        public const Int16 Tien_Si_Khoa_Hoc = 6;
-    }
 
     /// <summary> I.5. GiangVien_bCongChucGV_C (Công Chức) </summary>
     /// 

@@ -49,7 +49,12 @@ namespace HaBa.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddliTrangThai.DataSource = GetListConstants.CauHoi_iTrangThai_GLC();
+            ddliQuyenHan.DataSource = GetListConstants.TaiKhoan_iQuyenHan_GLC();
+            ddliQuyenHan.DataTextField = "Value";
+            ddliQuyenHan.DataValueField = "Key";
+            ddliQuyenHan.DataBind();
+
+            ddliTrangThai.DataSource = GetListConstants.TaiKhoan_iTrangThai_GLC();
             ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
