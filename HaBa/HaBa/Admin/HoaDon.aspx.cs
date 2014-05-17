@@ -30,6 +30,9 @@ namespace HaBa.Admin
         protected void ViewDetail_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
+            tblHoaDon_DetailUC1.btnInsert.Visible = false;
+            tblHoaDon_DetailUC1.btnUpdate.Visible = true;
+            tblHoaDon_DetailUC1.btnDelete.Visible = true;
             tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
             _tblHoaDonEO.PK_lHoaDonID = tblHoaDon_ListUC1.PK_lHoaDonID;
             _tblHoaDonEO = tblHoaDonDAO.HoaDon_SelectItem(_tblHoaDonEO);
@@ -39,6 +42,9 @@ namespace HaBa.Admin
         protected void AddNew_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
+            tblHoaDon_DetailUC1.btnInsert.Visible = true;
+            tblHoaDon_DetailUC1.btnUpdate.Visible = false;
+            tblHoaDon_DetailUC1.btnDelete.Visible = false;
             tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
             tblHoaDon_DetailUC1.BindDataDetail(_tblHoaDonEO);
         }
