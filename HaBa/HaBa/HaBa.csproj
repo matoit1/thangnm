@@ -454,6 +454,7 @@
     <Content Include="Scripts\Popup.js" />
     <Content Include="Scripts\Vote.js" />
     <Content Include="UserControl\AdvancedSearchUC.ascx" />
+    <Content Include="UserControl\ProducGroupUC.ascx" />
     <Content Include="UserControl\ReportUC.ascx" />
     <Content Include="UserControl\tblChiTietHoaDon_ListUC.ascx" />
     <Content Include="UserControl\tblHoaDon_ListUC.ascx" />
@@ -655,6 +656,13 @@
     </Compile>
     <Compile Include="UserControl\AdvancedSearchUC.ascx.designer.cs">
       <DependentUpon>AdvancedSearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ProducGroupUC.ascx.cs">
+      <DependentUpon>ProducGroupUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ProducGroupUC.ascx.designer.cs">
+      <DependentUpon>ProducGroupUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ReportUC.ascx.cs">
       <DependentUpon>ReportUC.ascx</DependentUpon>
