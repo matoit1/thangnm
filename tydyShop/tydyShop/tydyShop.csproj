@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="DevNET.URLRewriter, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Other\DevNET.URLRewriter.dll</HintPath>
@@ -92,6 +98,7 @@
     <Content Include="Scripts\Gallery3D_2.js" />
     <Content Include="Scripts\Popup.js" />
     <Content Include="Scripts\Vote.js" />
+    <Content Include="TestReport.aspx" />
     <Content Include="UserControl\AdvancedSearchUC.ascx" />
     <Content Include="UserControl\FooterUC.ascx" />
     <Content Include="UserControl\Gallery3DUC.ascx" />
@@ -114,12 +121,23 @@
     <Compile Include="Admin\Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao_SanPham.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCao_SanPham.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Client\Accounts\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Client\Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Demo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Demo.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataAccessObject\AccountDAO.cs" />
     <Compile Include="DataAccessObject\ConnectionDAO.cs" />
@@ -200,6 +218,13 @@
     <Compile Include="ShareInterface\ProductSI.Master.designer.cs">
       <DependentUpon>ProductSI.Master</DependentUpon>
     </Compile>
+    <Compile Include="TestReport.aspx.cs">
+      <DependentUpon>TestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestReport.aspx.designer.cs">
+      <DependentUpon>TestReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\AdvancedSearchUC.ascx.cs">
       <DependentUpon>AdvancedSearchUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,7 +269,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Product\" />
   </ItemGroup>
   <ItemGroup>
@@ -258,6 +282,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ShareInterface\ProductSI.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\Demo.xsc">
+      <DependentUpon>Demo.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\Demo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Demo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Data\Demo.xss">
+      <DependentUpon>Demo.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaoCao_SanPham.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCao_SanPham.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

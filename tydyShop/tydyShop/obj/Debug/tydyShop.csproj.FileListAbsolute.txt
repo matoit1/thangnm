@@ -1,0 +1,12 @@
+E:\Project_ASP.NET\tydyShop\tydyShop\bin\tydyShop.dll
+E:\Project_ASP.NET\tydyShop\tydyShop\bin\tydyShop.pdb
+E:\Project_ASP.NET\tydyShop\tydyShop\obj\Debug\ResolveAssemblyReference.cache
+E:\Project_ASP.NET\tydyShop\tydyShop\obj\Debug\tydyShop.dll
+E:\Project_ASP.NET\tydyShop\tydyShop\obj\Debug\tydyShop.pdb
+D:\Project_ASP.NET\tydyShop\tydyShop\bin\tydyShop.dll
+D:\Project_ASP.NET\tydyShop\tydyShop\bin\tydyShop.pdb
+D:\Project_ASP.NET\tydyShop\tydyShop\bin\DevNET.URLRewriter.dll
+D:\Project_ASP.NET\tydyShop\tydyShop\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\tydyShop\tydyShop\obj\Debug\tydyShop.dll
+D:\Project_ASP.NET\tydyShop\tydyShop\obj\Debug\tydyShop.pdb
+E:\Project_ASP.NET\tydyShop\tydyShop\bin\DevNET.URLRewriter.dll
