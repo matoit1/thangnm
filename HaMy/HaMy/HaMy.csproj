@@ -131,12 +131,6 @@
     <EmbeddedResource Include="frmNguoiDung.resx">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\x86\Debug\HaMy.frmDoiTac.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\HaMy.frmMoiQuanHe.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\HaMy.frmNguoiDung.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\HaMy.frmNhom.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\HaMy.label41.resources" />
-    <EmbeddedResource Include="obj\x86\Debug\HaMy.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -146,9 +140,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\x86\Debug\HaMy.csproj.GenerateResource.Cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,9 +151,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="obj\x86\Debug\HaMy.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\x86\Debug\HaMy.exe" />
-    <Content Include="obj\x86\Debug\HaMy.pdb" />
+    <Content Include="bin\Debug\HaMy.exe" />
+    <Content Include="bin\Debug\HaMy.pdb" />
+    <Content Include="bin\Debug\HaMy.vshost.exe" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
     <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
@@ -202,7 +193,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="obj\x86\Debug\TempPE\" />
+    <Folder Include="bin\App_Data\" />
+    <Folder Include="bin\Release\" />
     <Folder Include="ShareInterface\" />
     <Folder Include="UserControl\" />
   </ItemGroup>
