@@ -35,12 +35,14 @@
             this.doiTacToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuocHenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeOtherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeOtherToolStripMenuItem,
             this.nhomToolStripMenuItem,
             this.nguoiDungToolStripMenuItem,
             this.moiQuanHeToolStripMenuItem,
@@ -65,30 +67,41 @@
             this.nguoiDungToolStripMenuItem.Name = "nguoiDungToolStripMenuItem";
             this.nguoiDungToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.nguoiDungToolStripMenuItem.Text = "NguoiDung";
+            this.nguoiDungToolStripMenuItem.Click += new System.EventHandler(this.nguoiDungToolStripMenuItem_Click);
             // 
             // moiQuanHeToolStripMenuItem
             // 
             this.moiQuanHeToolStripMenuItem.Name = "moiQuanHeToolStripMenuItem";
             this.moiQuanHeToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.moiQuanHeToolStripMenuItem.Text = "MoiQuanHe";
+            this.moiQuanHeToolStripMenuItem.Click += new System.EventHandler(this.moiQuanHeToolStripMenuItem_Click);
             // 
             // doiTacToolStripMenuItem
             // 
             this.doiTacToolStripMenuItem.Name = "doiTacToolStripMenuItem";
             this.doiTacToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.doiTacToolStripMenuItem.Text = "DoiTac";
+            this.doiTacToolStripMenuItem.Click += new System.EventHandler(this.doiTacToolStripMenuItem_Click);
             // 
             // cuocHenToolStripMenuItem
             // 
             this.cuocHenToolStripMenuItem.Name = "cuocHenToolStripMenuItem";
             this.cuocHenToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.cuocHenToolStripMenuItem.Text = "CuocHen";
+            this.cuocHenToolStripMenuItem.Click += new System.EventHandler(this.cuocHenToolStripMenuItem_Click);
             // 
             // thongTinToolStripMenuItem
             // 
             this.thongTinToolStripMenuItem.Name = "thongTinToolStripMenuItem";
             this.thongTinToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.thongTinToolStripMenuItem.Text = "ThongTin";
+            // 
+            // closeOtherToolStripMenuItem
+            // 
+            this.closeOtherToolStripMenuItem.Name = "closeOtherToolStripMenuItem";
+            this.closeOtherToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.closeOtherToolStripMenuItem.Text = "CloseOther";
+            this.closeOtherToolStripMenuItem.Click += new System.EventHandler(this.closeOtherToolStripMenuItem_Click);
             // 
             // HomeSI
             // 
@@ -116,5 +129,6 @@
         private System.Windows.Forms.ToolStripMenuItem doiTacToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuocHenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thongTinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeOtherToolStripMenuItem;
     }
 }
