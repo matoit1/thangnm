@@ -9,3 +9,17 @@ E:\kiemtien\HaMy\HaMy\bin\Debug\HaMy.pdb
 E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.exe
 E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.pdb
 E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.frmNguoiDung.resources
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.exe
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.pdb
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.frmDoiTac.resources
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.frmMoiQuanHe.resources
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.frmNhom.resources
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.frmNguoiDung.resources
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.HomeSI.resources
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.Properties.Resources.resources
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Project_ASP.NET\HaMy\HaMy\bin\Debug\HaMy.exe
+D:\Project_ASP.NET\HaMy\HaMy\bin\Debug\HaMy.pdb
+D:\Project_ASP.NET\HaMy\HaMy\obj\x86\Debug\HaMy.frmCuocHen.resources
