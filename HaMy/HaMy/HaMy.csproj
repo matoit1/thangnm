@@ -160,9 +160,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\HaMy.exe" />
-    <Content Include="bin\Debug\HaMy.pdb" />
-    <Content Include="bin\Debug\HaMy.vshost.exe" />
     <Content Include="obj\x86\Debug\HaMy.csproj.FileListAbsolute.txt" />
     <Content Include="obj\x86\Debug\HaMy.exe" />
     <Content Include="obj\x86\Debug\HaMy.pdb" />
@@ -205,7 +202,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="bin\Release\" />
     <Folder Include="obj\x86\Debug\TempPE\" />
     <Folder Include="ShareInterface\" />
     <Folder Include="UserControl\" />
