@@ -205,6 +205,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmNhom";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNhom_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.grvNhom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

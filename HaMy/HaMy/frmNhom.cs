@@ -15,5 +15,9 @@ namespace HaMy
         {
             InitializeComponent();
         }
+
+        private void frmNhom_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
     }
 }

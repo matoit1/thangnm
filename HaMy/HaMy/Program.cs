@@ -15,7 +15,7 @@ namespace HaMy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNguoiDung());
+            Application.Run(new HomeSI());
         }
     }
 }

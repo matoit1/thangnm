@@ -15,5 +15,13 @@ namespace HaMy
         {
             InitializeComponent();
         }
+
+        private void nhomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNhom _frmNhom = new frmNhom();
+            _frmNhom.MdiParent = this;
+            _frmNhom.Show();
+            nhomToolStripMenuItem.Enabled = false;
+        }
     }
 }
