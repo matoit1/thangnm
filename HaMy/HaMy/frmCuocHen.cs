@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace HaMy
 {
-    public partial class label41 : Form
+    public partial class frmCuocHen : Form
     {
-        public label41()
+        public frmCuocHen()
         {
             InitializeComponent();
         }

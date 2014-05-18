@@ -1,6 +1,6 @@
 ﻿namespace HaMy
 {
-    partial class label41
+    partial class frmCuocHen
     {
         /// <summary>
         /// Required designer variable.
@@ -399,7 +399,7 @@
             this.iTrangThai.HeaderText = "Trạng thái";
             this.iTrangThai.Name = "iTrangThai";
             // 
-            // label41
+            // frmCuocHen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -436,7 +436,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.label1);
-            this.Name = "label41";
+            this.Name = "frmCuocHen";
             this.Text = "frmCuocHen";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
