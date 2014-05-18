@@ -75,6 +75,14 @@
                     </td>
                 </tr>
                 <tr >
+                    <td class="tieudesanpham">Mã sản phẩm: </td>
+                    <td><asp:Label ID="lblPK_sSanPhamID" runat="server"></asp:Label></td>
+                </tr>
+                <tr >
+                    <td class="tieudesanpham">Nhóm sản phẩm: </td>
+                    <td><asp:Label ID="lblFK_iNhomSanPhamID" runat="server"></asp:Label></td>
+                </tr>
+                <tr >
                     <td class="tieudesanpham">Tên sản phẩm: </td>
                     <td><asp:Label ID="lblsTenSanPham" runat="server"></asp:Label></td>
                 </tr>
@@ -92,7 +100,7 @@
                 </tr>
                 <tr>
                     <td class="tieudesanpham">Giá bán: </td>
-                    <td><asp:Label ID="lbllGiaBan" runat="server"></asp:Label></td>
+                    <td><asp:Label ID="lbllGiaBan" runat="server"></asp:Label> VNĐ</td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham">Trạng thái</td>
@@ -104,7 +112,7 @@
                 </tr>
                 <tr>
                     <td class="tieudesanpham"></td>
-                    <td><asp:Button ID="btnBuy" runat="server" Text="Mua hàng" /></td>
+                    <td><asp:Button ID="btnBuy" runat="server" Text="Mua hàng" onclick="btnBuy_Click" /></td>
                 </tr>
             </table>
         </div>

@@ -311,7 +311,7 @@ namespace HaBa.DataAccessObject
         /// <summary> 7. TaiKhoan_SelectBysUsername </summary>
         /// <param name="_tblTaiKhoanEO"></param>
         /// <returns></returns>
-        public static tblTaiKhoanEO TaiKhoan_SelectBysUsername(tblTaiKhoanEO _tblTaiKhoanEO)
+        public static tblTaiKhoanEO TaiKhoan_SelectItemBysTenDangNhap(tblTaiKhoanEO _tblTaiKhoanEO)
         {
             tblTaiKhoanEO oOutput = new tblTaiKhoanEO();
             DataSet ds = null;
@@ -320,7 +320,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblTaiKhoan_SelectBysUsername", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblTaiKhoan_SelectItemBysTenDangNhap", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
                     ds = new DataSet();
@@ -474,6 +474,7 @@ namespace HaBa.DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sMatKhau", _tblTaiKhoanEO.sMatKhau));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblTaiKhoanEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

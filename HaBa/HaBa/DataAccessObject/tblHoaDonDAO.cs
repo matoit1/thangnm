@@ -77,6 +77,45 @@ namespace HaBa.DataAccessObject
             }
         }
 
+        /// <summary> 2. HoaDon_Insert_Get_PK_lHoaDonID_New </summary>
+        /// <param name="_tblHoaDonEO"></param>
+        /// <returns></returns>
+        public static Int64 HoaDon_Insert_Get_PK_lHoaDonID_New(tblHoaDonEO _tblHoaDonEO)
+        {
+            Int64 PK_lHoaDonID = 0;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblHoaDon_Insert_Get_PK_lHoaDonID_New", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID_Giao", (_tblHoaDonEO.FK_iTaiKhoanID_Giao == 0) ? (object)DBNull.Value : _tblHoaDonEO.FK_iTaiKhoanID_Giao));
+                    cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID_Nhan", _tblHoaDonEO.FK_iTaiKhoanID_Nhan));
+                    cmd.Parameters.Add(new SqlParameter("@FK_iThanhToanID", _tblHoaDonEO.FK_iThanhToanID));
+                    cmd.Parameters.Add(new SqlParameter("@sHoTen", _tblHoaDonEO.sHoTen));
+                    cmd.Parameters.Add(new SqlParameter("@sEmail", _tblHoaDonEO.sEmail));
+                    cmd.Parameters.Add(new SqlParameter("@sDiaChi", _tblHoaDonEO.sDiaChi));
+                    cmd.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblHoaDonEO.sSoDienThoai));
+                    cmd.Parameters.Add(new SqlParameter("@sGhiChu", _tblHoaDonEO.sGhiChu));
+                    cmd.Parameters.Add(new SqlParameter("@tNgayGiaoHang", (_tblHoaDonEO.tNgayGiaoHang == DateTime.MinValue) ? (object)DBNull.Value : _tblHoaDonEO.tNgayGiaoHang));
+                    cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblHoaDonEO.iTrangThai));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        PK_lHoaDonID = Convert.ToInt64(dr["PK_lHoaDonID"]);
+                    }
+                    conn.Close();
+                    return PK_lHoaDonID;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return PK_lHoaDonID;
+                }
+            }
+        }
+
         /// <summary> 3. HoaDon_Update </summary>
         /// <param name="_tblHoaDonEO"></param>
         /// <returns></returns>

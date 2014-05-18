@@ -29,21 +29,6 @@
                     <asp:HiddenField ID="hrfPK_iNhomSanPhamID" runat="server" Value='<%#Eval("PK_iNhomSanPhamID")%>' />
                 </ItemTemplate>
             </asp:Repeater>
-<%--
-		    <li><a href="../GroupProduct.aspx?lGroup=1">Áo</a>
-			    <ul class="children">
-				    <li><a href="../GroupProduct.aspx?lGroup=2">Áo sơ mi</a></li>
-			    </ul>
-		    </li>
-		    <li><a href="../GroupProduct.aspx?lGroup=2">Váy</a>
-			    <ul class="children">
-				    <li><a href="../GroupProduct.aspx?lGroup=4">Váy công sở</a></li>
-				    <li><a href="../GroupProduct.aspx?lGroup=5">Váy dạo phố</a></li>
-				    <li><a href="../GroupProduct.aspx?lGroup=6">Chân váy</a></li>
-				    <li><a href="../GroupProduct.aspx?lGroup=7">Váy khác</a></li>
-			    </ul>
-		    </li>
-		    <li><a href="../GroupProduct.aspx?lGroup=8">Phong cách +</a></li>--%>
 	    </ul>
     </div>
     <!-- MENU [end] -->
@@ -56,3 +41,4 @@
 		</div>
 	<!-- Search [end] -->
 </div>
+<asp:LinkButton ID="LinkButton1" runat="server" style="float: right;">Đăng nhập</asp:LinkButton>

@@ -11,7 +11,7 @@
     <div>
     <asp:Repeater ID="rptRoot" runat="server" OnItemDataBound="rpListParentProduct_ItemDataBound">
         <ItemTemplate>
-            <li><asp:HyperLink ID="hplPK_iNhomSanPhamID" runat="server" NavigateUrl='<%#"~/Group.aspx?Products_ID="+Eval("PK_iNhomSanPhamID")%>'><%#Eval("sTenNhom")%></asp:HyperLink>
+            <li><asp:HyperLink ID="hplPK_iNhomSanPhamID" runat="server" NavigateUrl='<%#"~/Group.aspx?PK_sSanPhamID="+Eval("PK_iNhomSanPhamID")%>'><%#Eval("sTenNhom")%></asp:HyperLink>
                 <asp:Repeater ID="rptiNhomCon" runat="server">
                     <HeaderTemplate><ul></HeaderTemplate>
                     <ItemTemplate>

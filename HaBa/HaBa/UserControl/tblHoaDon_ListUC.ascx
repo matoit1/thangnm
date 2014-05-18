@@ -60,10 +60,10 @@
                         <asp:BoundField  DataField="PK_lHoaDonID"  HeaderText="Mã hóa đơn" SortExpression="PK_lHoaDonID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField  DataField="FK_iTaiKhoanID_Giao"  HeaderText="Người giao" SortExpression="FK_iTaiKhoanID_Giao">
+                        <asp:BoundField  DataField="FK_iTaiKhoanID_Giao"  HeaderText="Nhân viên" SortExpression="FK_iTaiKhoanID_Giao">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField DataField="FK_iTaiKhoanID_Nhan" HeaderText="Người nhận" SortExpression="FK_iTaiKhoanID_Nhan">
+                        <asp:BoundField DataField="FK_iTaiKhoanID_Nhan" HeaderText="Khách hàng" SortExpression="FK_iTaiKhoanID_Nhan">
                             <ItemStyle CssClass="GridItemText" />
                         </asp:BoundField>
                         <asp:BoundField DataField="FK_iThanhToanID" HeaderText="Hình thức thanh toán" SortExpression="FK_iThanhToanID">

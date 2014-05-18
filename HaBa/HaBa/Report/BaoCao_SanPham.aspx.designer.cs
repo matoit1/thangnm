@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa.Product {
+namespace HaBa.Report {
     
     
-    public partial class Bao_Cao {
+    public partial class BaoCao_SanPham {
         
         /// <summary>
         /// form1 control.
@@ -22,12 +22,12 @@ namespace HaBa.Product {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ReportUC1 control.
+        /// crvSanPham control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HaBa.UserControl.ReportUC ReportUC1;
+        protected global::CrystalDecisions.Web.CrystalReportViewer crvSanPham;
     }
 }

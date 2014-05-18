@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using HaBa.SharedLibraries;
 using System.Data;
+using HaBa.SharedLibraries.Constants;
 
 namespace HaBa.Client.Accounts
 {
@@ -13,7 +14,7 @@ namespace HaBa.Client.Accounts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoginUC1.hplLost.NavigateUrl = "~/Admin/Accounts/ForgotPassword.aspx";
+            LoginUC1.hplLost.NavigateUrl = "~/Client/Accounts/ForgotPassword.aspx";
         }
 
         protected void Login_Click(object sender, EventArgs e)
@@ -21,21 +22,21 @@ namespace HaBa.Client.Accounts
             try
             {
                 DataSet dsInput = null;
-                dsInput = LoginUC1.Check(3);
+                dsInput = LoginUC1.Check(TaiKhoan_iQuyenHan_C.Khach_Hang);
                 if (dsInput.Tables[0].Rows.Count > 0)
                 {
-                    Response.Cookies["HaBa_secret"].Value = LoginUC1.txtsTenDangNhap.Text;
+                    Response.Cookies["HaBa_client"].Value = LoginUC1.txtsTenDangNhap.Text;
                     if (LoginUC1.chkRememberMe.Checked == true)
                     {
-                        Response.Cookies["HaBa_secret"].Expires = DateTime.Now.AddDays(10);
+                        Response.Cookies["HaBa_client"].Expires = DateTime.Now.AddDays(10);
                     }
                     else
                     {
-                        Response.Cookies["HaBa_secret"].Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies["HaBa_client"].Expires = DateTime.Now.AddDays(1);
                     }
                     if (Request.QueryString["Return_Url"] == null)
                     {
-                        Response.Redirect("~/Admin/Default.aspx");
+                        Response.Redirect("~/Client/Default.aspx");
                     }
                     else
                     {

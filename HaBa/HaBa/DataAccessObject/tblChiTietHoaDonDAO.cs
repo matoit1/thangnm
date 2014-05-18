@@ -207,6 +207,33 @@ namespace HaBa.DataAccessObject
             }
         }
 
+        /// <summary> 8. ChiTietHoaDon_SelectByFK_lHoaDonID </summary>
+        /// <param name="_tblChiTietHoaDonEO"></param>
+        /// <returns></returns>
+        public static DataSet ChiTietHoaDon_SelectByFK_lHoaDonID(tblChiTietHoaDonEO _tblChiTietHoaDonEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblChiTietHoaDon_SelectByFK_lHoaDonID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_lHoaDonID", _tblChiTietHoaDonEO.FK_lHoaDonID));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
         /// <summary> 9. ChiTietHoaDon_Search </summary>
         /// <param name="_tblChiTietHoaDonEO"></param>
         /// <returns></returns>
