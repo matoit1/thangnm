@@ -8,6 +8,7 @@ using System.Data;
 using HaBa.DataAccessObject;
 using HaBa.EntityObject;
 using HaBa.SharedLibraries;
+using HaBa.SharedLibraries.Constants;
 
 namespace HaBa.UserControl
 {
@@ -36,22 +37,11 @@ namespace HaBa.UserControl
             try
             {
                 tblTaiKhoanEO _AccountsEO = new tblTaiKhoanEO();
-
-                switch (iType)
-                {
-                    case 1: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text;   //Khách hàng
-                        _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
-                        _AccountsEO.iQuyenHan = 1;
-                        dsOutput = tblTaiKhoanDAO.TaiKhoan_Login(_AccountsEO); break;
-                    case 2: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text; //Nhân viên
-                        _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
-                        _AccountsEO.iQuyenHan = 2;
-                        dsOutput = tblTaiKhoanDAO.TaiKhoan_Login(_AccountsEO); break;
-                    case 3: _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text; //Quản trị
-                        _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
-                        _AccountsEO.iQuyenHan = 3;
-                        dsOutput = tblTaiKhoanDAO.TaiKhoan_Login(_AccountsEO); break;
-                }
+                _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text;
+                _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
+                _AccountsEO.iQuyenHan = iType;
+                _AccountsEO.iTrangThai = TaiKhoan_iTrangThai_C.Mo;
+                dsOutput = tblTaiKhoanDAO.TaiKhoan_Login(_AccountsEO);
             }
             catch (Exception ex)
             {

@@ -55,7 +55,7 @@ namespace HaBa.UserControl
                 select new
                 {
                     PK_lHoaDonID = topic.Field<Int64>("PK_lHoaDonID"),
-                    FK_iTaiKhoanID_Giao = tblTaiKhoanDAO.TaiKhoan_SelectItemByPK_iTaiKhoanID(topic.Field<Int32>("FK_iTaiKhoanID_Giao")).sHoTen,
+                    FK_iTaiKhoanID_Giao =  tblTaiKhoanDAO.TaiKhoan_SelectItemByPK_iTaiKhoanID(topic.Field<Int32>("FK_iTaiKhoanID_Giao")).sHoTen,
                     FK_iTaiKhoanID_Nhan = tblTaiKhoanDAO.TaiKhoan_SelectItemByPK_iTaiKhoanID(topic.Field<Int32>("FK_iTaiKhoanID_Nhan")).sHoTen,
                     FK_iThanhToanID = tblThanhToanDAO.ThanhToan_SelectItemByPK_iThanhToanID(topic.Field<Int16>("FK_iThanhToanID")).sTenThanhToan,
                     sHoTen = topic.Field<string>("sHoTen"),

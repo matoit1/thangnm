@@ -8,6 +8,7 @@ using System.Data;
 using HaBa.DataAccessObject;
 using HaBa.EntityObject;
 using HaBa.SharedLibraries.Constants;
+using System.Data.SqlClient;
 
 namespace HaBa
 {
@@ -15,6 +16,11 @@ namespace HaBa
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataSet dsNew= tblSanPhamDAO.SanPham_SelectList();
+            DataSet dsOld = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.Update(dsNew);
+            da.Fill(dsOld);
             Load_ParentProduct();
         }
 

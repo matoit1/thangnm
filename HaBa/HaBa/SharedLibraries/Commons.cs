@@ -340,9 +340,12 @@ namespace HaBa.SharedLibraries
         public static readonly string Viet_Nam_Dong = " VNĐ";
         #endregion
 
-        #region "tblProduct"
-        public const string tblProduct_Con_Hang = "Còn Hàng !";
-        public const string tblProduct_Het_Hang = "Hết Hàng !";
+        #region "tblSanPham"
+        public const string tblSanPham_Con_Hang = "Còn Hàng !";
+        public const string tblSanPham_Het_Hang = "Hết Hàng !";
+        public const string tblSanPham_Gio_Hang_Chua_Co_San_Pham_Nao = "Giỏ hàng của bạn chưa có sản phẩm nào !";
+        public const string tblSanPham_Dat_Hang_Thanh_Cong = "Đặt hàng thành công. Cửa hàng chúng tôi sẽ giao hàng cho bạn trong thời gian sớm nhất";
+        public const string tblSanPham_Xem_Lai_Hoa_Don = "Click vào đây để xem lại hóa đơn !";
         #endregion
 
     }

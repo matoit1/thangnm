@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using HaBa.SharedLibraries;
 using System.Data;
+using HaBa.SharedLibraries.Constants;
 
 namespace HaBa.Admin.Accounts
 {
@@ -21,7 +22,7 @@ namespace HaBa.Admin.Accounts
             try
             {
                 DataSet dsInput = null;
-                dsInput = LoginUC1.Check(3);
+                dsInput = LoginUC1.Check(TaiKhoan_iQuyenHan_C.QuanTri);
                 if (dsInput.Tables[0].Rows.Count > 0)
                 {
                     Response.Cookies["HaBa_secret"].Value = LoginUC1.txtsTenDangNhap.Text;
