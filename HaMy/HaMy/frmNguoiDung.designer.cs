@@ -496,7 +496,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmNguoiDung";
-            this.Text = "Form1";
+            this.Text = "Người Dùng";
             ((System.ComponentModel.ISupportInitialize)(this.grvNguoiDung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
