@@ -1,0 +1,11 @@
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.label41.resources
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.frmDoiTac.resources
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.frmMoiQuanHe.resources
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.frmNhom.resources
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.Properties.Resources.resources
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.csproj.GenerateResource.Cache
+E:\kiemtien\HaMy\HaMy\bin\Debug\HaMy.exe
+E:\kiemtien\HaMy\HaMy\bin\Debug\HaMy.pdb
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.exe
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.pdb
+E:\kiemtien\HaMy\HaMy\obj\x86\Debug\HaMy.frmNguoiDung.resources
