@@ -29,7 +29,8 @@ namespace HaBa.UserControl
         {
             tblNhomSanPhamEO _tblNhomSanPhamEO = new tblNhomSanPhamEO();
             _tblNhomSanPhamEO.iTrangThai = NhomSanPham_iTrangThai_C.Mo;
-            DataSet ds = tblNhomSanPhamDAO.NhomSanPham_SelectListByiTrangThai(_tblNhomSanPhamEO);
+            _tblNhomSanPhamEO.iNhomCon = 0;
+            DataSet ds = tblNhomSanPhamDAO.NhomSanPham_SelectListByiTrangThai_iNhomCon(_tblNhomSanPhamEO);
             rptRoot.DataSource = ds.Tables[0];
             rptRoot.DataBind();
         }

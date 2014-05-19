@@ -252,6 +252,33 @@ namespace HaBa.DataAccessObject
             }
         }
 
+        ///// <summary> 8. SanPham_SelectListByiTrangThai </summary>
+        ///// <param name="_tblSanPhamEO"></param>
+        ///// <returns></returns>
+        //public static DataSet SanPham_SelectListByiTrangThai(tblSanPhamEO _tblSanPhamEO)
+        //{
+        //    DataSet dsOutput = null;
+        //    using (SqlConnection conn = ConnectionDAO.getConnection())
+        //    {
+        //        try
+        //        {
+        //            conn.Open();
+        //            SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList", conn);
+        //            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        //            da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
+        //            dsOutput = new DataSet();
+        //            da.Fill(dsOutput);
+        //            conn.Close();
+        //            return dsOutput;
+        //        }
+        //        catch (Exception)
+        //        {
+        //            conn.Close();
+        //            return dsOutput;
+        //        }
+        //    }
+        //}
+
         /// <summary> 9. SanPham_SelectList_All_Group </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>

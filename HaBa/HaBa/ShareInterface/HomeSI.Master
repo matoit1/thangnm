@@ -120,6 +120,7 @@
 				            <li class="al"><a href="#">Thanh Toán</a></li>
 			            </ul>
 		            </div>
+                    <br /><br /><br />
 		            <div class="main section" id="main">
 			            <uc2:ShowAllProductUC ID="ShowAllProductUC1" runat="server" />
 		            </div>

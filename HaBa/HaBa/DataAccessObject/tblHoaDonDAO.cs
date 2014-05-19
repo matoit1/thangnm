@@ -259,6 +259,33 @@ namespace HaBa.DataAccessObject
             }
         }
 
+        /// <summary> 8. HoaDon_SelectListByiTrangThai </summary>
+        /// <param name="_tblHoaDonEO"></param>
+        /// <returns></returns>
+        public static DataSet HoaDon_SelectListByiTrangThai(tblHoaDonEO _tblHoaDonEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblHoaDon_SelectList", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblHoaDonEO.iTrangThai));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
         /// <summary> 9. HoaDon_Search </summary>
         /// <param name="_tblHoaDonEO"></param>
         /// <returns></returns>
