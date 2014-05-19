@@ -44,6 +44,7 @@
             this.lblsTenNhom = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
+            this.lblMsg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grvNhom)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +98,7 @@
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -106,6 +108,7 @@
             this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -115,6 +118,7 @@
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // grvNhom
             // 
@@ -126,6 +130,7 @@
             this.grvNhom.Name = "grvNhom";
             this.grvNhom.Size = new System.Drawing.Size(711, 150);
             this.grvNhom.TabIndex = 8;
+            this.grvNhom.SelectionChanged += new System.EventHandler(this.grvNhom_SelectionChanged);
             // 
             // PK_iNhom
             // 
@@ -175,6 +180,7 @@
             this.btnReset.TabIndex = 49;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnLamMoi
             // 
@@ -184,12 +190,23 @@
             this.btnLamMoi.TabIndex = 48;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // lblMsg
+            // 
+            this.lblMsg.AutoSize = true;
+            this.lblMsg.Location = new System.Drawing.Point(334, 72);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(35, 13);
+            this.lblMsg.TabIndex = 51;
+            this.lblMsg.Text = "label3";
             // 
             // frmNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 430);
+            this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.lblsTenNhom);
@@ -206,6 +223,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frmNhom";
             this.Text = "Nhóm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmNhom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grvNhom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,5 +249,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sTenNhom;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.Label lblMsg;
     }
 }

@@ -275,7 +275,6 @@
             this.lbltNgayGioKetThuc.Size = new System.Drawing.Size(35, 13);
             this.lbltNgayGioKetThuc.TabIndex = 47;
             this.lbltNgayGioKetThuc.Text = "label7";
-
             // 
             // lbliTrangThai
             // 
@@ -437,6 +436,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmCuocHen";
             this.Text = "Cuộc Hẹn";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
