@@ -36,8 +36,6 @@
             this.txtPK_iMoiQuanHe = new System.Windows.Forms.TextBox();
             this.txtsTen = new System.Windows.Forms.TextBox();
             this.grvMoiQuanHe = new System.Windows.Forms.DataGridView();
-            this.PK_iMoiQuanHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -45,6 +43,8 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.PK_iMoiQuanHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grvMoiQuanHe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,16 +120,7 @@
             this.grvMoiQuanHe.Name = "grvMoiQuanHe";
             this.grvMoiQuanHe.Size = new System.Drawing.Size(630, 150);
             this.grvMoiQuanHe.TabIndex = 17;
-            // 
-            // PK_iMoiQuanHe
-            // 
-            this.PK_iMoiQuanHe.HeaderText = "Mã quan hệ";
-            this.PK_iMoiQuanHe.Name = "PK_iMoiQuanHe";
-            // 
-            // sTen
-            // 
-            this.sTen.HeaderText = "Tên quan hệ";
-            this.sTen.Name = "sTen";
+            this.grvMoiQuanHe.SelectionChanged += new System.EventHandler(this.grvMoiQuanHe_SelectionChanged);
             // 
             // btnTimKiem
             // 
@@ -200,6 +191,18 @@
             this.lblMsg.TabIndex = 50;
             this.lblMsg.Text = "label3";
             // 
+            // PK_iMoiQuanHe
+            // 
+            this.PK_iMoiQuanHe.DataPropertyName = "PK_iMoiQuanHe";
+            this.PK_iMoiQuanHe.HeaderText = "Mã quan hệ";
+            this.PK_iMoiQuanHe.Name = "PK_iMoiQuanHe";
+            // 
+            // sTen
+            // 
+            this.sTen.DataPropertyName = "sTen";
+            this.sTen.HeaderText = "Tên quan hệ";
+            this.sTen.Name = "sTen";
+            // 
             // frmMoiQuanHe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,8 +243,6 @@
         private System.Windows.Forms.TextBox txtPK_iMoiQuanHe;
         private System.Windows.Forms.TextBox txtsTen;
         private System.Windows.Forms.DataGridView grvMoiQuanHe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PK_iMoiQuanHe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTen;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
@@ -249,5 +250,7 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Label lblMsg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PK_iMoiQuanHe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTen;
     }
 }

@@ -154,13 +154,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\HaMy.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\HaMy_log.ldf">
-      <DependentUpon>HaMy.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
     <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
@@ -199,6 +192,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="ShareInterface\" />
     <Folder Include="UserControl\" />
   </ItemGroup>

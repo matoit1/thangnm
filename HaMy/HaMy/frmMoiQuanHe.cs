@@ -20,6 +20,12 @@ namespace HaMy
         {
             InitializeComponent();
         }
+        
+        private void frmMoiQuanHe_Load(object sender, EventArgs e)
+        {
+            txtPK_iMoiQuanHe.Enabled = false;
+            BindDataGridView();
+        }
         #endregion
 
         #region LoadData
@@ -33,9 +39,9 @@ namespace HaMy
                 if (dsMoiQuanHe.Tables[0].Rows.Count > 0)
                 {
                     grvMoiQuanHe.Visible = true;
-                    grvMoiQuanHe.DataSource = dsMoiQuanHe;
-                    grvMoiQuanHe.DataMember = dsMoiQuanHe.Tables[0].ToString();
-                    grvMoiQuanHe.AutoGenerateColumns = true;
+                    grvMoiQuanHe.AutoGenerateColumns = false;
+                    grvMoiQuanHe.DataSource = dsMoiQuanHe.Tables[0];
+                    //grvMoiQuanHe.DataMember = dsMoiQuanHe.Tables[0].ToString();
                 }
             }
             catch
@@ -54,7 +60,7 @@ namespace HaMy
             try
             {
                 tblMoiQuanHeEO _tblMoiQuanHeEO = new tblMoiQuanHeEO();
-                _tblMoiQuanHeEO.PK_iMoiQuanHe = Convert.ToInt32(txtPK_iMoiQuanHe.Text);
+                _tblMoiQuanHeEO.PK_iMoiQuanHe = (String.IsNullOrEmpty(txtPK_iMoiQuanHe.Text)) ? 0 : Convert.ToInt32(txtPK_iMoiQuanHe.Text);
                 _tblMoiQuanHeEO.sTen = Convert.ToString(txtsTen.Text);
                 return _tblMoiQuanHeEO;
             }
@@ -67,20 +73,38 @@ namespace HaMy
        
         public void ClearMessages()
         {
+            lblMsg.Text = "";
             lblPK_iMoiQuanHe.Text = "";
             lblsTen.Text = "";
+        }
+        #endregion
+
+        #region "Event DataGridView"
+        private void grvMoiQuanHe_SelectionChanged(object sender, EventArgs e)
+        {
+            tblMoiQuanHeEO _tblMoiQuanHeEO = new tblMoiQuanHeEO();
+            foreach (DataGridViewRow row in grvMoiQuanHe.SelectedRows)
+            {
+                _tblMoiQuanHeEO.PK_iMoiQuanHe = Convert.ToInt32(row.Cells[0].Value);
+                _tblMoiQuanHeEO.sTen = row.Cells[1].Value.ToString();
+            }
+            BindDataDetail(_tblMoiQuanHeEO);
         }
         #endregion
 
         #region "Event Button"
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            DataSet dsMoiQuanHe = new DataSet();
-            tblMoiQuanHeDAO.MoiQuanHe_Search(getObject());
-            grvMoiQuanHe.Visible = true;
-            grvMoiQuanHe.DataSource = dsMoiQuanHe;
-            grvMoiQuanHe.DataMember = dsMoiQuanHe.Tables[0].ToString();
-            //grvMoiQuanHe.DataBind();
+            try
+            {
+                DataSet dsMoiQuanHe = new DataSet();
+                dsMoiQuanHe = tblMoiQuanHeDAO.MoiQuanHe_Search(getObject());
+                grvMoiQuanHe.Visible = true;
+                grvMoiQuanHe.DataSource = dsMoiQuanHe.Tables[0];
+                //grvMoiQuanHe.DataMember = dsMoiQuanHe.Tables[0].ToString();
+                //grvMoiQuanHe.DataBind();
+            }
+            catch { }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -96,6 +120,7 @@ namespace HaMy
                 {
                     lblMsg.Text = Messages.Them_That_Bai;
                 }
+                BindDataGridView();
             }
             catch (Exception ex)
             {
@@ -116,6 +141,7 @@ namespace HaMy
                 {
                     lblMsg.Text = Messages.Sua_That_Bai;
                 }
+                BindDataGridView();
             }
             catch (Exception ex)
             {
@@ -136,6 +162,7 @@ namespace HaMy
                 {
                     lblMsg.Text = Messages.Xoa_That_Bai;
                 }
+                BindDataGridView();
             }
             catch (Exception ex)
             {
@@ -145,6 +172,7 @@ namespace HaMy
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            ClearMessages();
             BindDataGridView();
         }
 
@@ -156,10 +184,6 @@ namespace HaMy
         }
         #endregion
 
-        private void frmMoiQuanHe_Load(object sender, EventArgs e)
-        {
-            BindDataGridView();
-        }
 
     }
 }
