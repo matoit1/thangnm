@@ -275,8 +275,8 @@ namespace HaMy.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblMoiQuanHe_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iMoiQuanHe", _tblMoiQuanHeEO.PK_iMoiQuanHe));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTen", _tblMoiQuanHeEO.sTen));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iMoiQuanHe", (_tblMoiQuanHeEO.PK_iMoiQuanHe == 0) ? (object)DBNull.Value : _tblMoiQuanHeEO.PK_iMoiQuanHe));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTen", (String.IsNullOrEmpty(_tblMoiQuanHeEO.sTen)) ? (object)DBNull.Value : _tblMoiQuanHeEO.sTen));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

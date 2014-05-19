@@ -249,7 +249,7 @@ namespace HaMy.DataAccessObject
         /// <summary> 13. NguoiDung_Search </summary>
         /// <param name="_tblNguoiDungEO"></param>
         /// <returns></returns>
-        public static DataSet NguoiDung_Search(string keyword)
+        public static DataSet NguoiDung_Search(tblNguoiDungEO _tblNguoiDungEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -259,24 +259,15 @@ namespace HaMy.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblNguoiDung_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@keyword", keyword));
-
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iNguoiDungID", _tblNguoiDungEO.PK_iNguoiDungID));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@lGroup", _tblNguoiDungEO.lGroup));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@lParent", _tblNguoiDungEO.lParent));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sName", _tblNguoiDungEO.sName));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@lPrice", _tblNguoiDungEO.lPrice));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@lSale", _tblNguoiDungEO.lSale));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@bVAT", _tblNguoiDungEO.bVAT));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sDescription", _tblNguoiDungEO.sDescription));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sInfomation", _tblNguoiDungEO.sInfomation));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sOrigin", _tblNguoiDungEO.sOrigin));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@iQuantity", _tblNguoiDungEO.iQuantity));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@bGioiTinh", _tblNguoiDungEO.bGioiTinh));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@bGioiTinh1", _tblNguoiDungEO.bGioiTinh1));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@bGioiTinh2", _tblNguoiDungEO.bGioiTinh2));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@tLastUpdate", _tblNguoiDungEO.tLastUpdate));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblNguoiDungEO.bStatus));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iNguoiDung", (_tblNguoiDungEO.PK_iNguoiDung == 0) ? (object)DBNull.Value : _tblNguoiDungEO.PK_iNguoiDung));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sHoTen", (String.IsNullOrEmpty(_tblNguoiDungEO.sHoTen)) ? (object)DBNull.Value : _tblNguoiDungEO.sHoTen));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sDiaChi", (String.IsNullOrEmpty(_tblNguoiDungEO.sDiaChi)) ? (object)DBNull.Value : _tblNguoiDungEO.sDiaChi));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sEmail", (String.IsNullOrEmpty(_tblNguoiDungEO.sEmail)) ? (object)DBNull.Value : _tblNguoiDungEO.sEmail));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sSoDienThoai", (String.IsNullOrEmpty(_tblNguoiDungEO.sSoDienThoai)) ? (object)DBNull.Value : _tblNguoiDungEO.sSoDienThoai));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@tNgaySinh", (_tblNguoiDungEO.tNgaySinh == DateTime.MinValue) ? (object)DBNull.Value : _tblNguoiDungEO.tNgaySinh));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@bGioiTinh", _tblNguoiDungEO.bGioiTinh));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sNgheNghiep", (String.IsNullOrEmpty(_tblNguoiDungEO.sNgheNghiep)) ? (object)DBNull.Value : _tblNguoiDungEO.sNgheNghiep));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", (_tblNguoiDungEO.iTrangThai == 0) ? (object)DBNull.Value : _tblNguoiDungEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

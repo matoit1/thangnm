@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using HaMy.EntityObject;
 using HaMy.SharedLibraries;
 using HaBa.SharedLibraries;
+using HaMy.DataAccessObject;
 
 namespace HaMy
 {
@@ -18,6 +19,12 @@ namespace HaMy
         {
             InitializeComponent();
         }
+
+        private void frmCuocHen_Load(object sender, EventArgs e)
+        {
+            loadDataToDropDownList();
+        }
+
         public void BindDataDetail(tblCuocHenEO _tblCuocHenEO)
         {
             txtPK_lCuocHen.Text = Convert.ToString(_tblCuocHenEO.PK_lCuocHen);
@@ -60,17 +67,22 @@ namespace HaMy
 
         public void loadDataToDropDownList()
         {
-            cboFK_iNguoiDung.DataSource = GetListConstants.TaiKhoan_iTrangThai_GLC();
-            cboFK_iNguoiDung.DisplayMember = "Value";
-            cboFK_iNguoiDung.ValueMember = "Key";
+            cboFK_iNguoiDung.DataSource = tblNguoiDungDAO.NguoiDung_SelectList().Tables[0];
+            cboFK_iNguoiDung.DisplayMember = "sHoTen";
+            cboFK_iNguoiDung.ValueMember = "PK_iNguoiDung";
 
-            cboFK_iDoiTac.DataSource = GetListConstants.TaiKhoan_iTrangThai_GLC();
-            cboFK_iDoiTac.DisplayMember = "Value";
-            cboFK_iDoiTac.ValueMember = "Key";
+            cboFK_iDoiTac.DataSource = tblDoiTacDAO.DoiTac_SelectList().Tables[0];
+            cboFK_iDoiTac.DisplayMember = "sHoTen";
+            cboFK_iDoiTac.ValueMember = "PK_iDoiTac";
 
-            cboiTrangThai.DataSource = GetListConstants.TaiKhoan_iTrangThai_GLC();
-            cboiTrangThai.DisplayMember = "Value";
-            cboiTrangThai.ValueMember = "Key";
+            try
+            {
+                DataTable dt = Commons.Convert_SortList_To_DataTable(GetListConstants.CuocHen_iTrangThai_GLC());
+                cboiTrangThai.DataSource = dt;
+                cboiTrangThai.DisplayMember = "Value";
+                cboiTrangThai.ValueMember = "Key";
+            }
+            catch { }
         }
 
         public void ClearMessages()

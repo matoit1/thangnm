@@ -39,9 +39,9 @@ namespace HaMy
                 if (dsNhom.Tables[0].Rows.Count > 0)
                 {
                     grvNhom.Visible = true;
-                    //grvNhom.AutoGenerateColumns = false;
-                    grvNhom.DataSource = dsNhom.Tables[0].DefaultView;
-                    grvNhom.DataMember = dsNhom.Tables[0].ToString();
+                    grvNhom.AutoGenerateColumns = false;
+                    grvNhom.DataSource = dsNhom.Tables[0];
+                    //grvNhom.DataMember = dsNhom.Tables[0].ToString();
                 }
             }
             catch
@@ -73,6 +73,7 @@ namespace HaMy
 
         public void ClearMessages()
         {
+            lblMsg.Text = "";
             lblPK_iNhom.Text = "";
             lblsTenNhom.Text = "";
         }
@@ -84,8 +85,8 @@ namespace HaMy
             tblNhomEO _tblNhomEO = new tblNhomEO();
             foreach (DataGridViewRow row in grvNhom.SelectedRows)
             {
-                _tblNhomEO.PK_iNhom = Convert.ToInt16(row.Cells[2].Value);
-                _tblNhomEO.sTenNhom = row.Cells[3].Value.ToString();
+                _tblNhomEO.PK_iNhom = Convert.ToInt32(row.Cells[0].Value);
+                _tblNhomEO.sTenNhom = row.Cells[1].Value.ToString();
             }
             BindDataDetail(_tblNhomEO);
         }
@@ -97,8 +98,9 @@ namespace HaMy
             DataSet dsNhom = new DataSet();
             dsNhom = tblNhomDAO.Nhom_Search(getObject());
             grvNhom.Visible = true;
-            grvNhom.DataSource = dsNhom;
-            grvNhom.DataMember = dsNhom.Tables[0].ToString();
+            grvNhom.AutoGenerateColumns = false;
+            grvNhom.DataSource = dsNhom.Tables[0];
+            //grvNhom.DataMember = dsNhom.Tables[0].ToString();
             //grvNhom.DataBind();
         }
 
@@ -167,6 +169,7 @@ namespace HaMy
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            ClearMessages();
             BindDataGridView();
         }
 

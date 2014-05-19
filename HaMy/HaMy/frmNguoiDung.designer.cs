@@ -52,18 +52,8 @@
             this.txtsDiaChi = new System.Windows.Forms.TextBox();
             this.txtsEmail = new System.Windows.Forms.TextBox();
             this.txtsSoDienThoai = new System.Windows.Forms.TextBox();
-            this.txttNgaySinh = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.grvNguoiDung = new System.Windows.Forms.DataGridView();
-            this.PK_iNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sNgheNghiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -75,6 +65,17 @@
             this.rbtnbGioiTinh2 = new System.Windows.Forms.RadioButton();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
+            this.PK_iNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sNgheNghiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dpktNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.lblMsg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grvNguoiDung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -275,13 +276,6 @@
             this.txtsSoDienThoai.Size = new System.Drawing.Size(178, 20);
             this.txtsSoDienThoai.TabIndex = 22;
             // 
-            // txttNgaySinh
-            // 
-            this.txttNgaySinh.Location = new System.Drawing.Point(171, 189);
-            this.txttNgaySinh.Name = "txttNgaySinh";
-            this.txttNgaySinh.Size = new System.Drawing.Size(178, 20);
-            this.txttNgaySinh.TabIndex = 24;
-            // 
             // grvNguoiDung
             // 
             this.grvNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -299,51 +293,7 @@
             this.grvNguoiDung.Name = "grvNguoiDung";
             this.grvNguoiDung.Size = new System.Drawing.Size(733, 179);
             this.grvNguoiDung.TabIndex = 26;
-            // 
-            // PK_iNguoiDung
-            // 
-            this.PK_iNguoiDung.HeaderText = "Mã Người Dùng";
-            this.PK_iNguoiDung.Name = "PK_iNguoiDung";
-            // 
-            // sHoTen
-            // 
-            this.sHoTen.HeaderText = "Họ Tên";
-            this.sHoTen.Name = "sHoTen";
-            // 
-            // sDiaChi
-            // 
-            this.sDiaChi.HeaderText = "Địa chỉ";
-            this.sDiaChi.Name = "sDiaChi";
-            // 
-            // sEmail
-            // 
-            this.sEmail.HeaderText = "Email";
-            this.sEmail.Name = "sEmail";
-            // 
-            // sSoDienThoai
-            // 
-            this.sSoDienThoai.HeaderText = "Số điện thoại";
-            this.sSoDienThoai.Name = "sSoDienThoai";
-            // 
-            // tNgaySinh
-            // 
-            this.tNgaySinh.HeaderText = "Ngày sinh";
-            this.tNgaySinh.Name = "tNgaySinh";
-            // 
-            // bGioiTinh
-            // 
-            this.bGioiTinh.HeaderText = "Giới tính";
-            this.bGioiTinh.Name = "bGioiTinh";
-            // 
-            // sNgheNghiep
-            // 
-            this.sNgheNghiep.HeaderText = "Nghề nghiệp";
-            this.sNgheNghiep.Name = "sNgheNghiep";
-            // 
-            // iTrangThai
-            // 
-            this.iTrangThai.HeaderText = "Trạng thái";
-            this.iTrangThai.Name = "iTrangThai";
+            this.grvNguoiDung.SelectionChanged += new System.EventHandler(this.grvNguoiDung_SelectionChanged);
             // 
             // btnTimKiem
             // 
@@ -454,11 +404,84 @@
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
+            // PK_iNguoiDung
+            // 
+            this.PK_iNguoiDung.DataPropertyName = "PK_iNguoiDung";
+            this.PK_iNguoiDung.HeaderText = "Mã Người Dùng";
+            this.PK_iNguoiDung.Name = "PK_iNguoiDung";
+            // 
+            // sHoTen
+            // 
+            this.sHoTen.DataPropertyName = "sHoTen";
+            this.sHoTen.HeaderText = "Họ Tên";
+            this.sHoTen.Name = "sHoTen";
+            // 
+            // sDiaChi
+            // 
+            this.sDiaChi.DataPropertyName = "sDiaChi";
+            this.sDiaChi.HeaderText = "Địa chỉ";
+            this.sDiaChi.Name = "sDiaChi";
+            // 
+            // sEmail
+            // 
+            this.sEmail.DataPropertyName = "sEmail";
+            this.sEmail.HeaderText = "Email";
+            this.sEmail.Name = "sEmail";
+            // 
+            // sSoDienThoai
+            // 
+            this.sSoDienThoai.DataPropertyName = "sSoDienThoai";
+            this.sSoDienThoai.HeaderText = "Số điện thoại";
+            this.sSoDienThoai.Name = "sSoDienThoai";
+            // 
+            // tNgaySinh
+            // 
+            this.tNgaySinh.DataPropertyName = "tNgaySinh";
+            this.tNgaySinh.HeaderText = "Ngày sinh";
+            this.tNgaySinh.Name = "tNgaySinh";
+            // 
+            // bGioiTinh
+            // 
+            this.bGioiTinh.DataPropertyName = "bGioiTinh";
+            this.bGioiTinh.HeaderText = "Giới tính";
+            this.bGioiTinh.Name = "bGioiTinh";
+            // 
+            // sNgheNghiep
+            // 
+            this.sNgheNghiep.DataPropertyName = "sNgheNghiep";
+            this.sNgheNghiep.HeaderText = "Nghề nghiệp";
+            this.sNgheNghiep.Name = "sNgheNghiep";
+            // 
+            // iTrangThai
+            // 
+            this.iTrangThai.DataPropertyName = "iTrangThai";
+            this.iTrangThai.HeaderText = "Trạng thái";
+            this.iTrangThai.Name = "iTrangThai";
+            // 
+            // dpktNgaySinh
+            // 
+            this.dpktNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpktNgaySinh.Location = new System.Drawing.Point(171, 190);
+            this.dpktNgaySinh.Name = "dpktNgaySinh";
+            this.dpktNgaySinh.Size = new System.Drawing.Size(178, 20);
+            this.dpktNgaySinh.TabIndex = 50;
+            // 
+            // lblMsg
+            // 
+            this.lblMsg.AutoSize = true;
+            this.lblMsg.Location = new System.Drawing.Point(242, 333);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(41, 13);
+            this.lblMsg.TabIndex = 51;
+            this.lblMsg.Text = "label10";
+            // 
             // frmNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 583);
+            this.Controls.Add(this.lblMsg);
+            this.Controls.Add(this.dpktNgaySinh);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.rbtnbGioiTinh2);
@@ -471,7 +494,6 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.grvNguoiDung);
-            this.Controls.Add(this.txttNgaySinh);
             this.Controls.Add(this.txtsSoDienThoai);
             this.Controls.Add(this.txtsEmail);
             this.Controls.Add(this.txtsDiaChi);
@@ -498,6 +520,7 @@
             this.Name = "frmNguoiDung";
             this.Text = "Người Dùng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmNguoiDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grvNguoiDung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -529,7 +552,6 @@
         private System.Windows.Forms.TextBox txtsDiaChi;
         private System.Windows.Forms.TextBox txtsEmail;
         private System.Windows.Forms.TextBox txtsSoDienThoai;
-        private System.Windows.Forms.TextBox txttNgaySinh;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridView grvNguoiDung;
         private System.Windows.Forms.Button btnTimKiem;
@@ -538,6 +560,11 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.ComboBox cboiTrangThai;
         private System.Windows.Forms.TextBox txtsNgheNghiep;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.RadioButton rbtnbGioiTinh;
+        private System.Windows.Forms.RadioButton rbtnbGioiTinh2;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn PK_iNguoiDung;
         private System.Windows.Forms.DataGridViewTextBoxColumn sHoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn sDiaChi;
@@ -547,11 +574,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bGioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn sNgheNghiep;
         private System.Windows.Forms.DataGridViewTextBoxColumn iTrangThai;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.RadioButton rbtnbGioiTinh;
-        private System.Windows.Forms.RadioButton rbtnbGioiTinh2;
-        private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.DateTimePicker dpktNgaySinh;
+        private System.Windows.Forms.Label lblMsg;
     }
 }
 

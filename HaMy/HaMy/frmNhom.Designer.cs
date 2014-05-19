@@ -37,14 +37,14 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.grvNhom = new System.Windows.Forms.DataGridView();
-            this.PK_iNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblPK_iNhom = new System.Windows.Forms.Label();
             this.lblsTenNhom = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.PK_iNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grvNhom)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,16 +132,6 @@
             this.grvNhom.TabIndex = 8;
             this.grvNhom.SelectionChanged += new System.EventHandler(this.grvNhom_SelectionChanged);
             // 
-            // PK_iNhom
-            // 
-            this.PK_iNhom.HeaderText = "Mã nhóm";
-            this.PK_iNhom.Name = "PK_iNhom";
-            // 
-            // sTenNhom
-            // 
-            this.sTenNhom.HeaderText = "Tên nhóm";
-            this.sTenNhom.Name = "sTenNhom";
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -201,6 +191,18 @@
             this.lblMsg.TabIndex = 51;
             this.lblMsg.Text = "label3";
             // 
+            // PK_iNhom
+            // 
+            this.PK_iNhom.DataPropertyName = "PK_iNhom";
+            this.PK_iNhom.HeaderText = "Mã nhóm";
+            this.PK_iNhom.Name = "PK_iNhom";
+            // 
+            // sTenNhom
+            // 
+            this.sTenNhom.DataPropertyName = "sTenNhom";
+            this.sTenNhom.HeaderText = "Tên nhóm";
+            this.sTenNhom.Name = "sTenNhom";
+            // 
             // frmNhom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,10 +247,10 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblPK_iNhom;
         private System.Windows.Forms.Label lblsTenNhom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PK_iNhom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTenNhom;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Label lblMsg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PK_iNhom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTenNhom;
     }
 }

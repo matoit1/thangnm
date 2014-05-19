@@ -4,11 +4,27 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Text.RegularExpressions;
+using System.Collections;
 
 namespace HaMy.SharedLibraries
 {
     public class Commons
     {
+        public static DataTable Convert_SortList_To_DataTable(SortedList _SortedList)
+        {
+            DataTable tb = new DataTable("tblTrangThai");
+            tb.Columns.Add("Key");
+            tb.Columns.Add("Value");
+            for (int i = 0; i < _SortedList.Count; i++)
+            {
+                DataRow dr = tb.NewRow();
+                dr[0]= _SortedList.GetKey(i);
+                dr[1] = _SortedList.GetByIndex(i);
+                tb.Rows.Add(dr);
+            }
+            return tb;
+        }
+
 
         public static string RemoveHtmlTagsUsingCharArray(string htmlString)
         {
