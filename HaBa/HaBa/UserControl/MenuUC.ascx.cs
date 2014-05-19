@@ -15,10 +15,14 @@ namespace HaBa.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            try
             {
-                Load_ParentProduct();
+                if (!IsPostBack)
+                {
+                    Load_ParentProduct();
+                }
             }
+            catch { }
         }
 
         protected void Load_ParentProduct() // Hien cac danh muc lon Menu
