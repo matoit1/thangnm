@@ -106,15 +106,6 @@
     <Content Include="App_Themes\Images\UpdateCart.png" />
     <Content Include="App_Themes\img\arrows-active.png" />
     <Content Include="App_Themes\img\arrows-normal.png" />
-    <Content Include="App_Themes\img\avatar.jpg" />
-    <Content Include="App_Themes\img\avatar2.jpg" />
-    <Content Include="App_Themes\img\avatar3.jpg" />
-    <Content Include="App_Themes\img\avatar4.jpg" />
-    <Content Include="App_Themes\img\avatar5.jpg" />
-    <Content Include="App_Themes\img\avatar6.jpg" />
-    <Content Include="App_Themes\img\avatar7.jpg" />
-    <Content Include="App_Themes\img\avatar8.jpg" />
-    <Content Include="App_Themes\img\avatar9.jpg" />
     <Content Include="App_Themes\img\bg-input-focus.png" />
     <Content Include="App_Themes\img\bg-input.png" />
     <Content Include="App_Themes\img\bg-login.jpg" />
@@ -128,32 +119,12 @@
     <Content Include="App_Themes\img\crop.gif" />
     <Content Include="App_Themes\img\dbg.jpg" />
     <Content Include="App_Themes\img\dialogs.png" />
-    <Content Include="App_Themes\img\favicon.ico" />
-    <Content Include="App_Themes\img\gallery\photo1.jpg" />
-    <Content Include="App_Themes\img\gallery\photo10.jpg" />
-    <Content Include="App_Themes\img\gallery\photo11.jpg" />
-    <Content Include="App_Themes\img\gallery\photo12.jpg" />
-    <Content Include="App_Themes\img\gallery\photo13.jpg" />
-    <Content Include="App_Themes\img\gallery\photo2.jpg" />
-    <Content Include="App_Themes\img\gallery\photo3.jpg" />
-    <Content Include="App_Themes\img\gallery\photo4.jpg" />
-    <Content Include="App_Themes\img\gallery\photo5.jpg" />
-    <Content Include="App_Themes\img\gallery\photo6.jpg" />
-    <Content Include="App_Themes\img\gallery\photo7.jpg" />
-    <Content Include="App_Themes\img\gallery\photo8.jpg" />
-    <Content Include="App_Themes\img\gallery\photo9.jpg" />
     <Content Include="App_Themes\img\glyphicons-halflings-red.png" />
     <Content Include="App_Themes\img\glyphicons-halflings-white.png" />
     <Content Include="App_Themes\img\glyphicons-halflings.png" />
     <Content Include="App_Themes\img\icons-big.png" />
     <Content Include="App_Themes\img\icons-small.png" />
-    <Content Include="App_Themes\img\iphone-style-checkboxes\off-63584.png" />
-    <Content Include="App_Themes\img\iphone-style-checkboxes\on-63584.png" />
-    <Content Include="App_Themes\img\iphone-style-checkboxes\slider_center-63584.png" />
-    <Content Include="App_Themes\img\iphone-style-checkboxes\slider_left-63584.png" />
-    <Content Include="App_Themes\img\iphone-style-checkboxes\slider_right-63584.png" />
     <Content Include="App_Themes\img\i_16_radio.png" />
-    <Content Include="App_Themes\img\logo.png" />
     <Content Include="App_Themes\img\logo20.png" />
     <Content Include="App_Themes\img\progress.gif" />
     <Content Include="App_Themes\img\quicklook-bg.png" />
@@ -177,6 +148,7 @@
     <Content Include="App_Themes\img\ui-icons_888888_256x240.png" />
     <Content Include="App_Themes\img\ui-icons_cd0a0a_256x240.png" />
     <Content Include="App_Themes\img\uploadify-cancel.png" />
+    <Content Include="App_Themes\jquery.circliful.css" />
     <Content Include="App_Themes\login.css" />
     <Content Include="App_Themes\Popup.css" />
     <Content Include="App_Themes\public.css" />
@@ -568,31 +540,8 @@
     <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.CommLayer.dll" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\custom.js" />
-    <Content Include="Scripts\excanvas.js" />
-    <Content Include="Scripts\fullcalendar.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery-migrate-1.0.0.min.js" />
-    <Content Include="Scripts\jquery-ui-1.10.0.custom.min.js" />
-    <Content Include="Scripts\jquery.chosen.min.js" />
-    <Content Include="Scripts\jquery.cleditor.min.js" />
-    <Content Include="Scripts\jquery.cookie.js" />
-    <Content Include="Scripts\jquery.dataTables.min.js" />
-    <Content Include="Scripts\jquery.elfinder.min.js" />
-    <Content Include="Scripts\jquery.flot.min.js" />
-    <Content Include="Scripts\jquery.flot.pie.min.js" />
-    <Content Include="Scripts\jquery.flot.resize.min.js" />
-    <Content Include="Scripts\jquery.flot.stack.js" />
-    <Content Include="Scripts\jquery.gritter.min.js" />
-    <Content Include="Scripts\jquery.imagesloaded.js" />
-    <Content Include="Scripts\jquery.iphone.toggle.js" />
-    <Content Include="Scripts\jquery.knob.js" />
-    <Content Include="Scripts\jquery.masonry.min.js" />
-    <Content Include="Scripts\jquery.noty.js" />
-    <Content Include="Scripts\jquery.raty.min.js" />
-    <Content Include="Scripts\jquery.sparkline.min.js" />
-    <Content Include="Scripts\jquery.ui.touch-punch.js" />
-    <Content Include="Scripts\jquery.uniform.min.js" />
-    <Content Include="Scripts\jquery.uploadify-3.1.min.js" />
+    <Content Include="Scripts\jquery.circliful.min.js" />
     <Content Include="ThongBao.aspx" />
     <Content Include="Nhan.aspx" />
     <Content Include="NhomSanPham.aspx" />
@@ -646,7 +595,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Accounts\Login.aspx.cs">
@@ -1017,13 +965,6 @@
     </Compile>
     <Compile Include="UserControl\tblThanhToan_DetailUC.ascx.designer.cs">
       <DependentUpon>tblThanhToan_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
