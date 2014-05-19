@@ -30,7 +30,7 @@ namespace HaBa
                     {
                         keyword = Request.QueryString["keyword"];
                         txtKeyWord.Text = keyword;
-                        DataSet ds = tblSanPhamDAO.SanPham_Search(RewriteUrl.Remove_Unicode_Character(Request.QueryString["keyword"]));
+                        DataSet ds = tblSanPhamDAO.SanPham_Search_Common(RewriteUrl.Remove_Unicode_Character(Request.QueryString["keyword"]));
                         rptResultSearch.DataSource = ds;
                         rptResultSearch.DataBind();
                         lblMsg.Text = "Tìm thấy " + ds.Tables[0].Rows.Count + " kết quả  (0,99 giây)";
@@ -63,6 +63,23 @@ namespace HaBa
             //rptResultSearch.DataSource = ds;
             //rptResultSearch.DataBind();
             //lblMsg.Text = "Tìm thấy " + ds.Tables[0].Rows.Count + " kết quả  (0,99 giây)";
+        }
+
+        protected void Search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblMsg.Text = "";
+                txtKeyWord.Text = "";
+                keyword = null;
+                DataSet ds = tblSanPhamDAO.SanPham_Search(AdvancedSearchUC1.objtblSanPhamEO);
+                lblMsg.Text = "Tìm thấy " + ds.Tables[0].Rows.Count + " kết quả  (0,99 giây)";
+                rptResultSearch.DataSource = ds;
+                rptResultSearch.DataBind();
+            }
+            catch
+            {
+            }
         }
 
         protected void lbtnAdvancedSearch_Click(object sender, EventArgs e)

@@ -70,7 +70,7 @@ a img { border-width: 0px; }
 .item-control.blog-admin { display: none; }
 #blog-pager { text-align: center; }
 .feed-links { clear: both; line-height: 2.5em; }
-#main-head { background: none repeat scroll 0% 0% rgb(45, 62, 80); height: 30px; float: left; width: 100%; z-index: 20; position: fixed; }m
+#main-head { background: none repeat scroll 0% 0% rgb(45, 62, 80); height: 30px; float: left; width: 100%; z-index: 20; position: fixed; }
 #header-wrapper { width: 1035px; margin: 0px auto; }
 #header-inner { background-position: center center; margin-left: auto; margin-right: auto; }
 #header { margin: 0px; float: left; }

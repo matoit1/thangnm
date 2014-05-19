@@ -19,9 +19,9 @@
 	    <div id="main-head">
             <uc1:MenuUC ID="MenuUC1" runat="server" />
 	    </div>
-        <div class="demo" style="z-index: 200; top:10px; right: 10px; float: right; position: fixed;">
+        <div style="z-index: 200; top:10px; right: 10px; float: right; position: fixed;">
             <asp:LinkButton ID="lbtnLogin" runat="server" style="text-decoration:none;" >Đăng nhập</asp:LinkButton>
-            <asp:LinkButton ID="lbtnLogout" runat="server" style="text-decoration:none;" onclick="lbtnLogout_Click">Thoát</asp:LinkButton>
+            <asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click">Thoát</asp:LinkButton>
         </div>
 	    <!-- Header [end] -->
 	    <div style="clear: both;"></div>

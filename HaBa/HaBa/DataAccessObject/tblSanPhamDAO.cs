@@ -362,10 +362,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 13. SanPham_Search </summary>
+        /// <summary> 13. SanPham_Search_Common </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet SanPham_Search(string keyword)
+        public static DataSet SanPham_Search_Common(string keyword)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -373,7 +373,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_Search", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_Search_Common", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@keyword", keyword));
 
@@ -393,6 +393,37 @@ namespace HaBa.DataAccessObject
                     //da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkImage2", _tblSanPhamEO.sLinkImage2));
                     //da.SelectCommand.Parameters.Add(new SqlParameter("@tLastUpdate", _tblSanPhamEO.tLastUpdate));
                     //da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblSanPhamEO.bStatus));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
+        /// <summary> 13. SanPham_Search </summary>
+        /// <param name="_tblSanPhamEO"></param>
+        /// <returns></returns>
+        public static DataSet SanPham_Search(tblSanPhamEO _tblSanPhamEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_Search", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sSanPhamID", (string.IsNullOrEmpty(_tblSanPhamEO.PK_sSanPhamID) == true) ? (object)DBNull.Value : _tblSanPhamEO.PK_sSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTenSanPham", (string.IsNullOrEmpty(_tblSanPhamEO.sTenSanPham) == true) ? (object)DBNull.Value : _tblSanPhamEO.sTenSanPham));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sMoTa", (string.IsNullOrEmpty(_tblSanPhamEO.sMoTa) == true) ? (object)DBNull.Value : _tblSanPhamEO.sMoTa));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sXuatXu", (string.IsNullOrEmpty(_tblSanPhamEO.sXuatXu) == true) ? (object)DBNull.Value : _tblSanPhamEO.sXuatXu));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@lGiaBan", _tblSanPhamEO.lGiaBan));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
