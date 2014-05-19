@@ -15,12 +15,14 @@ namespace HaMy
 {
     public partial class frmMoiQuanHe : Form
     {
+        #region "Form"
         public frmMoiQuanHe()
         {
             InitializeComponent();
         }
+        #endregion
 
-
+        #region LoadData
         public void BindDataGridView()
         {
             grvMoiQuanHe.Visible = false;
@@ -68,6 +70,7 @@ namespace HaMy
             lblPK_iMoiQuanHe.Text = "";
             lblsTen.Text = "";
         }
+        #endregion
 
         #region "Event Button"
         private void btnTimKiem_Click(object sender, EventArgs e)
