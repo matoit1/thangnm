@@ -179,6 +179,7 @@
             this.btnReset.TabIndex = 49;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnLamMoi
             // 

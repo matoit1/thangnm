@@ -12,6 +12,7 @@
     <AssemblyName>HaMy</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -154,6 +154,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\HaMy.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\HaMy_log.ldf">
+      <DependentUpon>HaMy.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
     <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
@@ -192,7 +199,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="ShareInterface\" />
     <Folder Include="UserControl\" />
   </ItemGroup>
