@@ -41,4 +41,3 @@
 		</div>
 	<!-- Search [end] -->
 </div>
-<asp:LinkButton ID="LinkButton1" runat="server" style="float: right;">Đăng nhập</asp:LinkButton>

@@ -1,37 +1,3 @@
-/* ::::: http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300 ::::: */
-
-@font-face {
-	font-family: "Open Sans";
-	font-style: normal;
-	font-weight: 300;
-	src: local("Open Sans Light"), local("OpenSans-Light"), url('dxi1orhcpsqm3vp6mxoatxhcuogz7vygh680lgh-uxm.woff') format("woff");
-}
-@font-face {
-	font-family: "Open Sans";
-	font-style: normal;
-	font-weight: 400;
-	src: local("Open Sans"), local("OpenSans"), url('cjzkeoubrn4kerxqtauh3t8e0i7kzn-epnyo3hzu7kw.woff') format("woff");
-}
-@font-face {
-	font-family: "Open Sans";
-	font-style: normal;
-	font-weight: 600;
-	src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url('mtp_ysujh_bn48vbg8snsnhcuogz7vygh680lgh-uxm.woff') format("woff");
-}
-@font-face {
-	font-family: "Open Sans";
-	font-style: normal;
-	font-weight: 700;
-	src: local("Open Sans Bold"), local("OpenSans-Bold"), url('k3k702zokiljc3wvjuplzhhcuogz7vygh680lgh-uxm.woff') format("woff");
-}
-@font-face {
-	font-family: "Open Sans";
-	font-style: normal;
-	font-weight: 800;
-	src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url('einbv5dfghoimmvb1xr-hnhcuogz7vygh680lgh-uxm.woff') format("woff");
-}
-/* ::::: https://www.blogger.com/static/v1/widgets/3841957138-widget_css_bundle.css ::::: */
-
 #blog-pager { margin: 1em 0px; text-align: center; overflow: hidden; }
 @media screen and (max-device-width: 480px) {
 }
@@ -104,7 +70,7 @@ a img { border-width: 0px; }
 .item-control.blog-admin { display: none; }
 #blog-pager { text-align: center; }
 .feed-links { clear: both; line-height: 2.5em; }
-#main-head { background: none repeat scroll 0% 0% rgb(45, 62, 80); height: 30px; float: left; width: 100%; z-index: 20; position: fixed; }
+#main-head { background: none repeat scroll 0% 0% rgb(45, 62, 80); height: 30px; float: left; width: 100%; z-index: 20; position: fixed; }m
 #header-wrapper { width: 1035px; margin: 0px auto; }
 #header-inner { background-position: center center; margin-left: auto; margin-right: auto; }
 #header { margin: 0px; float: left; }
@@ -173,17 +139,6 @@ ul.ticker-list { padding: 0px; }
 .pinterest-hover {background-image: url(Images/Home_pinterest-hover.png);}
 .tumblr-hover {background-image: url(Images/Home_tumblr-hover.png);}
 .instagram-hover {background-image: url(Images/Home_instagram-hover.png);}
-#newsletter { background: none repeat scroll 0% 0% rgb(251, 66, 72); width: 100%; float: left; padding-bottom: 20px; color: rgb(255, 255, 255); }
-#newsletter_wrapper { width: 980px; margin: auto; }
-#newsletter .FollowByEmail .follow-by-email-inner .follow-by-email-address { background: none repeat scroll 0% 0% rgb(225, 52, 58); border: 0px none; padding: 13px 10px 13.5px; width: 300px; border-radius: 4px 0px 0px 4px; font-family: open sans; float: left; color: rgb(251, 127, 127); font-size: 16px; }
-#newsletter .FollowByEmail .follow-by-email-inner .follow-by-email-submit { background: none repeat scroll 0% 0% rgb(45, 62, 80); padding: 12px 30px; float: left; width: auto ! important; height: auto ! important; margin: 0px; font-family: open sans; font-size: 18px; font-weight: 700; border-top-left-radius: 0px; border-bottom-left-radius: 0px; }
-#newsletter td { padding: 0px; float: left; }
-#newsletter #feedburner_sub { font-family: open sans; }
-#newsletter_wrapper h2 { color: rgb(255, 255, 255); font-weight: 600; font-size: 30px; letter-spacing: -1px; }
-#newsletter_wrapper .widget-content { float: left; width: 100%; }
-#feedburner_sub { float: left; width: 470px; }
-#secound_sub { float: right; width: 470px; }
-#home_navigation { float: left; width: 100%; margin-bottom: 30px; margin-top: 50px; }
 .home_nav li a { float: left; background: none repeat scroll 0% 0% rgb(45, 62, 80); padding: 5px 27px; margin-left: 30px; border-radius: 4px; color: rgb(255, 255, 255); text-decoration: none; }
 .home_nav li { display: block; }
 .line-home { float: left; background: url('Images/Home_backline.png') no-repeat scroll 0% 0% transparent; width: 981px; margin-left: -3px; height: 17px; }
@@ -347,3 +302,4 @@ ul { list-style-type: disc; }
 .tabviewsection { margin-bottom: 40px; }
 .PopularPosts .widget-content ul li { border-bottom: 1px solid rgb(231, 231, 231); padding: 0.7em 0px; background: none repeat scroll 0% 0% transparent; }
 .widget-container { list-style: none outside none; margin: 0px 0px 15px; padding: 0px; color: rgb(55, 65, 66); font-size: 13px; }
+
