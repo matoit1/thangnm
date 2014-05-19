@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using HaMy.EntityObject;
+using HaMy.SharedLibraries;
+using HaBa.SharedLibraries;
 
 namespace HaMy
 {
@@ -15,20 +18,103 @@ namespace HaMy
         {
             InitializeComponent();
         }
+        public void BindDataDetail(tblCuocHenEO _tblCuocHenEO)
+        {
+            txtPK_lCuocHen.Text = Convert.ToString(_tblCuocHenEO.PK_lCuocHen);
+            try { cboFK_iNguoiDung.SelectedValue = Convert.ToString(_tblCuocHenEO.FK_iNguoiDung); }
+            catch { cboFK_iNguoiDung.SelectedIndex = 0; }
+            try { cboFK_iDoiTac.SelectedValue = Convert.ToString(_tblCuocHenEO.FK_iDoiTac); }
+            catch { cboFK_iDoiTac.SelectedIndex = 0; }
+            txtsNoiDung.Text = Convert.ToString(_tblCuocHenEO.sNoiDung);
+            txtsDiaDiem.Text = Convert.ToString(_tblCuocHenEO.sDiaDiem);
+            txttNgayGioBatDau.Text = Convert.ToString(_tblCuocHenEO.tNgayGioBatDau);
+            txttNgayGioKetThuc.Text = Convert.ToString(_tblCuocHenEO.tNgayGioKetThuc);
+            try { cboiTrangThai.SelectedValue = Convert.ToString(_tblCuocHenEO.iTrangThai); }
+            catch { cboiTrangThai.SelectedIndex = 0; }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        }
+
+        public tblCuocHenEO getObject()
+        {
+            try
+            {
+                tblCuocHenEO _tblCuocHenEO = new tblCuocHenEO();
+                _tblCuocHenEO.PK_lCuocHen = Convert.ToInt64(txtPK_lCuocHen.Text);
+                try { _tblCuocHenEO.FK_iNguoiDung = Convert.ToInt16(cboFK_iNguoiDung.SelectedValue); }
+                catch { cboFK_iNguoiDung.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblCuocHenEO.FK_iNguoiDung = 0; }
+                try { _tblCuocHenEO.FK_iDoiTac = Convert.ToInt32(cboFK_iDoiTac.SelectedValue); }
+                catch { cboFK_iDoiTac.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblCuocHenEO.FK_iDoiTac = 0; }
+                _tblCuocHenEO.sNoiDung = Convert.ToString(txtsNoiDung.Text);
+                _tblCuocHenEO.sDiaDiem = Convert.ToString(txtsDiaDiem.Text);
+                _tblCuocHenEO.tNgayGioBatDau = Convert.ToDateTime(txttNgayGioBatDau.Text);
+                _tblCuocHenEO.tNgayGioKetThuc = Convert.ToDateTime(txttNgayGioKetThuc.Text);
+                try { _tblCuocHenEO.iTrangThai = Convert.ToInt16(cboiTrangThai.SelectedValue); }
+                catch { cboiTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblCuocHenEO.iTrangThai = 0; }
+                return _tblCuocHenEO;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void loadDataToDropDownList()
+        {
+            cboFK_iNguoiDung.DataSource = GetListConstants.TaiKhoan_iTrangThai_GLC();
+            cboFK_iNguoiDung.DisplayMember = "Value";
+            cboFK_iNguoiDung.ValueMember = "Key";
+
+            cboFK_iDoiTac.DataSource = GetListConstants.TaiKhoan_iTrangThai_GLC();
+            cboFK_iDoiTac.DisplayMember = "Value";
+            cboFK_iDoiTac.ValueMember = "Key";
+
+            cboiTrangThai.DataSource = GetListConstants.TaiKhoan_iTrangThai_GLC();
+            cboiTrangThai.DisplayMember = "Value";
+            cboiTrangThai.ValueMember = "Key";
+        }
+
+        public void ClearMessages()
+        {
+            lblPK_lCuocHen.Text = "";
+            lblFK_iNguoiDung.Text = "";
+            lblFK_iDoiTac.Text = "";
+            lblsNoiDung.Text = "";
+            lblsDiaDiem.Text = "";
+            lbltNgayGioBatDau.Text = "";
+            lbltNgayGioKetThuc.Text = "";
+            lbliTrangThai.Text = "";
+        }
+
+        #region "Event Button"
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lbltNgayGioBatDau_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

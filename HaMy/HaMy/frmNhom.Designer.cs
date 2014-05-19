@@ -69,14 +69,14 @@
             // 
             this.txtPK_iNhom.Location = new System.Drawing.Point(221, 109);
             this.txtPK_iNhom.Name = "txtPK_iNhom";
-            this.txtPK_iNhom.Size = new System.Drawing.Size(100, 20);
+            this.txtPK_iNhom.Size = new System.Drawing.Size(226, 20);
             this.txtPK_iNhom.TabIndex = 2;
             // 
             // txtsTenNhom
             // 
             this.txtsTenNhom.Location = new System.Drawing.Point(221, 147);
             this.txtsTenNhom.Name = "txtsTenNhom";
-            this.txtsTenNhom.Size = new System.Drawing.Size(100, 20);
+            this.txtsTenNhom.Size = new System.Drawing.Size(226, 20);
             this.txtsTenNhom.TabIndex = 3;
             // 
             // btnTimKiem
@@ -87,6 +87,7 @@
             this.btnTimKiem.TabIndex = 4;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThem
             // 
@@ -151,7 +152,7 @@
             // lblPK_iNhom
             // 
             this.lblPK_iNhom.AutoSize = true;
-            this.lblPK_iNhom.Location = new System.Drawing.Point(369, 116);
+            this.lblPK_iNhom.Location = new System.Drawing.Point(476, 116);
             this.lblPK_iNhom.Name = "lblPK_iNhom";
             this.lblPK_iNhom.Size = new System.Drawing.Size(35, 13);
             this.lblPK_iNhom.TabIndex = 10;
@@ -160,7 +161,7 @@
             // lblsTenNhom
             // 
             this.lblsTenNhom.AutoSize = true;
-            this.lblsTenNhom.Location = new System.Drawing.Point(369, 154);
+            this.lblsTenNhom.Location = new System.Drawing.Point(476, 150);
             this.lblsTenNhom.Name = "lblsTenNhom";
             this.lblsTenNhom.Size = new System.Drawing.Size(35, 13);
             this.lblsTenNhom.TabIndex = 11;
@@ -205,7 +206,6 @@
             this.Controls.Add(this.label1);
             this.Name = "frmNhom";
             this.Text = "Nhóm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNhom_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.grvNhom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

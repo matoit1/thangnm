@@ -65,7 +65,7 @@ namespace HaMy
         public void loadDataToDropDownList()
         {
 
-            cboiTrangThai.DataSource = GetListConstants.SanPham_iTrangThai_GLC();
+            cboiTrangThai.DataSource = GetListConstants.TaiKhoan_iTrangThai_GLC();
             cboiTrangThai.DisplayMember  = "Value";
             cboiTrangThai.ValueMember = "Key";
         }

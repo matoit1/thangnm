@@ -53,7 +53,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.cboiTrangThai = new System.Windows.Forms.ComboBox();
             this.rbtnbGioiTinh = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbtnbGioiTinh2 = new System.Windows.Forms.RadioButton();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -123,7 +123,6 @@
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Địa Chỉ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -291,6 +290,7 @@
             // rbtnbGioiTinh
             // 
             this.rbtnbGioiTinh.AutoSize = true;
+            this.rbtnbGioiTinh.Checked = true;
             this.rbtnbGioiTinh.Location = new System.Drawing.Point(191, 252);
             this.rbtnbGioiTinh.Name = "rbtnbGioiTinh";
             this.rbtnbGioiTinh.Size = new System.Drawing.Size(47, 17);
@@ -299,16 +299,15 @@
             this.rbtnbGioiTinh.Text = "Nam";
             this.rbtnbGioiTinh.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtnbGioiTinh2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(273, 252);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 28;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtnbGioiTinh2.AutoSize = true;
+            this.rbtnbGioiTinh2.Location = new System.Drawing.Point(273, 252);
+            this.rbtnbGioiTinh2.Name = "rbtnbGioiTinh2";
+            this.rbtnbGioiTinh2.Size = new System.Drawing.Size(39, 17);
+            this.rbtnbGioiTinh2.TabIndex = 28;
+            this.rbtnbGioiTinh2.Text = "Nữ";
+            this.rbtnbGioiTinh2.UseVisualStyleBackColor = true;
             // 
             // btnTimKiem
             // 
@@ -318,6 +317,7 @@
             this.btnTimKiem.TabIndex = 29;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThem
             // 
@@ -577,7 +577,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.rbtnbGioiTinh2);
             this.Controls.Add(this.rbtnbGioiTinh);
             this.Controls.Add(this.cboiTrangThai);
             this.Controls.Add(this.lblTitle);
@@ -638,7 +638,7 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cboiTrangThai;
         private System.Windows.Forms.RadioButton rbtnbGioiTinh;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbtnbGioiTinh2;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
