@@ -203,6 +203,33 @@ namespace HaBa.DataAccessObject
             }
         }
 
+        /// <summary> 8. ThanhToan_SelectListByiTrangThai </summary>
+        /// <param name="_tblThanhToanEO"></param>
+        /// <returns></returns>
+        public static DataSet ThanhToan_SelectListByiTrangThai(tblThanhToanEO _tblThanhToanEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblThanhToan_SelectListByiTrangThai", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblThanhToanEO.iTrangThai));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
         /// <summary> 9. ThanhToan_Search </summary>
         /// <param name="_tblThanhToanEO"></param>
         /// <returns></returns>

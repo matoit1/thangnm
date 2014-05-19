@@ -13,7 +13,16 @@ namespace HaBa.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (Request.QueryString["iTrangThai"] != null)
+                {
+                    tblHoaDon_ListUC1.iTrangThai = Convert.ToInt16(Request.QueryString["iTrangThai"]);
+                }
+            }
+            catch
+            {
+            }
         }
 
         public override void VerifyRenderingInServerForm(Control control)

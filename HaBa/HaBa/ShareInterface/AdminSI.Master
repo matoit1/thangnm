@@ -60,7 +60,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"> <img alt="Perfectum Dashboard" src="../App_Themes/img/logo20.png" /> <span class="hidden-phone">HaBa Dashboard</span></a>
+				<a class="brand" href="../Default.aspx"> <img alt="Perfectum Dashboard" src="../App_Themes/img/logo20.png" /> <span class="hidden-phone">Trang Chủ HaBa</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -328,15 +328,16 @@
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-tags"></i><span class="hidden-tablet">Nhóm sản phẩm</span></a>
 							<ul>
-								<li><a class="submenu" href="../Admin/NhomSanPham.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Nhóm sản phẩm đang mở</span></a></li>
-								<li><a class="submenu" href="../Admin/NhomSanPham.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Nhóm sản phẩm đang khóa</span></a></li>
+								<li><a class="submenu" href="../Admin/NhomSanPham.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Nhóm sản phẩm Mở</span></a></li>
+								<li><a class="submenu" href="../Admin/NhomSanPham.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Nhóm sản phẩm Khóa</span></a></li>
 							</ul>	
 						</li>
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-tag"></i><span class="hidden-tablet">Sản phẩm</span></a>
 							<ul>
-								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Sản phẩm đang mở</span></a></li>
-								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Sản phẩm đang khóa</span></a></li>
+								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Sản phẩm Mở</span></a></li>
+								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=2"><i class="icon-warning-sign"></i><span class="hidden-tablet"> Sản phẩm Hết hàng</span></a></li>
+								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=3"><i class="icon-remove"></i><span class="hidden-tablet"> Sản phẩm Khóa</span></a></li>
 							</ul>	
 						</li>
                         <li>
@@ -345,6 +346,13 @@
 								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=1"><i class="icon-stop"></i><span class="hidden-tablet"> Đã xử lý</span></a></li>
 								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=2"><i class="icon-play"></i><span class="hidden-tablet"> Chưa xử lý</span></a></li>
 								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=3"><i class="icon-remove-sign"></i><span class="hidden-tablet"> Đã hủy</span></a></li>
+							</ul>	
+						</li>
+                        <li>
+							<a class="dropmenu" href="#"><i class="icon-plane"></i><span class="hidden-tablet">Thanh toán</span></a>
+							<ul>
+								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Thanh Toán Mở</span></a></li>
+								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Thanh toán Khóa</span></a></li>
 							</ul>	
 						</li>
                         <li><a href="#"><i class="icon-hdd"></i><span class="hidden-tablet">Database</span></a></li>

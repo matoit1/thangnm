@@ -9,6 +9,7 @@ using HaBa.SharedLibraries;
 using System.Drawing;
 using System.IO;
 using HaBa.DataAccessObject;
+using HaBa.EntityObject;
 
 namespace HaBa.UserControl
 {
@@ -24,6 +25,13 @@ namespace HaBa.UserControl
         {
             get { return this._PK_iTaiKhoanID; }
             set { _PK_iTaiKhoanID = value; }
+        }
+
+        private Int16 _iQuyenHan;
+        public Int16 iQuyenHan
+        {
+            get { return this._iQuyenHan; }
+            set { _iQuyenHan = value; }
         }
 
         public string typesearch
@@ -48,7 +56,9 @@ namespace HaBa.UserControl
             DataSet dsBaiViet = new DataSet();
             try
             {
-                dsBaiViet = tblTaiKhoanDAO.TaiKhoan_SelectList();
+                tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                _tblTaiKhoanEO.iQuyenHan = iQuyenHan;
+                dsBaiViet = tblTaiKhoanDAO.TaiKhoan_SelectListByiQuyenHan(_tblTaiKhoanEO);
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
