@@ -29,10 +29,10 @@ namespace HaBa.UserControl
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            string strValue = Page.Request.Form["txtlGiaBan"].ToString();
-            lblMsg.Text = strValue; 
+            //string strValue = Page.Request.Form["txtlGiaBan"].ToString();
             if (Search != null)
             {
+                getObject();
                 Search(this, EventArgs.Empty);
             }
         }
@@ -47,11 +47,13 @@ namespace HaBa.UserControl
 
         public void getObject()
         {
-            objtblSanPhamEO.PK_sSanPhamID = Convert.ToString(txtPK_sSanPhamID.Text);
-            objtblSanPhamEO.sTenSanPham = txtsTenSanPham.Text;
-            objtblSanPhamEO.lGiaBan = Convert.ToInt64(Page.Request.Form["txtlGiaBan"].ToString());
-            objtblSanPhamEO.sMoTa = txtsMoTa.Text;
-            objtblSanPhamEO.sXuatXu = txtsXuatXu.Text;
+            tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
+            _tblSanPhamEO.PK_sSanPhamID = Convert.ToString(txtPK_sSanPhamID.Text).Trim();
+            _tblSanPhamEO.sTenSanPham = txtsTenSanPham.Text.Trim();
+            _tblSanPhamEO.sMoTa = txtsMoTa.Text.Trim();
+            _tblSanPhamEO.sXuatXu = txtsXuatXu.Text.Trim();
+            _tblSanPhamEO.lGiaBan = Convert.ToInt64(Page.Request.Form["txtlGiaBan"].ToString());
+            objtblSanPhamEO = _tblSanPhamEO;
         }
 
         public void clearObject()

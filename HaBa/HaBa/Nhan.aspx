@@ -20,13 +20,13 @@
         .tableft
         {
             float: left;
-            width: 300px;
+            width: 200px;
             padding: 5px;
         }
         .tabright
         {
             float: right;
-            width: 650px;
+            width: 750px;
         }
     </style>
 <div class="clear"></div>
@@ -37,7 +37,7 @@
         <asp:Button ID="btnSearch" runat="server" Width="90px" Height="37px" Text="Tìm kiếm" onclick="btnSearch_Click" />
         <asp:LinkButton ID="lbtnAdvancedSearch" runat="server" onclick="lbtnAdvancedSearch_Click">Tìm kiếm nâng cao</asp:LinkButton>
     </asp:Panel>
-    <uc1:AdvancedSearchUC ID="AdvancedSearchUC1" runat="server" Visible="false"/>
+    <uc1:AdvancedSearchUC ID="AdvancedSearchUC1" runat="server" Visible="false" OnSearch="Search_Click"/>
     <h4><i><asp:Label ID="lblMsg" runat="server"></asp:Label></i></h4>
     <asp:Repeater ID="rptResultSearch" runat="server" onitemdatabound="rptResultSearch_ItemDataBound">
         <ItemTemplate>
@@ -50,11 +50,10 @@
                         <%--<img src='<%# Eval("sLinkImage")%>' alt='<%# Eval("sTenSanPham")%>' width="100px" height="100px" />--%>
                     </div>
                     <div class="tabright">
+                        Xuất xứ: <asp:Label ID="lblsXuatXu" runat="server" Text='<%# Eval("sXuatXu") %>'></asp:Label><br />
+                        Giá bán: <asp:Label ID="lbllGiaBan" runat="server" Text='<%# Eval("lGiaBan") %>'></asp:Label><br />
+                        Trạng thái: <asp:Label ID="lbliTrangThai" runat="server" Text='<%# Eval("iTrangThai")%>'></asp:Label><br /><br />
                         <asp:Label ID="lblsMoTa" runat="server" Text='<%# Eval("sMoTa") %>'></asp:Label><br />
-                        <%--<asp:Label ID="lblsInfomation" runat="server" Text='<%# Eval("sInfomation") %>'></asp:Label><br />--%>
-                        <asp:Label ID="lblsXuatXu" runat="server" Text='<%# Eval("sXuatXu") %>'></asp:Label><br />
-                        <asp:Label ID="lbllGiaBan" runat="server" Text='<%# Eval("lGiaBan") %>'></asp:Label><br />
-                        <asp:Label ID="lbliTrangThai" runat="server" Text='<%# Eval("iTrangThai")%>'></asp:Label><br />
                     </div>
                 </asp:HyperLink>
             </fieldset>
