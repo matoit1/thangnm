@@ -351,8 +351,16 @@
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-plane"></i><span class="hidden-tablet">Thanh toán</span></a>
 							<ul>
-								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Thanh Toán Mở</span></a></li>
-								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Thanh toán Khóa</span></a></li>
+								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Thanh Toán Mở</span></a></li>
+								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Thanh toán Khóa</span></a></li>
+							</ul>	
+						</li>
+                        <li>
+							<a class="dropmenu" href="#"><i class="icon-print"></i><span class="hidden-tablet">Báo cáo</span></a>
+							<ul>
+								<li><a class="submenu" href="../Report/BaoCao_SanPham.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Sản phẩm</span></a></li>
+								<li><a class="submenu" href="../Report/BaoCao_TaiKhoan.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Khách hàng</span></a></li>
+								<li><a class="submenu" href="../Report/BaoCao_HoaDon.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Hóa đơn</span></a></li>
 							</ul>	
 						</li>
                         <li><a href="#"><i class="icon-hdd"></i><span class="hidden-tablet">Database</span></a></li>

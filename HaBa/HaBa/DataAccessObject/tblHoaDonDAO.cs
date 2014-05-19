@@ -270,7 +270,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblHoaDon_SelectList", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblHoaDon_SelectListByiTrangThai", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblHoaDonEO.iTrangThai));
                     dsOutput = new DataSet();
