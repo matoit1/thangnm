@@ -497,6 +497,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmNguoiDung";
             this.Text = "Người Dùng";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.grvNguoiDung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

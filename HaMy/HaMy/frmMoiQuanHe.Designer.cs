@@ -35,7 +35,7 @@
             this.lblsTen = new System.Windows.Forms.Label();
             this.txtPK_iMoiQuanHe = new System.Windows.Forms.TextBox();
             this.txtsTen = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grvMoiQuanHe = new System.Windows.Forms.DataGridView();
             this.PK_iMoiQuanHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -44,7 +44,8 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblMsg = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.grvMoiQuanHe)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -109,16 +110,16 @@
             this.txtsTen.Size = new System.Drawing.Size(100, 20);
             this.txtsTen.TabIndex = 16;
             // 
-            // dataGridView1
+            // grvMoiQuanHe
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grvMoiQuanHe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvMoiQuanHe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PK_iMoiQuanHe,
             this.sTen});
-            this.dataGridView1.Location = new System.Drawing.Point(38, 292);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(630, 150);
-            this.dataGridView1.TabIndex = 17;
+            this.grvMoiQuanHe.Location = new System.Drawing.Point(38, 292);
+            this.grvMoiQuanHe.Name = "grvMoiQuanHe";
+            this.grvMoiQuanHe.Size = new System.Drawing.Size(630, 150);
+            this.grvMoiQuanHe.TabIndex = 17;
             // 
             // PK_iMoiQuanHe
             // 
@@ -148,6 +149,7 @@
             this.btnThem.TabIndex = 19;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -157,6 +159,7 @@
             this.btnSua.TabIndex = 20;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -166,6 +169,7 @@
             this.btnXoa.TabIndex = 21;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnReset
             // 
@@ -184,19 +188,30 @@
             this.btnLamMoi.TabIndex = 48;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // lblMsg
+            // 
+            this.lblMsg.AutoSize = true;
+            this.lblMsg.Location = new System.Drawing.Point(304, 68);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(35, 13);
+            this.lblMsg.TabIndex = 50;
+            this.lblMsg.Text = "label3";
             // 
             // frmMoiQuanHe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 454);
+            this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grvMoiQuanHe);
             this.Controls.Add(this.txtsTen);
             this.Controls.Add(this.txtPK_iMoiQuanHe);
             this.Controls.Add(this.lblsTen);
@@ -206,7 +221,9 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "frmMoiQuanHe";
             this.Text = "Mối Quan Hệ";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMoiQuanHe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grvMoiQuanHe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +238,7 @@
         private System.Windows.Forms.Label lblsTen;
         private System.Windows.Forms.TextBox txtPK_iMoiQuanHe;
         private System.Windows.Forms.TextBox txtsTen;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grvMoiQuanHe;
         private System.Windows.Forms.DataGridViewTextBoxColumn PK_iMoiQuanHe;
         private System.Windows.Forms.DataGridViewTextBoxColumn sTen;
         private System.Windows.Forms.Button btnTimKiem;
@@ -230,5 +247,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.Label lblMsg;
     }
 }

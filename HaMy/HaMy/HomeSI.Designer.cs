@@ -105,6 +105,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "HomeSI";
             this.Text = "Phần mềm quản lý lịch hẹn - Nguyễn Thị Hà My";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
