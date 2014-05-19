@@ -29,79 +29,71 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.nhomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nguoiDungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moiQuanHeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doiTacToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuocHenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thongTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeOtherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiNhom = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiNguoiDung = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiMoiQuanHe = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDoiTac = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCuocHen = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeOtherToolStripMenuItem,
-            this.nhomToolStripMenuItem,
-            this.nguoiDungToolStripMenuItem,
-            this.moiQuanHeToolStripMenuItem,
-            this.doiTacToolStripMenuItem,
-            this.cuocHenToolStripMenuItem,
-            this.thongTinToolStripMenuItem});
+            this.tsmiNhom,
+            this.tsmiNguoiDung,
+            this.tsmiMoiQuanHe,
+            this.tsmiDoiTac,
+            this.tsmiCuocHen,
+            this.tsmiThoat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(952, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // nhomToolStripMenuItem
+            // tsmiNhom
             // 
-            this.nhomToolStripMenuItem.Name = "nhomToolStripMenuItem";
-            this.nhomToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.nhomToolStripMenuItem.Text = "Nhom";
-            this.nhomToolStripMenuItem.Click += new System.EventHandler(this.nhomToolStripMenuItem_Click);
+            this.tsmiNhom.Name = "tsmiNhom";
+            this.tsmiNhom.Size = new System.Drawing.Size(53, 20);
+            this.tsmiNhom.Text = "Nhóm";
+            this.tsmiNhom.Click += new System.EventHandler(this.tsmiNhom_Click);
             // 
-            // nguoiDungToolStripMenuItem
+            // tsmiNguoiDung
             // 
-            this.nguoiDungToolStripMenuItem.Name = "nguoiDungToolStripMenuItem";
-            this.nguoiDungToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.nguoiDungToolStripMenuItem.Text = "NguoiDung";
-            this.nguoiDungToolStripMenuItem.Click += new System.EventHandler(this.nguoiDungToolStripMenuItem_Click);
+            this.tsmiNguoiDung.Name = "tsmiNguoiDung";
+            this.tsmiNguoiDung.Size = new System.Drawing.Size(83, 20);
+            this.tsmiNguoiDung.Text = "Người dùng";
+            this.tsmiNguoiDung.Click += new System.EventHandler(this.tsmiNguoiDung_Click);
             // 
-            // moiQuanHeToolStripMenuItem
+            // tsmiMoiQuanHe
             // 
-            this.moiQuanHeToolStripMenuItem.Name = "moiQuanHeToolStripMenuItem";
-            this.moiQuanHeToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.moiQuanHeToolStripMenuItem.Text = "MoiQuanHe";
-            this.moiQuanHeToolStripMenuItem.Click += new System.EventHandler(this.moiQuanHeToolStripMenuItem_Click);
+            this.tsmiMoiQuanHe.Name = "tsmiMoiQuanHe";
+            this.tsmiMoiQuanHe.Size = new System.Drawing.Size(86, 20);
+            this.tsmiMoiQuanHe.Text = "Mối quan hệ";
+            this.tsmiMoiQuanHe.Click += new System.EventHandler(this.tsmiMoiQuanHe_Click);
             // 
-            // doiTacToolStripMenuItem
+            // tsmiDoiTac
             // 
-            this.doiTacToolStripMenuItem.Name = "doiTacToolStripMenuItem";
-            this.doiTacToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.doiTacToolStripMenuItem.Text = "DoiTac";
-            this.doiTacToolStripMenuItem.Click += new System.EventHandler(this.doiTacToolStripMenuItem_Click);
+            this.tsmiDoiTac.Name = "tsmiDoiTac";
+            this.tsmiDoiTac.Size = new System.Drawing.Size(56, 20);
+            this.tsmiDoiTac.Text = "Đối tác";
+            this.tsmiDoiTac.Click += new System.EventHandler(this.tsmiDoiTac_Click);
             // 
-            // cuocHenToolStripMenuItem
+            // tsmiCuocHen
             // 
-            this.cuocHenToolStripMenuItem.Name = "cuocHenToolStripMenuItem";
-            this.cuocHenToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.cuocHenToolStripMenuItem.Text = "CuocHen";
-            this.cuocHenToolStripMenuItem.Click += new System.EventHandler(this.cuocHenToolStripMenuItem_Click);
+            this.tsmiCuocHen.Name = "tsmiCuocHen";
+            this.tsmiCuocHen.Size = new System.Drawing.Size(70, 20);
+            this.tsmiCuocHen.Text = "Cuộc hẹn";
+            this.tsmiCuocHen.Click += new System.EventHandler(this.tsmiCuocHen_Click);
             // 
-            // thongTinToolStripMenuItem
+            // tsmiThoat
             // 
-            this.thongTinToolStripMenuItem.Name = "thongTinToolStripMenuItem";
-            this.thongTinToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.thongTinToolStripMenuItem.Text = "ThongTin";
-            // 
-            // closeOtherToolStripMenuItem
-            // 
-            this.closeOtherToolStripMenuItem.Name = "closeOtherToolStripMenuItem";
-            this.closeOtherToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.closeOtherToolStripMenuItem.Text = "CloseOther";
-            this.closeOtherToolStripMenuItem.Click += new System.EventHandler(this.closeOtherToolStripMenuItem_Click);
+            this.tsmiThoat.Name = "tsmiThoat";
+            this.tsmiThoat.Size = new System.Drawing.Size(50, 20);
+            this.tsmiThoat.Text = "Thoát";
+            this.tsmiThoat.Click += new System.EventHandler(this.tsmiThoat_Click);
             // 
             // HomeSI
             // 
@@ -123,12 +115,11 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem nhomToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nguoiDungToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem moiQuanHeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem doiTacToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cuocHenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thongTinToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeOtherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiNhom;
+        private System.Windows.Forms.ToolStripMenuItem tsmiNguoiDung;
+        private System.Windows.Forms.ToolStripMenuItem tsmiMoiQuanHe;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDoiTac;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCuocHen;
+        private System.Windows.Forms.ToolStripMenuItem tsmiThoat;
     }
 }

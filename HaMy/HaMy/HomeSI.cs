@@ -16,47 +16,52 @@ namespace HaMy
             InitializeComponent();
         }
 
-        private void nhomToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiNhom_Click(object sender, EventArgs e)
         {
+            CloseAllWindowsChild();
             frmNhom _frmNhom = new frmNhom();
             _frmNhom.MdiParent = this;
             _frmNhom.Show();
-            nhomToolStripMenuItem.Enabled = false;
         }
 
-        private void nguoiDungToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiNguoiDung_Click(object sender, EventArgs e)
         {
+            CloseAllWindowsChild();
             frmNguoiDung _frmNguoiDung = new frmNguoiDung();
             _frmNguoiDung.MdiParent = this;
             _frmNguoiDung.Show();
-            nguoiDungToolStripMenuItem.Enabled = false;
         }
 
-        private void moiQuanHeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiMoiQuanHe_Click(object sender, EventArgs e)
         {
+            CloseAllWindowsChild();
             frmMoiQuanHe _frmMoiQuanHe = new frmMoiQuanHe();
             _frmMoiQuanHe.MdiParent = this;
             _frmMoiQuanHe.Show();
-            moiQuanHeToolStripMenuItem.Enabled = false;
         }
 
-        private void doiTacToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiDoiTac_Click(object sender, EventArgs e)
         {
+            CloseAllWindowsChild();
             frmDoiTac _frmDoiTac = new frmDoiTac();
             _frmDoiTac.MdiParent = this;
             _frmDoiTac.Show();
-            doiTacToolStripMenuItem.Enabled = false;
         }
 
-        private void cuocHenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiCuocHen_Click(object sender, EventArgs e)
         {
+            CloseAllWindowsChild();
             frmCuocHen _frmCuocHen = new frmCuocHen();
             _frmCuocHen.MdiParent = this;
             _frmCuocHen.Show();
-            cuocHenToolStripMenuItem.Enabled = false;
         }
 
-        private void closeOtherToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void CloseAllWindowsChild()
         {
             foreach (Form chirdForm in MdiChildren)
             {
