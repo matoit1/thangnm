@@ -26,17 +26,21 @@ namespace HaBa.Report
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["PK_lHoaDonID"] != null)
+            try
             {
-                dsHaBa_Common = new dsHaBa();
-                Int64 PK_lHoaDonID = Convert.ToInt64(Request.QueryString["PK_lHoaDonID"]);
-                ReportDocument crystalReport = new ReportDocument();
-                crystalReport.Load(Server.MapPath("~/Report/HoaDonRP.rpt"));
-                GetDataHoaDon("select * from tblHoaDon where PK_lHoaDonID = " + PK_lHoaDonID);
-                GetDataChiTietHoaDon("select * from tblChiTietHoaDon where FK_lHoaDonID = " + PK_lHoaDonID);
-                crystalReport.SetDataSource(_dsHaBa);
-                crvHoaDon.ReportSource = crystalReport;
+                if (Request.QueryString["PK_lHoaDonID"] != null)
+                {
+                    dsHaBa_Common = new dsHaBa();
+                    Int64 PK_lHoaDonID = Convert.ToInt64(Request.QueryString["PK_lHoaDonID"]);
+                    ReportDocument crystalReport = new ReportDocument();
+                    crystalReport.Load(Server.MapPath("~/Report/HoaDonRP.rpt"));
+                    GetDataHoaDon("select * from tblHoaDon where PK_lHoaDonID = " + PK_lHoaDonID);
+                    GetDataChiTietHoaDon("select * from tblChiTietHoaDon where FK_lHoaDonID = " + PK_lHoaDonID);
+                    crystalReport.SetDataSource(_dsHaBa);
+                    crvHoaDon.ReportSource = crystalReport;
+                }
             }
+            catch { }
         }
 
         private void GetDataHoaDon(string query)

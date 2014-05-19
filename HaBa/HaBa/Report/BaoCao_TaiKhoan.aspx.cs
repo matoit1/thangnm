@@ -16,12 +16,15 @@ namespace HaBa.Report
     public partial class BaoCao_TaiKhoan : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {try
+            {
             ReportDocument crystalReport = new ReportDocument();
             crystalReport.Load(Server.MapPath("~/Report/TaiKhoanRP.rpt"));
             dsHaBa _dsHaBa = GetData("select * from tblTaiKhoan");
             crystalReport.SetDataSource(_dsHaBa);
             crvTaiKhoan.ReportSource = crystalReport;
+            }
+        catch { }
         }
 
         private dsHaBa GetData(string query)
