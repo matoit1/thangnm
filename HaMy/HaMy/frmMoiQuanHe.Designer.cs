@@ -94,7 +94,6 @@
             this.lblsTen.Size = new System.Drawing.Size(35, 13);
             this.lblsTen.TabIndex = 14;
             this.lblsTen.Text = "label4";
-            this.lblsTen.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtPK_iMoiQuanHe
             // 
@@ -139,6 +138,7 @@
             this.btnTimKiem.TabIndex = 18;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnThem
             // 

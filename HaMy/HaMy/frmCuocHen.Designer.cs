@@ -135,7 +135,6 @@
             this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 30;
             this.label6.Text = "Ngày giờ bắt đầu";
-            this.label6.Click += new System.EventHandler(this.lbltNgayGioBatDau_Click);
             // 
             // label7
             // 
@@ -199,7 +198,6 @@
             this.txtsDiaDiem.Name = "txtsDiaDiem";
             this.txtsDiaDiem.Size = new System.Drawing.Size(172, 20);
             this.txtsDiaDiem.TabIndex = 38;
-            this.txtsDiaDiem.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtsNoiDung
             // 
@@ -277,7 +275,7 @@
             this.lbltNgayGioKetThuc.Size = new System.Drawing.Size(35, 13);
             this.lbltNgayGioKetThuc.TabIndex = 47;
             this.lbltNgayGioKetThuc.Text = "label7";
-            this.lbltNgayGioKetThuc.Click += new System.EventHandler(this.label7_Click);
+
             // 
             // lbliTrangThai
             // 
@@ -341,6 +339,7 @@
             this.btnTimKiem.TabIndex = 49;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // dataGridView1
             // 
