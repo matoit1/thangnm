@@ -15,11 +15,20 @@ namespace HaMy
 {
     public partial class frmNhom : Form
     {
+        #region "Form"
         public frmNhom()
         {
             InitializeComponent();
         }
+        
+        private void frmNhom_Load(object sender, EventArgs e)
+        {
+            txtPK_iNhom.Enabled = false;
+            BindDataGridView();
+        }
+        #endregion
 
+        #region LoadData
         public void BindDataGridView()
         {
             grvNhom.Visible = false;
@@ -67,6 +76,20 @@ namespace HaMy
             lblPK_iNhom.Text = "";
             lblsTenNhom.Text = "";
         }
+        #endregion
+
+        #region "Event DataGridView"
+        private void grvNhom_SelectionChanged(object sender, EventArgs e)
+        {
+            tblNhomEO _tblNhomEO = new tblNhomEO();
+            foreach (DataGridViewRow row in grvNhom.SelectedRows)
+            {
+                _tblNhomEO.PK_iNhom = Convert.ToInt16(row.Cells[2].Value);
+                _tblNhomEO.sTenNhom = row.Cells[3].Value.ToString();
+            }
+            BindDataDetail(_tblNhomEO);
+        }
+        #endregion
 
         #region "Event Button"
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -154,22 +177,5 @@ namespace HaMy
             BindDataDetail(_tblNhomEO);
         }
         #endregion
-
-        private void frmNhom_Load(object sender, EventArgs e)
-        {
-            txtPK_iNhom.Enabled = false;
-            BindDataGridView();
-        }
-
-        private void grvNhom_SelectionChanged(object sender, EventArgs e)
-        {
-            tblNhomEO _tblNhomEO = new tblNhomEO();
-            foreach (DataGridViewRow row in grvNhom.SelectedRows)
-            {
-                _tblNhomEO.PK_iNhom = Convert.ToInt16(row.Cells[2].Value);
-                _tblNhomEO.sTenNhom = row.Cells[3].Value.ToString();
-            }
-            BindDataDetail(_tblNhomEO);
-        }
     }
 }

@@ -154,9 +154,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\HaMy.exe" />
-    <Content Include="bin\Debug\HaMy.pdb" />
-    <Content Include="bin\Debug\HaMy.vshost.exe" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
     <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
@@ -196,8 +193,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="bin\App_Data\" />
-    <Folder Include="bin\Release\" />
     <Folder Include="ShareInterface\" />
     <Folder Include="UserControl\" />
   </ItemGroup>
