@@ -41,10 +41,8 @@
             this.cboFK_iDoiTac = new System.Windows.Forms.ComboBox();
             this.cboiTrangThai = new System.Windows.Forms.ComboBox();
             this.txtPK_lCuocHen = new System.Windows.Forms.TextBox();
-            this.txttNgayGioBatDau = new System.Windows.Forms.TextBox();
             this.txtsDiaDiem = new System.Windows.Forms.TextBox();
             this.txtsNoiDung = new System.Windows.Forms.TextBox();
-            this.txttNgayGioKetThuc = new System.Windows.Forms.TextBox();
             this.lblPK_lCuocHen = new System.Windows.Forms.Label();
             this.lblFK_iNguoiDung = new System.Windows.Forms.Label();
             this.lblFK_iDoiTac = new System.Windows.Forms.Label();
@@ -69,6 +67,8 @@
             this.tNgayGioKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMsg = new System.Windows.Forms.Label();
+            this.dpktNgayGioBatDau = new System.Windows.Forms.DateTimePicker();
+            this.dpktNgayGioKetThuc = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.grvCuocHen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,13 +186,6 @@
             this.txtPK_lCuocHen.Size = new System.Drawing.Size(172, 20);
             this.txtPK_lCuocHen.TabIndex = 36;
             // 
-            // txttNgayGioBatDau
-            // 
-            this.txttNgayGioBatDau.Location = new System.Drawing.Point(213, 246);
-            this.txttNgayGioBatDau.Name = "txttNgayGioBatDau";
-            this.txttNgayGioBatDau.Size = new System.Drawing.Size(172, 20);
-            this.txttNgayGioBatDau.TabIndex = 37;
-            // 
             // txtsDiaDiem
             // 
             this.txtsDiaDiem.Location = new System.Drawing.Point(213, 216);
@@ -206,13 +199,6 @@
             this.txtsNoiDung.Name = "txtsNoiDung";
             this.txtsNoiDung.Size = new System.Drawing.Size(172, 20);
             this.txtsNoiDung.TabIndex = 39;
-            // 
-            // txttNgayGioKetThuc
-            // 
-            this.txttNgayGioKetThuc.Location = new System.Drawing.Point(213, 272);
-            this.txttNgayGioKetThuc.Name = "txttNgayGioKetThuc";
-            this.txttNgayGioKetThuc.Size = new System.Drawing.Size(172, 20);
-            this.txttNgayGioKetThuc.TabIndex = 40;
             // 
             // lblPK_lCuocHen
             // 
@@ -362,6 +348,7 @@
             this.grvCuocHen.Name = "grvCuocHen";
             this.grvCuocHen.Size = new System.Drawing.Size(748, 150);
             this.grvCuocHen.TabIndex = 55;
+            this.grvCuocHen.SelectionChanged += new System.EventHandler(this.grvCuocHen_SelectionChanged);
             // 
             // PK_lCuocHen
             // 
@@ -420,12 +407,30 @@
             this.lblMsg.TabIndex = 56;
             this.lblMsg.Text = "label1";
             // 
+            // dpktNgayGioBatDau
+            // 
+            this.dpktNgayGioBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpktNgayGioBatDau.Location = new System.Drawing.Point(213, 247);
+            this.dpktNgayGioBatDau.Name = "dpktNgayGioBatDau";
+            this.dpktNgayGioBatDau.Size = new System.Drawing.Size(172, 20);
+            this.dpktNgayGioBatDau.TabIndex = 57;
+            // 
+            // dpktNgayGioKetThuc
+            // 
+            this.dpktNgayGioKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpktNgayGioKetThuc.Location = new System.Drawing.Point(213, 273);
+            this.dpktNgayGioKetThuc.Name = "dpktNgayGioKetThuc";
+            this.dpktNgayGioKetThuc.Size = new System.Drawing.Size(172, 20);
+            this.dpktNgayGioKetThuc.TabIndex = 58;
+            // 
             // frmCuocHen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(786, 597);
+            this.Controls.Add(this.dpktNgayGioKetThuc);
+            this.Controls.Add(this.dpktNgayGioBatDau);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.grvCuocHen);
             this.Controls.Add(this.btnReset);
@@ -442,10 +447,8 @@
             this.Controls.Add(this.lblFK_iDoiTac);
             this.Controls.Add(this.lblFK_iNguoiDung);
             this.Controls.Add(this.lblPK_lCuocHen);
-            this.Controls.Add(this.txttNgayGioKetThuc);
             this.Controls.Add(this.txtsNoiDung);
             this.Controls.Add(this.txtsDiaDiem);
-            this.Controls.Add(this.txttNgayGioBatDau);
             this.Controls.Add(this.txtPK_lCuocHen);
             this.Controls.Add(this.cboiTrangThai);
             this.Controls.Add(this.cboFK_iDoiTac);
@@ -484,10 +487,8 @@
         private System.Windows.Forms.ComboBox cboFK_iDoiTac;
         private System.Windows.Forms.ComboBox cboiTrangThai;
         private System.Windows.Forms.TextBox txtPK_lCuocHen;
-        private System.Windows.Forms.TextBox txttNgayGioBatDau;
         private System.Windows.Forms.TextBox txtsDiaDiem;
         private System.Windows.Forms.TextBox txtsNoiDung;
-        private System.Windows.Forms.TextBox txttNgayGioKetThuc;
         private System.Windows.Forms.Label lblPK_lCuocHen;
         private System.Windows.Forms.Label lblFK_iNguoiDung;
         private System.Windows.Forms.Label lblFK_iDoiTac;
@@ -512,5 +513,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tNgayGioBatDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn tNgayGioKetThuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn iTrangThai;
+        private System.Windows.Forms.DateTimePicker dpktNgayGioBatDau;
+        private System.Windows.Forms.DateTimePicker dpktNgayGioKetThuc;
     }
 }

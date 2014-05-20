@@ -107,6 +107,7 @@ namespace HaMy
         private void btnThem_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblNhomDAO.Nhom_Insert(getObject()) == true)
@@ -118,6 +119,9 @@ namespace HaMy
                     lblMsg.Text = Messages.Them_That_Bai;
                 }
                 BindDataGridView();
+                tblNhomEO _tblNhomEO = new tblNhomEO();
+                BindDataDetail(_tblNhomEO);
+                ClearMessages();
             }
             catch (Exception ex)
             {
@@ -128,6 +132,7 @@ namespace HaMy
         private void btnSua_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblNhomDAO.Nhom_Update(getObject()) == true)
@@ -139,6 +144,8 @@ namespace HaMy
                     lblMsg.Text = Messages.Sua_That_Bai;
                 }
                 BindDataGridView();
+                tblNhomEO _tblNhomEO = new tblNhomEO();
+                BindDataDetail(_tblNhomEO);
             }
             catch (Exception ex)
             {
@@ -149,6 +156,7 @@ namespace HaMy
         private void btnXoa_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblNhomDAO.Nhom_Delete(getObject()) == true)
@@ -160,6 +168,8 @@ namespace HaMy
                     lblMsg.Text = Messages.Xoa_That_Bai;
                 }
                 BindDataGridView();
+                tblNhomEO _tblNhomEO = new tblNhomEO();
+                BindDataDetail(_tblNhomEO);
             }
             catch (Exception ex)
             {
@@ -170,12 +180,14 @@ namespace HaMy
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             BindDataGridView();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             tblNhomEO _tblNhomEO = new tblNhomEO();
             BindDataDetail(_tblNhomEO);
         }
