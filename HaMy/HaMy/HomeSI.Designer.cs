@@ -35,6 +35,7 @@
             this.tsmiDoiTac = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCuocHen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiThoat = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBaoCao = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.tsmiMoiQuanHe,
             this.tsmiDoiTac,
             this.tsmiCuocHen,
+            this.tsmiBaoCao,
             this.tsmiThoat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -95,6 +97,13 @@
             this.tsmiThoat.Text = "Thoát";
             this.tsmiThoat.Click += new System.EventHandler(this.tsmiThoat_Click);
             // 
+            // tsmiBaoCao
+            // 
+            this.tsmiBaoCao.Name = "tsmiBaoCao";
+            this.tsmiBaoCao.Size = new System.Drawing.Size(63, 20);
+            this.tsmiBaoCao.Text = "Báo Cáo";
+            this.tsmiBaoCao.Click += new System.EventHandler(this.tsmiBaoCao_Click);
+            // 
             // HomeSI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,5 +131,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDoiTac;
         private System.Windows.Forms.ToolStripMenuItem tsmiCuocHen;
         private System.Windows.Forms.ToolStripMenuItem tsmiThoat;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBaoCao;
     }
 }

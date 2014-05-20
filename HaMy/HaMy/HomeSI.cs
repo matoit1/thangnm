@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using HaMy.Report;
 
 namespace HaMy
 {
@@ -67,6 +68,14 @@ namespace HaMy
             {
                 chirdForm.Close();
             }
+        }
+
+        private void tsmiBaoCao_Click(object sender, EventArgs e)
+        {
+            CloseAllWindowsChild();
+            frmBaoCao_CuocHen _frmBaoCao_CuocHen = new frmBaoCao_CuocHen();
+            _frmBaoCao_CuocHen.MdiParent = this;
+            _frmBaoCao_CuocHen.Show();
         }
     }
 }
