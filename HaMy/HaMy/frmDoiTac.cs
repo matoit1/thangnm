@@ -197,6 +197,7 @@ namespace HaMy
         {
             {
                 ClearMessages();
+                lblMsg.Text = "";
                 try
                 {
                     if (tblDoiTacDAO.DoiTac_Insert(getObject()) == true)
@@ -208,6 +209,9 @@ namespace HaMy
                         lblMsg.Text = Messages.Them_That_Bai;
                     }
                     BindDataGridView();
+                    tblDoiTacEO _tblDoiTacEO = new tblDoiTacEO();
+                    BindDataDetail(_tblDoiTacEO);
+                    ClearMessages();
                 }
                 catch (Exception ex)
                 {
@@ -219,6 +223,7 @@ namespace HaMy
         private void btnSua_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblDoiTacDAO.DoiTac_Update(getObject()) == true)
@@ -230,6 +235,8 @@ namespace HaMy
                     lblMsg.Text = Messages.Sua_That_Bai;
                 }
                 BindDataGridView();
+                tblDoiTacEO _tblDoiTacEO = new tblDoiTacEO();
+                BindDataDetail(_tblDoiTacEO);
             }
             catch (Exception ex)
             {
@@ -240,6 +247,7 @@ namespace HaMy
         private void btnXoa_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblDoiTacDAO.DoiTac_Delete(getObject()) == true)
@@ -251,6 +259,8 @@ namespace HaMy
                     lblMsg.Text = Messages.Xoa_That_Bai;
                 }
                 BindDataGridView();
+                tblDoiTacEO _tblDoiTacEO = new tblDoiTacEO();
+                BindDataDetail(_tblDoiTacEO);
             }
             catch (Exception ex)
             {
@@ -261,12 +271,14 @@ namespace HaMy
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             BindDataGridView();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             tblDoiTacEO _tblDoiTacEO = new tblDoiTacEO();
             BindDataDetail(_tblDoiTacEO);
         }

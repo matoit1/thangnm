@@ -161,6 +161,7 @@ namespace HaMy
         {
             {
                 ClearMessages();
+                lblMsg.Text = "";
                 try
                 {
                     if (tblNguoiDungDAO.NguoiDung_Insert(getObject()) == true)
@@ -172,6 +173,9 @@ namespace HaMy
                         lblMsg.Text = Messages.Them_That_Bai;
                     }
                     BindDataGridView();
+                    tblNguoiDungEO _tblNguoiDungEO = new tblNguoiDungEO();
+                    BindDataDetail(_tblNguoiDungEO);
+                    ClearMessages();
                 }
                 catch (Exception ex)
                 {
@@ -184,6 +188,7 @@ namespace HaMy
         private void btnSua_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblNguoiDungDAO.NguoiDung_Update(getObject()) == true)
@@ -195,6 +200,8 @@ namespace HaMy
                     lblMsg.Text = Messages.Sua_That_Bai;
                 }
                 BindDataGridView();
+                tblNguoiDungEO _tblNguoiDungEO = new tblNguoiDungEO();
+                BindDataDetail(_tblNguoiDungEO);
             }
             catch (Exception ex)
             {
@@ -205,6 +212,7 @@ namespace HaMy
         private void btnXoa_Click(object sender, EventArgs e)
         {
              ClearMessages();
+             lblMsg.Text = "";
             try
             {
                 if (tblNguoiDungDAO.NguoiDung_Delete(getObject()) == true)
@@ -216,6 +224,8 @@ namespace HaMy
                     lblMsg.Text = Messages.Xoa_That_Bai;
                 }
                 BindDataGridView();
+                tblNguoiDungEO _tblNguoiDungEO = new tblNguoiDungEO();
+                BindDataDetail(_tblNguoiDungEO);
             }
             catch (Exception ex)
             {
@@ -226,12 +236,14 @@ namespace HaMy
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             BindDataGridView();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             tblNguoiDungEO _tblNguoiDungEO = new tblNguoiDungEO();
             BindDataDetail(_tblNguoiDungEO);
         }
