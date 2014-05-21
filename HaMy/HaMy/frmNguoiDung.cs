@@ -142,6 +142,7 @@ namespace HaMy
                 if (match.Success == false)
                 {
                     lblsEmail.Text = Messages.Khong_Dung_Dinh_Dang_Email;
+                    txtsEmail.Focus();
                     return false;
                 }
             }
@@ -151,6 +152,23 @@ namespace HaMy
                 lblsSoDienThoai.Text = Messages.Khong_Duoc_De_Trong;
                 txtsSoDienThoai.Focus();
                 return false;
+            }
+            else
+            {
+                string sdt;
+                sdt = txtsSoDienThoai.Text.Trim().Replace(" ", "");
+                try { Convert.ToInt64(sdt); }
+                catch{
+                    lblsSoDienThoai.Text = Messages.Khong_Dung_Dinh_Dang_So_Dien_Thoai;
+                    txtsSoDienThoai.Focus();
+                    return false;
+                }
+                if (sdt.Length < 10)
+                {
+                    lblsSoDienThoai.Text = Messages.Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai;
+                    txtsSoDienThoai.Focus();
+                    return false;
+                }
             }
             if (string.IsNullOrEmpty(txtsNgheNghiep.Text) == true)
             {
@@ -163,7 +181,7 @@ namespace HaMy
 
         public void ClearMessages()
         {
-            lblMsg.Text = "";
+            //lblMsg.Text = "";
             lblPK_iNguoiDung.Text = "";
             lblsHoTen.Text = "";
             lblsDiaChi.Text = "";

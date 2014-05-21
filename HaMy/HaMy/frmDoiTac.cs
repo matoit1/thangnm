@@ -10,6 +10,7 @@ using HaMy.EntityObject;
 using HaMy.SharedLibraries;
 using HaBa.SharedLibraries;
 using HaMy.DataAccessObject;
+using System.Text.RegularExpressions;
 
 namespace HaMy
 {
@@ -138,9 +139,80 @@ namespace HaMy
             catch (Exception) { }
         }
 
+        public bool CheckInput()
+        {
+            if (string.IsNullOrEmpty(txtPK_iDoiTac.Text) == true)
+            {
+                lblPK_iDoiTac.Text = Messages.Khong_Duoc_De_Trong;
+                txtPK_iDoiTac.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsHoTen.Text) == true)
+            {
+                lblsHoTen.Text = Messages.Khong_Duoc_De_Trong;
+                txtsHoTen.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsDiaChi.Text) == true)
+            {
+                lblsDiaChi.Text = Messages.Khong_Duoc_De_Trong;
+                txtsDiaChi.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsEmail.Text) == true)
+            {
+                lblsEmail.Text = Messages.Khong_Duoc_De_Trong;
+                txtsEmail.Focus();
+                return false;
+            }
+            else
+            {
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                Match match = regex.Match(txtsEmail.Text);
+                if (match.Success == false)
+                {
+                    lblsEmail.Text = Messages.Khong_Dung_Dinh_Dang_Email;
+                    txtsEmail.Focus();
+                    return false;
+                }
+            }
+
+            if (string.IsNullOrEmpty(txtsSoDienThoai.Text) == true)
+            {
+                lblsSoDienThoai.Text = Messages.Khong_Duoc_De_Trong;
+                txtsSoDienThoai.Focus();
+                return false;
+            }
+            else
+            {
+                string sdt;
+                sdt = txtsSoDienThoai.Text.Trim().Replace(" ", "");
+                try { Convert.ToInt64(sdt); }
+                catch
+                {
+                    lblsSoDienThoai.Text = Messages.Khong_Dung_Dinh_Dang_So_Dien_Thoai;
+                    txtsSoDienThoai.Focus();
+                    return false;
+                }
+                if (sdt.Length < 10)
+                {
+                    lblsSoDienThoai.Text = Messages.Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai;
+                    txtsSoDienThoai.Focus();
+                    return false;
+                }
+            }
+            if (string.IsNullOrEmpty(txtsNgheNghiep.Text) == true)
+            {
+                lblsNgheNghiep.Text = Messages.Khong_Duoc_De_Trong;
+                txtsNgheNghiep.Focus();
+                return false;
+            }
+            return true;
+        }
+
         public void ClearMessages()
         {
-            lblMsg.Text = "";
+            //lblMsg.Text = "";
             lblFK_iNhom.Text = "";
             lblPK_iDoiTac.Text = "";
             lblsHoTen.Text = "";
@@ -201,6 +273,8 @@ namespace HaMy
                 lblMsg.Text = "";
                 try
                 {
+                  if (CheckInput() == true)
+                  {
                     if (tblDoiTacDAO.DoiTac_Insert(getObject()) == true)
                     {
                         lblMsg.Text = Messages.Them_Thanh_Cong;
@@ -213,6 +287,7 @@ namespace HaMy
                     tblDoiTacEO _tblDoiTacEO = new tblDoiTacEO();
                     BindDataDetail(_tblDoiTacEO);
                     ClearMessages();
+                  }
                 }
                 catch (Exception ex)
                 {
@@ -227,6 +302,8 @@ namespace HaMy
             lblMsg.Text = "";
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblDoiTacDAO.DoiTac_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
@@ -238,6 +315,7 @@ namespace HaMy
                 BindDataGridView();
                 tblDoiTacEO _tblDoiTacEO = new tblDoiTacEO();
                 BindDataDetail(_tblDoiTacEO);
+               }
             }
             catch (Exception ex)
             {

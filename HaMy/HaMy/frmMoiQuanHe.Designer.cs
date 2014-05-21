@@ -36,6 +36,8 @@
             this.txtPK_iMoiQuanHe = new System.Windows.Forms.TextBox();
             this.txtsTen = new System.Windows.Forms.TextBox();
             this.grvMoiQuanHe = new System.Windows.Forms.DataGridView();
+            this.PK_iMoiQuanHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.lblMsg = new System.Windows.Forms.Label();
-            this.PK_iMoiQuanHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grvMoiQuanHe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             this.lblTitle.BackColor = System.Drawing.SystemColors.Control;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Blue;
-            this.lblTitle.Location = new System.Drawing.Point(280, 30);
+            this.lblTitle.Location = new System.Drawing.Point(302, 25);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(134, 24);
             this.lblTitle.TabIndex = 10;
@@ -63,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(156, 100);
+            this.label1.Location = new System.Drawing.Point(182, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 11;
@@ -72,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(156, 132);
+            this.label2.Location = new System.Drawing.Point(182, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 12;
@@ -81,7 +81,7 @@
             // lblPK_iMoiQuanHe
             // 
             this.lblPK_iMoiQuanHe.AutoSize = true;
-            this.lblPK_iMoiQuanHe.Location = new System.Drawing.Point(477, 100);
+            this.lblPK_iMoiQuanHe.Location = new System.Drawing.Point(457, 100);
             this.lblPK_iMoiQuanHe.Name = "lblPK_iMoiQuanHe";
             this.lblPK_iMoiQuanHe.Size = new System.Drawing.Size(35, 13);
             this.lblPK_iMoiQuanHe.TabIndex = 13;
@@ -90,7 +90,7 @@
             // lblsTen
             // 
             this.lblsTen.AutoSize = true;
-            this.lblsTen.Location = new System.Drawing.Point(477, 136);
+            this.lblsTen.Location = new System.Drawing.Point(457, 132);
             this.lblsTen.Name = "lblsTen";
             this.lblsTen.Size = new System.Drawing.Size(35, 13);
             this.lblsTen.TabIndex = 14;
@@ -100,15 +100,16 @@
             // 
             this.txtPK_iMoiQuanHe.Location = new System.Drawing.Point(284, 93);
             this.txtPK_iMoiQuanHe.Name = "txtPK_iMoiQuanHe";
-            this.txtPK_iMoiQuanHe.Size = new System.Drawing.Size(100, 20);
-            this.txtPK_iMoiQuanHe.TabIndex = 15;
+            this.txtPK_iMoiQuanHe.Size = new System.Drawing.Size(141, 20);
+            this.txtPK_iMoiQuanHe.TabIndex = 0;
             // 
             // txtsTen
             // 
             this.txtsTen.Location = new System.Drawing.Point(284, 129);
+            this.txtsTen.MaxLength = 50;
             this.txtsTen.Name = "txtsTen";
-            this.txtsTen.Size = new System.Drawing.Size(100, 20);
-            this.txtsTen.TabIndex = 16;
+            this.txtsTen.Size = new System.Drawing.Size(141, 20);
+            this.txtsTen.TabIndex = 1;
             // 
             // grvMoiQuanHe
             // 
@@ -116,80 +117,11 @@
             this.grvMoiQuanHe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PK_iMoiQuanHe,
             this.sTen});
-            this.grvMoiQuanHe.Location = new System.Drawing.Point(38, 292);
+            this.grvMoiQuanHe.Location = new System.Drawing.Point(52, 269);
             this.grvMoiQuanHe.Name = "grvMoiQuanHe";
             this.grvMoiQuanHe.Size = new System.Drawing.Size(630, 150);
             this.grvMoiQuanHe.TabIndex = 17;
             this.grvMoiQuanHe.SelectionChanged += new System.EventHandler(this.grvMoiQuanHe_SelectionChanged);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Location = new System.Drawing.Point(73, 242);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.btnTimKiem.TabIndex = 18;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(179, 242);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 19;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(284, 242);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 20;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(385, 242);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 21;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(284, 176);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 49;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Location = new System.Drawing.Point(492, 242);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(75, 23);
-            this.btnLamMoi.TabIndex = 48;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            // 
-            // lblMsg
-            // 
-            this.lblMsg.AutoSize = true;
-            this.lblMsg.Location = new System.Drawing.Point(304, 68);
-            this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(35, 13);
-            this.lblMsg.TabIndex = 50;
-            this.lblMsg.Text = "label3";
             // 
             // PK_iMoiQuanHe
             // 
@@ -202,6 +134,75 @@
             this.sTen.DataPropertyName = "sTen";
             this.sTen.HeaderText = "Tên quan hệ";
             this.sTen.Name = "sTen";
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Location = new System.Drawing.Point(94, 223);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiem.TabIndex = 3;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(206, 223);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(312, 223);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.TabIndex = 5;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(407, 223);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 6;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(312, 176);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Location = new System.Drawing.Point(501, 223);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(75, 23);
+            this.btnLamMoi.TabIndex = 7;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // lblMsg
+            // 
+            this.lblMsg.AutoSize = true;
+            this.lblMsg.Location = new System.Drawing.Point(344, 67);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(35, 13);
+            this.lblMsg.TabIndex = 50;
+            this.lblMsg.Text = "label3";
             // 
             // frmMoiQuanHe
             // 
