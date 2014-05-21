@@ -23,6 +23,7 @@ namespace HaMy
         
         private void frmNhom_Load(object sender, EventArgs e)
         {
+            ClearMessages();
             txtPK_iNhom.Enabled = false;
             BindDataGridView();
         }
@@ -77,6 +78,21 @@ namespace HaMy
             lblPK_iNhom.Text = "";
             lblsTenNhom.Text = "";
         }
+
+        public bool CheckInput()
+        {
+            if (string.IsNullOrEmpty(txtPK_iNhom.Text) == true)
+            {
+                lblPK_iNhom.Text = "Bạn chưa nhập mã";
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsTenNhom.Text) == true)
+            {
+                lblsTenNhom.Text = "Bạn chưa nhập tên nhóm";
+                return false;
+            }
+            return true;
+        }
         #endregion
 
         #region "Event DataGridView"
@@ -110,18 +126,21 @@ namespace HaMy
             lblMsg.Text = "";
             try
             {
-                if (tblNhomDAO.Nhom_Insert(getObject()) == true)
+                if (CheckInput() == true)
                 {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                    if (tblNhomDAO.Nhom_Insert(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Them_Thanh_Cong;
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Them_That_Bai;
+                    }
+                    BindDataGridView();
+                    tblNhomEO _tblNhomEO = new tblNhomEO();
+                    BindDataDetail(_tblNhomEO);
+                    ClearMessages();
                 }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
-                }
-                BindDataGridView();
-                tblNhomEO _tblNhomEO = new tblNhomEO();
-                BindDataDetail(_tblNhomEO);
-                ClearMessages();
             }
             catch (Exception ex)
             {
@@ -135,17 +154,20 @@ namespace HaMy
             lblMsg.Text = "";
             try
             {
-                if (tblNhomDAO.Nhom_Update(getObject()) == true)
+                if (CheckInput() == true)
                 {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    if (tblNhomDAO.Nhom_Update(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Sua_That_Bai;
+                    }
+                    BindDataGridView();
+                    tblNhomEO _tblNhomEO = new tblNhomEO();
+                    BindDataDetail(_tblNhomEO);
                 }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-                BindDataGridView();
-                tblNhomEO _tblNhomEO = new tblNhomEO();
-                BindDataDetail(_tblNhomEO);
             }
             catch (Exception ex)
             {

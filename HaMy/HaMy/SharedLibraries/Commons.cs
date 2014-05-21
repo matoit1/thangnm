@@ -311,8 +311,10 @@ namespace HaMy.SharedLibraries
         public const string Khong_Thoa_Man_Dieu_Kien_Tim_Kiem = "Không thỏa mãn điều kiện tìm kiếm!";
         public const string Loi = "Lỗi: ";
         public const string Loi_Tai_Du_Lieu = "Lỗi tải dữ liệu!";
+        public const string Khong_Duoc_De_Trong = "Trường này không được để trống!";
         public const string Ma_Da_Ton_Tai = "Mã đã tồn tại, vui lòng chọn mã khác!";
         public const string Ma_Khong_Hop_Le = "Mã không hợp lệ!";
+        public const string Khong_Dung_Dinh_Dang_Email = "Không đúng định dạng email, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng ngày/ giờ, Vui lòng kiểm tra lại!";
         #endregion
@@ -326,12 +328,6 @@ namespace HaMy.SharedLibraries
         public const string Xoa_Thanh_Cong = "Xóa thành công!";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
         public const string Ngay_Day_Khong_Hop_Le = "Ngày dạy phải nằm trong khoảng: ";
-        #endregion
-
-        #region "Information"
-        public const string Chua_Den_Thoi_Gian_Hoc = "Chưa đến thời gian học!";
-        public const string Buoi_Hoc_Hom_Nay_Duoc_Nghi = "Buổi học hôm nay được nghỉ!";
-        public const string Ca_Hoc_Hien_Tai_La = "Ca học hiện tại là: ";
         #endregion
 
         #region "Security"
@@ -354,11 +350,6 @@ namespace HaMy.SharedLibraries
         public static readonly string Format_DateTime = "dd/MM/yyyy";
         public static readonly string Format_Number = "###,##0.######";
         public static readonly string Viet_Nam_Dong = " VNĐ";
-        #endregion
-
-        #region "tblProduct"
-        public const string tblProduct_Con_Hang = "Còn Hàng !";
-        public const string tblProduct_Het_Hang = "Hết Hàng !";
         #endregion
 
     }

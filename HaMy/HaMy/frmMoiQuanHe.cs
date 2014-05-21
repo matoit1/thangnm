@@ -23,6 +23,7 @@ namespace HaMy
         
         private void frmMoiQuanHe_Load(object sender, EventArgs e)
         {
+            ClearMessages();
             txtPK_iMoiQuanHe.Enabled = false;
             BindDataGridView();
         }

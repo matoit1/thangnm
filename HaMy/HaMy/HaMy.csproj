@@ -176,6 +176,7 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CuocHen.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="App_Data\dsHaMy.xsc">
       <DependentUpon>dsHaMy.xsd</DependentUpon>
     </None>
