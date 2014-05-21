@@ -295,10 +295,14 @@ namespace HaBa.SharedLibraries
         public const string Khong_Thoa_Man_Dieu_Kien_Tim_Kiem = "Không thỏa mãn điều kiện tìm kiếm!";
         public const string Loi = "Lỗi: ";
         public const string Loi_Tai_Du_Lieu = "Lỗi tải dữ liệu!";
+        public const string Khong_Duoc_De_Trong = "Trường này không được để trống!";
         public const string Ma_Da_Ton_Tai = "Mã đã tồn tại, vui lòng chọn mã khác!";
         public const string Ma_Khong_Hop_Le = "Mã không hợp lệ!";
-        public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng số, Vui lòng kiểm tra lại!";
-        public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng ngày/ giờ, Vui lòng kiểm tra lại!";
+        public const string Khong_Dung_Dinh_Dang_Email = "Không đúng định dạng Email, Vui lòng kiểm tra lại!";
+        public const string Khong_Dung_Dinh_Dang_So_Dien_Thoai = "Không đúng định dạng Số điện thoại, Vui lòng kiểm tra lại!";
+        public const string Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai = "Số điện thoại phải trong khoảng 10 số < sđt < 13 số, Vui lòng kiểm tra lại!";
+        public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng Số, Vui lòng kiểm tra lại!";
+        public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng Ngày/ Giờ, Vui lòng kiểm tra lại!";
         #endregion
 
         #region "Information"
