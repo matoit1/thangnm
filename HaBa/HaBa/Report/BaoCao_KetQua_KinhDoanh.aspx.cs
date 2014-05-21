@@ -4,34 +4,25 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 using CrystalDecisions.CrystalReports.Engine;
-using HaBa.EntityObject;
-using HaBa.SharedLibraries;
+using System.Data;
 using HaBa.DataAccessObject;
+using HaBa.SharedLibraries;
+using HaBa.EntityObject;
 
 namespace HaBa.Report
 {
-    public partial class BaoCao_HoaDon : System.Web.UI.Page
+    public partial class BaoCao_KetQua_KinhDoanh : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                if (Request.QueryString["PK_lHoaDonID"] != null)
-                {
-                    Int64 PK_lHoaDonID = Convert.ToInt64(Request.QueryString["PK_lHoaDonID"]);
                     ReportDocument crystalReport = new ReportDocument();
-                    crystalReport.Load(Server.MapPath("~/Report/HoaDonRP.rpt"));
-                    tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
-                    tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
-                    _tblHoaDonEO.PK_lHoaDonID = PK_lHoaDonID;
-                    _tblChiTietHoaDonEO.FK_lHoaDonID = PK_lHoaDonID;
+                    crystalReport.Load(Server.MapPath("~/Report/KetQua_KinhDoanhRP.rpt"));
                     DataSet dsHaBa = new DataSet();
                     DataTable dttblHoaDon = new DataTable();
-                    DataTable dttblChiTietHoaDon = new DataTable();
-                    dttblHoaDon = tblHoaDonDAO.HoaDon_SelectItemByPK_lHoaDonID(_tblHoaDonEO).Tables[0];
-                    dttblChiTietHoaDon = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectByFK_lHoaDonID(_tblChiTietHoaDonEO).Tables[0];
+                    dttblHoaDon = tblHoaDonDAO.HoaDon_SelectList().Tables[0];
                     dttblHoaDon.Columns.Add(new DataColumn("FK_iTaiKhoanID_Giao_Text", Type.GetType("System.String")));
                     dttblHoaDon.Columns.Add(new DataColumn("FK_iTaiKhoanID_Nhan_Text", Type.GetType("System.String")));
                     dttblHoaDon.Columns.Add(new DataColumn("FK_iThanhToanID_Text", Type.GetType("System.String")));
@@ -46,12 +37,9 @@ namespace HaBa.Report
                         dr["lTriGia"] = getlTriGia(Convert.ToInt64(dr["PK_lHoaDonID"]));
                     }
                     dttblHoaDon.TableName = "tblHoaDon";
-                    dttblChiTietHoaDon.TableName = "tblChiTietHoaDon";
                     dsHaBa.Tables.Add(dttblHoaDon.Copy());
-                    dsHaBa.Tables.Add(dttblChiTietHoaDon.Copy());
                     crystalReport.SetDataSource(dsHaBa);
-                    crvHoaDon.ReportSource = crystalReport;
-                }
+                    crvKetQuaKinhDoanh.ReportSource = crystalReport;
             }
             catch (Exception ex) { lblMsg.Text = ex.Message; }
         }

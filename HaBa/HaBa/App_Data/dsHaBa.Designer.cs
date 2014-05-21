@@ -813,6 +813,8 @@ namespace HaBa.App_Data {
             
             private global::System.Data.DataColumn columniTrangThai;
             
+            private global::System.Data.DataColumn columniTrangThai_Text;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblThanhToanDataTable() {
@@ -872,6 +874,14 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iTrangThai_TextColumn {
+                get {
+                    return this.columniTrangThai_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -907,12 +917,13 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblThanhToanRow AddtblThanhToanRow(string sTenThanhToan, short iTrangThai) {
+            public tblThanhToanRow AddtblThanhToanRow(string sTenThanhToan, short iTrangThai, string iTrangThai_Text) {
                 tblThanhToanRow rowtblThanhToanRow = ((tblThanhToanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         sTenThanhToan,
-                        iTrangThai};
+                        iTrangThai,
+                        iTrangThai_Text};
                 rowtblThanhToanRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblThanhToanRow);
                 return rowtblThanhToanRow;
@@ -945,6 +956,7 @@ namespace HaBa.App_Data {
                 this.columnPK_iThanhToanID = base.Columns["PK_iThanhToanID"];
                 this.columnsTenThanhToan = base.Columns["sTenThanhToan"];
                 this.columniTrangThai = base.Columns["iTrangThai"];
+                this.columniTrangThai_Text = base.Columns["iTrangThai_Text"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -956,6 +968,8 @@ namespace HaBa.App_Data {
                 base.Columns.Add(this.columnsTenThanhToan);
                 this.columniTrangThai = new global::System.Data.DataColumn("iTrangThai", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columniTrangThai);
+                this.columniTrangThai_Text = new global::System.Data.DataColumn("iTrangThai_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniTrangThai_Text);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPK_iThanhToanID}, true));
                 this.columnPK_iThanhToanID.AutoIncrement = true;
@@ -1124,6 +1138,16 @@ namespace HaBa.App_Data {
             
             private global::System.Data.DataColumn columniTrangThai;
             
+            private global::System.Data.DataColumn columnFK_iTaiKhoanID_Giao_Text;
+            
+            private global::System.Data.DataColumn columnFK_iTaiKhoanID_Nhan_Text;
+            
+            private global::System.Data.DataColumn columnFK_iThanhToanID_Text;
+            
+            private global::System.Data.DataColumn columniTrangThai_Text;
+            
+            private global::System.Data.DataColumn columnlTriGia;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblHoaDonDataTable() {
@@ -1255,6 +1279,46 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FK_iTaiKhoanID_Giao_TextColumn {
+                get {
+                    return this.columnFK_iTaiKhoanID_Giao_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FK_iTaiKhoanID_Nhan_TextColumn {
+                get {
+                    return this.columnFK_iTaiKhoanID_Nhan_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FK_iThanhToanID_TextColumn {
+                get {
+                    return this.columnFK_iThanhToanID_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iTrangThai_TextColumn {
+                get {
+                    return this.columniTrangThai_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn lTriGiaColumn {
+                get {
+                    return this.columnlTriGia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1290,7 +1354,23 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblHoaDonRow AddtblHoaDonRow(tblTaiKhoanRow parenttblTaiKhoanRowByFK_tblHoaDon_tblTaiKhoan1, tblTaiKhoanRow parenttblTaiKhoanRowByFK_tblHoaDon_tblTaiKhoan2, tblThanhToanRow parenttblThanhToanRowByFK_tblHoaDon_tblThanhToan, string sHoTen, string sEmail, string sDiaChi, string sSoDienThoai, string sGhiChu, System.DateTime tNgayDatHang, System.DateTime tNgayGiaoHang, short iTrangThai) {
+            public tblHoaDonRow AddtblHoaDonRow(
+                        tblTaiKhoanRow parenttblTaiKhoanRowByFK_tblHoaDon_tblTaiKhoan1, 
+                        tblTaiKhoanRow parenttblTaiKhoanRowByFK_tblHoaDon_tblTaiKhoan2, 
+                        tblThanhToanRow parenttblThanhToanRowByFK_tblHoaDon_tblThanhToan, 
+                        string sHoTen, 
+                        string sEmail, 
+                        string sDiaChi, 
+                        string sSoDienThoai, 
+                        string sGhiChu, 
+                        System.DateTime tNgayDatHang, 
+                        System.DateTime tNgayGiaoHang, 
+                        short iTrangThai, 
+                        string FK_iTaiKhoanID_Giao_Text, 
+                        string FK_iTaiKhoanID_Nhan_Text, 
+                        string FK_iThanhToanID_Text, 
+                        string iTrangThai_Text, 
+                        long lTriGia) {
                 tblHoaDonRow rowtblHoaDonRow = ((tblHoaDonRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1304,7 +1384,12 @@ namespace HaBa.App_Data {
                         sGhiChu,
                         tNgayDatHang,
                         tNgayGiaoHang,
-                        iTrangThai};
+                        iTrangThai,
+                        FK_iTaiKhoanID_Giao_Text,
+                        FK_iTaiKhoanID_Nhan_Text,
+                        FK_iThanhToanID_Text,
+                        iTrangThai_Text,
+                        lTriGia};
                 if ((parenttblTaiKhoanRowByFK_tblHoaDon_tblTaiKhoan1 != null)) {
                     columnValuesArray[1] = parenttblTaiKhoanRowByFK_tblHoaDon_tblTaiKhoan1[0];
                 }
@@ -1355,6 +1440,11 @@ namespace HaBa.App_Data {
                 this.columntNgayDatHang = base.Columns["tNgayDatHang"];
                 this.columntNgayGiaoHang = base.Columns["tNgayGiaoHang"];
                 this.columniTrangThai = base.Columns["iTrangThai"];
+                this.columnFK_iTaiKhoanID_Giao_Text = base.Columns["FK_iTaiKhoanID_Giao_Text"];
+                this.columnFK_iTaiKhoanID_Nhan_Text = base.Columns["FK_iTaiKhoanID_Nhan_Text"];
+                this.columnFK_iThanhToanID_Text = base.Columns["FK_iThanhToanID_Text"];
+                this.columniTrangThai_Text = base.Columns["iTrangThai_Text"];
+                this.columnlTriGia = base.Columns["lTriGia"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1384,6 +1474,16 @@ namespace HaBa.App_Data {
                 base.Columns.Add(this.columntNgayGiaoHang);
                 this.columniTrangThai = new global::System.Data.DataColumn("iTrangThai", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columniTrangThai);
+                this.columnFK_iTaiKhoanID_Giao_Text = new global::System.Data.DataColumn("FK_iTaiKhoanID_Giao_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFK_iTaiKhoanID_Giao_Text);
+                this.columnFK_iTaiKhoanID_Nhan_Text = new global::System.Data.DataColumn("FK_iTaiKhoanID_Nhan_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFK_iTaiKhoanID_Nhan_Text);
+                this.columnFK_iThanhToanID_Text = new global::System.Data.DataColumn("FK_iThanhToanID_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFK_iThanhToanID_Text);
+                this.columniTrangThai_Text = new global::System.Data.DataColumn("iTrangThai_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniTrangThai_Text);
+                this.columnlTriGia = new global::System.Data.DataColumn("lTriGia", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlTriGia);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPK_lHoaDonID}, true));
                 this.columnPK_lHoaDonID.AutoIncrement = true;
@@ -1392,7 +1492,6 @@ namespace HaBa.App_Data {
                 this.columnPK_lHoaDonID.AllowDBNull = false;
                 this.columnPK_lHoaDonID.ReadOnly = true;
                 this.columnPK_lHoaDonID.Unique = true;
-                this.columnFK_iTaiKhoanID_Giao.AllowDBNull = false;
                 this.columnFK_iTaiKhoanID_Nhan.AllowDBNull = false;
                 this.columnFK_iThanhToanID.AllowDBNull = false;
                 this.columnsHoTen.AllowDBNull = false;
@@ -1874,6 +1973,14 @@ namespace HaBa.App_Data {
             
             private global::System.Data.DataColumn columniTrangThai;
             
+            private global::System.Data.DataColumn columnFK_iNhomSanPhamID_Text;
+            
+            private global::System.Data.DataColumn columniDoTuoi_Text;
+            
+            private global::System.Data.DataColumn columniGioiTinh_Text;
+            
+            private global::System.Data.DataColumn columniTrangThai_Text;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblSanPhamDataTable() {
@@ -2021,6 +2128,38 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FK_iNhomSanPhamID_TextColumn {
+                get {
+                    return this.columnFK_iNhomSanPhamID_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iDoTuoi_TextColumn {
+                get {
+                    return this.columniDoTuoi_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iGioiTinh_TextColumn {
+                get {
+                    return this.columniGioiTinh_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iTrangThai_TextColumn {
+                get {
+                    return this.columniTrangThai_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2056,7 +2195,25 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblSanPhamRow AddtblSanPhamRow(string PK_sSanPhamID, tblNhomSanPhamRow parenttblNhomSanPhamRowByFK_tblSanPham_tblNhomSanPham, string sTenSanPham, string sMoTa, string sThongTin, string sXuatXu, string sLinkImage, long lGiaBan, short iVAT, short iDoTuoi, short iGioiTinh, short iSoLuong, System.DateTime tNgayCapNhat, short iTrangThai) {
+            public tblSanPhamRow AddtblSanPhamRow(
+                        string PK_sSanPhamID, 
+                        tblNhomSanPhamRow parenttblNhomSanPhamRowByFK_tblSanPham_tblNhomSanPham, 
+                        string sTenSanPham, 
+                        string sMoTa, 
+                        string sThongTin, 
+                        string sXuatXu, 
+                        string sLinkImage, 
+                        long lGiaBan, 
+                        short iVAT, 
+                        short iDoTuoi, 
+                        short iGioiTinh, 
+                        short iSoLuong, 
+                        System.DateTime tNgayCapNhat, 
+                        short iTrangThai, 
+                        string FK_iNhomSanPhamID_Text, 
+                        string iDoTuoi_Text, 
+                        string iGioiTinh_Text, 
+                        string iTrangThai_Text) {
                 tblSanPhamRow rowtblSanPhamRow = ((tblSanPhamRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PK_sSanPhamID,
@@ -2072,7 +2229,11 @@ namespace HaBa.App_Data {
                         iGioiTinh,
                         iSoLuong,
                         tNgayCapNhat,
-                        iTrangThai};
+                        iTrangThai,
+                        FK_iNhomSanPhamID_Text,
+                        iDoTuoi_Text,
+                        iGioiTinh_Text,
+                        iTrangThai_Text};
                 if ((parenttblNhomSanPhamRowByFK_tblSanPham_tblNhomSanPham != null)) {
                     columnValuesArray[1] = parenttblNhomSanPhamRowByFK_tblSanPham_tblNhomSanPham[0];
                 }
@@ -2119,6 +2280,10 @@ namespace HaBa.App_Data {
                 this.columniSoLuong = base.Columns["iSoLuong"];
                 this.columntNgayCapNhat = base.Columns["tNgayCapNhat"];
                 this.columniTrangThai = base.Columns["iTrangThai"];
+                this.columnFK_iNhomSanPhamID_Text = base.Columns["FK_iNhomSanPhamID_Text"];
+                this.columniDoTuoi_Text = base.Columns["iDoTuoi_Text"];
+                this.columniGioiTinh_Text = base.Columns["iGioiTinh_Text"];
+                this.columniTrangThai_Text = base.Columns["iTrangThai_Text"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2152,6 +2317,14 @@ namespace HaBa.App_Data {
                 base.Columns.Add(this.columntNgayCapNhat);
                 this.columniTrangThai = new global::System.Data.DataColumn("iTrangThai", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columniTrangThai);
+                this.columnFK_iNhomSanPhamID_Text = new global::System.Data.DataColumn("FK_iNhomSanPhamID_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFK_iNhomSanPhamID_Text);
+                this.columniDoTuoi_Text = new global::System.Data.DataColumn("iDoTuoi_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniDoTuoi_Text);
+                this.columniGioiTinh_Text = new global::System.Data.DataColumn("iGioiTinh_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniGioiTinh_Text);
+                this.columniTrangThai_Text = new global::System.Data.DataColumn("iTrangThai_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniTrangThai_Text);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPK_sSanPhamID}, true));
                 this.columnPK_sSanPhamID.AllowDBNull = false;
@@ -2329,6 +2502,10 @@ namespace HaBa.App_Data {
             
             private global::System.Data.DataColumn columniTrangThai;
             
+            private global::System.Data.DataColumn columniQuyenHan_Text;
+            
+            private global::System.Data.DataColumn columniTrangThai_Text;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblTaiKhoanDataTable() {
@@ -2460,6 +2637,22 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iQuyenHan_TextColumn {
+                get {
+                    return this.columniQuyenHan_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn iTrangThai_TextColumn {
+                get {
+                    return this.columniTrangThai_Text;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2495,7 +2688,7 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblTaiKhoanRow AddtblTaiKhoanRow(string sTenDangNhap, string sMatKhau, string sHoTen, string sEmail, string sDiaChi, string sSoDienThoai, string sLinkAvatar, System.DateTime tNgaySinh, System.DateTime tNgayDangKy, short iQuyenHan, short iTrangThai) {
+            public tblTaiKhoanRow AddtblTaiKhoanRow(string sTenDangNhap, string sMatKhau, string sHoTen, string sEmail, string sDiaChi, string sSoDienThoai, string sLinkAvatar, System.DateTime tNgaySinh, System.DateTime tNgayDangKy, short iQuyenHan, short iTrangThai, string iQuyenHan_Text, string iTrangThai_Text) {
                 tblTaiKhoanRow rowtblTaiKhoanRow = ((tblTaiKhoanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2509,7 +2702,9 @@ namespace HaBa.App_Data {
                         tNgaySinh,
                         tNgayDangKy,
                         iQuyenHan,
-                        iTrangThai};
+                        iTrangThai,
+                        iQuyenHan_Text,
+                        iTrangThai_Text};
                 rowtblTaiKhoanRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblTaiKhoanRow);
                 return rowtblTaiKhoanRow;
@@ -2551,6 +2746,8 @@ namespace HaBa.App_Data {
                 this.columntNgayDangKy = base.Columns["tNgayDangKy"];
                 this.columniQuyenHan = base.Columns["iQuyenHan"];
                 this.columniTrangThai = base.Columns["iTrangThai"];
+                this.columniQuyenHan_Text = base.Columns["iQuyenHan_Text"];
+                this.columniTrangThai_Text = base.Columns["iTrangThai_Text"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2580,6 +2777,10 @@ namespace HaBa.App_Data {
                 base.Columns.Add(this.columniQuyenHan);
                 this.columniTrangThai = new global::System.Data.DataColumn("iTrangThai", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columniTrangThai);
+                this.columniQuyenHan_Text = new global::System.Data.DataColumn("iQuyenHan_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniQuyenHan_Text);
+                this.columniTrangThai_Text = new global::System.Data.DataColumn("iTrangThai_Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columniTrangThai_Text);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPK_iTaiKhoanID}, true));
                 this.columnPK_iTaiKhoanID.AutoIncrement = true;
@@ -2861,6 +3062,34 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iTrangThai_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblThanhToan.iTrangThai_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'iTrangThai_Text\' in table \'tblThanhToan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblThanhToan.iTrangThai_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsiTrangThai_TextNull() {
+                return this.IsNull(this.tabletblThanhToan.iTrangThai_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetiTrangThai_TextNull() {
+                this[this.tabletblThanhToan.iTrangThai_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblHoaDonRow[] GettblHoaDonRows() {
                 if ((this.Table.ChildRelations["FK_tblHoaDon_tblThanhToan"] == null)) {
                     return new tblHoaDonRow[0];
@@ -2900,7 +3129,12 @@ namespace HaBa.App_Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int FK_iTaiKhoanID_Giao {
                 get {
-                    return ((int)(this[this.tabletblHoaDon.FK_iTaiKhoanID_GiaoColumn]));
+                    try {
+                        return ((int)(this[this.tabletblHoaDon.FK_iTaiKhoanID_GiaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FK_iTaiKhoanID_Giao\' in table \'tblHoaDon\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletblHoaDon.FK_iTaiKhoanID_GiaoColumn] = value;
@@ -3029,6 +3263,86 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FK_iTaiKhoanID_Giao_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblHoaDon.FK_iTaiKhoanID_Giao_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FK_iTaiKhoanID_Giao_Text\' in table \'tblHoaDon\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblHoaDon.FK_iTaiKhoanID_Giao_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FK_iTaiKhoanID_Nhan_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblHoaDon.FK_iTaiKhoanID_Nhan_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FK_iTaiKhoanID_Nhan_Text\' in table \'tblHoaDon\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblHoaDon.FK_iTaiKhoanID_Nhan_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FK_iThanhToanID_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblHoaDon.FK_iThanhToanID_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FK_iThanhToanID_Text\' in table \'tblHoaDon\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblHoaDon.FK_iThanhToanID_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iTrangThai_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblHoaDon.iTrangThai_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'iTrangThai_Text\' in table \'tblHoaDon\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblHoaDon.iTrangThai_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long lTriGia {
+                get {
+                    try {
+                        return ((long)(this[this.tabletblHoaDon.lTriGiaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'lTriGia\' in table \'tblHoaDon\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblHoaDon.lTriGiaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblTaiKhoanRow tblTaiKhoanRowByFK_tblHoaDon_tblTaiKhoan1 {
                 get {
                     return ((tblTaiKhoanRow)(this.GetParentRow(this.Table.ParentRelations["FK_tblHoaDon_tblTaiKhoan1"])));
@@ -3062,6 +3376,18 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFK_iTaiKhoanID_GiaoNull() {
+                return this.IsNull(this.tabletblHoaDon.FK_iTaiKhoanID_GiaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFK_iTaiKhoanID_GiaoNull() {
+                this[this.tabletblHoaDon.FK_iTaiKhoanID_GiaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IssGhiChuNull() {
                 return this.IsNull(this.tabletblHoaDon.sGhiChuColumn);
             }
@@ -3082,6 +3408,66 @@ namespace HaBa.App_Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettNgayGiaoHangNull() {
                 this[this.tabletblHoaDon.tNgayGiaoHangColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFK_iTaiKhoanID_Giao_TextNull() {
+                return this.IsNull(this.tabletblHoaDon.FK_iTaiKhoanID_Giao_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFK_iTaiKhoanID_Giao_TextNull() {
+                this[this.tabletblHoaDon.FK_iTaiKhoanID_Giao_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFK_iTaiKhoanID_Nhan_TextNull() {
+                return this.IsNull(this.tabletblHoaDon.FK_iTaiKhoanID_Nhan_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFK_iTaiKhoanID_Nhan_TextNull() {
+                this[this.tabletblHoaDon.FK_iTaiKhoanID_Nhan_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFK_iThanhToanID_TextNull() {
+                return this.IsNull(this.tabletblHoaDon.FK_iThanhToanID_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFK_iThanhToanID_TextNull() {
+                this[this.tabletblHoaDon.FK_iThanhToanID_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsiTrangThai_TextNull() {
+                return this.IsNull(this.tabletblHoaDon.iTrangThai_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetiTrangThai_TextNull() {
+                this[this.tabletblHoaDon.iTrangThai_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IslTriGiaNull() {
+                return this.IsNull(this.tabletblHoaDon.lTriGiaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetlTriGiaNull() {
+                this[this.tabletblHoaDon.lTriGiaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3368,6 +3754,70 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FK_iNhomSanPhamID_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblSanPham.FK_iNhomSanPhamID_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FK_iNhomSanPhamID_Text\' in table \'tblSanPham\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblSanPham.FK_iNhomSanPhamID_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iDoTuoi_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblSanPham.iDoTuoi_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'iDoTuoi_Text\' in table \'tblSanPham\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblSanPham.iDoTuoi_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iGioiTinh_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblSanPham.iGioiTinh_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'iGioiTinh_Text\' in table \'tblSanPham\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblSanPham.iGioiTinh_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iTrangThai_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblSanPham.iTrangThai_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'iTrangThai_Text\' in table \'tblSanPham\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblSanPham.iTrangThai_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblNhomSanPhamRow tblNhomSanPhamRow {
                 get {
                     return ((tblNhomSanPhamRow)(this.GetParentRow(this.Table.ParentRelations["FK_tblSanPham_tblNhomSanPham"])));
@@ -3411,6 +3861,54 @@ namespace HaBa.App_Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetiGioiTinhNull() {
                 this[this.tabletblSanPham.iGioiTinhColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFK_iNhomSanPhamID_TextNull() {
+                return this.IsNull(this.tabletblSanPham.FK_iNhomSanPhamID_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFK_iNhomSanPhamID_TextNull() {
+                this[this.tabletblSanPham.FK_iNhomSanPhamID_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsiDoTuoi_TextNull() {
+                return this.IsNull(this.tabletblSanPham.iDoTuoi_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetiDoTuoi_TextNull() {
+                this[this.tabletblSanPham.iDoTuoi_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsiGioiTinh_TextNull() {
+                return this.IsNull(this.tabletblSanPham.iGioiTinh_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetiGioiTinh_TextNull() {
+                this[this.tabletblSanPham.iGioiTinh_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsiTrangThai_TextNull() {
+                return this.IsNull(this.tabletblSanPham.iTrangThai_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetiTrangThai_TextNull() {
+                this[this.tabletblSanPham.iTrangThai_TextColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3578,6 +4076,38 @@ namespace HaBa.App_Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iQuyenHan_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblTaiKhoan.iQuyenHan_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'iQuyenHan_Text\' in table \'tblTaiKhoan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblTaiKhoan.iQuyenHan_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string iTrangThai_Text {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblTaiKhoan.iTrangThai_TextColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'iTrangThai_Text\' in table \'tblTaiKhoan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblTaiKhoan.iTrangThai_TextColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstNgaySinhNull() {
                 return this.IsNull(this.tabletblTaiKhoan.tNgaySinhColumn);
             }
@@ -3586,6 +4116,30 @@ namespace HaBa.App_Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettNgaySinhNull() {
                 this[this.tabletblTaiKhoan.tNgaySinhColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsiQuyenHan_TextNull() {
+                return this.IsNull(this.tabletblTaiKhoan.iQuyenHan_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetiQuyenHan_TextNull() {
+                this[this.tabletblTaiKhoan.iQuyenHan_TextColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsiTrangThai_TextNull() {
+                return this.IsNull(this.tabletblTaiKhoan.iTrangThai_TextColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetiTrangThai_TextNull() {
+                this[this.tabletblTaiKhoan.iTrangThai_TextColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3980,7 +4534,7 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connectdb_internet"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["HaBaConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4302,7 +4856,7 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connectdb_internet"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["HaBaConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4624,7 +5178,7 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connectdb_internet"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connectdb_common"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4635,7 +5189,7 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PK_lHoaDonID, FK_iTaiKhoanID_Giao, FK_iTaiKhoanID_Nhan, FK_iThanhToanID, s" +
                 "HoTen, sEmail, sDiaChi, sSoDienThoai, sGhiChu, tNgayDatHang, tNgayGiaoHang, iTra" +
-                "ngThai FROM dbo.tblHoaDon";
+                "ngThai FROM tblHoaDon";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4718,8 +5272,13 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int FK_iTaiKhoanID_Giao, int FK_iTaiKhoanID_Nhan, short FK_iThanhToanID, string sHoTen, string sEmail, string sDiaChi, string sSoDienThoai, string sGhiChu, System.DateTime tNgayDatHang, global::System.Nullable<global::System.DateTime> tNgayGiaoHang, short iTrangThai) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(FK_iTaiKhoanID_Giao));
+        public virtual int Insert(global::System.Nullable<int> FK_iTaiKhoanID_Giao, int FK_iTaiKhoanID_Nhan, short FK_iThanhToanID, string sHoTen, string sEmail, string sDiaChi, string sSoDienThoai, string sGhiChu, System.DateTime tNgayDatHang, global::System.Nullable<global::System.DateTime> tNgayGiaoHang, short iTrangThai) {
+            if ((FK_iTaiKhoanID_Giao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(FK_iTaiKhoanID_Giao.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(FK_iTaiKhoanID_Nhan));
             this.Adapter.InsertCommand.Parameters[2].Value = ((short)(FK_iThanhToanID));
             if ((sHoTen == null)) {
@@ -4780,8 +5339,13 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int FK_iTaiKhoanID_Giao, int FK_iTaiKhoanID_Nhan, short FK_iThanhToanID, string sHoTen, string sEmail, string sDiaChi, string sSoDienThoai, string sGhiChu, System.DateTime tNgayDatHang, global::System.Nullable<global::System.DateTime> tNgayGiaoHang, short iTrangThai, long Original_PK_lHoaDonID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(FK_iTaiKhoanID_Giao));
+        public virtual int Update(global::System.Nullable<int> FK_iTaiKhoanID_Giao, int FK_iTaiKhoanID_Nhan, short FK_iThanhToanID, string sHoTen, string sEmail, string sDiaChi, string sSoDienThoai, string sGhiChu, System.DateTime tNgayDatHang, global::System.Nullable<global::System.DateTime> tNgayGiaoHang, short iTrangThai, long Original_PK_lHoaDonID) {
+            if ((FK_iTaiKhoanID_Giao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(FK_iTaiKhoanID_Giao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(FK_iTaiKhoanID_Nhan));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((short)(FK_iThanhToanID));
             if ((sHoTen == null)) {
@@ -4996,7 +5560,7 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connectdb_internet"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["HaBaConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5339,7 +5903,7 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connectdb_internet"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["HaBaConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5786,7 +6350,7 @@ namespace HaBa.App_Data.dsHaBaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connectdb_internet"].ConnectionString;
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["HaBaConnectionString"].ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -10,7 +10,7 @@
 namespace HaBa.Report {
     
     
-    public partial class BaoCao_TaiKhoan {
+    public partial class BaoCao_KetQua_KinhDoanh {
         
         /// <summary>
         /// form1 control.
@@ -31,12 +31,12 @@ namespace HaBa.Report {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// crvTaiKhoan control.
+        /// crvKetQuaKinhDoanh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CrystalDecisions.Web.CrystalReportViewer crvTaiKhoan;
+        protected global::CrystalDecisions.Web.CrystalReportViewer crvKetQuaKinhDoanh;
     }
 }

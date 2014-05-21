@@ -232,6 +232,33 @@ namespace HaBa.DataAccessObject
                 }
             }
         }
+        /// <summary> 6. HoaDon_SelectItemByPK_lHoaDonID </summary>
+        /// <param name="_tblHoaDonEO"></param>
+        /// <returns></returns>
+        public static DataSet HoaDon_SelectItemByPK_lHoaDonID(tblHoaDonEO _tblHoaDonEO)
+        {
+            tblHoaDonEO oOutput = new tblHoaDonEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblHoaDon_SelectItem", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lHoaDonID", _tblHoaDonEO.PK_lHoaDonID));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
 
         /// <summary> 8. HoaDon_SelectList </summary>
         /// <param name="_tblHoaDonEO"></param>

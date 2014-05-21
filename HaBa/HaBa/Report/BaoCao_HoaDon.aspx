@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <CR:CrystalReportViewer ID="crvHoaDon" runat="server" ShowAllPageIds="True" AutoDataBind="true" />
+        <center><asp:Label ID="lblMsg" runat="server"></asp:Label></center>
+        <CR:CrystalReportViewer ID="crvHoaDon" runat="server" ShowAllPageIds="True" AutoDataBind="true" />
     </div>
     </form>
 </body>

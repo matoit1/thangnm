@@ -5,46 +5,37 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using HaBa.DataAccessObject;
 using CrystalDecisions.CrystalReports.Engine;
 using HaBa.App_Data;
-using System.Data.SqlClient;
-using System.Configuration;
+using HaBa.DataAccessObject;
+using HaBa.SharedLibraries;
 
 namespace HaBa.Report
 {
     public partial class BaoCao_TaiKhoan : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {try
-            {
-            ReportDocument crystalReport = new ReportDocument();
-            crystalReport.Load(Server.MapPath("~/Report/TaiKhoanRP.rpt"));
-            dsHaBa _dsHaBa = GetData("select * from tblTaiKhoan");
-            crystalReport.SetDataSource(_dsHaBa);
-            crvTaiKhoan.ReportSource = crystalReport;
-            }
-        catch { }
-        }
-
-        private dsHaBa GetData(string query)
         {
-            string conString = ConfigurationManager.ConnectionStrings["connectdb_internet"].ConnectionString;
-            SqlCommand cmd = new SqlCommand(query);
-            using (SqlConnection con = new SqlConnection(conString))
+            try
             {
-                using (SqlDataAdapter sda = new SqlDataAdapter())
+                ReportDocument crystalReport = new ReportDocument();
+                crystalReport.Load(Server.MapPath("~/Report/TaiKhoanRP.rpt"));
+                DataSet dsHaBa = new DataSet();
+                DataTable dttblTaiKhoan = new DataTable();
+                dttblTaiKhoan = tblTaiKhoanDAO.TaiKhoan_SelectList().Tables[0];
+                dttblTaiKhoan.Columns.Add(new DataColumn("iQuyenHan_Text", Type.GetType("System.String")));
+                dttblTaiKhoan.Columns.Add(new DataColumn("iTrangThai_Text", Type.GetType("System.String")));
+                foreach (DataRow dr in dttblTaiKhoan.Rows)
                 {
-                    cmd.Connection = con;
-
-                    sda.SelectCommand = cmd;
-                    using (dsHaBa _dsHaBa = new dsHaBa())
-                    {
-                        sda.Fill(_dsHaBa, "tblTaiKhoan");
-                        return _dsHaBa;
-                    }
+                    dr["iQuyenHan_Text"] = GetTextConstants.TaiKhoan_iTrangThai_GTC(Convert.ToInt16(dr["iQuyenHan"]));
+                    dr["iTrangThai_Text"] = GetTextConstants.TaiKhoan_iTrangThai_GTC(Convert.ToInt16(dr["iTrangThai"]));
                 }
+                dttblTaiKhoan.TableName = "tblTaiKhoan";
+                dsHaBa.Tables.Add(dttblTaiKhoan.Copy());
+                crystalReport.SetDataSource(dsHaBa);
+                crvTaiKhoan.ReportSource = crystalReport;
             }
+            catch (Exception ex) { lblMsg.Text = ex.Message; }
         }
     }
 }
