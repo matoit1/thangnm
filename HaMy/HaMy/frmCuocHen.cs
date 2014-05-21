@@ -112,6 +112,23 @@ namespace HaMy
             catch { }
         }
 
+        public bool CheckInput()
+        {
+            if (string.IsNullOrEmpty(txtsNoiDung.Text) == true)
+            {
+                lblsNoiDung.Text = Messages.Khong_Duoc_De_Trong;
+                txtsNoiDung.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsDiaDiem.Text) == true)
+            {
+                lblsDiaDiem.Text = Messages.Khong_Duoc_De_Trong;
+                txtsDiaDiem.Focus();
+                return false;
+            }
+            return true;
+        }
+
         public void ClearMessages()
         {
             //lblMsg.Text = "";
@@ -169,6 +186,8 @@ namespace HaMy
                 lblMsg.Text = "";
                 try
                 {
+                   if (CheckInput() == true)
+                  {
                     if (tblCuocHenDAO.CuocHen_Insert(getObject()) == true)
                     {
                         lblMsg.Text = Messages.Them_Thanh_Cong;
@@ -181,6 +200,7 @@ namespace HaMy
                     tblCuocHenEO _tblCuocHenEO = new tblCuocHenEO();
                     BindDataDetail(_tblCuocHenEO);
                     ClearMessages();
+                  }
                 }
                 catch (Exception ex)
                 {
@@ -194,6 +214,8 @@ namespace HaMy
             lblMsg.Text = "";
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblCuocHenDAO.CuocHen_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
@@ -205,6 +227,7 @@ namespace HaMy
                 BindDataGridView();
                 tblCuocHenEO _tblCuocHenEO = new tblCuocHenEO();
                 BindDataDetail(_tblCuocHenEO);
+               }
             }
             catch (Exception ex)
             {
