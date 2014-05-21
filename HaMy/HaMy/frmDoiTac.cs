@@ -23,6 +23,7 @@ namespace HaMy
         
         private void frmDoiTac_Load(object sender, EventArgs e)
         {
+            ClearMessages();
             txtPK_iDoiTac.Enabled = false;
             loadDataToDropDownList();
             BindDataGridView();
@@ -174,10 +175,10 @@ namespace HaMy
                 _tblDoiTacEO.sGhiChu = row.Cells[10].Value.ToString();
                 _tblDoiTacEO.iTrangThai = Convert.ToInt16(row.Cells[11].Value);
             }
-            if (_tblDoiTacEO.PK_iDoiTac != 0)
-            {
+            //if (_tblDoiTacEO.PK_iDoiTac != 0)
+            //{
                 BindDataDetail(_tblDoiTacEO);
-            }
+            //}
         }
         #endregion
 

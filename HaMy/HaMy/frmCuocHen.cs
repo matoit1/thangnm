@@ -24,6 +24,7 @@ namespace HaMy
 
         private void frmCuocHen_Load(object sender, EventArgs e)
         {
+            ClearMessages();
             txtPK_lCuocHen.Enabled = false;
             loadDataToDropDownList();
             BindDataGridView();
@@ -142,10 +143,10 @@ namespace HaMy
                 _tblCuocHenEO.tNgayGioKetThuc = Convert.ToDateTime(row.Cells[6].Value);
                 _tblCuocHenEO.iTrangThai = Convert.ToInt16(row.Cells[7].Value);
             }
-            if (_tblCuocHenEO.PK_lCuocHen != 0)
-            {
+            //if (_tblCuocHenEO.PK_lCuocHen != 0)
+            //{
                 BindDataDetail(_tblCuocHenEO);
-            }
+            //}
         }
         #endregion
 

@@ -10,6 +10,7 @@ using HaMy.EntityObject;
 using HaMy.SharedLibraries;
 using HaBa.SharedLibraries;
 using HaMy.DataAccessObject;
+using System.Text.RegularExpressions;
 
 namespace HaMy
 {
@@ -23,6 +24,7 @@ namespace HaMy
         
         private void frmNguoiDung_Load(object sender, EventArgs e)
         {
+            ClearMessages();
             txtPK_iNguoiDung.Enabled = false;
             loadDataToDropDownList();
             BindDataGridView();
@@ -107,6 +109,58 @@ namespace HaMy
             catch { }
         }
 
+        public bool CheckInput()
+        {
+            if (string.IsNullOrEmpty(txtPK_iNguoiDung.Text) == true)
+            {
+                lblPK_iNguoiDung.Text = Messages.Khong_Duoc_De_Trong;
+                txtPK_iNguoiDung.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsHoTen.Text) == true)
+            {
+                lblsHoTen.Text = Messages.Khong_Duoc_De_Trong;
+                txtsHoTen.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsDiaChi.Text) == true)
+            {
+                lblsDiaChi.Text = Messages.Khong_Duoc_De_Trong;
+                txtsDiaChi.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsEmail.Text) == true)
+            {
+                lblsEmail.Text = Messages.Khong_Duoc_De_Trong;
+                txtsEmail.Focus();
+                return false;
+            }
+            else
+            {
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                Match match = regex.Match(txtsEmail.Text);
+                if (match.Success == false)
+                {
+                    lblsEmail.Text = Messages.Khong_Dung_Dinh_Dang_Email;
+                    return false;
+                }
+            }
+
+            if (string.IsNullOrEmpty(txtsSoDienThoai.Text) == true)
+            {
+                lblsSoDienThoai.Text = Messages.Khong_Duoc_De_Trong;
+                txtsSoDienThoai.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsNgheNghiep.Text) == true)
+            {
+                lblsNgheNghiep.Text = Messages.Khong_Duoc_De_Trong;
+                txtsNgheNghiep.Focus();
+                return false;
+            }
+            return true;
+        }
+
         public void ClearMessages()
         {
             lblMsg.Text = "";
@@ -138,10 +192,10 @@ namespace HaMy
                 _tblNguoiDungEO.sNgheNghiep = row.Cells[7].Value.ToString();
                 _tblNguoiDungEO.iTrangThai = Convert.ToInt16(row.Cells[8].Value);
             }
-            if (_tblNguoiDungEO.PK_iNguoiDung != 0)
-            {
+            //if (_tblNguoiDungEO.PK_iNguoiDung != 0)
+            //{
                 BindDataDetail(_tblNguoiDungEO);
-            }
+            //}
         }
         #endregion
 
@@ -164,18 +218,21 @@ namespace HaMy
                 lblMsg.Text = "";
                 try
                 {
-                    if (tblNguoiDungDAO.NguoiDung_Insert(getObject()) == true)
+                    if (CheckInput() == true)
                     {
-                        lblMsg.Text = Messages.Them_Thanh_Cong;
+                        if (tblNguoiDungDAO.NguoiDung_Insert(getObject()) == true)
+                        {
+                            lblMsg.Text = Messages.Them_Thanh_Cong;
+                        }
+                        else
+                        {
+                            lblMsg.Text = Messages.Them_That_Bai;
+                        }
+                        BindDataGridView();
+                        tblNguoiDungEO _tblNguoiDungEO = new tblNguoiDungEO();
+                        BindDataDetail(_tblNguoiDungEO);
+                        ClearMessages();
                     }
-                    else
-                    {
-                        lblMsg.Text = Messages.Them_That_Bai;
-                    }
-                    BindDataGridView();
-                    tblNguoiDungEO _tblNguoiDungEO = new tblNguoiDungEO();
-                    BindDataDetail(_tblNguoiDungEO);
-                    ClearMessages();
                 }
                 catch (Exception ex)
                 {
@@ -191,17 +248,20 @@ namespace HaMy
             lblMsg.Text = "";
             try
             {
-                if (tblNguoiDungDAO.NguoiDung_Update(getObject()) == true)
+                if (CheckInput() == true)
                 {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    if (tblNguoiDungDAO.NguoiDung_Update(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Sua_That_Bai;
+                    }
+                    BindDataGridView();
+                    tblNguoiDungEO _tblNguoiDungEO = new tblNguoiDungEO();
+                    BindDataDetail(_tblNguoiDungEO);
                 }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-                BindDataGridView();
-                tblNguoiDungEO _tblNguoiDungEO = new tblNguoiDungEO();
-                BindDataDetail(_tblNguoiDungEO);
             }
             catch (Exception ex)
             {
