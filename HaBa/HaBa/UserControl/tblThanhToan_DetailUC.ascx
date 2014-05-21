@@ -27,12 +27,12 @@
         </tr>
         <tr>
             <td>Tên thanh toán: </td>
-            <td><asp:TextBox ID="txtsTenThanhToan" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsTenThanhToan" runat="server" Width="400px" TabIndex="1"></asp:TextBox></td>
             <td><asp:Label ID="lblsTenThanhToan" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Trạng thái: </td>
-            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px" TabIndex="2"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -43,10 +43,14 @@
         <tr>
             <td></td>
             <td>
-                <asp:Button ID="btnInsert" runat="server" Text="Insert" onclick="btnInsert_Click" />
-                <asp:Button ID="btnUpdate" runat="server" Text="Update" onclick="btnUpdate_Click" />
-                <asp:Button ID="btnDelete" runat="server" Text="Delete" onclick="btnDelete_Click" />
-                <asp:Button ID="btnReset" runat="server" Text="Reset" onclick="btnReset_Click" />
+                <asp:Button ID="btnInsert" runat="server" Text="Insert" 
+                    onclick="btnInsert_Click" TabIndex="3" />
+                <asp:Button ID="btnUpdate" runat="server" Text="Update" 
+                    onclick="btnUpdate_Click" TabIndex="4" />
+                <asp:Button ID="btnDelete" runat="server" Text="Delete" 
+                    onclick="btnDelete_Click" TabIndex="5" />
+                <asp:Button ID="btnReset" runat="server" Text="Reset" onclick="btnReset_Click" 
+                    TabIndex="6" />
             </td>
             <td></td>
         </tr>

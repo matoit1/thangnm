@@ -79,6 +79,17 @@ namespace HaBa.UserControl
             ddliTrangThai.DataBind();
         }
 
+        public bool CheckInput()
+        {
+            if (string.IsNullOrEmpty(txtsTenNhom.Text) == true)
+            {
+                lblsTenNhom.Text = Messages.Khong_Duoc_De_Trong;
+                txtsTenNhom.Focus();
+                return false;
+            }
+            return true;
+        }
+
         private void ClearMessages()
         {
             lblMsg.Text = "";
@@ -94,6 +105,8 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblNhomSanPhamDAO.NhomSanPham_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
@@ -102,6 +115,7 @@ namespace HaBa.UserControl
                 {
                     lblMsg.Text = Messages.Them_That_Bai;
                 }
+               }
             }
             catch (Exception ex)
             {
@@ -114,6 +128,8 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblNhomSanPhamDAO.NhomSanPham_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
@@ -122,6 +138,7 @@ namespace HaBa.UserControl
                 {
                     lblMsg.Text = Messages.Sua_That_Bai;
                 }
+               }
             }
             catch (Exception ex)
             {

@@ -108,6 +108,89 @@ namespace HaBa.UserControl
             ddliTrangThai.DataBind();
         }
 
+        public bool CheckInput()
+        {
+            Int64 num64;
+            Int16 num16;
+            if (string.IsNullOrEmpty(txtsTenSanPham.Text) == true)
+            {
+                lblsTenSanPham.Text = Messages.Khong_Duoc_De_Trong;
+                txtsTenSanPham.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsMoTa.Text) == true)
+            {
+                lblsMoTa.Text = Messages.Khong_Duoc_De_Trong;
+                txtsMoTa.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsThongTin.Text) == true)
+            {
+                lblsThongTin.Text = Messages.Khong_Duoc_De_Trong;
+                txtsThongTin.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsXuatXu.Text) == true)
+            {
+                lblsXuatXu.Text = Messages.Khong_Duoc_De_Trong;
+                txtsXuatXu.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtlGiaBan.Text) == true)
+            {
+                lbllGiaBan.Text = Messages.Khong_Duoc_De_Trong;
+                txtlGiaBan.Focus();
+                return false;
+            }
+            else
+            {
+                bool isNum = Int64.TryParse(txtlGiaBan.Text, out num64);
+                if (isNum == false)
+                {
+                    lbllGiaBan.Text = Messages.Khong_Dung_Dinh_Dang_So;
+                    txtlGiaBan.Focus();
+                    return false;
+                }
+
+            }
+
+
+            if (string.IsNullOrEmpty(txtiVAT.Text) == true)
+            {
+                lbliVAT.Text = Messages.Khong_Duoc_De_Trong;
+                txtiVAT.Focus();
+                return false;
+            }
+            else
+            {
+                bool isNum = Int16.TryParse(txtiVAT.Text, out num16);
+                if (isNum == false)
+                {
+                    lbliVAT.Text = Messages.Khong_Dung_Dinh_Dang_So;
+                    txtiVAT.Focus();
+                    return false;
+                }
+            }
+            if (string.IsNullOrEmpty(txtiSoLuong.Text) == true)
+            {
+                lbliSoLuong.Text = Messages.Khong_Duoc_De_Trong;
+                txtiSoLuong.Focus();
+                return false;
+            }
+            else
+            {
+                bool isNum = Int16.TryParse(txtiSoLuong.Text, out num16);
+                if (isNum == false)
+                {
+                    lbliSoLuong.Text = Messages.Khong_Dung_Dinh_Dang_So;
+                    txtiSoLuong.Focus();
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
         private void ClearMessages()
         {
             lblMsg.Text = "";
@@ -133,6 +216,8 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblSanPhamDAO.SanPham_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
@@ -141,6 +226,7 @@ namespace HaBa.UserControl
                 {
                     lblMsg.Text = Messages.Them_That_Bai;
                 }
+               }
             }
             catch (Exception ex)
             {
@@ -153,6 +239,8 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblSanPhamDAO.SanPham_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
@@ -161,6 +249,7 @@ namespace HaBa.UserControl
                 {
                     lblMsg.Text = Messages.Sua_That_Bai;
                 }
+               }
             }
             catch (Exception ex)
             {

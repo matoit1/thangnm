@@ -8,6 +8,7 @@ using HaBa.EntityObject;
 using HaBa.SharedLibraries;
 using HaBa.DataAccessObject;
 using HaBa.SharedLibraries.Constants;
+using System.Text.RegularExpressions;
 
 namespace HaBa.UserControl
 {
@@ -116,6 +117,70 @@ namespace HaBa.UserControl
             }
         }
 
+        public bool CheckInput()
+        {
+            if (string.IsNullOrEmpty(txtsHoTen.Text) == true)
+            {
+                lblsHoTen.Text = Messages.Khong_Duoc_De_Trong;
+                txtsHoTen.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsEmail.Text) == true)
+            {
+                lblsEmail.Text = Messages.Khong_Duoc_De_Trong;
+                txtsEmail.Focus();
+                return false;
+            }
+            else
+            {
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                Match match = regex.Match(txtsEmail.Text);
+                if (match.Success == false)
+                {
+                    lblsEmail.Text = Messages.Khong_Dung_Dinh_Dang_Email;
+                    txtsEmail.Focus();
+                    return false;
+                }
+            }
+            if (string.IsNullOrEmpty(txtsDiaChi.Text) == true)
+            {
+                lblsDiaChi.Text = Messages.Khong_Duoc_De_Trong;
+                txtsDiaChi.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsSoDienThoai.Text) == true)
+            {
+                lblsSoDienThoai.Text = Messages.Khong_Duoc_De_Trong;
+                txtsSoDienThoai.Focus();
+                return false;
+            }
+            else
+            {
+                string sdt;
+                sdt = txtsSoDienThoai.Text.Trim().Replace(" ", "");
+                try { Convert.ToInt64(sdt); }
+                catch
+                {
+                    lblsSoDienThoai.Text = Messages.Khong_Dung_Dinh_Dang_So_Dien_Thoai;
+                    txtsSoDienThoai.Focus();
+                    return false;
+                }
+                if (sdt.Length < 10)
+                {
+                    lblsSoDienThoai.Text = Messages.Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai;
+                    txtsSoDienThoai.Focus();
+                    return false;
+                }
+            }
+            if (string.IsNullOrEmpty(txtsGhiChu.Text) == true)
+            {
+                lblsGhiChu.Text = Messages.Khong_Duoc_De_Trong;
+                txtsGhiChu.Focus();
+                return false;
+            }
+            return true;
+        }
+
         private void ClearMessages()
         {
             lblMsg.Text = "";
@@ -139,6 +204,8 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblHoaDonDAO.HoaDon_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
@@ -147,6 +214,7 @@ namespace HaBa.UserControl
                 {
                     lblMsg.Text = Messages.Them_That_Bai;
                 }
+               }
             }
             catch (Exception ex)
             {
@@ -159,6 +227,8 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
@@ -167,6 +237,7 @@ namespace HaBa.UserControl
                 {
                     lblMsg.Text = Messages.Sua_That_Bai;
                 }
+               }
             }
             catch (Exception ex)
             {

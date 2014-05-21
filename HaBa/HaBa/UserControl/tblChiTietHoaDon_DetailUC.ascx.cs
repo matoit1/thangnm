@@ -71,6 +71,47 @@ namespace HaBa.UserControl
             ddlFK_sSanPhamID.DataBind();
         }
 
+        public bool CheckInput()
+        {
+            Int64 num64;
+            Int16 num16;
+            if (string.IsNullOrEmpty(txtlGiaBan.Text) == true)
+            {
+                lbllGiaBan.Text = Messages.Khong_Duoc_De_Trong;
+                txtlGiaBan.Focus();
+                return false;
+            }
+            else
+            {
+                bool isNum = Int64.TryParse(txtlGiaBan.Text, out num64);
+                if (isNum == false)
+                {
+                    lbllGiaBan.Text = Messages.Khong_Dung_Dinh_Dang_So;
+                    txtlGiaBan.Focus();
+                    return false;
+                }
+
+            }
+            if (string.IsNullOrEmpty(txtiSoLuong.Text) == true)
+            {
+                lbliSoLuong.Text = Messages.Khong_Duoc_De_Trong;
+                txtiSoLuong.Focus();
+                return false;
+            }
+            else
+            {
+                bool isNum = Int16.TryParse(txtiSoLuong.Text, out num16);
+                if (isNum == false)
+                {
+                    lbliSoLuong.Text = Messages.Khong_Dung_Dinh_Dang_So;
+                    txtiSoLuong.Focus();
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
         private void ClearMessages()
         {
             lblMsg.Text = "";
@@ -86,6 +127,8 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
@@ -95,6 +138,7 @@ namespace HaBa.UserControl
                     lblMsg.Text = Messages.Them_That_Bai;
                 }
             }
+        } 
             catch (Exception ex)
             {
                 lblMsg.Text = Messages.Loi + ex.Message;
@@ -106,6 +150,8 @@ namespace HaBa.UserControl
             ClearMessages();
             try
             {
+              if (CheckInput() == true)
+               {
                 if (tblChiTietHoaDonDAO.ChiTietHoaDon_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
@@ -114,6 +160,7 @@ namespace HaBa.UserControl
                 {
                     lblMsg.Text = Messages.Sua_That_Bai;
                 }
+               }
             }
             catch (Exception ex)
             {
