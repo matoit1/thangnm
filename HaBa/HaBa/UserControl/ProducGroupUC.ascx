@@ -9,9 +9,9 @@
                 <asp:Repeater ID="rptLoadProductGroup" runat="server" >
                     <ItemTemplate>
                         <li class="clearfix">
-					        <a class="picturelabela" target="_top" href="../Default.aspx">
+					        <a class="picturelabela" target="_top" href='<%#"../NhomSanPham.aspx?PK_iNhomSanPhamID=" + Eval("PK_iNhomSanPhamID")%>'>
                             <img class="label_thumb" src='<%#"../Images/Product/"+ Eval("PK_iNhomSanPhamID")+".jpg"%>' alt='<%#Eval("sTenNhom")%>' title='<%#Eval("sTenNhom")%>' /></a>
-					        <strong><h2><a class="titlelabel" target="_top" href="../Default.aspx"><%#Eval("sTenNhom")%></a></h2></strong>
+					        <strong><h2><a class="titlelabel" target="_top" href='<%#"../NhomSanPham.aspx?PK_iNhomSanPhamID=" + Eval("PK_iNhomSanPhamID")%>'><%#Eval("sTenNhom")%></a></h2></strong>
 					        <%--<div class="contento">
 						        Áo sơ mi công sở 2014. Áo đẹp thời trang! ...<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />
 						        <a class="url" target="_top" href="../Default.aspx">Chi Tiết »</a>

@@ -11,9 +11,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+        <center><asp:Label ID="lblMsg" runat="server"></asp:Label></center>
         <CR:CrystalReportViewer ID="crvTaiKhoan" runat="server" ShowAllPageIds="True" AutoDataBind="true" />
-    
     </div>
     </form>
 </body>

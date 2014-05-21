@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BaoCao_SanPham.aspx.cs" Inherits="HaBa.Report.BaoCao_SanPham" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test_BaoCao_TaiKhoan.aspx.cs" Inherits="HaBa.Report.Test_BaoCao_TaiKhoan" %>
 
 <%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
 
@@ -11,8 +11,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <center><asp:Label ID="lblMsg" runat="server"></asp:Label></center>
-        <CR:CrystalReportViewer ID="crvSanPham" runat="server" ShowAllPageIds="True" AutoDataBind="true" />
+    
+        <CR:CrystalReportViewer ID="crvTaiKhoan" runat="server" ShowAllPageIds="True" AutoDataBind="true" />
+    
     </div>
     </form>
 </body>
