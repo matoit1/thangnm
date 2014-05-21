@@ -74,7 +74,7 @@ namespace HaMy
 
         public void ClearMessages()
         {
-            lblMsg.Text = "";
+            //lblMsg.Text = "";
             lblPK_iNhom.Text = "";
             lblsTenNhom.Text = "";
         }
