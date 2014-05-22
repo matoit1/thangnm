@@ -17,9 +17,10 @@ namespace HaBa.SharedLibraries
             string output = "";
             switch (input)
             {
-                case 1: output = "Chưa giao hàng"; break;
-                case 2: output = "Đã giao hàng"; break;
-                case 3: output = "Hủy"; break;
+                case 1: output = "Chưa kiểm tra"; break;
+                case 2: output = "Chưa giao hàng"; break;
+                case 3: output = "Đã giao hàng"; break;
+                case 4: output = "Hủy"; break;
                 default: output = "N/A"; break;
             }
             return output;

@@ -16,6 +16,7 @@ namespace HaBa.SharedLibraries
         public static SortedList HoaDon_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
+            output.Add(HoaDon_iTrangThai_C.Chua_Kiem_Tra, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Chua_Kiem_Tra));
             output.Add(HoaDon_iTrangThai_C.Chua_Giao_Hang, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Chua_Giao_Hang));
             output.Add(HoaDon_iTrangThai_C.Da_Giao_Hang, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Da_Giao_Hang));
             output.Add(HoaDon_iTrangThai_C.Huy, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Huy));

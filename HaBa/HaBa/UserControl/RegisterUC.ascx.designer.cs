@@ -7,10 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa {
+namespace HaBa.UserControl {
     
     
-    public partial class GioHang {
+    public partial class RegisterUC {
+        
+        /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// lblTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
         /// lblMsg control.
@@ -22,103 +40,58 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// hplPK_lHoaDonID control.
+        /// txtsTenDangNhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplPK_lHoaDonID;
+        protected global::System.Web.UI.WebControls.TextBox txtsTenDangNhap;
         
         /// <summary>
-        /// pnlGioHang control.
+        /// lblsTenDangNhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlGioHang;
+        protected global::System.Web.UI.WebControls.Label lblsTenDangNhap;
         
         /// <summary>
-        /// grvGioHang control.
+        /// txtsMatKhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvGioHang;
+        protected global::System.Web.UI.WebControls.TextBox txtsMatKhau;
         
         /// <summary>
-        /// lblTongtien control.
+        /// lblsMatKhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTongtien;
+        protected global::System.Web.UI.WebControls.Label lblsMatKhau;
         
         /// <summary>
-        /// Label1 control.
+        /// txtsMatKhau1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox txtsMatKhau1;
         
         /// <summary>
-        /// imgbtnContinue control.
+        /// lblsMatKhau1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnContinue;
-        
-        /// <summary>
-        /// imgbtnDeleteCart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnDeleteCart;
-        
-        /// <summary>
-        /// imgbtnUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnUpdate;
-        
-        /// <summary>
-        /// imgbtnBuy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnBuy;
-        
-        /// <summary>
-        /// pnlThanhToan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlThanhToan;
-        
-        /// <summary>
-        /// rblCheck control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblCheck;
+        protected global::System.Web.UI.WebControls.Label lblsMatKhau1;
         
         /// <summary>
         /// txtsHoTen control.
@@ -130,6 +103,15 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.TextBox txtsHoTen;
         
         /// <summary>
+        /// lblsHoTen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsHoTen;
+        
+        /// <summary>
         /// txtsEmail control.
         /// </summary>
         /// <remarks>
@@ -139,57 +121,84 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.TextBox txtsEmail;
         
         /// <summary>
-        /// txtsDiaChi control.
+        /// lblsEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsDiaChi;
+        protected global::System.Web.UI.WebControls.Label lblsEmail;
         
         /// <summary>
-        /// txtsSoDienThoai control.
+        /// UpdatePanel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsSoDienThoai;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
         
         /// <summary>
-        /// ddlFK_iThanhToanID control.
+        /// imgCaptcha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFK_iThanhToanID;
+        protected global::System.Web.UI.WebControls.Image imgCaptcha;
         
         /// <summary>
-        /// txtsGhiChu control.
+        /// ibtnChage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsGhiChu;
+        protected global::System.Web.UI.WebControls.ImageButton ibtnChage;
         
         /// <summary>
-        /// txttNgayGiaoHang control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttNgayGiaoHang;
+        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// imgbtnPay control.
+        /// txtsCaptcha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnPay;
+        protected global::System.Web.UI.WebControls.TextBox txtsCaptcha;
+        
+        /// <summary>
+        /// lblsCaptcha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsCaptcha;
+        
+        /// <summary>
+        /// btnRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRegister;
+        
+        /// <summary>
+        /// btnReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReset;
     }
 }

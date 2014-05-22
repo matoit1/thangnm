@@ -1,5 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GioHang.aspx.cs" Inherits="HaBa.GioHang" MasterPageFile="~/ShareInterface/ProductSI.Master" %>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="cphHead" runat="server">
+<link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
+<script src="../Scripts/calendar1.js" type="text/javascript"></script>  
+<script src="../Scripts/calendar2.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".startdate").datepicker({ dateFormat: "mm/dd/yy" }).val()
+        $(".enddate").datepicker({ dateFormat: "mm/dd/yy" }).val()
+    });
+</script>
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
 <center><h2><asp:Label ID="lblMsg" runat="server"></asp:Label></h2>
     <asp:HyperLink ID="hplPK_lHoaDonID" runat="server"></asp:HyperLink>
@@ -86,6 +97,10 @@
                 <tr>
                     <td>Ghi chú: </td>
                     <td><asp:TextBox ID="txtsGhiChu" runat="server" class="text" TextMode="MultiLine" Rows="3" Width="400px"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Ngày giao hàng: </td>
+                    <td><asp:TextBox ID="txttNgayGiaoHang" runat="server" CssClass="startdate" Width="400px"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td></td>

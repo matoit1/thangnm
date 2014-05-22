@@ -15,6 +15,8 @@ namespace HaBa.Client.Accounts
         protected void Page_Load(object sender, EventArgs e)
         {
             LoginUC1.hplLost.NavigateUrl = "~/Client/Accounts/ForgotPassword.aspx";
+            LoginUC1.hplRegister.Text = "Bạn chưa có tài khoản? Đăng ký nhanh!";
+            LoginUC1.hplRegister.NavigateUrl = "~/Client/Accounts/Register.aspx";
         }
 
         protected void Login_Click(object sender, EventArgs e)

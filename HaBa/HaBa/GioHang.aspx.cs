@@ -40,6 +40,7 @@ namespace HaBa
                     }
                     lblTongtien.Text = tongtien(tb).ToString();
                 }
+                txttNgayGiaoHang.Text = DateTime.Now.ToString(Messages.Format_DateTimeMMDDYYYY);
             }
             lblMsg.Text = "";
             if (Session["GioHang"] == null || ((DataTable)Session["GioHang"]).Rows.Count == 0)
@@ -118,6 +119,7 @@ namespace HaBa
                 _tblHoaDonEO.sDiaChi = txtsDiaChi.Text;
                 _tblHoaDonEO.sSoDienThoai = txtsSoDienThoai.Text;
                 _tblHoaDonEO.sGhiChu = txtsGhiChu.Text;
+                _tblHoaDonEO.tNgayGiaoHang = Convert.ToDateTime(txttNgayGiaoHang.Text);
                 _tblHoaDonEO.PK_lHoaDonID = tblHoaDonDAO.HoaDon_Insert_Get_PK_lHoaDonID_New(_tblHoaDonEO);
                 tb = (DataTable)Session["GioHang"];
                 tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();

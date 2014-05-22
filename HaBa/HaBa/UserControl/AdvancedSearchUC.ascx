@@ -36,6 +36,14 @@
                     <td><asp:TextBox ID="txtsXuatXu" runat="server" Width="250px"></asp:TextBox></td>
                 </tr>
                 <tr>
+                    <td>Độ tuổi: </td>
+                    <td><asp:DropDownList ID="ddliDoTuoi" runat="server" Width="405px"></asp:DropDownList></td>
+                </tr>
+                <tr>
+                    <td>Giới tính: </td>
+                    <td><asp:DropDownList ID="ddliGioiTinh" runat="server" Width="405px"></asp:DropDownList></td>
+                </tr>
+                <tr>
                     <td></td>
                     <td>
                         <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" onclick="btnSearch_Click" />

@@ -38,7 +38,7 @@ namespace HaBa.UserControl
             {
                 tblTaiKhoanEO _AccountsEO = new tblTaiKhoanEO();
                 _AccountsEO.sTenDangNhap = txtsTenDangNhap.Text;
-                _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text);
+                _AccountsEO.sMatKhau = Security.EnCrypt(txtsMatKhau.Text.Trim());
                 _AccountsEO.iQuyenHan = iType;
                 _AccountsEO.iTrangThai = TaiKhoan_iTrangThai_C.Mo;
                 dsOutput = tblTaiKhoanDAO.TaiKhoan_Login(_AccountsEO);

@@ -85,12 +85,12 @@ namespace HaBa.UserControl {
         public global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
-        /// hplHelp control.
+        /// hplRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.HyperLink hplHelp;
+        public global::System.Web.UI.WebControls.HyperLink hplRegister;
     }
 }
