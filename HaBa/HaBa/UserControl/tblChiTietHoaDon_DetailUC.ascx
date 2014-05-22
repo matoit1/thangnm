@@ -16,6 +16,11 @@
             <td></td>
         </tr>
         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
             <td></td>
             <td align="center"><asp:Label ID="lblMsg" runat="server"></asp:Label></td>
             <td></td>

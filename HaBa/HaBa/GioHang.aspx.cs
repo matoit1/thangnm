@@ -18,6 +18,9 @@ namespace HaBa
         {
             if (!IsPostBack)
             {
+                lblMsg.Text = "";
+                hplLogin.Visible = false;
+                hplRegister.Visible = false;
                 pnlThanhToan.Visible = false;
                 loadPayMethod();
                 if (Request.Cookies["HaBa_client"] != null)
@@ -42,11 +45,11 @@ namespace HaBa
                 }
                 txttNgayGiaoHang.Text = DateTime.Now.ToString(Messages.Format_DateTimeMMDDYYYY);
             }
-            lblMsg.Text = "";
+            lblNotify.Text = "";
             if (Session["GioHang"] == null || ((DataTable)Session["GioHang"]).Rows.Count == 0)
             {
                 pnlGioHang.Visible = false;
-                lblMsg.Text = Messages.tblSanPham_Gio_Hang_Chua_Co_San_Pham_Nao;
+                lblNotify.Text = Messages.tblSanPham_Gio_Hang_Chua_Co_San_Pham_Nao;
             }
             else{
                 pnlGioHang.Visible = true;
@@ -107,39 +110,57 @@ namespace HaBa
         {
             try
             {
-                tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
-                _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["HaBa_client"].Value;
-                _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
-                int CategoryID = Convert.ToInt32(Request.QueryString["CategoryID"]);
-                tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
-                _tblHoaDonEO.FK_iTaiKhoanID_Nhan = _tblTaiKhoanEO.PK_iTaiKhoanID;
-                _tblHoaDonEO.FK_iThanhToanID = Convert.ToInt16(ddlFK_iThanhToanID.SelectedValue);
-                _tblHoaDonEO.sHoTen = txtsHoTen.Text;
-                _tblHoaDonEO.sEmail = txtsEmail.Text;
-                _tblHoaDonEO.sDiaChi = txtsDiaChi.Text;
-                _tblHoaDonEO.sSoDienThoai = txtsSoDienThoai.Text;
-                _tblHoaDonEO.sGhiChu = txtsGhiChu.Text;
-                _tblHoaDonEO.tNgayGiaoHang = Convert.ToDateTime(txttNgayGiaoHang.Text);
-                _tblHoaDonEO.PK_lHoaDonID = tblHoaDonDAO.HoaDon_Insert_Get_PK_lHoaDonID_New(_tblHoaDonEO);
-                tb = (DataTable)Session["GioHang"];
-                tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
-                for (int i = 0; i < tb.Rows.Count; i++)
+                if (Request.Cookies["HaBa_client"].Value != null)
                 {
-                    _tblChiTietHoaDonEO.FK_lHoaDonID = _tblHoaDonEO.PK_lHoaDonID;
-                    _tblChiTietHoaDonEO.FK_sSanPhamID = Convert.ToString(tb.Rows[i]["PK_sSanPhamID"]);
-                    _tblChiTietHoaDonEO.lGiaBan = Convert.ToInt64(tb.Rows[i]["lGiaBan"]);
-                    _tblChiTietHoaDonEO.iSoLuong = Convert.ToInt16(tb.Rows[i]["iSoLuong"]);
+                    lblMsg.Text = "";
+                    hplLogin.Visible = false;
+                    hplRegister.Visible = false;
 
-                    tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(_tblChiTietHoaDonEO);
+                    tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                    _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["HaBa_client"].Value;
+                    _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
+                    int CategoryID = Convert.ToInt32(Request.QueryString["CategoryID"]);
+                    tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+                    _tblHoaDonEO.FK_iTaiKhoanID_Nhan = _tblTaiKhoanEO.PK_iTaiKhoanID;
+                    _tblHoaDonEO.FK_iThanhToanID = Convert.ToInt16(ddlFK_iThanhToanID.SelectedValue);
+                    _tblHoaDonEO.sHoTen = txtsHoTen.Text;
+                    _tblHoaDonEO.sEmail = txtsEmail.Text;
+                    _tblHoaDonEO.sDiaChi = txtsDiaChi.Text;
+                    _tblHoaDonEO.sSoDienThoai = txtsSoDienThoai.Text;
+                    _tblHoaDonEO.sGhiChu = txtsGhiChu.Text;
+                    _tblHoaDonEO.tNgayGiaoHang = Convert.ToDateTime(txttNgayGiaoHang.Text);
+                    _tblHoaDonEO.PK_lHoaDonID = tblHoaDonDAO.HoaDon_Insert_Get_PK_lHoaDonID_New(_tblHoaDonEO);
+                    tb = (DataTable)Session["GioHang"];
+                    tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
+                    for (int i = 0; i < tb.Rows.Count; i++)
+                    {
+                        _tblChiTietHoaDonEO.FK_lHoaDonID = _tblHoaDonEO.PK_lHoaDonID;
+                        _tblChiTietHoaDonEO.FK_sSanPhamID = Convert.ToString(tb.Rows[i]["PK_sSanPhamID"]);
+                        _tblChiTietHoaDonEO.lGiaBan = Convert.ToInt64(tb.Rows[i]["lGiaBan"]);
+                        _tblChiTietHoaDonEO.iSoLuong = Convert.ToInt16(tb.Rows[i]["iSoLuong"]);
+
+                        tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(_tblChiTietHoaDonEO);
+                    }
+                    lblNotify.Text = Messages.tblSanPham_Dat_Hang_Thanh_Cong;
+                    hplPK_lHoaDonID.Text = Messages.tblSanPham_Xem_Lai_Hoa_Don;
+                    hplPK_lHoaDonID.NavigateUrl = "~/Client/HoaDon.aspx?PK_lHoaDonID=" + _tblHoaDonEO.PK_lHoaDonID;
+                    pnlGioHang.Visible = false;
+                    pnlThanhToan.Visible = false;
+                    Session["GioHang"] = null;
                 }
-                lblMsg.Text= Messages.tblSanPham_Dat_Hang_Thanh_Cong;
-                hplPK_lHoaDonID.Text = Messages.tblSanPham_Xem_Lai_Hoa_Don;
-                hplPK_lHoaDonID.NavigateUrl = "~/Client/HoaDon.aspx?PK_lHoaDonID=" + _tblHoaDonEO.PK_lHoaDonID;
-                pnlGioHang.Visible = false;
-                pnlThanhToan.Visible = false;
-                Session["GioHang"] = null;
+                else
+                {
+                    lblMsg.Text = "Bạn có tài khoản chưa? ";
+                    hplLogin.Visible = true;
+                    hplRegister.Visible = true;
+                }
             }
-            catch(Exception ex) { lblMsg.Text = Messages.Loi + ex.Message; }
+            catch
+            {
+                lblMsg.Text = "Bạn có tài khoản chưa? ";
+                hplLogin.Visible = true;
+                hplRegister.Visible = true;
+            }
         }
 
         protected void imgbtnDeleteCart_Click(object sender, ImageClickEventArgs e)

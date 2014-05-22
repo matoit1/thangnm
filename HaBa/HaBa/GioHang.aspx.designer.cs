@@ -13,13 +13,13 @@ namespace HaBa {
     public partial class GioHang {
         
         /// <summary>
-        /// lblMsg control.
+        /// lblNotify control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg;
+        protected global::System.Web.UI.WebControls.Label lblNotify;
         
         /// <summary>
         /// hplPK_lHoaDonID control.
@@ -112,6 +112,33 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.Panel pnlThanhToan;
         
         /// <summary>
+        /// lblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
+        
+        /// <summary>
+        /// hplLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplLogin;
+        
+        /// <summary>
+        /// hplRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplRegister;
+        
+        /// <summary>
         /// rblCheck control.
         /// </summary>
         /// <remarks>
@@ -119,6 +146,15 @@ namespace HaBa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblCheck;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
         /// txtsHoTen control.
@@ -130,6 +166,15 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.TextBox txtsHoTen;
         
         /// <summary>
+        /// lblsHoTen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsHoTen;
+        
+        /// <summary>
         /// txtsEmail control.
         /// </summary>
         /// <remarks>
@@ -137,6 +182,15 @@ namespace HaBa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtsEmail;
+        
+        /// <summary>
+        /// lblsEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsEmail;
         
         /// <summary>
         /// txtsDiaChi control.
@@ -148,6 +202,15 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.TextBox txtsDiaChi;
         
         /// <summary>
+        /// lblsDiaChi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsDiaChi;
+        
+        /// <summary>
         /// txtsSoDienThoai control.
         /// </summary>
         /// <remarks>
@@ -155,6 +218,15 @@ namespace HaBa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtsSoDienThoai;
+        
+        /// <summary>
+        /// lblsSoDienThoai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsSoDienThoai;
         
         /// <summary>
         /// ddlFK_iThanhToanID control.
@@ -166,6 +238,15 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.DropDownList ddlFK_iThanhToanID;
         
         /// <summary>
+        /// lblFK_iThanhToanID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFK_iThanhToanID;
+        
+        /// <summary>
         /// txtsGhiChu control.
         /// </summary>
         /// <remarks>
@@ -175,6 +256,15 @@ namespace HaBa {
         protected global::System.Web.UI.WebControls.TextBox txtsGhiChu;
         
         /// <summary>
+        /// lblsGhiChu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblsGhiChu;
+        
+        /// <summary>
         /// txttNgayGiaoHang control.
         /// </summary>
         /// <remarks>
@@ -182,6 +272,15 @@ namespace HaBa {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txttNgayGiaoHang;
+        
+        /// <summary>
+        /// lbltNgayGiaoHang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltNgayGiaoHang;
         
         /// <summary>
         /// imgbtnPay control.

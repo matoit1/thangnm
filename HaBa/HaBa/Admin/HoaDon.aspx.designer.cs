@@ -58,6 +58,33 @@ namespace HaBa.Admin {
         protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
         
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// tabMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabContainer tabMain;
+        
+        /// <summary>
+        /// tabHoaDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tabHoaDon;
+        
+        /// <summary>
         /// tblHoaDon_DetailUC1 control.
         /// </summary>
         /// <remarks>
@@ -65,5 +92,68 @@ namespace HaBa.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::HaBa.UserControl.tblHoaDon_DetailUC tblHoaDon_DetailUC1;
+        
+        /// <summary>
+        /// tabChiTietHoaDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tabChiTietHoaDon;
+        
+        /// <summary>
+        /// mtvChiTietHoaDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.MultiView mtvChiTietHoaDon;
+        
+        /// <summary>
+        /// vListChiTietHoaDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vListChiTietHoaDon;
+        
+        /// <summary>
+        /// tblChiTietHoaDon_ListUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HaBa.UserControl.tblChiTietHoaDon_ListUC tblChiTietHoaDon_ListUC1;
+        
+        /// <summary>
+        /// vDetailChiTietHoaDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vDetailChiTietHoaDon;
+        
+        /// <summary>
+        /// lbtnBackChiTietHoaDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtnBackChiTietHoaDon;
+        
+        /// <summary>
+        /// tblChiTietHoaDon_DetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HaBa.UserControl.tblChiTietHoaDon_DetailUC tblChiTietHoaDon_DetailUC1;
     }
 }

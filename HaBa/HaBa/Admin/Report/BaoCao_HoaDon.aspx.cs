@@ -60,7 +60,7 @@ namespace HaBa.Admin.Report
                 DataTable dttblHoaDon = new DataTable();
                 DataTable dttblChiTietHoaDon = new DataTable();
                 dttblHoaDon = tblHoaDonDAO.HoaDon_SelectItemByPK_lHoaDonID(_tblHoaDonEO).Tables[0];
-                dttblChiTietHoaDon = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectByFK_lHoaDonID(_tblChiTietHoaDonEO).Tables[0];
+                dttblChiTietHoaDon = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectListByFK_lHoaDonID(_tblChiTietHoaDonEO).Tables[0];
                 dttblHoaDon.Columns.Add(new DataColumn("FK_iTaiKhoanID_Giao_Text", Type.GetType("System.String")));
                 dttblHoaDon.Columns.Add(new DataColumn("FK_iTaiKhoanID_Nhan_Text", Type.GetType("System.String")));
                 dttblHoaDon.Columns.Add(new DataColumn("FK_iThanhToanID_Text", Type.GetType("System.String")));
@@ -89,7 +89,7 @@ namespace HaBa.Admin.Report
             Int64 lTriGia = 0;
             tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
             _tblChiTietHoaDonEO.FK_lHoaDonID = PK_lHoaDonID;
-            DataTable dt = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectByFK_lHoaDonID(_tblChiTietHoaDonEO).Tables[0];
+            DataTable dt = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectListByFK_lHoaDonID(_tblChiTietHoaDonEO).Tables[0];
             foreach (DataRow dr in dt.Rows)
             {
                 lTriGia = lTriGia + (Convert.ToInt64(dr["lGiaBan"]) * Convert.ToInt16(dr["iSoLuong"]));

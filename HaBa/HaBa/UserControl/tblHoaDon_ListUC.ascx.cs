@@ -27,6 +27,13 @@ namespace HaBa.UserControl
             set { _PK_lHoaDonID = value; }
         }
 
+        private Int32 _FK_iTaiKhoanID_Nhan;
+        public Int32 FK_iTaiKhoanID_Nhan
+        {
+            get { return this._FK_iTaiKhoanID_Nhan; }
+            set { _FK_iTaiKhoanID_Nhan = value; }
+        }
+
         private Int16 _iTrangThai;
         public Int16 iTrangThai
         {
@@ -58,7 +65,8 @@ namespace HaBa.UserControl
             {
                 tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
                 _tblHoaDonEO.iTrangThai = iTrangThai;
-                dsBaiViet = tblHoaDonDAO.HoaDon_SelectListByiTrangThai(_tblHoaDonEO);
+                _tblHoaDonEO.FK_iTaiKhoanID_Nhan = FK_iTaiKhoanID_Nhan;
+                dsBaiViet = tblHoaDonDAO.HoaDon_SelectByFK_iTaiKhoanID_Nhan_iTrangThai(_tblHoaDonEO);
                 foreach (DataRow dr in dsBaiViet.Tables[0].Rows)
                 {
                     if (string.IsNullOrEmpty(dr["FK_iTaiKhoanID_Giao"].ToString()))

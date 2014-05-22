@@ -286,10 +286,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 8. HoaDon_SelectListByiTrangThai </summary>
+        /// <summary> 8. tblHoaDon_SelectByFK_iTaiKhoanID_Nhan_iTrangThai </summary>
         /// <param name="_tblHoaDonEO"></param>
         /// <returns></returns>
-        public static DataSet HoaDon_SelectListByiTrangThai(tblHoaDonEO _tblHoaDonEO)
+        public static DataSet HoaDon_SelectByFK_iTaiKhoanID_Nhan_iTrangThai(tblHoaDonEO _tblHoaDonEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -297,8 +297,9 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblHoaDon_SelectListByiTrangThai", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblHoaDon_SelectByFK_iTaiKhoanID_Nhan_iTrangThai", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID_Nhan", (_tblHoaDonEO.FK_iTaiKhoanID_Nhan == 0) ? (object)DBNull.Value : _tblHoaDonEO.FK_iTaiKhoanID_Nhan));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblHoaDonEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);

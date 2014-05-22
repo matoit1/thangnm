@@ -54,7 +54,7 @@ namespace HaBa.Admin
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vList);
-            tblChiTietHoaDon_ListUC1.BindData();
+            //tblChiTietHoaDon_ListUC1.BindData();
         }
     }
 }

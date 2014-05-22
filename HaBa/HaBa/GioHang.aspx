@@ -13,7 +13,7 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
     <div id="body-wrapper"><br /><br /><br /><br />
-        <center><h2><asp:Label ID="lblMsg" runat="server"></asp:Label></h2>
+        <center><h2><asp:Label ID="lblNotify" runat="server"></asp:Label></h2>
             <asp:HyperLink ID="hplPK_lHoaDonID" runat="server"></asp:HyperLink>
         </center>
         <asp:Panel ID="pnlGioHang" runat="server" DefaultButton="imgbtnBuy">
@@ -64,8 +64,23 @@
         </asp:Panel>
         <asp:Panel ID="pnlThanhToan" runat="server" DefaultButton="imgbtnPay">
             <div class="input" style="width: 700px; margin: 0px auto 0px auto;">
-                <h2 class="title">Thông tin đơn hàng</h2>
                 <table>
+                    <tr>
+                        <td></td>
+                        <td><center><h2 class="title">Thông tin đơn hàng</h2></center></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <center>
+                                <asp:Label ID="lblMsg" runat="server"></asp:Label><br />
+                                <asp:HyperLink ID="hplLogin" runat="server" NavigateUrl="~/Client/Accounts/Login.aspx?Return_Url=~/GioHang.aspx">Đăng nhập / </asp:HyperLink>
+                                <asp:HyperLink ID="hplRegister" runat="server" NavigateUrl="~/Client/Accounts/Register.aspx">Đăng ký!</asp:HyperLink>
+                            </center>
+                        </td>
+                        <td></td>
+                    </tr>
                     <tr>
                         <td>Chúng tôi sẽ giao hàng cho ai?</td>
                         <td>
@@ -74,34 +89,42 @@
                                 <asp:ListItem Value="true">Một người khác !</asp:ListItem>
                             </asp:RadioButtonList>
                         </td>
+                        <td><asp:Label ID="Label3" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
                         <td>Tên người nhận: </td>
                         <td><asp:TextBox ID="txtsHoTen" runat="server" class="text" Width="400px"></asp:TextBox></td>
+                        <td><asp:Label ID="lblsHoTen" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
                         <td>Điện chỉ Email:  </td>
                         <td><asp:TextBox ID="txtsEmail" runat="server" class="text" Width="400px"></asp:TextBox></td>
+                        <td><asp:Label ID="lblsEmail" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
                         <td>Địa chỉ giao hàng: </td>
                         <td><asp:TextBox ID="txtsDiaChi" runat="server" class="text" Width="400px"></asp:TextBox></td>
+                        <td><asp:Label ID="lblsDiaChi" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
                         <td>Điện thoại liên hệ: </td>
                         <td><asp:TextBox ID="txtsSoDienThoai" runat="server" class="text" Width="400px"></asp:TextBox></td>
+                        <td><asp:Label ID="lblsSoDienThoai" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
                         <td>Hình thức thanh toán: </td>
                         <td><asp:DropDownList ID="ddlFK_iThanhToanID" runat="server" class="dropbox"  Width="405px"></asp:DropDownList></td>
+                        <td><asp:Label ID="lblFK_iThanhToanID" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
                         <td>Ghi chú: </td>
                         <td><asp:TextBox ID="txtsGhiChu" runat="server" class="text" TextMode="MultiLine" Rows="3" Width="400px"></asp:TextBox></td>
+                        <td><asp:Label ID="lblsGhiChu" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
                         <td>Ngày giao hàng: </td>
                         <td><asp:TextBox ID="txttNgayGiaoHang" runat="server" CssClass="startdate" Width="400px"></asp:TextBox></td>
+                        <td><asp:Label ID="lbltNgayGiaoHang" runat="server"></asp:Label></td>
                     </tr>
                     <tr>
                         <td></td>

@@ -34,26 +34,22 @@ namespace HaBa.UserControl
             {
                 if (!IsPostBack)
                 {
-                    if (Request.QueryString["PK_lHoaDonID"] != null)
-                    {
-                        tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
-                        tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
-                        _tblHoaDonEO.PK_lHoaDonID = Convert.ToInt64(Request.QueryString["PK_lHoaDonID"]);
-                        _tblHoaDonEO = tblHoaDonDAO.HoaDon_SelectItem(_tblHoaDonEO);
-                        _tblChiTietHoaDonEO.FK_lHoaDonID = _tblHoaDonEO.PK_lHoaDonID;
-                        DataSet dsChiTietHoaDon = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectByFK_lHoaDonID(_tblChiTietHoaDonEO);
-                        objtblHoaDonEO = _tblHoaDonEO;
-                        _dsDetail = dsChiTietHoaDon;
-                        BindData(_tblHoaDonEO, dsChiTietHoaDon);
-                    }
+                        //tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
+                        //objtblHoaDonEO = tblHoaDonDAO.HoaDon_SelectItem(objtblHoaDonEO);
+                        //_tblChiTietHoaDonEO.FK_lHoaDonID = objtblHoaDonEO.PK_lHoaDonID;
+                        //DataSet dsChiTietHoaDon = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectListByFK_lHoaDonID(_tblChiTietHoaDonEO);
+                        //_dsDetail = dsChiTietHoaDon;
+                        //BindData(objtblHoaDonEO, dsChiTietHoaDon);
                 }
             }
             catch { }
         }
-        private void BindData(tblHoaDonEO _tblHoaDonEO, DataSet dsChiTietHoaDon)
+        public void BindData(tblHoaDonEO _tblHoaDonEO, DataSet dsChiTietHoaDon)
         {
             try
             {
+                objtblHoaDonEO = _tblHoaDonEO;
+                dsDetail = dsChiTietHoaDon;
                 lblOrders_ID.Text = "[ Mã Hóa đơn: #" + _tblHoaDonEO.PK_lHoaDonID + " ]";
                 lblPK_lHoaDonID.Text = Convert.ToString(_tblHoaDonEO.PK_lHoaDonID);
                 lblFK_iTaiKhoanID_Giao.Text = tblTaiKhoanDAO.TaiKhoan_SelectItemByPK_iTaiKhoanID(_tblHoaDonEO.FK_iTaiKhoanID_Giao).sHoTen;

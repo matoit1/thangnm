@@ -24,7 +24,7 @@ namespace HaBa.Admin.Accounts
             {
                 DataSet dsInput = null;
                 dsInput = LoginUC1.Check(TaiKhoan_iQuyenHan_C.QuanTri);
-                if (dsInput.Tables[0].Rows.Count > 0)
+                if (dsInput.Tables[0].Rows.Count > 0)   // 0. Đăng nhập thành công
                 {
                     Response.Cookies["HaBa_admin"].Value = LoginUC1.txtsTenDangNhap.Text;
                     if (LoginUC1.chkRememberMe.Checked == true)
@@ -44,9 +44,30 @@ namespace HaBa.Admin.Accounts
                         Response.Redirect(Request.QueryString["Return_Url"].ToString());
                     }
                 }
-                else
+                else // 1. Đăng nhập thất bại
                 {
-                    LoginUC1.lblMsg.Text = Messages.Dang_Nhap_That_Bai;
+                    if (dsInput.Tables[2].Rows.Count <= 0)  // 3. Không có quyền vào
+                    {
+                        LoginUC1.lblMsg.Text = Messages.Khong_Co_Quyen_Truy_Cap;
+                    }
+                    else
+                    {
+                        if (dsInput.Tables[3].Rows.Count <= 0)  // 4. Bị khóa tài khoản
+                        {
+                            LoginUC1.lblMsg.Text = Messages.Tai_Khoan_Da_Bi_Khoa;
+                        }
+                        else
+                        {
+                            if (dsInput.Tables[1].Rows.Count > 0)   // 2. Sai mật khẩu
+                            {
+                                LoginUC1.lblMsg.Text = Messages.Sai_Mat_Khau;
+                            }
+                            else
+                            {  // 5.Lỗi khác!
+                                LoginUC1.lblMsg.Text = Messages.Dang_Nhap_That_Bai;
+                            }
+                        }
+                    }
                 }
             }
             catch (Exception ex)

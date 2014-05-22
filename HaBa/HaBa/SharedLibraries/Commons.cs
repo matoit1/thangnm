@@ -337,6 +337,8 @@ namespace HaBa.SharedLibraries
         public const string Sai_Ten_Tai_Khoan_Hoac_Email = "Không có tên tài khoản và email nào trùng khớp. Vui lòng kiểm tra lại!";
         public const string Sai_Email_Hoac_So_Dien_Thoai = "Không có email và số điện thoại nào trùng khớp. Vui lòng kiểm tra lại!";
         public const string Sai_Captcha = "Captcha không chính xác!";
+        public const string Khong_Co_Quyen_Truy_Cap = "Bạn không có quyền truy cập vào trang này!";
+        public const string Tai_Khoan_Da_Bi_Khoa = "Tài khoản của bạn đã bị khóa. Liên hệ với quản trị để tìm hiểu thêm!";
         public const string Truong_Bat_Buoc = "Trường này bắt buộc phải nhập";
         public const string Mat_Khau_Khong_Trung_Khop = "Mật khẩu không trùng khớp!";
         public const string Ten_Tai_Khoan_Da_Duoc_Su_Dung = "Tên tài khoản đã được sử dụng!";
