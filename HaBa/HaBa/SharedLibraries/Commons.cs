@@ -303,7 +303,6 @@ namespace HaBa.SharedLibraries
         public const string Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai = "Số điện thoại phải trong khoảng 10 số < sđt < 13 số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng Số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng Ngày/ Giờ, Vui lòng kiểm tra lại!";
-        public const string Khong_Dung_Dinh_Dang_Email = "Không đúng định dạng Email, Vui lòng kiểm tra lại!";
         #endregion
 
         #region "Information"
