@@ -48,7 +48,7 @@ namespace HaBa.Admin.Report
             Int64 lTriGia = 0;
             tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
             _tblChiTietHoaDonEO.FK_lHoaDonID = PK_lHoaDonID;
-            DataTable dt = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectByFK_lHoaDonID(_tblChiTietHoaDonEO).Tables[0];
+            DataTable dt = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectListByFK_lHoaDonID(_tblChiTietHoaDonEO).Tables[0];
             foreach (DataRow dr in dt.Rows)
             {
                 lTriGia = lTriGia + (Convert.ToInt64(dr["lGiaBan"]) * Convert.ToInt16(dr["iSoLuong"]));

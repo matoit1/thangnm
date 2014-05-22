@@ -54,229 +54,6 @@
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
 					<ul class="nav pull-right">
-						<li class="dropdown hidden-phone">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="icon-warning-sign icon-white"></i> <span class="label label-important hidden-phone">2</span> <span class="label label-success hidden-phone">11</span>
-							</a>
-							<ul class="dropdown-menu notifications">
-								<li>
-									<span class="dropdown-menu-title">You have 11 notifications</span>
-								</li>	
-                            	<li>
-                                    <a href="#">
-										+ <i class="icon-user"></i> <span class="message">New user registration</span> <span class="time">1 min</span> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										+ <i class="icon-comment"></i> <span class="message">New comment</span> <span class="time">7 min</span> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										+ <i class="icon-comment"></i> <span class="message">New comment</span> <span class="time">8 min</span> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										+ <i class="icon-comment"></i> <span class="message">New comment</span> <span class="time">16 min</span> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										+ <i class="icon-user"></i> <span class="message">New user registration</span> <span class="time">36 min</span> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										+ <i class="icon-shopping-cart"></i> <span class="message">2 items sold</span> <span class="time">1 hour</span> 
-                                    </a>
-                                </li>
-								<li class="warning">
-                                    <a href="#">
-										- <i class="icon-user icon-red"></i> <span class="message">User deleted account</span> <span class="time">2 hour</span> 
-                                    </a>
-                                </li>
-								<li class="warning">
-                                    <a href="#">
-										- <i class="icon-shopping-cart icon-red"></i> <span class="message">Transaction was canceled</span> <span class="time">6 hour</span> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										+ <i class="icon-comment"></i> <span class="message">New comment</span> <span class="time">yesterday</span> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										+ <i class="icon-user"></i> <span class="message">New user registration</span> <span class="time">yesterday</span> 
-                                    </a>
-                                </li>
-                                <li>
-                            		<a class="dropdown-menu-sub-footer">View all notifications</a>
-								</li>	
-							</ul>
-						</li>
-						<!-- start: Notifications Dropdown -->
-						<li class="dropdown hidden-phone">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="icon-tasks icon-white"></i> <span class="label label-warning hidden-phone">17</span>
-							</a>
-							<ul class="dropdown-menu tasks">
-								<li>
-									<span class="dropdown-menu-title">You have 17 tasks in progress</span>
-                            	</li>
-								<li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">iOS Development</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressYellow">80</div> 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">Android Development</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressYellow">47</div> 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">Django Project For Google</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressYellow">32</div> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">SEO for new sites</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressYellow">63</div> 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="header">
-											<span class="title">New blog posts</span>
-											<span class="percent"></span>
-										</span>
-                                        <div class="taskProgress progressSlim progressYellow">80</div> 
-                                    </a>
-                                </li>
-								<li>
-                            		<a class="dropdown-menu-sub-footer">View all tasks</a>
-								</li>	
-							</ul>
-						</li>
-						<!-- end: Notifications Dropdown -->
-						<!-- start: Message Dropdown -->
-						<li class="dropdown hidden-phone">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="icon-envelope icon-white"></i> <span class="label label-success hidden-phone">9</span>
-							</a>
-							<ul class="dropdown-menu messages">
-								<li>
-									<span class="dropdown-menu-title">You have 9 messages</span>
-								</li>	
-                            	<li>
-                                    <a href="#">
-										<span class="avatar"><img src="img/avatar.jpg" alt="Avatar"></span>
-										<span class="header">
-											<span class="from">
-										    	Łukasz Holeczek
-										     </span>
-											<span class="time">
-										    	6 min
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="avatar"><img src="img/avatar2.jpg" alt="Avatar"></span>
-										<span class="header">
-											<span class="from">
-										    	Megan Abott
-										     </span>
-											<span class="time">
-										    	56 min
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="avatar"><img src="img/avatar3.jpg" alt="Avatar"></span>
-										<span class="header">
-											<span class="from">
-										    	Kate Ross
-										     </span>
-											<span class="time">
-										    	3 hours
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										<span class="avatar"><img src="img/avatar4.jpg" alt="Avatar"></span>
-										<span class="header">
-											<span class="from">
-										    	Julie Blank
-										     </span>
-											<span class="time">
-										    	yesterday
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-										<span class="avatar"><img src="img/avatar5.jpg" alt="Avatar"></span>
-										<span class="header">
-											<span class="from">
-										    	Jane Sanders
-										     </span>
-											<span class="time">
-										    	Jul 25, 2012
-										    </span>
-										</span>
-                                        <span class="message">
-                                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
-                                    </a>
-                                </li>
-								<li>
-                            		<a class="dropdown-menu-sub-footer">View all messages</a>
-								</li>	
-							</ul>
-						</li>
-						<!-- end: Message Dropdown -->
-						<li>
-							<a class="btn" href="#">
-								<i class="icon-wrench icon-white"></i>
-							</a>
-						</li>
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -292,7 +69,6 @@
 					</ul>
 				</div>
 				<!-- end: Header Menu -->
-				
 			</div>
 		</div>
 	</div>
@@ -300,37 +76,33 @@
 	
 		<div class="container-fluid">
 		<div class="row-fluid">
-				
 			<!-- start: Main Menu -->
 			<div class="span2 main-menu-span">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="../Admin/Default.aspx"><i class="icon-home icon-white"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-						<li>
-							<a class="dropmenu" href="#"><i class="icon-user"></i><span class="hidden-tablet">Tài khoản</span></a>
+						<li><a href="../Admin/Default.aspx"><i class="icon-home icon-white"></i><span class="hidden-tablet"> Trang chủ quản trị</span></a></li>
+                        <li><a href="../Admin/ThongTinCaNhan.aspx"><i class="icon-user"></i><span class="hidden-tablet">Thông tin cá nhân</span></a></li>
+						<li><a class="dropmenu" href="#"><i class="icon-user"></i><span class="hidden-tablet">Tài khoản</span></a>
 							<ul>
 								<li><a class="submenu" href="../Admin/TaiKhoan.aspx?iQuyenHan=1"><i class="icon-user"></i><span class="hidden-tablet"> Quản trị</span></a></li>
 								<li><a class="submenu" href="../Admin/TaiKhoan.aspx?iQuyenHan=2"><i class="icon-user"></i><span class="hidden-tablet"> Nhân Viên</span></a></li>
 								<li><a class="submenu" href="../Admin/TaiKhoan.aspx?iQuyenHan=3"><i class="icon-user"></i><span class="hidden-tablet"> Khách Hàng</span></a></li>
 							</ul>	
 						</li>
-                        <li>
-							<a class="dropmenu" href="#"><i class="icon-tags"></i><span class="hidden-tablet">Nhóm sản phẩm</span></a>
+                        <li><a class="dropmenu" href="#"><i class="icon-tags"></i><span class="hidden-tablet">Nhóm sản phẩm</span></a>
 							<ul>
 								<li><a class="submenu" href="../Admin/NhomSanPham.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Nhóm sản phẩm Mở</span></a></li>
 								<li><a class="submenu" href="../Admin/NhomSanPham.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Nhóm sản phẩm Khóa</span></a></li>
 							</ul>	
 						</li>
-                        <li>
-							<a class="dropmenu" href="#"><i class="icon-tag"></i><span class="hidden-tablet">Sản phẩm</span></a>
+                        <li><a class="dropmenu" href="#"><i class="icon-tag"></i><span class="hidden-tablet">Sản phẩm</span></a>
 							<ul>
 								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Sản phẩm Mở</span></a></li>
 								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=2"><i class="icon-warning-sign"></i><span class="hidden-tablet"> Sản phẩm Hết hàng</span></a></li>
 								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=3"><i class="icon-remove"></i><span class="hidden-tablet"> Sản phẩm Khóa</span></a></li>
 							</ul>	
 						</li>
-                        <li>
-							<a class="dropmenu" href="#"><i class="icon-file"></i><span class="hidden-tablet">Hóa đơn</span></a>
+                        <li><a class="dropmenu" href="#"><i class="icon-file"></i><span class="hidden-tablet">Hóa đơn</span></a>
 							<ul>
                                 <li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=1"><i class="icon-question-sign"></i><span class="hidden-tablet"> Chưa kiểm tra</span></a></li>
 								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=2"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Chưa giao hàng</span></a></li>
@@ -338,15 +110,13 @@
 								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=4"><i class="icon-remove-sign"></i><span class="hidden-tablet"> Đã hủy</span></a></li>
 							</ul>	
 						</li>
-                        <li>
-							<a class="dropmenu" href="#"><i class="icon-plane"></i><span class="hidden-tablet">Thanh toán</span></a>
+                        <li><a class="dropmenu" href="#"><i class="icon-plane"></i><span class="hidden-tablet">Thanh toán</span></a>
 							<ul>
 								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Thanh Toán Mở</span></a></li>
 								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Thanh toán Khóa</span></a></li>
 							</ul>	
 						</li>
-                        <li>
-							<a class="dropmenu" href="#"><i class="icon-print"></i><span class="hidden-tablet">Báo cáo</span></a>
+                        <li><a class="dropmenu" href="#"><i class="icon-print"></i><span class="hidden-tablet">Báo cáo</span></a>
 							<ul>
 								<li><a class="submenu" href="../Admin/Report/BaoCao_SanPham.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Sản phẩm</span></a></li>
 								<li><a class="submenu" href="../Admin/Report/BaoCao_TaiKhoan.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Khách hàng</span></a></li>

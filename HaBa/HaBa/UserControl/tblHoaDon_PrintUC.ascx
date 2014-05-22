@@ -2,7 +2,7 @@
 <style type="text/css">
     .khoangcach
     {
-        width: 150px;
+        width: 20px;
     }
     .noidung
     {
@@ -45,48 +45,34 @@
             <table border ="1">
                 <tr >
                     <td colspan="2" align="center" style="border: 1px solid black;">Thông tin hóa đơn</td>
-                    <td></td>
                     <td colspan="2" align="center" style="border: 1px solid black;">Thông tin người nhận</td>
-                    <td></td>
                     <td colspan="2" align="center" style="border: 1px solid black;">Thông tin khác</td>
                 </tr>
                 <tr>
                     <td>Mã hóa đơn:</td><td class="noidung"><asp:Label ID="lblPK_lHoaDonID" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                     <td>Họ tên nhận:</td><td class="noidung"><asp:Label ID="lblsHoTen" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                     <td rowspan="4">Ghi chú:</td><td class="noidung" rowspan="4"><asp:Label ID="lblsGhiChu" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td>Nhân viên: </td><td class="noidung"><asp:Label ID="lblFK_iTaiKhoanID_Giao" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                     <td>Địa chỉ email:</td><td class="noidung"><asp:Label ID="lblsEmail" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                 </tr>
                 <tr>
                     <td>Khách hàng: </td><td class="noidung"><asp:Label ID="lblFK_iTaiKhoanID_Nhan" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                     <td>Địa chỉ: </td><td class="noidung"><asp:Label ID="lblsDiaChi" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                 </tr>
                 <tr>
                     <td>Thanh toán: </td><td class="noidung"><asp:Label ID="lblFK_iThanhToanID" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                     <td>Số điện thoại: </td><td class="noidung"><asp:Label ID="lblsSoDienThoai" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                 </tr>
                 <tr>
                     <td></td><td class="noidung"></td>
-                    <td class="khoangcach"></td>
                     <td>Ngày đặt hàng</td><td class="noidung"><asp:Label ID="lbltNgayDatHang" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                     <td></td><td class="noidung"></td>
                 </tr>
                 <tr>
                     <td></td><td></td>
-                    <td class="khoangcach"></td>
                     <td>Ngày giao hàng</td><td class="noidung"><asp:Label ID="lbltNgayGiaoHang" runat="server"></asp:Label></td>
-                    <td class="khoangcach"></td>
                     <td>Trạng thái:</td><td class="noidung"><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
                 </tr>
             </table><br /><br />

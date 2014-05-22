@@ -9,6 +9,7 @@ using System.IO;
 using HaBa.SharedLibraries;
 using System.Data;
 using HaBa.DataAccessObject;
+using HaBa.EntityObject;
 
 namespace HaBa.UserControl
 {
@@ -32,6 +33,12 @@ namespace HaBa.UserControl
             set { _FK_sSanPhamID = value; }
         }
 
+        public tblChiTietHoaDonEO objtblChiTietHoaDonEO
+        {
+            get { return (tblChiTietHoaDonEO)ViewState["objtblChiTietHoaDonEO"]; }
+            set { ViewState["objtblChiTietHoaDonEO"] = value; }
+        }
+
         public string typesearch
         {
             get { return (string)ViewState["typesearch"]; }
@@ -41,27 +48,34 @@ namespace HaBa.UserControl
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                BindData();
-            }
+            //if (!IsPostBack)
+            //{
+            //    BindData();
+            //}
         }
 
-        public void BindData()
+        public void BindData(tblChiTietHoaDonEO _tblChiTietHoaDonEO)
         {
+            objtblChiTietHoaDonEO = _tblChiTietHoaDonEO;
             grvListChiTietHoaDon.Visible = false;
             string keysearch = txtTextSearch.Text;
-            DataSet dsBaiViet = new DataSet();
+            DataSet dsChiTietHoaDon = new DataSet();
             try
             {
-                dsBaiViet = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectList();
+                dsChiTietHoaDon = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectListByFK_lHoaDonID(_tblChiTietHoaDonEO);
+                dsChiTietHoaDon.Tables[0].Columns.Add(new DataColumn("FK_sSanPhamID_Text", Type.GetType("System.String")));
+                foreach (DataRow dr in dsChiTietHoaDon.Tables[0].Rows)
+                {
+                    dr["FK_sSanPhamID_Text"] = tblSanPhamDAO.SanPham_SelectItemPK_sSanPhamID(Convert.ToString(dr["FK_sSanPhamID"])).sTenSanPham;
+                }
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
-                from topic in dsBaiViet.Tables[0].AsEnumerable()
+                from topic in dsChiTietHoaDon.Tables[0].AsEnumerable()
                 select new
                 {
                     FK_lHoaDonID = topic.Field<Int64>("FK_lHoaDonID"),
-                    FK_sSanPhamID = tblSanPhamDAO.SanPham_SelectItemPK_sSanPhamID(topic.Field<string>("FK_sSanPhamID")).sTenSanPham,
+                    FK_sSanPhamID = topic.Field<String>("FK_sSanPhamID"),
+                    FK_sSanPhamID_Text = topic.Field<String>("FK_sSanPhamID_Text"),
                     lGiaBan = topic.Field<Int64>("lGiaBan"),
                     iSoLuong = topic.Field<Int16>("iSoLuong")
                 };
@@ -136,7 +150,7 @@ namespace HaBa.UserControl
         protected void grvListChiTietHoaDon_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListChiTietHoaDon.PageIndex = e.NewPageIndex;
-            BindData();
+            BindData(objtblChiTietHoaDonEO);
         }
 
         protected void grvListChiTietHoaDon_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -187,12 +201,12 @@ namespace HaBa.UserControl
         #region "Event Button"
         protected void Search_Click(object sender, EventArgs e)
         {
-            BindData();
+            BindData(objtblChiTietHoaDonEO);
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
-            BindData();
+            BindData(objtblChiTietHoaDonEO);
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
@@ -226,7 +240,7 @@ namespace HaBa.UserControl
                 HtmlTextWriter hw = new HtmlTextWriter(sw);
                 //To Export all pages
                 grvListChiTietHoaDon.AllowPaging = false;
-                this.BindData();
+                this.BindData(objtblChiTietHoaDonEO);
 
                 grvListChiTietHoaDon.HeaderRow.BackColor = Color.White;
                 foreach (TableCell cell in grvListChiTietHoaDon.HeaderRow.Cells)
@@ -263,7 +277,7 @@ namespace HaBa.UserControl
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            BindData();
+            BindData(objtblChiTietHoaDonEO);
         }
 
         protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)
