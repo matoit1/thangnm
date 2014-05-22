@@ -117,6 +117,32 @@ namespace HaBa.DataAccessObject
             }
         }
 
+        /// <summary> 3. SanPham_Update_iSoLuong </summary>
+        /// <param name="_tblSanPhamEO"></param>
+        /// <returns></returns>
+        public static bool SanPham_Update_iSoLuong(tblSanPhamEO _tblSanPhamEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblSanPham_Update_iSoLuong", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PK_sSanPhamID", _tblSanPhamEO.PK_sSanPhamID));
+                    cmd.Parameters.Add(new SqlParameter("@iSoLuong", _tblSanPhamEO.iSoLuong));
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return false;
+                }
+            }
+        }
+
         /// <summary> 4. SanPham_Delete </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>

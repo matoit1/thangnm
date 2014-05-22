@@ -22,8 +22,6 @@ namespace HaBa.Client
                     tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
                     _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["HaBa_client"].Value;
                     tblHoaDon_ListUC1.FK_iTaiKhoanID_Nhan = (tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO)).PK_iTaiKhoanID;
-
-                    
                 }
             }
             catch

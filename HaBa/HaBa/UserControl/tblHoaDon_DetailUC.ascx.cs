@@ -9,6 +9,7 @@ using HaBa.SharedLibraries;
 using HaBa.DataAccessObject;
 using HaBa.SharedLibraries.Constants;
 using System.Text.RegularExpressions;
+using System.Data;
 
 namespace HaBa.UserControl
 {
@@ -19,6 +20,16 @@ namespace HaBa.UserControl
         {
             get { return (Int16)ViewState["iType"]; }
             set { ViewState["iType"] = value; }
+        }
+        public string sWarning
+        {
+            get { return (string)ViewState["sWarning"]; }
+            set { ViewState["sWarning"] = value; }
+        }
+        public int iState 
+        {
+            get { return (int)ViewState["iState"]; }
+            set { ViewState["iState"] = value; }
         }
         #endregion
 
@@ -115,6 +126,48 @@ namespace HaBa.UserControl
             {
                 lblMsg.Text = Messages.Loi + ex.Message;
             }
+        }
+
+        public string CheckQuantity()
+        {
+            sWarning = "Sản phẩm không đủ!     ";
+            iState = 0;
+            tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
+            tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+            _tblHoaDonEO = getObject();
+            tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
+            _tblChiTietHoaDonEO.FK_lHoaDonID = _tblHoaDonEO.PK_lHoaDonID;
+            DataSet dsChiTietHoaDon = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectListByFK_lHoaDonID(_tblChiTietHoaDonEO);
+            foreach (DataRow dr in dsChiTietHoaDon.Tables[0].Rows)
+            {
+                _tblSanPhamEO = tblSanPhamDAO.SanPham_SelectItemPK_sSanPhamID(dr["FK_sSanPhamID"].ToString());
+                if (Convert.ToInt16(dr["iSoLuong"]) > _tblSanPhamEO.iSoLuong)
+                {
+                    sWarning = sWarning + _tblSanPhamEO.sTenSanPham + "thiếu " + (Convert.ToInt16(dr["iSoLuong"]) - _tblSanPhamEO.iSoLuong) + "//   ";
+                    iState = 9;
+                }
+            }
+            return sWarning;
+        }
+
+
+
+        public string UpdateQuantity()
+        {
+            tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
+            tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+            _tblHoaDonEO = getObject();
+            tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
+            _tblChiTietHoaDonEO.FK_lHoaDonID = _tblHoaDonEO.PK_lHoaDonID;
+            DataSet dsChiTietHoaDon = tblChiTietHoaDonDAO.ChiTietHoaDon_SelectListByFK_lHoaDonID(_tblChiTietHoaDonEO);
+            foreach (DataRow dr in dsChiTietHoaDon.Tables[0].Rows)
+            {
+                _tblSanPhamEO = tblSanPhamDAO.SanPham_SelectItemPK_sSanPhamID(dr["FK_sSanPhamID"].ToString());
+                Int16 sl = _tblSanPhamEO.iSoLuong;
+                _tblSanPhamEO.iSoLuong = (Int16)(sl - Convert.ToInt16(dr["FK_sSanPhamID"]));
+                tblSanPhamDAO.SanPham_Update_iSoLuong(_tblSanPhamEO);
+            }
+            return sWarning;
         }
 
         public bool CheckInput()
@@ -234,14 +287,56 @@ namespace HaBa.UserControl
             {
                 if (CheckInput() == true)
                 {
-                    if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
+                    switch (getObject().iTrangThai)
                     {
-                        lblMsg.Text = Messages.Sua_Thanh_Cong;
-                        ClearMessages();
-                    }
-                    else
-                    {
-                        lblMsg.Text = Messages.Sua_That_Bai;
+                        case HoaDon_iTrangThai_C.Chua_Giao_Hang:
+                            if (iState == 9)
+                            {
+                                lblMsg.Text = CheckQuantity();
+                            }
+                            else
+                            {
+                                if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
+                                {
+                                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                                    ClearMessages();
+                                }
+                                else
+                                {
+                                    lblMsg.Text = Messages.Sua_That_Bai;
+                                }
+                            }
+                            break;
+                        case HoaDon_iTrangThai_C.Da_Giao_Hang:
+                            if (iState == 9)
+                            {
+                                lblMsg.Text = CheckQuantity();
+                            }
+                            else
+                            {
+                                if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
+                                {
+                                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                                    UpdateQuantity();
+                                    ClearMessages();
+                                }
+                                else
+                                {
+                                    lblMsg.Text = Messages.Sua_That_Bai;
+                                }
+                            }
+                            break;
+                        default:
+                            if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
+                            {
+                                lblMsg.Text = Messages.Sua_Thanh_Cong;
+                                ClearMessages();
+                            }
+                            else
+                            {
+                                lblMsg.Text = Messages.Sua_That_Bai;
+                            }
+                            break;
                     }
                 }
             }
