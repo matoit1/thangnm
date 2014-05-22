@@ -161,10 +161,6 @@
     <Content Include="App_Themes\style-responsive.css" />
     <Content Include="App_Themes\style.css" />
     <Content Include="App_Themes\ZoomImage.css" />
-    <Content Include="bin\CKEditor.NET.dll" />
-    <Content Include="bin\DevNET.URLRewriter.dll" />
-    <Content Include="bin\HaBa.dll" />
-    <Content Include="bin\HaBa.pdb" />
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\CHANGES.html" />
     <Content Include="ckeditor\ckeditor.js" />
@@ -1021,6 +1017,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\" />
     <Folder Include="Product\" />
     <Folder Include="Upload\" />
   </ItemGroup>
