@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa.Report {
+namespace HaBa.Admin.Report {
     
     
     public partial class BaoCao_KetQua_KinhDoanh {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// btnBaoCao control.

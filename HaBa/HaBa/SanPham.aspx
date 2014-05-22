@@ -40,119 +40,120 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="server">
-    <div class="phanchinh">
-    <div class="thongtin">
-        <h1 style="line-height:30px"><asp:Label ID="lblsName" runat="server"></asp:Label></h1>
-        <i><asp:Label ID="lbltLastUpdate" runat="server"></asp:Label></i>
-        <hr />
-    </div>
-    <div class="sanpham">
-        <div class="hinhanhmota">
-            <div class="magnify">
-                <div class="large" style="background:url('<%=Url_Image%>') no-repeat;"></div><!-- đây là kính lúp-ảnh zoom-->
-                <asp:Image ID="imgsLinkImage" runat="server" class="small" Width="450px" Height="300px" /><!-- đây là ảnh sản phẩm -->
+    <div id="body-wrapper"><br /><br /><br /><br />
+        <div class="phanchinh">
+            <div class="thongtin">
+                <h1 style="line-height:30px"><asp:Label ID="lblsName" runat="server"></asp:Label></h1>
+                <i><asp:Label ID="lbltLastUpdate" runat="server"></asp:Label></i>
+                <hr />
             </div>
-            <div class="binhchon">
-                <asp:Label ID="lblVote" runat="server" Text="Đánh giá sản phẩm: "></asp:Label><asp:Label ID="Label2" runat="server" CssClass="rw-js-container"></asp:Label>
-                <script language="javascript" src="../Scripts/Vote.js" type="text/javascript"></script>
-            </div>
-            
-        </div>
-        <div class="thongtinsanpham">
-            <table>
-                <tr>
-                    <td colspan="2">
-                        <!-- AddThis Button BEGIN -->
-                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-                        <a class="addthis_button_preferred_1"></a>
-                        <a class="addthis_button_preferred_2"></a>
-                        <a class="addthis_button_preferred_3"></a>
-                        <a class="addthis_button_preferred_4"></a>
-                        <a class="addthis_button_compact"></a>
-                        <a class="addthis_counter addthis_bubble_style"></a>
-                        </div>
-                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5367abe75d8d9028"></script>
-                        <!-- AddThis Button END -->
-                    </td>
-                </tr>
-                <tr >
-                    <td class="tieudesanpham">Mã sản phẩm: </td>
-                    <td><asp:Label ID="lblPK_sSanPhamID" runat="server"></asp:Label></td>
-                </tr>
-                <tr >
-                    <td class="tieudesanpham">Nhóm sản phẩm: </td>
-                    <td><asp:Label ID="lblFK_iNhomSanPhamID" runat="server"></asp:Label></td>
-                </tr>
-                <tr >
-                    <td class="tieudesanpham">Tên sản phẩm: </td>
-                    <td><asp:Label ID="lblsTenSanPham" runat="server"></asp:Label></td>
-                </tr>
-                <%--<tr>
-                    <td class="tieudesanpham">Mô tả: </td>
-                    <td><asp:Label ID="lblsMoTa" runat="server"></asp:Label></td>
-                </tr>--%>
-                <tr>
-                    <td class="tieudesanpham">Xuất xứ: </td>
-                    <td><asp:Label ID="lblsXuatXu" runat="server"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham">Giá bán: </td>
-                    <td><asp:Label ID="lbllGiaBan" runat="server"></asp:Label> VNĐ</td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham">Thuế GTGT (VAT): </td>
-                    <td><asp:Label ID="lbliVAT" runat="server"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham">Độ tuổi: </td>
-                    <td><asp:Label ID="lbliDoTuoi" runat="server"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham">Giới tính: </td>
-                    <td><asp:Label ID="lbliGioiTinh" runat="server"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham">Số lượng: </td>
-                    <td><asp:Label ID="lbliSoLuong" runat="server"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham">Trạng thái</td>
-                    <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham"></td>
-                    <td><asp:Button ID="btnBuy" runat="server" Text="Mua hàng" onclick="btnBuy_Click" /></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <asp:ScriptManager ID="ScriptManager1" runat="server">
-        </asp:ScriptManager>
-        <cc1:TabContainer ID="tabMain" runat="server" ActiveTabIndex="0">
-            <cc1:TabPanel runat="server" HeaderText="Thông tin chi tiết sản phẩm" ID="tabInfo">
-                <ContentTemplate>
-                    <asp:Label ID="lblsThongTin" runat="server"></asp:Label>
-                </ContentTemplate>
-            </cc1:TabPanel>
-            <cc1:TabPanel runat="server" HeaderText="Bình luận" ID="tabComment">
-                <ContentTemplate>
-                    <div class="binhluan">
-                        <div id="fb-root"></div>
-                        <script>            (function (d, s, id) {
-                                var js, fjs = d.getElementsByTagName(s)[0];
-                                if (d.getElementById(id)) return;
-                                js = d.createElement(s); js.id = id;
-                                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=432781806807255&version=v2.0";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            } (document, 'script', 'facebook-jssdk'));</script>
-                        <div class="fb-comments" data-href="<%=Request.Url.AbsoluteUri.ToString()%>" data-colorscheme="light" data-numposts="10" data-width="700"></div>
+            <div class="sanpham">
+                <div class="hinhanhmota">
+                    <div class="magnify">
+                        <div class="large" style="background:url('<%=Url_Image%>') no-repeat;"></div><!-- đây là kính lúp-ảnh zoom-->
+                        <asp:Image ID="imgsLinkImage" runat="server" class="small" Width="450px" Height="300px" /><!-- đây là ảnh sản phẩm -->
                     </div>
-                </ContentTemplate>
-            </cc1:TabPanel>
-        </cc1:TabContainer>
-</div>
+                    <div class="binhchon">
+                        <asp:Label ID="lblVote" runat="server" Text="Đánh giá sản phẩm: "></asp:Label><asp:Label ID="Label2" runat="server" CssClass="rw-js-container"></asp:Label>
+                        <script language="javascript" src="../Scripts/Vote.js" type="text/javascript"></script>
+                    </div>
+            
+                </div>
+                <div class="thongtinsanpham">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <!-- AddThis Button BEGIN -->
+                                <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                                <a class="addthis_button_preferred_1"></a>
+                                <a class="addthis_button_preferred_2"></a>
+                                <a class="addthis_button_preferred_3"></a>
+                                <a class="addthis_button_preferred_4"></a>
+                                <a class="addthis_button_compact"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                                </div>
+                                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5367abe75d8d9028"></script>
+                                <!-- AddThis Button END -->
+                            </td>
+                        </tr>
+                        <tr >
+                            <td class="tieudesanpham">Mã sản phẩm: </td>
+                            <td><asp:Label ID="lblPK_sSanPhamID" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr >
+                            <td class="tieudesanpham">Nhóm sản phẩm: </td>
+                            <td><asp:Label ID="lblFK_iNhomSanPhamID" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr >
+                            <td class="tieudesanpham">Tên sản phẩm: </td>
+                            <td><asp:Label ID="lblsTenSanPham" runat="server"></asp:Label></td>
+                        </tr>
+                        <%--<tr>
+                            <td class="tieudesanpham">Mô tả: </td>
+                            <td><asp:Label ID="lblsMoTa" runat="server"></asp:Label></td>
+                        </tr>--%>
+                        <tr>
+                            <td class="tieudesanpham">Xuất xứ: </td>
+                            <td><asp:Label ID="lblsXuatXu" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td class="tieudesanpham">Giá bán: </td>
+                            <td><asp:Label ID="lbllGiaBan" runat="server"></asp:Label> VNĐ</td>
+                        </tr>
+                        <tr>
+                            <td class="tieudesanpham">Thuế GTGT (VAT): </td>
+                            <td><asp:Label ID="lbliVAT" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td class="tieudesanpham">Độ tuổi: </td>
+                            <td><asp:Label ID="lbliDoTuoi" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td class="tieudesanpham">Giới tính: </td>
+                            <td><asp:Label ID="lbliGioiTinh" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td class="tieudesanpham">Số lượng: </td>
+                            <td><asp:Label ID="lbliSoLuong" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td class="tieudesanpham">Trạng thái</td>
+                            <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td class="tieudesanpham"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="tieudesanpham"></td>
+                            <td><asp:Button ID="btnBuy" runat="server" Text="Mua hàng" onclick="btnBuy_Click" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <cc1:TabContainer ID="tabMain" runat="server" ActiveTabIndex="0">
+                <cc1:TabPanel runat="server" HeaderText="Thông tin chi tiết sản phẩm" ID="tabInfo">
+                    <ContentTemplate>
+                        <asp:Label ID="lblsThongTin" runat="server"></asp:Label>
+                    </ContentTemplate>
+                </cc1:TabPanel>
+                <cc1:TabPanel runat="server" HeaderText="Bình luận" ID="tabComment">
+                    <ContentTemplate>
+                        <div class="binhluan">
+                            <div id="fb-root"></div>
+                            <script>            (function (d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) return;
+                                    js = d.createElement(s); js.id = id;
+                                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=432781806807255&version=v2.0";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                } (document, 'script', 'facebook-jssdk'));</script>
+                            <div class="fb-comments" data-href="<%=Request.Url.AbsoluteUri.ToString()%>" data-colorscheme="light" data-numposts="10" data-width="700"></div>
+                        </div>
+                    </ContentTemplate>
+                </cc1:TabPanel>
+            </cc1:TabContainer>
+        </div>
+    <br /><br /><br /><br /></div>
 </asp:Content>

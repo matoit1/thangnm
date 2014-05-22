@@ -183,7 +183,7 @@ namespace HaBa.UserControl
 
         private void ClearMessages()
         {
-            lblMsg.Text = "";
+            //lblMsg.Text = "";
             lblPK_lHoaDonID.Text = "";
             lblFK_iTaiKhoanID_Giao.Text = "";
             lblFK_iTaiKhoanID_Nhan.Text = "";
@@ -202,19 +202,23 @@ namespace HaBa.UserControl
         protected void btnInsert_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
-              if (CheckInput() == true)
-               {
-                if (tblHoaDonDAO.HoaDon_Insert(getObject()) == true)
+                if (CheckInput() == true)
                 {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
+                    if (tblHoaDonDAO.HoaDon_Insert(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Them_Thanh_Cong;
+                        ClearMessages();
+                        tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+                        BindDataDetail(_tblHoaDonEO);
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Them_That_Bai;
+                    }
                 }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
-                }
-               }
             }
             catch (Exception ex)
             {
@@ -225,19 +229,21 @@ namespace HaBa.UserControl
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
-              if (CheckInput() == true)
-               {
-                if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
+                if (CheckInput() == true)
                 {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Sua_Thanh_Cong;
+                        ClearMessages();
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Sua_That_Bai;
+                    }
                 }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-               }
             }
             catch (Exception ex)
             {
@@ -248,11 +254,15 @@ namespace HaBa.UserControl
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblHoaDonDAO.HoaDon_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                    ClearMessages();
+                    tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+                    BindDataDetail(_tblHoaDonEO);
                 }
                 else
                 {
@@ -268,6 +278,7 @@ namespace HaBa.UserControl
         protected void btnReset_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
             BindDataDetail(_tblHoaDonEO);
         }

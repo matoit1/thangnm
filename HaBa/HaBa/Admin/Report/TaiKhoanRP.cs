@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa.Report {
+namespace HaBa.Admin.Report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace HaBa.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class KetQua_KinhDoanhRP : ReportClass {
+    public class TaiKhoanRP : ReportClass {
         
-        public KetQua_KinhDoanhRP() {
+        public TaiKhoanRP() {
         }
         
         public override string ResourceName {
             get {
-                return "KetQua_KinhDoanhRP.rpt";
+                return "TaiKhoanRP.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace HaBa.Report {
         
         public override string FullResourceName {
             get {
-                return "HaBa.Report.KetQua_KinhDoanhRP.rpt";
+                return "HaBa.Admin.Report.TaiKhoanRP.rpt";
             }
             set {
                 // Do nothing
@@ -87,20 +87,12 @@ namespace HaBa.Report {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_pThangNam {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedKetQua_KinhDoanhRP : Component, ICachedReport {
+    public class CachedTaiKhoanRP : Component, ICachedReport {
         
-        public CachedKetQua_KinhDoanhRP() {
+        public CachedTaiKhoanRP() {
         }
         
         [Browsable(false)]
@@ -137,7 +129,7 @@ namespace HaBa.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            KetQua_KinhDoanhRP rpt = new KetQua_KinhDoanhRP();
+            TaiKhoanRP rpt = new TaiKhoanRP();
             rpt.Site = this.Site;
             return rpt;
         }

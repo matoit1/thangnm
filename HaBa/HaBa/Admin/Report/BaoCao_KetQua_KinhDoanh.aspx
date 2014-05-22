@@ -1,15 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BaoCao_KetQua_KinhDoanh.aspx.cs" Inherits="HaBa.Report.BaoCao_KetQua_KinhDoanh" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BaoCao_KetQua_KinhDoanh.aspx.cs" Inherits="HaBa.Admin.Report.BaoCao_KetQua_KinhDoanh" MasterPageFile="~/ShareInterface/ReportSI.Master" %>
 <%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
     <div>
-        <asp:Button ID="btnBaoCao" runat="server" Text="Báo Cáo" onclick="btnBaoCao_Click" />
+        <asp:Button ID="btnBaoCao" runat="server" Text="Tìm kiếm" onclick="btnBaoCao_Click" />
         <asp:Panel ID="pnlSearch" runat="server" DefaultButton="btnTimKiem">
             <div style="width: 500px; margin: 0px auto 0px auto; border: 1px solid blue;">
                 <table>
@@ -58,6 +51,4 @@
             <CR:CrystalReportViewer ID="crvKetQuaKinhDoanh" runat="server" ShowAllPageIds="True" AutoDataBind="true" />
         </asp:Panel>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>

@@ -107,14 +107,13 @@ namespace HaBa.UserControl
                     txtiSoLuong.Focus();
                     return false;
                 }
-
             }
             return true;
         }
 
         private void ClearMessages()
         {
-            lblMsg.Text = "";
+            //lblMsg.Text = "";
             lblFK_lHoaDonID.Text = "";
             lblFK_sSanPhamID.Text = "";
             lbllGiaBan.Text = "";
@@ -125,20 +124,24 @@ namespace HaBa.UserControl
         protected void btnInsert_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
-              if (CheckInput() == true)
-               {
-                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(getObject()) == true)
+                if (CheckInput() == true)
                 {
-                    lblMsg.Text = Messages.Them_Thanh_Cong;
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Them_That_Bai;
+                    if (tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Them_Thanh_Cong;
+                        ClearMessages();
+                        tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
+                        BindDataDetail(_tblChiTietHoaDonEO);
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Them_That_Bai;
+                    }
                 }
             }
-        } 
             catch (Exception ex)
             {
                 lblMsg.Text = Messages.Loi + ex.Message;
@@ -148,19 +151,21 @@ namespace HaBa.UserControl
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
-              if (CheckInput() == true)
-               {
-                if (tblChiTietHoaDonDAO.ChiTietHoaDon_Update(getObject()) == true)
+                if (CheckInput() == true)
                 {
-                    lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    if (tblChiTietHoaDonDAO.ChiTietHoaDon_Update(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Sua_Thanh_Cong;
+                        ClearMessages();
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Sua_That_Bai;
+                    }
                 }
-                else
-                {
-                    lblMsg.Text = Messages.Sua_That_Bai;
-                }
-               }
             }
             catch (Exception ex)
             {
@@ -171,11 +176,15 @@ namespace HaBa.UserControl
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblChiTietHoaDonDAO.ChiTietHoaDon_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                    ClearMessages();
+                    tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
+                    BindDataDetail(_tblChiTietHoaDonEO);
                 }
                 else
                 {
@@ -191,6 +200,7 @@ namespace HaBa.UserControl
         protected void btnReset_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
             BindDataDetail(_tblChiTietHoaDonEO);
         }

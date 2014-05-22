@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa.Report {
+namespace HaBa.ShareInterface {
     
     
-    public partial class BaoCao_HoaDon {
+    public partial class ReportSI {
+        
+        /// <summary>
+        /// cphHead control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
         
         /// <summary>
         /// form1 control.
@@ -22,21 +31,21 @@ namespace HaBa.Report {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblMsg control.
+        /// Menu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg;
+        protected global::System.Web.UI.WebControls.Menu Menu1;
         
         /// <summary>
-        /// crvHoaDon control.
+        /// cphBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CrystalDecisions.Web.CrystalReportViewer crvHoaDon;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
     }
 }

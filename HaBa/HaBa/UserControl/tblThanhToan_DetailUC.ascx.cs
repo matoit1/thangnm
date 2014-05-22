@@ -69,7 +69,7 @@ namespace HaBa.UserControl
 
         private void ClearMessages()
         {
-            lblMsg.Text = "";
+            //lblMsg.Text = "";
             lblPK_iThanhToanID.Text = "";
             lblsTenThanhToan.Text = "";
             lbliTrangThai.Text = "";
@@ -79,6 +79,7 @@ namespace HaBa.UserControl
         protected void btnInsert_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {  
               if (CheckInput() == true)
@@ -86,6 +87,9 @@ namespace HaBa.UserControl
                 if (tblThanhToanDAO.ThanhToan_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
+                    ClearMessages();
+                    tblThanhToanEO _tblThanhToanEO = new tblThanhToanEO();
+                    BindDataDetail(_tblThanhToanEO);
                 }
                 else
                 {
@@ -102,6 +106,7 @@ namespace HaBa.UserControl
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
               if (CheckInput() == true)
@@ -109,6 +114,7 @@ namespace HaBa.UserControl
                 if (tblThanhToanDAO.ThanhToan_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    ClearMessages();
                 }
                 else
                 {
@@ -125,11 +131,15 @@ namespace HaBa.UserControl
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblThanhToanDAO.ThanhToan_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                    ClearMessages();
+                    tblThanhToanEO _tblThanhToanEO = new tblThanhToanEO();
+                    BindDataDetail(_tblThanhToanEO);
                 }
                 else
                 {
@@ -145,6 +155,7 @@ namespace HaBa.UserControl
         protected void btnReset_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             tblThanhToanEO _tblThanhToanEO = new tblThanhToanEO();
             BindDataDetail(_tblThanhToanEO);
         }

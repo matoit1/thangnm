@@ -21,7 +21,7 @@
                         <asp:Repeater ID="rptiNhomCon" runat="server">
                             <HeaderTemplate><ul></HeaderTemplate>
                             <ItemTemplate>
-                                <li><asp:HyperLink ID="hpliNhomCon" runat="server" NavigateUrl='<%#"~/NhomSanPham.aspx?PK_iNhomSanPhamID="+Eval("iNhomCon")%>'><%#Eval("sTenNhom")%></asp:HyperLink></li>
+                                <li><asp:HyperLink ID="hpliNhomCon" runat="server" NavigateUrl='<%#"~/NhomSanPham.aspx?PK_iNhomSanPhamID="+Eval("PK_iNhomSanPhamID")%>'><%#Eval("sTenNhom")%></asp:HyperLink></li>
                             </ItemTemplate>
                             <FooterTemplate></ul></FooterTemplate>
                         </asp:Repeater>

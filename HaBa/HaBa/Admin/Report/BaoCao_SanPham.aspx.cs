@@ -12,7 +12,7 @@ using HaBa.SharedLibraries;
 using System.Collections;
 using HaBa.EntityObject;
 
-namespace HaBa.Report
+namespace HaBa.Admin.Report
 {
     public partial class BaoCao_SanPham : System.Web.UI.Page
     {
@@ -20,6 +20,7 @@ namespace HaBa.Report
         {
             if (!IsPostBack)
             {
+                ClearMessages();
                 pnlSearch.Visible = true;
                 pnlReport.Visible = false;
 
@@ -43,8 +44,16 @@ namespace HaBa.Report
             }
         }
 
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblFK_iNhomSanPhamID.Text = "";
+            lbliTrangThai.Text = "";
+        }
+
         protected void btnBaoCao_Click(object sender, EventArgs e)
         {
+            ClearMessages();
             if (pnlSearch.Visible == true)
             {
                 pnlSearch.Visible = false;
@@ -62,7 +71,7 @@ namespace HaBa.Report
             try
             {
                 ReportDocument crystalReport = new ReportDocument();
-                crystalReport.Load(Server.MapPath("~/Report/SanPhamRP.rpt"));
+                crystalReport.Load(Server.MapPath("~/Admin/Report/SanPhamRP.rpt"));
                 DataSet dsHaBa = new DataSet();
                 DataTable dttblSanPham = new DataTable();
                 tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();

@@ -151,10 +151,7 @@ namespace HaBa.UserControl
                     txtlGiaBan.Focus();
                     return false;
                 }
-
             }
-
-
             if (string.IsNullOrEmpty(txtiVAT.Text) == true)
             {
                 lbliVAT.Text = Messages.Khong_Duoc_De_Trong;
@@ -186,14 +183,13 @@ namespace HaBa.UserControl
                     txtiSoLuong.Focus();
                     return false;
                 }
-
             }
             return true;
         }
 
         private void ClearMessages()
         {
-            lblMsg.Text = "";
+            //lblMsg.Text = "";
             lblPK_sSanPhamID.Text = "";
             lblFK_iNhomSanPhamID.Text = "";
             lblsTenSanPham.Text = "";
@@ -214,6 +210,7 @@ namespace HaBa.UserControl
         protected void btnInsert_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
               if (CheckInput() == true)
@@ -221,6 +218,9 @@ namespace HaBa.UserControl
                 if (tblSanPhamDAO.SanPham_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
+                    ClearMessages();
+                    tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
+                    BindDataDetail(_tblSanPhamEO);
                 }
                 else
                 {
@@ -237,6 +237,7 @@ namespace HaBa.UserControl
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
               if (CheckInput() == true)
@@ -244,6 +245,7 @@ namespace HaBa.UserControl
                 if (tblSanPhamDAO.SanPham_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    ClearMessages();
                 }
                 else
                 {
@@ -260,11 +262,15 @@ namespace HaBa.UserControl
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblSanPhamDAO.SanPham_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                    ClearMessages();
+                    tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
+                    BindDataDetail(_tblSanPhamEO);
                 }
                 else
                 {
@@ -280,6 +286,7 @@ namespace HaBa.UserControl
         protected void btnReset_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
             BindDataDetail(_tblSanPhamEO);
         }

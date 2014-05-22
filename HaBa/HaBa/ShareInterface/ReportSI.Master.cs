@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace HaBa
+namespace HaBa.ShareInterface
 {
-    public partial class ThongBao : System.Web.UI.Page
+    public partial class ReportSI : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -170,7 +170,7 @@ namespace HaBa.UserControl
 
         private void ClearMessages()
         {
-            lblMsg.Text = "";
+            //lblMsg.Text = "";
             lblPK_iTaiKhoanID.Text = "";
             lblsTenDangNhap.Text = "";
             lblsMatKhau.Text = "";
@@ -189,6 +189,7 @@ namespace HaBa.UserControl
         protected void btnInsert_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
               if (CheckInput() == true)
@@ -196,6 +197,9 @@ namespace HaBa.UserControl
                 if (tblTaiKhoanDAO.TaiKhoan_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
+                    ClearMessages();
+                    tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                    BindDataDetail(_tblTaiKhoanEO);
                 }
                 else
                 {
@@ -212,6 +216,7 @@ namespace HaBa.UserControl
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
               if (CheckInput() == true)
@@ -219,6 +224,7 @@ namespace HaBa.UserControl
                 if (tblTaiKhoanDAO.TaiKhoan_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
+                    ClearMessages();
                 }
                 else
                 {
@@ -235,11 +241,15 @@ namespace HaBa.UserControl
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             try
             {
                 if (tblTaiKhoanDAO.TaiKhoan_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                    ClearMessages();
+                    tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                    BindDataDetail(_tblTaiKhoanEO);
                 }
                 else
                 {
@@ -255,11 +265,34 @@ namespace HaBa.UserControl
         protected void btnReset_Click(object sender, EventArgs e)
         {
             ClearMessages();
+            lblMsg.Text = "";
             tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
             BindDataDetail(_tblTaiKhoanEO);
         }
         #endregion;
 
+        public void Permit_Access()
+        {
+            txtPK_iTaiKhoanID.Visible = false;
+            lblPK_iTaiKhoanID.Visible = false;
+            lblPK_iTaiKhoanID_Title.Visible = false;
+
+            txtsTenDangNhap.Enabled = false;
+            txtsEmail.Enabled = false;
+            txttNgayDangKy.Enabled = false;
+
+            ddliQuyenHan.Visible = false;
+            lbliQuyenHan.Visible = false;
+            lbliQuyenHan_Title.Visible = false;
+
+            ddliTrangThai.Visible = false;
+            lbliTrangThai.Visible = false;
+            lbliTrangThai_Title.Visible = false;
+
+            btnInsert.Visible = false;
+            btnDelete.Visible = false;
+            btnReset.Visible = false;
+        }
         
     }
 }

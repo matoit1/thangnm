@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa.Report {
+namespace HaBa.Admin.Report {
     
     
-    public partial class BaoCao_SanPham {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class BaoCao_TaiKhoan {
         
         /// <summary>
         /// btnBaoCao control.
@@ -40,22 +31,22 @@ namespace HaBa.Report {
         protected global::System.Web.UI.WebControls.Panel pnlSearch;
         
         /// <summary>
-        /// ddlFK_iNhomSanPhamID control.
+        /// ddliQuyenHan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFK_iNhomSanPhamID;
+        protected global::System.Web.UI.WebControls.DropDownList ddliQuyenHan;
         
         /// <summary>
-        /// lblFK_iNhomSanPhamID control.
+        /// lbliQuyenHan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFK_iNhomSanPhamID;
+        protected global::System.Web.UI.WebControls.Label lbliQuyenHan;
         
         /// <summary>
         /// ddliTrangThai control.
@@ -103,12 +94,12 @@ namespace HaBa.Report {
         protected global::System.Web.UI.WebControls.Panel pnlReport;
         
         /// <summary>
-        /// crvSanPham control.
+        /// crvTaiKhoan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CrystalDecisions.Web.CrystalReportViewer crvSanPham;
+        protected global::CrystalDecisions.Web.CrystalReportViewer crvTaiKhoan;
     }
 }

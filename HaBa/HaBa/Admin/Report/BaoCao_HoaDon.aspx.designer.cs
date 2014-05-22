@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa.Report {
+namespace HaBa.Admin.Report {
     
     
-    public partial class BaoCao_TaiKhoan {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class BaoCao_HoaDon {
         
         /// <summary>
         /// btnBaoCao control.
@@ -40,40 +31,22 @@ namespace HaBa.Report {
         protected global::System.Web.UI.WebControls.Panel pnlSearch;
         
         /// <summary>
-        /// ddliQuyenHan control.
+        /// txtPK_lHoaDonID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddliQuyenHan;
+        protected global::System.Web.UI.WebControls.TextBox txtPK_lHoaDonID;
         
         /// <summary>
-        /// lbliQuyenHan control.
+        /// lblPK_lHoaDonID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliQuyenHan;
-        
-        /// <summary>
-        /// ddliTrangThai control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddliTrangThai;
-        
-        /// <summary>
-        /// lbliTrangThai control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliTrangThai;
+        protected global::System.Web.UI.WebControls.Label lblPK_lHoaDonID;
         
         /// <summary>
         /// btnTimKiem control.
@@ -103,12 +76,12 @@ namespace HaBa.Report {
         protected global::System.Web.UI.WebControls.Panel pnlReport;
         
         /// <summary>
-        /// crvTaiKhoan control.
+        /// crvHoaDon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CrystalDecisions.Web.CrystalReportViewer crvTaiKhoan;
+        protected global::CrystalDecisions.Web.CrystalReportViewer crvHoaDon;
     }
 }

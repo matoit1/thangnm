@@ -30,17 +30,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <%--<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
-        <Items>
-            <asp:MenuItem Text="||  Chi tiết Hóa đơn" Value=" Chi tiết Hóa đơn " NavigateUrl="~/Admin/ChiTietHoaDon.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="||  Hóa Đơn" Value=" Hóa Đơn " NavigateUrl="~/Admin/HoaDon.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="||  Nhóm Sản phẩm" Value=" Nhóm Sản phẩm " NavigateUrl="~/Admin/NhomSanPham.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="||  Sản phẩm" Value=" Sản phẩm " NavigateUrl="~/Admin/SanPham.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="||  Tài Khoản" Value=" Tài Khoản " NavigateUrl="~/Admin/TaiKhoan.aspx"></asp:MenuItem>
-            <asp:MenuItem Text="||  Thanh Toán" Value=" Thanh Toán " NavigateUrl="~/Admin/ThanhToan.aspx"></asp:MenuItem>
-        </Items>
-    </asp:Menu>--%>
-
     <div id="overlay">
 		<ul>
 		  <li class="li1"></li>
@@ -343,9 +332,10 @@
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-file"></i><span class="hidden-tablet">Hóa đơn</span></a>
 							<ul>
-								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=1"><i class="icon-stop"></i><span class="hidden-tablet"> Đã xử lý</span></a></li>
-								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=2"><i class="icon-play"></i><span class="hidden-tablet"> Chưa xử lý</span></a></li>
-								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=3"><i class="icon-remove-sign"></i><span class="hidden-tablet"> Đã hủy</span></a></li>
+                                <li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=1"><i class="icon-question-sign"></i><span class="hidden-tablet"> Chưa kiểm tra</span></a></li>
+								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=2"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Chưa giao hàng</span></a></li>
+								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=3"><i class="icon-ok-sign"></i><span class="hidden-tablet"> Đã giao hàng</span></a></li>
+								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=4"><i class="icon-remove-sign"></i><span class="hidden-tablet"> Đã hủy</span></a></li>
 							</ul>	
 						</li>
                         <li>
@@ -358,9 +348,10 @@
                         <li>
 							<a class="dropmenu" href="#"><i class="icon-print"></i><span class="hidden-tablet">Báo cáo</span></a>
 							<ul>
-								<li><a class="submenu" href="../Report/BaoCao_SanPham.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Sản phẩm</span></a></li>
-								<li><a class="submenu" href="../Report/BaoCao_TaiKhoan.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Khách hàng</span></a></li>
-								<li><a class="submenu" href="../Report/BaoCao_HoaDon.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Hóa đơn</span></a></li>
+								<li><a class="submenu" href="../Admin/Report/BaoCao_SanPham.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Sản phẩm</span></a></li>
+								<li><a class="submenu" href="../Admin/Report/BaoCao_TaiKhoan.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Khách hàng</span></a></li>
+								<li><a class="submenu" href="../Admin/Report/BaoCao_KetQua_KinhDoanh.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Kết quả kinh doanh</span></a></li>
+                                <li><a class="submenu" href="../Admin/Report/BaoCao_HoaDon.aspx"><i class="icon-file"></i><span class="hidden-tablet"> In Hóa đơn</span></a></li>
 							</ul>	
 						</li>
                         <li><a href="../Admin/Database.aspx"><i class="icon-hdd"></i><span class="hidden-tablet">Database</span></a></li>
