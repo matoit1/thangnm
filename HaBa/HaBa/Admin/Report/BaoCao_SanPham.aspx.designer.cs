@@ -7,72 +7,99 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa.ShareInterface {
+namespace HaBa.Admin.Report {
     
     
-    public partial class ProductSI {
+    public partial class BaoCao_SanPham {
         
         /// <summary>
-        /// cphHead control.
+        /// btnBaoCao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
+        protected global::System.Web.UI.WebControls.Button btnBaoCao;
         
         /// <summary>
-        /// form1 control.
+        /// pnlSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel pnlSearch;
         
         /// <summary>
-        /// MenuUC1 control.
+        /// ddlFK_iNhomSanPhamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HaBa.UserControl.MenuUC MenuUC1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_iNhomSanPhamID;
         
         /// <summary>
-        /// lbtnLogin control.
+        /// lblFK_iNhomSanPhamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnLogin;
+        protected global::System.Web.UI.WebControls.Label lblFK_iNhomSanPhamID;
         
         /// <summary>
-        /// lbtnLogout control.
+        /// ddliTrangThai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnLogout;
+        protected global::System.Web.UI.WebControls.DropDownList ddliTrangThai;
         
         /// <summary>
-        /// cphBody control.
+        /// lbliTrangThai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
+        protected global::System.Web.UI.WebControls.Label lbliTrangThai;
         
         /// <summary>
-        /// FooterUC1 control.
+        /// btnTimKiem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::HaBa.UserControl.FooterUC FooterUC1;
+        protected global::System.Web.UI.WebControls.Button btnTimKiem;
+        
+        /// <summary>
+        /// lblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
+        
+        /// <summary>
+        /// pnlReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlReport;
+        
+        /// <summary>
+        /// crvSanPham control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CrystalDecisions.Web.CrystalReportViewer crvSanPham;
     }
 }

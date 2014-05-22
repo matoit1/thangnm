@@ -13,7 +13,7 @@ namespace HaBa.ShareInterface
         {
             try
             {
-                if (Request.Cookies["HaBa_secret"] == null)
+                if (Request.Cookies["HaBa_admin"] == null)
                 {
                     Response.Redirect("~/Admin/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
                 }
@@ -21,14 +21,14 @@ namespace HaBa.ShareInterface
             }
             catch
             {
-                Response.Cookies["HaBa_secret"].Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies["HaBa_admin"].Expires = DateTime.Now.AddDays(-1);
                 Response.Redirect("~/Admin/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
             }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)
         {
-            Response.Cookies["HaBa_secret"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["HaBa_admin"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect(Request.Url.ToString());
         }
     }

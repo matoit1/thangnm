@@ -31,6 +31,15 @@ namespace HaBa.UserControl {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
+        /// lblPK_iTaiKhoanID_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPK_iTaiKhoanID_Title;
+        
+        /// <summary>
         /// txtPK_iTaiKhoanID control.
         /// </summary>
         /// <remarks>
@@ -211,6 +220,15 @@ namespace HaBa.UserControl {
         protected global::System.Web.UI.WebControls.Label lbltNgayDangKy;
         
         /// <summary>
+        /// lbliQuyenHan_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbliQuyenHan_Title;
+        
+        /// <summary>
         /// ddliQuyenHan control.
         /// </summary>
         /// <remarks>
@@ -227,6 +245,15 @@ namespace HaBa.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbliQuyenHan;
+        
+        /// <summary>
+        /// lbliTrangThai_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbliTrangThai_Title;
         
         /// <summary>
         /// ddliTrangThai control.

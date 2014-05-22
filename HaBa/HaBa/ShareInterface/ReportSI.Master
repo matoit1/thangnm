@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ReportSI.master.cs" Inherits="HaBa.ShareInterface.ReportSI" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="||  Trang Admin  " Value=" Trang Admin " NavigateUrl="~/Admin/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Sản phẩm  " Value=" Sản phẩm " NavigateUrl="~/Admin/Report/BaoCao_SanPham.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Khách hàng  " Value=" Khách hàng " NavigateUrl="~/Admin/Report/BaoCao_TaiKhoan.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Kết quả kinh doanh  " Value=" Kết quả kinh doanh " NavigateUrl="~/Admin/Report/BaoCao_KetQua_KinhDoanh.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  In Hóa đơn  " Value=" In Hóa đơn " NavigateUrl="~/Admin/Report/BaoCao_HoaDon.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:ContentPlaceHolder ID="cphBody" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

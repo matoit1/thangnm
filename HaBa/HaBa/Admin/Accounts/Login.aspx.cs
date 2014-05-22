@@ -26,14 +26,14 @@ namespace HaBa.Admin.Accounts
                 dsInput = LoginUC1.Check(TaiKhoan_iQuyenHan_C.QuanTri);
                 if (dsInput.Tables[0].Rows.Count > 0)
                 {
-                    Response.Cookies["HaBa_secret"].Value = LoginUC1.txtsTenDangNhap.Text;
+                    Response.Cookies["HaBa_admin"].Value = LoginUC1.txtsTenDangNhap.Text;
                     if (LoginUC1.chkRememberMe.Checked == true)
                     {
-                        Response.Cookies["HaBa_secret"].Expires = DateTime.Now.AddDays(10);
+                        Response.Cookies["HaBa_admin"].Expires = DateTime.Now.AddDays(10);
                     }
                     else
                     {
-                        Response.Cookies["HaBa_secret"].Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies["HaBa_admin"].Expires = DateTime.Now.AddDays(1);
                     }
                     if (Request.QueryString["Return_Url"] == null)
                     {

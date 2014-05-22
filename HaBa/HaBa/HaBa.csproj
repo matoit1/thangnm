@@ -59,10 +59,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Other\DLL\DevNET.URLRewriter.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Other\DLL\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
@@ -550,13 +546,12 @@
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.CommLayer.dll" />
     <Content Include="Other\DLL\log4net.dll" />
-    <Content Include="Report\BaoCao_KetQua_KinhDoanh.aspx" />
-    <Content Include="Report\Test_BaoCao_TaiKhoan.aspx" />
+    <Content Include="Admin\Report\BaoCao_KetQua_KinhDoanh.aspx" />
+    <Content Include="Admin\Report\Test_BaoCao_TaiKhoan.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.circliful.min.js" />
-    <Content Include="ThongBao.aspx" />
     <Content Include="Nhan.aspx" />
     <Content Include="NhomSanPham.aspx" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
@@ -568,9 +563,9 @@
     <Content Include="Other\DLL\CrystalDecisions.Shared.dll" />
     <Content Include="Other\DLL\CrystalDecisions.Web.dll" />
     <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
-    <Content Include="Report\BaoCao_HoaDon.aspx" />
-    <Content Include="Report\BaoCao_SanPham.aspx" />
-    <Content Include="Report\BaoCao_TaiKhoan.aspx" />
+    <Content Include="Admin\Report\BaoCao_HoaDon.aspx" />
+    <Content Include="Admin\Report\BaoCao_SanPham.aspx" />
+    <Content Include="Admin\Report\BaoCao_TaiKhoan.aspx" />
     <Content Include="SanPham.aspx" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
@@ -756,32 +751,25 @@
     <Compile Include="GioiThieu.aspx.designer.cs">
       <DependentUpon>GioiThieu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\BaoCao_KetQua_KinhDoanh.aspx.cs">
+    <Compile Include="Admin\Report\BaoCao_KetQua_KinhDoanh.aspx.cs">
       <DependentUpon>BaoCao_KetQua_KinhDoanh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report\BaoCao_KetQua_KinhDoanh.aspx.designer.cs">
+    <Compile Include="Admin\Report\BaoCao_KetQua_KinhDoanh.aspx.designer.cs">
       <DependentUpon>BaoCao_KetQua_KinhDoanh.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\Test_BaoCao_TaiKhoan.aspx.cs">
+    <Compile Include="Admin\Report\Test_BaoCao_TaiKhoan.aspx.cs">
       <DependentUpon>Test_BaoCao_TaiKhoan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report\Test_BaoCao_TaiKhoan.aspx.designer.cs">
+    <Compile Include="Admin\Report\Test_BaoCao_TaiKhoan.aspx.designer.cs">
       <DependentUpon>Test_BaoCao_TaiKhoan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\KetQua_KinhDoanhRP.cs">
+    <Compile Include="Admin\Report\KetQua_KinhDoanhRP.cs">
       <DependentUpon>KetQua_KinhDoanhRP.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="ThongBao.aspx.cs">
-      <DependentUpon>ThongBao.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThongBao.aspx.designer.cs">
-      <DependentUpon>ThongBao.aspx</DependentUpon>
     </Compile>
     <Compile Include="Nhan.aspx.cs">
       <DependentUpon>Nhan.aspx</DependentUpon>
@@ -797,41 +785,41 @@
     <Compile Include="NhomSanPham.aspx.designer.cs">
       <DependentUpon>NhomSanPham.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\BaoCao_HoaDon.aspx.cs">
+    <Compile Include="Admin\Report\BaoCao_HoaDon.aspx.cs">
       <DependentUpon>BaoCao_HoaDon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report\BaoCao_HoaDon.aspx.designer.cs">
+    <Compile Include="Admin\Report\BaoCao_HoaDon.aspx.designer.cs">
       <DependentUpon>BaoCao_HoaDon.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\BaoCao_SanPham.aspx.cs">
+    <Compile Include="Admin\Report\BaoCao_SanPham.aspx.cs">
       <DependentUpon>BaoCao_SanPham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report\BaoCao_SanPham.aspx.designer.cs">
+    <Compile Include="Admin\Report\BaoCao_SanPham.aspx.designer.cs">
       <DependentUpon>BaoCao_SanPham.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report\BaoCao_TaiKhoan.aspx.cs">
+    <Compile Include="Admin\Report\BaoCao_TaiKhoan.aspx.cs">
       <DependentUpon>BaoCao_TaiKhoan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Report\BaoCao_TaiKhoan.aspx.designer.cs">
+    <Compile Include="Admin\Report\BaoCao_TaiKhoan.aspx.designer.cs">
       <DependentUpon>BaoCao_TaiKhoan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Report\TaiKhoanRP.cs">
+    <Compile Include="Admin\Report\TaiKhoanRP.cs">
       <DependentUpon>TaiKhoanRP.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Report\HoaDonRP.cs">
+    <Compile Include="Admin\Report\HoaDonRP.cs">
       <DependentUpon>HoaDonRP.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Report\SanPhamRP.cs">
+    <Compile Include="Admin\Report\SanPhamRP.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SanPhamRP.rpt</DependentUpon>
@@ -867,19 +855,19 @@
     <Compile Include="ShareInterface\ClientSI.Master.designer.cs">
       <DependentUpon>ClientSI.Master</DependentUpon>
     </Compile>
-    <Compile Include="ShareInterface\HomeSI.Master.cs">
-      <DependentUpon>HomeSI.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ShareInterface\HomeSI.Master.designer.cs">
-      <DependentUpon>HomeSI.Master</DependentUpon>
-    </Compile>
     <Compile Include="ShareInterface\ProductSI.Master.cs">
       <DependentUpon>ProductSI.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ShareInterface\ProductSI.Master.designer.cs">
       <DependentUpon>ProductSI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ShareInterface\ReportSI.Master.cs">
+      <DependentUpon>ReportSI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShareInterface\ReportSI.Master.designer.cs">
+      <DependentUpon>ReportSI.Master</DependentUpon>
     </Compile>
     <Compile Include="UserControl\AdvancedSearchUC.ascx.cs">
       <DependentUpon>AdvancedSearchUC.ascx</DependentUpon>
@@ -1038,7 +1026,6 @@
     <None Include="App_Data\HaBa_12-05-2014_02AM.bak" />
     <Content Include="ShareInterface\AdminSI.Master" />
     <Content Include="ShareInterface\ClientSI.Master" />
-    <Content Include="ShareInterface\HomeSI.Master" />
     <Content Include="ShareInterface\ProductSI.Master" />
     <None Include="ckeditor\.htaccess" />
     <None Include="App_Data\dsHaBa.xsc">
@@ -1052,9 +1039,10 @@
     <None Include="App_Data\dsHaBa.xss">
       <DependentUpon>dsHaBa.xsd</DependentUpon>
     </None>
+    <Content Include="ShareInterface\ReportSI.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Report\SanPhamRP.rpt">
+    <Content Include="Admin\Report\SanPhamRP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SanPhamRP.cs</LastGenOutput>
     </Content>
@@ -1063,19 +1051,19 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Report\HoaDonRP.rpt">
+    <Content Include="Admin\Report\HoaDonRP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HoaDonRP.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Report\TaiKhoanRP.rpt">
+    <Content Include="Admin\Report\TaiKhoanRP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TaiKhoanRP.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Report\KetQua_KinhDoanhRP.rpt">
+    <Content Include="Admin\Report\KetQua_KinhDoanhRP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>KetQua_KinhDoanhRP.cs</LastGenOutput>
     </Content>

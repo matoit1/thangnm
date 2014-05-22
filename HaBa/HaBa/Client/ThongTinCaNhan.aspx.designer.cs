@@ -11,5 +11,14 @@ namespace HaBa.Client {
     
     
     public partial class ThongTinCaNhan {
+        
+        /// <summary>
+        /// tblTaiKhoan_DetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::HaBa.UserControl.tblTaiKhoan_DetailUC tblTaiKhoan_DetailUC1;
     }
 }

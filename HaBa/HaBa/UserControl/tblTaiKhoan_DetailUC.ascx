@@ -21,71 +21,62 @@
             <td></td>
         </tr>
         <tr>
-            <td>Mã tài khoản: </td>
+            <td><asp:Label ID="lblPK_iTaiKhoanID_Title" runat="server" Text="Mã tài khoản: "></asp:Label></td>
             <td><asp:TextBox ID="txtPK_iTaiKhoanID" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_iTaiKhoanID" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Tên đăng nhập: </td>
-            <td><asp:TextBox ID="txtsTenDangNhap" runat="server" Width="400px" MaxLength="50" 
-                    TabIndex="1"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsTenDangNhap" runat="server" Width="400px" MaxLength="50" TabIndex="1"></asp:TextBox></td>
             <td><asp:Label ID="lblsTenDangNhap" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Mật khẩu: </td>
-            <td><asp:TextBox ID="txtsMatKhau" runat="server" Width="400px" TextMode="Password" 
-                    MaxLength="50" ontextchanged="txtsMatKhau_TextChanged" TabIndex="2"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsMatKhau" runat="server" Width="400px" TextMode="Password"  MaxLength="50" TabIndex="2"></asp:TextBox></td>
             <td><asp:Label ID="lblsMatKhau" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Họ và Tên: </td>
-            <td><asp:TextBox ID="txtsHoTen" runat="server" Width="400px" MaxLength="50" 
-                    TabIndex="3"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsHoTen" runat="server" Width="400px" MaxLength="50" TabIndex="3"></asp:TextBox></td>
             <td><asp:Label ID="lblsHoTen" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Địa chỉ Email: </td>
-            <td><asp:TextBox ID="txtsEmail" runat="server" Width="400px" MaxLength="50" 
-                    TabIndex="4"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsEmail" runat="server" Width="400px" MaxLength="50" TabIndex="4"></asp:TextBox></td>
             <td><asp:Label ID="lblsEmail" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Địa chỉ: </td>
-            <td><asp:TextBox ID="txtsDiaChi" runat="server" Width="400px" MaxLength="500" 
-                    TabIndex="5"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsDiaChi" runat="server" Width="400px" MaxLength="500" TabIndex="5"></asp:TextBox></td>
             <td><asp:Label ID="lblsDiaChi" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Số điện thoại: </td>
-            <td><asp:TextBox ID="txtsSoDienThoai" runat="server" Width="400px" MaxLength="13" 
-                    TabIndex="6"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsSoDienThoai" runat="server" Width="400px" MaxLength="13" TabIndex="6"></asp:TextBox></td>
             <td><asp:Label ID="lblsSoDienThoai" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Link Avatar: </td>
-            <td><asp:TextBox ID="txtsLinkAvatar" runat="server" Width="400px" MaxLength="500" 
-                    TabIndex="7"></asp:TextBox></td>
+            <td><asp:TextBox ID="txtsLinkAvatar" runat="server" Width="400px" MaxLength="500" TabIndex="7"></asp:TextBox></td>
             <td><asp:Label ID="lblsLinkAvatar" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày sinh: </td>
-            <td><asp:TextBox ID="txttNgaySinh" runat="server" Width="400px" 
-                    CssClass="startdate" MaxLength="32897" TabIndex="8"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgaySinh" runat="server" Width="400px" CssClass="startdate" MaxLength="32897" TabIndex="8"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgaySinh" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày đăng ký: </td>
-            <td><asp:TextBox ID="txttNgayDangKy" runat="server" Width="400px" 
-                    CssClass="startdate" Enabled="false" MaxLength="32897" TabIndex="9"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayDangKy" runat="server" Width="400px" CssClass="startdate" Enabled="false" MaxLength="32897" TabIndex="9"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayDangKy" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Quyền hạn: </td>
+            <td><asp:Label ID="lbliQuyenHan_Title" runat="server" Text="Quyền hạn: "></asp:Label></td>
             <td><asp:DropDownList ID="ddliQuyenHan" runat="server" Width="405px" TabIndex="10"></asp:DropDownList></td>
             <td><asp:Label ID="lbliQuyenHan" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Trạng thái: </td>
+            <td><asp:Label ID="lbliTrangThai_Title" runat="server" Text="Trạng thái: "></asp:Label></td>
             <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px" TabIndex="11"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
         </tr>

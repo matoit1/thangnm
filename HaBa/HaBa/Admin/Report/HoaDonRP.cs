@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HaBa.Report {
+namespace HaBa.Admin.Report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace HaBa.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class SanPhamRP : ReportClass {
+    public class HoaDonRP : ReportClass {
         
-        public SanPhamRP() {
+        public HoaDonRP() {
         }
         
         public override string ResourceName {
             get {
-                return "SanPhamRP.rpt";
+                return "HoaDonRP.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace HaBa.Report {
         
         public override string FullResourceName {
             get {
-                return "HaBa.Report.SanPhamRP.rpt";
+                return "HaBa.Admin.Report.HoaDonRP.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace HaBa.Report {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedSanPhamRP : Component, ICachedReport {
+    public class CachedHoaDonRP : Component, ICachedReport {
         
-        public CachedSanPhamRP() {
+        public CachedHoaDonRP() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace HaBa.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            SanPhamRP rpt = new SanPhamRP();
+            HoaDonRP rpt = new HoaDonRP();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -11,7 +11,7 @@ using HaBa.SharedLibraries;
 using HaBa.EntityObject;
 using System.Collections;
 
-namespace HaBa.Report
+namespace HaBa.Admin.Report
 {
     public partial class BaoCao_KetQua_KinhDoanh : System.Web.UI.Page
     {
@@ -19,6 +19,7 @@ namespace HaBa.Report
         {
             if (!IsPostBack)
             {
+                ClearMessages();
                 pnlSearch.Visible = true;
                 pnlReport.Visible = false;
                 ddlThang.SelectedValue = DateTime.Now.Month.ToString();
@@ -32,6 +33,14 @@ namespace HaBa.Report
                 ddliTrangThai.DataValueField = "Key";
                 ddliTrangThai.DataBind();
             }
+        }
+
+        private void ClearMessages()
+        {
+            lblMsg.Text = "";
+            lblThang.Text = "";
+            lblNam.Text = "";
+            lbliTrangThai.Text = "";
         }
 
         public static Int64 getlTriGia(Int64 PK_lHoaDonID)
@@ -49,6 +58,7 @@ namespace HaBa.Report
 
         protected void btnBaoCao_Click(object sender, EventArgs e)
         {
+            ClearMessages();
             if (pnlSearch.Visible == true)
             {
                 pnlSearch.Visible = false;
@@ -67,7 +77,7 @@ namespace HaBa.Report
                 if (CheckInput() == true)
                 {
                     ReportDocument crystalReport = new ReportDocument();
-                    crystalReport.Load(Server.MapPath("~/Report/KetQua_KinhDoanhRP.rpt"));
+                    crystalReport.Load(Server.MapPath("~/Admin/Report/KetQua_KinhDoanhRP.rpt"));
                     DataSet dsHaBa = new DataSet();
                     DataTable dttblHoaDon = new DataTable();
                     dttblHoaDon = tblHoaDonDAO.HoaDon_SelectListByiTrangThai_ThangNam(Convert.ToInt16(ddliTrangThai.SelectedValue), Convert.ToInt16(ddlThang.SelectedValue),Convert.ToInt16(txtNam.Text)).Tables[0];
@@ -78,7 +88,14 @@ namespace HaBa.Report
                     dttblHoaDon.Columns.Add(new DataColumn("lTriGia", Type.GetType("System.Int64")));
                     foreach (DataRow dr in dttblHoaDon.Rows)
                     {
-                        dr["FK_iTaiKhoanID_Giao_Text"] = tblTaiKhoanDAO.TaiKhoan_SelectItemByPK_iTaiKhoanID(Convert.ToInt32(dr["FK_iTaiKhoanID_Giao"])).sHoTen;
+                        if (string.IsNullOrEmpty(dr["FK_iTaiKhoanID_Giao"].ToString()))
+                        {
+                            dr["FK_iTaiKhoanID_Giao_Text"] = "";
+                        }
+                        else
+                        {
+                            dr["FK_iTaiKhoanID_Giao_Text"] = tblTaiKhoanDAO.TaiKhoan_SelectItemByPK_iTaiKhoanID(Convert.ToInt32(dr["FK_iTaiKhoanID_Giao"])).sHoTen;
+                        }
                         dr["FK_iTaiKhoanID_Nhan_Text"] = tblTaiKhoanDAO.TaiKhoan_SelectItemByPK_iTaiKhoanID(Convert.ToInt32(dr["FK_iTaiKhoanID_Nhan"])).sHoTen;
                         dr["FK_iThanhToanID_Text"] = tblThanhToanDAO.ThanhToan_SelectItemByPK_iThanhToanID(Convert.ToInt16(dr["FK_iThanhToanID"])).sTenThanhToan;
                         dr["iTrangThai_Text"] = GetTextConstants.HoaDon_iTrangThai_GTC(Convert.ToInt16(dr["iTrangThai"]));
