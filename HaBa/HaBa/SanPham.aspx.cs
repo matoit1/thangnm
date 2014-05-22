@@ -8,6 +8,7 @@ using HaBa.SharedLibraries;
 using HaBa.DataAccessObject;
 using HaBa.EntityObject;
 using System.Data;
+using HaBa.SharedLibraries.Constants;
 
 namespace HaBa
 {
@@ -50,15 +51,24 @@ namespace HaBa
                 lblFK_iNhomSanPhamID.Text = tblNhomSanPhamDAO.NhomSanPham_SelectItem_By_PK_iNhomSanPhamID(_ProductsEO.FK_iNhomSanPhamID).sTenNhom;
                 lblsName.Text = _ProductsEO.sTenSanPham;
                 lblsTenSanPham.Text = _ProductsEO.sTenSanPham;
-                lbltLastUpdate.Text = _ProductsEO.tNgayCapNhat.ToString(Messages.Format_DateTime);
-                lblsMoTa.Text = _ProductsEO.sMoTa;
+                //lblsMoTa.Text = _ProductsEO.sMoTa;
+                lblsThongTin.Text = _ProductsEO.sThongTin;
                 lblsXuatXu.Text = _ProductsEO.sXuatXu;
-                lbllGiaBan.Text = _ProductsEO.lGiaBan.ToString(Messages.Format_Number);
                 imgsLinkImage.ImageUrl = _ProductsEO.sLinkImage;
                 imgsLinkImage.AlternateText = _ProductsEO.sTenSanPham;
                 Url_Image = _ProductsEO.sLinkImage.Replace("~", "..");
+                lbllGiaBan.Text = _ProductsEO.lGiaBan.ToString(Messages.Format_Number);
+                lbliVAT.Text = _ProductsEO.iVAT.ToString() + " %";
+                lbliDoTuoi.Text = GetTextConstants.SanPham_iDoTuoi_GTC(_ProductsEO.iDoTuoi);
+                lbliGioiTinh.Text = GetTextConstants.SanPham_iGioiTinh_GTC(_ProductsEO.iGioiTinh);
+                lbliSoLuong.Text = _ProductsEO.iSoLuong.ToString();
+                lbltLastUpdate.Text = _ProductsEO.tNgayCapNhat.ToString(Messages.Format_DateTime);
                 lbliTrangThai.Text = GetTextConstants.SanPham_iTrangThai_GTC(_ProductsEO.iTrangThai);
                 lblVote.CssClass = "rw-ui-container rw-urid-" + _ProductsEO.PK_sSanPhamID;
+                if (_ProductsEO.iTrangThai == SanPham_iTrangThai_C.Het_Hang)
+                {
+                    btnBuy.Enabled = false;
+                }
             }
             catch (Exception ex)
             {

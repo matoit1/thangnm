@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SanPham.aspx.cs" Inherits="HaBa.SanPham" MasterPageFile="~/ShareInterface/ProductSI.Master" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
     <link rel="stylesheet" type="text/css" href="../App_Themes/ZoomImage.css" />
@@ -86,14 +87,10 @@
                     <td class="tieudesanpham">Tên sản phẩm: </td>
                     <td><asp:Label ID="lblsTenSanPham" runat="server"></asp:Label></td>
                 </tr>
-                <tr>
+                <%--<tr>
                     <td class="tieudesanpham">Mô tả: </td>
                     <td><asp:Label ID="lblsMoTa" runat="server"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td class="tieudesanpham">Thông tin: </td>
-                    <td><asp:Label ID="lblsThongTin" runat="server"></asp:Label></td>
-                </tr>
+                </tr>--%>
                 <tr>
                     <td class="tieudesanpham">Xuất xứ: </td>
                     <td><asp:Label ID="lblsXuatXu" runat="server"></asp:Label></td>
@@ -101,6 +98,22 @@
                 <tr>
                     <td class="tieudesanpham">Giá bán: </td>
                     <td><asp:Label ID="lbllGiaBan" runat="server"></asp:Label> VNĐ</td>
+                </tr>
+                <tr>
+                    <td class="tieudesanpham">Thuế GTGT (VAT): </td>
+                    <td><asp:Label ID="lbliVAT" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td class="tieudesanpham">Độ tuổi: </td>
+                    <td><asp:Label ID="lbliDoTuoi" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td class="tieudesanpham">Giới tính: </td>
+                    <td><asp:Label ID="lbliGioiTinh" runat="server"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td class="tieudesanpham">Số lượng: </td>
+                    <td><asp:Label ID="lbliSoLuong" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
                     <td class="tieudesanpham">Trạng thái</td>
@@ -117,16 +130,29 @@
             </table>
         </div>
     </div>
-    <div class="binhluan">
-        <div id="fb-root"></div>
-        <script>            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=432781806807255&version=v2.0";
-                fjs.parentNode.insertBefore(js, fjs);
-            } (document, 'script', 'facebook-jssdk'));</script>
-        <div class="fb-comments" data-href="<%=Request.Url.AbsoluteUri.ToString()%>" data-colorscheme="light" data-numposts="10" data-width="700"></div>
-    </div>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <cc1:TabContainer ID="tabMain" runat="server" ActiveTabIndex="0">
+            <cc1:TabPanel runat="server" HeaderText="Thông tin chi tiết sản phẩm" ID="tabInfo">
+                <ContentTemplate>
+                    <asp:Label ID="lblsThongTin" runat="server"></asp:Label>
+                </ContentTemplate>
+            </cc1:TabPanel>
+            <cc1:TabPanel runat="server" HeaderText="Bình luận" ID="tabComment">
+                <ContentTemplate>
+                    <div class="binhluan">
+                        <div id="fb-root"></div>
+                        <script>            (function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s); js.id = id;
+                                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=432781806807255&version=v2.0";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            } (document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-comments" data-href="<%=Request.Url.AbsoluteUri.ToString()%>" data-colorscheme="light" data-numposts="10" data-width="700"></div>
+                    </div>
+                </ContentTemplate>
+            </cc1:TabPanel>
+        </cc1:TabContainer>
 </div>
 </asp:Content>
