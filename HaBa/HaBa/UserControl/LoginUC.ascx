@@ -9,6 +9,6 @@
         <asp:CheckBox ID="chkRememberMe" runat="server" value="yes"/><span>Ghi nhớ</span>
         <asp:HyperLink ID="hplLost" runat="server">Quên Tài khoản / Mật khẩu?</asp:HyperLink><br /><br />
         <asp:Button ID="btnLogin" runat="server" Text="Đăng nhập" CssClass="rc-button"  onclick="btnLogin_Click" /><br />
-        <asp:HyperLink ID="hplHelp" runat="server" NavigateUrl="~/FAQ.aspx">Bạn cần trợ giúp?</asp:HyperLink>
+        <asp:HyperLink ID="hplRegister" runat="server"></asp:HyperLink>
     </div>
 </asp:Panel>

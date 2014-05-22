@@ -14,7 +14,8 @@ namespace HaBa.Admin.Accounts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoginUC1.hplLost.NavigateUrl = "~/Admin/Accounts/ForgotPassword.aspx";
+            LoginUC1.hplLost.NavigateUrl = "~/Client/Accounts/ForgotPassword.aspx";
+            LoginUC1.hplRegister.Visible = false;
         }
 
         protected void Login_Click(object sender, EventArgs e)

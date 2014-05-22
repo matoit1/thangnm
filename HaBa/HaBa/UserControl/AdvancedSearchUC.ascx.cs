@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using HaBa.EntityObject;
+using System.Collections;
+using HaBa.SharedLibraries;
 
 namespace HaBa.UserControl
 {
@@ -24,7 +26,23 @@ namespace HaBa.UserControl
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                SortedList output = new SortedList();
+                output = GetListConstants.SanPham_iDoTuoi_GLC();
+                output.Add(Convert.ToInt16(0), "Tất cả");
+                ddliDoTuoi.DataSource = output;
+                ddliDoTuoi.DataTextField = "Value";
+                ddliDoTuoi.DataValueField = "Key";
+                ddliDoTuoi.DataBind();
 
+                output = GetListConstants.SanPham_iGioiTinh_GLC();
+                output.Add(Convert.ToInt16(0), "Tất cả");
+                ddliGioiTinh.DataSource = output;
+                ddliGioiTinh.DataTextField = "Value";
+                ddliGioiTinh.DataValueField = "Key";
+                ddliGioiTinh.DataBind();
+            }
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -53,6 +71,8 @@ namespace HaBa.UserControl
             _tblSanPhamEO.sMoTa = txtsMoTa.Text.Trim();
             _tblSanPhamEO.sXuatXu = txtsXuatXu.Text.Trim();
             _tblSanPhamEO.lGiaBan = Convert.ToInt64(Page.Request.Form["txtlGiaBan"].ToString());
+            _tblSanPhamEO.iDoTuoi = Convert.ToInt16(ddliDoTuoi.SelectedValue);
+            _tblSanPhamEO.iGioiTinh = Convert.ToInt16(ddliGioiTinh.SelectedValue);
             objtblSanPhamEO = _tblSanPhamEO;
         }
 

@@ -279,10 +279,10 @@ namespace HaBa.DataAccessObject
         //    }
         //}
 
-        /// <summary> 9. SanPham_SelectList_All_Group </summary>
+        /// <summary> 9. SanPham_SelectListByFK_iNhomSanPhamID_iTrangThai </summary>
         /// <param name="_tblSanPhamEO"></param>
         /// <returns></returns>
-        public static DataSet SanPham_SelectList_All_Group(tblSanPhamEO _tblSanPhamEO)
+        public static DataSet SanPham_SelectListByFK_iNhomSanPhamID_iTrangThai(tblSanPhamEO _tblSanPhamEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -290,10 +290,10 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectList_All_Group", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSanPham_SelectListByFK_iNhomSanPhamID_iTrangThai", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblSanPhamEO.iTrangThai));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", (_tblSanPhamEO.FK_iNhomSanPhamID == 0) ? (object)DBNull.Value : _tblSanPhamEO.FK_iNhomSanPhamID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", (_tblSanPhamEO.iTrangThai==0)?(object)DBNull.Value:_tblSanPhamEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
@@ -450,7 +450,9 @@ namespace HaBa.DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sTenSanPham", (string.IsNullOrEmpty(_tblSanPhamEO.sTenSanPham) == true) ? (object)DBNull.Value : _tblSanPhamEO.sTenSanPham));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sMoTa", (string.IsNullOrEmpty(_tblSanPhamEO.sMoTa) == true) ? (object)DBNull.Value : _tblSanPhamEO.sMoTa));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sXuatXu", (string.IsNullOrEmpty(_tblSanPhamEO.sXuatXu) == true) ? (object)DBNull.Value : _tblSanPhamEO.sXuatXu));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@lGiaBan", _tblSanPhamEO.lGiaBan));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@lGiaBan", (_tblSanPhamEO.lGiaBan == 0) ? (object)DBNull.Value : _tblSanPhamEO.lGiaBan));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iDoTuoi", (_tblSanPhamEO.iDoTuoi == 0) ? (object)DBNull.Value : _tblSanPhamEO.iDoTuoi));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iGioiTinh", (_tblSanPhamEO.iGioiTinh == 0) ? (object)DBNull.Value : _tblSanPhamEO.iGioiTinh));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

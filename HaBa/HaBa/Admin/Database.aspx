@@ -3,7 +3,8 @@
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <div>
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
         <cc1:TabContainer ID="tabMain" runat="server" ActiveTabIndex="0">
             <cc1:TabPanel runat="server" HeaderText="Sao lưu Cơ sở dữ liệu" ID="tabBackup">
             <ContentTemplate>

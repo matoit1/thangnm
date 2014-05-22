@@ -11,9 +11,10 @@ namespace HaBa.SharedLibraries.Constants
     /// 
     public class HoaDon_iTrangThai_C
     {
-        public const Int16 Chua_Giao_Hang = 1;
-        public const Int16 Da_Giao_Hang = 2;
-        public const Int16 Huy = 3;
+        public const Int16 Chua_Kiem_Tra = 1;
+        public const Int16 Chua_Giao_Hang = 2;
+        public const Int16 Da_Giao_Hang = 3;
+        public const Int16 Huy = 4;
     }
 
     /// <summary> I.7. NhomSanPham_iTrangThai_C (Trạng Thái Nhóm Sản Phẩm) </summary>

@@ -88,6 +88,7 @@
     <Content Include="App_Themes\Images\barcode.png" />
     <Content Include="App_Themes\Images\buy.png" />
     <Content Include="App_Themes\Images\BuyContinue.png" />
+    <Content Include="App_Themes\Images\change.jpg" />
     <Content Include="App_Themes\Images\delete.png" />
     <Content Include="App_Themes\Images\DeleteCart.png" />
     <Content Include="App_Themes\Images\Gallery3D_background.jpg" />
@@ -161,13 +162,6 @@
     <Content Include="App_Themes\style.css" />
     <Content Include="App_Themes\ZoomImage.css" />
     <Content Include="bin\CKEditor.NET.dll" />
-    <Content Include="bin\CrystalDecisions.CrystalReports.Engine.dll" />
-    <Content Include="bin\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
-    <Content Include="bin\CrystalDecisions.ReportAppServer.Controllers.dll" />
-    <Content Include="bin\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
-    <Content Include="bin\CrystalDecisions.ReportSource.dll" />
-    <Content Include="bin\CrystalDecisions.Shared.dll" />
-    <Content Include="bin\CrystalDecisions.Web.dll" />
     <Content Include="bin\DevNET.URLRewriter.dll" />
     <Content Include="bin\HaBa.dll" />
     <Content Include="bin\HaBa.pdb" />
@@ -491,6 +485,7 @@
     <Content Include="ckeditor\skins\v2\templates.css" />
     <Content Include="ckeditor\themes\default\theme.js" />
     <Content Include="Client\Accounts\Login.aspx" />
+    <Content Include="Client\Accounts\Register.aspx" />
     <Content Include="Client\Default.aspx" />
     <Content Include="Client\HoaDon.aspx" />
     <Content Include="Client\ThongTinCaNhan.aspx" />
@@ -578,6 +573,7 @@
     <Content Include="Scripts\Popup.js" />
     <Content Include="Scripts\Vote.js" />
     <Content Include="UserControl\AdvancedSearchUC.ascx" />
+    <Content Include="UserControl\RegisterUC.ascx" />
     <Content Include="UserControl\tblHoaDon_PrintUC.ascx" />
     <Content Include="UserControl\ProducGroupUC.ascx" />
     <Content Include="UserControl\tblChiTietHoaDon_ListUC.ascx" />
@@ -682,6 +678,13 @@
     </Compile>
     <Compile Include="Client\Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Accounts\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Accounts\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Client\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -875,6 +878,13 @@
     </Compile>
     <Compile Include="UserControl\AdvancedSearchUC.ascx.designer.cs">
       <DependentUpon>AdvancedSearchUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\RegisterUC.ascx.cs">
+      <DependentUpon>RegisterUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\RegisterUC.ascx.designer.cs">
+      <DependentUpon>RegisterUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\tblHoaDon_PrintUC.ascx.cs">
       <DependentUpon>tblHoaDon_PrintUC.ascx</DependentUpon>

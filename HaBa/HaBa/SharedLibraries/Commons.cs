@@ -303,6 +303,7 @@ namespace HaBa.SharedLibraries
         public const string Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai = "Số điện thoại phải trong khoảng 10 số < sđt < 13 số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng Số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng Ngày/ Giờ, Vui lòng kiểm tra lại!";
+        public const string Khong_Dung_Dinh_Dang_Email = "Không đúng định dạng Email, Vui lòng kiểm tra lại!";
         #endregion
 
         #region "Information"
@@ -325,6 +326,8 @@ namespace HaBa.SharedLibraries
         #region "Security"
         public const string Dang_Nhap_Thanh_Cong = "Đăng nhập thành công!";
         public const string Dang_Nhap_That_Bai = "Đăng nhập thất bại, vui lòng kiểm tra lại!";
+        public const string Dang_Ky_Thanh_Cong = "Đăng ký thành công!";
+        public const string Dang_Ky_That_Bai = "Đăng ký thất bại, vui lòng kiểm tra lại!";
         public const string Doi_Mat_Khau_That_Bai = "Đổi mật khẩu thất bại, vui lòng kiểm tra lại!";
         public const string Doi_Mat_Khau_Thanh_Cong = "Đổi mật khẩu thành công!";
         public const string Gui_Mail_Doi_Mat_Khau_Thanh_Cong = "Hệ thống đã gửi mật khẩu mới vào Email của bạn!";
@@ -334,12 +337,17 @@ namespace HaBa.SharedLibraries
         public const string Sai_Mat_Khau = "Mật khẩu không đúng, Vui lòng thử lại!";
         public const string Sai_Ten_Tai_Khoan_Hoac_Email = "Không có tên tài khoản và email nào trùng khớp. Vui lòng kiểm tra lại!";
         public const string Sai_Email_Hoac_So_Dien_Thoai = "Không có email và số điện thoại nào trùng khớp. Vui lòng kiểm tra lại!";
-        public const string Sai_Captcha = "Captcha không chính xác, vui lòng kiểm tra lại!";
+        public const string Sai_Captcha = "Captcha không chính xác!";
+        public const string Truong_Bat_Buoc = "Trường này bắt buộc phải nhập";
+        public const string Mat_Khau_Khong_Trung_Khop = "Mật khẩu không trùng khớp!";
+        public const string Ten_Tai_Khoan_Da_Duoc_Su_Dung = "Tên tài khoản đã được sử dụng!";
+        public const string Email_Da_Duoc_Su_Dung = "Email đã được sử dụng!";
         #endregion
 
         #region "Format"
         public static readonly string Format_DateTime_Temp = Convert.ToString(DateTime.Now.ToString("dd-MM-yyyy"));
         public static readonly string Format_DateTime = "dd/MM/yyyy";
+        public static readonly string Format_DateTimeMMDDYYYY = "MM/dd/yyyy";
         public static readonly string Format_Number = "###,##0.######";
         public static readonly string Viet_Nam_Dong = " VNĐ";
         #endregion

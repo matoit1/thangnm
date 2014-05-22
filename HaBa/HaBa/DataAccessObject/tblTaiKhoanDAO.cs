@@ -41,10 +41,10 @@ namespace HaBa.DataAccessObject
             }
         }
 
-        /// <summary> 2. TaiKhoan_CheckExists_sUsername </summary>
+        /// <summary> 2. TaiKhoan_CheckExists_sTenDangNhap </summary>
         /// <param name="_tblTaiKhoanEO"></param>
         /// <returns></returns>
-        public static bool TaiKhoan_CheckExists_sUsername(tblTaiKhoanEO _tblTaiKhoanEO)
+        public static bool TaiKhoan_CheckExists_sTenDangNhap(tblTaiKhoanEO _tblTaiKhoanEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -52,7 +52,7 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblTaiKhoan_CheckExists_sUsername", conn);
+                    SqlCommand cmd = new SqlCommand("tblTaiKhoan_CheckExists_sTenDangNhap", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@sTenDangNhap", _tblTaiKhoanEO.sTenDangNhap));
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -122,7 +122,7 @@ namespace HaBa.DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sDiaChi", _tblTaiKhoanEO.sDiaChi));
                     cmd.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblTaiKhoanEO.sSoDienThoai));
                     cmd.Parameters.Add(new SqlParameter("@sLinkAvatar", _tblTaiKhoanEO.sLinkAvatar));
-                    cmd.Parameters.Add(new SqlParameter("@tNgaySinh", _tblTaiKhoanEO.tNgaySinh));
+                    cmd.Parameters.Add(new SqlParameter("@tNgaySinh", (_tblTaiKhoanEO.tNgaySinh == DateTime.MinValue) ? (object)DBNull.Value : _tblTaiKhoanEO.tNgaySinh));
                     cmd.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblTaiKhoanEO.iTrangThai));
                     cmd.ExecuteNonQuery();
@@ -407,6 +407,34 @@ namespace HaBa.DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblTaiKhoan_SelectListByiQuyenHan", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
+        /// <summary> 8. TaiKhoan_SelectListByiQuyenHan_iTrangThai </summary>
+        /// <param name="_tblTaiKhoanEO"></param>
+        /// <returns></returns>
+        public static DataSet TaiKhoan_SelectListByiQuyenHan_iTrangThai(tblTaiKhoanEO _tblTaiKhoanEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblTaiKhoan_SelectListByiQuyenHan_iTrangThai", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iQuyenHan", (_tblTaiKhoanEO.iQuyenHan == 0) ? (object)DBNull.Value : _tblTaiKhoanEO.iQuyenHan));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", (_tblTaiKhoanEO.iTrangThai == 0) ? (object)DBNull.Value : _tblTaiKhoanEO.iTrangThai));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
