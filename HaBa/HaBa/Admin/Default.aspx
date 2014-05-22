@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="HaBa.Admin.Default" MasterPageFile="~/ShareInterface/AdminSI.Master" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphHead" runat="server">
+    <script type="text/javascript">
+        window.location.href = "../Admin/ThongTinCaNhan.aspx"
+	</script>
     <link href="../App_Themes/jquery.circliful.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../Scripts/jquery.circliful.min.js"></script>
