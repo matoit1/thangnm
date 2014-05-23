@@ -13,12 +13,12 @@ namespace EHOU.GiangVien {
     public partial class ThongTinCaNhan {
         
         /// <summary>
-        /// GiangVien_DetailUC1 control.
+        /// tblAccount_DetailUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EHOU.UserControl.GiangVien_DetailUC GiangVien_DetailUC1;
+        protected global::EHOU.Usercontrol.tblAccount_DetailUC tblAccount_DetailUC1;
     }
 }

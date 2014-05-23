@@ -8,11 +8,18 @@ using Shared_Libraries.Constants;
 using System.Net;
 using System.IO;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace Shared_Libraries
 {
     public class Common
     {
+        public static JObject RequestInforByLoginID(string input){
+            string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + "05d261d4a161eed547d9f0cb74de998e");
+            JObject output = JObject.Parse(data);
+            return output;
+        }
+
         public static string ReadTextFromUrl(string url)
         {
             using (var client = new WebClient())

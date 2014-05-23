@@ -7,6 +7,23 @@ namespace Shared_Libraries
 {
     public class GetTextConstants
     {
+        /// <summary> tblAccount_iType_GTC </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string tblAccount_iType_GTC(Int16 input)
+        {
+            string output;
+            switch (input)
+            {
+                case 1: output = "Sinh Viên"; break;
+                case 2: output = "Giảng Viên"; break;
+                case 3: output = "Quản Trị"; break;
+                default: output = "N/A"; break;
+            }
+            return output;
+        }
+
+
         #region "I. Constants - GetTextConstants - GetListConstants"
         /// <summary> I.1 Quyen_Han_GTC (Quyền hạn) </summary>
         /// <param name="input"></param>

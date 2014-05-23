@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Shared_Libraries;
 
 namespace EHOU.SinhVien
 {
@@ -17,7 +18,7 @@ namespace EHOU.SinhVien
                 {
                     CaHocUC1.Visible = true;
                     CaHocUC1.FK_sSubject = Request.QueryString["PK_sSubject"];
-                    CaHocUC1.FK_sStudent = Session["account_sv"].ToString();
+                    CaHocUC1.FK_sStudent = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
                 }
             }
             catch { }
