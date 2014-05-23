@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4882813A-172E-401E-B8F6-D6813D3D1DE6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CongKy</RootNamespace>
+    <AssemblyName>CongKy</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\bootstrap-responsive.min.css" />
+    <Content Include="App_Themes\bootstrap.min.css" />
+    <Content Include="App_Themes\calendar.css" />
+    <Content Include="App_Themes\Gallery3D_1.css" />
+    <Content Include="App_Themes\Gallery3D_2.css" />
+    <Content Include="App_Themes\Home.css" />
+    <Content Include="App_Themes\Images\barcode.png" />
+    <Content Include="App_Themes\Images\buy.png" />
+    <Content Include="App_Themes\Images\BuyContinue.png" />
+    <Content Include="App_Themes\Images\change.jpg" />
+    <Content Include="App_Themes\Images\delete.png" />
+    <Content Include="App_Themes\Images\DeleteCart.png" />
+    <Content Include="App_Themes\Images\Gallery3D_background.jpg" />
+    <Content Include="App_Themes\Images\Gallery3D_forward_back.png" />
+    <Content Include="App_Themes\Images\Gallery3D_frames.png" />
+    <Content Include="App_Themes\Images\Home_backline.png" />
+    <Content Include="App_Themes\Images\Home_banner.jpg" />
+    <Content Include="App_Themes\Images\Home_facebook-hover.png" />
+    <Content Include="App_Themes\Images\Home_google-hover.png" />
+    <Content Include="App_Themes\Images\Home_instagram-hover.png" />
+    <Content Include="App_Themes\Images\Home_liner.png" />
+    <Content Include="App_Themes\Images\Home_pinterest-hover.png" />
+    <Content Include="App_Themes\Images\Home_search.png" />
+    <Content Include="App_Themes\Images\Home_social.png" />
+    <Content Include="App_Themes\Images\Home_sprite.png" />
+    <Content Include="App_Themes\Images\Home_tumblr-hover.png" />
+    <Content Include="App_Themes\Images\Home_twitter-hover.png" />
+    <Content Include="App_Themes\Images\logo.jpg" />
+    <Content Include="App_Themes\Images\nganluong.png" />
+    <Content Include="App_Themes\Images\Popup_CloseBox.png" />
+    <Content Include="App_Themes\Images\shopping_cart.png" />
+    <Content Include="App_Themes\Images\UpdateCart.png" />
+    <Content Include="App_Themes\img\arrows-active.png" />
+    <Content Include="App_Themes\img\arrows-normal.png" />
+    <Content Include="App_Themes\img\bg-input-focus.png" />
+    <Content Include="App_Themes\img\bg-input.png" />
+    <Content Include="App_Themes\img\bg-login.jpg" />
+    <Content Include="App_Themes\img\bg.jpg" />
+    <Content Include="App_Themes\img\buttons.gif" />
+    <Content Include="App_Themes\img\chat-left.png" />
+    <Content Include="App_Themes\img\chat-right.png" />
+    <Content Include="App_Themes\img\chosen-sprite.png" />
+    <Content Include="App_Themes\img\close-button-white.png" />
+    <Content Include="App_Themes\img\close-button.png" />
+    <Content Include="App_Themes\img\crop.gif" />
+    <Content Include="App_Themes\img\dbg.jpg" />
+    <Content Include="App_Themes\img\dialogs.png" />
+    <Content Include="App_Themes\img\glyphicons-halflings-red.png" />
+    <Content Include="App_Themes\img\glyphicons-halflings-white.png" />
+    <Content Include="App_Themes\img\glyphicons-halflings.png" />
+    <Content Include="App_Themes\img\icons-big.png" />
+    <Content Include="App_Themes\img\icons-small.png" />
+    <Content Include="App_Themes\img\i_16_radio.png" />
+    <Content Include="App_Themes\img\logo20.png" />
+    <Content Include="App_Themes\img\progress.gif" />
+    <Content Include="App_Themes\img\quicklook-bg.png" />
+    <Content Include="App_Themes\img\quicklook-icons.png" />
+    <Content Include="App_Themes\img\resize.png" />
+    <Content Include="App_Themes\img\spinner-mini.gif" />
+    <Content Include="App_Themes\img\sprite.png" />
+    <Content Include="App_Themes\img\toolbar.gif" />
+    <Content Include="App_Themes\img\toolbar.png" />
+    <Content Include="App_Themes\img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\img\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="App_Themes\img\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="App_Themes\img\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\img\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="App_Themes\img\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="App_Themes\img\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="App_Themes\img\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="App_Themes\img\ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\img\ui-icons_2e83ff_256x240.png" />
+    <Content Include="App_Themes\img\ui-icons_454545_256x240.png" />
+    <Content Include="App_Themes\img\ui-icons_888888_256x240.png" />
+    <Content Include="App_Themes\img\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="App_Themes\img\uploadify-cancel.png" />
+    <Content Include="App_Themes\login.css" />
+    <Content Include="App_Themes\Popup.css" />
+    <Content Include="App_Themes\public.css" />
+    <Content Include="App_Themes\style-responsive.css" />
+    <Content Include="App_Themes\style.css" />
+    <Content Include="App_Themes\ZoomImage.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\Avatar\Default.jpg" />
+    <Content Include="Images\Product\1.jpg" />
+    <Content Include="Images\Product\10.jpg" />
+    <Content Include="Images\Product\15.jpg" />
+    <Content Include="Images\Product\3.jpg" />
+    <Content Include="Images\Product\Ao_So_Mi.png" />
+    <Content Include="Images\Product\Chan_Vay.png" />
+    <Content Include="Images\Product\SP000001.jpg" />
+    <Content Include="Images\Product\SP000002.jpg" />
+    <Content Include="Images\Product\SP000003.jpg" />
+    <Content Include="Images\Product\SP000004.jpg" />
+    <Content Include="Images\Product\SP000005.jpg" />
+    <Content Include="Images\Product\SP000006.jpg" />
+    <Content Include="Images\Product\SP000007.jpg" />
+    <Content Include="Images\Product\SP000008.jpg" />
+    <Content Include="Images\Product\SP000009.jpg" />
+    <Content Include="Images\Product\SP000010.jpg" />
+    <Content Include="Images\Product\SP000011.jpg" />
+    <Content Include="Images\Product\SP000012.jpg" />
+    <Content Include="Images\Product\SP000013.jpg" />
+    <Content Include="Images\Product\SP000014.jpg" />
+    <Content Include="Images\Product\SP000015.jpg" />
+    <Content Include="Images\Product\SP000016.jpg" />
+    <Content Include="Images\Product\SP000017.jpg" />
+    <Content Include="Images\Product\SP000018.jpg" />
+    <Content Include="Images\Product\SP000019.jpg" />
+    <Content Include="Images\Product\SP000020.jpg" />
+    <Content Include="Images\Product\SP000021.jpg" />
+    <Content Include="Images\Product\SP000022.jpg" />
+    <Content Include="Images\Product\SP000023.jpg" />
+    <Content Include="Images\Product\SP000024.jpg" />
+    <Content Include="Images\Product\SP000025.jpg" />
+    <Content Include="Images\Product\SP000026.jpg" />
+    <Content Include="Images\Product\SP000027.jpg" />
+    <Content Include="Images\Product\SP000028.jpg" />
+    <Content Include="Images\Product\SP000029.jpg" />
+    <Content Include="Images\Product\SP000030.jpg" />
+    <Content Include="Images\Product\SP000031.jpg" />
+    <Content Include="Images\Product\SP000032.jpg" />
+    <Content Include="Images\Product\SP000033.jpg" />
+    <Content Include="Images\Product\SP000034.jpg" />
+    <Content Include="Images\Product\SP000035.jpg" />
+    <Content Include="Images\Product\SP000036.jpg" />
+    <Content Include="Images\Product\SP000037.jpg" />
+    <Content Include="Images\Product\Vay_Cong_So.png" />
+    <Content Include="Images\Product\Vay_Dao_Pho.png" />
+    <Content Include="Other\DLL\AjaxControlToolkit.dll" />
+    <Content Include="Other\DLL\CKEditor.NET.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.CommLayer.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.Controllers.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportSource.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.Shared.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.Web.dll" />
+    <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
+    <Content Include="Other\DLL\log4net.dll" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="UserControl\LoginUC.ascx" />
+    <Content Include="UserControl\RegisterUC.ascx" />
+    <Content Include="UserControl\tblGiaoTrinh_DetailUC.ascx" />
+    <Content Include="UserControl\tblGiaoTrinh_ListUC.ascx" />
+    <Content Include="UserControl\tbltblChiTietGiaoTrinh_DetailUC.ascx" />
+    <Content Include="UserControl\tbltblChiTietGiaoTrinh_ListUC.ascx" />
+    <Content Include="UserControl\tblDangKyDayHoc_DetailUC.ascx" />
+    <Content Include="UserControl\tblDangKyDayHoc_ListUC.ascx" />
+    <Content Include="UserControl\tblTaiKhoan_DetailUC.ascx" />
+    <Content Include="UserControl\tblTaiKhoan_ListUC.ascx" />
+    <Content Include="UserControl\tblMonHoc_DetailUC.ascx" />
+    <Content Include="UserControl\tblMonHoc_ListUC.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccessObject\ConnectionDAO.cs" />
+    <Compile Include="DataAccessObject\DataSet2Object.cs" />
+    <Compile Include="DataAccessObject\tblChiTietGiaoTrinhDAO.cs" />
+    <Compile Include="DataAccessObject\tblDangKyDayHocDAO.cs" />
+    <Compile Include="DataAccessObject\tblGiaoTrinhDAO.cs" />
+    <Compile Include="DataAccessObject\tblMonHocDAO.cs" />
+    <Compile Include="DataAccessObject\tblTaiKhoanDAO.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityObject\tblChiTietGiaoTrinhEO.cs" />
+    <Compile Include="EntityObject\tblDangKyDayHocEO.cs" />
+    <Compile Include="EntityObject\tblMonHocEO.cs" />
+    <Compile Include="EntityObject\tblTaiKhoanEO.cs" />
+    <Compile Include="EntityObject\tblGiaoTrinhEO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedLibraries\CaptchaProvider.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SharedLibraries\Commons.cs" />
+    <Compile Include="SharedLibraries\Constants.cs" />
+    <Compile Include="SharedLibraries\GetListConstants.cs" />
+    <Compile Include="SharedLibraries\GetTextConstants.cs" />
+    <Compile Include="SharedLibraries\RewriteUrl.cs" />
+    <Compile Include="SharedLibraries\Security.cs" />
+    <Compile Include="ShareInterface\AdminSI.Master.cs">
+      <DependentUpon>AdminSI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShareInterface\AdminSI.Master.designer.cs">
+      <DependentUpon>AdminSI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ShareInterface\ClientSI.Master.cs">
+      <DependentUpon>ClientSI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShareInterface\ClientSI.Master.designer.cs">
+      <DependentUpon>ClientSI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ShareInterface\HomeSI.Master.cs">
+      <DependentUpon>HomeSI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShareInterface\HomeSI.Master.designer.cs">
+      <DependentUpon>HomeSI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ShareInterface\ProductSI.Master.cs">
+      <DependentUpon>ProductSI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShareInterface\ProductSI.Master.designer.cs">
+      <DependentUpon>ProductSI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ShareInterface\ReportSI.Master.cs">
+      <DependentUpon>ReportSI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShareInterface\ReportSI.Master.designer.cs">
+      <DependentUpon>ReportSI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\LoginUC.ascx.cs">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\LoginUC.ascx.designer.cs">
+      <DependentUpon>LoginUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\RegisterUC.ascx.cs">
+      <DependentUpon>RegisterUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\RegisterUC.ascx.designer.cs">
+      <DependentUpon>RegisterUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblGiaoTrinh_DetailUC.ascx.cs">
+      <DependentUpon>tblGiaoTrinh_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblGiaoTrinh_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblGiaoTrinh_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblGiaoTrinh_ListUC.ascx.cs">
+      <DependentUpon>tblGiaoTrinh_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblGiaoTrinh_ListUC.ascx.designer.cs">
+      <DependentUpon>tblGiaoTrinh_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tbltblChiTietGiaoTrinh_DetailUC.ascx.cs">
+      <DependentUpon>tbltblChiTietGiaoTrinh_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tbltblChiTietGiaoTrinh_DetailUC.ascx.designer.cs">
+      <DependentUpon>tbltblChiTietGiaoTrinh_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tbltblChiTietGiaoTrinh_ListUC.ascx.cs">
+      <DependentUpon>tbltblChiTietGiaoTrinh_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tbltblChiTietGiaoTrinh_ListUC.ascx.designer.cs">
+      <DependentUpon>tbltblChiTietGiaoTrinh_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblDangKyDayHoc_DetailUC.ascx.cs">
+      <DependentUpon>tblDangKyDayHoc_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblDangKyDayHoc_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblDangKyDayHoc_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblDangKyDayHoc_ListUC.ascx.cs">
+      <DependentUpon>tblDangKyDayHoc_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblDangKyDayHoc_ListUC.ascx.designer.cs">
+      <DependentUpon>tblDangKyDayHoc_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblTaiKhoan_DetailUC.ascx.cs">
+      <DependentUpon>tblTaiKhoan_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblTaiKhoan_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblTaiKhoan_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblTaiKhoan_ListUC.ascx.cs">
+      <DependentUpon>tblTaiKhoan_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblTaiKhoan_ListUC.ascx.designer.cs">
+      <DependentUpon>tblTaiKhoan_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblMonHoc_DetailUC.ascx.cs">
+      <DependentUpon>tblMonHoc_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblMonHoc_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblMonHoc_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\tblMonHoc_ListUC.ascx.cs">
+      <DependentUpon>tblMonHoc_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\tblMonHoc_ListUC.ascx.designer.cs">
+      <DependentUpon>tblMonHoc_ListUC.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="GiangVien\" />
+    <Folder Include="Images\Temp\" />
+    <Folder Include="QuanTri\" />
+    <Folder Include="SinhVien\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ShareInterface\AdminSI.Master" />
+    <Content Include="ShareInterface\ClientSI.Master" />
+    <Content Include="ShareInterface\HomeSI.Master" />
+    <Content Include="ShareInterface\ProductSI.Master" />
+    <Content Include="ShareInterface\ReportSI.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7733</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
