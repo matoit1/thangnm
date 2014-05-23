@@ -515,6 +515,32 @@ namespace HaBa.DataAccessObject
                 }
             }
         }
+
+        /// <summary> 8. ThongKeThongTin </summary>
+        /// <param name="_tblTaiKhoanEO"></param>
+        /// <returns></returns>
+        public static DataSet ThongKeThongTin()
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("ThongKeThongTin", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
         #endregion
     }
 }

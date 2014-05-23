@@ -37,9 +37,7 @@
                     FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_lHoaDonID,FK_sSanPhamID"
                     emptydatatext="Không có bản ghi nào."   PageSize="10" 
                     EnableModelValidation="True" onrowcommand="grvListChiTietHoaDon_RowCommand" 
-                    onselectedindexchanged="grvListChiTietHoaDon_SelectedIndexChanged" 
                     onpageindexchanging="grvListChiTietHoaDon_PageIndexChanging" 
-                    onrowdatabound="grvListChiTietHoaDon_RowDataBound"
                     AllowSorting="true" onsorting="grvListChiTietHoaDon_Sorting">
                     <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                     <Columns>

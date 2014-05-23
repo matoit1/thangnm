@@ -112,16 +112,27 @@ namespace HaBa.UserControl
         {
             Int64 num64;
             Int16 num16;
+            tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
+            if (string.IsNullOrEmpty(txtPK_sSanPhamID.Text) == true)
+            {
+                lblPK_sSanPhamID.Text = Messages.Khong_Duoc_De_Trong;
+                txtPK_sSanPhamID.Focus();
+                return false;
+            }
+            else
+            {
+                _tblSanPhamEO.PK_sSanPhamID = txtPK_sSanPhamID.Text;
+                if (tblSanPhamDAO.SanPham_CheckExists_PK_sSanPhamID(_tblSanPhamEO) == true)
+                {
+                    lblPK_sSanPhamID.Text = Messages.Ma_Da_Ton_Tai;
+                    txtPK_sSanPhamID.Focus();
+                    return false;
+                }
+            }
             if (string.IsNullOrEmpty(txtsTenSanPham.Text) == true)
             {
                 lblsTenSanPham.Text = Messages.Khong_Duoc_De_Trong;
                 txtsTenSanPham.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtsMoTa.Text) == true)
-            {
-                lblsMoTa.Text = Messages.Khong_Duoc_De_Trong;
-                txtsMoTa.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtsThongTin.Text) == true)
@@ -134,6 +145,12 @@ namespace HaBa.UserControl
             {
                 lblsXuatXu.Text = Messages.Khong_Duoc_De_Trong;
                 txtsXuatXu.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsLinkImage.Text) == true)
+            {
+                lblsLinkImage.Text = Messages.Khong_Duoc_De_Trong;
+                txtsLinkImage.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtlGiaBan.Text) == true)
