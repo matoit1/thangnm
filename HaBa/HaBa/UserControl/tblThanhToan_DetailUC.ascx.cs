@@ -67,7 +67,7 @@ namespace HaBa.UserControl
         }
 
 
-        private void ClearMessages()
+        public void ClearMessages()
         {
             //lblMsg.Text = "";
             lblPK_iThanhToanID.Text = "";
@@ -134,16 +134,25 @@ namespace HaBa.UserControl
             lblMsg.Text = "";
             try
             {
-                if (tblThanhToanDAO.ThanhToan_Delete(getObject()) == true)
+                tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+                _tblHoaDonEO.FK_iThanhToanID = getObject().PK_iThanhToanID;
+                if (tblHoaDonDAO.HoaDon_CheckExists_FK_iThanhToanID(_tblHoaDonEO) == false)
                 {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                    ClearMessages();
-                    tblThanhToanEO _tblThanhToanEO = new tblThanhToanEO();
-                    BindDataDetail(_tblThanhToanEO);
+                    if (tblThanhToanDAO.ThanhToan_Delete(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                        ClearMessages();
+                        tblThanhToanEO _tblThanhToanEO = new tblThanhToanEO();
+                        BindDataDetail(_tblThanhToanEO);
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Xoa_That_Bai;
+                    }
                 }
                 else
                 {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
+                    lblMsg.Text = Messages.Ma_Thanh_Toan_Da_Dung_Trong_Hoa_Don;
                 }
             }
             catch (Exception ex)

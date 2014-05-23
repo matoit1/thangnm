@@ -108,7 +108,8 @@
                     </tr>
                     <tr>
                         <td>Điện thoại liên hệ: </td>
-                        <td><asp:TextBox ID="txtsSoDienThoai" runat="server" class="text" Width="400px"></asp:TextBox></td>
+                        <td><asp:TextBox ID="txtsSoDienThoai" runat="server" class="text" Width="400px" 
+                                MaxLength="13"></asp:TextBox></td>
                         <td><asp:Label ID="lblsSoDienThoai" runat="server"></asp:Label></td>
                     </tr>
                     <tr>

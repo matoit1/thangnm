@@ -55,6 +55,8 @@ namespace HaBa.Admin
 
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
+            tblThanhToan_DetailUC1.ClearMessages();
+            tblThanhToan_DetailUC1.lblMsg.Text = "";
             mtvMain.SetActiveView(vList);
             tblThanhToan_ListUC1.BindData();
         }

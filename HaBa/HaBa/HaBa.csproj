@@ -164,7 +164,6 @@
     <Content Include="App_Themes\img\ui-icons_888888_256x240.png" />
     <Content Include="App_Themes\img\ui-icons_cd0a0a_256x240.png" />
     <Content Include="App_Themes\img\uploadify-cancel.png" />
-    <Content Include="App_Themes\jquery.circliful.css" />
     <Content Include="App_Themes\login.css" />
     <Content Include="App_Themes\Popup.css" />
     <Content Include="App_Themes\public.css" />
@@ -544,6 +543,15 @@
     <Content Include="Images\Product\SP000037.jpg" />
     <Content Include="Images\Product\Vay_Cong_So.png" />
     <Content Include="Images\Product\Vay_Dao_Pho.png" />
+    <Content Include="Images\Temp\captcha1132.jpg" />
+    <Content Include="Images\Temp\captcha1723.jpg" />
+    <Content Include="Images\Temp\captcha2426.jpg" />
+    <Content Include="Images\Temp\captcha2428.jpg" />
+    <Content Include="Images\Temp\captcha2474.jpg" />
+    <Content Include="Images\Temp\captcha2530.jpg" />
+    <Content Include="Images\Temp\captcha2736.jpg" />
+    <Content Include="Images\Temp\captcha306.jpg" />
+    <Content Include="Images\Temp\captcha607.jpg" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.CommLayer.dll" />
     <Content Include="Other\DLL\log4net.dll" />
@@ -551,7 +559,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery.circliful.min.js" />
     <Content Include="Nhan.aspx" />
     <Content Include="NhomSanPham.aspx" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />

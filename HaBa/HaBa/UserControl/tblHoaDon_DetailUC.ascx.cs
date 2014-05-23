@@ -224,16 +224,10 @@ namespace HaBa.UserControl
                     return false;
                 }
             }
-            if (string.IsNullOrEmpty(txtsGhiChu.Text) == true)
-            {
-                lblsGhiChu.Text = Messages.Khong_Duoc_De_Trong;
-                txtsGhiChu.Focus();
-                return false;
-            }
             return true;
         }
 
-        private void ClearMessages()
+        public void ClearMessages()
         {
             //lblMsg.Text = "";
             lblPK_lHoaDonID.Text = "";

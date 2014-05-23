@@ -28,7 +28,7 @@ namespace HaBa.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg;
+        public global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
         /// txtPK_iNhomSanPhamID control.

@@ -59,6 +59,13 @@ namespace HaBa.UserControl
                 tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
                 _tblTaiKhoanEO.iQuyenHan = iQuyenHan;
                 dsBaiViet = tblTaiKhoanDAO.TaiKhoan_SelectListByiQuyenHan(_tblTaiKhoanEO);
+                foreach (DataRow dr in dsBaiViet.Tables[0].Rows)
+                {
+                    if (string.IsNullOrEmpty(dr["tNgaySinh"].ToString()))
+                    {
+                        dr["tNgaySinh"] = DateTime.MinValue;
+                    }
+                }
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()

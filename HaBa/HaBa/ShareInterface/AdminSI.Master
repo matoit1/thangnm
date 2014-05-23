@@ -113,7 +113,8 @@
                         <li><a class="dropmenu" href="#"><i class="icon-plane"></i><span class="hidden-tablet">Thanh toán</span></a>
 							<ul>
 								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Thanh Toán Mở</span></a></li>
-								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Thanh toán Khóa</span></a></li>
+								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=2"><i class="icon-warning-sign"></i><span class="hidden-tablet"> Thanh toán Xem xét</span></a></li>
+								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=3"><i class="icon-remove"></i><span class="hidden-tablet"> Thanh toán Khóa</span></a></li>
 							</ul>	
 						</li>
                         <li><a class="dropmenu" href="#"><i class="icon-print"></i><span class="hidden-tablet">Báo cáo</span></a>

@@ -97,6 +97,8 @@ namespace HaBa.Admin
 
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
+            tblHoaDon_DetailUC1.ClearMessages();
+            tblHoaDon_DetailUC1.lblMsg.Text = "";
             mtvMain.SetActiveView(vList);
             tblHoaDon_ListUC1.BindData();
             tabMain.ActiveTabIndex = 1;
@@ -104,6 +106,8 @@ namespace HaBa.Admin
 
         protected void lbtnBackChiTietHoaDon_Click(object sender, EventArgs e)
         {
+            tblChiTietHoaDon_DetailUC1.ClearMessages();
+            tblChiTietHoaDon_DetailUC1.lblMsg.Text = "";
             mtvChiTietHoaDon.SetActiveView(vListChiTietHoaDon);
             tblChiTietHoaDon_ListUC1.BindData(tblChiTietHoaDon_ListUC1.objtblChiTietHoaDonEO);
             //tabMain.ActiveTabIndex = tabindex;

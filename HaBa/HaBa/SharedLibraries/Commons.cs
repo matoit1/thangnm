@@ -298,6 +298,10 @@ namespace HaBa.SharedLibraries
         public const string Khong_Duoc_De_Trong = "Trường này không được để trống!";
         public const string Ma_Da_Ton_Tai = "Mã đã tồn tại, vui lòng chọn mã khác!";
         public const string Ma_Khong_Hop_Le = "Mã không hợp lệ!";
+        public const string Ma_Thanh_Toan_Da_Dung_Trong_Hoa_Don = "Không cho phép xóa! </br> Thanh Toán này đã dùng trong Hóa Đơn! </br> Bạn có thể chuyển xang trạng thái Khóa.";
+        public const string Ma_Tai_Khoan_Da_Dung_Trong_Hoa_Don = "Không cho phép xóa! </br> Tài Khoản này đã dùng trong Hóa Đơn! </br> Bạn có thể chuyển xang trạng thái Khóa.";
+        public const string Ma_San_Pham_Da_Dung_Trong_Chi_Tiet_Hoa_Don = "Không cho phép xóa! </br> Sản Phẩm này đã dùng trong Hóa Đơn! </br> Bạn có thể chuyển xang trạng thái Khóa.";
+        public const string Ma_Nhom_San_Pham_Da_Dung_Trong_San_Pham = "Không cho phép xóa! </br> Nhóm Sản Phẩm này đã có Sản Phẩm! </br> Bạn có thể chuyển xang trạng thái Khóa.";
         public const string Khong_Dung_Dinh_Dang_Email = "Không đúng định dạng Email, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_So_Dien_Thoai = "Không đúng định dạng Số điện thoại, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai = "Số điện thoại phải trong khoảng 10 số < sđt < 13 số, Vui lòng kiểm tra lại!";

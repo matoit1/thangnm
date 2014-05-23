@@ -40,6 +40,67 @@ namespace HaBa.DataAccessObject
                 }
             }
         }
+
+        /// <summary> 1. HoaDon_CheckExists_FK_iThanhToanID </summary>
+        /// <param name="_tblHoaDonEO"></param>
+        /// <returns></returns>
+        public static bool HoaDon_CheckExists_FK_iThanhToanID(tblHoaDonEO _tblHoaDonEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                bool bOutput = false;
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblHoaDon_CheckExists_FK_iThanhToanID", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@FK_iThanhToanID", _tblHoaDonEO.FK_iThanhToanID));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
+                    conn.Close();
+                    return bOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return bOutput;
+                }
+            }
+        }
+
+        /// <summary> 1. HoaDon_CheckExists_FK_iTaiKhoanID_Giao_FK_iTaiKhoanID_Nhan </summary>
+        /// <param name="_tblHoaDonEO"></param>
+        /// <returns></returns>
+        public static bool HoaDon_CheckExists_FK_iTaiKhoanID_Giao_FK_iTaiKhoanID_Nhan(tblHoaDonEO _tblHoaDonEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                bool bOutput = false;
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblHoaDon_CheckExists_FK_iTaiKhoanID_Giao_FK_iTaiKhoanID_Nhan", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID_Giao", _tblHoaDonEO.FK_iTaiKhoanID_Giao));
+                    cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID_Nhan", _tblHoaDonEO.FK_iTaiKhoanID_Nhan));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
+                    conn.Close();
+                    return bOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return bOutput;
+                }
+            }
+        }
         #endregion
 
         #region "Insert, Update, Delete"
