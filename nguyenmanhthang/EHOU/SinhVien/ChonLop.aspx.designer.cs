@@ -13,12 +13,39 @@ namespace EHOU.SinhVien {
     public partial class ChonLop {
         
         /// <summary>
-        /// CaHocUC1 control.
+        /// pnlLopHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EHOU.Usercontrol.CaHocUC CaHocUC1;
+        protected global::System.Web.UI.WebControls.Panel pnlLopHoc;
+        
+        /// <summary>
+        /// rbtnlListClass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rbtnlListClass;
+        
+        /// <summary>
+        /// pnlBaiHoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlBaiHoc;
+        
+        /// <summary>
+        /// rbtnlListSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rbtnlListSubject;
     }
 }
