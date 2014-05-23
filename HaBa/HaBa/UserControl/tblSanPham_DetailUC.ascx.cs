@@ -204,7 +204,7 @@ namespace HaBa.UserControl
             return true;
         }
 
-        private void ClearMessages()
+        public void ClearMessages()
         {
             //lblMsg.Text = "";
             lblPK_sSanPhamID.Text = "";
@@ -282,16 +282,25 @@ namespace HaBa.UserControl
             lblMsg.Text = "";
             try
             {
-                if (tblSanPhamDAO.SanPham_Delete(getObject()) == true)
+                tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
+                _tblChiTietHoaDonEO.FK_sSanPhamID = getObject().PK_sSanPhamID;
+                if (tblChiTietHoaDonDAO.ChiTietHoaDon_CheckExists_FK_sSanPhamID(_tblChiTietHoaDonEO) == false)
                 {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                    ClearMessages();
-                    tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
-                    BindDataDetail(_tblSanPhamEO);
+                    if (tblSanPhamDAO.SanPham_Delete(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                        ClearMessages();
+                        tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
+                        BindDataDetail(_tblSanPhamEO);
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Xoa_That_Bai;
+                    }
                 }
                 else
                 {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
+                    lblMsg.Text = Messages.Ma_San_Pham_Da_Dung_Trong_Chi_Tiet_Hoa_Don;
                 }
             }
             catch (Exception ex)

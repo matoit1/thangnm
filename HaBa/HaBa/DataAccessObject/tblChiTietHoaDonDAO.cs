@@ -11,10 +11,10 @@ namespace HaBa.DataAccessObject
     public class tblChiTietHoaDonDAO
     {
         #region "CheckExists"
-        /// <summary> 1. ChiTietHoaDon_CheckExists </summary>
+        /// <summary> 1. ChiTietHoaDon_CheckExists_FK_sSanPhamID </summary>
         /// <param name="_tblChiTietHoaDonEO"></param>
         /// <returns></returns>
-        public static bool ChiTietHoaDon_CheckExists(tblChiTietHoaDonEO _tblChiTietHoaDonEO)
+        public static bool ChiTietHoaDon_CheckExists_FK_sSanPhamID(tblChiTietHoaDonEO _tblChiTietHoaDonEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -22,9 +22,9 @@ namespace HaBa.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblChiTietHoaDon_CheckExists", conn);
+                    SqlCommand cmd = new SqlCommand("tblChiTietHoaDon_CheckExists_FK_sSanPhamID", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@FK_lHoaDonID", _tblChiTietHoaDonEO.FK_lHoaDonID));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sSanPhamID", _tblChiTietHoaDonEO.FK_sSanPhamID));
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {

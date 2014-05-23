@@ -90,7 +90,7 @@ namespace HaBa.UserControl
             return true;
         }
 
-        private void ClearMessages()
+        public void ClearMessages()
         {
             //lblMsg.Text = "";
             lblPK_iNhomSanPhamID.Text = "";
@@ -158,16 +158,25 @@ namespace HaBa.UserControl
             lblMsg.Text = "";
             try
             {
-                if (tblNhomSanPhamDAO.NhomSanPham_Delete(getObject()) == true)
+                tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
+                _tblSanPhamEO.FK_iNhomSanPhamID = getObject().PK_iNhomSanPhamID;
+                if (tblSanPhamDAO.SanPham_CheckExists_FK_iNhomSanPhamID(_tblSanPhamEO) == false)
                 {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                    ClearMessages();
-                    tblNhomSanPhamEO _tblNhomSanPhamEO = new tblNhomSanPhamEO();
-                    BindDataDetail(_tblNhomSanPhamEO);
+                    if (tblNhomSanPhamDAO.NhomSanPham_Delete(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                        ClearMessages();
+                        tblNhomSanPhamEO _tblNhomSanPhamEO = new tblNhomSanPhamEO();
+                        BindDataDetail(_tblNhomSanPhamEO);
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Xoa_That_Bai;
+                    }
                 }
                 else
                 {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
+                    lblMsg.Text = Messages.Ma_Nhom_San_Pham_Da_Dung_Trong_San_Pham;
                 }
             }
             catch (Exception ex)

@@ -189,7 +189,7 @@ namespace HaBa.UserControl
         }
 
 
-        private void ClearMessages()
+        public void ClearMessages()
         {
             //lblMsg.Text = "";
             lblPK_iTaiKhoanID.Text = "";
@@ -265,16 +265,26 @@ namespace HaBa.UserControl
             lblMsg.Text = "";
             try
             {
-                if (tblTaiKhoanDAO.TaiKhoan_Delete(getObject()) == true)
+                tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+                _tblHoaDonEO.FK_iTaiKhoanID_Giao = getObject().PK_iTaiKhoanID;
+                _tblHoaDonEO.FK_iTaiKhoanID_Nhan = getObject().PK_iTaiKhoanID;
+                if (tblHoaDonDAO.HoaDon_CheckExists_FK_iTaiKhoanID_Giao_FK_iTaiKhoanID_Nhan(_tblHoaDonEO) == false)
                 {
-                    lblMsg.Text = Messages.Xoa_Thanh_Cong;
-                    ClearMessages();
-                    tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
-                    BindDataDetail(_tblTaiKhoanEO);
+                    if (tblTaiKhoanDAO.TaiKhoan_Delete(getObject()) == true)
+                    {
+                        lblMsg.Text = Messages.Xoa_Thanh_Cong;
+                        ClearMessages();
+                        tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                        BindDataDetail(_tblTaiKhoanEO);
+                    }
+                    else
+                    {
+                        lblMsg.Text = Messages.Xoa_That_Bai;
+                    }
                 }
                 else
                 {
-                    lblMsg.Text = Messages.Xoa_That_Bai;
+                    lblMsg.Text = Messages.Ma_Tai_Khoan_Da_Dung_Trong_Hoa_Don;
                 }
             }
             catch (Exception ex)

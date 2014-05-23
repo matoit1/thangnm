@@ -40,6 +40,36 @@ namespace HaBa.DataAccessObject
                 }
             }
         }
+
+        /// <summary> 1. SanPham_CheckExists_FK_iNhomSanPhamID </summary>
+        /// <param name="_tblSanPhamEO"></param>
+        /// <returns></returns>
+        public static bool SanPham_CheckExists_FK_iNhomSanPhamID(tblSanPhamEO _tblSanPhamEO)
+        {
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                bool bOutput = false;
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("tblSanPham_CheckExists_FK_iNhomSanPhamID", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@FK_iNhomSanPhamID", _tblSanPhamEO.FK_iNhomSanPhamID));
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        bOutput = Convert.ToBoolean(dr["return_value"]);
+                    }
+                    conn.Close();
+                    return bOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return bOutput;
+                }
+            }
+        }
         #endregion
 
         #region "Insert, Update, Delete"

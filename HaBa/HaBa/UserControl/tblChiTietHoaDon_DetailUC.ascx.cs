@@ -111,7 +111,7 @@ namespace HaBa.UserControl
             return true;
         }
 
-        private void ClearMessages()
+        public void ClearMessages()
         {
             //lblMsg.Text = "";
             lblFK_lHoaDonID.Text = "";

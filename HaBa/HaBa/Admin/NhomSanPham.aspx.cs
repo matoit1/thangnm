@@ -61,6 +61,8 @@ namespace HaBa.Admin
 
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
+            tblNhomSanPham_DetailUC1.ClearMessages();
+            tblNhomSanPham_DetailUC1.lblMsg.Text = "";
             mtvMain.SetActiveView(vList);
             tblNhomSanPham_ListUC1.BindData();
         }

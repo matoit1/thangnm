@@ -8,6 +8,8 @@ using System.Data;
 using HaBa.EntityObject;
 using HaBa.DataAccessObject;
 using HaBa.SharedLibraries;
+using HaBa.SharedLibraries.Constants;
+using System.Text.RegularExpressions;
 
 namespace HaBa
 {
@@ -113,40 +115,46 @@ namespace HaBa
                 if (Request.Cookies["HaBa_client"].Value != null)
                 {
                     lblMsg.Text = "";
-                    hplLogin.Visible = false;
-                    hplRegister.Visible = false;
-
-                    tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
-                    _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["HaBa_client"].Value;
-                    _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
-                    int CategoryID = Convert.ToInt32(Request.QueryString["CategoryID"]);
-                    tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
-                    _tblHoaDonEO.FK_iTaiKhoanID_Nhan = _tblTaiKhoanEO.PK_iTaiKhoanID;
-                    _tblHoaDonEO.FK_iThanhToanID = Convert.ToInt16(ddlFK_iThanhToanID.SelectedValue);
-                    _tblHoaDonEO.sHoTen = txtsHoTen.Text;
-                    _tblHoaDonEO.sEmail = txtsEmail.Text;
-                    _tblHoaDonEO.sDiaChi = txtsDiaChi.Text;
-                    _tblHoaDonEO.sSoDienThoai = txtsSoDienThoai.Text;
-                    _tblHoaDonEO.sGhiChu = txtsGhiChu.Text;
-                    _tblHoaDonEO.tNgayGiaoHang = Convert.ToDateTime(txttNgayGiaoHang.Text);
-                    _tblHoaDonEO.PK_lHoaDonID = tblHoaDonDAO.HoaDon_Insert_Get_PK_lHoaDonID_New(_tblHoaDonEO);
-                    tb = (DataTable)Session["GioHang"];
-                    tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
-                    for (int i = 0; i < tb.Rows.Count; i++)
+                    ClearMessages();
+                    if (CheckInput() == true)
                     {
-                        _tblChiTietHoaDonEO.FK_lHoaDonID = _tblHoaDonEO.PK_lHoaDonID;
-                        _tblChiTietHoaDonEO.FK_sSanPhamID = Convert.ToString(tb.Rows[i]["PK_sSanPhamID"]);
-                        _tblChiTietHoaDonEO.lGiaBan = Convert.ToInt64(tb.Rows[i]["lGiaBan"]);
-                        _tblChiTietHoaDonEO.iSoLuong = Convert.ToInt16(tb.Rows[i]["iSoLuong"]);
+                        lblMsg.Text = "";
+                        hplLogin.Visible = false;
+                        hplRegister.Visible = false;
+                        ClearMessages();
+                        tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                        _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["HaBa_client"].Value;
+                        _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
+                        int CategoryID = Convert.ToInt32(Request.QueryString["CategoryID"]);
+                        tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+                        _tblHoaDonEO.FK_iTaiKhoanID_Nhan = _tblTaiKhoanEO.PK_iTaiKhoanID;
+                        _tblHoaDonEO.FK_iThanhToanID = Convert.ToInt16(ddlFK_iThanhToanID.SelectedValue);
+                        _tblHoaDonEO.sHoTen = txtsHoTen.Text;
+                        _tblHoaDonEO.sEmail = txtsEmail.Text;
+                        _tblHoaDonEO.sDiaChi = txtsDiaChi.Text;
+                        _tblHoaDonEO.sSoDienThoai = txtsSoDienThoai.Text;
+                        _tblHoaDonEO.sGhiChu = txtsGhiChu.Text;
+                        _tblHoaDonEO.tNgayGiaoHang = Convert.ToDateTime(txttNgayGiaoHang.Text);
+                        _tblHoaDonEO.iTrangThai = HoaDon_iTrangThai_C.Chua_Kiem_Tra;
+                        _tblHoaDonEO.PK_lHoaDonID = tblHoaDonDAO.HoaDon_Insert_Get_PK_lHoaDonID_New(_tblHoaDonEO);
+                        tb = (DataTable)Session["GioHang"];
+                        tblChiTietHoaDonEO _tblChiTietHoaDonEO = new tblChiTietHoaDonEO();
+                        for (int i = 0; i < tb.Rows.Count; i++)
+                        {
+                            _tblChiTietHoaDonEO.FK_lHoaDonID = _tblHoaDonEO.PK_lHoaDonID;
+                            _tblChiTietHoaDonEO.FK_sSanPhamID = Convert.ToString(tb.Rows[i]["PK_sSanPhamID"]);
+                            _tblChiTietHoaDonEO.lGiaBan = Convert.ToInt64(tb.Rows[i]["lGiaBan"]);
+                            _tblChiTietHoaDonEO.iSoLuong = Convert.ToInt16(tb.Rows[i]["iSoLuong"]);
 
-                        tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(_tblChiTietHoaDonEO);
+                            tblChiTietHoaDonDAO.ChiTietHoaDon_Insert(_tblChiTietHoaDonEO);
+                        }
+                        lblNotify.Text = Messages.tblSanPham_Dat_Hang_Thanh_Cong;
+                        hplPK_lHoaDonID.Text = Messages.tblSanPham_Xem_Lai_Hoa_Don;
+                        hplPK_lHoaDonID.NavigateUrl = "~/Client/HoaDon.aspx?PK_lHoaDonID=" + _tblHoaDonEO.PK_lHoaDonID;
+                        pnlGioHang.Visible = false;
+                        pnlThanhToan.Visible = false;
+                        Session["GioHang"] = null;
                     }
-                    lblNotify.Text = Messages.tblSanPham_Dat_Hang_Thanh_Cong;
-                    hplPK_lHoaDonID.Text = Messages.tblSanPham_Xem_Lai_Hoa_Don;
-                    hplPK_lHoaDonID.NavigateUrl = "~/Client/HoaDon.aspx?PK_lHoaDonID=" + _tblHoaDonEO.PK_lHoaDonID;
-                    pnlGioHang.Visible = false;
-                    pnlThanhToan.Visible = false;
-                    Session["GioHang"] = null;
                 }
                 else
                 {
@@ -226,6 +234,74 @@ namespace HaBa
             CheckNguoiNhan(Convert.ToBoolean(rblCheck.SelectedValue));
         }
 
+        public bool CheckInput()
+        {
+            if (string.IsNullOrEmpty(txtsHoTen.Text) == true)
+            {
+                lblsHoTen.Text = Messages.Khong_Duoc_De_Trong;
+                txtsHoTen.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsEmail.Text) == true)
+            {
+                lblsEmail.Text = Messages.Khong_Duoc_De_Trong;
+                txtsEmail.Focus();
+                return false;
+            }
+            else
+            {
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                Match match = regex.Match(txtsEmail.Text);
+                if (match.Success == false)
+                {
+                    lblsEmail.Text = Messages.Khong_Dung_Dinh_Dang_Email;
+                    txtsEmail.Focus();
+                    return false;
+                }
+            }
+            if (string.IsNullOrEmpty(txtsDiaChi.Text) == true)
+            {
+                lblsDiaChi.Text = Messages.Khong_Duoc_De_Trong;
+                txtsDiaChi.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtsSoDienThoai.Text) == true)
+            {
+                lblsSoDienThoai.Text = Messages.Khong_Duoc_De_Trong;
+                txtsSoDienThoai.Focus();
+                return false;
+            }
+            else
+            {
+                string sdt;
+                sdt = txtsSoDienThoai.Text.Trim().Replace(" ", "");
+                try { Convert.ToInt64(sdt); }
+                catch
+                {
+                    lblsSoDienThoai.Text = Messages.Khong_Dung_Dinh_Dang_So_Dien_Thoai;
+                    txtsSoDienThoai.Focus();
+                    return false;
+                }
+                if (sdt.Length < 10)
+                {
+                    lblsSoDienThoai.Text = Messages.Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai;
+                    txtsSoDienThoai.Focus();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void ClearMessages()
+        {
+            lblFK_iThanhToanID.Text = "";
+            lblsHoTen.Text = "";
+            lblsEmail.Text = "";
+            lblsDiaChi.Text = "";
+            lblsSoDienThoai.Text = "";
+            lblsGhiChu.Text = "";
+            lbltNgayGiaoHang.Text = "";
+        }
 
         public void CheckNguoiNhan(bool isWho)
         {
