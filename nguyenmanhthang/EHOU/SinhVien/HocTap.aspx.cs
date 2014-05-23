@@ -65,7 +65,7 @@ namespace EHOU.SinhVien
                         _tblMessageEO.iStatus = 1;
                         ChatUC1.objtblMessageEO = _tblMessageEO;
                         ChatUC1.objtblSubjectEO = _tblSubjectEO;
-                        ChatUC1.iTypeUser = Messages.ChatRoom_TypeUser_SinhVien;
+                        ChatUC1.iTypeUser = tblAccount_iType_C.Sinh_Vien;
 
                         //sTendangnhapGV = _GiangVienEO.sTendangnhapGV;
                         Hoc_LieuUC1.BindData_HocLieu(_tblSubjectEO.FK_sTeacher);

@@ -11,6 +11,7 @@ using DataAccessObject;
 using System.IO;
 using Shared_Libraries;
 using System.Data;
+using Shared_Libraries.Constants;
 
 namespace EHOU.UserControl
 {
@@ -195,13 +196,7 @@ namespace EHOU.UserControl
         protected void rptDialog_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             try{
-                //string sAccountDisabe;
-                //if (iTypeUser == Messages.ChatRoom_TypeUser_GiangVien)
-                //{
                     tblSubjectEO _tblSubjectEO = new tblSubjectEO();
-                    //_LichDayVaHocEO.FK_sMaPCCT = "PCCT000001";
-                    //_LichDayVaHocEO.FK_sMalop = "LH00010B1";
-                    //_LichDayVaHocEO.iCaHoc = 2;
                     _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(objtblSubjectEO);
                     HiddenField hfFK_sUsername = (HiddenField)e.Item.FindControl("hfFK_sUsername");
                     Label lblFK_sUsername = (Label)e.Item.FindControl("lblFK_sUsername");
@@ -210,10 +205,10 @@ namespace EHOU.UserControl
                     ImageButton ibntDeleteMessage = ((ImageButton)e.Item.FindControl("ibntDeleteMessage"));
                     ImageButton ibntHideAcc = ((ImageButton)e.Item.FindControl("ibntHideAcc"));
                     ImageButton ibntShowAcc = ((ImageButton)e.Item.FindControl("ibntShowAcc"));
-                    if (ibntTool != null && iTypeUser == Messages.ChatRoom_TypeUser_GiangVien) { ibntTool.Visible = true; } else { ibntTool.Visible = false; }
-                    if (ibntDeleteMessage != null && iTypeUser == Messages.ChatRoom_TypeUser_GiangVien) { ibntDeleteMessage.Visible = true; } else { ibntDeleteMessage.Visible = false; }
-                    if (ibntHideAcc != null && iTypeUser == Messages.ChatRoom_TypeUser_GiangVien) { ibntHideAcc.Visible = true; } else { ibntHideAcc.Visible = false; }
-                    if (ibntShowAcc != null && iTypeUser == Messages.ChatRoom_TypeUser_GiangVien) { ibntShowAcc.Visible = true; } else { ibntShowAcc.Visible = false; }
+                    if (ibntTool != null && iTypeUser == tblAccount_iType_C.Giang_Vien) { ibntTool.Visible = true; } else { ibntTool.Visible = false; }
+                    if (ibntDeleteMessage != null && iTypeUser == tblAccount_iType_C.Giang_Vien) { ibntDeleteMessage.Visible = true; } else { ibntDeleteMessage.Visible = false; }
+                    if (ibntHideAcc != null && iTypeUser == tblAccount_iType_C.Giang_Vien) { ibntHideAcc.Visible = true; } else { ibntHideAcc.Visible = false; }
+                    if (ibntShowAcc != null && iTypeUser == tblAccount_iType_C.Giang_Vien) { ibntShowAcc.Visible = true; } else { ibntShowAcc.Visible = false; }
                     if (hfFK_sUsername != null)
                     {
                         //SinhVienEO _SinhVienEO = new SinhVienEO();
@@ -236,35 +231,18 @@ namespace EHOU.UserControl
                     }
                     if (lblFK_sUsername != null)
                     {
-                        //GiangVienEO _GiangVienEO = new GiangVienEO();
-                        //_GiangVienEO.PK_sMaGV = lblFK_sUsername.Text;
-                        //_GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
-
-                        //SinhVienEO _SinhVienEO = new SinhVienEO();
-                        //_SinhVienEO.PK_sMaSV = lblFK_sUsername.Text;
-                        //_SinhVienEO = SinhVienDAO.SinhVien_SelectItem(_SinhVienEO);
-
-                        tblDetailEO _tblDetailEO = new tblDetailEO();
-                        
-                        if (objtblMessageEO.FK_sUsername != null)
+                        tblAccountEO _tblAccountEO = new tblAccountEO();
+                        _tblAccountEO.PK_sUsername = lblFK_sUsername.Text;
+                        _tblAccountEO = tblAccountDAO.Account_SelectItem(_tblAccountEO);
+                        lblFK_sUsername.Text = _tblAccountEO.sName;
+                        switch (_tblAccountEO.iType)
                         {
-                            lblFK_sUsername.Text = objtblMessageEO.FK_sUsername;
-                            if (_tblDetailEO.FK_sStudent != objtblMessageEO.FK_sUsername)
-                            {
+                            case tblAccount_iType_C.Sinh_Vien: 
+                                break;
+                            case tblAccount_iType_C.Giang_Vien:
                                 lblFK_sUsername.Font.Underline = true;
                                 lblFK_sUsername.ForeColor = System.Drawing.Color.Blue;
-                            }
-                        }
-                        else
-                        {
-                            if (_tblDetailEO.FK_sStudent != null)
-                            {
-                                lblFK_sUsername.Text = _tblDetailEO.FK_sStudent;
-                            }
-                            else
-                            {
-                                lblFK_sUsername.Text = Messages.Chat_An_Danh;
-                            }
+                                break;
                         }
                     }
 
@@ -274,7 +252,7 @@ namespace EHOU.UserControl
                     }
                     if (lblFK_sUsername != null && objtblMessageEO.FK_sUsername == hfFK_sUsername.Value)
                     {
-                        if (iTypeUser == Messages.ChatRoom_TypeUser_GiangVien)
+                        if (iTypeUser == tblAccount_iType_C.Giang_Vien)
                         {
                             lblFK_sUsername.ForeColor = System.Drawing.Color.Blue;
                             lblFK_sUsername.ToolTip = Messages.ChatRoom_GiangVien;
