@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSI.master.cs" Inherits="CongKy.ShareInterface.AdminSI" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Trang quản trị CongKy</title>
+    <link rel="stylesheet" type="text/css" href="../App_Themes/public.css" />
+
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link type="text/css" href="../App_Themes/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="../App_Themes/bootstrap-responsive.min.css" rel="stylesheet">
+	<link type="text/css" href="../App_Themes/style.css" rel="stylesheet">
+	<link type="text/css" href="../App_Themes/style-responsive.css" rel="stylesheet">
+	
+	
+	<!-- end: CSS -->
+	
+
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	
+	<!-- start: Favicon -->
+	<link rel="shortcut icon" href="../favicon.ico">
+	<!-- end: Favicon -->
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="overlay">
+		<ul>
+		  <li class="li1"></li>
+		  <li class="li2"></li>
+		  <li class="li3"></li>
+		  <li class="li4"></li>
+		  <li class="li5"></li>
+		  <li class="li6"></li>
+		</ul>
+	</div>	
+	<!-- start: Header -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="../Default.aspx"> <img alt="Perfectum Dashboard" src="../App_Themes/img/logo20.png" /> <span class="hidden-phone">Trang Chủ CongKy</span></a>
+								
+				<!-- start: Header Menu -->
+				<div class="nav-no-collapse header-nav">
+					<ul class="nav pull-right">
+						<!-- start: User Dropdown -->
+						<li class="dropdown">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="icon-user icon-white"></i>
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="../Admin/ThongTinCaNhan.aspx"><i class="icon-user"></i> Thông tin cá nhân</a></li>
+								<li><asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click"><i class="icon-off"></i> Logout</asp:LinkButton></li>
+							</ul>
+						</li>
+						<!-- end: User Dropdown -->
+					</ul>
+				</div>
+				<!-- end: Header Menu -->
+			</div>
+		</div>
+	</div>
+	<!-- start: Header -->
+	
+		<div class="container-fluid">
+		<div class="row-fluid">
+			<!-- start: Main Menu -->
+			<div class="span2 main-menu-span">
+				<div class="nav-collapse sidebar-nav">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="../Admin/Default.aspx"><i class="icon-home icon-white"></i><span class="hidden-tablet"> Trang chủ quản trị</span></a></li>
+                        <li><a href="../Admin/ThongTinCaNhan.aspx"><i class="icon-user"></i><span class="hidden-tablet">Thông tin cá nhân</span></a></li>
+						<li><a class="dropmenu" href="#"><i class="icon-user"></i><span class="hidden-tablet">Tài khoản</span></a>
+							<ul>
+								<li><a class="submenu" href="../Admin/TaiKhoan.aspx?iQuyenHan=1"><i class="icon-user"></i><span class="hidden-tablet"> Quản trị</span></a></li>
+								<li><a class="submenu" href="../Admin/TaiKhoan.aspx?iQuyenHan=2"><i class="icon-user"></i><span class="hidden-tablet"> Nhân Viên</span></a></li>
+								<li><a class="submenu" href="../Admin/TaiKhoan.aspx?iQuyenHan=3"><i class="icon-user"></i><span class="hidden-tablet"> Khách Hàng</span></a></li>
+							</ul>	
+						</li>
+                        <li><a class="dropmenu" href="#"><i class="icon-tags"></i><span class="hidden-tablet">Nhóm sản phẩm</span></a>
+							<ul>
+								<li><a class="submenu" href="../Admin/NhomSanPham.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Nhóm sản phẩm Mở</span></a></li>
+								<li><a class="submenu" href="../Admin/NhomSanPham.aspx?iTrangThai=2"><i class="icon-remove"></i><span class="hidden-tablet"> Nhóm sản phẩm Khóa</span></a></li>
+							</ul>	
+						</li>
+                        <li><a class="dropmenu" href="#"><i class="icon-tag"></i><span class="hidden-tablet">Sản phẩm</span></a>
+							<ul>
+								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Sản phẩm Mở</span></a></li>
+								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=2"><i class="icon-warning-sign"></i><span class="hidden-tablet"> Sản phẩm Hết hàng</span></a></li>
+								<li><a class="submenu" href="../Admin/SanPham.aspx?iTrangThai=3"><i class="icon-remove"></i><span class="hidden-tablet"> Sản phẩm Khóa</span></a></li>
+							</ul>	
+						</li>
+                        <li><a class="dropmenu" href="#"><i class="icon-file"></i><span class="hidden-tablet">Hóa đơn</span></a>
+							<ul>
+                                <li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=1"><i class="icon-question-sign"></i><span class="hidden-tablet"> Chưa kiểm tra</span></a></li>
+								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=2"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Chưa giao hàng</span></a></li>
+								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=3"><i class="icon-ok-sign"></i><span class="hidden-tablet"> Đã giao hàng</span></a></li>
+								<li><a class="submenu" href="../Admin/HoaDon.aspx?iTrangThai=4"><i class="icon-remove-sign"></i><span class="hidden-tablet"> Đã hủy</span></a></li>
+							</ul>	
+						</li>
+                        <li><a class="dropmenu" href="#"><i class="icon-plane"></i><span class="hidden-tablet">Thanh toán</span></a>
+							<ul>
+								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=1"><i class="icon-ok"></i><span class="hidden-tablet"> Thanh Toán Mở</span></a></li>
+								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=2"><i class="icon-warning-sign"></i><span class="hidden-tablet"> Thanh toán Xem xét</span></a></li>
+								<li><a class="submenu" href="../Admin/ThanhToan.aspx?iTrangThai=3"><i class="icon-remove"></i><span class="hidden-tablet"> Thanh toán Khóa</span></a></li>
+							</ul>	
+						</li>
+                        <li><a class="dropmenu" href="#"><i class="icon-print"></i><span class="hidden-tablet">Báo cáo</span></a>
+							<ul>
+								<li><a class="submenu" href="../Admin/Report/BaoCao_SanPham.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Sản phẩm</span></a></li>
+								<li><a class="submenu" href="../Admin/Report/BaoCao_TaiKhoan.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Khách hàng</span></a></li>
+								<li><a class="submenu" href="../Admin/Report/BaoCao_KetQua_KinhDoanh.aspx"><i class="icon-file"></i><span class="hidden-tablet"> Kết quả kinh doanh</span></a></li>
+                                <li><a class="submenu" href="../Admin/Report/BaoCao_HoaDon.aspx"><i class="icon-file"></i><span class="hidden-tablet"> In Hóa đơn</span></a></li>
+							</ul>	
+						</li>
+                        <li><a href="../Admin/Database.aspx"><i class="icon-hdd"></i><span class="hidden-tablet">Database</span></a></li>
+					</ul>
+				</div><!--/.well -->
+			</div><!--/span-->
+			<!-- end: Main Menu -->
+			
+		<div id="content" class="span10" style="min-height: 1150px; max-height: 2000px; height: auto">
+			<!-- start: Content -->
+			<asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+			<!-- end: Content -->
+		</div><!--/#content.span10-->
+				</div><!--/fluid-row-->
+		
+		<div class="clearfix"></div>
+		
+		<footer>
+			<p>
+				<span style="text-align:left;float:left">Copyright © 2014
+            <a href="http://CongKy.com">CongKy - Vũ Bá Hà</a></span>
+				<span style="text-align:right;float:right"> Thiết kế và chỉnh sửa bởi <a href="https://plus.google.com/108721004231457882522">CongKy</a></span>
+			</p>
+
+		</footer>
+				
+	</div><!--/.fluid-container-->
+
+	<!-- start: JavaScript-->
+
+		<script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../Scripts/custom.js"></script>
+        <!-- end: JavaScript-->
+    <div>
+    </div>
+    </form>
+</body>
+</html>

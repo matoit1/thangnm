@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ProductSI.master.cs" Inherits="CongKy.ShareInterface.ProductSI" %>
+<%@ Register src="~/UserControl/MenuUC.ascx" tagname="MenuUC" tagprefix="uc1" %>
+<%@ Register src="~/UserControl/FooterUC.ascx" tagname="FooterUC" tagprefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Trang sản phẩm CongKy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="../favicon.ico" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="../App_Themes/Home.css" media="all" />
+    <meta property="fb:app_id" content="432781806807255"/>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header [start] -->
+	<div id="main-head">
+		<uc1:MenuUC ID="MenuUC1" runat="server" />
+	</div>
+    <div style="z-index: 200; top:10px; right: 10px; float: right; position: fixed;">
+        <asp:LinkButton ID="lbtnLogin" runat="server" style="text-decoration:none;" >Đăng nhập</asp:LinkButton>
+        <asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click">Thoát</asp:LinkButton>
+    </div>
+    <div style=" z-index: 200; top:10px; left: 10px; float: left; position: fixed;">
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/App_Themes/Images/shopping_cart.png" PostBackUrl="~/GioHang.aspx" width="45px" height= "45px"/>
+    </div>
+	<!-- Header [end] -->
+	<div style="clear: both;"></div>
+	<!-- Main Body [start] -->
+	<%--<div id="body-wrapper">
+	    <br /><br /><br /><br />--%>
+        <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+        <%--<br /><br /><br /><br /><br /><br />
+	</div>--%>
+	<!-- Main Body [end] -->
+	<uc2:FooterUC ID="FooterUC1" runat="server" />
+    </form>
+</body>
+</html>
