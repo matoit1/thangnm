@@ -118,6 +118,7 @@
     <Content Include="App_Themes\Images\logo.jpg" />
     <Content Include="App_Themes\Images\nganluong.png" />
     <Content Include="App_Themes\Images\Popup_CloseBox.png" />
+    <Content Include="App_Themes\Images\shopping_cart.png" />
     <Content Include="App_Themes\Images\UpdateCart.png" />
     <Content Include="App_Themes\img\arrows-active.png" />
     <Content Include="App_Themes\img\arrows-normal.png" />

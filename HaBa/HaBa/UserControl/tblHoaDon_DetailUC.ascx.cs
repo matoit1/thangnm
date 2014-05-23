@@ -53,10 +53,9 @@ namespace HaBa.UserControl
             catch { ddlFK_iTaiKhoanID_Giao.SelectedIndex = 0; }
             txtsHoTen.Text = Convert.ToString(_tblHoaDonEO.sHoTen);
             txtsEmail.Text = Convert.ToString(_tblHoaDonEO.sEmail);
-            txtsHoTen.Text = Convert.ToString(_tblHoaDonEO.sHoTen);
-            txtsEmail.Text = Convert.ToString(_tblHoaDonEO.sDiaChi);
-            txtsHoTen.Text = Convert.ToString(_tblHoaDonEO.sSoDienThoai);
-            txtsEmail.Text = Convert.ToString(_tblHoaDonEO.sGhiChu);
+            txtsDiaChi.Text = Convert.ToString(_tblHoaDonEO.sDiaChi);
+            txtsSoDienThoai.Text = Convert.ToString(_tblHoaDonEO.sSoDienThoai);
+            txtsGhiChu.Text = Convert.ToString(_tblHoaDonEO.sGhiChu);
             if (_tblHoaDonEO.tNgayDatHang == DateTime.MinValue) { txttNgayDatHang.Text = DateTime.Now.ToString(); } else { txttNgayDatHang.Text = Convert.ToString(_tblHoaDonEO.tNgayDatHang); }
             if (_tblHoaDonEO.tNgayGiaoHang == DateTime.MinValue) { txttNgayGiaoHang.Text = DateTime.Now.ToString(); } else { txttNgayGiaoHang.Text = Convert.ToString(_tblHoaDonEO.tNgayGiaoHang); }
 
@@ -130,7 +129,7 @@ namespace HaBa.UserControl
 
         public string CheckQuantity()
         {
-            sWarning = "Sản phẩm không đủ!     ";
+            sWarning = "Sản phẩm không đủ!     </br>";
             iState = 0;
             tblSanPhamEO _tblSanPhamEO = new tblSanPhamEO();
             tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
@@ -143,7 +142,7 @@ namespace HaBa.UserControl
                 _tblSanPhamEO = tblSanPhamDAO.SanPham_SelectItemPK_sSanPhamID(dr["FK_sSanPhamID"].ToString());
                 if (Convert.ToInt16(dr["iSoLuong"]) > _tblSanPhamEO.iSoLuong)
                 {
-                    sWarning = sWarning + _tblSanPhamEO.sTenSanPham + "thiếu " + (Convert.ToInt16(dr["iSoLuong"]) - _tblSanPhamEO.iSoLuong) + "//   ";
+                    sWarning = sWarning + "-  " + _tblSanPhamEO.sTenSanPham + " thiếu " + (Convert.ToInt16(dr["iSoLuong"]) - _tblSanPhamEO.iSoLuong) + " sản phẩm.</br>";
                     iState = 9;
                 }
             }
@@ -164,7 +163,7 @@ namespace HaBa.UserControl
             {
                 _tblSanPhamEO = tblSanPhamDAO.SanPham_SelectItemPK_sSanPhamID(dr["FK_sSanPhamID"].ToString());
                 Int16 sl = _tblSanPhamEO.iSoLuong;
-                _tblSanPhamEO.iSoLuong = (Int16)(sl - Convert.ToInt16(dr["FK_sSanPhamID"]));
+                _tblSanPhamEO.iSoLuong = (Int16)(sl - Convert.ToInt16(dr["iSoLuong"]));
                 tblSanPhamDAO.SanPham_Update_iSoLuong(_tblSanPhamEO);
             }
             return sWarning;
@@ -283,6 +282,7 @@ namespace HaBa.UserControl
         {
             ClearMessages();
             lblMsg.Text = "";
+            string warning = "";
             try
             {
                 if (CheckInput() == true)
@@ -290,9 +290,10 @@ namespace HaBa.UserControl
                     switch (getObject().iTrangThai)
                     {
                         case HoaDon_iTrangThai_C.Chua_Giao_Hang:
+                            warning = CheckQuantity();
                             if (iState == 9)
                             {
-                                lblMsg.Text = CheckQuantity();
+                                lblMsg.Text = warning;
                             }
                             else
                             {
@@ -308,16 +309,17 @@ namespace HaBa.UserControl
                             }
                             break;
                         case HoaDon_iTrangThai_C.Da_Giao_Hang:
+                            warning = CheckQuantity();
                             if (iState == 9)
                             {
-                                lblMsg.Text = CheckQuantity();
+                                lblMsg.Text = warning;
                             }
                             else
                             {
                                 if (tblHoaDonDAO.HoaDon_Update(getObject()) == true)
                                 {
-                                    lblMsg.Text = Messages.Sua_Thanh_Cong;
                                     UpdateQuantity();
+                                    lblMsg.Text = Messages.Sua_Thanh_Cong;
                                     ClearMessages();
                                 }
                                 else

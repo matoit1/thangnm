@@ -66,6 +66,7 @@ namespace HaBa.Admin
         protected void SelectRowChiTietHoaDon_Click(object sender, EventArgs e)
         {
             //MonHoc_DetailUC1.BindDataDetail(MonHoc_ListUC1.PK_sMaMonhoc);
+            tabMain.ActiveTabIndex = 1;
         }
 
         protected void ViewDetailChiTietHoaDon_Click(object sender, EventArgs e)
