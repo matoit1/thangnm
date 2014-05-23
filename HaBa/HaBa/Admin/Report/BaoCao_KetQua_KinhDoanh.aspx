@@ -2,7 +2,7 @@
 <%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
     <div>
-        <asp:Button ID="btnBaoCao" runat="server" Text="Tìm kiếm" onclick="btnBaoCao_Click" />
+        <asp:Button ID="btnBaoCao" runat="server" Text="Ẩn Tìm kiếm" onclick="btnBaoCao_Click" />
         <asp:Panel ID="pnlSearch" runat="server" DefaultButton="btnTimKiem">
             <div style="width: 500px; margin: 0px auto 0px auto; border: 1px solid blue;">
                 <table>

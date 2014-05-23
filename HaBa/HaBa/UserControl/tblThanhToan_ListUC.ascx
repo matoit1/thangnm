@@ -37,9 +37,7 @@
                     FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_iThanhToanID"
                     emptydatatext="Không có bản ghi nào."   PageSize="10" 
                     EnableModelValidation="True" onrowcommand="grvListBaiViet_RowCommand" 
-                    onselectedindexchanged="grvListBaiViet_SelectedIndexChanged" 
                     onpageindexchanging="grvListBaiViet_PageIndexChanging" 
-                    onrowdatabound="grvListBaiViet_RowDataBound"
                     AllowSorting="true" onsorting="grvListBaiViet_Sorting">
                     <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                     <Columns>

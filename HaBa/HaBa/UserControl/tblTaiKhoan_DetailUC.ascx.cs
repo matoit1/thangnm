@@ -99,11 +99,22 @@ namespace HaBa.UserControl
 
         public bool CheckInput()
         {
+            tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
             if (string.IsNullOrEmpty(txtsTenDangNhap.Text) == true)
             {
                 lblsTenDangNhap.Text = Messages.Khong_Duoc_De_Trong;
                 txtsTenDangNhap.Focus();
                 return false;
+            }
+            else
+            {
+                _tblTaiKhoanEO.sTenDangNhap = txtsTenDangNhap.Text;
+                if (tblTaiKhoanDAO.TaiKhoan_CheckExists_sTenDangNhap(_tblTaiKhoanEO) == true)
+                {
+                    lblsTenDangNhap.Text = Messages.Ten_Tai_Khoan_Da_Duoc_Su_Dung;
+                    txtsTenDangNhap.Focus();
+                    return false;
+                }
             }
             if (string.IsNullOrEmpty(txtsMatKhau.Text) == true)
             {
@@ -132,6 +143,16 @@ namespace HaBa.UserControl
                     lblsEmail.Text = Messages.Khong_Dung_Dinh_Dang_Email;
                     txtsEmail.Focus();
                     return false;
+                }
+                else
+                {
+                    _tblTaiKhoanEO.sEmail = txtsEmail.Text;
+                    if (tblTaiKhoanDAO.TaiKhoan_CheckExists_sEmail(_tblTaiKhoanEO) == true)
+                    {
+                        lblsEmail.Text = Messages.Email_Da_Duoc_Su_Dung;
+                        txtsEmail.Focus();
+                        return false;
+                    }
                 }
             }
             if (string.IsNullOrEmpty(txtsDiaChi.Text) == true)

@@ -103,10 +103,12 @@ namespace HaBa.Admin.Report
             if (pnlSearch.Visible == true)
             {
                 pnlSearch.Visible = false;
+                btnBaoCao.Text = "Hiện tìm kiếm";
             }
             else
             {
                 pnlSearch.Visible = true;
+                btnBaoCao.Text = "Ẩn tìm kiếm";
             }
         }
 

@@ -130,7 +130,7 @@
 			</div><!--/span-->
 			<!-- end: Main Menu -->
 			
-		<div id="content" class="span10">
+		<div id="content" class="span10" style="min-height: 1150px; max-height: 2000px; height: auto">
 			<!-- start: Content -->
 			<asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
 			<!-- end: Content -->
