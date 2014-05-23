@@ -22,6 +22,9 @@
         <asp:LinkButton ID="lbtnLogin" runat="server" style="text-decoration:none;" >Đăng nhập</asp:LinkButton>
         <asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click">Thoát</asp:LinkButton>
     </div>
+    <div style=" z-index: 200; top:10px; left: 10px; float: left; position: fixed;">
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/App_Themes/Images/shopping_cart.png" PostBackUrl="~/GioHang.aspx" width="45px" height= "45px"/>
+    </div>
 	<!-- Header [end] -->
 	<div style="clear: both;"></div>
 	<!-- Main Body [start] -->

@@ -63,7 +63,7 @@
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="../Admin/ThongTinCaNhan.aspx"><i class="icon-user"></i> Thông tin cá nhân</a></li>
+								<li><a href="../Client/ThongTinCaNhan.aspx"><i class="icon-user"></i> Thông tin cá nhân</a></li>
 								<li><asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click"><i class="icon-off"></i> Logout</asp:LinkButton></li>
 							</ul>
 						</li>

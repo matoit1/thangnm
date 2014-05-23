@@ -144,6 +144,10 @@ namespace HaBa.UserControl
                     row.BackColor = ColorTranslator.FromHtml("#FFFFFF");
                     row.ToolTip = "Click to select this row.";
                 }
+                if (SelectRow != null)
+                {
+                    SelectRow(this, EventArgs.Empty);
+                }
             }
         }
 
