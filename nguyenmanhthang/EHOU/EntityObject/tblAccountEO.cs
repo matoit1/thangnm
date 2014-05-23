@@ -10,6 +10,7 @@ namespace EntityObject
     {
         private string _PK_sUsername;
         private string _sPassword;
+        private string _sName;
         private string _sEmail;
         private Int16 _iType;
         private Int16 _iStatus;
@@ -29,21 +30,28 @@ namespace EntityObject
             set { this._sPassword = value; }
         }
 
-        // 3. Xay dung cac phuong thuc set, get cho sEmail
+        // 3. Xay dung cac phuong thuc set, get cho sName
+        public string sName
+        {
+            get { return this._sName; }
+            set { this._sName = value; }
+        }
+
+        // 4. Xay dung cac phuong thuc set, get cho sEmail
         public string sEmail
         {
             get { return this._sEmail; }
             set { this._sEmail = value; }
         }
 
-        // 4. Xay dung cac phuong thuc set, get cho iType
+        // 5. Xay dung cac phuong thuc set, get cho iType
         public Int16 iType
         {
             get { return this._iType; }
             set { this._iType = value; }
         }
 
-        // 5. Xay dung cac phuong thuc set, get cho iStatus
+        // 6. Xay dung cac phuong thuc set, get cho iStatus
         public Int16 iStatus
         {
             get { return this._iStatus; }

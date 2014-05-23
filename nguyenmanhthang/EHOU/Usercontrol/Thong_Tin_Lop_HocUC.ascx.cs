@@ -29,7 +29,9 @@ namespace EHOU.UserControl
 
             //lblsTenlop.Text = _LopHocEO.PK_sMalop + " - " + _LopHocEO.sTenlop;
             lblsTenMonhoc.Text = _tblSubjectEO.PK_sSubject + " - " + _tblSubjectEO.sName;
-            lblsHoTenGV.Text = _tblSubjectEO.FK_sTeacher + " - " + _tblSubjectEO.FK_sTeacher;
+            tblAccountEO _tblAccountEO = new tblAccountEO();
+            _tblAccountEO.PK_sUsername = _tblSubjectEO.FK_sTeacher;
+            lblsHoTenGV.Text = _tblSubjectEO.FK_sTeacher + " - " + tblAccountDAO.Account_SelectItem(_tblAccountEO).sName;
             //lbliSiso.Text = Convert.ToString(_LopHocEO.iSiso);
             //lbliCaHoc.Text = Convert.ToString(_LichDayVaHocEO.iCaHoc);
             //lbliSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);

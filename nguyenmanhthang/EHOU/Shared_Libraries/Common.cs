@@ -15,7 +15,7 @@ namespace Shared_Libraries
     public class Common
     {
         public static JObject RequestInforByLoginID(string input){
-            string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + "05d261d4a161eed547d9f0cb74de998e");
+            string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + input);
             JObject output = JObject.Parse(data);
             return output;
         }
@@ -312,8 +312,6 @@ namespace Shared_Libraries
         public const int ChatRoom_MaxRooms = 10;
         public const int ChatRoom_SessionTimeout = 5;
         public const int ChatRoom_MaxUsers = 50;
-        public const int ChatRoom_TypeUser_GiangVien = 1;
-        public const int ChatRoom_TypeUser_SinhVien = 2;
         public const string Chat_An_Danh = "Ẩn danh! ";
         #endregion
 

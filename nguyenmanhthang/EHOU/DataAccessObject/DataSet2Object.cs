@@ -330,6 +330,7 @@ namespace DataAccessObject
                 {
                     output.PK_sUsername = Convert.ToString(dr["PK_sUsername"]);
                     output.sPassword = Convert.ToString(dr["sPassword"]);
+                    output.sName = Convert.ToString(dr["sName"]);
                     output.sEmail = Convert.ToString(dr["sEmail"]);
                     output.iType = Convert.ToInt16(dr["iType"]);
                     output.iStatus = Convert.ToInt16(dr["iStatus"]);

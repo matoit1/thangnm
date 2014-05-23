@@ -58,6 +58,7 @@ namespace DataAccessObject
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_sUsername", tblAccountEO.PK_sUsername));
                     cmd.Parameters.Add(new SqlParameter("@sPassword", tblAccountEO.sPassword));
+                    cmd.Parameters.Add(new SqlParameter("@sName", tblAccountEO.sName));
                     cmd.Parameters.Add(new SqlParameter("@sEmail", tblAccountEO.sEmail));
                     cmd.Parameters.Add(new SqlParameter("@iType", tblAccountEO.iType));
                     cmd.Parameters.Add(new SqlParameter("@iStatus", tblAccountEO.iStatus));
@@ -87,6 +88,7 @@ namespace DataAccessObject
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_sUsername", tblAccountEO.PK_sUsername));
                     cmd.Parameters.Add(new SqlParameter("@sPassword", tblAccountEO.sPassword));
+                    cmd.Parameters.Add(new SqlParameter("@sName", tblAccountEO.sName));
                     cmd.Parameters.Add(new SqlParameter("@sEmail", tblAccountEO.sEmail));
                     cmd.Parameters.Add(new SqlParameter("@iType", tblAccountEO.iType));
                     cmd.Parameters.Add(new SqlParameter("@iStatus", tblAccountEO.iStatus));
@@ -224,6 +226,7 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblAccount_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sUsername", tblAccountEO.PK_sUsername));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sName", tblAccountEO.sName));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sPassword", tblAccountEO.sPassword));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sEmail", tblAccountEO.sEmail));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iType", tblAccountEO.iType));
