@@ -2,5 +2,18 @@
 <%@ Register src="../UserControl/CaHocUC.ascx" tagname="CaHocUC" tagprefix="uc1" %>
 
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
-    <uc1:CaHocUC ID="CaHocUC1" runat="server" OnGoClass = "GoClass_Click" />
+    <asp:Panel ID="pnlLopHoc" runat="server">
+        <fieldset class="divcahoc">
+            <legend>Chọn lớp học muốn vào học !</legend>
+            <asp:RadioButtonList ID="rbtnlListClass" runat="server" ontextchanged="rbtnlListClass_TextChanged" AutoPostBack="true">
+            </asp:RadioButtonList>
+        </fieldset>
+    </asp:Panel>
+    <asp:Panel ID="pnlBaiHoc" runat="server">
+        <fieldset class="divcahoc">
+            <legend>Chọn bài học muốn vào học !</legend>
+            <asp:RadioButtonList ID="rbtnlListSubject" runat="server" ontextchanged="rbtnlListSubject_TextChanged" AutoPostBack="true">
+            </asp:RadioButtonList>
+        </fieldset>
+    </asp:Panel>
 </asp:Content>
