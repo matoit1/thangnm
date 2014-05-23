@@ -13,19 +13,6 @@ namespace EHOU.SinhVien
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                SinhVien_DetailUC1.btnDelete.Visible = false;
-                SinhVien_DetailUC1.btnInsert.Visible = false;
-                SinhVien_DetailUC1.btnReset.Visible = false;
-                SinhVienEO _SinhVienEO = new SinhVienEO();
-                _SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
-                _SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);
-                SinhVien_DetailUC1.BindDataDetail(_SinhVienEO);
-            }
-            catch
-            {
-            }
         }
     }
 }

@@ -50,7 +50,7 @@ namespace EHOU.SinhVien
 
                         tblDetailEO _tblDetailEO = new tblDetailEO();
                         _tblDetailEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
-                        _tblDetailEO.FK_sStudent =  Session["account_sv"].ToString();
+                        _tblDetailEO.FK_sStudent = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
                         _tblDetailEO.PK_lCaHoc = Convert.ToInt64(Request.QueryString["lCaHoc"].ToString());
                         if (tblDetailDAO.Detail_CheckExists(_tblDetailEO) !=true)
                         {
@@ -61,7 +61,7 @@ namespace EHOU.SinhVien
                         //_SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);
                         tblMessageEO _tblMessageEO = new tblMessageEO();
                         _tblMessageEO.FK_sRoom = _tblSubjectEO.PK_sSubject;
-                        _tblMessageEO.FK_sUsername = Session["account_sv"].ToString();
+                        _tblMessageEO.FK_sUsername = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
                         _tblMessageEO.iStatus = 1;
                         ChatUC1.objtblMessageEO = _tblMessageEO;
                         ChatUC1.objtblSubjectEO = _tblSubjectEO;

@@ -8,6 +8,7 @@ using System.Data;
 using DataAccessObject;
 using Shared_Libraries;
 using Newtonsoft.Json.Linq;
+using Shared_Libraries.Constants;
 
 namespace EHOU.Share_Interface
 {
@@ -15,26 +16,20 @@ namespace EHOU.Share_Interface
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            //Session["account_sv"] = "sv1";
             try
             {
-                string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + Request.Cookies["LOGINID"].Value);
-                JObject o = JObject.Parse(data);
-                if (o["username"] != null && o["type"].ToString() == "1")
+                JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
+                if (objAcc["username"] != null && Convert.ToInt16(objAcc["type"]) == tblAccount_iType_C.Sinh_Vien)
                 {
-                    //Success!
-                    Session["account_sv"] = o["username"];
+                    //Session["account_sv"] = objAcc["username"];
                 }
                 else
                 {
-                    //Fail!
-                    //Response.Write("<script>alert('Error 1: " + o["username"] + "')</script>");
                     Response.Redirect("https://account.dev.ehou.edu.vn/auth");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                //Error!
                 Response.Redirect("https://account.dev.ehou.edu.vn/auth");
             }
         }

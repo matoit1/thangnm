@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Shared_Libraries;
+using Newtonsoft.Json.Linq;
+using Shared_Libraries.Constants;
 
 namespace EHOU.Share_Interface
 {
@@ -11,18 +14,22 @@ namespace EHOU.Share_Interface
     {
         public void Page_Load(object sender, EventArgs e)
         {
+
             try
             {
-                if (Request.Cookies["quantri"] == null)
+                JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
+                if (objAcc["username"] != null && Convert.ToInt16(objAcc["type"]) == tblAccount_iType_C.Quan_Tri)
                 {
-                    Response.Redirect("~/QuanTri/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
+                    Session["account_qt"] = objAcc["username"];
                 }
-                //lblInfo.Text = "   Hi, " + Request.Cookies["quantri"].Value;
+                else
+                {
+                    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                Response.Cookies["quantri"].Expires = DateTime.Now.AddDays(-1);
-                Response.Redirect("~/QuanTri/Accounts/Login.aspx?Return_Url=" + Request.Url.ToString());
+                Response.Redirect("https://account.dev.ehou.edu.vn/auth");
             }
         }
 

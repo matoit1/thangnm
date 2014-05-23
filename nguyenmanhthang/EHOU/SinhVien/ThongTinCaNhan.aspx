@@ -2,10 +2,12 @@
 
 <%@ Register src="../UserControl/SinhVien_DetailUC.ascx" tagname="SinhVien_DetailUC" tagprefix="uc1" %>
 
+<%@ Register src="../Usercontrol/tblAccount_DetailUC.ascx" tagname="tblAccount_DetailUC" tagprefix="uc2" %>
+
 <asp:Content ID="cContent" runat="server" ContentPlaceHolderID="cphBody">
     <div>
     
-        <uc1:SinhVien_DetailUC ID="SinhVien_DetailUC1" runat="server" />
+        <uc2:tblAccount_DetailUC ID="tblAccount_DetailUC1" runat="server" />
     
     </div>
 </asp:Content>

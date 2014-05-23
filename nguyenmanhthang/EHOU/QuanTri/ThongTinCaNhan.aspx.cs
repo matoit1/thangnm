@@ -13,16 +13,6 @@ namespace EHOU.QuanTri
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                GiangVienEO _GiangVienEO = new GiangVienEO();
-                _GiangVienEO.sTendangnhapGV = Request.Cookies["quantri"].Value;
-                _GiangVienEO = GiangVienDAO.GiangVien_SelectBysTendangnhapGV(_GiangVienEO);
-                GiangVien_DetailUC1.BindDataDetail(_GiangVienEO);
-            }
-            catch
-            {
-            }
         }
     }
 }

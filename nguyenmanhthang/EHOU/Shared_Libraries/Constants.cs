@@ -5,6 +5,17 @@ using System.Web;
 
 namespace Shared_Libraries.Constants
 {
+
+    /// <summary> tblAccount_iType_C</summary>
+    /// 
+    public class tblAccount_iType_C
+    {
+        public const Int16 Sinh_Vien = 1;
+        public const Int16 Giang_Vien = 2;
+        public const Int16 Quan_Tri = 3;
+    }
+
+
     #region "I. Sinh Viên"
     /// <summary> I.7. SinhVien_iTrangThaiSV_C (Trạng Thái Sinh Viên) </summary>
     /// 

@@ -282,9 +282,13 @@
     <Content Include="SinhVien\ThiTracNghiem.aspx" />
     <Content Include="SinhVien\ThongTinCaNhan.aspx" />
     <Content Include="SinhVien\User.aspx" />
+    <Content Include="Upload\anlv\video\movie.3g2" />
+    <Content Include="Upload\anlv\video\movie.avi" />
+    <Content Include="Upload\anlv\video\movie.mov" />
+    <Content Include="Upload\anlv\video\movie.mp4" />
+    <Content Include="Upload\anlv\video\movie.mpg" />
+    <Content Include="Upload\anlv\video\movie.wmv" />
     <Content Include="Upload\BlackList.txt" />
-    <Content Include="Upload\anlv\My_Program.cpp" />
-    <Content Include="Upload\anlv\My_Program.exe" />
     <Content Include="Upload\tungtt\video\movie.3g2" />
     <Content Include="Upload\tungtt\video\movie.avi" />
     <Content Include="Upload\tungtt\video\movie.mov" />
@@ -332,6 +336,7 @@
     <Content Include="Usercontrol\Search\SinhVien_SearchUC.ascx" />
     <Content Include="Usercontrol\SinhVien_DetailUC.ascx" />
     <Content Include="Usercontrol\SinhVien_ListUC.ascx" />
+    <Content Include="Usercontrol\tblAccount_DetailUC.ascx" />
     <Content Include="Usercontrol\Thong_Tin_Lop_HocUC.ascx" />
     <Content Include="Usercontrol\TracNghiemUC.ascx" />
     <Content Include="Usercontrol\UploadFileUC.ascx" />
@@ -953,6 +958,13 @@
     <Compile Include="Usercontrol\SinhVien_ListUC.ascx.designer.cs">
       <DependentUpon>SinhVien_ListUC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrol\tblAccount_DetailUC.ascx.cs">
+      <DependentUpon>tblAccount_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblAccount_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblAccount_DetailUC.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrol\Thong_Tin_Lop_HocUC.ascx.cs">
       <DependentUpon>Thong_Tin_Lop_HocUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -986,6 +998,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Images\Smileys\" />
     <Folder Include="Images\Temp\" />
+    <Folder Include="Upload\anlv\example\" />
     <Folder Include="Upload\tungtt\example\" />
   </ItemGroup>
   <ItemGroup>
@@ -1000,10 +1013,16 @@
     <Content Include="Share_Interface\QuanTri_SI.Master" />
     <Content Include="Share_Interface\SinhVien_SI.Master" />
     <Content Include="Share_Interface\Test.Master" />
-    <None Include="Upload\anlv\excute_My_Program.cpp.bat" />
-    <None Include="Upload\anlv\My_Program.ans" />
-    <None Include="Upload\anlv\My_Program.inp" />
-    <None Include="Upload\anlv\My_Program.out" />
+    <None Include="Upload\anlv\ebook\Bao_Cao.xlsx" />
+    <None Include="Upload\anlv\ebook\DA_Bao_Cao_Lan_2.docx" />
+    <None Include="Upload\anlv\ebook\do an.docx" />
+    <None Include="Upload\anlv\ebook\System.Web.HttpCookie11.10B5.doc" />
+    <None Include="Upload\anlv\ebook\XD lớp học ảo.docx" />
+    <None Include="Upload\anlv\video\movie.f4v" />
+    <None Include="Upload\anlv\video\movie.flv" />
+    <None Include="Upload\anlv\video\movie.mkv" />
+    <None Include="Upload\anlv\video\movie.ogg" />
+    <None Include="Upload\anlv\video\movie.webm" />
     <None Include="Upload\tungtt\ebook\Bao_Cao.xlsx" />
     <None Include="Upload\tungtt\ebook\DA_Bao_Cao_Lan_2.docx" />
     <None Include="Upload\tungtt\ebook\do an.docx" />

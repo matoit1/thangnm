@@ -9,6 +9,19 @@ namespace Shared_Libraries
 {
     public class GetListConstants
     {
+
+        /// <summary> tblAccount_iType_GLC </summary>
+        /// <returns></returns>
+        public static SortedList tblAccount_iType_GLC()
+        {
+            SortedList output = new SortedList();
+            output.Add(tblAccount_iType_C.Sinh_Vien, GetTextConstants.tblAccount_iType_GTC(tblAccount_iType_C.Sinh_Vien));
+            output.Add(tblAccount_iType_C.Giang_Vien, GetTextConstants.tblAccount_iType_GTC(tblAccount_iType_C.Giang_Vien));
+            output.Add(tblAccount_iType_C.Quan_Tri, GetTextConstants.tblAccount_iType_GTC(tblAccount_iType_C.Quan_Tri));
+            return output;
+        }
+
+
         #region "I. Constants - GetTextConstants - GetListConstants"
         /// <summary> I.1. Quyen_Han_GLC (Quyền hạn) </summary>
         /// <returns></returns>
