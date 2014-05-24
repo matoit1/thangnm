@@ -15,7 +15,7 @@ namespace Shared_Libraries
     public class Common
     {
         public static JObject RequestInforByLoginID(string input){
-            string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + "916b7103905ebfce1f5c0003ad7114f9");
+            string data = Common.ReadTextFromUrl("http://account.dev.ehou.edu.vn/auth/checkssotoken/" + input);
             JObject output = JObject.Parse(data);
             return output;
         }

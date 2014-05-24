@@ -19,7 +19,7 @@ namespace EHOU.Share_Interface
                 JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
                 if (objAcc["username"] != null &&  Convert.ToInt16(objAcc["type"]) == tblAccount_iType_C.Giang_Vien)
                 {
-                    Session["account_gv"] = objAcc["username"];
+                    //Session["account_gv"] = objAcc["username"];
                 }
                 else
                 {

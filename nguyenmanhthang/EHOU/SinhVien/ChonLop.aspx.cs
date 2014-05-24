@@ -52,10 +52,8 @@ namespace EHOU.SinhVien
                 rbtnlListClass.DataValueField = "PK_sSubject";
                 rbtnlListClass.DataBind();
             }
-            catch (Exception)
+            catch
             {
-                
-                throw;
             }
         }
 
@@ -74,10 +72,8 @@ namespace EHOU.SinhVien
                 rbtnlListSubject.DataValueField = "PK_lCaHoc";
                 rbtnlListSubject.DataBind();
             }
-            catch (Exception)
+            catch
             {
-
-                throw;
             }
         }
 
