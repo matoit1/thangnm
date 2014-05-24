@@ -10,7 +10,7 @@
 namespace CongKy.UserControl {
     
     
-    public partial class tblNhomSanPham_DetailUC {
+    public partial class tblChiTietGiaoTrinh_DetailUC {
         
         /// <summary>
         /// lblTitle control.

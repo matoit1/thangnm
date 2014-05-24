@@ -14,7 +14,7 @@ namespace CongKy.DataAccessObject
         /// <summary> 1. ChiTietGiaoTrinh_CheckExists_FK_sSanPhamID </summary>
         /// <param name="_tblChiTietGiaoTrinhEO"></param>
         /// <returns></returns>
-        public static bool ChiTietGiaoTrinh_CheckExists_FK_sSanPhamID(tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO)
+        public static bool ChiTietGiaoTrinh_CheckExists_PK_iGiaoTrinhID(tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -22,7 +22,7 @@ namespace CongKy.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblChiTietGiaoTrinh_CheckExists_FK_sSanPhamID", conn);
+                    SqlCommand cmd = new SqlCommand("tblChiTietGiaoTrinh_CheckExists_PK_iGiaoTrinhID", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_iGiaoTrinhID", _tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID));
                     SqlDataReader dr = cmd.ExecuteReader();

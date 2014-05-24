@@ -9,18 +9,33 @@ namespace CongKy.SharedLibraries
     {
         #region "I. Constants - GetTextConstants - GetListConstants"
 
-        /// <summary> I.5. HoaDon_iTrangThai_GTC (Trạng Thái Hóa Đơn) </summary>
+        /// <summary> I.5.  ChiTietGiaoTrinh_iTrangThai_GTC (Trạng Thái Chi Tiết Giáo Trình) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string HoaDon_iTrangThai_GTC(Int16 input)
+        public static string ChiTietGiaoTrinh_iTrangThai_GTC(Int16 input)
         {
             string output = "";
             switch (input)
             {
-                case 1: output = "Chưa kiểm tra"; break;
-                case 2: output = "Chưa giao hàng"; break;
-                case 3: output = "Đã giao hàng"; break;
-                case 4: output = "Hủy"; break;
+                case 1: output = "Mở"; break;
+                case 2: output = "Khóa"; break;
+                default: output = "N/A"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.5.  ChiTietGiaoTrinh_iType_GTC (Loại Chi Tiết Giáo Trình) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string ChiTietGiaoTrinh_iType_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Video"; break;
+                case 2: output = "Tài liệu"; break;
+                case 3: output = "Phần mềm"; break;
+                case 4: output = "Loại khác"; break;
                 default: output = "N/A"; break;
             }
             return output;
