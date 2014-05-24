@@ -7,14 +7,23 @@ namespace CongKy.SharedLibraries.Constants
 {
     #region "I. Constants - GetTextConstants - GetListConstants"
 
-    /// <summary> I.5. HoaDon_iTrangThai_C (Trạng Thái Hóa Đơn) </summary>
+    /// <summary> I.5. ChiTietGiaoTrinh_iTrangThai_C (Trạng Thái Chi Tiết Giáo Trình) </summary>
     /// 
-    public class HoaDon_iTrangThai_C
+    public class ChiTietGiaoTrinh_iTrangThai_C
     {
-        public const Int16 Chua_Kiem_Tra = 1;
-        public const Int16 Chua_Giao_Hang = 2;
-        public const Int16 Da_Giao_Hang = 3;
-        public const Int16 Huy = 4;
+        public const Int16 Mo = 1;
+        public const Int16 Khoa = 2;
+    }
+
+
+    /// <summary> I.5. ChiTietGiaoTrinh_iType_C (Loại Chi Tiết Giáo Trình) </summary>
+    /// 
+    public class ChiTietGiaoTrinh_iType_C
+    {
+        public const Int16 Video = 1;
+        public const Int16 Ebook = 2;
+        public const Int16 Software = 3;
+        public const Int16 Other = 4;
     }
 
     /// <summary> I.7. NhomSanPham_iTrangThai_C (Trạng Thái Nhóm Sản Phẩm) </summary>

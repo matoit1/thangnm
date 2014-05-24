@@ -32,22 +32,14 @@ namespace CongKy.UserControl
 
         public void BindDataDetail(tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO)
         {
-            txtPK_i.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.PK_iTaiKhoanID);
-            txtsTenBaiHoc.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sTenDangNhap);
-            txtsMatKhau.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sMatKhau);
-            txtsHoTen.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sHoTen);
-            txtsEmail.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sEmail);
-            txtsDiaChi.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sDiaChi);
-            txtsSoDienThoai.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sSoDienThoai);
-            if (String.IsNullOrEmpty(_tblTaiKhoanEO.sLinkAvatar) == true) { txtsLinkAvatar.Text = "~/Images/Avatar/Default.jpg"; } else { txtsLinkAvatar.Text = Convert.ToString(_tblTaiKhoanEO.sLinkAvatar); }
-            if (_tblTaiKhoanEO.tNgaySinh == DateTime.MinValue) { txttNgaySinh.Text = DateTime.Now.ToString(); } else { txttNgaySinh.Text = Convert.ToString(_tblTaiKhoanEO.tNgaySinh); }
-            if (_tblTaiKhoanEO.tNgayDangKy == DateTime.MinValue) { txttNgayDangKy.Text = DateTime.Now.ToString(); } else { txttNgayDangKy.Text = Convert.ToString(_tblTaiKhoanEO.tNgayDangKy); }
-            //txtsLinkAvatar.Text = Convert.ToString(_tblTaiKhoanEO.sLinkAvatar);
-            //txttNgaySinh.Text = Convert.ToString(_tblTaiKhoanEO.tNgaySinh);
-            //txttNgayDangKy.Text = Convert.ToString(_tblTaiKhoanEO.tNgayDangKy);
-            try { ddliQuyenHan.SelectedValue = Convert.ToString(_tblTaiKhoanEO.iQuyenHan); }
-            catch { ddliQuyenHan.SelectedIndex = 0; }
-            try { ddliTrangThai.SelectedValue = Convert.ToString(_tblTaiKhoanEO.iTrangThai); }
+            txtPK_iGiaoTrinhID.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID);
+            txtsTenBaiHoc.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sTenBaiHoc);
+            txtsThongTin.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sThongTin);
+            txtsLinkDownload.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.sLinkDownload);
+            try { ddliType.SelectedValue = Convert.ToString(_tblChiTietGiaoTrinhEO.iType); }
+            catch { ddliType.SelectedIndex = 0; }
+            if (_tblChiTietGiaoTrinhEO.tNgayCapNhat == DateTime.MinValue) { txttNgayCapNhat.Text = DateTime.Now.ToString(); } else { txttNgayCapNhat.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.tNgayCapNhat); }
+            try { ddliTrangThai.SelectedValue = Convert.ToString(_tblChiTietGiaoTrinhEO.iTrangThai); }
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
 
@@ -56,12 +48,16 @@ namespace CongKy.UserControl
             try
             {
                 tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
-                _tblChiTietGiaoTrinhEO.PK_iChiTietGiaoTrinhID = Convert.ToInt16(txtPK_iChiTietGiaoTrinhID.Text);
-                try { _tblChiTietGiaoTrinhEO.iNhomCon = Convert.ToInt16(ddliNhomCon.SelectedValue); }
-                catch { lbliNhomCon.Text = Messages.Ma_Khong_Hop_Le; }
-                _tblChiTietGiaoTrinhEO.sTenNhom = Convert.ToString(txtsTenNhom.Text);
+                try { _tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID = Convert.ToInt32(txtPK_iGiaoTrinhID.Text); }
+                catch { lblPK_iGiaoTrinhID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID = 0; }
+                _tblChiTietGiaoTrinhEO.sTenBaiHoc = Convert.ToString(txtsTenBaiHoc.Text);
+                _tblChiTietGiaoTrinhEO.sThongTin = Convert.ToString(txtsThongTin.Text);
+                _tblChiTietGiaoTrinhEO.sLinkDownload = Convert.ToString(txtsLinkDownload.Text);
+                try { _tblChiTietGiaoTrinhEO.iType = Convert.ToInt16(ddliType.SelectedValue); }
+                catch { lbliType.Text = Messages.Khong_Dung_Dinh_Dang_So; }
+                _tblChiTietGiaoTrinhEO.tNgayCapNhat = Convert.ToDateTime(txttNgayCapNhat.Text);
                 try { _tblChiTietGiaoTrinhEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
-                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblChiTietGiaoTrinhEO.iTrangThai = 0; }
+                catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _tblChiTietGiaoTrinhEO;
             }
             catch (Exception)
@@ -72,20 +68,13 @@ namespace CongKy.UserControl
 
         public void loadDataToDropDownList()
         {
-            DataSet ds = tblGiaoTrinhDAO.ChiTietGiaoTrinh_SelectList();
-            DataRow dr = ds.Tables[0].NewRow();
-            dr[0] = 0;
-            dr[2] = "Không nằm trong nhóm con nào!";
-            ds.Tables[0].Rows.Add(dr);
-
-            ds.Tables[0].Rows.Add();
-            ddliNhomCon.DataSource = ds;
-            ddliNhomCon.DataTextField = "sTenNhom";
-            ddliNhomCon.DataValueField = "PK_iChiTietGiaoTrinhID";
-            ddliNhomCon.DataBind();
+            ddliType.DataSource = GetListConstants.ChiTietGiaoTrinh_iType_GLC();
+            ddliType.DataTextField = "Values";
+            ddliType.DataValueField = "Values";
+            ddliType.DataBind();
 
             ddliTrangThai.DataSource = GetListConstants.ChiTietGiaoTrinh_iTrangThai_GLC();
-            ddliTrangThai.DataTextField = "Value";
+            ddliTrangThai.DataTextField = "Values";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
         }

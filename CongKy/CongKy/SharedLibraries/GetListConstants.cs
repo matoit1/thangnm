@@ -10,16 +10,26 @@ namespace CongKy.SharedLibraries
     public class GetListConstants
     {
         #region "I. Constants - GetTextConstants - GetListConstants"
-        
-        /// <summary> I.5. HoaDon_iTrangThai_GLC (Trạng Thái Hóa Đơn) </summary>
+
+        /// <summary> I.5.  ChiTietGiaoTrinh_iTrangThai_GLC (Trạng Thái Chi Tiết Giáo Trình) </summary>
         /// <returns></returns>
-        public static SortedList HoaDon_iTrangThai_GLC()
+        public static SortedList ChiTietGiaoTrinh_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(HoaDon_iTrangThai_C.Chua_Kiem_Tra, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Chua_Kiem_Tra));
-            output.Add(HoaDon_iTrangThai_C.Chua_Giao_Hang, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Chua_Giao_Hang));
-            output.Add(HoaDon_iTrangThai_C.Da_Giao_Hang, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Da_Giao_Hang));
-            output.Add(HoaDon_iTrangThai_C.Huy, GetTextConstants.HoaDon_iTrangThai_GTC(HoaDon_iTrangThai_C.Huy));
+            output.Add(ChiTietGiaoTrinh_iTrangThai_C.Mo, GetTextConstants.ChiTietGiaoTrinh_iTrangThai_GTC(ChiTietGiaoTrinh_iTrangThai_C.Mo));
+            output.Add(ChiTietGiaoTrinh_iTrangThai_C.Khoa, GetTextConstants.ChiTietGiaoTrinh_iTrangThai_GTC(ChiTietGiaoTrinh_iTrangThai_C.Khoa));
+            return output;
+        }
+
+        /// <summary> I.5.  ChiTietGiaoTrinh_iType_GLC (Loại Chi Tiết Giáo Trình) </summary>
+        /// <returns></returns>
+        public static SortedList ChiTietGiaoTrinh_iType_GLC()
+        {
+            SortedList output = new SortedList();
+            output.Add(ChiTietGiaoTrinh_iType_C.Video, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Video));
+            output.Add(ChiTietGiaoTrinh_iType_C.Ebook, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Ebook));
+            output.Add(ChiTietGiaoTrinh_iType_C.Software, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Software));
+            output.Add(ChiTietGiaoTrinh_iType_C.Other, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Other));
             return output;
         }
 
