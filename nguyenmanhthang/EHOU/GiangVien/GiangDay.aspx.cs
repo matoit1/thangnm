@@ -44,7 +44,7 @@ namespace EHOU.GiangVien
                         tblSubjectEO _tblSubjectEO = new tblSubjectEO();
                         _tblSubjectEO.PK_sSubject = Request.QueryString["PK_sSubject"];
                         _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(_tblSubjectEO);
-                        if (Session["account_gv"].ToString() != _tblSubjectEO.FK_sTeacher)
+                        if (Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString() != _tblSubjectEO.FK_sTeacher)
                         {
                             Response.Redirect("~/Access_Denied.aspx");
                         }
@@ -94,14 +94,14 @@ namespace EHOU.GiangVien
         private void LoadInfo(){
             try
             {
-                UploadFileUC1.sTendangnhapGV = Session["account_gv"].ToString();
+                UploadFileUC1.sTendangnhapGV = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
                 UploadFileUC1.sTypeUpload = Messages.Ebook;
                 UploadFileUC1.lblTitle.Text = Messages.Upload_Hoc_Lieu;
 
-                UploadFileUC2.sTendangnhapGV = Session["account_gv"].ToString();
+                UploadFileUC2.sTendangnhapGV = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
                 UploadFileUC2.sTypeUpload = Messages.Video;
                 UploadFileUC2.lblTitle.Text = Messages.UpLoad_Video_Giang_Day;
-                Hoc_LieuUC1.BindData_HocLieu(Session["account_gv"].ToString());
+                Hoc_LieuUC1.BindData_HocLieu(Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString());
             }
             catch (Exception ex)
             {

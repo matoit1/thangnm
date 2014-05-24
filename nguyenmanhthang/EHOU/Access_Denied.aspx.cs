@@ -11,7 +11,7 @@ namespace EHOU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Write("Số người đang online: " + Application["So_luot_truy_cap"]);
         }
     }
 }
