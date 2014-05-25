@@ -61,8 +61,8 @@ namespace HaMy
             catch { cboFK_iDoiTac.SelectedIndex = 0; }
             txtsNoiDung.Text = Convert.ToString(_tblCuocHenEO.sNoiDung);
             txtsDiaDiem.Text = Convert.ToString(_tblCuocHenEO.sDiaDiem);
-            dpktNgayGioBatDau.Text = (_tblCuocHenEO.tNgayGioBatDau == DateTime.MinValue) ? DateTime.Now.ToString() : Convert.ToString(_tblCuocHenEO.tNgayGioBatDau);
-            dpktNgayGioKetThuc.Text = (_tblCuocHenEO.tNgayGioKetThuc == DateTime.MinValue) ? DateTime.Now.ToString() : Convert.ToString(_tblCuocHenEO.tNgayGioKetThuc);
+            dpktNgayGioBatDauDate.Text = (_tblCuocHenEO.tNgayGioBatDau == DateTime.MinValue) ? DateTime.Now.ToString() : Convert.ToString(_tblCuocHenEO.tNgayGioBatDau);
+            dpktNgayGioKetThucDate.Text = (_tblCuocHenEO.tNgayGioKetThuc == DateTime.MinValue) ? DateTime.Now.ToString() : Convert.ToString(_tblCuocHenEO.tNgayGioKetThuc);
             try { cboiTrangThai.SelectedValue = Convert.ToString(_tblCuocHenEO.iTrangThai); }
             catch { cboiTrangThai.SelectedIndex = 0; }
         }
@@ -79,8 +79,8 @@ namespace HaMy
                 catch { cboFK_iDoiTac.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblCuocHenEO.FK_iDoiTac = 0; }
                 _tblCuocHenEO.sNoiDung = Convert.ToString(txtsNoiDung.Text);
                 _tblCuocHenEO.sDiaDiem = Convert.ToString(txtsDiaDiem.Text);
-                _tblCuocHenEO.tNgayGioBatDau = Convert.ToDateTime(dpktNgayGioBatDau.Text);
-                _tblCuocHenEO.tNgayGioKetThuc = Convert.ToDateTime(dpktNgayGioKetThuc.Text);
+                _tblCuocHenEO.tNgayGioBatDau = Convert.ToDateTime(dpktNgayGioBatDauDate.Value.ToShortDateString() + " " + dpktNgayGioBatDauTime.Value.ToShortTimeString());
+                _tblCuocHenEO.tNgayGioKetThuc = Convert.ToDateTime(dpktNgayGioKetThucDate.Value.ToShortDateString() + " " + dpktNgayGioKetThucTime.Value.ToShortTimeString());
                 try { _tblCuocHenEO.iTrangThai = Convert.ToInt16(cboiTrangThai.SelectedValue); }
                 catch { cboiTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblCuocHenEO.iTrangThai = 0; }
                 return _tblCuocHenEO;
@@ -274,6 +274,16 @@ namespace HaMy
             BindDataDetail(_tblCuocHenEO);
         }
         #endregion
+
+        private void tCountDown_Tick(object sender, EventArgs e)
+        {
+            lblNow.Text = DateTime.Now.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tCountDown.Enabled = true;
+        }
 
         
     }
