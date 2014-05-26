@@ -196,8 +196,8 @@
     <Content Include="UserControl\RegisterUC.ascx" />
     <Content Include="UserControl\tblGiaoTrinh_DetailUC.ascx" />
     <Content Include="UserControl\tblGiaoTrinh_ListUC.ascx" />
-    <Content Include="UserControl\tbltblChiTietGiaoTrinh_DetailUC.ascx" />
-    <Content Include="UserControl\tbltblChiTietGiaoTrinh_ListUC.ascx" />
+    <Content Include="UserControl\tblChiTietGiaoTrinh_DetailUC.ascx" />
+    <Content Include="UserControl\tblChiTietGiaoTrinh_ListUC.ascx" />
     <Content Include="UserControl\tblDangKyDayHoc_DetailUC.ascx" />
     <Content Include="UserControl\tblDangKyDayHoc_ListUC.ascx" />
     <Content Include="UserControl\tblTaiKhoan_DetailUC.ascx" />
@@ -305,19 +305,19 @@
     <Compile Include="UserControl\tblGiaoTrinh_ListUC.ascx.designer.cs">
       <DependentUpon>tblGiaoTrinh_ListUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\tbltblChiTietGiaoTrinh_DetailUC.ascx.cs">
-      <DependentUpon>tbltblChiTietGiaoTrinh_DetailUC.ascx</DependentUpon>
+    <Compile Include="UserControl\tblChiTietGiaoTrinh_DetailUC.ascx.cs">
+      <DependentUpon>tblChiTietGiaoTrinh_DetailUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\tbltblChiTietGiaoTrinh_DetailUC.ascx.designer.cs">
-      <DependentUpon>tbltblChiTietGiaoTrinh_DetailUC.ascx</DependentUpon>
+    <Compile Include="UserControl\tblChiTietGiaoTrinh_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblChiTietGiaoTrinh_DetailUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\tbltblChiTietGiaoTrinh_ListUC.ascx.cs">
-      <DependentUpon>tbltblChiTietGiaoTrinh_ListUC.ascx</DependentUpon>
+    <Compile Include="UserControl\tblChiTietGiaoTrinh_ListUC.ascx.cs">
+      <DependentUpon>tblChiTietGiaoTrinh_ListUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControl\tbltblChiTietGiaoTrinh_ListUC.ascx.designer.cs">
-      <DependentUpon>tbltblChiTietGiaoTrinh_ListUC.ascx</DependentUpon>
+    <Compile Include="UserControl\tblChiTietGiaoTrinh_ListUC.ascx.designer.cs">
+      <DependentUpon>tblChiTietGiaoTrinh_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\tblDangKyDayHoc_DetailUC.ascx.cs">
       <DependentUpon>tblDangKyDayHoc_DetailUC.ascx</DependentUpon>

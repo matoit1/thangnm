@@ -13,18 +13,25 @@ using CongKy.EntityObject;
 
 namespace CongKy.UserControl
 {
-    public partial class tblThanhToan_ListUC : System.Web.UI.UserControl
+    public partial class tblMonHoc_ListUC : System.Web.UI.UserControl
     {
         #region "Properties & Event"
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
-        private Int16 _PK_iThanhToanID;
-        public Int16 PK_iThanhToanID
+        private Int32 _PK_iMonHocID;
+        public Int32 PK_iMonHocID
         {
-            get { return this._PK_iThanhToanID; }
-            set { _PK_iThanhToanID = value; }
+            get { return this._PK_iMonHocID; }
+            set { _PK_iMonHocID = value; }
+        }
+
+        private String _sTenMonHoc;
+        public String sTenMonHoc
+        {
+            get { return this._sTenMonHoc; }
+            set { _sTenMonHoc = value; }
         }
 
         private Int16 _iTrangThai;
@@ -56,24 +63,24 @@ namespace CongKy.UserControl
             DataSet dsBaiViet = new DataSet();
             try
             {
-                tblGiaoTrinhEO _tblThanhToanEO = new tblGiaoTrinhEO();
-                _tblThanhToanEO.iTrangThai = iTrangThai;
-                dsBaiViet = tblThanhToanDAO.ThanhToan_SelectListByiTrangThai(_tblThanhToanEO);
+                tblMonHocEO _tblMonHocEO = new tblMonHocEO();
+                _tblMonHocEO.iTrangThai = iTrangThai;
+                dsBaiViet = tblMonHocDAO.MonHoc_SelectListByiTrangThai(_tblMonHocEO);
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
-                    PK_iThanhToanID = topic.Field<Int16>("PK_iThanhToanID"),
-                    sTenThanhToan = topic.Field<string>("sTenThanhToan"),
-                    iTrangThai = GetTextConstants.ThanhToan_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
+                    PK_iMonHocID = topic.Field<Int32>("PK_iMonHocID"),
+                    sTenmonHoc = topic.Field<string>("sTenMonHoc"),
+                    iTrangThai = GetTextConstants.MonHoc_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.PK_iThanhToanID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.PK_iMonHocID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -81,7 +88,7 @@ namespace CongKy.UserControl
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.sTenThanhToan.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.sTenMonHoc.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -108,7 +115,7 @@ namespace CongKy.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                this.PK_iThanhToanID = Convert.ToInt16(e.CommandArgument);
+                this.PK_iMonHocID = Convert.ToInt16(e.CommandArgument);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);
@@ -161,7 +168,7 @@ namespace CongKy.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "ASC";
             }
-            DataSet dsBaiViet = tblThanhToanDAO.ThanhToan_SelectList();
+            DataSet dsBaiViet = tblMonHocDAO.MonHoc_SelectList();
             DataView sortedView = new DataView(dsBaiViet.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;

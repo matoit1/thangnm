@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblMonHoc_DetailUC.ascx.cs" Inherits="CongKy.UserControl.tblThanhToan_DetailUC" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblMonHoc_DetailUC.ascx.cs" Inherits="CongKy.UserControl.tblMonHoc_DetailUC" %>
 <link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
 <script src="../Scripts/calendar1.js" type="text/javascript"></script>  
 <script src="../Scripts/calendar2.js" type="text/javascript"></script>

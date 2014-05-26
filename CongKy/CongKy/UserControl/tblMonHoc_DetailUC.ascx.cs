@@ -10,7 +10,7 @@ using CongKy.DataAccessObject;
 
 namespace CongKy.UserControl
 {
-    public partial class tblThanhToan_DetailUC : System.Web.UI.UserControl
+    public partial class tblMonHoc_DetailUC : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -134,9 +134,9 @@ namespace CongKy.UserControl
             lblMsg.Text = "";
             try
             {
-                tblEO _tblHoaDonEO = new tblHoaDonEO();
-                _tblHoaDonEO.FK_iThanhToanID = getObject().PK_iMonHocID;
-                if (tblDangKyDayHocDAO.HoaDon_CheckExists_FK_iThanhToanID(_tblHoaDonEO) == false)
+                tblMonHocEO _tblMonHocEO = new tblMonHocEO();
+                _tblMonHocEO.PK_iMonHocID = getObject().PK_iMonHocID;
+                if (tblMonHocDAO.MonHoc_CheckExists_PK_iMonHocID(_tblMonHocEO) == false)
                 {
                     if (tblMonHocDAO.MonHoc_Delete(getObject()) == true)
                     {

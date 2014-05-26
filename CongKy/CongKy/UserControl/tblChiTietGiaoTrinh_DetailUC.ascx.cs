@@ -81,10 +81,10 @@ namespace CongKy.UserControl
 
         public bool CheckInput()
         {
-            if (string.IsNullOrEmpty(txtsTenNhom.Text) == true)
+            if (string.IsNullOrEmpty(txtsTenBaiHoc.Text) == true)
             {
-                lblsTenNhom.Text = Messages.Khong_Duoc_De_Trong;
-                txtsTenNhom.Focus();
+                lblsTenBaiHoc.Text = Messages.Khong_Duoc_De_Trong;
+                txtsTenBaiHoc.Focus();
                 return false;
             }
             return true;
@@ -93,9 +93,11 @@ namespace CongKy.UserControl
         public void ClearMessages()
         {
             //lblMsg.Text = "";
-            lblPK_iChiTietGiaoTrinhID.Text = "";
-            lbliNhomCon.Text = "";
-            lblsTenNhom.Text = "";
+            lblPK_iGiaoTrinhID.Text = "";
+            lblsTenBaiHoc.Text = "";
+            lblsThongTin.Text = "";
+            lbliType.Text = "";
+            lbltNgayCapNhat.Text = "";
             lbliTrangThai.Text = "";
         }
 
@@ -108,7 +110,7 @@ namespace CongKy.UserControl
             {
               if (CheckInput() == true)
                {
-                if (tblGiaoTrinhDAO.ChiTietGiaoTrinh_Insert(getObject()) == true)
+                if (tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_Insert(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
                     ClearMessages();
@@ -135,7 +137,7 @@ namespace CongKy.UserControl
             {
               if (CheckInput() == true)
                {
-                if (tblGiaoTrinhDAO.ChiTietGiaoTrinh_Update(getObject()) == true)
+                if (tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_Update(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
                     ClearMessages();
@@ -158,11 +160,11 @@ namespace CongKy.UserControl
             lblMsg.Text = "";
             try
             {
-                tblMonHocEO _tblSanPhamEO = new tblMonHocEO();
-                _tblSanPhamEO.FK_iChiTietGiaoTrinhID = getObject().PK_iChiTietGiaoTrinhID;
-                if (tblMonHocDAO.SanPham_CheckExists_FK_iChiTietGiaoTrinhID(_tblSanPhamEO) == false)
-                {
-                    if (tblGiaoTrinhDAO.ChiTietGiaoTrinh_Delete(getObject()) == true)
+                //tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
+                //_tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID = getObject().PK_iGiaoTrinhID;
+                //if (tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_CheckExists_PK_iGiaoTrinhID(_tblChiTietGiaoTrinhEO) == false)
+                //{
+                    if (tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_Delete(getObject()) == true)
                     {
                         lblMsg.Text = Messages.Xoa_Thanh_Cong;
                         ClearMessages();
@@ -173,11 +175,11 @@ namespace CongKy.UserControl
                     {
                         lblMsg.Text = Messages.Xoa_That_Bai;
                     }
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Ma_Nhom_San_Pham_Da_Dung_Trong_San_Pham;
-                }
+                //}
+                //else
+                //{
+                //    lblMsg.Text = Messages.Ma_Nhom_San_Pham_Da_Dung_Trong_San_Pham;
+                //}
             }
             catch (Exception ex)
             {

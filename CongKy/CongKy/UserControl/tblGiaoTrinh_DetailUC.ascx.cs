@@ -12,13 +12,13 @@ namespace CongKy.UserControl
 {
     public partial class tblChiTietHoaDon_DetailUC : System.Web.UI.UserControl
     {
-        #region "Properties & Event"
-        public Int16 iType
-        {
-            get { return (Int16)ViewState["iType"]; }
-            set { ViewState["iType"] = value; }
-        }
-        #endregion
+        //#region "Properties & Event"
+        //public Int16 iType
+        //{
+        //    get { return (Int16)ViewState["iType"]; }
+        //    set { ViewState["iType"] = value; }
+        //}
+        //#endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,28 +29,24 @@ namespace CongKy.UserControl
             }
         }
 
-        public void BindDataDetail(tblChiTietGiaoTrinhEO _tblChiTietHoaDonEO)
+        public void BindDataDetail(tblGiaoTrinhEO _tblGiaoTrinhEO)
         {
-            try { ddlFK_lHoaDonID.SelectedValue = Convert.ToString(_tblChiTietHoaDonEO.FK_lHoaDonID); }
-            catch { ddlFK_lHoaDonID.SelectedIndex = 0; }
-            try { ddlFK_sSanPhamID.SelectedValue = Convert.ToString(_tblChiTietHoaDonEO.FK_sSanPhamID); }
-            catch { ddlFK_sSanPhamID.SelectedIndex = 0; }
-            txtlGiaBan.Text = Convert.ToString(_tblChiTietHoaDonEO.lGiaBan);
-            txtiSoLuong.Text = Convert.ToString(_tblChiTietHoaDonEO.iSoLuong);
+            try { ddlFK_iMonHocID.SelectedValue = Convert.ToString(_tblGiaoTrinhEO.FK_iMonHocID); }
+            catch { ddlFK_iMonHocID.SelectedIndex = 0; }
+            try { ddlFK_iGiaoTrinhID.SelectedValue = Convert.ToString(_tblGiaoTrinhEO.FK_iGiaoTrinhID); }
+            catch { ddlFK_iGiaoTrinhID.SelectedIndex = 0; }
         }
 
-        private tblChiTietGiaoTrinhEO getObject()
+        private tblGiaoTrinhEO getObject()
         {
             try
             {
-                tblChiTietGiaoTrinhEO _tblChiTietHoaDonEO = new tblChiTietGiaoTrinhEO();
-                try { _tblChiTietHoaDonEO.FK_lHoaDonID = Convert.ToInt64(ddlFK_lHoaDonID.SelectedValue); }
-                catch { lblFK_lHoaDonID.Text = Messages.Ma_Khong_Hop_Le; }
-                try { _tblChiTietHoaDonEO.FK_sSanPhamID = Convert.ToString(ddlFK_sSanPhamID.SelectedValue); }
-                catch { lblFK_sSanPhamID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblChiTietHoaDonEO.FK_sSanPhamID = ""; }
-                _tblChiTietHoaDonEO.lGiaBan = Convert.ToInt64(txtlGiaBan.Text);
-                _tblChiTietHoaDonEO.iSoLuong = Convert.ToInt16(txtiSoLuong.Text);
-                return _tblChiTietHoaDonEO;
+                tblGiaoTrinhEO _tblGiaoTrinhEO = new tblGiaoTrinhEO();
+                try { _tblGiaoTrinhEO.FK_iMonHocID = Convert.ToInt32(ddlFK_iMonHocID.SelectedValue); }
+                catch { lblFK_iMonHocID.Text = Messages.Ma_Khong_Hop_Le; }
+                try { _tblGiaoTrinhEO.FK_iGiaoTrinhID = Convert.ToInt32(ddlFK_iGiaoTrinhID.SelectedValue); }
+                catch { lblFK_iGiaoTrinhID.Text = Messages.Ma_Khong_Hop_Le; }
+                return _tblGiaoTrinhEO;
             }
             catch (Exception)
             {
@@ -60,10 +56,10 @@ namespace CongKy.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddlFK_lHoaDonID.DataSource = tblDangKyDayHocDAO.HoaDon_SelectList();
-            ddlFK_lHoaDonID.DataTextField = "PK_lHoaDonID";
-            ddlFK_lHoaDonID.DataValueField = "PK_lHoaDonID";
-            ddlFK_lHoaDonID.DataBind();
+            ddlFK_iMonHocID.DataSource = tblMonHocDAO.MonHoc_SelectList();
+            ddlFK_iMonHocID.DataTextField = "FK_iMonHocID";
+            ddlFK_iMonHocID.DataValueField = "FK_iMonHocID";
+            ddlFK_iMonHocID.DataBind();
 
             ddlFK_sSanPhamID.DataSource = tblMonHocDAO.SanPham_SelectList();
             ddlFK_sSanPhamID.DataTextField = "sTenSanPham";
