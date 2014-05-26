@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Shared_Libraries;
 using Newtonsoft.Json.Linq;
+using EntityObject;
 
 namespace EHOU.Usercontrol
 {
@@ -17,11 +18,11 @@ namespace EHOU.Usercontrol
             {
                 ClearMessages();
                 loadDataToDropDownList();
-                BindDataDetail(Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value));
+                //BindDataDetail(Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value));
             }
         }
 
-        public void BindDataDetail(JObject _JObject)
+        public void BindDataDetail(tblAccountEO _tblAccountEO)
         {
             //txtscreenName.Text = _JObject["screenName"].ToString();
             //txtusername.Text = _JObject["username"].ToString();
@@ -39,7 +40,7 @@ namespace EHOU.Usercontrol
             ddliType.DataBind();
         }
 
-        private void ClearMessages()
+        public void ClearMessages()
         {
             //lblMsg.Text = "";
             //lblscreenName.Text = "";
