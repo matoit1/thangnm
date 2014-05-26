@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EHOU.Usercontrol {
+namespace EHOU.UserControl {
     
     
-    public partial class tblAccount_DetailUC {
+    public partial class tblSubject_DetailUC {
         
         /// <summary>
         /// lblTitle control.
@@ -31,40 +31,40 @@ namespace EHOU.Usercontrol {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtPK_sUsername control.
+        /// txtPK_sSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPK_sUsername;
+        protected global::System.Web.UI.WebControls.TextBox txtPK_sSubject;
         
         /// <summary>
-        /// lblPK_sUsername control.
+        /// lblPK_sSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPK_sUsername;
+        protected global::System.Web.UI.WebControls.Label lblPK_sSubject;
         
         /// <summary>
-        /// txtsPassword control.
+        /// ddlFK_sTeacher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsPassword;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_sTeacher;
         
         /// <summary>
-        /// lblsPassword control.
+        /// lblFK_sTeacher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsPassword;
+        protected global::System.Web.UI.WebControls.Label lblFK_sTeacher;
         
         /// <summary>
         /// txtsName control.
@@ -85,42 +85,6 @@ namespace EHOU.Usercontrol {
         protected global::System.Web.UI.WebControls.Label lblsName;
         
         /// <summary>
-        /// txtsEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsEmail;
-        
-        /// <summary>
-        /// lblsEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsEmail;
-        
-        /// <summary>
-        /// ddliType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddliType;
-        
-        /// <summary>
-        /// lbliType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliType;
-        
-        /// <summary>
         /// ddliStatus control.
         /// </summary>
         /// <remarks>
@@ -137,5 +101,41 @@ namespace EHOU.Usercontrol {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbliStatus;
+        
+        /// <summary>
+        /// btnInsert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnInsert;
+        
+        /// <summary>
+        /// btnUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
+        /// btnReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReset;
     }
 }

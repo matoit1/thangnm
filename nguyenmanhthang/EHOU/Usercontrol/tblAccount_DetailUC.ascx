@@ -3,7 +3,7 @@
     <table>
         <tr>
             <td></td>
-            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Giảng viên"></asp:Label></td>
+            <td align="center" ><asp:Label ID="lblTitle" runat="server" Text="Tài khoản"></asp:Label></td>
             <td></td>
         </tr>
         <tr>
@@ -12,37 +12,34 @@
             <td></td>
         </tr>
         <tr>
-            <td>Họ và tên: </td>
-            <td><asp:TextBox ID="txtscreenName" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblscreenName" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
             <td>Tên đăng nhập: </td>
-            <td><asp:TextBox ID="txtusername" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
-            <td><asp:Label ID="lblusername" runat="server"></asp:Label></td>
+            <td><asp:TextBox ID="txtPK_sUsername" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
+            <td><asp:Label ID="lblPK_sUsername" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Mật khẩu: </td>
-            <td><asp:TextBox ID="txtpassword" runat="server" Width="400px" TextMode="Password"></asp:TextBox></td>
-            <td><asp:Label ID="lblpassword" runat="server"></asp:Label></td>
+            <td><asp:TextBox ID="txtsPassword" runat="server" Width="400px" TextMode="Password"></asp:TextBox></td>
+            <td><asp:Label ID="lblsPassword" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Họ và tên: </td>
+            <td><asp:TextBox ID="txtsName" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsName" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Địa chỉ Email: </td>
-            <td><asp:TextBox ID="txtemail" runat="server" Width="400px"></asp:TextBox></td>
-            <td><asp:Label ID="lblemail" runat="server"></asp:Label></td>
+            <td><asp:TextBox ID="txtsEmail" runat="server" Width="400px"></asp:TextBox></td>
+            <td><asp:Label ID="lblsEmail" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Giới tính: </td>
-            <td>
-                <asp:RadioButton ID="rbtnmale" runat="server" Text="Nam" GroupName="gt" />
-                <asp:RadioButton ID="rbtnfemale" runat="server" Text="Nữ"  GroupName="gt"/>
-            </td>
-            <td><asp:Label ID="lblmale" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td>Quyền hạn: </td>
+            <td>Loại tài khoản: </td>
             <td><asp:DropDownList ID="ddliType" runat="server" Width="405px" Enabled ="false"></asp:DropDownList></td>
             <td><asp:Label ID="lbliType" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Trạng thái: </td>
+            <td><asp:DropDownList ID="ddliStatus" runat="server" Width="405px" Enabled ="false"></asp:DropDownList></td>
+            <td><asp:Label ID="lbliStatus" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td></td>

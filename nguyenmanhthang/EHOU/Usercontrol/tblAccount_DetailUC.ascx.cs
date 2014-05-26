@@ -23,12 +23,12 @@ namespace EHOU.Usercontrol
 
         public void BindDataDetail(JObject _JObject)
         {
-            txtscreenName.Text = _JObject["screenName"].ToString();
-            txtusername.Text = _JObject["username"].ToString();
-            txtpassword.Text = "******";
-            txtemail.Text = _JObject["email"].ToString();
-            rbtnmale.Checked = Convert.ToBoolean(_JObject["male"]);
-            ddliType.SelectedValue = _JObject["type"].ToString();
+            //txtscreenName.Text = _JObject["screenName"].ToString();
+            //txtusername.Text = _JObject["username"].ToString();
+            //txtpassword.Text = "******";
+            //txtemail.Text = _JObject["email"].ToString();
+            //rbtnmale.Checked = Convert.ToBoolean(_JObject["male"]);
+            //ddliType.SelectedValue = _JObject["type"].ToString();
         }
 
         public void loadDataToDropDownList()
@@ -41,13 +41,13 @@ namespace EHOU.Usercontrol
 
         private void ClearMessages()
         {
-            lblMsg.Text = "";
-            lblscreenName.Text = "";
-            lblusername.Text = "";
-            lblpassword.Text = "";
-            lblemail.Text = "";
-            lblmale.Text = "";
-            lbliType.Text = "";
+            //lblMsg.Text = "";
+            //lblscreenName.Text = "";
+            //lblusername.Text = "";
+            //lblpassword.Text = "";
+            //lblemail.Text = "";
+            //lblmale.Text = "";
+            //lbliType.Text = "";
         }
     }
 }

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EHOU.Usercontrol {
+namespace EHOU.UserControl {
     
     
-    public partial class tblAccount_DetailUC {
+    public partial class tblPart_DetailUC {
         
         /// <summary>
         /// lblTitle control.
@@ -31,94 +31,130 @@ namespace EHOU.Usercontrol {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtPK_sUsername control.
+        /// txtPK_iPart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPK_sUsername;
+        protected global::System.Web.UI.WebControls.TextBox txtPK_iPart;
         
         /// <summary>
-        /// lblPK_sUsername control.
+        /// lblPK_iPart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPK_sUsername;
+        protected global::System.Web.UI.WebControls.Label lblPK_iPart;
         
         /// <summary>
-        /// txtsPassword control.
+        /// ddlFK_sSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsPassword;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_sSubject;
         
         /// <summary>
-        /// lblsPassword control.
+        /// lblFK_sSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsPassword;
+        protected global::System.Web.UI.WebControls.Label lblFK_sSubject;
         
         /// <summary>
-        /// txtsName control.
+        /// txtsTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsName;
+        protected global::System.Web.UI.WebControls.TextBox txtsTitle;
         
         /// <summary>
-        /// lblsName control.
+        /// lblsTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsName;
+        protected global::System.Web.UI.WebControls.Label lblsTitle;
         
         /// <summary>
-        /// txtsEmail control.
+        /// txtsLinkVideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtsLinkVideo;
         
         /// <summary>
-        /// lblsEmail control.
+        /// lblsLinkVideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsEmail;
+        protected global::System.Web.UI.WebControls.Label lblsLinkVideo;
         
         /// <summary>
-        /// ddliType control.
+        /// txtsBlackList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddliType;
+        protected global::System.Web.UI.WebControls.TextBox txtsBlackList;
         
         /// <summary>
-        /// lbliType control.
+        /// lblsBlackList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliType;
+        protected global::System.Web.UI.WebControls.Label lblsBlackList;
+        
+        /// <summary>
+        /// txttDateTimeStart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttDateTimeStart;
+        
+        /// <summary>
+        /// lbltDateTimeStart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltDateTimeStart;
+        
+        /// <summary>
+        /// txttDateTimeEnd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttDateTimeEnd;
+        
+        /// <summary>
+        /// lbltDateTimeEnd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltDateTimeEnd;
         
         /// <summary>
         /// ddliStatus control.
@@ -137,5 +173,41 @@ namespace EHOU.Usercontrol {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbliStatus;
+        
+        /// <summary>
+        /// btnInsert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnInsert;
+        
+        /// <summary>
+        /// btnUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
+        /// btnReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReset;
     }
 }
