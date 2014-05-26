@@ -9,13 +9,13 @@ using DataAccessObject;
 
 namespace DataAccessObject
 {
-    public class tblDetailDAO
+    public class tblSubject_StudentDAO
     {
         #region "CheckExists"
-        /// <summary> 1. Detail_CheckExists </summary>
-        /// <param name="_tblDetailEO"></param>
+        /// <summary> 1. Subject_Student_CheckExists </summary>
+        /// <param name="_tblSubject_StudentEO"></param>
         /// <returns></returns>
-        public static bool Detail_CheckExists(tblDetailEO _tblDetailEO)
+        public static bool Subject_Student_CheckExists(tblSubject_StudentEO _tblSubject_StudentEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -23,11 +23,10 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblDetail_CheckExists", conn);
+                    SqlCommand cmd = new SqlCommand("tblSubject_Student_CheckExists", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_lCaHoc", _tblDetailEO.PK_lCaHoc));
-                    cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblDetailEO.FK_sSubject));
-                    cmd.Parameters.Add(new SqlParameter("@FK_sStudent", _tblDetailEO.FK_sStudent));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblSubject_StudentEO.FK_sSubject));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sStudent", _tblSubject_StudentEO.FK_sStudent));
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -46,23 +45,21 @@ namespace DataAccessObject
         #endregion
 
         #region "Insert, Update, Delete"
-        /// <summary> 2. Detail_Insert </summary>
-        /// <param name="_tblDetailEO"></param>
+        /// <summary> 2. Subject_Student_Insert </summary>
+        /// <param name="_tblSubject_StudentEO"></param>
         /// <returns></returns>
-        public static bool Detail_Insert(tblDetailEO _tblDetailEO)
+        public static bool Subject_Student_Insert(tblSubject_StudentEO _tblSubject_StudentEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblDetail_Insert", conn);
+                    SqlCommand cmd = new SqlCommand("tblSubject_Student_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblDetailEO.FK_sSubject));
-                    cmd.Parameters.Add(new SqlParameter("@FK_sStudent", _tblDetailEO.FK_sStudent));
-                    cmd.Parameters.Add(new SqlParameter("@sTitle", _tblDetailEO.sTitle));
-                    cmd.Parameters.Add(new SqlParameter("@tDateStart", _tblDetailEO.tDateStart));
-                    cmd.Parameters.Add(new SqlParameter("@tDateEnd", _tblDetailEO.tDateEnd));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblSubject_StudentEO.FK_sSubject));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sStudent", _tblSubject_StudentEO.FK_sStudent));
+                    cmd.Parameters.Add(new SqlParameter("@iStatus", _tblSubject_StudentEO.iStatus));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -75,24 +72,21 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 3. Detail_Update </summary>
-        /// <param name="_tblDetailEO"></param>
+        /// <summary> 3. Subject_Student_Update </summary>
+        /// <param name="_tblSubject_StudentEO"></param>
         /// <returns></returns>
-        public static bool Detail_Update(tblDetailEO _tblDetailEO)
+        public static bool Subject_Student_Update(tblSubject_StudentEO _tblSubject_StudentEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblDetail_Update", conn);
+                    SqlCommand cmd = new SqlCommand("tblSubject_Student_Update", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_lCaHoc", _tblDetailEO.PK_lCaHoc));
-                    cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblDetailEO.FK_sSubject));
-                    cmd.Parameters.Add(new SqlParameter("@FK_sStudent", _tblDetailEO.FK_sStudent));
-                    cmd.Parameters.Add(new SqlParameter("@sTitle", _tblDetailEO.sTitle));
-                    cmd.Parameters.Add(new SqlParameter("@tDateStart", _tblDetailEO.tDateStart));
-                    cmd.Parameters.Add(new SqlParameter("@tDateEnd", _tblDetailEO.tDateEnd));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblSubject_StudentEO.FK_sSubject));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sStudent", _tblSubject_StudentEO.FK_sStudent));
+                    cmd.Parameters.Add(new SqlParameter("@iStatus", _tblSubject_StudentEO.iStatus));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -105,21 +99,20 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 4. Detail_Delete </summary>
-        /// <param name="_tblDetailEO"></param>
+        /// <summary> 4. Subject_Student_Delete </summary>
+        /// <param name="_tblSubject_StudentEO"></param>
         /// <returns></returns>
-        public static bool Detail_Delete(tblDetailEO _tblDetailEO)
+        public static bool Subject_Student_Delete(tblSubject_StudentEO _tblSubject_StudentEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblDetail_Delete", conn);
+                    SqlCommand cmd = new SqlCommand("tblSubject_Student_Delete", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_lCaHoc", _tblDetailEO.PK_lCaHoc));
-                    cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblDetailEO.FK_sSubject));
-                    cmd.Parameters.Add(new SqlParameter("@FK_sStudent", _tblDetailEO.FK_sStudent));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblSubject_StudentEO.FK_sSubject));
+                    cmd.Parameters.Add(new SqlParameter("@FK_sStudent", _tblSubject_StudentEO.FK_sStudent));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -132,19 +125,19 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 5. Detail_DeleteList </summary>
+        /// <summary> 5. Subject_Student_DeleteList </summary>
         /// <param name="_ListPK_sMaMonhoc"></param>
         /// <returns></returns>
-        public static bool Detail_DeleteList(String _ListPK_lDetail)
+        public static bool Subject_Student_DeleteList(String _ListPK_lSubject_Student)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblDetail_DeleteList", conn);
+                    SqlCommand cmd = new SqlCommand("tblSubject_Student_DeleteList", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@ListPK_lDetail", _ListPK_lDetail));
+                    cmd.Parameters.Add(new SqlParameter("@ListPK_lSubject_Student", _ListPK_lSubject_Student));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -159,30 +152,27 @@ namespace DataAccessObject
         #endregion
 
         #region "Select"
-        /// <summary> 6. Detail_SelectItem </summary>
-        /// <param name="_tblDetailEO"></param>
+        /// <summary> 6. Subject_Student_SelectItem </summary>
+        /// <param name="_tblSubject_StudentEO"></param>
         /// <returns></returns>
-        public static tblDetailEO Detail_SelectItem(tblDetailEO _tblDetailEO)
+        public static tblSubject_StudentEO Subject_Student_SelectItem(tblSubject_StudentEO _tblSubject_StudentEO)
         {
-            tblDetailEO oOutput = new tblDetailEO();
+            tblSubject_StudentEO oOutput = new tblSubject_StudentEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblDetail_SelectItem", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSubject_Student_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lCaHoc", _tblDetailEO.PK_lCaHoc));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSubject", _tblDetailEO.FK_sSubject));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sStudent", _tblDetailEO.FK_sStudent));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTitle", _tblDetailEO.sTitle));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@tDateStart", _tblDetailEO.tDateStart));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@tDateEnd", _tblDetailEO.tDateEnd));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSubject", _tblSubject_StudentEO.FK_sSubject));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sStudent", _tblSubject_StudentEO.FK_sStudent));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iStatus", _tblSubject_StudentEO.iStatus));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
-                    oOutput = DataSet2Object.Detail(ds);
+                    oOutput = DataSet2Object.Subject_Student(ds);
                     return oOutput;
                 }
                 catch (Exception)
@@ -193,10 +183,10 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 7. SelectByFK_sSubject </summary>
-        /// <param name="_tblDetailEO"></param>
+        /// <summary> 7. Subject_Student_SelectByFK_sSubject </summary>
+        /// <param name="_tblSubject_StudentEO"></param>
         /// <returns></returns>
-        public static DataSet SelectByFK_sSubject_FK_sStudent(tblDetailEO _tblDetailEO)
+        public static DataSet Subject_Student_SelectByFK_sSubject(tblSubject_StudentEO _tblSubject_StudentEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -204,10 +194,9 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblDetail_SelectByFK_sSubject_FK_sStudent", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSubject_Student_SelectByFK_sSubject", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSubject", _tblDetailEO.FK_sSubject));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sStudent", _tblDetailEO.FK_sStudent));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSubject", _tblSubject_StudentEO.FK_sSubject));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
@@ -222,9 +211,9 @@ namespace DataAccessObject
         }
 
         /// <summary> 7. SelectByFK_sStudent </summary>
-        /// <param name="_tblDetailEO"></param>
+        /// <param name="_tblSubject_StudentEO"></param>
         /// <returns></returns>
-        public static DataSet SelectByFK_sStudent(tblDetailEO _tblDetailEO)
+        public static DataSet SelectByFK_sStudent(tblSubject_StudentEO _tblSubject_StudentEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -232,9 +221,9 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblDetail_SelectByFK_sStudent", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSubject_Student_SelectByFK_sStudent", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sStudent", _tblDetailEO.FK_sStudent));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sStudent", _tblSubject_StudentEO.FK_sStudent));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
@@ -248,10 +237,10 @@ namespace DataAccessObject
             }
         }
 
-        /// <summary> 8. Detail_Search </summary>
-        /// <param name="_tblDetailEO"></param>
+        /// <summary> 8. Subject_Student_Search </summary>
+        /// <param name="_tblSubject_StudentEO"></param>
         /// <returns></returns>
-        public static DataSet Detail_Search(tblDetailEO _tblDetailEO)
+        public static DataSet Subject_Student_Search(tblSubject_StudentEO _tblSubject_StudentEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -259,14 +248,11 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblDetail_Search", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblSubject_Student_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_lCaHoc", _tblDetailEO.PK_lCaHoc));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSubject", _tblDetailEO.FK_sSubject));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sStudent", _tblDetailEO.FK_sStudent));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTitle", _tblDetailEO.sTitle));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@tDateStart", _tblDetailEO.tDateStart));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@tDateEnd", _tblDetailEO.tDateEnd));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSubject", _tblSubject_StudentEO.FK_sSubject));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sStudent", _tblSubject_StudentEO.FK_sStudent));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iStatus", _tblSubject_StudentEO.iStatus));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

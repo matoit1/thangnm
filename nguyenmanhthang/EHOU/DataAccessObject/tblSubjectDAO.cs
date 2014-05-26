@@ -57,10 +57,8 @@ namespace DataAccessObject
                     SqlCommand cmd = new SqlCommand("tblSubject_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_sSubject", _tblSubjectEO.PK_sSubject));
-                    cmd.Parameters.Add(new SqlParameter("@sName", _tblSubjectEO.sName));
                     cmd.Parameters.Add(new SqlParameter("@FK_sTeacher", _tblSubjectEO.FK_sTeacher));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkVideo", _tblSubjectEO.sLinkVideo));
-                    cmd.Parameters.Add(new SqlParameter("@sBlackList", _tblSubjectEO.sBlackList));
+                    cmd.Parameters.Add(new SqlParameter("@sName", _tblSubjectEO.sName));
                     cmd.Parameters.Add(new SqlParameter("@iStatus", _tblSubjectEO.iStatus));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -87,39 +85,9 @@ namespace DataAccessObject
                     SqlCommand cmd = new SqlCommand("tblSubject_Update", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_sSubject", _tblSubjectEO.PK_sSubject));
-                    cmd.Parameters.Add(new SqlParameter("@sName", _tblSubjectEO.sName));
                     cmd.Parameters.Add(new SqlParameter("@FK_sTeacher", _tblSubjectEO.FK_sTeacher));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkVideo", _tblSubjectEO.sLinkVideo));
-                    cmd.Parameters.Add(new SqlParameter("@sBlackList", _tblSubjectEO.sBlackList));
+                    cmd.Parameters.Add(new SqlParameter("@sName", _tblSubjectEO.sName));
                     cmd.Parameters.Add(new SqlParameter("@iStatus", _tblSubjectEO.iStatus));
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                    return true;
-                }
-                catch (Exception)
-                {
-                    conn.Close();
-                    return false;
-                }
-            }
-        }
-
-        /// <summary> 3. Subject_Update_sLinkVideo_sBlackList </summary>
-        /// <param name="_LichDayVaHocEO"></param>
-        /// <returns></returns>
-        public static bool Subject_Update_sLinkVideo_sBlackList(tblSubjectEO _tblSubjectEO)
-        {
-            using (SqlConnection conn = ConnectionDAO.getConnection())
-            {
-                try
-                {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand("tblSubject_Update_sLinkVideo_sBlackList", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_sSubject", _tblSubjectEO.PK_sSubject));
-                    cmd.Parameters.Add(new SqlParameter("@sLinkVideo", (_tblSubjectEO.sLinkVideo == null) ? (object)DBNull.Value : _tblSubjectEO.sLinkVideo));
-                    cmd.Parameters.Add(new SqlParameter("@sBlackList", (_tblSubjectEO.sBlackList == null) ? (object)DBNull.Value : _tblSubjectEO.sBlackList));
-
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -239,6 +207,33 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 7. Subject_SelectByFK_sTeacher </summary>
+        /// <param name="_tblSubjectEO"></param>
+        /// <returns></returns>
+        public static DataSet Subject_SelectByFK_sTeacher(tblSubjectEO _tblSubjectEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSubject_SelectByFK_sTeacher", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sTeacher", _tblSubjectEO.FK_sTeacher));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
         /// <summary> 8. Subject_Search </summary>
         /// <param name="_tblSubjectEO"></param>
         /// <returns></returns>
@@ -253,10 +248,8 @@ namespace DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblSubject_Search", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sSubject", _tblSubjectEO.PK_sSubject));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sName", _tblSubjectEO.sName));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sTeacher", _tblSubjectEO.FK_sTeacher));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkVideo", _tblSubjectEO.sLinkVideo));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sBlackList", _tblSubjectEO.sBlackList));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@sName", _tblSubjectEO.sName));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iStatus", _tblSubjectEO.iStatus));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);

@@ -29,54 +29,43 @@ namespace EHOU.SinhVien
                 Hoc_LieuUC1.btnPermit.Visible = false;
                 if (!IsPostBack)
                 {
-                    if (Request.QueryString["PK_sSubject"] != null && Request.QueryString["lCaHoc"] != null)
+                    if (Request.QueryString["PK_sSubject"] != null && Request.QueryString["PK_iPart"] != null)
                     {
-                        //LopHocEO _LopHocEO = new LopHocEO();
-                        //_LopHocEO.PK_sMalop = Request.QueryString["PK_sMalop"];
-                        //_LopHocEO = LopHocDAO.LopHoc_SelectItem(_LopHocEO);
-
-                        //PhanCongCongTacEO _PhanCongCongTacEO = new PhanCongCongTacEO();
-                        //_PhanCongCongTacEO.PK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
-                        //_PhanCongCongTacEO = PhanCongCongTacDAO.PhanCongCongTac_SelectItem(_PhanCongCongTacEO);
-
-                        //GiangVienEO _GiangVienEO = new GiangVienEO();
-                        //_GiangVienEO.PK_sMaGV = _PhanCongCongTacEO.FK_sMaGV;
-                        //_GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
-
                         tblSubjectEO _tblSubjectEO = new tblSubjectEO();
                         _tblSubjectEO.PK_sSubject = Request.QueryString["PK_sSubject"];
                         _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(_tblSubjectEO);
                         sTendangnhapGV = _tblSubjectEO.FK_sTeacher;
 
-                        tblDetailEO _tblDetailEO = new tblDetailEO();
-                        _tblDetailEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
-                        _tblDetailEO.FK_sStudent = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
-                        _tblDetailEO.PK_lCaHoc = Convert.ToInt64(Request.QueryString["lCaHoc"].ToString());
-                        if (tblDetailDAO.Detail_CheckExists(_tblDetailEO) !=true)
+                        tblSubject_StudentEO _tblSubject_StudentEO = new tblSubject_StudentEO();
+                        _tblSubject_StudentEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
+                        _tblSubject_StudentEO.FK_sStudent = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
+                        //_tblSubject_StudentEO.PK_lCaHoc = Convert.ToInt64(Request.QueryString["PK_iPart"].ToString());
+                        if (tblSubject_StudentDAO.Subject_Student_CheckExists(_tblSubject_StudentEO) != true)
                         {
                             Response.Redirect("~/Access_Denied.aspx");
                         }
-                        //SinhVienEO _SinhVienEO = new SinhVienEO();
-                        //_SinhVienEO.sTendangnhapSV = Request.Cookies["sinhvien"].Value;
-                        //_SinhVienEO = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO);
                         tblMessageEO _tblMessageEO = new tblMessageEO();
                         _tblMessageEO.FK_sRoom = _tblSubjectEO.PK_sSubject;
                         _tblMessageEO.FK_sUsername = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
                         _tblMessageEO.iStatus = 1;
-                        ChatUC1.objtblMessageEO = _tblMessageEO;
-                        ChatUC1.objtblSubjectEO = _tblSubjectEO;
-                        ChatUC1.iTypeUser = tblAccount_iType_C.Sinh_Vien;
 
                         //sTendangnhapGV = _GiangVienEO.sTendangnhapGV;
                         Hoc_LieuUC1.BindData_HocLieu(_tblSubjectEO.FK_sTeacher);
+                        tblPartEO _tblPartEO = new tblPartEO();
+                        _tblPartEO.PK_iPart = Convert.ToInt16(Request.QueryString["PK_iPart"]);
+                        _tblPartEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
+                        _tblPartEO = tblPartDAO.Part_SelectItem(_tblPartEO);
 
-                        //DanhSachLopHocUC1.BindData(_SinhVienEO);
+                        ChatUC1.objtblMessageEO = _tblMessageEO;
+                        ChatUC1.objtblPartEO = _tblPartEO;
+                        ChatUC1.iTypeUser = tblAccount_iType_C.Sinh_Vien;
+                        DanhSachLopHocUC1.BindData(_tblSubject_StudentEO);
 
                         //Kiểm tra trạng thái buổi học Online / Offline
                         switch (_tblSubjectEO.iStatus)
                         {
                             case LichDayVaHoc_iTrangThai_C.Hoc: vLiveStream.ActiveViewIndex =0; break;
-                            case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1; VideoUC1.sLinkVideo = _tblSubjectEO.sLinkVideo; break;
+                            case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1; VideoUC1.sLinkVideo = _tblPartEO.sLinkVideo; break;
                             case LichDayVaHoc_iTrangThai_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0; break;
                             case LichDayVaHoc_iTrangThai_C.Nghi: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Buoi_Hoc_Hom_Nay_Duoc_Nghi; break;
                             default: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Chua_Den_Thoi_Gian_Hoc; break;
