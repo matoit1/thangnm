@@ -21,11 +21,11 @@ namespace EHOU.UserControl
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
-        private Int64 _PK_lHoaDonID;
-        public Int64 PK_lHoaDonID
+        private string _PK_sUsername;
+        public string PK_sUsername
         {
-            get { return this._PK_lHoaDonID; }
-            set { _PK_lHoaDonID = value; }
+            get { return this._PK_sUsername; }
+            set { _PK_sUsername = value; }
         }
 
         private Int32 _FK_iTaiKhoanID_Nhan;
@@ -128,7 +128,7 @@ namespace EHOU.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                this.PK_lHoaDonID = Convert.ToInt64(e.CommandArgument);
+                this.PK_sUsername = Convert.ToString(e.CommandArgument);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);

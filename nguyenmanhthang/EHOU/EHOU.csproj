@@ -245,6 +245,11 @@
     <Content Include="Other\SQL_Query\Function.sql" />
     <Content Include="Other\SQL_Query\Store_Procedure.sql" />
     <Content Include="Other\VideoUC.ascx" />
+    <Content Include="QuanTri\tblAccount.aspx" />
+    <Content Include="QuanTri\tblMessage.aspx" />
+    <Content Include="QuanTri\tblPart.aspx" />
+    <Content Include="QuanTri\tblSubject.aspx" />
+    <Content Include="QuanTri\tblSubject_Student.aspx" />
     <Content Include="QuanTri\Database.aspx" />
     <Content Include="QuanTri\Default.aspx" />
     <Content Include="QuanTri\ThongTinCaNhan.aspx" />
@@ -375,6 +380,42 @@
       <DependentUpon>Online.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanTri\tblAccount.aspx.cs">
+      <DependentUpon>tblAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\tblAccount.aspx.designer.cs">
+      <DependentUpon>tblAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\tblChiTietHoaDonEO.cs" />
+    <Compile Include="QuanTri\tblMessage.aspx.cs">
+      <DependentUpon>tblMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\tblMessage.aspx.designer.cs">
+      <DependentUpon>tblMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\tblPart.aspx.cs">
+      <DependentUpon>tblPart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\tblPart.aspx.designer.cs">
+      <DependentUpon>tblPart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\tblSubject.aspx.cs">
+      <DependentUpon>tblSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\tblSubject.aspx.designer.cs">
+      <DependentUpon>tblSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\tblSubject_Student.aspx.cs">
+      <DependentUpon>tblSubject_Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\tblSubject_Student.aspx.designer.cs">
+      <DependentUpon>tblSubject_Student.aspx</DependentUpon>
+    </Compile>
     <Compile Include="QuanTri\Database.aspx.cs">
       <DependentUpon>Database.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

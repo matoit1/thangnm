@@ -21,18 +21,18 @@ namespace EHOU.UserControl
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
-        private Int64 _PK_lHoaDonID;
-        public Int64 PK_lHoaDonID
+        private string _FK_sSubject;
+        public string FK_sSubject
         {
-            get { return this._PK_lHoaDonID; }
-            set { _PK_lHoaDonID = value; }
+            get { return this._FK_sSubject; }
+            set { _FK_sSubject = value; }
         }
 
-        private Int32 _FK_iTaiKhoanID_Nhan;
-        public Int32 FK_iTaiKhoanID_Nhan
+        private string _FK_sStudent;
+        public string FK_sStudent
         {
-            get { return this._FK_iTaiKhoanID_Nhan; }
-            set { _FK_iTaiKhoanID_Nhan = value; }
+            get { return this._FK_sStudent; }
+            set { _FK_sStudent = value; }
         }
 
         private Int16 _iTrangThai;
@@ -128,7 +128,10 @@ namespace EHOU.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                this.PK_lHoaDonID = Convert.ToInt64(e.CommandArgument);
+                GridViewRow row = this.grvListBaiViet.SelectedRow;
+                int index = Convert.ToInt16(e.CommandArgument) % grvListBaiViet.PageSize;
+                this.FK_sSubject = Convert.ToString(grvListBaiViet.DataKeys[index].Values["FK_sSubject"]);
+                this.FK_sStudent = Convert.ToString(grvListBaiViet.DataKeys[index].Values["FK_sStudent"]);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);
