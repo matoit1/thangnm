@@ -134,10 +134,10 @@ namespace CongKy.UserControl
             lblMsg.Text = "";
             try
             {
-                tblMonHocEO _tblMonHocEO = new tblMonHocEO();
-                _tblMonHocEO.PK_iMonHocID = getObject().PK_iMonHocID;
-                if (tblMonHocDAO.MonHoc_CheckExists_PK_iMonHocID(_tblMonHocEO) == false)
-                {
+                //tblMonHocEO _tblMonHocEO = new tblMonHocEO();
+                //_tblMonHocEO.PK_iMonHocID = getObject().PK_iMonHocID;
+                //if (tblMonHocDAO.MonHoc_CheckExists_PK_iMonHocID(_tblMonHocEO) == false)
+                //{
                     if (tblMonHocDAO.MonHoc_Delete(getObject()) == true)
                     {
                         lblMsg.Text = Messages.Xoa_Thanh_Cong;
@@ -149,11 +149,11 @@ namespace CongKy.UserControl
                     {
                         lblMsg.Text = Messages.Xoa_That_Bai;
                     }
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Ma_Thanh_Toan_Da_Dung_Trong_Hoa_Don;
-                }
+            //    }
+            //    else
+            //    {
+            //        lblMsg.Text = Messages.Ma_Thanh_Toan_Da_Dung_Trong_Hoa_Don;
+            //    }
             }
             catch (Exception ex)
             {

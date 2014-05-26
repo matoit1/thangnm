@@ -33,24 +33,23 @@ namespace CongKy.SharedLibraries
             return output;
         }
 
-        /// <summary> I.7. NhomSanPham_iTrangThai_GLC (Trạng Thái Nhóm Sản Phẩm) </summary>
+        /// <summary> I.7. DangKyDayHoc_iTrangThai_GLC (Trạng Thái Dăng ký dạy học) </summary>
         /// <returns></returns>
-        public static SortedList NhomSanPham_iTrangThai_GLC()
+        public static SortedList DangKyDayHoc_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(NhomSanPham_iTrangThai_C.Mo, GetTextConstants.NhomSanPham_iTrangThai_GTC(NhomSanPham_iTrangThai_C.Mo));
-            output.Add(NhomSanPham_iTrangThai_C.Khoa, GetTextConstants.NhomSanPham_iTrangThai_GTC(NhomSanPham_iTrangThai_C.Khoa));
+            output.Add(DangKyDayHoc_iTrangThai_C.Mo, GetTextConstants.DangKyDayHoc_iTrangThai_GTC(DangKyDayHoc_iTrangThai_C.Mo));
+            output.Add(DangKyDayHoc_iTrangThai_C.Khoa, GetTextConstants.DangKyDayHoc_iTrangThai_GTC(DangKyDayHoc_iTrangThai_C.Khoa));
             return output;
         }
 
-        /// <summary> I.8. SanPham_iTrangThai_GLC (Trạng Thái Sản Phẩm) </summary>
+        /// <summary> I.8. MonHoc_iTrangThai_GLC (Trạng Thái môn học) </summary>
         /// <returns></returns>
-        public static SortedList SanPham_iTrangThai_GLC()
+        public static SortedList MonHoc_iTrangThai_GLC()
         {
             SortedList output = new SortedList();
-            output.Add(SanPham_iTrangThai_C.Mo, GetTextConstants.SanPham_iTrangThai_GTC(SanPham_iTrangThai_C.Mo));
-            output.Add(SanPham_iTrangThai_C.Het_Hang, GetTextConstants.SanPham_iTrangThai_GTC(SanPham_iTrangThai_C.Het_Hang));
-            output.Add(SanPham_iTrangThai_C.Khoa, GetTextConstants.SanPham_iTrangThai_GTC(SanPham_iTrangThai_C.Khoa));
+            output.Add(MonHoc_iTrangThai_C.Mo, GetTextConstants.MonHoc_iTrangThai_GTC(MonHoc_iTrangThai_C.Mo));
+            output.Add(MonHoc_iTrangThai_C.Khoa, GetTextConstants.MonHoc_iTrangThai_GTC(MonHoc_iTrangThai_C.Khoa));
             return output;
         }
 

@@ -99,9 +99,9 @@ namespace CongKy.DataAccessObject
         /// <summary> 6. GiaoTrinh_SelectItem </summary>
         /// <param name="_tblGiaoTrinhEO"></param>
         /// <returns></returns>
-        public static tblDangKyDayHocEO GiaoTrinh_SelectItem(tblDangKyDayHocEO _tblGiaoTrinhEO)
+        public static tblGiaoTrinhEO GiaoTrinh_SelectItem(tblGiaoTrinhEO _tblGiaoTrinhEO)
         {
-            tblDangKyDayHocEO oOutput = new tblDangKyDayHocEO();
+            tblGiaoTrinhEO oOutput = new tblGiaoTrinhEO();
             DataSet ds = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -128,32 +128,32 @@ namespace CongKy.DataAccessObject
         /// <summary> 6. GiaoTrinh_SelectItem_By_PK_iGiaoTrinhID </summary>
         /// <param name="_tblGiaoTrinhEO"></param>
         /// <returns></returns>
-        public static tblDangKyDayHocEO GiaoTrinh_SelectItem_By_PK_iGiaoTrinhID(Int16 _PK_iGiaoTrinhID)
-        {
-            tblDangKyDayHocEO oOutput = new tblDangKyDayHocEO();
-            DataSet ds = null;
-            using (SqlConnection conn = ConnectionDAO.getConnection())
-            {
-                try
-                {
-                    conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblGiaoTrinh_SelectItem", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iMonHocID", _FK_iMonHocID));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iGiaoTrinhID", _FK_iGiaoTrinhID));
-                    ds = new DataSet();
-                    da.Fill(ds);
-                    conn.Close();
-                    oOutput = DataSet2Object.GiaoTrinhDO(ds);
-                    return oOutput;
-                }
-                catch (Exception)
-                {
-                    conn.Close();
-                    return oOutput;
-                }
-            }
-        }
+        //public static tblGiaoTrinhEO GiaoTrinh_SelectItem_By_FK_iGiaoTrinhID(Int32 _FK_iGiaoTrinhID)
+        //{
+        //    tblGiaoTrinhEO oOutput = new tblGiaoTrinhEO();
+        //    DataSet ds = null;
+        //    using (SqlConnection conn = ConnectionDAO.getConnection())
+        //    {
+        //        try
+        //        {
+        //            conn.Open();
+        //            SqlDataAdapter da = new SqlDataAdapter("tblGiaoTrinh_SelectItem", conn);
+        //            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        //            da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iMonHocID", _FK_iMonHocID));
+        //            da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iGiaoTrinhID", _FK_iGiaoTrinhID));
+        //            ds = new DataSet();
+        //            da.Fill(ds);
+        //            conn.Close();
+        //            oOutput = DataSet2Object.GiaoTrinhDO(ds);
+        //            return oOutput;
+        //        }
+        //        catch (Exception)
+        //        {
+        //            conn.Close();
+        //            return oOutput;
+        //        }
+        //    }
+        //}
         
 
         /// <summary> 8. GiaoTrinh_SelectList </summary>
@@ -187,7 +187,7 @@ namespace CongKy.DataAccessObject
         /// <summary> 9. GiaoTrinh_Search </summary>
         /// <param name="_tblGiaoTrinhEO"></param>
         /// <returns></returns>
-        public static DataSet GiaoTrinh_Search(tblDangKyDayHocEO _tblGiaoTrinhEO)
+        public static DataSet GiaoTrinh_Search(tblGiaoTrinhEO _tblGiaoTrinhEO)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())

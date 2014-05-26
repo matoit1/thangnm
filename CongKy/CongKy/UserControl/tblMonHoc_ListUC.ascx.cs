@@ -72,11 +72,11 @@ namespace CongKy.UserControl
                 select new
                 {
                     PK_iMonHocID = topic.Field<Int32>("PK_iMonHocID"),
-                    sTenmonHoc = topic.Field<string>("sTenMonHoc"),
+                    sTenMonHoc = topic.Field<string>("sTenMonHoc"),
                     iTrangThai = GetTextConstants.MonHoc_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
-                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                if (Convert.ToInt32(ddlTypeSearch.SelectedValue) == 0)
                 {
                     if (keysearch != "")
                     {

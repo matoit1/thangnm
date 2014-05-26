@@ -10,7 +10,7 @@ using CongKy.DataAccessObject;
 
 namespace CongKy.UserControl
 {
-    public partial class tblChiTietHoaDon_DetailUC : System.Web.UI.UserControl
+    public partial class tblGiaoTrinh_DetailUC : System.Web.UI.UserControl
     {
         //#region "Properties & Event"
         //public Int16 iType
@@ -57,63 +57,22 @@ namespace CongKy.UserControl
         public void loadDataToDropDownList()
         {
             ddlFK_iMonHocID.DataSource = tblMonHocDAO.MonHoc_SelectList();
-            ddlFK_iMonHocID.DataTextField = "FK_iMonHocID";
-            ddlFK_iMonHocID.DataValueField = "FK_iMonHocID";
+            ddlFK_iMonHocID.DataTextField = "sTenMonHoc";
+            ddlFK_iMonHocID.DataValueField = "PK_iMonHocID";
             ddlFK_iMonHocID.DataBind();
 
-            ddlFK_sSanPhamID.DataSource = tblMonHocDAO.SanPham_SelectList();
-            ddlFK_sSanPhamID.DataTextField = "sTenSanPham";
-            ddlFK_sSanPhamID.DataValueField = "PK_sSanPhamID";
-            ddlFK_sSanPhamID.DataBind();
+            ddlFK_iGiaoTrinhID.DataSource = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_SelectList();
+            ddlFK_iGiaoTrinhID.DataTextField = "sTenBaiHoc";
+            ddlFK_iGiaoTrinhID.DataValueField = "PK_iGiaoTrinhID";
+            ddlFK_iGiaoTrinhID.DataBind();
         }
 
-        public bool CheckInput()
-        {
-            Int64 num64;
-            Int16 num16;
-            if (string.IsNullOrEmpty(txtlGiaBan.Text) == true)
-            {
-                lbllGiaBan.Text = Messages.Khong_Duoc_De_Trong;
-                txtlGiaBan.Focus();
-                return false;
-            }
-            else
-            {
-                bool isNum = Int64.TryParse(txtlGiaBan.Text, out num64);
-                if (isNum == false)
-                {
-                    lbllGiaBan.Text = Messages.Khong_Dung_Dinh_Dang_So;
-                    txtlGiaBan.Focus();
-                    return false;
-                }
-
-            }
-            if (string.IsNullOrEmpty(txtiSoLuong.Text) == true)
-            {
-                lbliSoLuong.Text = Messages.Khong_Duoc_De_Trong;
-                txtiSoLuong.Focus();
-                return false;
-            }
-            else
-            {
-                bool isNum = Int16.TryParse(txtiSoLuong.Text, out num16);
-                if (isNum == false)
-                {
-                    lbliSoLuong.Text = Messages.Khong_Dung_Dinh_Dang_So;
-                    txtiSoLuong.Focus();
-                    return false;
-                }
-            }
-            return true;
-        }
-
+       
         public void ClearMessages()
         {
             //lblMsg.Text = "";
-            lblFK_lHoaDonID.Text = "";
-            lblFK_sSanPhamID.Text = "";
-            lbllGiaBan.Text = "";
-            lbliSoLuong.Text = "";
+            lblFK_iMonHocID.Text = "";
+            lblFK_iGiaoTrinhID.Text = "";
         }
 
         #region "Event Button"
@@ -123,20 +82,17 @@ namespace CongKy.UserControl
             lblMsg.Text = "";
             try
             {
-                if (CheckInput() == true)
-                {
-                    if (tblChiTietGiaoTrinhDAO.ChiTietHoaDon_Insert(getObject()) == true)
+                    if (tblGiaoTrinhDAO.GiaoTrinh_Insert(getObject()) == true)
                     {
                         lblMsg.Text = Messages.Them_Thanh_Cong;
                         ClearMessages();
-                        tblChiTietGiaoTrinhEO _tblChiTietHoaDonEO = new tblChiTietGiaoTrinhEO();
-                        BindDataDetail(_tblChiTietHoaDonEO);
+                        tblGiaoTrinhEO _tblGiaoTrinhEO = new tblGiaoTrinhEO();
+                        BindDataDetail(_tblGiaoTrinhEO);
                     }
                     else
                     {
                         lblMsg.Text = Messages.Them_That_Bai;
                     }
-                }
             }
             catch (Exception ex)
             {
@@ -150,9 +106,7 @@ namespace CongKy.UserControl
             lblMsg.Text = "";
             try
             {
-                if (CheckInput() == true)
-                {
-                    if (tblChiTietGiaoTrinhDAO.ChiTietHoaDon_Update(getObject()) == true)
+                    if (tblGiaoTrinhDAO.GiaoTrinh_Update(getObject()) == true)
                     {
                         lblMsg.Text = Messages.Sua_Thanh_Cong;
                         ClearMessages();
@@ -161,7 +115,6 @@ namespace CongKy.UserControl
                     {
                         lblMsg.Text = Messages.Sua_That_Bai;
                     }
-                }
             }
             catch (Exception ex)
             {
@@ -175,12 +128,12 @@ namespace CongKy.UserControl
             lblMsg.Text = "";
             try
             {
-                if (tblChiTietGiaoTrinhDAO.ChiTietHoaDon_Delete(getObject()) == true)
+                if (tblGiaoTrinhDAO.GiaoTrinh_Delete(getObject()) == true)
                 {
                     lblMsg.Text = Messages.Xoa_Thanh_Cong;
                     ClearMessages();
-                    tblChiTietGiaoTrinhEO _tblChiTietHoaDonEO = new tblChiTietGiaoTrinhEO();
-                    BindDataDetail(_tblChiTietHoaDonEO);
+                    tblGiaoTrinhEO _tblGiaoTrinhEO = new tblGiaoTrinhEO();
+                    BindDataDetail(_tblGiaoTrinhEO);
                 }
                 else
                 {
@@ -197,8 +150,8 @@ namespace CongKy.UserControl
         {
             ClearMessages();
             lblMsg.Text = "";
-            tblChiTietGiaoTrinhEO _tblChiTietHoaDonEO = new tblChiTietGiaoTrinhEO();
-            BindDataDetail(_tblChiTietHoaDonEO);
+            tblGiaoTrinhEO _tblGiaoTrinhEO = new tblGiaoTrinhEO();
+            BindDataDetail(_tblGiaoTrinhEO);
         }
         #endregion
     }

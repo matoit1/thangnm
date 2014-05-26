@@ -27,6 +27,41 @@ namespace CongKy.UserControl
             set { _PK_iGiaoTrinhID = value; }
         }
 
+        private String _sTenBaiHoc;
+        public String sTenBaiHoc
+        {
+            get { return this._sTenBaiHoc; }
+            set { _sTenBaiHoc = value; }
+        }
+
+        private String _sThongTin;
+        public String sThongTin
+        {
+            get { return this._sThongTin; }
+            set { _sThongTin = value; }
+        }
+
+        private String _sLinkDownload;
+        public String sLinkDownload
+        {
+            get { return this._sLinkDownload; }
+            set { _sLinkDownload = value; }
+        }
+
+        private Int16 _iType;
+        public Int16 iType
+        {
+            get { return this._iType; }
+            set { _iType = value; }
+        }
+
+        private DateTime _tNgayCapNhat;
+        public DateTime tNgayCapNhat
+        {
+            get { return this._tNgayCapNhat; }
+            set { _tNgayCapNhat = value; }
+        }
+
         private Int16 _iTrangThai;
         public Int16 iTrangThai
         {
@@ -56,25 +91,28 @@ namespace CongKy.UserControl
             DataSet dsBaiViet = new DataSet();
             try
             {
-                tblDangKyDayHocEO _tblNhomSanPhamEO = new tblDangKyDayHocEO();
-                _tblNhomSanPhamEO.iTrangThai = iTrangThai;
-                dsBaiViet = tblGiaoTrinhDAO.NhomSanPham_SelectListByiTrangThai(_tblNhomSanPhamEO);
+                tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
+                _tblChiTietGiaoTrinhEO.iTrangThai = iTrangThai;
+                dsBaiViet = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_SelectList();
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
-                    PK_iNhomSanPhamID = topic.Field<Int16>("PK_iGiaoTrinhID"),
-                    iNhomCon = topic.Field<Int16>("iNhomCon"),
-                    sTenNhom = topic.Field<string>("sTenNhom"),
-                    iTrangThai = GetTextConstants.NhomSanPham_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
+                    PK_iGiaoTrinhID = topic.Field<Int32>("PK_iGiaoTrinhID"),
+                    sTenBaiHoc = topic.Field<String>("sTenBaiHoc"),
+                    sThongTin = topic.Field<String>("sThongTin"),
+                    sLinkDownload = topic.Field<String>("sLinkDownload"),
+                    iType = topic.Field<Int16>("iType"),
+                    tNgayCapNhat = topic.Field<DateTime>("tNgayCapNhat"),
+                    iTrangThai = GetTextConstants.ChiTietGiaoTrinh_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.PK_iNhomSanPhamID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.PK_iGiaoTrinhID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -82,7 +120,7 @@ namespace CongKy.UserControl
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.sTenNhom.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.sTenBaiHoc.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -109,7 +147,7 @@ namespace CongKy.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                this.PK_iNhomSanPhamID = Convert.ToInt16(e.CommandArgument);
+                this.PK_iGiaoTrinhID = Convert.ToInt32(e.CommandArgument);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);
@@ -162,7 +200,7 @@ namespace CongKy.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "ASC";
             }
-            DataSet dsBaiViet = tblGiaoTrinhDAO.NhomSanPham_SelectList();
+            DataSet dsBaiViet = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_SelectList();
             DataView sortedView = new DataView(dsBaiViet.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;
