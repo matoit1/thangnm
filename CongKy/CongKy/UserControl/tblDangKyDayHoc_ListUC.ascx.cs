@@ -13,18 +13,32 @@ using CongKy.EntityObject;
 
 namespace CongKy.UserControl
 {
-    public partial class tblSanPham_ListUC : System.Web.UI.UserControl
+    public partial class tblDangKyDayHoc_ListUC : System.Web.UI.UserControl
     {
         #region "Properties & Event"
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
-        private string _PK_sSanPhamID;
-        public string PK_sSanPhamID
+        private Int32 _FK_iTaiKhoanID;
+        public Int32 FK_iTaiKhoanID
         {
-            get { return this._PK_sSanPhamID; }
-            set { _PK_sSanPhamID = value; }
+            get { return this._FK_iTaiKhoanID; }
+            set { _FK_iTaiKhoanID = value; }
+        }
+
+        private Int32 _FK_iMonHocID;
+        public Int32 FK_iMonHocID
+        {
+            get { return this._FK_iMonHocID; }
+            set { _FK_iMonHocID = value; }
+        }
+
+        private DateTime _tNgayDangKy;
+        public DateTime tNgayDangKy
+        {
+            get { return this._tNgayDangKy; }
+            set { _tNgayDangKy = value; }
         }
 
         private Int16 _iTrangThai;
@@ -43,48 +57,40 @@ namespace CongKy.UserControl
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                BindData();
-            }
+            //if (!IsPostBack)
+            //{
+            //    BindData();
+            //}
         }
 
-        public void BindData()
+        public void BindData(tblDangKyDayHocEO _tblDangKyDayHocEO)
         {
+            //objtblDangKyDayHocEO = _tblDangKyDayHocEO;
             grvListBaiViet.Visible = false;
             string keysearch = txtTextSearch.Text;
-            DataSet dsBaiViet = new DataSet();
+            DataSet dsDangKyDayHoc = new DataSet();
             try
             {
-                tblMonHocEO _tblSanPhamEO = new tblMonHocEO();
-                _tblSanPhamEO.iTrangThai = iTrangThai;
-                dsBaiViet = tblMonHocDAO.SanPham_SelectListByiTrangThai(_tblSanPhamEO);
+                dsDangKyDayHoc = tblDangKyDayHocDAO.DangKyDayHoc_SelectList();
+                dsDangKyDayHoc.Tables[0].Columns.Add(new DataColumn("FK_iTaiKhoanID_Text", Type.GetType("System.String")));
+                //foreach (DataRow dr in dsDangKyDayHoc.Tables[0].Rows)
+                //{
+                //    dr["FK_iMonHocID_Text"] = tblDangKyDayHocDAO.DangKyDayHoc_SelectItemPK_iMonHocID(Convert.ToString(dr["FK_iMonHocID"])).FK_iMonHocID;
+                //}
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
-                from topic in dsBaiViet.Tables[0].AsEnumerable()
+                from topic in dsDangKyDayHoc.Tables[0].AsEnumerable()
                 select new
                 {
-                    PK_sSanPhamID = topic.Field<string>("PK_sSanPhamID"),
-                    FK_iNhomSanPhamID =  tblGiaoTrinhDAO.NhomSanPham_SelectItem_By_PK_iNhomSanPhamID(topic.Field<Int16>("FK_iNhomSanPhamID")).sTenNhom,
-                    sTenSanPham = topic.Field<string>("sTenSanPham"),
-                    sMoTa = topic.Field<string>("sMoTa"),
-                    sThongTin = topic.Field<string>("sThongTin"),
-                    sXuatXu = topic.Field<string>("sXuatXu"),
-                    sLinkImage = topic.Field<string>("sLinkImage"),
-                    lGiaBan = topic.Field<Int64>("lGiaBan"),
-                    iVAT = topic.Field<Int16>("iVAT"),
-                    iDoTuoi = GetTextConstants.SanPham_iDoTuoi_GTC(topic.Field<Int16>("iDoTuoi")),
-                    iGioiTinh = GetTextConstants.SanPham_iGioiTinh_GTC(topic.Field<Int16>("iGioiTinh")),
-                    iSoLuong = topic.Field<Int16>("iSoLuong"),
-                    tNgayCapNhat = topic.Field<DateTime>("tNgayCapNhat"),
-                    iTrangThai = GetTextConstants.SanPham_iTrangThai_GTC (topic.Field<Int16>("iTrangThai"))
+                    FK_iTaiKhoanID = topic.Field<Int32>("FK_iTaiKhoanID"),
+                    FK_iMonHocID = topic.Field<Int32>("FK_iMonHocID"),
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
-                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                if (Convert.ToInt32(ddlTypeSearch.SelectedValue) == 0)
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.PK_sSanPhamID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.FK_iTaiKhoanID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -92,7 +98,7 @@ namespace CongKy.UserControl
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.sTenSanPham.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.FK_iMonHocID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -119,7 +125,10 @@ namespace CongKy.UserControl
         {
             if (e.CommandName == "cmdView")
             {
-                this.PK_sSanPhamID = Convert.ToString(e.CommandArgument);
+                GridViewRow row = this.grvListBaiViet.SelectedRow;
+                int index = Convert.ToInt32(e.CommandArgument) % grvListBaiViet.PageSize;
+                this.FK_iTaiKhoanID = Convert.ToInt32(grvListBaiViet.DataKeys[index].Values["FK_iTaiKhoanID"]);
+                this.FK_iMonHocID = Convert.ToInt32(grvListBaiViet.DataKeys[index].Values["FK_iMonHocID"]);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);
@@ -147,7 +156,7 @@ namespace CongKy.UserControl
         protected void grvListBaiViet_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListBaiViet.PageIndex = e.NewPageIndex;
-            BindData();
+            //BindData();
         }
 
         protected void grvListBaiViet_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -172,7 +181,7 @@ namespace CongKy.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "ASC";
             }
-            DataSet dsBaiViet = tblMonHocDAO.SanPham_SelectList();
+            DataSet dsBaiViet = tblDangKyDayHocDAO.DangKyDayHoc_SelectList();
             DataView sortedView = new DataView(dsBaiViet.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;
@@ -198,12 +207,12 @@ namespace CongKy.UserControl
         #region "Event Button"
         protected void Search_Click(object sender, EventArgs e)
         {
-            BindData();
+            //BindData();
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
-            BindData();
+            //BindData();
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
@@ -237,7 +246,7 @@ namespace CongKy.UserControl
                 HtmlTextWriter hw = new HtmlTextWriter(sw);
                 //To Export all pages
                 grvListBaiViet.AllowPaging = false;
-                this.BindData();
+                //this.BindData();
 
                 grvListBaiViet.HeaderRow.BackColor = Color.White;
                 foreach (TableCell cell in grvListBaiViet.HeaderRow.Cells)
@@ -274,7 +283,7 @@ namespace CongKy.UserControl
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            BindData();
+            //BindData();
         }
 
         protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)

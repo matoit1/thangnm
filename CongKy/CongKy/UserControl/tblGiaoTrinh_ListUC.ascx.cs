@@ -59,32 +59,29 @@ namespace CongKy.UserControl
             objtblGiaoTrinhEO = _tblGiaoTrinhEO;
             grvListGiaoTrinh.Visible = false;
             string keysearch = txtTextSearch.Text;
-            DataSet dsChiTietHoaDon = new DataSet();
+            DataSet dsGiaoTrinh = new DataSet();
             try
             {
-                dsGiaoTrinh = tblGiaoTrinhDAO.GiaoTrinh_SelectListByFK_iMonHocID(_tblGiaoTrinhEO);
+                dsGiaoTrinh = tblGiaoTrinhDAO.GiaoTrinh_SelectList();
                 dsGiaoTrinh.Tables[0].Columns.Add(new DataColumn("FK_iMonHocID_Text", Type.GetType("System.String")));
-                foreach (DataRow dr in dsChiTietHoaDon.Tables[0].Rows)
-                {
-                    dr["FK_sSanPhamID_Text"] = tblMonHocDAO.SanPham_SelectItemPK_sSanPhamID(Convert.ToString(dr["FK_sSanPhamID"])).sTenSanPham;
-                }
+                //foreach (DataRow dr in dsGiaoTrinh.Tables[0].Rows)
+                //{
+                //    dr["FK_iMonHocID_Text"] = tblGiaoTrinhDAO.GiaoTrinh_SelectItemPK_iMonHocID(Convert.ToString(dr["FK_iMonHocID"])).FK_iMonHocID;
+                //}
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
-                from topic in dsChiTietHoaDon.Tables[0].AsEnumerable()
+                from topic in dsGiaoTrinh.Tables[0].AsEnumerable()
                 select new
                 {
-                    FK_lHoaDonID = topic.Field<Int64>("FK_lHoaDonID"),
-                    FK_sSanPhamID = topic.Field<String>("FK_sSanPhamID"),
-                    FK_sSanPhamID_Text = topic.Field<String>("FK_sSanPhamID_Text"),
-                    lGiaBan = topic.Field<Int64>("lGiaBan"),
-                    iSoLuong = topic.Field<Int16>("iSoLuong")
+                    FK_iMonHocID = topic.Field<Int32>("FK_iMonHocID"),
+                    FK_iGiaoTrinhID = topic.Field<Int32>("FK_iGiaoTrinhID"),
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
-                if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)
+                if (Convert.ToInt32(ddlTypeSearch.SelectedValue) == 0)
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.FK_lHoaDonID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.FK_iMonHocID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
@@ -92,15 +89,15 @@ namespace CongKy.UserControl
                 {
                     if (keysearch != "")
                     {
-                        var search = (from item in result where item.FK_sSanPhamID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
+                        var search = (from item in result where item.FK_iGiaoTrinhID.ToString().ToUpper().Contains(keysearch.ToString().ToUpper().Trim()) select item);
                         result = search;
                     }
                 }
                 if (result.Count() > 0)
                 {
-                    grvListChiTietHoaDon.Visible = true;
-                    grvListChiTietHoaDon.DataSource = result.ToList();
-                    grvListChiTietHoaDon.DataBind();
+                    grvListGiaoTrinh.Visible = true;
+                    grvListGiaoTrinh.DataSource = result.ToList();
+                    grvListGiaoTrinh.DataBind();
                     lblTongSoBanGhi.Text = Messages.Tong_So_Ban_Ghi + result.Count();
                 }
                 else
@@ -115,14 +112,14 @@ namespace CongKy.UserControl
         }
 
         #region "Event GridView"
-        protected void grvListChiTietHoaDon_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void grvListGiaoTrinh_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "cmdView")
             {
-                GridViewRow row = this.grvListChiTietHoaDon.SelectedRow;
-                int index = Convert.ToInt16(e.CommandArgument) % grvListChiTietHoaDon.PageSize;
-                this.FK_lHoaDonID = Convert.ToInt64(grvListChiTietHoaDon.DataKeys[index].Values["FK_lHoaDonID"]);
-                this.FK_sSanPhamID = Convert.ToString(grvListChiTietHoaDon.DataKeys[index].Values["FK_sSanPhamID"]);
+                GridViewRow row = this.grvListGiaoTrinh.SelectedRow;
+                int index = Convert.ToInt32(e.CommandArgument) % grvListGiaoTrinh.PageSize;
+                this.FK_iMonHocID = Convert.ToInt32(grvListGiaoTrinh.DataKeys[index].Values["FK_iMonHocID"]);
+                this.FK_iGiaoTrinhID = Convert.ToInt32(grvListGiaoTrinh.DataKeys[index].Values["FK_iGiaoTrinhID"]);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);
@@ -130,11 +127,11 @@ namespace CongKy.UserControl
             }
         }
 
-        protected void grvListChiTietHoaDon_SelectedIndexChanged(object sender, EventArgs e)
+        protected void grvListGiaoTrinh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (GridViewRow row in grvListChiTietHoaDon.Rows)
+            foreach (GridViewRow row in grvListGiaoTrinh.Rows)
             {
-                if (row.RowIndex == grvListChiTietHoaDon.SelectedIndex)
+                if (row.RowIndex == grvListGiaoTrinh.SelectedIndex)
                 {
                     row.BackColor = ColorTranslator.FromHtml("#A1DCF2");
                     row.ToolTip = string.Empty;
@@ -151,22 +148,22 @@ namespace CongKy.UserControl
             }
         }
 
-        protected void grvListChiTietHoaDon_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void grvListGiaoTrinh_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            grvListChiTietHoaDon.PageIndex = e.NewPageIndex;
-            BindData(objtblChiTietHoaDonEO);
+            grvListGiaoTrinh.PageIndex = e.NewPageIndex;
+            BindData(objtblGiaoTrinhEO);
         }
 
-        protected void grvListChiTietHoaDon_RowDataBound(object sender, GridViewRowEventArgs e)
+        protected void grvListGiaoTrinh_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(grvListChiTietHoaDon, "Select$" + e.Row.RowIndex);
+                e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(grvListGiaoTrinh, "Select$" + e.Row.RowIndex);
                 e.Row.ToolTip = "Click to select this row.";
             }
         }
 
-        protected void grvListChiTietHoaDon_Sorting(object sender, GridViewSortEventArgs e)
+        protected void grvListGiaoTrinh_Sorting(object sender, GridViewSortEventArgs e)
         {
             string sortingDirection = string.Empty;
             if (direction == SortDirection.Ascending)
@@ -179,12 +176,12 @@ namespace CongKy.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "ASC";
             }
-            DataSet dsBaiViet = tblChiTietGiaoTrinhDAO.ChiTietHoaDon_SelectList();
+            DataSet dsBaiViet = tblGiaoTrinhDAO.GiaoTrinh_SelectList();
             DataView sortedView = new DataView(dsBaiViet.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;
-            grvListChiTietHoaDon.DataSource = sortedView;
-            grvListChiTietHoaDon.DataBind();
+            grvListGiaoTrinh.DataSource = sortedView;
+            grvListGiaoTrinh.DataBind();
         }
 
         public SortDirection direction
@@ -205,12 +202,12 @@ namespace CongKy.UserControl
         #region "Event Button"
         protected void Search_Click(object sender, EventArgs e)
         {
-            BindData(objtblChiTietHoaDonEO);
+            BindData(objtblGiaoTrinhEO);
         }
 
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
-            BindData(objtblChiTietHoaDonEO);
+            BindData(objtblGiaoTrinhEO);
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
@@ -219,11 +216,6 @@ namespace CongKy.UserControl
             {
                 AddNew(this, EventArgs.Empty);
             }
-        }
-
-        protected void btnDeleteList_Click(object sender, EventArgs e)
-        {
-
         }
 
         protected void btnExportExcel_Click(object sender, EventArgs e)
@@ -243,32 +235,32 @@ namespace CongKy.UserControl
             {
                 HtmlTextWriter hw = new HtmlTextWriter(sw);
                 //To Export all pages
-                grvListChiTietHoaDon.AllowPaging = false;
-                this.BindData(objtblChiTietHoaDonEO);
+                grvListGiaoTrinh.AllowPaging = false;
+                this.BindData(objtblGiaoTrinhEO);
 
-                grvListChiTietHoaDon.HeaderRow.BackColor = Color.White;
-                foreach (TableCell cell in grvListChiTietHoaDon.HeaderRow.Cells)
+                grvListGiaoTrinh.HeaderRow.BackColor = Color.White;
+                foreach (TableCell cell in grvListGiaoTrinh.HeaderRow.Cells)
                 {
-                    cell.BackColor = grvListChiTietHoaDon.HeaderStyle.BackColor;
+                    cell.BackColor = grvListGiaoTrinh.HeaderStyle.BackColor;
                 }
-                foreach (GridViewRow row in grvListChiTietHoaDon.Rows)
+                foreach (GridViewRow row in grvListGiaoTrinh.Rows)
                 {
                     row.BackColor = Color.White;
                     foreach (TableCell cell in row.Cells)
                     {
                         if (row.RowIndex % 2 == 0)
                         {
-                            cell.BackColor = grvListChiTietHoaDon.AlternatingRowStyle.BackColor;
+                            cell.BackColor = grvListGiaoTrinh.AlternatingRowStyle.BackColor;
                         }
                         else
                         {
-                            cell.BackColor = grvListChiTietHoaDon.RowStyle.BackColor;
+                            cell.BackColor = grvListGiaoTrinh.RowStyle.BackColor;
                         }
                         cell.CssClass = "textmode";
                     }
                 }
 
-                grvListChiTietHoaDon.RenderControl(hw);
+                grvListGiaoTrinh.RenderControl(hw);
                 //style to format numbers to string
                 string style = @"<style> .textmode { } </style>";
                 Response.Write(style);
@@ -281,7 +273,7 @@ namespace CongKy.UserControl
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            BindData(objtblChiTietHoaDonEO);
+            BindData(objtblGiaoTrinhEO);
         }
 
         protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)

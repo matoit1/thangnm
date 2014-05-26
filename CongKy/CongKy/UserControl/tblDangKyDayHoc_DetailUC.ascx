@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblDangKyDayHoc_DetailUC.ascx.cs" Inherits="CongKy.UserControl.tblSanPham_DetailUC" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblDangKyDayHoc_DetailUC.ascx.cs" Inherits="CongKy.UserControl.tblDangKyDayHoc_DetailUC" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
@@ -29,13 +29,12 @@
         </tr>
         <tr>
             <td>Mã tài khoản: </td>
-            <td><asp:DropDownList ID="ddlFK_iTaiKhoanID" runat="server" Width="405px"></asp:DropDownList></td>
+            <td><asp:TextBox ID="txtFK_iTaiKhoanID" runat="server" Width="400px" MaxLength="50" TabIndex="4"></asp:TextBox></td>
             <td><asp:Label ID="lblFK_iTaiKhoanID" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Mã môn học: </td>
-            <td><asp:DropDownList ID="ddlFK_iMonHocID" runat="server" Width="405px" 
-                    TabIndex="1"></asp:DropDownList></td>
+            <td><asp:TextBox ID="txtFK_iMonHocID" runat="server" Width="400px" MaxLength="50" TabIndex="4"></asp:TextBox></td>
             <td><asp:Label ID="lblFK_iMonHocID" runat="server"></asp:Label></td>
         </tr>
         

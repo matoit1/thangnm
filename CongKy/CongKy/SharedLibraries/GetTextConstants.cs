@@ -41,10 +41,10 @@ namespace CongKy.SharedLibraries
             return output;
         }
 
-        /// <summary> I.7. NhomSanPham_iTrangThai_GTC (Trạng Thái Nhóm Sản Phẩm) </summary>
+        /// <summary> I.7. DangKyDayHoc_iTrangThai_GTC (Trạng Thái Đăng ký dạy học) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string NhomSanPham_iTrangThai_GTC(Int16 input)
+        public static string DangKyDayHoc_iTrangThai_GTC(Int16 input)
         {
             string output = "";
             switch (input)
@@ -56,17 +56,16 @@ namespace CongKy.SharedLibraries
             return output;
         }
 
-        /// <summary> I.8. SanPham_iTrangThai_GTC (Trạng Thái Sản Phẩm) </summary>
+        /// <summary> I.8. MonHoc_iTrangThai_GTC (Trạng Thái môn học) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
-        public static string SanPham_iTrangThai_GTC(Int16 input)
+        public static string MonHoc_iTrangThai_GTC(Int16 input)
         {
             string output = "";
             switch (input)
             {
                 case 1: output = "Mở"; break;
-                case 2: output = "Hết hàng"; break;
-                case 3: output = "Khóa"; break;
+                case 2: output = "Khóa"; break;
                 default: output = "N/A"; break;
             }
             return output;

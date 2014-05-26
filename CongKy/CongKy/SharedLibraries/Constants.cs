@@ -26,21 +26,20 @@ namespace CongKy.SharedLibraries.Constants
         public const Int16 Other = 4;
     }
 
-    /// <summary> I.7. NhomSanPham_iTrangThai_C (Trạng Thái Nhóm Sản Phẩm) </summary>
+    /// <summary> I.7. DangKyDayHoc_iTrangThai_C (Trạng Thái Đăng ký dạy học) </summary>
     /// 
-    public class NhomSanPham_iTrangThai_C
+    public class DangKyDayHoc_iTrangThai_C
     {
         public const Int16 Mo = 1;
         public const Int16 Khoa = 2;
     }
 
-    /// <summary> I.8. SanPham_iTrangThai_C (Trạng Thái Sản Phẩm) </summary>
+    /// <summary> I.8. MonHoc_iTrangThai_C (Trạng Thái môn học) </summary>
     /// 
-    public class SanPham_iTrangThai_C
+    public class MonHoc_iTrangThai_C
     {
         public const Int16 Mo = 1;
-        public const Int16 Het_Hang = 2;
-        public const Int16 Khoa = 3;
+        public const Int16 Khoa = 2;
 
     }
 

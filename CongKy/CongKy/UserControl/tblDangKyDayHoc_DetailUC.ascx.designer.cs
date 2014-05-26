@@ -10,7 +10,7 @@
 namespace CongKy.UserControl {
     
     
-    public partial class tblSanPham_DetailUC {
+    public partial class tblDangKyDayHoc_DetailUC {
         
         /// <summary>
         /// lblTitle control.
@@ -28,16 +28,16 @@ namespace CongKy.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Label lblMsg;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// ddlFK_iTaiKhoanID control.
+        /// txtFK_iTaiKhoanID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFK_iTaiKhoanID;
+        protected global::System.Web.UI.WebControls.TextBox txtFK_iTaiKhoanID;
         
         /// <summary>
         /// lblFK_iTaiKhoanID control.
@@ -49,13 +49,13 @@ namespace CongKy.UserControl {
         protected global::System.Web.UI.WebControls.Label lblFK_iTaiKhoanID;
         
         /// <summary>
-        /// ddlFK_iMonHocID control.
+        /// txtFK_iMonHocID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFK_iMonHocID;
+        protected global::System.Web.UI.WebControls.TextBox txtFK_iMonHocID;
         
         /// <summary>
         /// lblFK_iMonHocID control.
@@ -109,7 +109,7 @@ namespace CongKy.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Button btnInsert;
+        protected global::System.Web.UI.WebControls.Button btnInsert;
         
         /// <summary>
         /// btnUpdate control.
@@ -118,7 +118,7 @@ namespace CongKy.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Button btnUpdate;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
         
         /// <summary>
         /// btnDelete control.
@@ -127,7 +127,7 @@ namespace CongKy.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Button btnDelete;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
         /// btnReset control.
