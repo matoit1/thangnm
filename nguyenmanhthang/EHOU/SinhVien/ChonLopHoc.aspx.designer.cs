@@ -10,25 +10,25 @@
 namespace EHOU.SinhVien {
     
     
-    public partial class ChonLop {
+    public partial class ChonLopHoc {
         
         /// <summary>
-        /// pnlLopHoc control.
+        /// pnlMonHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLopHoc;
+        protected global::System.Web.UI.WebControls.Panel pnlMonHoc;
         
         /// <summary>
-        /// rbtnlListClass control.
+        /// ChonMonHocUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rbtnlListClass;
+        protected global::EHOU.Usercontrol.ChonMonHocUC ChonMonHocUC1;
         
         /// <summary>
         /// pnlBaiHoc control.
@@ -40,12 +40,21 @@ namespace EHOU.SinhVien {
         protected global::System.Web.UI.WebControls.Panel pnlBaiHoc;
         
         /// <summary>
-        /// rbtnlListSubject control.
+        /// lbtnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rbtnlListSubject;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
+        
+        /// <summary>
+        /// ChonBaiHocUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EHOU.Usercontrol.ChonBaiHocUC ChonBaiHocUC1;
     }
 }

@@ -53,13 +53,20 @@ namespace EHOU.GiangVien
                             _tblMessageEO.FK_sRoom = _tblSubjectEO.PK_sSubject;
                             _tblMessageEO.FK_sUsername = _tblSubjectEO.FK_sTeacher;
                             _tblMessageEO.iStatus = 1;
+
+
+                            tblPartEO _tblPartEO = new tblPartEO();
+                            _tblPartEO.PK_iPart = Convert.ToInt16(Request.QueryString["PK_iPart"]);
+                            _tblPartEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
+                            _tblPartEO = tblPartDAO.Part_SelectItem(_tblPartEO);
+
                             ChatUC1.objtblMessageEO = _tblMessageEO;
-                            ChatUC1.objtblSubjectEO = _tblSubjectEO;
+                            ChatUC1.objtblPartEO = _tblPartEO;
                             ChatUC1.iTypeUser = tblAccount_iType_C.Giang_Vien;
 
-                            //SinhVienEO _SinhVienEO = new SinhVienEO();
-                            //_SinhVienEO.FK_sMaLop = _tblSubjectEO.PK_sSubject;
-                            //DanhSachLopHocUC1.BindData(_SinhVienEO);
+                            tblSubject_StudentEO _tblSubject_StudentEO = new tblSubject_StudentEO();
+                            _tblSubject_StudentEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
+                            DanhSachLopHocUC1.BindData(_tblSubject_StudentEO);
 
                             //Kiểm tra trạng thái buổi học Online / Offline
                             switch (_tblSubjectEO.iStatus)
@@ -68,7 +75,7 @@ namespace EHOU.GiangVien
                                                                             UploadFileUC1.Visible = true; 
                                                                             UploadFileUC2.Visible = true; break;
                                 case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1;
-                                                                            VideoUC1.sLinkVideo = _tblSubjectEO.sLinkVideo;
+                                                                            VideoUC1.sLinkVideo = _tblPartEO.sLinkVideo;
                                                                             UploadFileUC1.Visible = true;
                                                                             UploadFileUC2.Visible = true; break;
                                 case LichDayVaHoc_iTrangThai_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0;
@@ -116,13 +123,13 @@ namespace EHOU.GiangVien
 
         protected void Refresh2_Click(object sender, EventArgs e)
         {
-            LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
-            _LichDayVaHocEO.FK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
-            _LichDayVaHocEO.FK_sMalop = Request.QueryString["PK_sMalop"];
-            _LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
-            _LichDayVaHocEO.sLinkVideo = UploadFileUC2.linkfilevideo.Substring(1);
-            LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(_LichDayVaHocEO);
-            Response.Redirect(Request.Url.ToString());
+            //LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
+            //_LichDayVaHocEO.FK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
+            //_LichDayVaHocEO.FK_sMalop = Request.QueryString["PK_sMalop"];
+            //_LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
+            //_LichDayVaHocEO.sLinkVideo = UploadFileUC2.linkfilevideo.Substring(1);
+            //LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(_LichDayVaHocEO);
+            //Response.Redirect(Request.Url.ToString());
         }
     }
 }

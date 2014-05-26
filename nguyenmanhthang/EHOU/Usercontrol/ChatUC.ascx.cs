@@ -26,10 +26,10 @@ namespace EHOU.UserControl
             get { return (tblMessageEO)ViewState["objTinNhanEO"]; }
             set { ViewState["objTinNhanEO"] = value; }
         }
-        public tblSubjectEO objtblSubjectEO
+        public tblPartEO objtblPartEO
         {
-            get { return (tblSubjectEO)ViewState["objtblSubjectEO"]; }
-            set { ViewState["objtblSubjectEO"] = value; }
+            get { return (tblPartEO)ViewState["objtblPartEO"]; }
+            set { ViewState["objtblPartEO"] = value; }
         }
         public string sColor
         {
@@ -76,7 +76,7 @@ namespace EHOU.UserControl
             lblMsg.Text = "";
             try
             {
-                List<string> lstAcc = objtblSubjectEO.sBlackList.Split(',').ToList<string>();
+                List<string> lstAcc = objtblPartEO.sBlackList.Split(',').ToList<string>();
                 if (lstAcc.Any(s => s.Equals(objtblMessageEO.FK_sUsername)) == false)
                 {
                     lblMsg.Text = string.Empty;
@@ -109,14 +109,14 @@ namespace EHOU.UserControl
         {
             try
             {
-                objtblSubjectEO = tblSubjectDAO.Subject_SelectItem(objtblSubjectEO);
+                objtblPartEO = tblPartDAO.Part_SelectItem(objtblPartEO);
                 DataSet ds = tblMessageDAO.Message_SelectList(objtblMessageEO);
                 if (iSumMessage != ds.Tables[0].Rows.Count)
                 {
                     iSumMessage = ds.Tables[0].Rows.Count;
-                    SinhVienEO _SinhVienEO = new SinhVienEO();
-                    _SinhVienEO.FK_sMaLop = objtblSubjectEO.PK_sSubject;
-                    //lblSumOnline.Text = SinhVienDAO.SinhVien_SelectByFK_sMaLop(_SinhVienEO).Tables[0].Rows.Count.ToString();
+                    //SinhVienEO _SinhVienEO = new SinhVienEO();
+                    //_SinhVienEO.FK_sMaLop = objtblSubjectEO.PK_sSubject;
+                    
                     rptDialog.DataSource = ds;
                     rptDialog.DataBind();
                 }
@@ -172,16 +172,16 @@ namespace EHOU.UserControl
                     case "ibntHideAcc":
                         iSumMessage = 0;
                         //sAccountDisabe = lblFK_sUsername;
-                        objtblSubjectEO.sBlackList = objtblSubjectEO.sBlackList + hfFK_sUsername.Value + ",";
-                        tblSubjectDAO.Subject_Update_sLinkVideo_sBlackList(objtblSubjectEO);
+                        objtblPartEO.sBlackList = objtblPartEO.sBlackList + hfFK_sUsername.Value + ",";
+                        tblPartDAO.Part_Update_sLinkVideo_sBlackList(objtblPartEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         break;
                     case "ibntShowAcc":
                         iSumMessage = 0;
                        // sAccountDisabe = lblFK_sUsername;
-                        objtblSubjectEO.sBlackList = objtblSubjectEO.sBlackList.Replace("," + hfFK_sUsername.Value + ",", ",");
-                        tblSubjectDAO.Subject_Update_sLinkVideo_sBlackList(objtblSubjectEO);
+                        objtblPartEO.sBlackList = objtblPartEO.sBlackList.Replace("," + hfFK_sUsername.Value + ",", ",");
+                        tblPartDAO.Part_Update_sLinkVideo_sBlackList(objtblPartEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
                         break;
@@ -196,8 +196,8 @@ namespace EHOU.UserControl
         protected void rptDialog_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             try{
-                    tblSubjectEO _tblSubjectEO = new tblSubjectEO();
-                    _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(objtblSubjectEO);
+                    tblPartEO _tblPartEO = new tblPartEO();
+                    _tblPartEO = tblPartDAO.Part_SelectItem(objtblPartEO);
                     HiddenField hfFK_sUsername = (HiddenField)e.Item.FindControl("hfFK_sUsername");
                     Label lblFK_sUsername = (Label)e.Item.FindControl("lblFK_sUsername");
                     Label lblsContent = (Label)e.Item.FindControl("lblsContent");
@@ -215,7 +215,7 @@ namespace EHOU.UserControl
                         //_SinhVienEO.sTendangnhapSV = lblFK_sUsername.Text;
                         //string PK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
 
-                        List<string> lstAcc = _tblSubjectEO.sBlackList.Split(',').ToList<string>();
+                        List<string> lstAcc = _tblPartEO.sBlackList.Split(',').ToList<string>();
                         if ((lstAcc.Any(s => s.Contains(hfFK_sUsername.Value))) == true)
                         {
                            // sAccountDisabe = lblFK_sUsername.Text;

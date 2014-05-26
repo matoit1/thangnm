@@ -88,18 +88,12 @@
     <Content Include="bin\EHOU.dll" />
     <Content Include="bin\EHOU.pdb" />
     <Content Include="bin\Newtonsoft.Json.dll" />
-    <Content Include="Default.aspx" />
     <Content Include="Flash\FlashVideoPlayer.swf" />
-    <Content Include="Flash\LiveSample.swf" />
+    <Content Include="Flash\LiveSample1.swf" />
     <Content Include="Flash\SampleMediaPlayback.swf" />
-    <Content Include="GiangVien\Accounts\ForgotPassword.aspx" />
-    <Content Include="GiangVien\Accounts\Login.aspx" />
-    <Content Include="GiangVien\Accounts\Register.aspx" />
+    <Content Include="GiangVien\ChonLopDay.aspx" />
     <Content Include="GiangVien\Default.aspx" />
     <Content Include="GiangVien\GiangDay.aspx" />
-    <Content Include="GiangVien\LichDay.aspx" />
-    <Content Include="GiangVien\LopHoc.aspx" />
-    <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Avatar\default.png" />
@@ -251,17 +245,8 @@
     <Content Include="Other\SQL_Query\Function.sql" />
     <Content Include="Other\SQL_Query\Store_Procedure.sql" />
     <Content Include="Other\VideoUC.ascx" />
-    <Content Include="QuanTri\Accounts\ForgotPassword.aspx" />
-    <Content Include="QuanTri\Accounts\Login.aspx" />
-    <Content Include="QuanTri\Accounts\Register.aspx" />
-    <Content Include="QuanTri\BaiViet.aspx" />
-    <Content Include="QuanTri\Config.aspx" />
     <Content Include="QuanTri\Database.aspx" />
     <Content Include="QuanTri\Default.aspx" />
-    <Content Include="QuanTri\GiangVien.aspx" />
-    <Content Include="QuanTri\LopHoc.aspx" />
-    <Content Include="QuanTri\MonHoc.aspx" />
-    <Content Include="QuanTri\SinhVien.aspx" />
     <Content Include="QuanTri\ThongTinCaNhan.aspx" />
     <Content Include="Scripts\AutoCallBackServer.js" />
     <Content Include="Scripts\calendar1.js" />
@@ -279,15 +264,9 @@
     <Content Include="Scripts\New\dockbar.js" />
     <Content Include="Scripts\New\jquery-1.9.1.min.js" />
     <Content Include="Scripts\popup.js" />
-    <Content Include="SinhVien\Accounts\ForgotPassword.aspx" />
-    <Content Include="SinhVien\Accounts\Login.aspx" />
-    <Content Include="SinhVien\Accounts\Register.aspx" />
-    <Content Include="SinhVien\ChonLop.aspx" />
+    <Content Include="SinhVien\ChonLopHoc.aspx" />
     <Content Include="SinhVien\Default.aspx" />
-    <Content Include="SinhVien\DiemThi.aspx" />
     <Content Include="SinhVien\HocTap.aspx" />
-    <Content Include="SinhVien\LichHoc.aspx" />
-    <Content Include="SinhVien\ThiTracNghiem.aspx" />
     <Content Include="SinhVien\ThongTinCaNhan.aspx" />
     <Content Include="SinhVien\User.aspx" />
     <Content Include="Upload\anlv\video\movie.3g2" />
@@ -305,48 +284,15 @@
     <Content Include="Upload\tungtt\video\movie.wmv" />
     <Content Include="Usercontrol\ASM_ClientUC.ascx" />
     <Content Include="Usercontrol\ASM_ServerUC.ascx" />
-    <Content Include="Usercontrol\BaiViet_DetailUC.ascx" />
-    <Content Include="Usercontrol\BaiViet_ListUC.ascx" />
-    <Content Include="Usercontrol\CaHocUC.ascx" />
-    <Content Include="Usercontrol\CauHoi_DetailUC.ascx" />
-    <Content Include="Usercontrol\CauHoi_ListUC.ascx" />
+    <Content Include="Usercontrol\ChonBaiHocUC.ascx" />
     <Content Include="Usercontrol\ChatUC.ascx" />
-    <Content Include="Usercontrol\ChatUC_Flash.ascx" />
+    <Content Include="Usercontrol\ChonMonHocUC.ascx" />
     <Content Include="Usercontrol\DanhSachLopHocUC.ascx" />
-    <Content Include="Usercontrol\DiemThi_DetailUC.ascx" />
-    <Content Include="Usercontrol\DiemThi_ListUC.ascx" />
     <Content Include="Usercontrol\DongHoUC.ascx" />
-    <Content Include="Usercontrol\Error_DetailUC.ascx" />
-    <Content Include="Usercontrol\Error_ListUC.ascx" />
-    <Content Include="Usercontrol\ForgotPasswordUC.ascx" />
-    <Content Include="Usercontrol\GiangVien_DetailUC.ascx" />
-    <Content Include="Usercontrol\GiangVien_ListUC.ascx" />
     <Content Include="Usercontrol\Hoc_LieuUC.ascx" />
-    <Content Include="Usercontrol\LichDayVaHoc_DetailUC.ascx" />
-    <Content Include="Usercontrol\LichDayVaHoc_ListUC.ascx" />
-    <Content Include="Usercontrol\LoginUC.ascx" />
-    <Content Include="Usercontrol\LopHoc_DetailUC.ascx" />
-    <Content Include="Usercontrol\LopHoc_ListUC.ascx" />
-    <Content Include="Usercontrol\MonHoc_DetailUC.ascx" />
-    <Content Include="Usercontrol\MonHoc_ListUC.ascx" />
-    <Content Include="Usercontrol\PhanCongCongTac_DetailUC.ascx" />
-    <Content Include="Usercontrol\PhanCongCongTac_ListUC.ascx" />
     <Content Include="Usercontrol\RegisterUC.ascx" />
-    <Content Include="Usercontrol\Search\BaiViet_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\CauHoi_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\DiemThi_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\Error_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\GiangVien_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\LichDayVaHoc_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\LopHoc_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\MonHoc_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\PhanCongCongTac_SearchUC.ascx" />
-    <Content Include="Usercontrol\Search\SinhVien_SearchUC.ascx" />
-    <Content Include="Usercontrol\SinhVien_DetailUC.ascx" />
-    <Content Include="Usercontrol\SinhVien_ListUC.ascx" />
     <Content Include="Usercontrol\tblAccount_DetailUC.ascx" />
     <Content Include="Usercontrol\Thong_Tin_Lop_HocUC.ascx" />
-    <Content Include="Usercontrol\TracNghiemUC.ascx" />
     <Content Include="Usercontrol\UploadFileUC.ascx" />
     <Content Include="Usercontrol\VideoUC.ascx" />
     <Content Include="Web.config" />
@@ -365,68 +311,25 @@
     <Compile Include="Access_Denied.aspx.designer.cs">
       <DependentUpon>Access_Denied.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DataAccessObject\BaiVietDAO.cs" />
-    <Compile Include="DataAccessObject\CauHoiDAO.cs" />
-    <Compile Include="DataAccessObject\ConfigDAO.cs" />
     <Compile Include="DataAccessObject\ConnectionDAO.cs" />
     <Compile Include="DataAccessObject\DataSet2LinQ.cs" />
     <Compile Include="DataAccessObject\DataSet2Object.cs" />
-    <Compile Include="DataAccessObject\DiemThiDAO.cs" />
-    <Compile Include="DataAccessObject\ErrorDAO.cs" />
-    <Compile Include="DataAccessObject\GiangVienDAO.cs" />
-    <Compile Include="DataAccessObject\LichDayVaHocDAO.cs" />
-    <Compile Include="DataAccessObject\LopHocDAO.cs" />
-    <Compile Include="DataAccessObject\MonHocDAO.cs" />
-    <Compile Include="DataAccessObject\PhanCongCongTacDAO.cs" />
-    <Compile Include="DataAccessObject\SinhVienDAO.cs" />
     <Compile Include="DataAccessObject\tblAccountDAO.cs" />
-    <Compile Include="DataAccessObject\tblDetailDAO.cs" />
+    <Compile Include="DataAccessObject\tblSubject_StudentDAO.cs" />
     <Compile Include="DataAccessObject\tblMessageDAO.cs" />
     <Compile Include="DataAccessObject\tblSubjectDAO.cs" />
-    <Compile Include="DataAccessObject\TinNhanDAO.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EntityObject\BaiVietEO.cs" />
-    <Compile Include="EntityObject\CauHoiEO.cs" />
-    <Compile Include="EntityObject\ConfigEO.cs" />
-    <Compile Include="EntityObject\DiemThiEO.cs" />
-    <Compile Include="EntityObject\ErrorEO.cs" />
-    <Compile Include="EntityObject\GiangVienEO.cs" />
-    <Compile Include="EntityObject\LichDayVaHocEO.cs" />
-    <Compile Include="EntityObject\LopHocEO.cs" />
-    <Compile Include="EntityObject\MonHocEO.cs" />
-    <Compile Include="EntityObject\PhanCongCongTacEO.cs" />
-    <Compile Include="EntityObject\SinhVienEO.cs" />
+    <Compile Include="DataAccessObject\tblPartDAO.cs" />
     <Compile Include="EntityObject\tblAccountEO.cs" />
-    <Compile Include="EntityObject\tblDetailEO.cs" />
+    <Compile Include="EntityObject\tblSubject_StudentEO.cs" />
     <Compile Include="EntityObject\tblMessageEO.cs" />
     <Compile Include="EntityObject\tblSubjectEO.cs" />
-    <Compile Include="EntityObject\TinNhanEO.cs" />
-    <Compile Include="GiangVien\Accounts\ForgotPassword.aspx.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    <Compile Include="EntityObject\tblPartEO.cs" />
+    <Compile Include="GiangVien\ChonLopDay.aspx.cs">
+      <DependentUpon>ChonLopDay.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GiangVien\Accounts\ForgotPassword.aspx.designer.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GiangVien\Accounts\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GiangVien\Accounts\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GiangVien\Accounts\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GiangVien\Accounts\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="GiangVien\ChonLopDay.aspx.designer.cs">
+      <DependentUpon>ChonLopDay.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiangVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -441,27 +344,6 @@
     </Compile>
     <Compile Include="GiangVien\GiangDay.aspx.designer.cs">
       <DependentUpon>GiangDay.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GiangVien\LichDay.aspx.cs">
-      <DependentUpon>LichDay.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GiangVien\LichDay.aspx.designer.cs">
-      <DependentUpon>LichDay.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GiangVien\LopHoc.aspx.cs">
-      <DependentUpon>LopHoc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GiangVien\LopHoc.aspx.designer.cs">
-      <DependentUpon>LopHoc.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GiangVien\MonHoc.aspx.cs">
-      <DependentUpon>MonHoc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GiangVien\MonHoc.aspx.designer.cs">
-      <DependentUpon>MonHoc.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiangVien\ThongTinCaNhan.aspx.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
@@ -484,41 +366,6 @@
       <DependentUpon>Online.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanTri\Accounts\ForgotPassword.aspx.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\Accounts\ForgotPassword.aspx.designer.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\Accounts\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\Accounts\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\Accounts\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\Accounts\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\BaiViet.aspx.cs">
-      <DependentUpon>BaiViet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\BaiViet.aspx.designer.cs">
-      <DependentUpon>BaiViet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\Config.aspx.cs">
-      <DependentUpon>Config.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\Config.aspx.designer.cs">
-      <DependentUpon>Config.aspx</DependentUpon>
-    </Compile>
     <Compile Include="QuanTri\Database.aspx.cs">
       <DependentUpon>Database.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -532,34 +379,6 @@
     </Compile>
     <Compile Include="QuanTri\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\GiangVien.aspx.cs">
-      <DependentUpon>GiangVien.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\GiangVien.aspx.designer.cs">
-      <DependentUpon>GiangVien.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\LopHoc.aspx.cs">
-      <DependentUpon>LopHoc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\LopHoc.aspx.designer.cs">
-      <DependentUpon>LopHoc.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\MonHoc.aspx.cs">
-      <DependentUpon>MonHoc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\MonHoc.aspx.designer.cs">
-      <DependentUpon>MonHoc.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\SinhVien.aspx.cs">
-      <DependentUpon>SinhVien.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\SinhVien.aspx.designer.cs">
-      <DependentUpon>SinhVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\ThongTinCaNhan.aspx.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
@@ -615,33 +434,12 @@
     <Compile Include="Share_Interface\Test.Master.designer.cs">
       <DependentUpon>Test.Master</DependentUpon>
     </Compile>
-    <Compile Include="SinhVien\Accounts\ForgotPassword.aspx.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    <Compile Include="SinhVien\ChonLopHoc.aspx.cs">
+      <DependentUpon>ChonLopHoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SinhVien\Accounts\ForgotPassword.aspx.designer.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SinhVien\Accounts\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SinhVien\Accounts\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SinhVien\Accounts\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SinhVien\Accounts\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SinhVien\ChonLop.aspx.cs">
-      <DependentUpon>ChonLop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SinhVien\ChonLop.aspx.designer.cs">
-      <DependentUpon>ChonLop.aspx</DependentUpon>
+    <Compile Include="SinhVien\ChonLopHoc.aspx.designer.cs">
+      <DependentUpon>ChonLopHoc.aspx</DependentUpon>
     </Compile>
     <Compile Include="SinhVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -650,33 +448,12 @@
     <Compile Include="SinhVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SinhVien\DiemThi.aspx.cs">
-      <DependentUpon>DiemThi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SinhVien\DiemThi.aspx.designer.cs">
-      <DependentUpon>DiemThi.aspx</DependentUpon>
-    </Compile>
     <Compile Include="SinhVien\HocTap.aspx.cs">
       <DependentUpon>HocTap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SinhVien\HocTap.aspx.designer.cs">
       <DependentUpon>HocTap.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SinhVien\LichHoc.aspx.cs">
-      <DependentUpon>LichHoc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SinhVien\LichHoc.aspx.designer.cs">
-      <DependentUpon>LichHoc.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SinhVien\ThiTracNghiem.aspx.cs">
-      <DependentUpon>ThiTracNghiem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SinhVien\ThiTracNghiem.aspx.designer.cs">
-      <DependentUpon>ThiTracNghiem.aspx</DependentUpon>
     </Compile>
     <Compile Include="SinhVien\ThongTinCaNhan.aspx.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
@@ -706,40 +483,12 @@
     <Compile Include="Usercontrol\ASM_ServerUC.ascx.designer.cs">
       <DependentUpon>ASM_ServerUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Usercontrol\BaiViet_DetailUC.ascx.cs">
-      <DependentUpon>BaiViet_DetailUC.ascx</DependentUpon>
+    <Compile Include="Usercontrol\ChonBaiHocUC.ascx.cs">
+      <DependentUpon>ChonBaiHocUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Usercontrol\BaiViet_DetailUC.ascx.designer.cs">
-      <DependentUpon>BaiViet_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\BaiViet_ListUC.ascx.cs">
-      <DependentUpon>BaiViet_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\BaiViet_ListUC.ascx.designer.cs">
-      <DependentUpon>BaiViet_ListUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\CaHocUC.ascx.cs">
-      <DependentUpon>CaHocUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\CaHocUC.ascx.designer.cs">
-      <DependentUpon>CaHocUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\CauHoi_DetailUC.ascx.cs">
-      <DependentUpon>CauHoi_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\CauHoi_DetailUC.ascx.designer.cs">
-      <DependentUpon>CauHoi_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\CauHoi_ListUC.ascx.cs">
-      <DependentUpon>CauHoi_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\CauHoi_ListUC.ascx.designer.cs">
-      <DependentUpon>CauHoi_ListUC.ascx</DependentUpon>
+    <Compile Include="Usercontrol\ChonBaiHocUC.ascx.designer.cs">
+      <DependentUpon>ChonBaiHocUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\ChatUC.ascx.cs">
       <DependentUpon>ChatUC.ascx</DependentUpon>
@@ -748,12 +497,12 @@
     <Compile Include="Usercontrol\ChatUC.ascx.designer.cs">
       <DependentUpon>ChatUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Usercontrol\ChatUC_Flash.ascx.cs">
-      <DependentUpon>ChatUC_Flash.ascx</DependentUpon>
+    <Compile Include="Usercontrol\ChonMonHocUC.ascx.cs">
+      <DependentUpon>ChonMonHocUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Usercontrol\ChatUC_Flash.ascx.designer.cs">
-      <DependentUpon>ChatUC_Flash.ascx</DependentUpon>
+    <Compile Include="Usercontrol\ChonMonHocUC.ascx.designer.cs">
+      <DependentUpon>ChonMonHocUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\DanhSachLopHocUC.ascx.cs">
       <DependentUpon>DanhSachLopHocUC.ascx</DependentUpon>
@@ -762,61 +511,12 @@
     <Compile Include="Usercontrol\DanhSachLopHocUC.ascx.designer.cs">
       <DependentUpon>DanhSachLopHocUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Usercontrol\DiemThi_DetailUC.ascx.cs">
-      <DependentUpon>DiemThi_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\DiemThi_DetailUC.ascx.designer.cs">
-      <DependentUpon>DiemThi_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\DiemThi_ListUC.ascx.cs">
-      <DependentUpon>DiemThi_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\DiemThi_ListUC.ascx.designer.cs">
-      <DependentUpon>DiemThi_ListUC.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Usercontrol\DongHoUC.ascx.cs">
       <DependentUpon>DongHoUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Usercontrol\DongHoUC.ascx.designer.cs">
       <DependentUpon>DongHoUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Error_DetailUC.ascx.cs">
-      <DependentUpon>Error_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Error_DetailUC.ascx.designer.cs">
-      <DependentUpon>Error_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Error_ListUC.ascx.cs">
-      <DependentUpon>Error_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Error_ListUC.ascx.designer.cs">
-      <DependentUpon>Error_ListUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\ForgotPasswordUC.ascx.cs">
-      <DependentUpon>ForgotPasswordUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\ForgotPasswordUC.ascx.designer.cs">
-      <DependentUpon>ForgotPasswordUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\GiangVien_DetailUC.ascx.cs">
-      <DependentUpon>GiangVien_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\GiangVien_DetailUC.ascx.designer.cs">
-      <DependentUpon>GiangVien_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\GiangVien_ListUC.ascx.cs">
-      <DependentUpon>GiangVien_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\GiangVien_ListUC.ascx.designer.cs">
-      <DependentUpon>GiangVien_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\Hoc_LieuUC.ascx.cs">
       <DependentUpon>Hoc_LieuUC.ascx</DependentUpon>
@@ -825,159 +525,12 @@
     <Compile Include="Usercontrol\Hoc_LieuUC.ascx.designer.cs">
       <DependentUpon>Hoc_LieuUC.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Usercontrol\LichDayVaHoc_DetailUC.ascx.cs">
-      <DependentUpon>LichDayVaHoc_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\LichDayVaHoc_DetailUC.ascx.designer.cs">
-      <DependentUpon>LichDayVaHoc_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\LichDayVaHoc_ListUC.ascx.cs">
-      <DependentUpon>LichDayVaHoc_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\LichDayVaHoc_ListUC.ascx.designer.cs">
-      <DependentUpon>LichDayVaHoc_ListUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\LoginUC.ascx.cs">
-      <DependentUpon>LoginUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\LoginUC.ascx.designer.cs">
-      <DependentUpon>LoginUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\LopHoc_DetailUC.ascx.cs">
-      <DependentUpon>LopHoc_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\LopHoc_DetailUC.ascx.designer.cs">
-      <DependentUpon>LopHoc_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\LopHoc_ListUC.ascx.cs">
-      <DependentUpon>LopHoc_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\LopHoc_ListUC.ascx.designer.cs">
-      <DependentUpon>LopHoc_ListUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\MonHoc_DetailUC.ascx.cs">
-      <DependentUpon>MonHoc_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\MonHoc_DetailUC.ascx.designer.cs">
-      <DependentUpon>MonHoc_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\MonHoc_ListUC.ascx.cs">
-      <DependentUpon>MonHoc_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\MonHoc_ListUC.ascx.designer.cs">
-      <DependentUpon>MonHoc_ListUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\PhanCongCongTac_DetailUC.ascx.cs">
-      <DependentUpon>PhanCongCongTac_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\PhanCongCongTac_DetailUC.ascx.designer.cs">
-      <DependentUpon>PhanCongCongTac_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\PhanCongCongTac_ListUC.ascx.cs">
-      <DependentUpon>PhanCongCongTac_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\PhanCongCongTac_ListUC.ascx.designer.cs">
-      <DependentUpon>PhanCongCongTac_ListUC.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Usercontrol\RegisterUC.ascx.cs">
       <DependentUpon>RegisterUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Usercontrol\RegisterUC.ascx.designer.cs">
       <DependentUpon>RegisterUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\BaiViet_SearchUC.ascx.cs">
-      <DependentUpon>BaiViet_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\BaiViet_SearchUC.ascx.designer.cs">
-      <DependentUpon>BaiViet_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\CauHoi_SearchUC.ascx.cs">
-      <DependentUpon>CauHoi_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\CauHoi_SearchUC.ascx.designer.cs">
-      <DependentUpon>CauHoi_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\DiemThi_SearchUC.ascx.cs">
-      <DependentUpon>DiemThi_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\DiemThi_SearchUC.ascx.designer.cs">
-      <DependentUpon>DiemThi_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\Error_SearchUC.ascx.cs">
-      <DependentUpon>Error_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\Error_SearchUC.ascx.designer.cs">
-      <DependentUpon>Error_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\GiangVien_SearchUC.ascx.cs">
-      <DependentUpon>GiangVien_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\GiangVien_SearchUC.ascx.designer.cs">
-      <DependentUpon>GiangVien_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\LichDayVaHoc_SearchUC.ascx.cs">
-      <DependentUpon>LichDayVaHoc_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\LichDayVaHoc_SearchUC.ascx.designer.cs">
-      <DependentUpon>LichDayVaHoc_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\LopHoc_SearchUC.ascx.cs">
-      <DependentUpon>LopHoc_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\LopHoc_SearchUC.ascx.designer.cs">
-      <DependentUpon>LopHoc_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\MonHoc_SearchUC.ascx.cs">
-      <DependentUpon>MonHoc_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\MonHoc_SearchUC.ascx.designer.cs">
-      <DependentUpon>MonHoc_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\PhanCongCongTac_SearchUC.ascx.cs">
-      <DependentUpon>PhanCongCongTac_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\PhanCongCongTac_SearchUC.ascx.designer.cs">
-      <DependentUpon>PhanCongCongTac_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\Search\SinhVien_SearchUC.ascx.cs">
-      <DependentUpon>SinhVien_SearchUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\Search\SinhVien_SearchUC.ascx.designer.cs">
-      <DependentUpon>SinhVien_SearchUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\SinhVien_DetailUC.ascx.cs">
-      <DependentUpon>SinhVien_DetailUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\SinhVien_DetailUC.ascx.designer.cs">
-      <DependentUpon>SinhVien_DetailUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\SinhVien_ListUC.ascx.cs">
-      <DependentUpon>SinhVien_ListUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\SinhVien_ListUC.ascx.designer.cs">
-      <DependentUpon>SinhVien_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\tblAccount_DetailUC.ascx.cs">
       <DependentUpon>tblAccount_DetailUC.ascx</DependentUpon>
@@ -992,13 +545,6 @@
     </Compile>
     <Compile Include="Usercontrol\Thong_Tin_Lop_HocUC.ascx.designer.cs">
       <DependentUpon>Thong_Tin_Lop_HocUC.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Usercontrol\TracNghiemUC.ascx.cs">
-      <DependentUpon>TracNghiemUC.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usercontrol\TracNghiemUC.ascx.designer.cs">
-      <DependentUpon>TracNghiemUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\UploadFileUC.ascx.cs">
       <DependentUpon>UploadFileUC.ascx</DependentUpon>
@@ -1017,10 +563,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="GiangVien\Accounts\" />
     <Folder Include="Images\Smileys\" />
     <Folder Include="Images\Temp\" />
+    <Folder Include="QuanTri\Accounts\" />
+    <Folder Include="SinhVien\Accounts\" />
     <Folder Include="Upload\anlv\example\" />
     <Folder Include="Upload\tungtt\example\" />
+    <Folder Include="Usercontrol\Search\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="KeepAlive.ashx" />

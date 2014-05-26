@@ -20,10 +20,11 @@ namespace EHOU.UserControl
             
         }
 
-        public void BindData(SinhVienEO _SinhVienEO){
-            cblDanhSachLop.DataSource = SinhVienDAO.SinhVien_SelectByFK_sMaLop(_SinhVienEO);
-            cblDanhSachLop.DataTextField = "sHotenSV";
-            cblDanhSachLop.DataValueField = "PK_sMaSV";
+        public void BindData(tblSubject_StudentEO _tblSubject_StudentEO)
+        {
+            cblDanhSachLop.DataSource = tblSubject_StudentDAO.Subject_Student_SelectByFK_sSubject(_tblSubject_StudentEO);
+            cblDanhSachLop.DataTextField = "sName";
+            cblDanhSachLop.DataValueField = "FK_sStudent";
             cblDanhSachLop.DataBind();
         }
 

@@ -10,15 +10,15 @@
 namespace EHOU.Usercontrol {
     
     
-    public partial class CaHocUC {
+    public partial class ChonBaiHocUC {
         
         /// <summary>
-        /// rbtnlListClass control.
+        /// rbtnlListPart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rbtnlListClass;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbtnlListPart;
     }
 }
