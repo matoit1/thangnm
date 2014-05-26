@@ -287,11 +287,20 @@
     <Content Include="Usercontrol\ChonBaiHocUC.ascx" />
     <Content Include="Usercontrol\ChatUC.ascx" />
     <Content Include="Usercontrol\ChonMonHocUC.ascx" />
+    <Content Include="Usercontrol\tblAccount_ListUC.ascx" />
+    <Content Include="Usercontrol\tblMessage_DetailUC.ascx" />
+    <Content Include="Usercontrol\tblMessage_ListUC.ascx" />
+    <Content Include="Usercontrol\tblPart_DetailUC.ascx" />
+    <Content Include="Usercontrol\tblPart_ListUC.ascx" />
+    <Content Include="Usercontrol\tblSubject_DetailUC.ascx" />
+    <Content Include="Usercontrol\tblSubject_ListUC.ascx" />
     <Content Include="Usercontrol\DanhSachLopHocUC.ascx" />
     <Content Include="Usercontrol\DongHoUC.ascx" />
     <Content Include="Usercontrol\Hoc_LieuUC.ascx" />
     <Content Include="Usercontrol\RegisterUC.ascx" />
     <Content Include="Usercontrol\tblAccount_DetailUC.ascx" />
+    <Content Include="Usercontrol\tblSubject_Student_DetailUC.ascx" />
+    <Content Include="Usercontrol\tblSubject_Student_ListUC.ascx" />
     <Content Include="Usercontrol\Thong_Tin_Lop_HocUC.ascx" />
     <Content Include="Usercontrol\UploadFileUC.ascx" />
     <Content Include="Usercontrol\VideoUC.ascx" />
@@ -504,6 +513,55 @@
     <Compile Include="Usercontrol\ChonMonHocUC.ascx.designer.cs">
       <DependentUpon>ChonMonHocUC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrol\tblAccount_ListUC.ascx.cs">
+      <DependentUpon>tblAccount_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblAccount_ListUC.ascx.designer.cs">
+      <DependentUpon>tblAccount_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblMessage_DetailUC.ascx.cs">
+      <DependentUpon>tblMessage_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblMessage_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblMessage_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblMessage_ListUC.ascx.cs">
+      <DependentUpon>tblMessage_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblMessage_ListUC.ascx.designer.cs">
+      <DependentUpon>tblMessage_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblPart_DetailUC.ascx.cs">
+      <DependentUpon>tblPart_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblPart_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblPart_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblPart_ListUC.ascx.cs">
+      <DependentUpon>tblPart_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblPart_ListUC.ascx.designer.cs">
+      <DependentUpon>tblPart_ListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblSubject_DetailUC.ascx.cs">
+      <DependentUpon>tblSubject_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblSubject_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblSubject_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblSubject_ListUC.ascx.cs">
+      <DependentUpon>tblSubject_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblSubject_ListUC.ascx.designer.cs">
+      <DependentUpon>tblSubject_ListUC.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrol\DanhSachLopHocUC.ascx.cs">
       <DependentUpon>DanhSachLopHocUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -538,6 +596,20 @@
     </Compile>
     <Compile Include="Usercontrol\tblAccount_DetailUC.ascx.designer.cs">
       <DependentUpon>tblAccount_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblSubject_Student_DetailUC.ascx.cs">
+      <DependentUpon>tblSubject_Student_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblSubject_Student_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblSubject_Student_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblSubject_Student_ListUC.ascx.cs">
+      <DependentUpon>tblSubject_Student_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblSubject_Student_ListUC.ascx.designer.cs">
+      <DependentUpon>tblSubject_Student_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\Thong_Tin_Lop_HocUC.ascx.cs">
       <DependentUpon>Thong_Tin_Lop_HocUC.ascx</DependentUpon>

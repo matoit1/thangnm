@@ -188,7 +188,7 @@ namespace DataAccessObject
         /// <summary> 7. Account_SelectList </summary>
         /// <param name="tblAccountEO"></param>
         /// <returns></returns>
-        public static DataSet Account_SelectList(tblAccountEO tblAccountEO)
+        public static DataSet Account_SelectList()
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -198,7 +198,7 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblAccount_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sUsername", tblAccountEO.PK_sUsername));
+                    //da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sUsername", tblAccountEO.PK_sUsername));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
