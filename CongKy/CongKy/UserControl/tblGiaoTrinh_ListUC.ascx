@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblGiaoTrinh_ListUC.ascx.cs" Inherits="CongKy.UserControl.tblChiTietHoaDon_ListUC" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblGiaoTrinh_ListUC.ascx.cs" Inherits="CongKy.UserControl.tblGiaoTrinh_ListUC" %>
 <script type="text/javascript">
     function CheckAll(chkTemp) {
         var grvTemp = document.getElementById("<%=grvListChiTietHoaDon.ClientID %>");
@@ -32,13 +32,13 @@
         </tr>
         <tr>
             <td>
-                <asp:GridView ID="grvListChiTietHoaDon" runat="server" CssClass="mGrid" 
+                <asp:GridView ID="grvListGiaoTrinh" runat="server" CssClass="mGrid" 
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
                     FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_iMonHocID,FK_iGiaoTrinhID"
                     emptydatatext="Không có bản ghi nào."   PageSize="10" 
                     EnableModelValidation="True" onrowcommand="grvListChiTietHoaDon_RowCommand" 
-                    onpageindexchanging="grvListChiTietHoaDon_PageIndexChanging" 
-                    AllowSorting="true" onsorting="grvListChiTietHoaDon_Sorting">
+                    onpageindexchanging="grvListGiaoTrinh_PageIndexChanging" 
+                    AllowSorting="true" onsorting="grvListGiaoTrinh_Sorting">
                     <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>
                     <Columns>
                         <asp:TemplateField>

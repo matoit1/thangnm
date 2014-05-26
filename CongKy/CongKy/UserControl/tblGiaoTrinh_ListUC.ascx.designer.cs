@@ -10,7 +10,7 @@
 namespace CongKy.UserControl {
     
     
-    public partial class tblChiTietHoaDon_ListUC {
+    public partial class tblGiaoTrinh_ListUC {
         
         /// <summary>
         /// btnRefresh control.
@@ -67,13 +67,13 @@ namespace CongKy.UserControl {
         protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
-        /// grvListChiTietHoaDon control.
+        /// grvListGiaoTrinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvListChiTietHoaDon;
+        protected global::System.Web.UI.WebControls.GridView grvListGiaoTrinh;
         
         /// <summary>
         /// lblTongSoBanGhi control.

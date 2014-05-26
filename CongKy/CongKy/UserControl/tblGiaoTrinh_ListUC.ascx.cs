@@ -13,30 +13,30 @@ using CongKy.EntityObject;
 
 namespace CongKy.UserControl
 {
-    public partial class tblChiTietHoaDon_ListUC : System.Web.UI.UserControl
+    public partial class tblGiaoTrinh_ListUC : System.Web.UI.UserControl
     {
         #region "Properties & Event"
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
-        private Int64 _FK_lHoaDonID;
-        public Int64 FK_lHoaDonID
+        private Int32 _FK_iMonHocID;
+        public Int32 FK_iMonHocID
         {
-            get { return this._FK_lHoaDonID; }
-            set { _FK_lHoaDonID = value; }
+            get { return this._FK_iMonHocID; }
+            set { _FK_iMonHocID = value; }
         }
-        private string _FK_sSanPhamID;
-        public string FK_sSanPhamID
+        private Int32 _FK_iGiaoTrinhID;
+        public Int32 FK_iGiaoTrinhID
         {
-            get { return this._FK_sSanPhamID; }
-            set { _FK_sSanPhamID = value; }
+            get { return this._FK_iGiaoTrinhID; }
+            set { _FK_iGiaoTrinhID = value; }
         }
 
-        public tblChiTietGiaoTrinhEO objtblChiTietHoaDonEO
+        public tblGiaoTrinhEO objtblGiaoTrinhEO
         {
-            get { return (tblChiTietGiaoTrinhEO)ViewState["objtblChiTietHoaDonEO"]; }
-            set { ViewState["objtblChiTietHoaDonEO"] = value; }
+            get { return (tblGiaoTrinhEO)ViewState["objtblGiaoTrinhEO"]; }
+            set { ViewState["objtblGiaoTrinhEO"] = value; }
         }
 
         public string typesearch
@@ -54,16 +54,16 @@ namespace CongKy.UserControl
             //}
         }
 
-        public void BindData(tblChiTietGiaoTrinhEO _tblChiTietHoaDonEO)
+        public void BindData(tblGiaoTrinhEO _tblGiaoTrinhEO)
         {
-            objtblChiTietHoaDonEO = _tblChiTietHoaDonEO;
-            grvListChiTietHoaDon.Visible = false;
+            objtblGiaoTrinhEO = _tblGiaoTrinhEO;
+            grvListGiaoTrinh.Visible = false;
             string keysearch = txtTextSearch.Text;
             DataSet dsChiTietHoaDon = new DataSet();
             try
             {
-                dsChiTietHoaDon = tblChiTietGiaoTrinhDAO.ChiTietHoaDon_SelectListByFK_lHoaDonID(_tblChiTietHoaDonEO);
-                dsChiTietHoaDon.Tables[0].Columns.Add(new DataColumn("FK_sSanPhamID_Text", Type.GetType("System.String")));
+                dsGiaoTrinh = tblGiaoTrinhDAO.GiaoTrinh_SelectListByFK_iMonHocID(_tblGiaoTrinhEO);
+                dsGiaoTrinh.Tables[0].Columns.Add(new DataColumn("FK_iMonHocID_Text", Type.GetType("System.String")));
                 foreach (DataRow dr in dsChiTietHoaDon.Tables[0].Rows)
                 {
                     dr["FK_sSanPhamID_Text"] = tblMonHocDAO.SanPham_SelectItemPK_sSanPhamID(Convert.ToString(dr["FK_sSanPhamID"])).sTenSanPham;

@@ -48,7 +48,7 @@ namespace CongKy.UserControl
             try
             {
                 tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
-                try { _tblTaiKhoanEO.PK_iTaiKhoanID = Convert.ToInt16(txtPK_iTaiKhoanID.Text); }
+                try { _tblTaiKhoanEO.PK_iTaiKhoanID = Convert.ToInt32(txtPK_iTaiKhoanID.Text); }
                 catch { lblPK_iTaiKhoanID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblTaiKhoanEO.PK_iTaiKhoanID = 0; }
                 _tblTaiKhoanEO.sTenDangNhap = Convert.ToString(txtsTenDangNhap.Text);
                 _tblTaiKhoanEO.sMatKhau = Security.EnCrypt(Convert.ToString(txtsMatKhau.Text));
@@ -265,11 +265,11 @@ namespace CongKy.UserControl
             lblMsg.Text = "";
             try
             {
-                tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
-                _tblHoaDonEO.FK_iTaiKhoanID_Giao = getObject().PK_iTaiKhoanID;
-                _tblHoaDonEO.FK_iTaiKhoanID_Nhan = getObject().PK_iTaiKhoanID;
-                if (tblDangKyDayHocDAO.HoaDon_CheckExists_FK_iTaiKhoanID_Giao_FK_iTaiKhoanID_Nhan(_tblHoaDonEO) == false)
-                {
+                //tblHoaDonEO _tblHoaDonEO = new tblHoaDonEO();
+                //_tblHoaDonEO.FK_iTaiKhoanID_Giao = getObject().PK_iTaiKhoanID;
+                //_tblHoaDonEO.FK_iTaiKhoanID_Nhan = getObject().PK_iTaiKhoanID;
+                //if (tblDangKyDayHocDAO.HoaDon_CheckExists_FK_iTaiKhoanID_Giao_FK_iTaiKhoanID_Nhan(_tblHoaDonEO) == false)
+                //{
                     if (tblTaiKhoanDAO.TaiKhoan_Delete(getObject()) == true)
                     {
                         lblMsg.Text = Messages.Xoa_Thanh_Cong;
@@ -281,11 +281,11 @@ namespace CongKy.UserControl
                     {
                         lblMsg.Text = Messages.Xoa_That_Bai;
                     }
-                }
-                else
-                {
-                    lblMsg.Text = Messages.Ma_Tai_Khoan_Da_Dung_Trong_Hoa_Don;
-                }
+            //    }
+              //  else
+                //{
+                  //  lblMsg.Text = Messages.Ma_Tai_Khoan_Da_Dung_Trong_Hoa_Don;
+                //}
             }
             catch (Exception ex)
             {

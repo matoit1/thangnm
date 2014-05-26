@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tbltblChiTietGiaoTrinh_ListUC.ascx.cs" Inherits="CongKy.UserControl.tblNhomSanPham_ListUC" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblChiTietGiaoTrinh_ListUC.ascx.cs" Inherits="CongKy.UserControl.tblChiTietGiaoTrinh_ListUC" %>
 <script type="text/javascript">
     function CheckAll(chkTemp) {
         var grvTemp = document.getElementById("<%=grvListBaiViet.ClientID %>");

@@ -13,18 +13,18 @@ using CongKy.EntityObject;
 
 namespace CongKy.UserControl
 {
-    public partial class tblNhomSanPham_ListUC : System.Web.UI.UserControl
+    public partial class tblChiTietGiaoTrinh_ListUC : System.Web.UI.UserControl
     {
         #region "Properties & Event"
         public event EventHandler ViewDetail;
         public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
-        private Int16 _PK_iNhomSanPhamID;
-        public Int16 PK_iNhomSanPhamID
+        private Int32 _PK_iGiaoTrinhID;
+        public Int32 PK_iGiaoTrinhID
         {
-            get { return this._PK_iNhomSanPhamID; }
-            set { _PK_iNhomSanPhamID = value; }
+            get { return this._PK_iGiaoTrinhID; }
+            set { _PK_iGiaoTrinhID = value; }
         }
 
         private Int16 _iTrangThai;
@@ -64,7 +64,7 @@ namespace CongKy.UserControl
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
-                    PK_iNhomSanPhamID = topic.Field<Int16>("PK_iNhomSanPhamID"),
+                    PK_iNhomSanPhamID = topic.Field<Int16>("PK_iGiaoTrinhID"),
                     iNhomCon = topic.Field<Int16>("iNhomCon"),
                     sTenNhom = topic.Field<string>("sTenNhom"),
                     iTrangThai = GetTextConstants.NhomSanPham_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))

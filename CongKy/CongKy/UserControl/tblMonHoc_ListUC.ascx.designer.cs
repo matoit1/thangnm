@@ -10,7 +10,7 @@
 namespace CongKy.UserControl {
     
     
-    public partial class tblThanhToan_ListUC {
+    public partial class tblMonHoc_ListUC {
         
         /// <summary>
         /// btnRefresh control.

@@ -10,7 +10,7 @@
 namespace CongKy.UserControl {
     
     
-    public partial class tblThanhToan_DetailUC {
+    public partial class tblMonHoc_DetailUC {
         
         /// <summary>
         /// lblTitle control.
@@ -28,7 +28,7 @@ namespace CongKy.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Label lblMsg;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
         /// txtPK_iMonHocID control.
@@ -91,7 +91,7 @@ namespace CongKy.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Button btnInsert;
+        protected global::System.Web.UI.WebControls.Button btnInsert;
         
         /// <summary>
         /// btnUpdate control.
@@ -100,7 +100,7 @@ namespace CongKy.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Button btnUpdate;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
         
         /// <summary>
         /// btnDelete control.
@@ -109,7 +109,7 @@ namespace CongKy.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Button btnDelete;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
         
         /// <summary>
         /// btnReset control.
