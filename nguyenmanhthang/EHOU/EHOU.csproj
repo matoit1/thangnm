@@ -88,6 +88,7 @@
     <Content Include="bin\EHOU.dll" />
     <Content Include="bin\EHOU.pdb" />
     <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="Default.aspx" />
     <Content Include="Flash\FlashVideoPlayer.swf" />
     <Content Include="Flash\LiveSample1.swf" />
     <Content Include="Flash\SampleMediaPlayback.swf" />
@@ -333,6 +334,13 @@
     <Compile Include="DataAccessObject\tblMessageDAO.cs" />
     <Compile Include="DataAccessObject\tblSubjectDAO.cs" />
     <Compile Include="DataAccessObject\tblPartDAO.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EntityObject\tblAccountEO.cs" />
     <Compile Include="EntityObject\tblSubject_StudentEO.cs" />
     <Compile Include="EntityObject\tblMessageEO.cs" />

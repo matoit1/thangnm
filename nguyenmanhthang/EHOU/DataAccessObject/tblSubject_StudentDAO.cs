@@ -182,6 +182,32 @@ namespace DataAccessObject
                 }
             }
         }
+        /// <summary> 6. Subject_Student_SelectList </summary>
+        /// <param name="_tblSubject_StudentEO"></param>
+        /// <returns></returns>
+        public static DataSet Subject_Student_SelectList()
+        {
+            tblSubject_StudentEO oOutput = new tblSubject_StudentEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSubject_Student_SelectList", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return ds;
+                }
+            }
+        }
 
         /// <summary> 7. Subject_Student_SelectByFK_sSubject </summary>
         /// <param name="_tblSubject_StudentEO"></param>

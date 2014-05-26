@@ -15,22 +15,22 @@ namespace EHOU.Share_Interface
         public void Page_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-                JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
-                if (objAcc["username"] != null && Convert.ToInt16(objAcc["type"]) == tblAccount_iType_C.Quan_Tri)
-                {
-                    Session["account_qt"] = objAcc["username"];
-                }
-                else
-                {
-                    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
-                }
-            }
-            catch (Exception ex)
-            {
-                Response.Redirect("https://account.dev.ehou.edu.vn/auth");
-            }
+            //try
+            //{
+            //    JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
+            //    if (objAcc["username"] != null && Convert.ToInt16(objAcc["type"]) == tblAccount_iType_C.Quan_Tri)
+            //    {
+            //        Session["account_qt"] = objAcc["username"];
+            //    }
+            //    else
+            //    {
+            //        Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+            //}
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)

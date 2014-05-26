@@ -57,29 +57,19 @@ namespace EHOU.UserControl
             DataSet dsBaiViet = new DataSet();
             try
             {
-                tblMessageEO _tblMessageEO = new tblMessageEO();
-                dsBaiViet = tblMessageDAO.Message_SelectList(_tblMessageEO);
-                foreach (DataRow dr in dsBaiViet.Tables[0].Rows)
-                {
-                    if (string.IsNullOrEmpty(dr["FK_iTaiKhoanID_Giao"].ToString()))
-                    {
-                        dr["FK_iTaiKhoanID_Giao"] = 0;
-                    }
-                    if (string.IsNullOrEmpty(dr["tNgayGiaoHang"].ToString()))
-                    {
-                        dr["tNgayGiaoHang"] = DateTime.MinValue;
-                    }
-                }
+                dsBaiViet = tblMessageDAO.Message_SelectList();
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
                     PK_lMessage = topic.Field<Int64>("PK_lMessage"),
+                    FK_sRoom = topic.Field<string>("FK_sRoom"),
+                    FK_sUsername = topic.Field<string>("FK_sUsername"),
                    // FK_sRoom = tblSubjectDAO.Subject_SelectItem(topic.Field<string>("FK_sRoom")).sName,
                     //FK_sUsername = tblAccountDAO.Account_SelectItem(topic.Field<Int32>("FK_sUsername")).sName,
                     sContent = topic.Field<string>("sContent"),
-                    tDateSent = topic.Field<string>("tDateSent"),
+                    tDateSent = topic.Field<DateTime>("tDateSent"),
                     iStatus = GetTextConstants.GiangVien_iChucVuGV_GTC(topic.Field<Int16>("iStatus"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
@@ -176,7 +166,7 @@ namespace EHOU.UserControl
                 sortingDirection = "ASC";
             }
             tblMessageEO _tblMessageEO =new tblMessageEO();
-            DataSet dsBaiViet = tblMessageDAO.Message_SelectList(_tblMessageEO);
+            DataSet dsBaiViet = tblMessageDAO.Message_SelectByFK_sRoom(_tblMessageEO);
             DataView sortedView = new DataView(dsBaiViet.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;

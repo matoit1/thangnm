@@ -221,7 +221,7 @@ namespace DataAccessObject
         /// <summary> 7. Part_SelectList </summary>
         /// <param name="_tblPartEO"></param>
         /// <returns></returns>
-        public static DataSet Part_SelectList(tblPartEO _tblPartEO)
+        public static DataSet Part_SelectList()
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -231,7 +231,6 @@ namespace DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblPart_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSubject", _tblPartEO.FK_sSubject));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

@@ -64,17 +64,16 @@ namespace EHOU.UserControl
             DataSet dsBaiViet = new DataSet();
             try
             {
-                tblPartEO _tblPartEO = new tblPartEO();
-                dsBaiViet = tblPartDAO.Part_SelectList(_tblPartEO);
+                dsBaiViet = tblPartDAO.Part_SelectList();
                 foreach (DataRow dr in dsBaiViet.Tables[0].Rows)
                 {
-                    if (string.IsNullOrEmpty(dr["FK_iTaiKhoanID_Giao"].ToString()))
+                    if (string.IsNullOrEmpty(dr["tDateTimeStart"].ToString()))
                     {
-                        dr["FK_iTaiKhoanID_Giao"] = 0;
+                        dr["tDateTimeStart"] = DateTime.MinValue;
                     }
-                    if (string.IsNullOrEmpty(dr["tNgayGiaoHang"].ToString()))
+                    if (string.IsNullOrEmpty(dr["tDateTimeEnd"].ToString()))
                     {
-                        dr["tNgayGiaoHang"] = DateTime.MinValue;
+                        dr["tDateTimeEnd"] = DateTime.MinValue;
                     }
                 }
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
@@ -82,7 +81,8 @@ namespace EHOU.UserControl
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
-                    PK_iPart = topic.Field<Int64>("PK_iPart"),
+                    PK_iPart = topic.Field<Int16>("PK_iPart"),
+                    FK_sSubject = topic.Field<string>("FK_sSubject"),
                    // FK_sSubject = tblSubjectDAO.Subject_SelectItem(topic.Field<Int32>("FK_sSubject")).sHoTen,
                     sTitle = topic.Field<string>("sTitle"),
                     sLinkVideo = topic.Field<string>("sLinkVideo"),
@@ -187,8 +187,7 @@ namespace EHOU.UserControl
                 direction = SortDirection.Ascending;
                 sortingDirection = "ASC";
             }
-            tblPartEO _tblPartEO = new tblPartEO();
-            DataSet dsBaiViet = tblPartDAO.Part_SelectList(_tblPartEO);
+            DataSet dsBaiViet = tblPartDAO.Part_SelectList();
             DataView sortedView = new DataView(dsBaiViet.Tables[0]);
             sortedView.Sort = e.SortExpression + " " + sortingDirection;
             Session["objects"] = sortedView;
