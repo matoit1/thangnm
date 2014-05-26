@@ -187,7 +187,7 @@ namespace DataAccessObject
         /// <summary> 7. Message_SelectList </summary>
         /// <param name="_tblMessageEO"></param>
         /// <returns></returns>
-        public static DataSet Message_SelectList(tblMessageEO _tblMessageEO)
+        public static DataSet Message_SelectList()
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -196,6 +196,32 @@ namespace DataAccessObject
                 {
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblMessage_SelectList", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
+        /// <summary> 7. Message_SelectByFK_sRoom </summary>
+        /// <param name="_tblMessageEO"></param>
+        /// <returns></returns>
+        public static DataSet Message_SelectByFK_sRoom(tblMessageEO _tblMessageEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblMessage_SelectByFK_sRoom", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sRoom", _tblMessageEO.FK_sRoom));
                     dsOutput = new DataSet();

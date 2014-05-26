@@ -24,33 +24,33 @@ namespace EHOU
         {
             try
             {
-                DataSet ds = BaiVietDAO.BaiViet_SelectList();
-                ds.Tables[0].Columns.Add(new DataColumn("link"));
-                for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
-                {
-                    ds.Tables[0].Rows[i]["link"] = RewriteUrl.ConvertToUnSign(ds.Tables[0].Rows[i]["sTieuDe"].ToString());
-                }
-                PagedDataSource pgitems = new PagedDataSource();
-                System.Data.DataView dv = new System.Data.DataView(ds.Tables[0]);
-                pgitems.DataSource = dv;
-                pgitems.AllowPaging = true;
-                pgitems.PageSize = 5;
-                pgitems.CurrentPageIndex = PageNumber;
-                if (pgitems.PageCount > 1)
-                {
-                    rptPages.Visible = true;
-                    System.Collections.ArrayList pages = new System.Collections.ArrayList();
-                    for (int i = 0; i < pgitems.PageCount; i++)
-                        pages.Add((i + 1).ToString());
-                    rptPages.DataSource = pages;
-                    rptPages.DataBind();
-                }
-                else
-                {
-                    rptPages.Visible = false;
-                }
-                rpTopic.DataSource = pgitems;
-                rpTopic.DataBind();
+                //DataSet ds = BaiVietDAO.BaiViet_SelectList();
+                //ds.Tables[0].Columns.Add(new DataColumn("link"));
+                //for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
+                //{
+                //    ds.Tables[0].Rows[i]["link"] = RewriteUrl.ConvertToUnSign(ds.Tables[0].Rows[i]["sTieuDe"].ToString());
+                //}
+                //PagedDataSource pgitems = new PagedDataSource();
+                //System.Data.DataView dv = new System.Data.DataView(ds.Tables[0]);
+                //pgitems.DataSource = dv;
+                //pgitems.AllowPaging = true;
+                //pgitems.PageSize = 5;
+                //pgitems.CurrentPageIndex = PageNumber;
+                //if (pgitems.PageCount > 1)
+                //{
+                //    rptPages.Visible = true;
+                //    System.Collections.ArrayList pages = new System.Collections.ArrayList();
+                //    for (int i = 0; i < pgitems.PageCount; i++)
+                //        pages.Add((i + 1).ToString());
+                //    rptPages.DataSource = pages;
+                //    rptPages.DataBind();
+                //}
+                //else
+                //{
+                //    rptPages.Visible = false;
+                //}
+                //rpTopic.DataSource = pgitems;
+                //rpTopic.DataBind();
             }
             catch (Exception) { }
         }

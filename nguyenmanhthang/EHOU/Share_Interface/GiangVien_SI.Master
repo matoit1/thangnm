@@ -67,7 +67,7 @@
                     <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
                         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/home.png" AlternateText="Trang chủ" /> </asp:HyperLink>
                     </li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/GiangVien/LopHoc.aspx">Lớp Học</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/GiangVien/ChonLopDay.aspx">Chọn lớp dạy</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/GiangVien/MonHoc.aspx">Môn Học</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/GiangVien/LichDay.aspx">Lịch Dậy Học</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx">Thông Tin Cá Nhân</asp:HyperLink></li>

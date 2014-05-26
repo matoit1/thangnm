@@ -61,7 +61,7 @@ namespace EHOU.UserControl
                     //objLichDayVaHocEO = LichDayVaHocDAO.LichDayVaHoc_SelectItem(objLichDayVaHocEO);
                     sColor = "#000000";
                     loadDataToDropDownList();
-                    DataSet ds = tblMessageDAO.Message_SelectList(objtblMessageEO);
+                    DataSet ds = tblMessageDAO.Message_SelectByFK_sRoom(objtblMessageEO);
                     iSumMessage = ds.Tables[0].Rows.Count;
                     rptDialog.DataSource = ds;
                     rptDialog.DataBind();
@@ -110,7 +110,7 @@ namespace EHOU.UserControl
             try
             {
                 objtblPartEO = tblPartDAO.Part_SelectItem(objtblPartEO);
-                DataSet ds = tblMessageDAO.Message_SelectList(objtblMessageEO);
+                DataSet ds = tblMessageDAO.Message_SelectByFK_sRoom(objtblMessageEO);
                 if (iSumMessage != ds.Tables[0].Rows.Count)
                 {
                     iSumMessage = ds.Tables[0].Rows.Count;

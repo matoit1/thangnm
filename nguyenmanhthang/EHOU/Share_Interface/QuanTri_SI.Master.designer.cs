@@ -103,15 +103,6 @@ namespace EHOU.Share_Interface {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink35;
         
         /// <summary>
-        /// HyperLink7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink7;
-        
-        /// <summary>
         /// HyperLink10 control.
         /// </summary>
         /// <remarks>

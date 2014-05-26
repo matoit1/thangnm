@@ -81,7 +81,8 @@ namespace EHOU.UserControl
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
-                    PK_sSubject = topic.Field<Int64>("PK_sSubject"),
+                    PK_sSubject = topic.Field<string>("PK_sSubject"),
+                    FK_sTeacher = topic.Field<string>("FK_sTeacher"),
                     //FK_sTeacher = tblAccountDAO.Account_SelectItem(topic.Field<string>("FK_sTeacher")).sName,
                     sName = topic.Field<string>("sName"),
                     iStatus = GetTextConstants.GiangVien_iTrangThaiGV_GTC(topic.Field<Int16>("iStatus"))

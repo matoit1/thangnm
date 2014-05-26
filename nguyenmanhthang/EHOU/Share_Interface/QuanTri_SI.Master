@@ -65,12 +65,11 @@
                     <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
                         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/home.png" AlternateText="Trang chủ" /> </asp:HyperLink>
                     </li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/QuanTri/GiangVien.aspx">Giảng Viên</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/QuanTri/SinhVien.aspx">Sinh Viên</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/QuanTri/LopHoc.aspx">Lớp Học</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/QuanTri/MonHoc.aspx">Môn học</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/QuanTri/BaiViet.aspx">Bài viết</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/QuanTri/Config.aspx">Cấu hình website</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/QuanTri/tblAccount.aspx">Tài khoản</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/QuanTri/tblMessage.aspx">Tin nhắn</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/QuanTri/tblPart.aspx">Buổi học</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/QuanTri/tblSubject.aspx">Môn học</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/QuanTri/tblSubject_Student.aspx">Sinh viên đăng ký môn học</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/QuanTri/Database.aspx">Cơ sở dữ liệu</asp:HyperLink></li>
                 </ul>
                 </div>

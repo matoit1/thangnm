@@ -64,19 +64,7 @@ namespace EHOU.UserControl
             DataSet dsBaiViet = new DataSet();
             try
             {
-                tblSubject_StudentEO _tblSubject_StudentEO = new tblSubject_StudentEO();
-                dsBaiViet = tblSubject_StudentDAO.Subject_Student_SelectByFK_sSubject(_tblSubject_StudentEO);
-                foreach (DataRow dr in dsBaiViet.Tables[0].Rows)
-                {
-                    if (string.IsNullOrEmpty(dr["FK_iTaiKhoanID_Giao"].ToString()))
-                    {
-                        dr["FK_iTaiKhoanID_Giao"] = 0;
-                    }
-                    if (string.IsNullOrEmpty(dr["tNgayGiaoHang"].ToString()))
-                    {
-                        dr["tNgayGiaoHang"] = DateTime.MinValue;
-                    }
-                }
+                dsBaiViet = tblSubject_StudentDAO.Subject_Student_SelectList();
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
