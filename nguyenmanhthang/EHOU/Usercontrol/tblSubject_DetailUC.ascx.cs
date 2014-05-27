@@ -10,6 +10,7 @@ using System.Data;
 using EntityObject;
 using Shared_Libraries;
 using DataAccessObject;
+using Shared_Libraries.Constants;
 
 namespace EHOU.UserControl
 {
@@ -76,7 +77,9 @@ namespace EHOU.UserControl
         {
             try
             {
-                ddlFK_sTeacher.DataSource = tblAccountDAO.Account_SelectList();
+                tblAccountEO _tblAccountEO = new tblAccountEO();
+                _tblAccountEO.iType = tblAccount_iType_C.Giang_Vien;
+                ddlFK_sTeacher.DataSource = tblAccountDAO.Account_SelectListByiType(_tblAccountEO);
                 ddlFK_sTeacher.DataTextField = "sName";
                 ddlFK_sTeacher.DataValueField = "PK_sUsername";
                 ddlFK_sTeacher.DataBind();

@@ -241,6 +241,33 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 7. Account_SelectListByiType </summary>
+        /// <param name="tblAccountEO"></param>
+        /// <returns></returns>
+        public static DataSet Account_SelectListByiType(tblAccountEO tblAccountEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblAccount_SelectListByiType", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iType", tblAccountEO.iType));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
         /// <summary> 8. Account_Search </summary>
         /// <param name="tblAccountEO"></param>
         /// <returns></returns>

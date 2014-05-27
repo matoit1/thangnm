@@ -28,10 +28,10 @@ namespace EHOU.UserControl
             //_GiangVienEO = GiangVienDAO.GiangVien_SelectItem(_GiangVienEO);
 
             //lblsTenlop.Text = _LopHocEO.PK_sMalop + " - " + _LopHocEO.sTenlop;
-            lblsTenMonhoc.Text = _tblSubjectEO.PK_sSubject + " - " + _tblSubjectEO.sName;
+            lblsTenMonhoc.Text = _tblSubjectEO.sName;
             tblAccountEO _tblAccountEO = new tblAccountEO();
             _tblAccountEO.PK_sUsername = _tblSubjectEO.FK_sTeacher;
-            lblsHoTenGV.Text = _tblSubjectEO.FK_sTeacher + " - " + tblAccountDAO.Account_SelectItem(_tblAccountEO).sName;
+            lblsHoTenGV.Text = tblAccountDAO.Account_SelectItem(_tblAccountEO).sName + " - " + _tblSubjectEO.FK_sTeacher;
             //lbliSiso.Text = Convert.ToString(_LopHocEO.iSiso);
             //lbliCaHoc.Text = Convert.ToString(_LichDayVaHocEO.iCaHoc);
             //lbliSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
