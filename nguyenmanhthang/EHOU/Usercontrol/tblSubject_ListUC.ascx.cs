@@ -85,7 +85,7 @@ namespace EHOU.UserControl
                     FK_sTeacher = topic.Field<string>("FK_sTeacher"),
                     //FK_sTeacher = tblAccountDAO.Account_SelectItem(topic.Field<string>("FK_sTeacher")).sName,
                     sName = topic.Field<string>("sName"),
-                    iStatus = GetTextConstants.GiangVien_iTrangThaiGV_GTC(topic.Field<Int16>("iStatus"))
+                    iStatus = GetTextConstants.tblSubject_iStatus_GTC(topic.Field<Int16>("iStatus"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

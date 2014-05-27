@@ -75,7 +75,7 @@ namespace EHOU.UserControl
                     sName = topic.Field<string>("sName"),
                     sEmail = topic.Field<string>("sEmail"),
                     iType = GetTextConstants.tblAccount_iType_GTC(topic.Field<Int16>("iType")),
-                    iStatus = GetTextConstants.tblAccount_iType_GTC(topic.Field<Int16>("iStatus"))
+                    iStatus = GetTextConstants.tblAccount_iStatus_GTC(topic.Field<Int16>("iStatus"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

@@ -24,12 +24,12 @@ namespace EHOU.Usercontrol
 
         public void BindDataDetail(tblAccountEO _tblAccountEO)
         {
-            //txtscreenName.Text = _JObject["screenName"].ToString();
-            //txtusername.Text = _JObject["username"].ToString();
-            //txtpassword.Text = "******";
-            //txtemail.Text = _JObject["email"].ToString();
-            //rbtnmale.Checked = Convert.ToBoolean(_JObject["male"]);
-            //ddliType.SelectedValue = _JObject["type"].ToString();
+            txtPK_sUsername.Text = _tblAccountEO.PK_sUsername;
+            txtsPassword.Text = _tblAccountEO.sPassword;
+            txtsName.Text = _tblAccountEO.sName;
+            txtsEmail.Text = _tblAccountEO.sEmail;
+            ddliType.SelectedValue = Convert.ToString(_tblAccountEO.iType);
+            ddliStatus.SelectedValue = Convert.ToString(_tblAccountEO.iStatus);
         }
 
         public void loadDataToDropDownList()
@@ -38,17 +38,22 @@ namespace EHOU.Usercontrol
             ddliType.DataTextField = "Value";
             ddliType.DataValueField = "Key";
             ddliType.DataBind();
+
+            ddliStatus.DataSource = GetListConstants.tblAccount_iStatus_GLC();
+            ddliStatus.DataTextField = "Value";
+            ddliStatus.DataValueField = "Key";
+            ddliStatus.DataBind();
         }
 
         public void ClearMessages()
         {
             //lblMsg.Text = "";
-            //lblscreenName.Text = "";
-            //lblusername.Text = "";
-            //lblpassword.Text = "";
-            //lblemail.Text = "";
-            //lblmale.Text = "";
-            //lbliType.Text = "";
+            lblPK_sUsername.Text = "";
+            lblsPassword.Text = "";
+            lblsName.Text = "";
+            lblsEmail.Text = "";
+            lbliType.Text = "";
+            lbliStatus.Text = "";
         }
 
         protected void btnInsert_Click(object sender, EventArgs e)

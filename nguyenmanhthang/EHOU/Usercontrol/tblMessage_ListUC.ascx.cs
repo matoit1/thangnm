@@ -70,7 +70,7 @@ namespace EHOU.UserControl
                     //FK_sUsername = tblAccountDAO.Account_SelectItem(topic.Field<Int32>("FK_sUsername")).sName,
                     sContent = topic.Field<string>("sContent"),
                     tDateSent = topic.Field<DateTime>("tDateSent"),
-                    iStatus = GetTextConstants.GiangVien_iChucVuGV_GTC(topic.Field<Int16>("iStatus"))
+                    iStatus = GetTextConstants.tblMessage_iStatus_GTC(topic.Field<Int16>("iStatus"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

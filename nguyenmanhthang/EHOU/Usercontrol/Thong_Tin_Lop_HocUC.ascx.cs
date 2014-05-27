@@ -37,7 +37,7 @@ namespace EHOU.UserControl
             //lbliSoTietDay.Text = Convert.ToString(_LichDayVaHocEO.iSoTietDay);
             //lbltNgayBatDau.Text = _PhanCongCongTacEO.tNgayBatDau.ToShortDateString();
             //lbltNgayKetThuc.Text = _PhanCongCongTacEO.tNgayKetThuc.ToShortDateString();
-            lbliTrangThai.Text = GetTextConstants.LichDayVaHoc_iTrangThai_GTC(_tblSubjectEO.iStatus);
+            lbliTrangThai.Text = GetTextConstants.tblPart_iStatus_GTC(_tblSubjectEO.iStatus);
         }
     }
 }
