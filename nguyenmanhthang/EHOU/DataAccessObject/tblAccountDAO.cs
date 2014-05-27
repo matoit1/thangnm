@@ -185,6 +185,36 @@ namespace DataAccessObject
             }
         }
 
+
+        /// <summary> 6. Account_SelectItem_By_PK_sUsername </summary>
+        /// <param name="tblAccountEO"></param>
+        /// <returns></returns>
+        public static tblAccountEO Account_SelectItem_By_PK_sUsername(string PK_sUsername)
+        {
+            tblAccountEO oOutput = new tblAccountEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblAccount_SelectItem_By_PK_sUsername", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sUsername", PK_sUsername));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    oOutput = DataSet2Object.Account(ds);
+                    return oOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return oOutput;
+                }
+            }
+        }
+
         /// <summary> 7. Account_SelectList </summary>
         /// <param name="tblAccountEO"></param>
         /// <returns></returns>

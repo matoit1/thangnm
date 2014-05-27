@@ -16,13 +16,43 @@ namespace EHOU.Share_Interface
         {
             try
             {
-                JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
-                if (objAcc["username"] != null &&  Convert.ToInt16(objAcc["type"]) == tblAccount_iType_C.Giang_Vien)
+                if (Request.Cookies["LOGINID"] != null) //Chưa Đăng nhập
                 {
-                    //Session["account_gv"] = objAcc["username"];
+                    if (Session["LOGINID"] == null || Session["LOGINID"].ToString().Substring(1).Equals(Request.Cookies["LOGINID"].Value) == false) //Chưa tạo session hoặc lỗi
+                    {
+                        JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
+                        if (objAcc["username"] != null)
+                        {
+                            Session["LOGINID"] = objAcc["type"].ToString() + Request.Cookies["LOGINID"].Value;
+                            if (Convert.ToInt16(Session["LOGINID"].ToString().Substring(0, 1)) != tblAccount_iType_C.Giang_Vien) //Kiểm tra quyền truy cập trang
+                            {
+                                Response.Write("<script>alert('ERROR: Bạn không có quyền truy cập.')</script>");
+                            }
+                            else
+                            {
+                                Response.Write("<script>alert('SUCCESS: Xác thực + tạo session thành công.')</script>");
+                            }
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('ERROR: Tài khoản chưa xác thực.')</script>");
+                        }
+                    }
+                    else
+                    {
+                        if (Convert.ToInt16(Session["LOGINID"].ToString().Substring(0, 1)) != tblAccount_iType_C.Giang_Vien) //Kiểm tra quyền truy cập trang
+                        {
+                            Response.Write("<script>alert('ERROR: Bạn không có quyền truy cập.')</script>");
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('SUCCESS: Đã tạo xác thực.')</script>");
+                        }
+                    }
                 }
                 else
                 {
+                    Response.Write("<script>alert('ERROR: Chưa đăng nhập.')</script>");
                     Response.Redirect("https://account.dev.ehou.edu.vn/auth");
                 }
             }

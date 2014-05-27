@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccessObject;
 using EntityObject;
+using System.Data;
 
 namespace EHOU.Usercontrol
 {
@@ -34,7 +35,20 @@ namespace EHOU.Usercontrol
 
         public void BindData(tblPartEO _tblPartEO)
         {
-            rbtnlListPart.DataSource = tblPartDAO.Part_SelectByFK_sSubject(_tblPartEO);
+            DataSet ds = tblPartDAO.Part_SelectByFK_sSubject(_tblPartEO);
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                if (string.IsNullOrEmpty(dr["tDateTimeStart"].ToString()))
+                {
+                    dr["tDateTimeStart"] = DateTime.MinValue;
+                }
+                if (string.IsNullOrEmpty(dr["tDateTimeEnd"].ToString()))
+                {
+                    dr["tDateTimeEnd"] = DateTime.MinValue;
+                }
+                dr["sTitle"] = dr["sTitle"] + " thời gian từ: " + dr["tDateTimeStart"] + " đến " + dr["tDateTimeEnd"];
+            }
+            rbtnlListPart.DataSource = ds;
             rbtnlListPart.DataTextField = "sTitle";
             rbtnlListPart.DataValueField = "PK_iPart";
             rbtnlListPart.DataBind();
