@@ -65,6 +65,14 @@ namespace EHOU.UserControl
             try
             {
                 dsBaiViet = tblSubject_StudentDAO.Subject_Student_SelectList();
+                dsBaiViet.Tables[0].Columns.Add(new DataColumn("FK_sSubject_Text", Type.GetType("System.String")));
+                dsBaiViet.Tables[0].Columns.Add(new DataColumn("FK_sStudent_Text", Type.GetType("System.String")));
+                foreach (DataRow dr in dsBaiViet.Tables[0].Rows)
+                {
+                    dr["FK_sSubject_Text"] = tblSubjectDAO.Subject_SelectItem_By_PK_sSubject(Convert.ToString(dr["FK_sSubject"])).sName;
+                    dr["FK_sStudent_Text"] = tblAccountDAO.Account_SelectItem_By_PK_sUsername(Convert.ToString(dr["FK_sStudent"])).sName;
+                }
+
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
@@ -72,8 +80,8 @@ namespace EHOU.UserControl
                 {
                     FK_sSubject = topic.Field<string>("FK_sSubject"),
                     FK_sStudent = topic.Field<string>("FK_sStudent"),
-                    //FK_sSubject = tblSubjectDAO.Subject_SelectItem(topic.Field<string>("FK_sSubject")).sName,
-                    //FK_sStudent = tblAccountDAO.Account_SelectItem(topic.Field<string>("FK_sStudent")).sHoTen,
+                    FK_sSubject_Text = topic.Field<string>("FK_sSubject_Text"),
+                    FK_sStudent_Text = topic.Field<string>("FK_sStudent_Text"),
                     iStatus = GetTextConstants.tblSubject_Student_iStatus_GTC(topic.Field<Int16>("iStatus"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;

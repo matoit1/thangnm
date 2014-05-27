@@ -181,6 +181,35 @@ namespace DataAccessObject
             }
         }
 
+        /// <summary> 6. Subject_SelectItem_By_PK_sSubject </summary>
+        /// <param name="_tblSubjectEO"></param>
+        /// <returns></returns>
+        public static tblSubjectEO Subject_SelectItem_By_PK_sSubject(string PK_sSubject)
+        {
+            tblSubjectEO oOutput = new tblSubjectEO();
+            DataSet ds = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblSubject_SelectItem", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sSubject", PK_sSubject));
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    conn.Close();
+                    oOutput = DataSet2Object.Subject(ds);
+                    return oOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return oOutput;
+                }
+            }
+        }
+
         /// <summary> 7. Subject_SelectList </summary>
         /// <param name="_tblSubjectEO"></param>
         /// <returns></returns>

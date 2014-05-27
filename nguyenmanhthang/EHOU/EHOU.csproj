@@ -395,7 +395,6 @@
     <Compile Include="QuanTri\tblAccount.aspx.designer.cs">
       <DependentUpon>tblAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="QuanTri\tblChiTietHoaDonEO.cs" />
     <Compile Include="QuanTri\tblMessage.aspx.cs">
       <DependentUpon>tblMessage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

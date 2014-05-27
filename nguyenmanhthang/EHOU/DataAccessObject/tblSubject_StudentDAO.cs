@@ -168,7 +168,6 @@ namespace DataAccessObject
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sSubject", _tblSubject_StudentEO.FK_sSubject));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@FK_sStudent", _tblSubject_StudentEO.FK_sStudent));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iStatus", _tblSubject_StudentEO.iStatus));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();

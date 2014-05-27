@@ -77,8 +77,8 @@ namespace EHOU.UserControl
             try
             {
                 ddlFK_sTeacher.DataSource = tblAccountDAO.Account_SelectList();
-                ddlFK_sTeacher.DataTextField = "sTenThanhToan";
-                ddlFK_sTeacher.DataValueField = "PK_iThanhToanID";
+                ddlFK_sTeacher.DataTextField = "sName";
+                ddlFK_sTeacher.DataValueField = "PK_sUsername";
                 ddlFK_sTeacher.DataBind();
 
                 ddliStatus.DataSource = GetListConstants.tblSubject_iStatus_GLC();

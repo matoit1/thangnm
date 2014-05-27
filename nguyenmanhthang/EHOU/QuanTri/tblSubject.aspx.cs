@@ -44,6 +44,7 @@ namespace EHOU.QuanTri
             tblSubject_DetailUC1.btnInsert.Visible = false;
             tblSubject_DetailUC1.btnUpdate.Visible = true;
             tblSubject_DetailUC1.btnDelete.Visible = true;
+            tblSubject_DetailUC1.txtPK_sSubject.Enabled = false;
             tblSubjectEO _tblSubjectEO = new tblSubjectEO();
             _tblSubjectEO.PK_sSubject = tblSubject_ListUC1.PK_sSubject;
             _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(_tblSubjectEO);
@@ -56,6 +57,7 @@ namespace EHOU.QuanTri
             tblSubject_DetailUC1.btnInsert.Visible = true;
             tblSubject_DetailUC1.btnUpdate.Visible = false;
             tblSubject_DetailUC1.btnDelete.Visible = false;
+            tblSubject_DetailUC1.txtPK_sSubject.Enabled = true;
             tblSubjectEO _tblSubjectEO = new tblSubjectEO();
             tblSubject_DetailUC1.BindDataDetail(_tblSubjectEO);
         }

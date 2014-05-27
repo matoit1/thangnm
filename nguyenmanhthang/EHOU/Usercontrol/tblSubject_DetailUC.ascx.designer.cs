@@ -37,7 +37,7 @@ namespace EHOU.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPK_sSubject;
+        public global::System.Web.UI.WebControls.TextBox txtPK_sSubject;
         
         /// <summary>
         /// lblPK_sSubject control.

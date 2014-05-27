@@ -78,7 +78,7 @@ namespace EHOU.UserControl
             {
                 ddlFK_sSubject.DataSource = tblSubjectDAO.Subject_SelectList();
                 ddlFK_sSubject.DataTextField = "sName";
-                ddlFK_sSubject.DataValueField = "PK_iTaiKhoanID";
+                ddlFK_sSubject.DataValueField = "PK_sSubject";
                 ddlFK_sSubject.DataBind();
 
                 ddlFK_sStudent.DataSource = tblAccountDAO.Account_SelectList();
