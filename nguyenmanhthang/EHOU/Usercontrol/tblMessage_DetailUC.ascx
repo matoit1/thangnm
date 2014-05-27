@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <td>Nội dung: </td>
-            <td><asp:TextBox ID="txtsContent" runat="server" Width="400px" MaxLength="50" 
+            <td><asp:TextBox ID="txtsContent" runat="server" Width="400px" TextMode="MultiLine" Rows="5" 
                     TabIndex="4"></asp:TextBox></td>
             <td><asp:Label ID="lblsContent" runat="server"></asp:Label></td>
         </tr>

@@ -185,7 +185,6 @@ namespace DataAccessObject
             }
         }
 
-
         /// <summary> 6. Account_SelectItem_By_PK_sUsername </summary>
         /// <param name="tblAccountEO"></param>
         /// <returns></returns>
@@ -198,7 +197,7 @@ namespace DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblAccount_SelectItem_By_PK_sUsername", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblAccount_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_sUsername", PK_sUsername));
                     ds = new DataSet();

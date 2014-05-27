@@ -37,7 +37,7 @@ namespace EHOU.Usercontrol {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPK_sUsername;
+        public global::System.Web.UI.WebControls.TextBox txtPK_sUsername;
         
         /// <summary>
         /// lblPK_sUsername control.
@@ -109,7 +109,7 @@ namespace EHOU.Usercontrol {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddliType;
+        public global::System.Web.UI.WebControls.DropDownList ddliType;
         
         /// <summary>
         /// lbliType control.
@@ -127,7 +127,7 @@ namespace EHOU.Usercontrol {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddliStatus;
+        public global::System.Web.UI.WebControls.DropDownList ddliStatus;
         
         /// <summary>
         /// lbliStatus control.

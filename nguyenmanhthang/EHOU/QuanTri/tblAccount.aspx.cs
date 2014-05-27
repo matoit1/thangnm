@@ -44,6 +44,9 @@ namespace EHOU.QuanTri
             tblAccount_DetailUC1.btnInsert.Visible = false;
             tblAccount_DetailUC1.btnUpdate.Visible = true;
             tblAccount_DetailUC1.btnDelete.Visible = true;
+            tblAccount_DetailUC1.txtPK_sUsername.Enabled = false;
+            tblAccount_DetailUC1.ddliType.Enabled = false;
+            tblAccount_DetailUC1.ddliStatus.Enabled = false;
             tblAccountEO _tblAccountEO = new tblAccountEO();
             _tblAccountEO.PK_sUsername = tblAccount_ListUC1.PK_sUsername;
             _tblAccountEO = tblAccountDAO.Account_SelectItem(_tblAccountEO);
@@ -56,6 +59,9 @@ namespace EHOU.QuanTri
             tblAccount_DetailUC1.btnInsert.Visible = true;
             tblAccount_DetailUC1.btnUpdate.Visible = false;
             tblAccount_DetailUC1.btnDelete.Visible = false;
+            tblAccount_DetailUC1.txtPK_sUsername.Enabled = true;
+            tblAccount_DetailUC1.ddliType.Enabled = true;
+            tblAccount_DetailUC1.ddliStatus.Enabled = true;
             tblAccountEO _tblAccountEO = new tblAccountEO();
             tblAccount_DetailUC1.BindDataDetail(_tblAccountEO);
         }

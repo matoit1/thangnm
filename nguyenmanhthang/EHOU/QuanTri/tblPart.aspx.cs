@@ -44,6 +44,7 @@ namespace EHOU.QuanTri
             tblPart_DetailUC1.btnInsert.Visible = false;
             tblPart_DetailUC1.btnUpdate.Visible = true;
             tblPart_DetailUC1.btnDelete.Visible = true;
+            tblPart_DetailUC1.txtPK_iPart.Enabled = false;
             tblPartEO _tblPartEO = new tblPartEO();
             _tblPartEO.PK_iPart = tblPart_ListUC1.PK_iPart;
             _tblPartEO.FK_sSubject = tblPart_ListUC1.FK_sSubject;
@@ -57,6 +58,7 @@ namespace EHOU.QuanTri
             tblPart_DetailUC1.btnInsert.Visible = true;
             tblPart_DetailUC1.btnUpdate.Visible = false;
             tblPart_DetailUC1.btnDelete.Visible = false;
+            tblPart_DetailUC1.txtPK_iPart.Enabled = true;
             tblPartEO _tblPartEO = new tblPartEO();
             tblPart_DetailUC1.BindDataDetail(_tblPartEO);
         }

@@ -88,8 +88,8 @@ namespace EHOU.UserControl
             try
             {
                 ddlFK_sSubject.DataSource = tblSubjectDAO.Subject_SelectList();
-                ddlFK_sSubject.DataTextField = "sTenThanhToan";
-                ddlFK_sSubject.DataValueField = "PK_iThanhToanID";
+                ddlFK_sSubject.DataTextField = "sName";
+                ddlFK_sSubject.DataValueField = "PK_sSubject";
                 ddlFK_sSubject.DataBind();
 
                 ddliStatus.DataSource = GetListConstants.tblPart_iStatus_GLC();

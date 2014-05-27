@@ -55,10 +55,16 @@
                                 </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center"  />
                         </asp:TemplateField>
-                        <asp:BoundField  DataField="FK_sSubject"  HeaderText="Môn Học" SortExpression="FK_sSubject">
+                        <asp:BoundField  DataField="FK_sSubject"  HeaderText="Môn Học" SortExpression="FK_sSubject" Visible="false">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField  DataField="FK_sStudent"  HeaderText="Sinh viên" SortExpression="FK_sStudent">
+                        <asp:BoundField  DataField="FK_sStudent"  HeaderText="Sinh viên" SortExpression="FK_sStudent" Visible="false">
+                            <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                        </asp:BoundField>
+                        <asp:BoundField  DataField="FK_sSubject_Text"  HeaderText="Môn Học" SortExpression="FK_sSubject_Text">
+                            <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                        </asp:BoundField>
+                        <asp:BoundField  DataField="FK_sStudent_Text"  HeaderText="Sinh viên" SortExpression="FK_sStudent_Text">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
                         <asp:BoundField DataField="iStatus" HeaderText="Trạng thái" SortExpression="iStatus">
