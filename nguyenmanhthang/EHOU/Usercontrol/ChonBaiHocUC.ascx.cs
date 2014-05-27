@@ -14,10 +14,10 @@ namespace EHOU.Usercontrol
     {
         #region "Properties & Event"
         public event EventHandler GoPart;
-        public Int16 PK_iPart
+        public tblPartEO objtblPartEO
         {
-            get { return (Int16)ViewState["PK_iPart"]; }
-            set { ViewState["PK_iPart"] = value; }
+            get { return (tblPartEO)ViewState["objtblPartEO"]; }
+            set { ViewState["objtblPartEO"] = value; }
         }
         #endregion
 
@@ -35,6 +35,7 @@ namespace EHOU.Usercontrol
 
         public void BindData(tblPartEO _tblPartEO)
         {
+            objtblPartEO = _tblPartEO;
             DataSet ds = tblPartDAO.Part_SelectByFK_sSubject(_tblPartEO);
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
@@ -56,7 +57,7 @@ namespace EHOU.Usercontrol
 
         protected void rbtnlListPart_TextChanged(object sender, EventArgs e)
         {
-            PK_iPart = Convert.ToInt16(rbtnlListPart.SelectedValue);
+            objtblPartEO.PK_iPart = Convert.ToInt16(rbtnlListPart.SelectedValue);
             if (GoPart != null)
             {
                 GoPart(this, EventArgs.Empty);

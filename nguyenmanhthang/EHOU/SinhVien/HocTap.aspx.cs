@@ -64,10 +64,10 @@ namespace EHOU.SinhVien
                         //Kiểm tra trạng thái buổi học Online / Offline
                         switch (_tblSubjectEO.iStatus)
                         {
-                            case LichDayVaHoc_iTrangThai_C.Hoc: vLiveStream.ActiveViewIndex =0; break;
-                            case LichDayVaHoc_iTrangThai_C.Day_Offline: vLiveStream.ActiveViewIndex = 1; VideoUC1.sLinkVideo = _tblPartEO.sLinkVideo; break;
-                            case LichDayVaHoc_iTrangThai_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0; break;
-                            case LichDayVaHoc_iTrangThai_C.Nghi: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Buoi_Hoc_Hom_Nay_Duoc_Nghi; break;
+                            case tblPart_iStatus_C.Hoc: vLiveStream.ActiveViewIndex =0; break;
+                            case tblPart_iStatus_C.Day_Offline: vLiveStream.ActiveViewIndex = 1; VideoUC1.sLinkVideo = _tblPartEO.sLinkVideo; break;
+                            case tblPart_iStatus_C.Hoc_Bu: vLiveStream.ActiveViewIndex = 0; break;
+                            case tblPart_iStatus_C.Nghi: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Buoi_Hoc_Hom_Nay_Duoc_Nghi; break;
                             default: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Chua_Den_Thoi_Gian_Hoc; break;
                         }
                         Thong_Tin_Lop_HocUC1.BinData(_tblSubjectEO);

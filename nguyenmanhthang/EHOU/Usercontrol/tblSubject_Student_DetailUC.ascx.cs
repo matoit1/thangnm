@@ -86,7 +86,7 @@ namespace EHOU.UserControl
                 ddlFK_sStudent.DataValueField = "PK_sUsername";
                 ddlFK_sStudent.DataBind();
 
-                ddliStatus.DataSource = GetListConstants.GiangVien_iTrangThaiGV_GLC();
+                ddliStatus.DataSource = GetListConstants.tblSubject_Student_iStatus_GLC();
                 ddliStatus.DataTextField = "Value";
                 ddliStatus.DataValueField = "Key";
                 ddliStatus.DataBind();

@@ -14,6 +14,14 @@ namespace EHOU.GiangVien
 {
     public partial class ChonLopDay : System.Web.UI.Page
     {
+        #region "Properties & Event"
+        private string _PK_sSubject;
+        public string PK_sSubject
+        {
+            get { return this._PK_sSubject; }
+            set { _PK_sSubject = value; }
+        }
+        #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -22,7 +30,8 @@ namespace EHOU.GiangVien
                 {
                     if (Request.QueryString["PK_sSubject"] != null)
                     {
-                        BindDataPart(Request.QueryString["PK_sSubject"]);
+                        PK_sSubject = Request.QueryString["PK_sSubject"];
+                        BindDataPart(PK_sSubject);
                     }
                     else
                     {
@@ -70,7 +79,7 @@ namespace EHOU.GiangVien
 
         protected void GoPart_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/GiangVien/GiangDay.aspx?PK_sSubject=" + ChonMonHocUC1.PK_sSubject + "&PK_iPart=" + ChonBaiHocUC1.PK_iPart);
+            Response.Redirect("~/GiangVien/GiangDay.aspx?PK_sSubject=" + ChonBaiHocUC1.objtblPartEO.FK_sSubject + "&PK_iPart=" + ChonBaiHocUC1.objtblPartEO.PK_iPart);
         }
 
         protected void lbtnBack_Click(object sender, EventArgs e)

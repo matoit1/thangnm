@@ -89,7 +89,7 @@ namespace EHOU.UserControl
                     sBlackList = topic.Field<string>("sBlackList"),
                     tDateTimeStart = topic.Field<DateTime>("tDateTimeStart"),
                     tDateTimeEnd = topic.Field<DateTime>("tDateTimeEnd"),
-                    iStatus = GetTextConstants.GiangVien_iHocViGV_GTC(topic.Field<Int16>("iStatus"))
+                    iStatus = GetTextConstants.tblPart_iStatus_GTC(topic.Field<Int16>("iStatus"))
                 };
                 ddlTypeSearch.SelectedValue = typesearch;
                 if (Convert.ToInt16(ddlTypeSearch.SelectedValue) == 0)

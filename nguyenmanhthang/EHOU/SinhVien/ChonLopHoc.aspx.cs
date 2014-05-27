@@ -70,7 +70,7 @@ namespace EHOU.SinhVien
 
         protected void GoPart_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/SinhVien/HocTap.aspx?PK_sSubject=" + ChonMonHocUC1.PK_sSubject + "&PK_iPart=" + ChonBaiHocUC1.PK_iPart);
+            Response.Redirect("~/SinhVien/HocTap.aspx?PK_sSubject=" + ChonBaiHocUC1.objtblPartEO.FK_sSubject + "&PK_iPart=" + ChonBaiHocUC1.objtblPartEO.PK_iPart);
         }
 
         protected void lbtnBack_Click(object sender, EventArgs e)

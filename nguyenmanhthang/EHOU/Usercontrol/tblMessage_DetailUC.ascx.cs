@@ -93,7 +93,7 @@ namespace EHOU.UserControl
                 ddlFK_sUsername.DataValueField = "PK_sUsername";
                 ddlFK_sUsername.DataBind();
 
-                ddliStatus.DataSource = GetListConstants.CauHoi_iTrangThai_GLC();
+                ddliStatus.DataSource = GetListConstants.tblMessage_iStatus_GLC();
                 ddliStatus.DataTextField = "Value";
                 ddliStatus.DataValueField = "Key";
                 ddliStatus.DataBind();

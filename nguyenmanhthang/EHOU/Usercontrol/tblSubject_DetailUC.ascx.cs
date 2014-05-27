@@ -81,7 +81,7 @@ namespace EHOU.UserControl
                 ddlFK_sTeacher.DataValueField = "PK_iThanhToanID";
                 ddlFK_sTeacher.DataBind();
 
-                ddliStatus.DataSource = GetListConstants.Gioi_Tinh_GLC();
+                ddliStatus.DataSource = GetListConstants.tblSubject_iStatus_GLC();
                 ddliStatus.DataTextField = "Value";
                 ddliStatus.DataValueField = "Key";
                 ddliStatus.DataBind();
