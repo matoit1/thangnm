@@ -69,12 +69,12 @@ namespace CongKy.UserControl
         public void loadDataToDropDownList()
         {
             ddliType.DataSource = GetListConstants.ChiTietGiaoTrinh_iType_GLC();
-            ddliType.DataTextField = "Values";
-            ddliType.DataValueField = "Values";
+            ddliType.DataTextField = "Value";
+            ddliType.DataValueField = "Key";
             ddliType.DataBind();
 
             ddliTrangThai.DataSource = GetListConstants.ChiTietGiaoTrinh_iTrangThai_GLC();
-            ddliTrangThai.DataTextField = "Values";
+            ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
         }

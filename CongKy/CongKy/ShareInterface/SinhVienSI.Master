@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ProductSI.master.cs" Inherits="CongKy.ShareInterface.ProductSI" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SinhVienSI.Master.cs" Inherits="CongKy.ShareInterface.SinhVienSI" %>
 <%@ Register src="~/UserControl/MenuUC.ascx" tagname="MenuUC" tagprefix="uc1" %>
 <%@ Register src="~/UserControl/FooterUC.ascx" tagname="FooterUC" tagprefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

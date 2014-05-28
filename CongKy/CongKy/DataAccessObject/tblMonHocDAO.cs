@@ -85,7 +85,6 @@ namespace CongKy.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblMonHoc_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iMonHocID", _tblMonHocEO.PK_iMonHocID));
                     cmd.Parameters.Add(new SqlParameter("@sTenMonHoc", _tblMonHocEO.sTenMonHoc));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
                     cmd.ExecuteNonQuery();

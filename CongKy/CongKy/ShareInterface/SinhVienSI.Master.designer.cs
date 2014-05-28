@@ -10,7 +10,7 @@
 namespace CongKy.ShareInterface {
     
     
-    public partial class ProductSI {
+    public partial class SinhVienSI {
         
         /// <summary>
         /// cphHead control.
@@ -37,6 +37,7 @@ namespace CongKy.ShareInterface {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+        protected global::System.Web.UI.UserControl MenuUC1;
         
         /// <summary>
         /// lbtnLogin control.
@@ -81,5 +82,6 @@ namespace CongKy.ShareInterface {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+        protected global::System.Web.UI.UserControl FooterUC1;
     }
 }

@@ -7,63 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CongKy.ShareInterface {
+namespace CongKy.GiangVien {
     
     
-    public partial class ReportSI {
+    public partial class MonHoc {
         
         /// <summary>
-        /// cphHead control.
+        /// mtvMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
+        protected global::System.Web.UI.WebControls.MultiView mtvMain;
         
         /// <summary>
-        /// form1 control.
+        /// vList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
-        /// mnuQuanTri control.
+        /// tblMonHoc_ListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu mnuQuanTri;
+        protected global::CongKy.UserControl.tblMonHoc_ListUC tblMonHoc_ListUC1;
         
         /// <summary>
-        /// mnuGiangVien control.
+        /// vDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu mnuGiangVien;
+        protected global::System.Web.UI.WebControls.View vDetail;
         
         /// <summary>
-        /// mnuSinhVien control.
+        /// lbtnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu mnuSinhVien;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
         
         /// <summary>
-        /// cphBody control.
+        /// tblMonHoc_DetailUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
+        protected global::CongKy.UserControl.tblMonHoc_DetailUC tblMonHoc_DetailUC1;
     }
 }
