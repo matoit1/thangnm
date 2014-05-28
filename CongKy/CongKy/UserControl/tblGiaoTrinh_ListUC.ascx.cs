@@ -17,7 +17,6 @@ namespace CongKy.UserControl
     {
         #region "Properties & Event"
         public event EventHandler ViewDetail;
-        public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
         private Int32 _FK_iMonHocID;
@@ -127,40 +126,10 @@ namespace CongKy.UserControl
             }
         }
 
-        protected void grvListGiaoTrinh_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            foreach (GridViewRow row in grvListGiaoTrinh.Rows)
-            {
-                if (row.RowIndex == grvListGiaoTrinh.SelectedIndex)
-                {
-                    row.BackColor = ColorTranslator.FromHtml("#A1DCF2");
-                    row.ToolTip = string.Empty;
-                }
-                else
-                {
-                    row.BackColor = ColorTranslator.FromHtml("#FFFFFF");
-                    row.ToolTip = "Click to select this row.";
-                }
-                if (SelectRow != null)
-                {
-                    SelectRow(this, EventArgs.Empty);
-                }
-            }
-        }
-
         protected void grvListGiaoTrinh_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListGiaoTrinh.PageIndex = e.NewPageIndex;
             BindData(objtblGiaoTrinhEO);
-        }
-
-        protected void grvListGiaoTrinh_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(grvListGiaoTrinh, "Select$" + e.Row.RowIndex);
-                e.Row.ToolTip = "Click to select this row.";
-            }
         }
 
         protected void grvListGiaoTrinh_Sorting(object sender, GridViewSortEventArgs e)
@@ -200,11 +169,6 @@ namespace CongKy.UserControl
         #endregion
 
         #region "Event Button"
-        protected void Search_Click(object sender, EventArgs e)
-        {
-            BindData(objtblGiaoTrinhEO);
-        }
-
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
             BindData(objtblGiaoTrinhEO);
@@ -215,58 +179,6 @@ namespace CongKy.UserControl
             if (AddNew != null)
             {
                 AddNew(this, EventArgs.Empty);
-            }
-        }
-
-        protected void btnExportExcel_Click(object sender, EventArgs e)
-        {
-            string FileName = "Danh_sach_Bai_Viet(" + Messages.Format_DateTime_Temp + ").xls";
-            ExportToExcel(FileName);
-        }
-
-        protected void ExportToExcel(string fileName)
-        {
-            Response.Clear();
-            Response.Buffer = true;
-            Response.AddHeader("Content-Disposition", "attachment;filename=" + fileName);
-            Response.Charset = "";
-            Response.ContentType = "application/vnd.ms-excel";
-            using (StringWriter sw = new StringWriter())
-            {
-                HtmlTextWriter hw = new HtmlTextWriter(sw);
-                //To Export all pages
-                grvListGiaoTrinh.AllowPaging = false;
-                this.BindData(objtblGiaoTrinhEO);
-
-                grvListGiaoTrinh.HeaderRow.BackColor = Color.White;
-                foreach (TableCell cell in grvListGiaoTrinh.HeaderRow.Cells)
-                {
-                    cell.BackColor = grvListGiaoTrinh.HeaderStyle.BackColor;
-                }
-                foreach (GridViewRow row in grvListGiaoTrinh.Rows)
-                {
-                    row.BackColor = Color.White;
-                    foreach (TableCell cell in row.Cells)
-                    {
-                        if (row.RowIndex % 2 == 0)
-                        {
-                            cell.BackColor = grvListGiaoTrinh.AlternatingRowStyle.BackColor;
-                        }
-                        else
-                        {
-                            cell.BackColor = grvListGiaoTrinh.RowStyle.BackColor;
-                        }
-                        cell.CssClass = "textmode";
-                    }
-                }
-
-                grvListGiaoTrinh.RenderControl(hw);
-                //style to format numbers to string
-                string style = @"<style> .textmode { } </style>";
-                Response.Write(style);
-                Response.Output.Write(sw.ToString());
-                Response.Flush();
-                Response.End();
             }
         }
         #endregion

@@ -55,7 +55,6 @@ namespace CongKy.DataAccessObject
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("tblChiTietGiaoTrinh_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@PK_iGiaoTrinhID", _tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID));
                     cmd.Parameters.Add(new SqlParameter("@sTenBaiHoc", _tblChiTietGiaoTrinhEO.sTenBaiHoc));
                     cmd.Parameters.Add(new SqlParameter("@sThongTin", _tblChiTietGiaoTrinhEO.sThongTin));
                     cmd.Parameters.Add(new SqlParameter("@sLinkDownload", _tblChiTietGiaoTrinhEO.sLinkDownload));

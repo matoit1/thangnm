@@ -10,10 +10,8 @@ namespace CongKy.DataAccessObject
 {
     public static class ConnectionDAO
     {
-        public static string connectdb_common = ConfigurationManager.ConnectionStrings["connectdb_common"].ConnectionString;
         public static string connectdb_x84 = ConfigurationManager.ConnectionStrings["connectdb_x84"].ConnectionString;
         public static string connectdb_x64 = ConfigurationManager.ConnectionStrings["connectdb_x64"].ConnectionString;
-        public static string connectdb = ConfigurationManager.ConnectionStrings["connectdb"].ConnectionString;
 
         public static SqlConnection getConnection()
         {

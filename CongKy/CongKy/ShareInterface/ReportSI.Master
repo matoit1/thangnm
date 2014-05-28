@@ -10,13 +10,27 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+        <asp:Menu ID="mnuQuanTri" runat="server" Orientation="Horizontal">
             <Items>
-                <asp:MenuItem Text="||  Trang Admin  " Value=" Trang Admin " NavigateUrl="~/Admin/Default.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="||  Sản phẩm  " Value=" Sản phẩm " NavigateUrl="~/Admin/Report/BaoCao_SanPham.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="||  Khách hàng  " Value=" Khách hàng " NavigateUrl="~/Admin/Report/BaoCao_TaiKhoan.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="||  Kết quả kinh doanh  " Value=" Kết quả kinh doanh " NavigateUrl="~/Admin/Report/BaoCao_KetQua_KinhDoanh.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="||  In Hóa đơn  " Value=" In Hóa đơn " NavigateUrl="~/Admin/Report/BaoCao_HoaDon.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Trang Quản trị  " Value=" Trang Quản trị " NavigateUrl="~/QuanTri/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Giáo trình " Value=" Giáo trình " NavigateUrl="~/QuanTri/ChiTietGiaoTrinh.aspx?iTrangThai=1"></asp:MenuItem>
+                <asp:MenuItem Text="||  Môn học  " Value=" Môn học " NavigateUrl="~/QuanTri/MonHoc.aspx?iTrangThai=1"></asp:MenuItem>
+                <asp:MenuItem Text="||  Tài khoản  " Value=" Tài khoản " NavigateUrl="~/QuanTri/TaiKhoan.aspx?iQuyenHan=1"></asp:MenuItem>
+                <asp:MenuItem Text="||  Thông tin cá nhân " Value=" Thông tin cá nhân " NavigateUrl="~/QuanTri/ThongTinCaNhan.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:Menu ID="mnuGiangVien" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="||  Trang Giảng viên  " Value=" Trang Giảng viên " NavigateUrl="~/GiangVien/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Môn học " Value=" Môn học " NavigateUrl="~/GiangVien/MonHoc.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Thông tin cá nhân " Value=" Thông tin cá nhân " NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:Menu ID="mnuSinhVien" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="||  Trang Sinh Viên  " Value=" Trang Sinh viên " NavigateUrl="~/SinhVien/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Môn học " Value=" Môn học " NavigateUrl="~/SinhVien/MonHoc.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="||  Thông tin cá nhân " Value=" Thông tin cá nhân " NavigateUrl="~/SinhVien/ThongTinCaNhan.aspx"></asp:MenuItem>
             </Items>
         </asp:Menu>
         <asp:ContentPlaceHolder ID="cphBody" runat="server">

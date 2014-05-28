@@ -113,6 +113,7 @@ namespace CongKy.DataAccessObject
                 {
                     output.PK_iGiaoTrinhID = (dr["PK_iGiaoTrinhID"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["PK_iGiaoTrinhID"]);
                     output.sTenBaiHoc = (dr["sTenBaiHoc"] == DBNull.Value) ? "" : Convert.ToString(dr["sTenBaiHoc"]);
+                    output.sThongTin = (dr["sThongTin"] == DBNull.Value) ? "" : Convert.ToString(dr["sThongTin"]);
                     output.sLinkDownload = (dr["sLinkDownload"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkDownload"]);
                     output.iType = (dr["iType"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iType"]);
                     output.tNgayCapNhat = (dr["tNgayCapNhat"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(dr["tNgayCapNhat"]);

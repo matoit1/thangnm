@@ -17,7 +17,6 @@ namespace CongKy.UserControl
     {
         #region "Properties & Event"
         public event EventHandler ViewDetail;
-        public event EventHandler SelectRow;
         public event EventHandler AddNew;
 
         private Int32 _PK_iGiaoTrinhID;
@@ -155,36 +154,10 @@ namespace CongKy.UserControl
             }
         }
 
-        protected void grvListBaiViet_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            foreach (GridViewRow row in grvListBaiViet.Rows)
-            {
-                if (row.RowIndex == grvListBaiViet.SelectedIndex)
-                {
-                    row.BackColor = ColorTranslator.FromHtml("#A1DCF2");
-                    row.ToolTip = string.Empty;
-                }
-                else
-                {
-                    row.BackColor = ColorTranslator.FromHtml("#FFFFFF");
-                    row.ToolTip = "Click to select this row.";
-                }
-            }
-        }
-
         protected void grvListBaiViet_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListBaiViet.PageIndex = e.NewPageIndex;
             BindData();
-        }
-
-        protected void grvListBaiViet_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(grvListBaiViet, "Select$" + e.Row.RowIndex);
-                e.Row.ToolTip = "Click to select this row.";
-            }
         }
 
         protected void grvListBaiViet_Sorting(object sender, GridViewSortEventArgs e)
@@ -224,11 +197,6 @@ namespace CongKy.UserControl
         #endregion
 
         #region "Event Button"
-        protected void Search_Click(object sender, EventArgs e)
-        {
-            BindData();
-        }
-
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
             BindData();
@@ -239,63 +207,6 @@ namespace CongKy.UserControl
             if (AddNew != null)
             {
                 AddNew(this, EventArgs.Empty);
-            }
-        }
-
-        protected void btnDeleteList_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnExportExcel_Click(object sender, EventArgs e)
-        {
-            string FileName = "Danh_sach_Bai_Viet(" + Messages.Format_DateTime_Temp + ").xls";
-            ExportToExcel(FileName);
-        }
-
-        protected void ExportToExcel(string fileName)
-        {
-            Response.Clear();
-            Response.Buffer = true;
-            Response.AddHeader("Content-Disposition", "attachment;filename=" + fileName);
-            Response.Charset = "";
-            Response.ContentType = "application/vnd.ms-excel";
-            using (StringWriter sw = new StringWriter())
-            {
-                HtmlTextWriter hw = new HtmlTextWriter(sw);
-                //To Export all pages
-                grvListBaiViet.AllowPaging = false;
-                this.BindData();
-
-                grvListBaiViet.HeaderRow.BackColor = Color.White;
-                foreach (TableCell cell in grvListBaiViet.HeaderRow.Cells)
-                {
-                    cell.BackColor = grvListBaiViet.HeaderStyle.BackColor;
-                }
-                foreach (GridViewRow row in grvListBaiViet.Rows)
-                {
-                    row.BackColor = Color.White;
-                    foreach (TableCell cell in row.Cells)
-                    {
-                        if (row.RowIndex % 2 == 0)
-                        {
-                            cell.BackColor = grvListBaiViet.AlternatingRowStyle.BackColor;
-                        }
-                        else
-                        {
-                            cell.BackColor = grvListBaiViet.RowStyle.BackColor;
-                        }
-                        cell.CssClass = "textmode";
-                    }
-                }
-
-                grvListBaiViet.RenderControl(hw);
-                //style to format numbers to string
-                string style = @"<style> .textmode { } </style>";
-                Response.Write(style);
-                Response.Output.Write(sw.ToString());
-                Response.Flush();
-                Response.End();
             }
         }
         #endregion

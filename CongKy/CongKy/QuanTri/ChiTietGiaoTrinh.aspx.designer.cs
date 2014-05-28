@@ -7,45 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CongKy.ShareInterface {
+namespace CongKy.QuanTri {
     
     
-    public partial class AdminSI {
+    public partial class ChiTietGiaoTrinh {
         
         /// <summary>
-        /// cphHead control.
+        /// mtvMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
+        protected global::System.Web.UI.WebControls.MultiView mtvMain;
         
         /// <summary>
-        /// form1 control.
+        /// vList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
-        /// lbtnLogout control.
+        /// tblChiTietGiaoTrinh_ListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnLogout;
+        protected global::CongKy.UserControl.tblChiTietGiaoTrinh_ListUC tblChiTietGiaoTrinh_ListUC1;
         
         /// <summary>
-        /// cphBody control.
+        /// vDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
+        protected global::System.Web.UI.WebControls.View vDetail;
+        
+        /// <summary>
+        /// lbtnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
+        
+        /// <summary>
+        /// tblChiTietGiaoTrinh_DetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CongKy.UserControl.tblChiTietGiaoTrinh_DetailUC tblChiTietGiaoTrinh_DetailUC1;
     }
 }

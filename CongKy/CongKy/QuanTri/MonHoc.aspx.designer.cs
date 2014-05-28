@@ -7,54 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CongKy.ShareInterface {
+namespace CongKy.QuanTri {
     
     
-    public partial class ClientSI {
+    public partial class MonHoc {
         
         /// <summary>
-        /// Head1 control.
+        /// mtvMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.WebControls.MultiView mtvMain;
         
         /// <summary>
-        /// cphHead control.
+        /// vList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
+        protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
-        /// form1 control.
+        /// tblMonHoc_ListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::CongKy.UserControl.tblMonHoc_ListUC tblMonHoc_ListUC1;
         
         /// <summary>
-        /// lbtnLogout control.
+        /// vDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnLogout;
+        protected global::System.Web.UI.WebControls.View vDetail;
         
         /// <summary>
-        /// cphBody control.
+        /// lbtnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
+        
+        /// <summary>
+        /// tblMonHoc_DetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CongKy.UserControl.tblMonHoc_DetailUC tblMonHoc_DetailUC1;
     }
 }
