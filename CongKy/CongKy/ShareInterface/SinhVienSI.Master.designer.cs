@@ -31,24 +31,6 @@ namespace CongKy.ShareInterface {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// MenuUC1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UserControl MenuUC1;
-        
-        /// <summary>
-        /// lbtnLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnLogin;
-        
-        /// <summary>
         /// lbtnLogout control.
         /// </summary>
         /// <remarks>
@@ -58,15 +40,6 @@ namespace CongKy.ShareInterface {
         protected global::System.Web.UI.WebControls.LinkButton lbtnLogout;
         
         /// <summary>
-        /// ImageButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
-        
-        /// <summary>
         /// cphBody control.
         /// </summary>
         /// <remarks>
@@ -74,14 +47,5 @@ namespace CongKy.ShareInterface {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
-        
-        /// <summary>
-        /// FooterUC1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UserControl FooterUC1;
     }
 }

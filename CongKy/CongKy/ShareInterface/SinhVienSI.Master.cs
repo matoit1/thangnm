@@ -9,29 +9,25 @@ namespace CongKy.ShareInterface
 {
     public partial class SinhVienSI : System.Web.UI.MasterPage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        public void Page_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (Request.Cookies["CongKy_client"] == null)
-            //    {
-            //        lbtnLogout.Visible = false;
-            //        lbtnLogin.Text = "Đăng nhập";
-            //        lbtnLogin.PostBackUrl = "~/Client/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString);
-            //    }
-            //    else
-            //    {
-            //        lbtnLogout.Visible = true;
-            //        lbtnLogin.Text = "Xin chào " + Request.Cookies["CongKy_client"].Value;
-            //        lbtnLogin.PostBackUrl = "~/Client/ThongTinCaNhan.aspx";
-            //    }
-            //}
-            //catch { }
+            try
+            {
+                if (Request.Cookies["CongKy_sinhvien"] == null)
+                {
+                    Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
+                }
+            }
+            catch
+            {
+                Response.Cookies["CongKy_sinhvien"].Expires = DateTime.Now.AddDays(-1);
+                Response.Redirect("~/SinhVien/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
+            }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)
         {
-            Response.Cookies["CongKy_client"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["CongKy_sinhvien"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect(Request.Url.ToString());
         }
     }

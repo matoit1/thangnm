@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CongKy.SinhVien.Default" MasterPageFile="~/ShareInterface/ReportSI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CongKy.SinhVien.Default" MasterPageFile="~/ShareInterface/SinhVienSI.Master" %>
 
 <%@ Register src="../UserControl/PdfUC.ascx" tagname="PdfUC" tagprefix="uc1" %>
 <%@ Register src="../UserControl/WordUC.ascx" tagname="WordUC" tagprefix="uc2" %>
