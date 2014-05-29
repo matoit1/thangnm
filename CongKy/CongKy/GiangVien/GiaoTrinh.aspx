@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiaoTrinh.aspx.cs" Inherits="CongKy.GiangVien.GiaoTrinh" MasterPageFile="~/ShareInterface/ReportSI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GiaoTrinh.aspx.cs" Inherits="CongKy.GiangVien.GiaoTrinh" MasterPageFile="~/ShareInterface/GiangVienSI.Master" %>
 
 <%@ Register src="../UserControl/tblGiaoTrinh_ListUC.ascx" tagname="tblGiaoTrinh_ListUC" tagprefix="uc1" %>
 <%@ Register src="../UserControl/tblGiaoTrinh_DetailUC.ascx" tagname="tblGiaoTrinh_DetailUC" tagprefix="uc2" %>

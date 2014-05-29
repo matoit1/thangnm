@@ -1,39 +1,147 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SinhVienSI.Master.cs" Inherits="CongKy.ShareInterface.SinhVienSI" %>
-<%@ Register src="~/UserControl/MenuUC.ascx" tagname="MenuUC" tagprefix="uc1" %>
-<%@ Register src="~/UserControl/FooterUC.ascx" tagname="FooterUC" tagprefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Trang Sinh Viên - Công Kỳ Hero</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="../App_Themes/Home.css" media="all" />
-    <meta property="fb:app_id" content="432781806807255"/>
+	<!-- Bootstrap core CSS -->
+    <link href="../App_Themes/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="../App_Themes/sb-admin.css" rel="stylesheet">
+    <link href="../App_Themes/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Header [start] -->
-	<div id="main-head">
-		<uc1:MenuUC ID="MenuUC1" runat="server" />
-	</div>
-    <div style="z-index: 200; top:10px; right: 10px; float: right; position: fixed;">
-        <asp:LinkButton ID="lbtnLogin" runat="server" style="text-decoration:none;" >Đăng nhập</asp:LinkButton>
-        <asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click">Thoát</asp:LinkButton>
-    </div>
-    <div style=" z-index: 200; top:10px; left: 10px; float: left; position: fixed;">
-            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/App_Themes/Images/shopping_cart.png" PostBackUrl="~/GioHang.aspx" width="45px" height= "45px"/>
-    </div>
-	<!-- Header [end] -->
-	<div style="clear: both;"></div>
-	<!-- Main Body [start] -->
-	<%--<div id="body-wrapper">
-	    <br /><br /><br /><br />--%>
-        <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
-        <%--<br /><br /><br /><br /><br /><br />
-	</div>--%>
-	<!-- Main Body [end] -->
-	<uc2:FooterUC ID="FooterUC1" runat="server" />
+        <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../Default.aspx">Trang chủ</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li><a href="../QuanTri/Default.aspx"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="dropdown">
+                <a href="../QuanTri/TaiKhoan.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Tài Khoản <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../QuanTri/TaiKhoan.aspx?iQuyenHan=1">Quản Trị</a></li>
+                    <li><a href="../QuanTri/TaiKhoan.aspx?iQuyenHan=2">Giảng Viên</a></li>
+                    <li><a href="../QuanTri/TaiKhoan.aspx?iQuyenHan=3">Sinh Viên</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+                <a href="../QuanTri/MonHoc.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Môn Học <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=1">Mở</a></li>
+                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=2">Xem Xét</a></li>
+                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=3">Khóa</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+                <a href="../QuanTri/ChiTietGiaoTrinh.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Chi Tiết Giáo Trình <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../QuanTri/ChiTietGiaoTrinh.aspx?iTrangThai=1">Mở</a></li>
+                    <li><a href="../QuanTri/ChiTietGiaoTrinh.aspx?iTrangThai=2">Khóa</a></li>
+              </ul>
+            </li>
+            <li><a href="../QuanTri/ThongTinCaNhan.aspx"><i class="fa fa-desktop"></i> Thông tin cá nhân</a></li>
+            <li><a href="../QuanTri/Database.aspx"><i class="fa fa-desktop"></i> Database</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-user">
+            <li class="dropdown messages-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">7 New Messages</li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">View Inbox <span class="badge">7</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown alerts-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Default <span class="label label-default">Default</span></a></li>
+                <li><a href="#">Primary <span class="label label-primary">Primary</span></a></li>
+                <li><a href="#">Success <span class="label label-success">Success</span></a></li>
+                <li><a href="#">Info <span class="label label-info">Info</span></a></li>
+                <li><a href="#">Warning <span class="label label-warning">Warning</span></a></li>
+                <li><a href="#">Danger <span class="label label-danger">Danger</span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">View All</a></li>
+              </ul>
+            </li>
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user"></i> Thông tin cá nhân</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Thông báo mới <span class="badge">7</span></a></li>
+                <li class="divider"></li>
+                <li><asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click"><i class="fa fa-power-off"></i>Thoát</asp:LinkButton> </li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+
+        <div class="row">
+            <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+          <%--<div class="col-lg-12">
+            <h1>Blank Page <small>A Blank Slate</small></h1>
+            <ol class="breadcrumb">
+              <li><a href="index.html"><i class="icon-dashboard"></i> Dashboard</a></li>
+              <li class="active"><i class="icon-file-alt"></i> Blank Page</li>
+            </ol>
+          </div>--%>
+        </div><!-- /.row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <script src="../Scripts/jquery-1.10.2_admin.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
     </form>
 </body>
 </html>

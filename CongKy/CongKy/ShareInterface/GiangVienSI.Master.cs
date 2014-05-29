@@ -11,23 +11,23 @@ namespace CongKy.ShareInterface
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (Request.Cookies["CongKy_client"] == null)
-            //    {
-            //        Response.Redirect("~/Client/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
-            //    }
-            //}
-            //catch
-            //{
-            //    Response.Cookies["CongKy_client"].Expires = DateTime.Now.AddDays(-1);
-            //    Response.Redirect("~/Client/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
-            //}
+            try
+            {
+                if (Request.Cookies["CongKy_giangvien"] == null)
+                {
+                    Response.Redirect("~/GiangVien/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
+                }
+            }
+            catch
+            {
+                Response.Cookies["CongKy_giangvien"].Expires = DateTime.Now.AddDays(-1);
+                Response.Redirect("~/GiangVien/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
+            }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)
         {
-            Response.Cookies["CongKy_client"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["CongKy_giangvien"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect(Request.Url.ToString());
         }
     }
