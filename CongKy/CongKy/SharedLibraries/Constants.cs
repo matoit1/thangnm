@@ -77,8 +77,8 @@ namespace CongKy.SharedLibraries.Constants
     public class TaiKhoan_iQuyenHan_C
     {
         public const Int16 QuanTri = 1;
-        public const Int16 Nhan_Vien = 2;
-        public const Int16 Khach_Hang = 3;
+        public const Int16 GiangVien = 2;
+        public const Int16 Sinh_Vien = 3;
     }
 
     /// <summary> I.11. ThanhToan_iTrangThai_C (Trạng Thái Thanh Toán) </summary>

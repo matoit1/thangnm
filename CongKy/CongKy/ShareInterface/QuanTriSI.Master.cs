@@ -11,23 +11,23 @@ namespace CongKy.ShareInterface
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (Request.Cookies["CongKy_admin"] == null)
-            //    {
-            //        Response.Redirect("~/Admin/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
-            //    }
-            //}
-            //catch
-            //{
-            //    Response.Cookies["CongKy_admin"].Expires = DateTime.Now.AddDays(-1);
-            //    Response.Redirect("~/Admin/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
-            //}
+            try
+            {
+                if (Request.Cookies["CongKy_quantri"] == null)
+                {
+                    Response.Redirect("~/QuanTri/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
+                }
+            }
+            catch
+            {
+                Response.Cookies["CongKy_quantri"].Expires = DateTime.Now.AddDays(-1);
+                Response.Redirect("~/QuanTri/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
+            }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)
         {
-            Response.Cookies["CongKy_admin"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["CongKy_quantri"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect(Request.Url.ToString());
         }
     }

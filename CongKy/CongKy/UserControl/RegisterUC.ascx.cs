@@ -36,7 +36,7 @@ namespace CongKy.UserControl
                 _tblTaiKhoanEO.sDiaChi = "";
                 _tblTaiKhoanEO.sSoDienThoai = "";
                 _tblTaiKhoanEO.sLinkAvatar = "";
-                _tblTaiKhoanEO.iQuyenHan = TaiKhoan_iQuyenHan_C.Khach_Hang;
+                _tblTaiKhoanEO.iQuyenHan = TaiKhoan_iQuyenHan_C.Sinh_Vien;
                 _tblTaiKhoanEO.iTrangThai = TaiKhoan_iTrangThai_C.Mo;
                 if (tblTaiKhoanDAO.TaiKhoan_Insert(_tblTaiKhoanEO) == true)
                 {

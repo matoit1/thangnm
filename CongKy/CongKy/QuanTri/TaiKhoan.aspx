@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TaiKhoan.aspx.cs" Inherits="CongKy.QuanTri.TaiKhoan" MasterPageFile="~/ShareInterface/ReportSI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TaiKhoan.aspx.cs" Inherits="CongKy.QuanTri.TaiKhoan" MasterPageFile="~/ShareInterface/QuanTriSI.Master" %>
 
 <%@ Register src="~/UserControl/tblTaiKhoan_ListUC.ascx" tagname="tblTaiKhoan_ListUC" tagprefix="uc1" %>
 <%@ Register src="~/UserControl/tblTaiKhoan_DetailUC.ascx" tagname="tblTaiKhoan_DetailUC" tagprefix="uc2" %>

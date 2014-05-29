@@ -32,12 +32,6 @@ namespace CongKy.UserControl
             set { _FK_iGiaoTrinhID = value; }
         }
 
-        public tblGiaoTrinhEO objtblGiaoTrinhEO
-        {
-            get { return (tblGiaoTrinhEO)ViewState["objtblGiaoTrinhEO"]; }
-            set { ViewState["objtblGiaoTrinhEO"] = value; }
-        }
-
         public string typesearch
         {
             get { return (string)ViewState["typesearch"]; }
@@ -53,9 +47,8 @@ namespace CongKy.UserControl
             //}
         }
 
-        public void BindData(tblGiaoTrinhEO _tblGiaoTrinhEO)
+        public void BindData()
         {
-            objtblGiaoTrinhEO = _tblGiaoTrinhEO;
             grvListGiaoTrinh.Visible = false;
             string keysearch = txtTextSearch.Text;
             DataSet dsGiaoTrinh = new DataSet();
@@ -129,7 +122,7 @@ namespace CongKy.UserControl
         protected void grvListGiaoTrinh_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvListGiaoTrinh.PageIndex = e.NewPageIndex;
-            BindData(objtblGiaoTrinhEO);
+            BindData();
         }
 
         protected void grvListGiaoTrinh_Sorting(object sender, GridViewSortEventArgs e)
@@ -171,7 +164,7 @@ namespace CongKy.UserControl
         #region "Event Button"
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
-            BindData(objtblGiaoTrinhEO);
+            BindData();
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
@@ -185,7 +178,7 @@ namespace CongKy.UserControl
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            BindData(objtblGiaoTrinhEO);
+            BindData();
         }
 
         protected void ddlTypeSearch_TextChanged(object sender, EventArgs e)

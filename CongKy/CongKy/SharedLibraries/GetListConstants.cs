@@ -94,8 +94,8 @@ namespace CongKy.SharedLibraries
         {
             SortedList output = new SortedList();
             output.Add(TaiKhoan_iQuyenHan_C.QuanTri, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.QuanTri));
-            output.Add(TaiKhoan_iQuyenHan_C.Nhan_Vien, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.Nhan_Vien));
-            output.Add(TaiKhoan_iQuyenHan_C.Khach_Hang, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.Khach_Hang));
+            output.Add(TaiKhoan_iQuyenHan_C.GiangVien, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.GiangVien));
+            output.Add(TaiKhoan_iQuyenHan_C.Sinh_Vien, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.Sinh_Vien));
             return output;
         }
 

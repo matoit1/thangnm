@@ -13,7 +13,8 @@
         <asp:Menu ID="mnuQuanTri" runat="server" Orientation="Horizontal">
             <Items>
                 <asp:MenuItem Text="||  Trang Quản trị  " Value=" Trang Quản trị " NavigateUrl="~/QuanTri/Default.aspx"></asp:MenuItem>
-                <asp:MenuItem Text="||  Giáo trình " Value=" Giáo trình " NavigateUrl="~/QuanTri/ChiTietGiaoTrinh.aspx?iTrangThai=1"></asp:MenuItem>
+                <asp:MenuItem Text="||  Chi Tiết Giáo trình " Value=" Chi Tiết Giáo trình " NavigateUrl="~/QuanTri/ChiTietGiaoTrinh.aspx?iTrangThai=1"></asp:MenuItem>
+                <asp:MenuItem Text="||  Giáo trình " Value=" Giáo trình " NavigateUrl="~/QuanTri/GiaoTrinh.aspx"></asp:MenuItem>
                 <asp:MenuItem Text="||  Môn học  " Value=" Môn học " NavigateUrl="~/QuanTri/MonHoc.aspx?iTrangThai=1"></asp:MenuItem>
                 <asp:MenuItem Text="||  Tài khoản  " Value=" Tài khoản " NavigateUrl="~/QuanTri/TaiKhoan.aspx?iQuyenHan=1"></asp:MenuItem>
                 <asp:MenuItem Text="||  Thông tin cá nhân " Value=" Thông tin cá nhân " NavigateUrl="~/QuanTri/ThongTinCaNhan.aspx"></asp:MenuItem>
