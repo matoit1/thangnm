@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Trang quản trị CongKy</title>
+    <title>Trang Giảng Viên - Công Kỳ Hero</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="../App_Themes/public.css" />
 
 	<!-- start: Mobile Specific -->

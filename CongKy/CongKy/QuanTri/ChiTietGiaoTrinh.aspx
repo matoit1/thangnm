@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChiTietGiaoTrinh.aspx.cs" Inherits="CongKy.QuanTri.ChiTietGiaoTrinh" MasterPageFile="~/ShareInterface/ReportSI.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChiTietGiaoTrinh.aspx.cs" Inherits="CongKy.QuanTri.ChiTietGiaoTrinh" MasterPageFile="~/ShareInterface/QuanTriSI.Master" %>
 
 <%@ Register src="../UserControl/tblChiTietGiaoTrinh_ListUC.ascx" tagname="tblChiTietGiaoTrinh_ListUC" tagprefix="uc1" %>
 <%@ Register src="../UserControl/tblChiTietGiaoTrinh_DetailUC.ascx" tagname="tblChiTietGiaoTrinh_DetailUC" tagprefix="uc2" %>

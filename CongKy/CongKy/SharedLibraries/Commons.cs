@@ -365,5 +365,16 @@ namespace CongKy.SharedLibraries
         public const string tblSanPham_Xem_Lai_Hoa_Don = "Click vào đây để xem lại hóa đơn !";
         #endregion
 
+        #region "Upload"
+        public const string Video = "Video/";
+        public const string Ebook = "Ebook/";
+        public const string Example = "Example/";
+        public const string Other = "Other/";
+        public const string Upload_Hoc_Lieu = "Upload học liệu";
+        public const string UpLoad_Video_Giang_Day = "Upload video giảng dạy";
+        public const string Upload_Bai_Kiem_Tra = "Upload bài kiểm tra";
+        public const string Tai_Len_Thanh_Cong = "Tải lên thành công!";
+        #endregion
+
     }
 }

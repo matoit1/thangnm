@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblGiaoTrinh_ListUC.ascx.cs" Inherits="CongKy.UserControl.tblGiaoTrinh_ListUC" %>
 <script type="text/javascript">
     function CheckAll(chkTemp) {
-        var grvTemp = document.getElementById("<%=grvListChiTietHoaDon.ClientID %>");
+        var grvTemp = document.getElementById("<%=grvListGiaoTrinh.ClientID %>");
         for (i = 1; i < grvTemp.rows.length; i++) {
             grvTemp.rows[i].cells[0].getElementsByTagName("INPUT")[0].checked = chkTemp.checked;
         }
@@ -33,7 +33,7 @@
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
                     FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="FK_iMonHocID,FK_iGiaoTrinhID"
                     emptydatatext="Không có bản ghi nào."   PageSize="10" 
-                    EnableModelValidation="True" onrowcommand="grvListChiTietHoaDon_RowCommand" 
+                    EnableModelValidation="True" onrowcommand="grvListGiaoTrinh_RowCommand" 
                     onpageindexchanging="grvListGiaoTrinh_PageIndexChanging" 
                     AllowSorting="true" onsorting="grvListGiaoTrinh_Sorting">
                     <AlternatingRowStyle CssClass="GridAlternatingItem"></AlternatingRowStyle>

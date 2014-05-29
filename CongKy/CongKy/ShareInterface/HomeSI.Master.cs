@@ -11,22 +11,22 @@ namespace CongKy.ShareInterface
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                if (Request.Cookies["CongKy_client"] == null)
-                {
-                    lbtnLogout.Visible = false;
-                    lbtnLogin.Text = "Đăng nhập";
-                    lbtnLogin.PostBackUrl = "~/Client/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString);
-                }
-                else
-                {
-                    lbtnLogout.Visible = true;
-                    lbtnLogin.Text = "Xin chào " + Request.Cookies["CongKy_client"].Value;
-                    lbtnLogin.PostBackUrl = "~/Client/ThongTinCaNhan.aspx";
-                }
-            }
-            catch { }
+            //try
+            //{
+            //    if (Request.Cookies["CongKy_client"] == null)
+            //    {
+            //        lbtnLogout.Visible = false;
+            //        lbtnLogin.Text = "Đăng nhập";
+            //        lbtnLogin.PostBackUrl = "~/Client/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString);
+            //    }
+            //    else
+            //    {
+            //        lbtnLogout.Visible = true;
+            //        lbtnLogin.Text = "Xin chào " + Request.Cookies["CongKy_client"].Value;
+            //        lbtnLogin.PostBackUrl = "~/Client/ThongTinCaNhan.aspx";
+            //    }
+            //}
+            //catch { }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)

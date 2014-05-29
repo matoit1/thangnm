@@ -134,7 +134,7 @@ namespace CongKy.DataAccessObject
                 tblGiaoTrinhEO output = new tblGiaoTrinhEO();
                 foreach (DataRow dr in input.Tables[0].Rows)
                 {
-                    output.FK_iMonHocID = (dr["PK_iThanhToanID"] == DBNull.Value) ? Convert.ToInt32(0) : Convert.ToInt32(dr["FK_iMonHocID"]);
+                    output.FK_iMonHocID = (dr["FK_iMonHocID"] == DBNull.Value) ? Convert.ToInt32(0) : Convert.ToInt32(dr["FK_iMonHocID"]);
                     output.FK_iGiaoTrinhID = (dr["FK_iGiaoTrinhID"] == DBNull.Value) ? Convert.ToInt32(0) : Convert.ToInt32(dr["FK_iGiaoTrinhID"]);
                 }
                 return output;

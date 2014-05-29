@@ -129,8 +129,8 @@ namespace CongKy.SharedLibraries
             switch (input)
             {
                 case 1: output = "Quản trị"; break;
-                case 2: output = "Nhân Viên"; break;
-                case 3: output = "Khách Hàng"; break;
+                case 2: output = "Giảng Viên"; break;
+                case 3: output = "Sinh Viên"; break;
                 default: output = "N/A"; break;
             }
             return output;

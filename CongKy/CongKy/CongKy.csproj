@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.28318, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Other\DLL\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -48,90 +56,56 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Themes\bootstrap-responsive.min.css" />
+    <Content Include="App_Themes\bootstrap.css" />
     <Content Include="App_Themes\bootstrap.min.css" />
     <Content Include="App_Themes\calendar.css" />
-    <Content Include="App_Themes\Gallery3D_1.css" />
-    <Content Include="App_Themes\Gallery3D_2.css" />
-    <Content Include="App_Themes\Home.css" />
-    <Content Include="App_Themes\Images\barcode.png" />
-    <Content Include="App_Themes\Images\buy.png" />
-    <Content Include="App_Themes\Images\BuyContinue.png" />
-    <Content Include="App_Themes\Images\change.jpg" />
-    <Content Include="App_Themes\Images\delete.png" />
-    <Content Include="App_Themes\Images\DeleteCart.png" />
-    <Content Include="App_Themes\Images\Gallery3D_background.jpg" />
-    <Content Include="App_Themes\Images\Gallery3D_forward_back.png" />
-    <Content Include="App_Themes\Images\Gallery3D_frames.png" />
-    <Content Include="App_Themes\Images\Home_backline.png" />
-    <Content Include="App_Themes\Images\Home_banner.jpg" />
-    <Content Include="App_Themes\Images\Home_facebook-hover.png" />
-    <Content Include="App_Themes\Images\Home_google-hover.png" />
-    <Content Include="App_Themes\Images\Home_instagram-hover.png" />
-    <Content Include="App_Themes\Images\Home_liner.png" />
-    <Content Include="App_Themes\Images\Home_pinterest-hover.png" />
-    <Content Include="App_Themes\Images\Home_search.png" />
-    <Content Include="App_Themes\Images\Home_social.png" />
-    <Content Include="App_Themes\Images\Home_sprite.png" />
-    <Content Include="App_Themes\Images\Home_tumblr-hover.png" />
-    <Content Include="App_Themes\Images\Home_twitter-hover.png" />
-    <Content Include="App_Themes\Images\logo.jpg" />
-    <Content Include="App_Themes\Images\nganluong.png" />
-    <Content Include="App_Themes\Images\Popup_CloseBox.png" />
-    <Content Include="App_Themes\Images\shopping_cart.png" />
-    <Content Include="App_Themes\Images\UpdateCart.png" />
-    <Content Include="App_Themes\img\arrows-active.png" />
-    <Content Include="App_Themes\img\arrows-normal.png" />
-    <Content Include="App_Themes\img\bg-input-focus.png" />
-    <Content Include="App_Themes\img\bg-input.png" />
-    <Content Include="App_Themes\img\bg-login.jpg" />
-    <Content Include="App_Themes\img\bg.jpg" />
-    <Content Include="App_Themes\img\buttons.gif" />
-    <Content Include="App_Themes\img\chat-left.png" />
-    <Content Include="App_Themes\img\chat-right.png" />
-    <Content Include="App_Themes\img\chosen-sprite.png" />
-    <Content Include="App_Themes\img\close-button-white.png" />
-    <Content Include="App_Themes\img\close-button.png" />
-    <Content Include="App_Themes\img\crop.gif" />
-    <Content Include="App_Themes\img\dbg.jpg" />
-    <Content Include="App_Themes\img\dialogs.png" />
-    <Content Include="App_Themes\img\glyphicons-halflings-red.png" />
-    <Content Include="App_Themes\img\glyphicons-halflings-white.png" />
-    <Content Include="App_Themes\img\glyphicons-halflings.png" />
-    <Content Include="App_Themes\img\icons-big.png" />
-    <Content Include="App_Themes\img\icons-small.png" />
-    <Content Include="App_Themes\img\i_16_radio.png" />
-    <Content Include="App_Themes\img\logo20.png" />
-    <Content Include="App_Themes\img\progress.gif" />
-    <Content Include="App_Themes\img\quicklook-bg.png" />
-    <Content Include="App_Themes\img\quicklook-icons.png" />
-    <Content Include="App_Themes\img\resize.png" />
-    <Content Include="App_Themes\img\spinner-mini.gif" />
-    <Content Include="App_Themes\img\sprite.png" />
-    <Content Include="App_Themes\img\toolbar.gif" />
-    <Content Include="App_Themes\img\toolbar.png" />
-    <Content Include="App_Themes\img\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="App_Themes\img\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="App_Themes\img\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="App_Themes\img\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="App_Themes\img\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="App_Themes\img\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="App_Themes\img\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="App_Themes\img\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="App_Themes\img\ui-icons_222222_256x240.png" />
-    <Content Include="App_Themes\img\ui-icons_2e83ff_256x240.png" />
-    <Content Include="App_Themes\img\ui-icons_454545_256x240.png" />
-    <Content Include="App_Themes\img\ui-icons_888888_256x240.png" />
-    <Content Include="App_Themes\img\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="App_Themes\img\uploadify-cancel.png" />
+    <Content Include="App_Themes\font-awesome.min.css" />
+    <Content Include="App_Themes\font-awesome\css\font-awesome.min.css" />
+    <Content Include="App_Themes\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\fonts\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\images\96DinhCong.PNG" />
+    <Content Include="App_Themes\images\bx_loader.gif" />
+    <Content Include="App_Themes\images\close.png" />
+    <Content Include="App_Themes\images\gallery\1.jpg" />
+    <Content Include="App_Themes\images\gallery\10.jpg" />
+    <Content Include="App_Themes\images\gallery\11.jpg" />
+    <Content Include="App_Themes\images\gallery\12.jpg" />
+    <Content Include="App_Themes\images\gallery\13.jpg" />
+    <Content Include="App_Themes\images\gallery\14.jpg" />
+    <Content Include="App_Themes\images\gallery\15.jpg" />
+    <Content Include="App_Themes\images\gallery\16.jpg" />
+    <Content Include="App_Themes\images\gallery\17.jpg" />
+    <Content Include="App_Themes\images\gallery\18.jpg" />
+    <Content Include="App_Themes\images\gallery\2.jpg" />
+    <Content Include="App_Themes\images\gallery\3.jpg" />
+    <Content Include="App_Themes\images\gallery\4.jpg" />
+    <Content Include="App_Themes\images\gallery\5.jpg" />
+    <Content Include="App_Themes\images\gallery\6.jpg" />
+    <Content Include="App_Themes\images\gallery\7.jpg" />
+    <Content Include="App_Themes\images\gallery\8.jpg" />
+    <Content Include="App_Themes\images\gallery\9.jpg" />
+    <Content Include="App_Themes\images\loading.gif" />
+    <Content Include="App_Themes\images\next.png" />
+    <Content Include="App_Themes\images\previous.png" />
+    <Content Include="App_Themes\images\team\1.jpg" />
+    <Content Include="App_Themes\images\team\2.jpg" />
+    <Content Include="App_Themes\images\team\3.jpg" />
+    <Content Include="App_Themes\images\team\4.jpg" />
+    <Content Include="App_Themes\images\templatemo_contactiframe.png" />
+    <Content Include="App_Themes\images\templatemo_footerhexa.png" />
+    <Content Include="App_Themes\images\templatemo_logo.jpg" />
+    <Content Include="App_Themes\images\templatemo_teamhexa.png" />
+    <Content Include="App_Themes\images\templatemo_teamhexa_hover.png" />
     <Content Include="App_Themes\login.css" />
     <Content Include="App_Themes\Popup.css" />
     <Content Include="App_Themes\public.css" />
-    <Content Include="App_Themes\style-responsive.css" />
-    <Content Include="App_Themes\style.css" />
-    <Content Include="App_Themes\ZoomImage.css" />
+    <Content Include="App_Themes\sb-admin.css" />
+    <Content Include="App_Themes\templatemo_misc.css" />
+    <Content Include="App_Themes\templatemo_style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="GiangVien\Accounts\Login.aspx" />
     <Content Include="GiangVien\Default.aspx" />
+    <Content Include="GiangVien\GiaoTrinh.aspx" />
     <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
     <Content Include="Images\Avatar\Default.jpg" />
@@ -192,18 +166,30 @@
     <Content Include="Other\DLL\CrystalDecisions.Web.dll" />
     <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
     <Content Include="Other\DLL\log4net.dll" />
+    <Content Include="QuanTri\Accounts\Login.aspx" />
+    <Content Include="QuanTri\Database.aspx" />
     <Content Include="QuanTri\Default.aspx" />
     <Content Include="QuanTri\ChiTietGiaoTrinh.aspx" />
+    <Content Include="QuanTri\GiaoTrinh.aspx" />
     <Content Include="QuanTri\MonHoc.aspx" />
     <Content Include="QuanTri\TaiKhoan.aspx" />
     <Content Include="QuanTri\ThongTinCaNhan.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2_admin.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\templatemo_custom.js" />
+    <Content Include="SinhVien\Accounts\Login.aspx" />
+    <Content Include="SinhVien\Accounts\Register.aspx" />
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="SinhVien\MonHoc.aspx" />
     <Content Include="SinhVien\ThongTinCaNhan.aspx" />
+    <Content Include="UserControl\ContactUC.ascx" />
+    <Content Include="UserControl\GalleryUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
+    <Content Include="UserControl\PdfUC.ascx" />
     <Content Include="UserControl\RegisterUC.ascx" />
     <Content Include="UserControl\tblGiaoTrinh_DetailUC.ascx" />
     <Content Include="UserControl\tblGiaoTrinh_ListUC.ascx" />
@@ -215,6 +201,9 @@
     <Content Include="UserControl\tblTaiKhoan_ListUC.ascx" />
     <Content Include="UserControl\tblMonHoc_DetailUC.ascx" />
     <Content Include="UserControl\tblMonHoc_ListUC.ascx" />
+    <Content Include="UserControl\UploadFileUC.ascx" />
+    <Content Include="UserControl\VideoUC.ascx" />
+    <Content Include="UserControl\WordUC.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -243,12 +232,26 @@
     <Compile Include="EntityObject\tblMonHocEO.cs" />
     <Compile Include="EntityObject\tblTaiKhoanEO.cs" />
     <Compile Include="EntityObject\tblGiaoTrinhEO.cs" />
+    <Compile Include="GiangVien\Accounts\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\Accounts\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GiangVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GiangVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien\GiaoTrinh.aspx.cs">
+      <DependentUpon>GiaoTrinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\GiaoTrinh.aspx.designer.cs">
+      <DependentUpon>GiaoTrinh.aspx</DependentUpon>
     </Compile>
     <Compile Include="GiangVien\MonHoc.aspx.cs">
       <DependentUpon>MonHoc.aspx</DependentUpon>
@@ -265,6 +268,20 @@
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanTri\Accounts\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Accounts\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Database.aspx.cs">
+      <DependentUpon>Database.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Database.aspx.designer.cs">
+      <DependentUpon>Database.aspx</DependentUpon>
+    </Compile>
     <Compile Include="QuanTri\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,6 +295,13 @@
     </Compile>
     <Compile Include="QuanTri\ChiTietGiaoTrinh.aspx.designer.cs">
       <DependentUpon>ChiTietGiaoTrinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\GiaoTrinh.aspx.cs">
+      <DependentUpon>GiaoTrinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\GiaoTrinh.aspx.designer.cs">
+      <DependentUpon>GiaoTrinh.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\MonHoc.aspx.cs">
       <DependentUpon>MonHoc.aspx</DependentUpon>
@@ -344,6 +368,20 @@
     <Compile Include="ShareInterface\ReportSI.Master.designer.cs">
       <DependentUpon>ReportSI.Master</DependentUpon>
     </Compile>
+    <Compile Include="SinhVien\Accounts\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhVien\Accounts\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SinhVien\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -365,12 +403,33 @@
     <Compile Include="SinhVien\ThongTinCaNhan.aspx.designer.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ContactUC.ascx.cs">
+      <DependentUpon>ContactUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ContactUC.ascx.designer.cs">
+      <DependentUpon>ContactUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\GalleryUC.ascx.cs">
+      <DependentUpon>GalleryUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\GalleryUC.ascx.designer.cs">
+      <DependentUpon>GalleryUC.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\LoginUC.ascx.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControl\LoginUC.ascx.designer.cs">
       <DependentUpon>LoginUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PdfUC.ascx.cs">
+      <DependentUpon>PdfUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\PdfUC.ascx.designer.cs">
+      <DependentUpon>PdfUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\RegisterUC.ascx.cs">
       <DependentUpon>RegisterUC.ascx</DependentUpon>
@@ -449,6 +508,27 @@
     <Compile Include="UserControl\tblMonHoc_ListUC.ascx.designer.cs">
       <DependentUpon>tblMonHoc_ListUC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\UploadFileUC.ascx.cs">
+      <DependentUpon>UploadFileUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UploadFileUC.ascx.designer.cs">
+      <DependentUpon>UploadFileUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\VideoUC.ascx.cs">
+      <DependentUpon>VideoUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\VideoUC.ascx.designer.cs">
+      <DependentUpon>VideoUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\WordUC.ascx.cs">
+      <DependentUpon>WordUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\WordUC.ascx.designer.cs">
+      <DependentUpon>WordUC.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -460,6 +540,18 @@
     <Content Include="ShareInterface\HomeSI.Master" />
     <Content Include="ShareInterface\SinhVienSI.Master" />
     <Content Include="ShareInterface\ReportSI.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Themes\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="App_Themes\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="App_Themes\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="App_Themes\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="App_Themes\fonts\fontawesome-webfont.eot" />
+    <None Include="App_Themes\fonts\fontawesome-webfont.ttf" />
+    <None Include="App_Themes\fonts\fontawesome-webfont.woff" />
+    <None Include="App_Themes\fonts\FontAwesome.otf" />
+    <None Include="Upload\do_an.docx" />
+    <None Include="Upload\Mo_Hinh_Ket_Noi_CSDL.pdf" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
