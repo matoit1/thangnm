@@ -68,8 +68,10 @@
     <Content Include="App_Themes\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="App_Themes\fonts\fontawesome-webfont.svg" />
     <Content Include="App_Themes\images\96DinhCong.PNG" />
+    <Content Include="App_Themes\images\background.jpg" />
     <Content Include="App_Themes\images\bx_loader.gif" />
     <Content Include="App_Themes\images\close.png" />
+    <Content Include="App_Themes\images\daotao.jpg" />
     <Content Include="App_Themes\images\gallery\1.jpg" />
     <Content Include="App_Themes\images\gallery\10.jpg" />
     <Content Include="App_Themes\images\gallery\11.jpg" />
