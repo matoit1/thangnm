@@ -9,7 +9,7 @@
                 	<div class="col-sm-4">
                         	 <div class="hexagon hexagonteam gallery-item">
                                <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(../App_Themes/images/team/1.jpg);">
+                                <div class="hexagon-in2" style="background-image: url(../App_Themes/images/daotao.jpg);">
                                 <div class="overlay templatemo_overlay1">
                                 	<a href="#">
                                    	 <div class="smallhexagon">

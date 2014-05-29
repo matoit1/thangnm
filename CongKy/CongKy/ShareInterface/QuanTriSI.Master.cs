@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CongKy.EntityObject;
+using CongKy.DataAccessObject;
 
 namespace CongKy.ShareInterface
 {
@@ -17,6 +19,9 @@ namespace CongKy.ShareInterface
                 {
                     Response.Redirect("~/QuanTri/Accounts/Login.aspx?Return_Url=" + Server.UrlEncode(Request.AppRelativeCurrentExecutionFilePath + "?" + Request.QueryString));
                 }
+                tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["CongKy_quantri"].Value;
+                lblName.Text = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO).sHoTen.ToString();
             }
             catch
             {
