@@ -307,6 +307,7 @@ namespace CongKy.SharedLibraries
         public const string Khong_Dung_Dinh_Dang_So_Dien_Thoai_Do_Dai = "Số điện thoại phải trong khoảng 10 số < sđt < 13 số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_So = "Không đúng định dạng Số, Vui lòng kiểm tra lại!";
         public const string Khong_Dung_Dinh_Dang_Ngay = "Không đúng định dạng Ngày/ Giờ, Vui lòng kiểm tra lại!";
+
         #endregion
 
         #region "Information"
@@ -320,6 +321,7 @@ namespace CongKy.SharedLibraries
         public const string Ngay_Day_Khong_Hop_Le = "Ngày dạy phải nằm trong khoảng: ";
         public const string Huy_Dang_Ky_Thanh_Cong = "Hủy đăng ký thành công!";
         public const string Huy_Dang_Ky_That_Bai = "Hủy đăng ký thất bại, vui lòng kiểm tra lại!";
+        public const string Dinh_Dang_File_Khong_Ho_Tro_Xem_Truoc = "Định dạng file này không hỗ trợ xem trước. Bạn có thể tải về!";
         #endregion
 
         #region "Information"
@@ -376,6 +378,7 @@ namespace CongKy.SharedLibraries
         public const string UpLoad_Video_Giang_Day = "Upload video giảng dạy";
         public const string Upload_Bai_Kiem_Tra = "Upload bài kiểm tra";
         public const string Tai_Len_Thanh_Cong = "Tải lên thành công!";
+        public const string Tai_Len_That_Bai = "Tải lên thất bại!";
         #endregion
 
     }

@@ -26,9 +26,14 @@
             <td></td>
         </tr>
         <tr>
-            <td>Mã giáo trình: </td>
+            <td><asp:Label ID="lblPK_iGiaoTrinhID_Title" runat="server" Text="Mã giáo trình: "></asp:Label></td>
             <td><asp:TextBox ID="txtPK_iGiaoTrinhID" runat="server" Width="400px" Enabled="false"></asp:TextBox></td>
             <td><asp:Label ID="lblPK_iGiaoTrinhID" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td>Môn học: </td>
+            <td><asp:DropDownList ID="ddlFK_iMonHocID" runat="server" Width="405px" TabIndex="6"></asp:DropDownList></td>
+            <td><asp:Label ID="lblFK_iMonHocID" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Tên bài học: </td>
@@ -44,23 +49,24 @@
         </tr>
          <tr>
             <td>Link download: </td>
-            <td><asp:TextBox ID="txtsLinkDownload" runat="server" Width="400px" MaxLength="200" 
-                    TabIndex="3"></asp:TextBox></td>
+            <td>
+                <asp:FileUpload ID="fuFile" runat="server" /></td>
+            <%--<asp:TextBox ID="txtsLinkDownload" runat="server" Width="400px" MaxLength="200" 
+                    TabIndex="3"></asp:TextBox>--%>
             <td><asp:Label ID="lblsLinkDownload" runat="server"></asp:Label></td>
         </tr>
          <tr>
-            <td>Loại: </td>
+            <td><asp:Label ID="lbliType_Title" runat="server" Text="Loại: "></asp:Label></td>
             <td><asp:DropDownList ID="ddliType" runat="server" Width="405px" TabIndex="4"></asp:DropDownList></td>
             <td><asp:Label ID="lbliType" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Ngày cập nhật: </td>
-            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px" 
-                    class="startdate" Enabled="false" TabIndex="5"></asp:TextBox></td>
+            <td><asp:Label ID="lbltNgayCapNhat_Title" runat="server" Text="Ngày cập nhật: "></asp:Label></td>
+            <td><asp:TextBox ID="txttNgayCapNhat" runat="server" Width="400px" class="startdate" Enabled="false" TabIndex="5"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayCapNhat" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Trạng thái: </td>
+            <td><asp:Label ID="lbliTrangThai_Title" runat="server" Text="Trạng thái: "></asp:Label></td>
             <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px" TabIndex="6"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
         </tr>

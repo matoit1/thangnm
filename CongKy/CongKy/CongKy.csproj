@@ -72,6 +72,7 @@
     <Content Include="App_Themes\images\bx_loader.gif" />
     <Content Include="App_Themes\images\close.png" />
     <Content Include="App_Themes\images\daotao.jpg" />
+    <Content Include="App_Themes\images\download_now.png" />
     <Content Include="App_Themes\images\gallery\1.jpg" />
     <Content Include="App_Themes\images\gallery\10.jpg" />
     <Content Include="App_Themes\images\gallery\11.jpg" />
@@ -115,6 +116,7 @@
     <Content Include="GiangVien\GiaoTrinh.aspx" />
     <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
+    <Content Include="Loi.aspx" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
     <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
@@ -153,6 +155,12 @@
     <Content Include="Upload\Images\open_source.jpg" />
     <Content Include="Upload\Images\TTHCM.jpg" />
     <Content Include="Upload\Images\web.jpg" />
+    <Content Include="Upload\Video\movie.3g2" />
+    <Content Include="Upload\Video\movie.avi" />
+    <Content Include="Upload\Video\movie.mov" />
+    <Content Include="Upload\Video\movie.mp4" />
+    <Content Include="Upload\Video\movie.mpg" />
+    <Content Include="Upload\Video\movie.wmv" />
     <Content Include="UserControl\ContactUC.ascx" />
     <Content Include="UserControl\GalleryUC.ascx" />
     <Content Include="UserControl\LoginUC.ascx" />
@@ -178,6 +186,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="XemTruoc.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessObject\ConnectionDAO.cs" />
@@ -233,6 +242,13 @@
     </Compile>
     <Compile Include="GiangVien\ThongTinCaNhan.aspx.designer.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loi.aspx.cs">
+      <DependentUpon>Loi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loi.aspx.designer.cs">
+      <DependentUpon>Loi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanTri\Accounts\Login.aspx.cs">
@@ -496,9 +512,17 @@
     <Compile Include="UserControl\WordUC.ascx.designer.cs">
       <DependentUpon>WordUC.ascx</DependentUpon>
     </Compile>
+    <Compile Include="XemTruoc.aspx.cs">
+      <DependentUpon>XemTruoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XemTruoc.aspx.designer.cs">
+      <DependentUpon>XemTruoc.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Upload\Other\" />
     <Folder Include="Upload\Temp\" />
   </ItemGroup>
   <ItemGroup>
@@ -517,8 +541,12 @@
     <None Include="App_Themes\fonts\fontawesome-webfont.ttf" />
     <None Include="App_Themes\fonts\fontawesome-webfont.woff" />
     <None Include="App_Themes\fonts\FontAwesome.otf" />
-    <None Include="Upload\do_an.docx" />
-    <None Include="Upload\Mo_Hinh_Ket_Noi_CSDL.pdf" />
+    <None Include="Upload\Ebook\Mo_Hinh_Ket_Noi_CSDL.pdf" />
+    <None Include="Upload\Video\movie.f4v" />
+    <None Include="Upload\Video\movie.flv" />
+    <None Include="Upload\Video\movie.mkv" />
+    <None Include="Upload\Video\movie.ogg" />
+    <None Include="Upload\Video\movie.webm" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

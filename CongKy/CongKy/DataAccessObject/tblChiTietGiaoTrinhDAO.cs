@@ -46,7 +46,7 @@ namespace CongKy.DataAccessObject
         /// <summary> 2. ChiTietGiaoTrinh_Insert </summary>
         /// <param name="_tblChiTietGiaoTrinhEO"></param>
         /// <returns></returns>
-        public static bool ChiTietGiaoTrinh_Insert(tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO)
+        public static bool ChiTietGiaoTrinh_Insert(tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO, tblMonHocEO _tblMonHocEO)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -59,8 +59,8 @@ namespace CongKy.DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sThongTin", _tblChiTietGiaoTrinhEO.sThongTin));
                     cmd.Parameters.Add(new SqlParameter("@sLinkDownload", _tblChiTietGiaoTrinhEO.sLinkDownload));
                     cmd.Parameters.Add(new SqlParameter("@iType", _tblChiTietGiaoTrinhEO.iType));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayCapNhat", _tblChiTietGiaoTrinhEO.tNgayCapNhat));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblChiTietGiaoTrinhEO.iTrangThai));
+                    cmd.Parameters.Add(new SqlParameter("@PK_iMonHocID", _tblMonHocEO.PK_iMonHocID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -90,7 +90,6 @@ namespace CongKy.DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sThongTin", _tblChiTietGiaoTrinhEO.sThongTin));
                     cmd.Parameters.Add(new SqlParameter("@sLinkDownload", _tblChiTietGiaoTrinhEO.sLinkDownload));
                     cmd.Parameters.Add(new SqlParameter("@iType", _tblChiTietGiaoTrinhEO.iType));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayCapNhat", _tblChiTietGiaoTrinhEO.tNgayCapNhat));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblChiTietGiaoTrinhEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -175,6 +174,35 @@ namespace CongKy.DataAccessObject
                     conn.Open();
                     SqlDataAdapter da = new SqlDataAdapter("tblChiTietGiaoTrinh_SelectList", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
+        /// <summary> 8. ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID </summary>
+        /// <param name="_tblChiTietGiaoTrinhEO"></param>
+        /// <returns></returns>
+        public static DataSet ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(int PK_iTaiKhoanID, int PK_iMonHocID, int PK_iGiaoTrinhID)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iTaiKhoanID", (PK_iTaiKhoanID == 0) ? (object)DBNull.Value : PK_iTaiKhoanID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iMonHocID", (PK_iMonHocID == 0) ? (object)DBNull.Value : PK_iMonHocID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iGiaoTrinhID", (PK_iGiaoTrinhID == 0) ? (object)DBNull.Value : PK_iGiaoTrinhID));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

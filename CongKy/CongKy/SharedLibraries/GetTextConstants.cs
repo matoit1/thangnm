@@ -33,7 +33,7 @@ namespace CongKy.SharedLibraries
             switch (input)
             {
                 case 1: output = "Video"; break;
-                case 2: output = "Tài liệu"; break;
+                case 2: output = "Tài liệu Pdf"; break;
                 case 3: output = "Phần mềm"; break;
                 case 4: output = "Loại khác"; break;
                 default: output = "N/A"; break;
@@ -103,5 +103,22 @@ namespace CongKy.SharedLibraries
             return output;
         }
         #endregion
+
+
+
+        /// <summary> I.5.  ERROR_GTC </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string ERROR_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Bạn không có quyền truy cập vào tài nguyên này!"; break;
+                case 2: output = "Lỗi!"; break;
+                default: output = "N/A"; break;
+            }
+            return output;
+        }
     }
 }

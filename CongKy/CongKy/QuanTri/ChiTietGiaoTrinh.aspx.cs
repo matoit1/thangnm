@@ -32,14 +32,19 @@ namespace CongKy.QuanTri
             tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
             _tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID = tblChiTietGiaoTrinh_ListUC1.PK_iGiaoTrinhID;
             _tblChiTietGiaoTrinhEO = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_SelectItem(_tblChiTietGiaoTrinhEO);
-            tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_tblChiTietGiaoTrinhEO);
+
+            tblMonHocEO _tblMonHocEO = new tblMonHocEO();
+            _tblMonHocEO.PK_iMonHocID = tblChiTietGiaoTrinh_ListUC1.PK_iGiaoTrinhID;
+
+            tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_tblChiTietGiaoTrinhEO, _tblMonHocEO);
         }
 
         protected void AddNew_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
-            tblChiTietGiaoTrinhEO _ChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
-            tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_ChiTietGiaoTrinhEO);
+            tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
+            tblMonHocEO _tblMonHocEO = new tblMonHocEO();
+            tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_tblChiTietGiaoTrinhEO, _tblMonHocEO);
         }
         #endregion
 
