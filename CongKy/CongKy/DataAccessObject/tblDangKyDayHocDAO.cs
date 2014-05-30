@@ -59,7 +59,6 @@ namespace CongKy.DataAccessObject
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID", _tblDangKyDayHocEO.FK_iTaiKhoanID));
                     cmd.Parameters.Add(new SqlParameter("@FK_iMonHocID", _tblDangKyDayHocEO.FK_iMonHocID));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayDangKy", _tblDangKyDayHocEO.tNgayDangKy));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblDangKyDayHocEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -89,7 +88,6 @@ namespace CongKy.DataAccessObject
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID", _tblDangKyDayHocEO.FK_iTaiKhoanID));
                     cmd.Parameters.Add(new SqlParameter("@FK_iMonHoc", _tblDangKyDayHocEO.FK_iMonHocID));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayDangKy", _tblDangKyDayHocEO.tNgayDangKy));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblDangKyDayHocEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();

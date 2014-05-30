@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GalleryUC.ascx.cs" Inherits="CongKy.UserControl.GalleryUC" %>
-<asp:Repeater ID="rptGallery" runat="server">
+<asp:Repeater ID="rptGallery" runat="server" 
+    onitemdatabound="rptGallery_ItemDataBound">
 <ItemTemplate>
                     <!-- team start -->
     <div  class="content homepage" id="menu-1">
@@ -9,7 +10,7 @@
                 	<div class="col-sm-4">
                         	 <div class="hexagon hexagonteam gallery-item">
                                <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(../App_Themes/images/daotao.jpg);">
+                                <div class="hexagon-in2" style="background-image: url('<%# Eval("sLinkImage")%>');">
                                 <div class="overlay templatemo_overlay1">
                                 	<a href="#">
                                    	 <div class="smallhexagon">
@@ -39,18 +40,19 @@
                                     </a>
                                 </div>
                                 <div class="clear"></div>
-                               	<div class="overlay templatemo_overlaytxt">Phasellus interdum</div>
+                               	<div class="overlay templatemo_overlaytxt"><%# Eval("sTenMonHoc")%></div>
                                 </div>
                             </div>
                           </div>
   			       </div>
                     <div class="col-sm-8 templatemo_servicetxt" style="width:65%" >
-                    	<h2>Free Template</h2>
-                        <p>Polygon is <a href="http://www.templatemo.com/page/1">free HTML5 template</a> by templatemo that can be used for any purpose. Cras lobortis, ligula ut hendrerit condimentum, magna lorem lobortis nisi, ac suscipit nunc est vitae turpis. Nullam vulputate nec nulla sed fringilla. Aliquam tempus consectetur diam, in suscipit turpis pulvinar at.</p>
+                    	<h2><%# Eval("sTenMonHoc")%></h2>
+                        <asp:Label ID="lblContent" runat="server" Text='<%# Eval("PK_iMonHocID")%>'></asp:Label>
+                        <%--<p>Polygon is <a href="http://www.templatemo.com/page/1">free HTML5 template</a> by templatemo that can be used for any purpose. Cras lobortis, ligula ut hendrerit condimentum, magna lorem lobortis nisi, ac suscipit nunc est vitae turpis. Nullam vulputate nec nulla sed fringilla. Aliquam tempus consectetur diam, in suscipit turpis pulvinar at.</p>--%>
                     </div>
                </div>
             </div>
-             <br /><br /><br /><br /><br /><br /><br /><br /><div class="clear"></div>
+             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><div class="clear"></div>
      </div>
      </div>
     <!--team end-->

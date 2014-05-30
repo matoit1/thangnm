@@ -86,6 +86,7 @@ namespace CongKy.DataAccessObject
                     SqlCommand cmd = new SqlCommand("tblMonHoc_Insert", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@sTenMonHoc", _tblMonHocEO.sTenMonHoc));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkImage", _tblMonHocEO.sLinkImage));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -113,6 +114,7 @@ namespace CongKy.DataAccessObject
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@PK_iMonHocID", _tblMonHocEO.PK_iMonHocID));
                     cmd.Parameters.Add(new SqlParameter("@sTenMonHoc", _tblMonHocEO.sTenMonHoc));
+                    cmd.Parameters.Add(new SqlParameter("@sLinkImage", _tblMonHocEO.sLinkImage));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -238,90 +240,7 @@ namespace CongKy.DataAccessObject
             }
         }
 
-        ///// <summary> 8. MonHoc_SelectListByiTrangThai </summary>
-        ///// <param name="_tblMonHocEO"></param>
-        ///// <returns></returns>
-        //public static DataSet MonHoc_SelectListByiTrangThai(tblMonHocEO _tblMonHocEO)
-        //{
-        //    DataSet dsOutput = null;
-        //    using (SqlConnection conn = ConnectionDAO.getConnection())
-        //    {
-        //        try
-        //        {
-        //            conn.Open();
-        //            SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_SelectList", conn);
-        //            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-        //            da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
-        //            dsOutput = new DataSet();
-        //            da.Fill(dsOutput);
-        //            conn.Close();
-        //            return dsOutput;
-        //        }
-        //        catch (Exception)
-        //        {
-        //            conn.Close();
-        //            return dsOutput;
-        //        }
-        //    }
-        //}
-
-        /// <summary> 9. MonHoc_SelectListBysTenMonHoc_iTrangThai </summary>
-        /// <param name="_tblMonHocEO"></param>
-        /// <returns></returns>
-        public static DataSet MonHoc_SelectListBysTenMonHoc_iTrangThai(tblMonHocEO _tblMonHocEO)
-        {
-            DataSet dsOutput = null;
-            using (SqlConnection conn = ConnectionDAO.getConnection())
-            {
-                try
-                {
-                    conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_SelectListBysTenMonHoc_iTrangThai", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTenMonHoc", _tblMonHocEO.sTenMonHoc));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", (_tblMonHocEO.iTrangThai==0)?(object)DBNull.Value:_tblMonHocEO.iTrangThai));
-                    dsOutput = new DataSet();
-                    da.Fill(dsOutput);
-                    conn.Close();
-                    return dsOutput;
-                }
-                catch (Exception)
-                {
-                    conn.Close();
-                    return dsOutput;
-                }
-            }
-        }
-
-        /// <summary> 10. MonHoc_SelectList_All_Parent_In_Group </summary>
-        /// <param name="_tblMonHocEO"></param>
-        /// <returns></returns>
-        public static DataSet MonHoc_SelectList_All_Parent_In_Group(tblMonHocEO _tblMonHocEO)
-        {
-            DataSet dsOutput = null;
-            using (SqlConnection conn = ConnectionDAO.getConnection())
-            {
-                try
-                {
-                    conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_SelectList_All_Parent_In_Group", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@sTenMonHoc", _tblMonHocEO.sTenMonHoc));
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
-                    dsOutput = new DataSet();
-                    da.Fill(dsOutput);
-                    conn.Close();
-                    return dsOutput;
-                }
-                catch (Exception)
-                {
-                    conn.Close();
-                    return dsOutput;
-                }
-            }
-        }
-
-        /// <summary> 11. MonHoc_SelectList_All_MonHoc </summary>
+        /// <summary> 11. MonHoc_SelectListByiTrangThai </summary>
         /// <param name="_tblMonHocEO"></param>
         /// <returns></returns>
         public static DataSet MonHoc_SelectListByiTrangThai(tblMonHocEO _tblMonHocEO)
@@ -335,6 +254,34 @@ namespace CongKy.DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_SelectListByiTrangThai", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
+        /// <summary> 11. MonHoc_SelectListByFK_iTaiKhoanID </summary>
+        /// <param name="_tblMonHocEO"></param>
+        /// <returns></returns>
+        public static DataSet MonHoc_SelectListByFK_iTaiKhoanID(tblMonHocEO _tblMonHocEO, tblTaiKhoanEO _tblTaiKhoanEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_SelectListByFK_iTaiKhoanID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID", _tblTaiKhoanEO.PK_iTaiKhoanID));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();
@@ -362,50 +309,6 @@ namespace CongKy.DataAccessObject
                     SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_SelectBysTenMonHoc", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     da.SelectCommand.Parameters.Add(new SqlParameter("@sTenMonHoc", _tblMonHocEO.sTenMonHoc));
-                    dsOutput = new DataSet();
-                    da.Fill(dsOutput);
-                    conn.Close();
-                    return dsOutput;
-                }
-                catch (Exception)
-                {
-                    conn.Close();
-                    return dsOutput;
-                }
-            }
-        }
-
-        /// <summary> 13. MonHoc_Search_Common </summary>
-        /// <param name="_tblMonHocEO"></param>
-        /// <returns></returns>
-        public static DataSet MonHoc_Search_Common(string keyword)
-        {
-            DataSet dsOutput = null;
-            using (SqlConnection conn = ConnectionDAO.getConnection())
-            {
-                try
-                {
-                    conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblMonHoc_Search_Common", conn);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@keyword", keyword));
-
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iMonHocID", _tblMonHocEO.PK_iMonHocID));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@lGroup", _tblMonHocEO.lGroup));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@lParent", _tblMonHocEO.lParent));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sName", _tblMonHocEO.sName));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@lPrice", _tblMonHocEO.lPrice));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@lSale", _tblMonHocEO.lSale));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@bVAT", _tblMonHocEO.bVAT));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sDescription", _tblMonHocEO.sDescription));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sInfomation", _tblMonHocEO.sInfomation));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sOrigin", _tblMonHocEO.sOrigin));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@iQuantity", _tblMonHocEO.iQuantity));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkImage", _tblMonHocEO.sLinkImage));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkImage1", _tblMonHocEO.sLinkImage1));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@sLinkImage2", _tblMonHocEO.sLinkImage2));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@tLastUpdate", _tblMonHocEO.tLastUpdate));
-                    //da.SelectCommand.Parameters.Add(new SqlParameter("@bStatus", _tblMonHocEO.bStatus));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

@@ -10,6 +10,7 @@ using CongKy.SharedLibraries;
 using System.Data;
 using CongKy.DataAccessObject;
 using CongKy.EntityObject;
+using CongKy.SharedLibraries.Constants;
 
 namespace CongKy.UserControl
 {
@@ -40,6 +41,13 @@ namespace CongKy.UserControl
             set { _iTrangThai = value; }
         }
 
+        private Int32 _PK_iTaiKhoanID;
+        public Int32 PK_iTaiKhoanID
+        {
+            get { return this._PK_iTaiKhoanID; }
+            set { _PK_iTaiKhoanID = value; }
+        }
+
         public string typesearch
         {
             get { return (string)ViewState["typesearch"]; }
@@ -63,14 +71,29 @@ namespace CongKy.UserControl
             try
             {
                 tblMonHocEO _tblMonHocEO = new tblMonHocEO();
-                _tblMonHocEO.iTrangThai = iTrangThai;
-                dsBaiViet = tblMonHocDAO.MonHoc_SelectListByiTrangThai(_tblMonHocEO);
+                            _tblMonHocEO.iTrangThai = iTrangThai;
+                            tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                            _tblTaiKhoanEO.PK_iTaiKhoanID = PK_iTaiKhoanID;
+                switch (iTrangThai)
+                {
+                    case ChiTietGiaoTrinh_iTrangThai_C.Mon_Dang_Ky:
+                        _tblMonHocEO.iTrangThai = ChiTietGiaoTrinh_iTrangThai_C.Mo;
+                        dsBaiViet = tblMonHocDAO.MonHoc_SelectListByFK_iTaiKhoanID(_tblMonHocEO, _tblTaiKhoanEO);
+                            break;
+                    case ChiTietGiaoTrinh_iTrangThai_C.Mon_Dang_Day:
+                            _tblMonHocEO.iTrangThai = ChiTietGiaoTrinh_iTrangThai_C.Mo;
+                            dsBaiViet = tblMonHocDAO.MonHoc_SelectListByFK_iTaiKhoanID(_tblMonHocEO, _tblTaiKhoanEO);
+                            break;
+                    default:
+                            dsBaiViet = tblMonHocDAO.MonHoc_SelectListByiTrangThai(_tblMonHocEO); break;
+                }
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
                     PK_iMonHocID = topic.Field<Int32>("PK_iMonHocID"),
+                    sLinkImage = topic.Field<string>("sLinkImage"),
                     sTenMonHoc = topic.Field<string>("sTenMonHoc"),
                     iTrangThai = GetTextConstants.MonHoc_iTrangThai_GTC(topic.Field<Int16>("iTrangThai"))
                 };

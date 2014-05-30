@@ -183,6 +183,34 @@ namespace CongKy.DataAccessObject
         }
 
 
+        /// <summary> 8. GiaoTrinh_SelectByFK_iMonHocID </summary>
+        /// <param name="_tblGiaoTrinhEO"></param>
+        /// <returns></returns>
+        public static DataSet GiaoTrinh_SelectByFK_iMonHocID(tblGiaoTrinhEO _tblGiaoTrinhEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblGiaoTrinh_SelectByFK_iMonHocID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iMonHocID", _tblGiaoTrinhEO.FK_iMonHocID));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
+
    
         /// <summary> 9. GiaoTrinh_Search </summary>
         /// <param name="_tblGiaoTrinhEO"></param>

@@ -56,7 +56,10 @@
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
                         <asp:BoundField  DataField="sTenMonHoc"  HeaderText="Tên môn học" SortExpression="sTenMonHoc">
-                            <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                            <ItemStyle Wrap="true" CssClass="GridItemText"/>
+                        </asp:BoundField>
+                        <asp:BoundField  DataField="sLinkImage"  HeaderText="Link Ảnh" SortExpression="sLinkImage">
+                            <ItemStyle Wrap="true" CssClass="GridItemText"/>
                         </asp:BoundField>
                         <asp:BoundField DataField="iTrangThai" HeaderText="Trạng thái" SortExpression="iTrangThai">
                             <ItemStyle CssClass="GridItemText" />

@@ -71,39 +71,6 @@ namespace CongKy.SharedLibraries
             return output;
         }
 
-        /// <summary> I.9. SanPham_iDoTuoi_GTC (Độ Tuổi Sản Phẩm) </summary>
-        /// <param name="input"></param>
-        /// <returns>output</returns>
-        public static string SanPham_iDoTuoi_GTC(Int16 input)
-        {
-            string output = "";
-            switch (input)
-            {
-                case 1: output = "Dưới 1 tuổi"; break;
-                case 2: output = "Từ 1 đến 2 tuổi"; break;
-                case 3: output = "Từ 2 đến 3 tuổi"; break;
-                case 4: output = "Từ 3 đến 5 tuổi"; break;
-                case 5: output = "Trên 5 tuổi"; break;
-            }
-            return output;
-        }
-
-        /// <summary>  I.10 SanPham_iGioiTinh_GTC (Giới Tính Sản Phẩm)  </summary>
-        /// <param name="input"></param>
-        /// <returns>output</returns>
-        public static string SanPham_iGioiTinh_GTC(Int16 input)
-        {
-            string output = "";
-            switch (input)
-            {
-                case 1: output = "Nam"; break;
-                case 2: output = "Nữ"; break;
-                case 3: output = "Cả Nam và Nữ"; break;
-                default: output = "N/A"; break;
-            }
-            return output;
-        }
-
         /// <summary> I.12. TaiKhoan_iTrangThai_GTC (Trạng Thái Tài Khoản) </summary>
         /// <param name="input"></param>
         /// <returns>output</returns>
@@ -131,22 +98,6 @@ namespace CongKy.SharedLibraries
                 case 1: output = "Quản trị"; break;
                 case 2: output = "Giảng Viên"; break;
                 case 3: output = "Sinh Viên"; break;
-                default: output = "N/A"; break;
-            }
-            return output;
-        }
-
-        /// <summary> I.11. ThanhToan_iTrangThai_GTC (Trạng Thái Thanh Toán) </summary>
-        /// <param name="input"></param>
-        /// <returns>output</returns>
-        public static string ThanhToan_iTrangThai_GTC(Int16 input)
-        {
-            string output = "";
-            switch (input)
-            {
-                case 1: output = "Mở"; break;
-                case 2: output = "Xem xét"; break;
-                case 3: output = "Khóa"; break;
                 default: output = "N/A"; break;
             }
             return output;
