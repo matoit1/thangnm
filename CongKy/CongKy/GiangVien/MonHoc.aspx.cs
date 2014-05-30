@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CongKy.DataAccessObject;
 using CongKy.EntityObject;
+using CongKy.SharedLibraries.Constants;
 
 namespace CongKy.GiangVien
 {
@@ -17,12 +18,23 @@ namespace CongKy.GiangVien
             {
                 if (Request.QueryString["iTrangThai"] != null)
                 {
-                    tblMonHoc_ListUC1.iTrangThai = Convert.ToInt16(Request.QueryString["iTrangThai"]);
+                    tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                    _tblTaiKhoanEO.sTenDangNhap =
+                    _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["CongKy_giangvien"].Value;
+                    _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
+                    switch(Convert.ToInt16(Request.QueryString["iTrangThai"])){
+                        case ChiTietGiaoTrinh_iTrangThai_C.Mon_Dang_Day: tblMonHoc_ListUC1.iTrangThai = ChiTietGiaoTrinh_iTrangThai_C.Mon_Dang_Day;
+                            tblMonHoc_ListUC1.PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
+                            break;
+                        case ChiTietGiaoTrinh_iTrangThai_C.Mo: tblMonHoc_ListUC1.iTrangThai = ChiTietGiaoTrinh_iTrangThai_C.Mo; break;
+                    }
                 }
             }
             catch
             {
             }
+            tblMonHoc_ListUC1.btnAddNew.Visible = false;
+            tblMonHoc_DetailUC1.Permit_Access();
         }
 
         #region "Raise Event"

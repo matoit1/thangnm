@@ -10,6 +10,7 @@
     <link href="../App_Themes/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
+    <link href="../App_Themes/public.css" rel="stylesheet">
     <link href="../App_Themes/sb-admin.css" rel="stylesheet">
     <link href="../App_Themes/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
@@ -47,8 +48,7 @@
                 <a href="../QuanTri/MonHoc.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Môn Học <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=1">Mở</a></li>
-                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=2">Xem Xét</a></li>
-                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=3">Khóa</a></li>
+                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=2">Khóa</a></li>
               </ul>
             </li>
             <li class="dropdown">

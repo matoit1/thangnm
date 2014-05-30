@@ -94,6 +94,7 @@ namespace CongKy.DataAccessObject
                 {
                     output.PK_iMonHocID = (dr["PK_iMonHocID"] == DBNull.Value) ? 0 : Convert.ToInt32(dr["PK_iMonHocID"]);
                     output.sTenMonHoc = (dr["sTenMonHoc"] == DBNull.Value) ? "" : Convert.ToString(dr["sTenMonHoc"]);
+                    output.sLinkImage = (dr["sLinkImage"] == DBNull.Value) ? "" : Convert.ToString(dr["sLinkImage"]);
                     output.iTrangThai = (dr["iTrangThai"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["iTrangThai"]);
                 }
                 return output;

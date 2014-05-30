@@ -7,11 +7,19 @@ using System.Web.UI.WebControls;
 using CongKy.EntityObject;
 using CongKy.SharedLibraries;
 using CongKy.DataAccessObject;
+using CongKy.SharedLibraries.Constants;
 
 namespace CongKy.UserControl
 {
     public partial class tblMonHoc_DetailUC : System.Web.UI.UserControl
     {
+
+        private Int32 _PK_iTaiKhoanID;
+        public Int32 PK_iTaiKhoanID
+        {
+            get { return this._PK_iTaiKhoanID; }
+            set { _PK_iTaiKhoanID = value; }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -25,6 +33,7 @@ namespace CongKy.UserControl
         {
             txtPK_iMonHocID.Text = Convert.ToString(_tblMonHocEO.PK_iMonHocID);
             txtsTenMonHoc.Text = Convert.ToString(_tblMonHocEO.sTenMonHoc);
+            txtsLinkImage.Text = Convert.ToString(_tblMonHocEO.sLinkImage);
             try { ddliTrangThai.SelectedValue = _tblMonHocEO.iTrangThai.ToString(); }
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
@@ -37,6 +46,7 @@ namespace CongKy.UserControl
                 try { _tblMonHocEO.PK_iMonHocID = Convert.ToInt32(txtPK_iMonHocID.Text); }
                 catch { lblPK_iMonHocID.Text = Messages.Khong_Dung_Dinh_Dang_So; _tblMonHocEO.PK_iMonHocID = 0; }
                 _tblMonHocEO.sTenMonHoc = Convert.ToString(txtsTenMonHoc.Text);
+                _tblMonHocEO.sLinkImage = Convert.ToString(txtsLinkImage.Text);
                 try { _tblMonHocEO.iTrangThai = Convert.ToInt16(ddliTrangThai.SelectedValue); }
                 catch { lbliTrangThai.Text = Messages.Khong_Dung_Dinh_Dang_So; }
                 return _tblMonHocEO;
@@ -49,7 +59,7 @@ namespace CongKy.UserControl
 
         public void loadDataToDropDownList()
         {
-            ddliTrangThai.DataSource = GetListConstants.ThanhToan_iTrangThai_GLC();
+            ddliTrangThai.DataSource = GetListConstants.MonHoc_iTrangThai_GLC();
             ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
             ddliTrangThai.DataBind();
@@ -168,6 +178,82 @@ namespace CongKy.UserControl
             tblMonHocEO _tblMonHocEO = new tblMonHocEO();
             BindDataDetail(_tblMonHocEO);
         }
+
+        protected void btnSubscribe_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            lblMsg.Text = "";
+            tblDangKyDayHocEO _tblDangKyDayHocEO = new tblDangKyDayHocEO();
+            _tblDangKyDayHocEO.FK_iMonHocID = getObject().PK_iMonHocID;
+            _tblDangKyDayHocEO.FK_iTaiKhoanID = PK_iTaiKhoanID;
+            _tblDangKyDayHocEO.iTrangThai = DangKyDayHoc_iTrangThai_C.Mo;
+            try
+            {
+                if (tblDangKyDayHocDAO.DangKyDayHoc_Insert(_tblDangKyDayHocEO) == true)
+                {
+                    lblMsg.Text = Messages.Dang_Ky_Thanh_Cong;
+                    ClearMessages();
+                    btnUnsubscribe.Visible = true;
+                    btnSubscribe.Visible = false;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Dang_Ky_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
+
+        protected void btnUnsubscribe_Click(object sender, EventArgs e)
+        {
+            ClearMessages();
+            lblMsg.Text = "";
+            tblDangKyDayHocEO _tblDangKyDayHocEO = new tblDangKyDayHocEO();
+            _tblDangKyDayHocEO.FK_iMonHocID = getObject().PK_iMonHocID;
+            _tblDangKyDayHocEO.FK_iTaiKhoanID = PK_iTaiKhoanID;
+            try
+            {
+                if (tblDangKyDayHocDAO.DangKyDayHoc_Delete(_tblDangKyDayHocEO) == true)
+                {
+                    lblMsg.Text = Messages.Huy_Dang_Ky_Thanh_Cong;
+                    ClearMessages();
+                    btnUnsubscribe.Visible = false;
+                    btnSubscribe.Visible = true;
+                }
+                else
+                {
+                    lblMsg.Text = Messages.Huy_Dang_Ky_That_Bai;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMsg.Text = Messages.Loi + ex.Message;
+            }
+        }
         #endregion;
+
+        public void Permit_Access()
+        {
+            txtPK_iMonHocID.Enabled = false;
+            lblPK_iMonHocID.Enabled = false;
+
+            txtsTenMonHoc.Enabled = false;
+            txtsTenMonHoc.Enabled = false;
+
+            txtsLinkImage.Enabled = false;
+            lblsLinkImage.Enabled = false;
+
+            ddliTrangThai.Visible = false;
+            lbliTrangThai.Visible = false;
+            lbliTrangThai_Title.Visible = false;
+
+            btnInsert.Visible = false;
+            btnUpdate.Visible = false;
+            btnDelete.Visible = false;
+            btnReset.Visible = false;
+        }
     }
 }

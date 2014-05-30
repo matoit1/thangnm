@@ -318,6 +318,8 @@ namespace CongKy.SharedLibraries
         public const string Xoa_Thanh_Cong = "Xóa thành công!";
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
         public const string Ngay_Day_Khong_Hop_Le = "Ngày dạy phải nằm trong khoảng: ";
+        public const string Huy_Dang_Ky_Thanh_Cong = "Hủy đăng ký thành công!";
+        public const string Huy_Dang_Ky_That_Bai = "Hủy đăng ký thất bại, vui lòng kiểm tra lại!";
         #endregion
 
         #region "Information"

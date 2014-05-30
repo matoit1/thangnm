@@ -10,6 +10,7 @@ namespace CongKy.EntityObject
     {
         private Int32 _PK_iMonHocID;
         private String _sTenMonHoc;
+        private String _sLinkImage;
         private Int16 _iTrangThai;
 
         // 1. Xay dung cac phuong thuc set, get cho PK_iMonHocID
@@ -26,7 +27,14 @@ namespace CongKy.EntityObject
             set { this._sTenMonHoc = value; }
         }
 
-        // 3. Xay dung cac phuong thuc set, get cho iTrangThai
+        // 3. Xay dung cac phuong thuc set, get cho sLinkImage
+        public String sLinkImage
+        {
+            get { return this._sLinkImage; }
+            set { this._sLinkImage = value; }
+        }
+
+        // 4. Xay dung cac phuong thuc set, get cho iTrangThai
         public Int16 iTrangThai
         {
             get { return this._iTrangThai; }

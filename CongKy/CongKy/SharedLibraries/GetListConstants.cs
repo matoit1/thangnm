@@ -53,30 +53,6 @@ namespace CongKy.SharedLibraries
             return output;
         }
 
-        /// <summary> I.9. SanPham_iDoTuoi_GLC (Độ Tuổi Sản Phẩm) </summary>
-        /// <returns></returns>
-        public static SortedList SanPham_iDoTuoi_GLC()
-        {
-            SortedList output = new SortedList();
-            output.Add(SanPham_iDoTuoi_C.Loai1, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai1));
-            output.Add(SanPham_iDoTuoi_C.Loai2, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai2));
-            output.Add(SanPham_iDoTuoi_C.Loai3, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai3));
-            output.Add(SanPham_iDoTuoi_C.Loai4, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai4));
-            output.Add(SanPham_iDoTuoi_C.Loai5, GetTextConstants.SanPham_iDoTuoi_GTC(SanPham_iDoTuoi_C.Loai5));
-            return output;
-        }
-
-        /// <summary> I.10 SanPham_iGioiTinh_GLC (Giới Tính Sản Phẩm) </summary>
-        /// <returns></returns>
-        public static SortedList SanPham_iGioiTinh_GLC()
-        {
-            SortedList output = new SortedList();
-            output.Add(SanPham_iGioiTinh_C.Nam, GetTextConstants.SanPham_iGioiTinh_GTC(SanPham_iGioiTinh_C.Nam));
-            output.Add(SanPham_iGioiTinh_C.Nu, GetTextConstants.SanPham_iGioiTinh_GTC(SanPham_iGioiTinh_C.Nu));
-            output.Add(SanPham_iGioiTinh_C.Nam_Nu, GetTextConstants.SanPham_iGioiTinh_GTC(SanPham_iGioiTinh_C.Nam_Nu));
-            return output;
-        }
-
         /// <summary>  I.12. TaiKhoan_iTrangThai_GLC (Trạng Thái Tài Khoản) </summary>
         /// <returns></returns>
         public static SortedList TaiKhoan_iTrangThai_GLC()
@@ -96,17 +72,6 @@ namespace CongKy.SharedLibraries
             output.Add(TaiKhoan_iQuyenHan_C.QuanTri, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.QuanTri));
             output.Add(TaiKhoan_iQuyenHan_C.GiangVien, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.GiangVien));
             output.Add(TaiKhoan_iQuyenHan_C.Sinh_Vien, GetTextConstants.TaiKhoan_iQuyenHan_GTC(TaiKhoan_iQuyenHan_C.Sinh_Vien));
-            return output;
-        }
-
-        /// <summary> I.11. ThanhToan_iTrangThai_GLC (Trạng Thái Thanh Toán) </summary>
-        /// <returns></returns>
-        public static SortedList ThanhToan_iTrangThai_GLC()
-        {
-            SortedList output = new SortedList();
-            output.Add(ThanhToan_iTrangThai_C.Mo, GetTextConstants.ThanhToan_iTrangThai_GTC(ThanhToan_iTrangThai_C.Mo));
-            output.Add(ThanhToan_iTrangThai_C.Xem_Xet, GetTextConstants.ThanhToan_iTrangThai_GTC(ThanhToan_iTrangThai_C.Xem_Xet));
-            output.Add(ThanhToan_iTrangThai_C.Khoa, GetTextConstants.ThanhToan_iTrangThai_GTC(ThanhToan_iTrangThai_C.Khoa));
             return output;
         }
         #endregion

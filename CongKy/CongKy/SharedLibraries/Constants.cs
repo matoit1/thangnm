@@ -13,6 +13,8 @@ namespace CongKy.SharedLibraries.Constants
     {
         public const Int16 Mo = 1;
         public const Int16 Khoa = 2;
+        public const Int16 Mon_Dang_Day = 3;
+        public const Int16 Mon_Dang_Ky = 4;
     }
 
 
@@ -43,26 +45,6 @@ namespace CongKy.SharedLibraries.Constants
 
     }
 
-    /// <summary> I.9. SanPham_iDoTuoi_C (Độ Tuổi Sản Phẩm) </summary>
-    /// 
-    public class SanPham_iDoTuoi_C
-    {
-        public const Int16 Loai1 = 1;
-        public const Int16 Loai2 = 2;
-        public const Int16 Loai3 = 3;
-        public const Int16 Loai4 = 4;
-        public const Int16 Loai5 = 5;
-    }
-
-    /// <summary> I.10 SanPham_iGioiTinh_C (Giới Tính Sản Phẩm) </summary>
-    /// 
-    public class SanPham_iGioiTinh_C
-    {
-        public const Int16 Nam = 1;
-        public const Int16 Nu = 2;
-        public const Int16 Nam_Nu = 3;
-    }
-
     /// <summary> I.12. TaiKhoan_iTrangThai_C (Trạng Thái Tài Khoản) </summary>
     /// 
     public class TaiKhoan_iTrangThai_C
@@ -79,15 +61,6 @@ namespace CongKy.SharedLibraries.Constants
         public const Int16 QuanTri = 1;
         public const Int16 GiangVien = 2;
         public const Int16 Sinh_Vien = 3;
-    }
-
-    /// <summary> I.11. ThanhToan_iTrangThai_C (Trạng Thái Thanh Toán) </summary>
-    /// 
-    public class ThanhToan_iTrangThai_C
-    {
-        public const Int16 Mo = 1;
-        public const Int16 Xem_Xet = 2;
-        public const Int16 Khoa = 3;
     }
     #endregion
 }

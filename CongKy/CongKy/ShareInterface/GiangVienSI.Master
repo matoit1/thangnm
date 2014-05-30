@@ -10,6 +10,7 @@
     <link href="../App_Themes/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
+    <link href="../App_Themes/public.css" rel="stylesheet">
     <link href="../App_Themes/sb-admin.css" rel="stylesheet">
     <link href="../App_Themes/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
@@ -34,32 +35,22 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li><a href="../QuanTri/Default.aspx"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="../GiangVien/Default.aspx"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="dropdown">
-                <a href="../QuanTri/TaiKhoan.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Tài Khoản <b class="caret"></b></a>
+                <a href="../GiangVien/MonHoc.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Môn Học <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="../QuanTri/TaiKhoan.aspx?iQuyenHan=1">Quản Trị</a></li>
-                    <li><a href="../QuanTri/TaiKhoan.aspx?iQuyenHan=2">Giảng Viên</a></li>
-                    <li><a href="../QuanTri/TaiKhoan.aspx?iQuyenHan=3">Sinh Viên</a></li>
+                    <li><a href="../GiangVien/MonHoc.aspx?iTrangThai=1">Tất cả</a></li>
+                    <li><a href="../GiangVien/MonHoc.aspx?iTrangThai=3">Môn đang dạy</a></li>
               </ul>
             </li>
             <li class="dropdown">
-                <a href="../QuanTri/MonHoc.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Môn Học <b class="caret"></b></a>
+                <a href="../GiangVien/ChiTietGiaoTrinh.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Chi Tiết Giáo Trình <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=1">Mở</a></li>
-                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=2">Xem Xét</a></li>
-                    <li><a href="../QuanTri/MonHoc.aspx?iTrangThai=3">Khóa</a></li>
+                    <li><a href="../GiangVien/ChiTietGiaoTrinh.aspx?iTrangThai=1">Mở</a></li>
+                    <li><a href="../GiangVien/ChiTietGiaoTrinh.aspx?iTrangThai=2">Khóa</a></li>
               </ul>
             </li>
-            <li class="dropdown">
-                <a href="../QuanTri/ChiTietGiaoTrinh.aspx" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Chi Tiết Giáo Trình <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="../QuanTri/ChiTietGiaoTrinh.aspx?iTrangThai=1">Mở</a></li>
-                    <li><a href="../QuanTri/ChiTietGiaoTrinh.aspx?iTrangThai=2">Khóa</a></li>
-              </ul>
-            </li>
-            <li><a href="../QuanTri/ThongTinCaNhan.aspx"><i class="fa fa-desktop"></i> Thông tin cá nhân</a></li>
-            <li><a href="../QuanTri/Database.aspx"><i class="fa fa-desktop"></i> Database</a></li>
+            <li><a href="../GiangVien/ThongTinCaNhan.aspx"><i class="fa fa-desktop"></i> Thông tin cá nhân</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-user">

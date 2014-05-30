@@ -37,8 +37,14 @@
             <td><asp:Label ID="lblsTenMonHoc" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td>Trạng thái: </td>
-            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px" TabIndex="2"></asp:DropDownList></td>
+            <td>Link ảnh: </td>
+            <td><asp:TextBox ID="txtsLinkImage" runat="server" Width="400px" TabIndex="2" 
+                    MaxLength="200"></asp:TextBox></td>
+            <td><asp:Label ID="lblsLinkImage" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
+            <td><asp:Label ID="lbliTrangThai_Title" runat="server" Text="Trạng thái: "></asp:Label></td>
+            <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px" TabIndex="3"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
         </tr>
         <tr>
@@ -49,14 +55,12 @@
         <tr>
             <td></td>
             <td>
-                <asp:Button ID="btnInsert" runat="server" Text="Insert" 
-                    onclick="btnInsert_Click" TabIndex="3" />
-                <asp:Button ID="btnUpdate" runat="server" Text="Update" 
-                    onclick="btnUpdate_Click" TabIndex="4" />
-                <asp:Button ID="btnDelete" runat="server" Text="Delete" 
-                    onclick="btnDelete_Click" TabIndex="5" />
-                <asp:Button ID="btnReset" runat="server" Text="Reset" onclick="btnReset_Click" 
-                    TabIndex="6" />
+                <asp:Button ID="btnInsert" runat="server" Text="Insert" onclick="btnInsert_Click" TabIndex="4" />
+                <asp:Button ID="btnUpdate" runat="server" Text="Update" onclick="btnUpdate_Click" TabIndex="5" />
+                <asp:Button ID="btnDelete" runat="server" Text="Delete" onclick="btnDelete_Click" TabIndex="6" />
+                <asp:Button ID="btnReset" runat="server" Text="Reset" onclick="btnReset_Click" TabIndex="7" />
+                <asp:Button ID="btnSubscribe" runat="server" Text="Đăng ký" onclick="btnSubscribe_Click" TabIndex="8" Visible="False" />
+                <asp:Button ID="btnUnsubscribe" runat="server" Text="Hủy đăng ký" onclick="btnUnsubscribe_Click" TabIndex="9" Visible="False" />
             </td>
             <td></td>
         </tr>
