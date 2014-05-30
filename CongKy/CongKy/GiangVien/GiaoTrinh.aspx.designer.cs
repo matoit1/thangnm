@@ -31,13 +31,13 @@ namespace CongKy.GiangVien {
         protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
-        /// tblGiaoTrinh_ListUC1 control.
+        /// tblChiTietGiaoTrinh_ListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CongKy.UserControl.tblGiaoTrinh_ListUC tblGiaoTrinh_ListUC1;
+        protected global::CongKy.UserControl.tblChiTietGiaoTrinh_ListUC tblChiTietGiaoTrinh_ListUC1;
         
         /// <summary>
         /// vDetail control.
@@ -58,12 +58,12 @@ namespace CongKy.GiangVien {
         protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
         
         /// <summary>
-        /// tblGiaoTrinh_DetailUC1 control.
+        /// tblChiTietGiaoTrinh_DetailUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CongKy.UserControl.tblGiaoTrinh_DetailUC tblGiaoTrinh_DetailUC1;
+        protected global::CongKy.UserControl.tblChiTietGiaoTrinh_DetailUC tblChiTietGiaoTrinh_DetailUC1;
     }
 }

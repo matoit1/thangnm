@@ -26,39 +26,18 @@ namespace CongKy.UserControl
             set { _PK_iGiaoTrinhID = value; }
         }
 
-        private String _sTenBaiHoc;
-        public String sTenBaiHoc
+        private Int32 _PK_iTaiKhoanID;
+        public Int32 PK_iTaiKhoanID
         {
-            get { return this._sTenBaiHoc; }
-            set { _sTenBaiHoc = value; }
+            get { return this._PK_iTaiKhoanID; }
+            set { _PK_iTaiKhoanID = value; }
         }
 
-        private String _sThongTin;
-        public String sThongTin
+        private Int32 _PK_iMonHocID;
+        public Int32 PK_iMonHocID
         {
-            get { return this._sThongTin; }
-            set { _sThongTin = value; }
-        }
-
-        private String _sLinkDownload;
-        public String sLinkDownload
-        {
-            get { return this._sLinkDownload; }
-            set { _sLinkDownload = value; }
-        }
-
-        private Int16 _iType;
-        public Int16 iType
-        {
-            get { return this._iType; }
-            set { _iType = value; }
-        }
-
-        private DateTime _tNgayCapNhat;
-        public DateTime tNgayCapNhat
-        {
-            get { return this._tNgayCapNhat; }
-            set { _tNgayCapNhat = value; }
+            get { return this._PK_iMonHocID; }
+            set { _PK_iMonHocID = value; }
         }
 
         private Int16 _iTrangThai;
@@ -77,10 +56,10 @@ namespace CongKy.UserControl
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                BindData();
-            }
+            //if (!IsPostBack)
+            //{
+            //    BindData();
+            //}
         }
 
         public void BindData()
@@ -92,13 +71,14 @@ namespace CongKy.UserControl
             {
                 tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
                 _tblChiTietGiaoTrinhEO.iTrangThai = iTrangThai;
-                dsBaiViet = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_SelectList();
+                dsBaiViet = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(PK_iTaiKhoanID, PK_iMonHocID, PK_iGiaoTrinhID);
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
                 select new
                 {
                     PK_iGiaoTrinhID = topic.Field<Int32>("PK_iGiaoTrinhID"),
+                    PK_iMonHocID = topic.Field<Int32>("PK_iMonHocID"),
                     sTenBaiHoc = topic.Field<String>("sTenBaiHoc"),
                     sThongTin = topic.Field<String>("sThongTin"),
                     sLinkDownload = topic.Field<String>("sLinkDownload"),
@@ -144,13 +124,23 @@ namespace CongKy.UserControl
         #region "Event GridView"
         protected void grvListBaiViet_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName == "cmdView")
+            if (e.CommandName == "cmdDetail")
             {
-                this.PK_iGiaoTrinhID = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = this.grvListBaiViet.SelectedRow;
+                int index = Convert.ToInt32(e.CommandArgument) % grvListBaiViet.PageSize;
+                this.PK_iGiaoTrinhID = Convert.ToInt32(grvListBaiViet.DataKeys[index].Values["PK_iGiaoTrinhID"]);
+                this.PK_iMonHocID = Convert.ToInt32(grvListBaiViet.DataKeys[index].Values["PK_iMonHocID"]);
                 if (ViewDetail != null)
                 {
                     ViewDetail(this, EventArgs.Empty);
                 }
+            }
+            if (e.CommandName == "cmdView")
+            {
+                GridViewRow row = this.grvListBaiViet.SelectedRow;
+                int index = Convert.ToInt32(e.CommandArgument) % grvListBaiViet.PageSize;
+                this.PK_iGiaoTrinhID = Convert.ToInt32(grvListBaiViet.DataKeys[index].Values["PK_iGiaoTrinhID"]);
+                Response.Redirect("~/XemTruoc.aspx?PK_iGiaoTrinhID=" + PK_iGiaoTrinhID);
             }
         }
 

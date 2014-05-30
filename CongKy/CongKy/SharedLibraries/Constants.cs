@@ -23,7 +23,7 @@ namespace CongKy.SharedLibraries.Constants
     public class ChiTietGiaoTrinh_iType_C
     {
         public const Int16 Video = 1;
-        public const Int16 Ebook = 2;
+        public const Int16 Pdf = 2;
         public const Int16 Software = 3;
         public const Int16 Other = 4;
     }
@@ -63,4 +63,15 @@ namespace CongKy.SharedLibraries.Constants
         public const Int16 Sinh_Vien = 3;
     }
     #endregion
+
+
+
+    /// <summary>  </summary>
+    /// 
+    public class ERROR_C
+    {
+        public const Int16 Khong_Co_Quyen = 1;
+        public const Int16 Loi = 2;
+        public const Int16 Khac = 3;
+    }
 }

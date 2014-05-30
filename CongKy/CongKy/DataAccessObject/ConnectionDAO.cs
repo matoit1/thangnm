@@ -17,7 +17,7 @@ namespace CongKy.DataAccessObject
         {
             try
             {
-                return new SqlConnection(connectdb_x84);
+                return new SqlConnection(connectdb_x64);
             }
             catch (Exception ex)
             {

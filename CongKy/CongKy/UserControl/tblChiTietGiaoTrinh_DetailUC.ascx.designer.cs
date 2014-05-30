@@ -31,6 +31,15 @@ namespace CongKy.UserControl {
         public global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
+        /// lblPK_iGiaoTrinhID_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPK_iGiaoTrinhID_Title;
+        
+        /// <summary>
         /// txtPK_iGiaoTrinhID control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,24 @@ namespace CongKy.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPK_iGiaoTrinhID;
+        
+        /// <summary>
+        /// ddlFK_iMonHocID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlFK_iMonHocID;
+        
+        /// <summary>
+        /// lblFK_iMonHocID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFK_iMonHocID;
         
         /// <summary>
         /// txtsTenBaiHoc control.
@@ -85,13 +112,13 @@ namespace CongKy.UserControl {
         protected global::System.Web.UI.WebControls.Label lblsThongTin;
         
         /// <summary>
-        /// txtsLinkDownload control.
+        /// fuFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsLinkDownload;
+        protected global::System.Web.UI.WebControls.FileUpload fuFile;
         
         /// <summary>
         /// lblsLinkDownload control.
@@ -101,6 +128,15 @@ namespace CongKy.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblsLinkDownload;
+        
+        /// <summary>
+        /// lbliType_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbliType_Title;
         
         /// <summary>
         /// ddliType control.
@@ -121,6 +157,15 @@ namespace CongKy.UserControl {
         protected global::System.Web.UI.WebControls.Label lbliType;
         
         /// <summary>
+        /// lbltNgayCapNhat_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltNgayCapNhat_Title;
+        
+        /// <summary>
         /// txttNgayCapNhat control.
         /// </summary>
         /// <remarks>
@@ -137,6 +182,15 @@ namespace CongKy.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbltNgayCapNhat;
+        
+        /// <summary>
+        /// lbliTrangThai_Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbliTrangThai_Title;
         
         /// <summary>
         /// ddliTrangThai control.

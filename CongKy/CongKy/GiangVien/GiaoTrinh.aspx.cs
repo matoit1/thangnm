@@ -15,7 +15,13 @@ namespace CongKy.GiangVien
         {
             try
             {
-                tblGiaoTrinh_ListUC1.BindData();
+                tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["CongKy_giangvien"].Value;
+                _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
+                tblChiTietGiaoTrinh_DetailUC1.PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
+                tblChiTietGiaoTrinh_ListUC1.PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
+                tblChiTietGiaoTrinh_DetailUC1.Permit_Access();
+                tblChiTietGiaoTrinh_ListUC1.BindData();
             }
             catch
             {
@@ -26,25 +32,31 @@ namespace CongKy.GiangVien
         protected void ViewDetail_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
-            tblGiaoTrinhEO _tblGiaoTrinhEO = new tblGiaoTrinhEO();
-            _tblGiaoTrinhEO.FK_iMonHocID = tblGiaoTrinh_ListUC1.FK_iMonHocID;
-            _tblGiaoTrinhEO.FK_iGiaoTrinhID = tblGiaoTrinh_ListUC1.FK_iGiaoTrinhID;
-            _tblGiaoTrinhEO = tblGiaoTrinhDAO.GiaoTrinh_SelectItem(_tblGiaoTrinhEO);
-            tblGiaoTrinh_DetailUC1.BindDataDetail(_tblGiaoTrinhEO);
+            tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
+            _tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID = tblChiTietGiaoTrinh_ListUC1.PK_iGiaoTrinhID;
+            _tblChiTietGiaoTrinhEO = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_SelectItem(_tblChiTietGiaoTrinhEO);
+
+            tblMonHocEO _tblMonHocEO = new tblMonHocEO();
+            _tblMonHocEO.PK_iMonHocID = tblChiTietGiaoTrinh_ListUC1.PK_iMonHocID;
+
+            tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_tblChiTietGiaoTrinhEO, _tblMonHocEO);
+            tblChiTietGiaoTrinh_DetailUC1.btnUpdate.Visible = true;
         }
 
         protected void AddNew_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vDetail);
-            tblGiaoTrinhEO _GiaoTrinhEO = new tblGiaoTrinhEO();
-            tblGiaoTrinh_DetailUC1.BindDataDetail(_GiaoTrinhEO);
+            tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
+            tblMonHocEO _tblMonHocEO = new tblMonHocEO();
+            tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_tblChiTietGiaoTrinhEO, _tblMonHocEO);
+            tblChiTietGiaoTrinh_DetailUC1.btnInsert.Visible = true;
         }
         #endregion
 
         protected void lbtnBack_Click(object sender, EventArgs e)
         {
             mtvMain.SetActiveView(vList);
-            tblGiaoTrinh_ListUC1.BindData();
+            tblChiTietGiaoTrinh_ListUC1.BindData();
         }
     }
 }

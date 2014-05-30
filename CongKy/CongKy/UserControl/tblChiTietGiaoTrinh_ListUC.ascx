@@ -31,7 +31,7 @@
             <td>
                 <asp:GridView ID="grvListBaiViet" runat="server" CssClass="mGrid" 
                     AutoGenerateColumns="False" AutoGenerateCheckBoxColumn="True" 
-                    FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_iGiaoTrinhID"
+                    FileTypeDownload="Excel" Width="100%" AllowPaging="True" datakeynames="PK_iGiaoTrinhID, PK_iMonHocID"
                     emptydatatext="Không có bản ghi nào."   PageSize="10" 
                     EnableModelValidation="True" onrowcommand="grvListBaiViet_RowCommand" 
                     onpageindexchanging="grvListBaiViet_PageIndexChanging" 
@@ -48,11 +48,20 @@
                        </asp:TemplateField>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Eval("PK_iGiaoTrinhID")%>'>Chi tiết</asp:LinkButton>
+                                <asp:LinkButton ID="cmdDetail" runat="server" CommandName="cmdDetail" Width="90px" CommandArgument='<%#Container.DataItemIndex %>'>Chi tiết</asp:LinkButton>
+                                </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Center"  />
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="cmdView" runat="server" CommandName="cmdView" Width="90px" CommandArgument='<%#Container.DataItemIndex %>'>Xem</asp:LinkButton>
                                 </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center"  />
                         </asp:TemplateField>
                         <asp:BoundField  DataField="PK_iGiaoTrinhID"  HeaderText="Mã giáo trình" SortExpression="PK_iGiaoTrinhID">
+                            <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                        </asp:BoundField>
+                        <asp:BoundField  DataField="PK_iMonHocID"  HeaderText="Mã môn học" SortExpression="PK_iMonHocID">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
                         <asp:BoundField  DataField="sTenBaiHoc"  HeaderText="Tên bài học" SortExpression="sTenBaiHoc">

@@ -27,7 +27,7 @@ namespace CongKy.SharedLibraries
         {
             SortedList output = new SortedList();
             output.Add(ChiTietGiaoTrinh_iType_C.Video, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Video));
-            output.Add(ChiTietGiaoTrinh_iType_C.Ebook, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Ebook));
+            output.Add(ChiTietGiaoTrinh_iType_C.Pdf, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Pdf));
             output.Add(ChiTietGiaoTrinh_iType_C.Software, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Software));
             output.Add(ChiTietGiaoTrinh_iType_C.Other, GetTextConstants.ChiTietGiaoTrinh_iType_GTC(ChiTietGiaoTrinh_iType_C.Other));
             return output;
