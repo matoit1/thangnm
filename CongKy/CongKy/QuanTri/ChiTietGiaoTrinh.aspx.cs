@@ -18,6 +18,11 @@ namespace CongKy.QuanTri
                 if (Request.QueryString["iTrangThai"] != null)
                 {
                     tblChiTietGiaoTrinh_ListUC1.iTrangThai = Convert.ToInt16(Request.QueryString["iTrangThai"]);
+                    tblChiTietGiaoTrinh_ListUC1.PK_iTaiKhoanID = 0;
+                    tblChiTietGiaoTrinh_ListUC1.PK_iMonHocID = 0;
+                    tblChiTietGiaoTrinh_ListUC1.PK_iGiaoTrinhID = 0;
+                    tblChiTietGiaoTrinh_ListUC1.newfeed = false;
+                    tblChiTietGiaoTrinh_ListUC1.BindData();
                 }
             }
             catch

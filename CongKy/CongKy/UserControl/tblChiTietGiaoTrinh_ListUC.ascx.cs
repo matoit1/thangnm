@@ -52,6 +52,12 @@ namespace CongKy.UserControl
             get { return (string)ViewState["typesearch"]; }
             set { ViewState["typesearch"] = value; }
         }
+
+        public bool newfeed
+        {
+            get { return (bool)ViewState["newfeed"]; }
+            set { ViewState["newfeed"] = value; }
+        }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
@@ -71,7 +77,7 @@ namespace CongKy.UserControl
             {
                 tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
                 _tblChiTietGiaoTrinhEO.iTrangThai = iTrangThai;
-                dsBaiViet = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(PK_iTaiKhoanID, PK_iMonHocID, PK_iGiaoTrinhID);
+                dsBaiViet = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(PK_iTaiKhoanID, PK_iMonHocID, PK_iGiaoTrinhID, iTrangThai, newfeed);
                 //var result = DataSet2LinQ.BaiViet(dsBaiViet);
                 var result =
                 from topic in dsBaiViet.Tables[0].AsEnumerable()
