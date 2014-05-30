@@ -190,7 +190,7 @@ namespace CongKy.DataAccessObject
         /// <summary> 8. ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID </summary>
         /// <param name="_tblChiTietGiaoTrinhEO"></param>
         /// <returns></returns>
-        public static DataSet ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(int PK_iTaiKhoanID, int PK_iMonHocID, int PK_iGiaoTrinhID)
+        public static DataSet ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(int PK_iTaiKhoanID, int PK_iMonHocID, int PK_iGiaoTrinhID, Int16 iTrangThai, bool newfeed)
         {
             DataSet dsOutput = null;
             using (SqlConnection conn = ConnectionDAO.getConnection())
@@ -203,6 +203,8 @@ namespace CongKy.DataAccessObject
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iTaiKhoanID", (PK_iTaiKhoanID == 0) ? (object)DBNull.Value : PK_iTaiKhoanID));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iMonHocID", (PK_iMonHocID == 0) ? (object)DBNull.Value : PK_iMonHocID));
                     da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iGiaoTrinhID", (PK_iGiaoTrinhID == 0) ? (object)DBNull.Value : PK_iGiaoTrinhID));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@iTrangThai", (iTrangThai == 0) ? (object)DBNull.Value : iTrangThai));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@newfeed", (newfeed == null) ? false : newfeed));
                     dsOutput = new DataSet();
                     da.Fill(dsOutput);
                     conn.Close();

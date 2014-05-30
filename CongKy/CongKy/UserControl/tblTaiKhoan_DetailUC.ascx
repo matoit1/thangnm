@@ -1,13 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="tblTaiKhoan_DetailUC.ascx.cs" Inherits="CongKy.UserControl.tblTaiKhoan_DetailUC" %>
-<link href="../App_Themes/calendar.css" rel="stylesheet" type="text/css"/>  
-<script src="../Scripts/calendar1.js" type="text/javascript"></script>  
-<script src="../Scripts/calendar2.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(function () {
-        $(".startdate").datepicker({ dateFormat: "mm/dd/yy" }).val()
-        $(".enddate").datepicker({ dateFormat: "mm/dd/yy" }).val()
-    });
-</script>
+
 <div>
     <table>
         <tr>
@@ -67,12 +59,12 @@
         </tr>
         <tr>
             <td>Ngày sinh: </td>
-            <td><asp:TextBox ID="txttNgaySinh" runat="server" Width="400px" CssClass="startdate" MaxLength="32897" TabIndex="8"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgaySinh" runat="server" Width="400px" class="startdate" MaxLength="32897" TabIndex="8"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgaySinh" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td>Ngày đăng ký: </td>
-            <td><asp:TextBox ID="txttNgayDangKy" runat="server" Width="400px" CssClass="startdate" Enabled="false" MaxLength="32897" TabIndex="9"></asp:TextBox></td>
+            <td><asp:TextBox ID="txttNgayDangKy" runat="server" Width="400px" Enabled="false" MaxLength="32897" TabIndex="9" class="startdate"></asp:TextBox></td>
             <td><asp:Label ID="lbltNgayDangKy" runat="server"></asp:Label></td>
         </tr>
         <tr>

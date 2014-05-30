@@ -26,7 +26,6 @@ namespace CongKy.SinhVien
                 if (Request.QueryString["iTrangThai"] != null)
                 {
                     tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
-                    _tblTaiKhoanEO.sTenDangNhap =
                     _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["CongKy_sinhvien"].Value;
                     _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
                     PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
@@ -39,6 +38,8 @@ namespace CongKy.SinhVien
                         case ChiTietGiaoTrinh_iTrangThai_C.Mo: tblMonHoc_ListUC1.iTrangThai = ChiTietGiaoTrinh_iTrangThai_C.Mo; 
                             tblMonHoc_ListUC1.PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
                             tblMonHoc_DetailUC1.PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
+                            tabNew.Visible = false;
+                            tabAll.Visible = false;
                             break;
                     }
                 }
@@ -72,6 +73,17 @@ namespace CongKy.SinhVien
                 tblMonHoc_DetailUC1.btnSubscribe.Visible = true;
                 tblMonHoc_DetailUC1.btnUnsubscribe.Visible = false;
             }
+
+            tblChiTietGiaoTrinh_ListUC1.PK_iTaiKhoanID = PK_iTaiKhoanID;
+            tblChiTietGiaoTrinh_ListUC1.PK_iMonHocID = _tblMonHocEO.PK_iMonHocID;
+            tblChiTietGiaoTrinh_ListUC1.iTrangThai = ChiTietGiaoTrinh_iTrangThai_C.Mo;
+            tblChiTietGiaoTrinh_ListUC1.newfeed = true;
+            tblChiTietGiaoTrinh_ListUC2.PK_iTaiKhoanID = PK_iTaiKhoanID;
+            tblChiTietGiaoTrinh_ListUC2.PK_iMonHocID = _tblMonHocEO.PK_iMonHocID;
+            tblChiTietGiaoTrinh_ListUC2.iTrangThai = ChiTietGiaoTrinh_iTrangThai_C.Mo;
+            tblChiTietGiaoTrinh_ListUC2.newfeed = false;
+            tblChiTietGiaoTrinh_ListUC1.BindData();
+            tblChiTietGiaoTrinh_ListUC2.BindData();
         }
 
         protected void AddNew_Click(object sender, EventArgs e)

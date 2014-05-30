@@ -113,7 +113,6 @@
     <Content Include="Default.aspx" />
     <Content Include="GiangVien\Accounts\Login.aspx" />
     <Content Include="GiangVien\Default.aspx" />
-    <Content Include="GiangVien\GiaoTrinh.aspx" />
     <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
     <Content Include="Loi.aspx" />
@@ -134,11 +133,12 @@
     <Content Include="QuanTri\Database.aspx" />
     <Content Include="QuanTri\Default.aspx" />
     <Content Include="QuanTri\ChiTietGiaoTrinh.aspx" />
-    <Content Include="QuanTri\GiaoTrinh.aspx" />
     <Content Include="QuanTri\MonHoc.aspx" />
     <Content Include="QuanTri\TaiKhoan.aspx" />
     <Content Include="QuanTri\ThongTinCaNhan.aspx" />
     <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\calendar1.js" />
+    <Content Include="Scripts\calendar2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2_admin.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -222,13 +222,6 @@
     <Compile Include="GiangVien\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GiangVien\GiaoTrinh.aspx.cs">
-      <DependentUpon>GiaoTrinh.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GiangVien\GiaoTrinh.aspx.designer.cs">
-      <DependentUpon>GiaoTrinh.aspx</DependentUpon>
-    </Compile>
     <Compile Include="GiangVien\MonHoc.aspx.cs">
       <DependentUpon>MonHoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,13 +271,6 @@
     </Compile>
     <Compile Include="QuanTri\ChiTietGiaoTrinh.aspx.designer.cs">
       <DependentUpon>ChiTietGiaoTrinh.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanTri\GiaoTrinh.aspx.cs">
-      <DependentUpon>GiaoTrinh.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri\GiaoTrinh.aspx.designer.cs">
-      <DependentUpon>GiaoTrinh.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\MonHoc.aspx.cs">
       <DependentUpon>MonHoc.aspx</DependentUpon>

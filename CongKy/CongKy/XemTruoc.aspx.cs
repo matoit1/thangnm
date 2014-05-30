@@ -45,7 +45,7 @@ namespace CongKy
                 if (Request.QueryString["PK_iGiaoTrinhID"] != null)
                 {
                     int PK_iGiaoTrinhID = Convert.ToInt32(Request.QueryString["PK_iGiaoTrinhID"]);
-                    DataSet ds = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(PK_iTaiKhoanID, PK_iMonHocID, PK_iGiaoTrinhID);
+                    DataSet ds = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(PK_iTaiKhoanID, PK_iMonHocID, PK_iGiaoTrinhID, ChiTietGiaoTrinh_iTrangThai_C.Mo, false);
                     if (ds.Tables[0].Rows.Count <= 0)
                     {
                         Response.Redirect("~/Loi.aspx?Type=" + ERROR_C.Khong_Co_Quyen);

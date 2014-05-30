@@ -13,6 +13,15 @@ namespace CongKy.GiangVien {
     public partial class MonHoc {
         
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// mtvMain control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,24 @@ namespace CongKy.GiangVien {
         protected global::System.Web.UI.WebControls.View vDetail;
         
         /// <summary>
+        /// tabMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabContainer tabMain;
+        
+        /// <summary>
+        /// tabInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tabInfo;
+        
+        /// <summary>
         /// lbtnBack control.
         /// </summary>
         /// <remarks>
@@ -65,5 +92,59 @@ namespace CongKy.GiangVien {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::CongKy.UserControl.tblMonHoc_DetailUC tblMonHoc_DetailUC1;
+        
+        /// <summary>
+        /// tabNew control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tabNew;
+        
+        /// <summary>
+        /// tblChiTietGiaoTrinh_ListUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CongKy.UserControl.tblChiTietGiaoTrinh_ListUC tblChiTietGiaoTrinh_ListUC1;
+        
+        /// <summary>
+        /// tabAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tabAll;
+        
+        /// <summary>
+        /// tblChiTietGiaoTrinh_ListUC2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CongKy.UserControl.tblChiTietGiaoTrinh_ListUC tblChiTietGiaoTrinh_ListUC2;
+        
+        /// <summary>
+        /// tabUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel tabUpload;
+        
+        /// <summary>
+        /// tblChiTietGiaoTrinh_DetailUC1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CongKy.UserControl.tblChiTietGiaoTrinh_DetailUC tblChiTietGiaoTrinh_DetailUC1;
     }
 }
