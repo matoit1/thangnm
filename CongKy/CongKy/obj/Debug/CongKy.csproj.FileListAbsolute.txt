@@ -5,3 +5,10 @@ E:\Project_ASP.NET\CongKy\CongKy\obj\Debug\ResolveAssemblyReference.cache
 E:\Project_ASP.NET\CongKy\CongKy\obj\Debug\CongKy.dll
 E:\Project_ASP.NET\CongKy\CongKy\obj\Debug\CongKy.pdb
 E:\Project_ASP.NET\CongKy\CongKy\bin\GemBox.Document.dll
+D:\Project_ASP.NET\CongKy\CongKy\bin\CongKy.dll
+D:\Project_ASP.NET\CongKy\CongKy\bin\CongKy.pdb
+D:\Project_ASP.NET\CongKy\CongKy\bin\AjaxControlToolkit.dll
+D:\Project_ASP.NET\CongKy\CongKy\bin\GemBox.Document.dll
+D:\Project_ASP.NET\CongKy\CongKy\obj\Debug\ResolveAssemblyReference.cache
+D:\Project_ASP.NET\CongKy\CongKy\obj\Debug\CongKy.dll
+D:\Project_ASP.NET\CongKy\CongKy\obj\Debug\CongKy.pdb
