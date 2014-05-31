@@ -496,6 +496,9 @@
     <Content Include="ShareInterface\SinhVienSI.Master" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Data\CongKy__29-05-2014__17-11-54.bak" />
+    <None Include="App_Data\CongKy__30-05-2014__12-37-49.bak" />
+    <None Include="App_Data\CongKy__31-05-2014__13-57-26.bak" />
     <None Include="App_Themes\font-awesome\fonts\fontawesome-webfont.eot" />
     <None Include="App_Themes\font-awesome\fonts\fontawesome-webfont.ttf" />
     <None Include="App_Themes\font-awesome\fonts\fontawesome-webfont.woff" />
