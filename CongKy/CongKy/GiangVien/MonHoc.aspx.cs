@@ -74,7 +74,6 @@ namespace CongKy.GiangVien
 
             tblChiTietGiaoTrinh_DetailUC1.Permit_Access();
             tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
-            _tblMonHocEO = new tblMonHocEO();
             tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_tblChiTietGiaoTrinhEO, _tblMonHocEO);
             tblChiTietGiaoTrinh_DetailUC1.btnInsert.Visible = true;
 

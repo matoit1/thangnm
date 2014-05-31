@@ -43,6 +43,11 @@
             <td><asp:Label ID="lblsLinkImage" runat="server"></asp:Label></td>
         </tr>
         <tr>
+            <td>Giáo viên phụ trách: </td>
+            <td><asp:DropDownList ID="ddlFK_iTaiKhoanID" runat="server" Width="405px" TabIndex="3"></asp:DropDownList></td>
+            <td><asp:Label ID="lblFK_iTaiKhoanID" runat="server"></asp:Label></td>
+        </tr>
+        <tr>
             <td><asp:Label ID="lbliTrangThai_Title" runat="server" Text="Trạng thái: "></asp:Label></td>
             <td><asp:DropDownList ID="ddliTrangThai" runat="server" Width="405px" TabIndex="3"></asp:DropDownList></td>
             <td><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
