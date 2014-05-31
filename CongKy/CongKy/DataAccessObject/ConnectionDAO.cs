@@ -10,14 +10,13 @@ namespace CongKy.DataAccessObject
 {
     public static class ConnectionDAO
     {
-        public static string connectdb_x84 = ConfigurationManager.ConnectionStrings["connectdb_x84"].ConnectionString;
-        public static string connectdb_x64 = ConfigurationManager.ConnectionStrings["connectdb_x64"].ConnectionString;
+        public static string CongKyConnectionString = ConfigurationManager.ConnectionStrings["CongKyConnectionString"].ConnectionString;
 
         public static SqlConnection getConnection()
         {
             try
             {
-                return new SqlConnection(connectdb_x84);
+                return new SqlConnection(CongKyConnectionString);
             }
             catch (Exception ex)
             {
