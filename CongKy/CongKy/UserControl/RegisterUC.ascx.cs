@@ -41,7 +41,7 @@ namespace CongKy.UserControl
                 if (tblTaiKhoanDAO.TaiKhoan_Insert(_tblTaiKhoanEO) == true)
                 {
                     lblMsg.Text = Messages.Dang_Ky_Thanh_Cong;
-                    Response.AddHeader("REFRESH", "3;URL=/Client/Accounts/Login.aspx");
+                    Response.AddHeader("REFRESH", "3;URL=/SinhVien/Accounts/Login.aspx");
                 }
                 else
                 {

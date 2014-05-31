@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CongKy.DataAccessObject;
 using CongKy.EntityObject;
+using System.Data;
+using CongKy.SharedLibraries.Constants;
 
 namespace CongKy.ShareInterface
 {
@@ -21,7 +23,10 @@ namespace CongKy.ShareInterface
                 }
                 tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
                 _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["CongKy_giangvien"].Value;
-                lblName.Text =tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO).sHoTen.ToString();
+                _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
+                lblName.Text =_tblTaiKhoanEO.sHoTen.ToString();
+                DataSet ds = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(_tblTaiKhoanEO.PK_iTaiKhoanID, 0, 0, ChiTietGiaoTrinh_iTrangThai_C.Mo, true);
+                lblNewFeed.Text = ds.Tables[0].Rows.Count.ToString();
             }
             catch
             {

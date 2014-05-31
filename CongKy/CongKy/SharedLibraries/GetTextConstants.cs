@@ -115,7 +115,7 @@ namespace CongKy.SharedLibraries
             switch (input)
             {
                 case 1: output = "Bạn không có quyền truy cập vào tài nguyên này!"; break;
-                case 2: output = "Lỗi!"; break;
+                case 2: output = "Bạn chưa đăng nhập!"; break;
                 default: output = "N/A"; break;
             }
             return output;

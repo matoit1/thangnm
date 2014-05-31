@@ -71,7 +71,7 @@ namespace CongKy.SharedLibraries.Constants
     public class ERROR_C
     {
         public const Int16 Khong_Co_Quyen = 1;
-        public const Int16 Loi = 2;
+        public const Int16 Chua_Dang_Nhap = 2;
         public const Int16 Khac = 3;
     }
 }

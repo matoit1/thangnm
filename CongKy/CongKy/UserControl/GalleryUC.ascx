@@ -3,7 +3,7 @@
     onitemdatabound="rptGallery_ItemDataBound">
 <ItemTemplate>
                     <!-- team start -->
-    <div  class="content homepage" id="menu-1">
+    <div  class="content homepage" id="menu-1" style="height: 250px">
      <div class="templatemo_ourteam">
      		<div class="container templatemo_hexteam" style="width: 1024px;">
             	<div class="row">
@@ -46,13 +46,13 @@
                           </div>
   			       </div>
                     <div class="col-sm-8 templatemo_servicetxt" style="width:65%" >
-                    	<h2><%# Eval("sTenMonHoc")%></h2>
+                    	<h2><a href="../../SinhVien/MonHoc.aspx?iTrangThai=4"><%# Eval("sTenMonHoc")%></a></h2>
                         <asp:Label ID="lblContent" runat="server" Text='<%# Eval("PK_iMonHocID")%>'></asp:Label>
-                        <%--<p>Polygon is <a href="http://www.templatemo.com/page/1">free HTML5 template</a> by templatemo that can be used for any purpose. Cras lobortis, ligula ut hendrerit condimentum, magna lorem lobortis nisi, ac suscipit nunc est vitae turpis. Nullam vulputate nec nulla sed fringilla. Aliquam tempus consectetur diam, in suscipit turpis pulvinar at.</p>--%>
                     </div>
                </div>
             </div>
-             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><div class="clear"></div>
+             
+             <div class="clear"></div>
      </div>
      </div>
     <!--team end-->

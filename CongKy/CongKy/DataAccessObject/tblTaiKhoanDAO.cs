@@ -158,7 +158,6 @@ namespace CongKy.DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sSoDienThoai", _tblTaiKhoanEO.sSoDienThoai));
                     cmd.Parameters.Add(new SqlParameter("@sLinkAvatar", _tblTaiKhoanEO.sLinkAvatar));
                     cmd.Parameters.Add(new SqlParameter("@tNgaySinh", _tblTaiKhoanEO.tNgaySinh));
-                    cmd.Parameters.Add(new SqlParameter("@tNgayDangKy", _tblTaiKhoanEO.tNgayDangKy));
                     cmd.Parameters.Add(new SqlParameter("@iQuyenHan", _tblTaiKhoanEO.iQuyenHan));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblTaiKhoanEO.iTrangThai));
                     cmd.ExecuteNonQuery();

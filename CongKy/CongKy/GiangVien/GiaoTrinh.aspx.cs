@@ -20,6 +20,7 @@ namespace CongKy.GiangVien
                 _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
                 tblChiTietGiaoTrinh_DetailUC1.PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
                 tblChiTietGiaoTrinh_ListUC1.PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
+                tblChiTietGiaoTrinh_ListUC1.newfeed = false;
                 tblChiTietGiaoTrinh_DetailUC1.Permit_Access();
                 tblChiTietGiaoTrinh_ListUC1.BindData();
             }

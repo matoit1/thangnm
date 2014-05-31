@@ -22,13 +22,13 @@ namespace CongKy.UserControl {
         public global::System.Web.UI.WebControls.Panel pnlLogin;
         
         /// <summary>
-        /// imgProfile control.
+        /// hplHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.ImageButton imgProfile;
+        protected global::System.Web.UI.WebControls.HyperLink hplHome;
         
         /// <summary>
         /// lblMsg control.
@@ -67,15 +67,6 @@ namespace CongKy.UserControl {
         public global::System.Web.UI.WebControls.CheckBox chkRememberMe;
         
         /// <summary>
-        /// hplLost control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        public global::System.Web.UI.WebControls.HyperLink hplLost;
-        
-        /// <summary>
         /// btnLogin control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace CongKy.UserControl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         public global::System.Web.UI.WebControls.Button btnLogin;
+        
+        /// <summary>
+        /// hplLost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        public global::System.Web.UI.WebControls.HyperLink hplLost;
         
         /// <summary>
         /// hplRegister control.

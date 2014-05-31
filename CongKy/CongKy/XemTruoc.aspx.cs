@@ -41,14 +41,44 @@ namespace CongKy
         {
             try
             {
-                PK_iTaiKhoanID = 6;
+                tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+                if (Request.Cookies["CongKy_sinhvien"] != null)
+                {
+                    _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["CongKy_sinhvien"].Value;
+                }
+                else
+                {
+                    if (Request.Cookies["CongKy_giangvien"] != null)
+                    {
+                        _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["CongKy_giangvien"].Value;
+                    }
+                    else
+                    {
+                        if (Request.Cookies["CongKy_quantri"] != null)
+                        {
+                            _tblTaiKhoanEO.sTenDangNhap = Request.Cookies["CongKy_quantri"].Value;
+                        }
+                    }
+                }
+                if (_tblTaiKhoanEO.sTenDangNhap == null)
+                {
+                    Response.Redirect("~/Loi.aspx?Type=" + ERROR_C.Chua_Dang_Nhap);
+                }
+                else
+                {
+                    _tblTaiKhoanEO = tblTaiKhoanDAO.TaiKhoan_SelectItemBysTenDangNhap(_tblTaiKhoanEO);
+                    PK_iTaiKhoanID = _tblTaiKhoanEO.PK_iTaiKhoanID;
+                }
                 if (Request.QueryString["PK_iGiaoTrinhID"] != null)
                 {
+
                     int PK_iGiaoTrinhID = Convert.ToInt32(Request.QueryString["PK_iGiaoTrinhID"]);
                     DataSet ds = tblChiTietGiaoTrinhDAO.ChiTietGiaoTrinh_By_PK_iTaiKhoanID_PK_iMonHocID_PK_iGiaoTrinhID(PK_iTaiKhoanID, PK_iMonHocID, PK_iGiaoTrinhID, ChiTietGiaoTrinh_iTrangThai_C.Mo, false);
-                    if (ds.Tables[0].Rows.Count <= 0)
-                    {
-                        Response.Redirect("~/Loi.aspx?Type=" + ERROR_C.Khong_Co_Quyen);
+                    if (_tblTaiKhoanEO.iQuyenHan != TaiKhoan_iQuyenHan_C.QuanTri){
+                        if (ds.Tables[0].Rows.Count <= 0)
+                        {
+                            Response.Redirect("~/Loi.aspx?Type=" + ERROR_C.Khong_Co_Quyen);
+                        }
                     }
                     tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
                     _tblChiTietGiaoTrinhEO = DataSet2Object.ChiTietGiaoTrinhDO(ds);
