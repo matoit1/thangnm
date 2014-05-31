@@ -165,6 +165,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="App_Data\Mo_Hinh_Ket_Noi_CSDL.pdf" />
+    <None Include="App_Data\Phan_Tich_CSDL HaMy.docx" />
     <None Include="bin\Debug\HaMy.exe.config" />
     <None Include="bin\Debug\HaMy.vshost.exe.config" />
     <None Include="bin\Debug\HaMy.vshost.exe.manifest" />
@@ -179,6 +181,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\config.PNG" />
+    <Content Include="App_Data\HaMy_CreateDB.sql" />
+    <Content Include="App_Data\HaMy_DB_01_06_2014.sql" />
+    <Content Include="App_Data\Hướng dẫn.txt" />
     <Content Include="bin\Debug\HaMy.exe" />
     <Content Include="bin\Debug\HaMy.pdb" />
     <Content Include="bin\Debug\HaMy.vshost.exe" />
@@ -200,8 +206,6 @@
   <ItemGroup>
     <Folder Include="bin\Release\" />
     <Folder Include="Report\" />
-    <Folder Include="ShareInterface\" />
-    <Folder Include="UserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

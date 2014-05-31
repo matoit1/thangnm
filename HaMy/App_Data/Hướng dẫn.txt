@@ -1,0 +1,20 @@
+﻿Hướng dẫn cấu hình website kết nối tới SQL Server
+- Bước 1: Cài SQL Server phiên bản 2005 trở lên
+- Bước 2: Đăng nhập vào SQL vào tạo database tên là "CongKy" mở file "CreateDB_CongKy.sql" lên chạy là được
+ hoặc tạo bằng giao diện. Sau khi chạy xong sẽ có 2 file được tạo ở ổ D:/ là "CongKy.mdf" và "CongKy_log.ldf". Không được xóa
+ 
+ Bước 3: Sau khi tạo xong database thì mở file "CongKy_31_05_2014.sql" lên chạy là sẽ tạo được các bảng và procedure + dữ liệu có sẵn
+ Bước 4: Cấu hình cho SQL để đăng nhập được bằng tài khoản "sa". Xem hướng dẫn taij đây http://blog.zing.vn/jb/dt/thang_991992/15495534?from=my
+	Hướng dẫn đó dùng cho cả phân tán nên ko làm theo hết đâu. chỉ cần làm mỗi phần "1. Thiết lập đăng nhập bằng tài khoản SQL Server."
+Bước 5: Đăng nhập thử tài khoản sa vừa kích hoạt. OK thì tiếp. Ko được thì xem lại bước 4
+Bước 6: Cài Visual Studio 2010 
+Bước 7: Giải nén thư mục "CongKy" ra
+Bước 8: bật project web lên bằng file "CongKy.sln"
+Bước 9: mở file "Web.config" trong project web lên và xem bức ảnh "config.PNG" để cấu hình cho đúng
+Bước 10: Chạy trang web lên bằng bấm phím F5 trên project đó hoặc bấm nút xanh xanh chỗ debug
+
+
+OK chúc bạn thành công!
+
+Bạn có thể xem mô hình hoạt động của trang web này tại file "Mo_Hinh_Ket_Noi_CSDL.pdf"
+và file "Phan_Tich_CSDL_ver_2.0.docx"
