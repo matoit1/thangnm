@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F317AF2E-9704-4A2A-BDAE-B4662ED9483B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HaMy</RootNamespace>
+    <AssemblyName>HaMy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HaMy.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\SystemTrayApp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\dsHaMy.Designer.cs" />
+    <Compile Include="ContextMenus.cs" />
+    <Compile Include="DataAccessObject\ConnectionDAO.cs" />
+    <Compile Include="DataAccessObject\DataSet2Object.cs" />
+    <Compile Include="DataAccessObject\tblCuocHenDAO.cs" />
+    <Compile Include="DataAccessObject\tblDoiTacDAO.cs" />
+    <Compile Include="DataAccessObject\tblMoiQuanHeDAO.cs" />
+    <Compile Include="DataAccessObject\tblNguoiDungDAO.cs" />
+    <Compile Include="DataAccessObject\tblNhomDAO.cs" />
+    <Compile Include="EntityObject\tblCuocHenEO.cs" />
+    <Compile Include="EntityObject\tblDoiTacEO.cs" />
+    <Compile Include="EntityObject\tblMoiQuanHeEO.cs" />
+    <Compile Include="EntityObject\tblNguoiDungEO.cs" />
+    <Compile Include="EntityObject\tblNhomEO.cs" />
+    <Compile Include="frmCuocHen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuocHen.designer.cs">
+      <DependentUpon>frmCuocHen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiTac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiTac.designer.cs">
+      <DependentUpon>frmDoiTac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLichHenHomNay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLichHenHomNay.designer.cs">
+      <DependentUpon>frmLichHenHomNay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoiQuanHe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoiQuanHe.designer.cs">
+      <DependentUpon>frmMoiQuanHe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNguoiDung.designer.cs">
+      <DependentUpon>frmNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhom.designer.cs">
+      <DependentUpon>frmNhom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongBao.Designer.cs">
+      <DependentUpon>frmThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeSI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeSI.designer.cs">
+      <DependentUpon>HomeSI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessIcon.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedLibraries\Commons.cs" />
+    <Compile Include="SharedLibraries\Constants.cs" />
+    <Compile Include="SharedLibraries\GetListConstants.cs" />
+    <Compile Include="SharedLibraries\GetTextConstants.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuocHen.resx">
+      <DependentUpon>frmCuocHen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiTac.resx">
+      <DependentUpon>frmDoiTac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLichHenHomNay.resx">
+      <DependentUpon>frmLichHenHomNay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoiQuanHe.resx">
+      <DependentUpon>frmMoiQuanHe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNguoiDung.resx">
+      <DependentUpon>frmNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhom.resx">
+      <DependentUpon>frmNhom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongBao.resx">
+      <DependentUpon>frmThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeSI.resx">
+      <DependentUpon>HomeSI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\HaMy.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\HaMy_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>HaMy.mdf</DependentUpon>
+    </Content>
+    <Content Include="Images\About.png" />
+    <Content Include="Images\Exit.png" />
+    <Content Include="Images\Explorer.png" />
+    <Content Include="Images\SystemTrayApp.ico" />
+    <Content Include="Images\Virus.WAV" />
+    <Content Include="Other\DLL\CKEditor.NET.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.Controllers.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportSource.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.Shared.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.Web.dll" />
+    <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+    <Folder Include="ShareInterface\" />
+    <Folder Include="UserControl\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
