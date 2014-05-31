@@ -60,6 +60,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CongKy_31_05_2014.sql" />
     <Content Include="App_Themes\bootstrap.css" />
     <Content Include="App_Themes\bootstrap.min.css" />
     <Content Include="App_Themes\calendar.css" />
@@ -485,7 +486,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Upload\Other\" />
     <Folder Include="Upload\Temp\" />
   </ItemGroup>
