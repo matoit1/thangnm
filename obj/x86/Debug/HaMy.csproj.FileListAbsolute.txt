@@ -1,3 +1,0 @@
-D:\Project_ASP.NET\HaMy\bin\Debug\HaMy.exe.config
-D:\Project_ASP.NET\HaMy\obj\x86\Debug\HaMy.exe
-D:\Project_ASP.NET\HaMy\obj\x86\Debug\HaMy.pdb
