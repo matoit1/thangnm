@@ -32,8 +32,8 @@
         </tr>
         <tr>
             <td>Môn học: </td>
-            <td><asp:DropDownList ID="ddlFK_iMonHocID" runat="server" Width="405px" TabIndex="6"></asp:DropDownList></td>
-            <td><asp:Label ID="lblFK_iMonHocID" runat="server"></asp:Label></td>
+            <td><asp:DropDownList ID="ddlFK_iMonHocID" runat="server" Width="405px" TabIndex="6" Enabled="false"></asp:DropDownList></td>
+            <td><asp:Label ID="lblFK_iMonHocID" runat="server" Enabled="false"></asp:Label></td>
         </tr>
         <tr>
             <td>Tên bài học: </td>

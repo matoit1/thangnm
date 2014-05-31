@@ -76,7 +76,7 @@ namespace CongKy.DataAccessObject
         /// <summary> 2. MonHoc_Insert </summary>
         /// <param name="_tblMonHocEO"></param>
         /// <returns></returns>
-        public static bool MonHoc_Insert(tblMonHocEO _tblMonHocEO)
+        public static bool MonHoc_Insert(tblMonHocEO _tblMonHocEO, int FK_iTaiKhoanID)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -88,6 +88,7 @@ namespace CongKy.DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sTenMonHoc", _tblMonHocEO.sTenMonHoc));
                     cmd.Parameters.Add(new SqlParameter("@sLinkImage", _tblMonHocEO.sLinkImage));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
+                    cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID", FK_iTaiKhoanID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;
@@ -103,7 +104,7 @@ namespace CongKy.DataAccessObject
         /// <summary> 3. MonHoc_Update </summary>
         /// <param name="_tblMonHocEO"></param>
         /// <returns></returns>
-        public static bool MonHoc_Update(tblMonHocEO _tblMonHocEO)
+        public static bool MonHoc_Update(tblMonHocEO _tblMonHocEO, int FK_iTaiKhoanID)
         {
             using (SqlConnection conn = ConnectionDAO.getConnection())
             {
@@ -116,6 +117,7 @@ namespace CongKy.DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@sTenMonHoc", _tblMonHocEO.sTenMonHoc));
                     cmd.Parameters.Add(new SqlParameter("@sLinkImage", _tblMonHocEO.sLinkImage));
                     cmd.Parameters.Add(new SqlParameter("@iTrangThai", _tblMonHocEO.iTrangThai));
+                    cmd.Parameters.Add(new SqlParameter("@FK_iTaiKhoanID", FK_iTaiKhoanID));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;

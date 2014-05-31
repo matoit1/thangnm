@@ -187,6 +187,34 @@ namespace CongKy.DataAccessObject
             }
         }
 
+
+        /// <summary> 8. DangKyDayHoc_SelectByFK_iMonHocID </summary>
+        /// <param name="_tblDangKyDayHocEO"></param>
+        /// <returns></returns>
+        public static DataSet DangKyDayHoc_SelectByFK_iMonHocID(tblDangKyDayHocEO _tblDangKyDayHocEO)
+        {
+            DataSet dsOutput = null;
+            using (SqlConnection conn = ConnectionDAO.getConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("tblDangKyDayHoc_SelectByFK_iMonHocID", conn);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@FK_iMonHocID", _tblDangKyDayHocEO.FK_iMonHocID));
+                    dsOutput = new DataSet();
+                    da.Fill(dsOutput);
+                    conn.Close();
+                    return dsOutput;
+                }
+                catch (Exception)
+                {
+                    conn.Close();
+                    return dsOutput;
+                }
+            }
+        }
+
         
 
         /// <summary> 9. DangKyDayHoc_Search </summary>

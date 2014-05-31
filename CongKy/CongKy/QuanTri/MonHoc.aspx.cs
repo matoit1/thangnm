@@ -33,6 +33,9 @@ namespace CongKy.QuanTri
             _tblMonHocEO.PK_iMonHocID = tblMonHoc_ListUC1.PK_iMonHocID;
             _tblMonHocEO = tblMonHocDAO.MonHoc_SelectItem(_tblMonHocEO);
             tblMonHoc_DetailUC1.BindDataDetail(_tblMonHocEO);
+            tblMonHoc_DetailUC1.btnInsert.Visible = false;
+            tblMonHoc_DetailUC1.btnUpdate.Visible = true;
+            tblMonHoc_DetailUC1.btnDelete.Visible = true;
         }
 
         protected void AddNew_Click(object sender, EventArgs e)
@@ -40,6 +43,9 @@ namespace CongKy.QuanTri
             mtvMain.SetActiveView(vDetail);
             tblMonHocEO _MonHocEO = new tblMonHocEO();
             tblMonHoc_DetailUC1.BindDataDetail(_MonHocEO);
+            tblMonHoc_DetailUC1.btnInsert.Visible = true;
+            tblMonHoc_DetailUC1.btnUpdate.Visible = false;
+            tblMonHoc_DetailUC1.btnDelete.Visible = false;
         }
         #endregion
 

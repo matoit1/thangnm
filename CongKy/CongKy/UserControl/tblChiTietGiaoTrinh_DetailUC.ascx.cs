@@ -49,6 +49,7 @@ namespace CongKy.UserControl
 
         public void BindDataDetail(tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO, tblMonHocEO _tblMonHocEO)
         {
+
             txtPK_iGiaoTrinhID.Text = Convert.ToString(_tblChiTietGiaoTrinhEO.PK_iGiaoTrinhID);
             try { ddlFK_iMonHocID.SelectedValue = Convert.ToString(_tblMonHocEO.PK_iMonHocID); }
             catch { ddlFK_iMonHocID.SelectedIndex = 0; }

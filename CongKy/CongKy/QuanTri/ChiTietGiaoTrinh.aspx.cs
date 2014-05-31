@@ -42,6 +42,10 @@ namespace CongKy.QuanTri
             _tblMonHocEO.PK_iMonHocID = tblChiTietGiaoTrinh_ListUC1.PK_iGiaoTrinhID;
 
             tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_tblChiTietGiaoTrinhEO, _tblMonHocEO);
+
+            tblChiTietGiaoTrinh_DetailUC1.btnInsert.Visible = false;
+            tblChiTietGiaoTrinh_DetailUC1.btnUpdate.Visible = true;
+            tblChiTietGiaoTrinh_DetailUC1.btnDelete.Visible = true;
         }
 
         protected void AddNew_Click(object sender, EventArgs e)
@@ -50,6 +54,10 @@ namespace CongKy.QuanTri
             tblChiTietGiaoTrinhEO _tblChiTietGiaoTrinhEO = new tblChiTietGiaoTrinhEO();
             tblMonHocEO _tblMonHocEO = new tblMonHocEO();
             tblChiTietGiaoTrinh_DetailUC1.BindDataDetail(_tblChiTietGiaoTrinhEO, _tblMonHocEO);
+
+            tblChiTietGiaoTrinh_DetailUC1.btnInsert.Visible = true;
+            tblChiTietGiaoTrinh_DetailUC1.btnUpdate.Visible = false;
+            tblChiTietGiaoTrinh_DetailUC1.btnDelete.Visible = false;
         }
         #endregion
 

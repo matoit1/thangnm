@@ -11,7 +11,7 @@
     <style type="text/css">
        .tblInfo
         {
-            width: 755px;
+            width: 800px;
         }
         .colLeft
         {
@@ -30,49 +30,54 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Label ID="lblMsg" runat="server"></asp:Label><br /><br />
-        <table  class="tblInfo">
-            <tr class="rowOther">
-                <td class="colLeft">Mã giáo trình</td>
-                <td class="colRight">
-                    <asp:Label ID="lblPK_iGiaoTrinhID" runat="server" ></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td class="colLeft">Tên bài học</td>
-                <td class="colRight">
-                    <asp:Label ID="lblsTenBaiHoc" runat="server" ></asp:Label>
-                </td>
-            </tr>
-            <tr class="rowOther">
-                <td class="colLeft">Thông tin bài học</td>
-                <td class="colRight">
-                    <asp:Label ID="lblsThongTin" runat="server" ></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td class="colLeft">Ngày cập nhật</td>
-                <td class="colRight">
-                    <asp:Label ID="lbltNgayCapNhat" runat="server" ></asp:Label>
-                </td>
-            </tr>
-            <tr class="rowOther">
-                <td class="colLeft">Trạng thái</td>
-                <td class="colRight">
-                    <asp:Label ID="lbliTrangThai" runat="server" ></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td class="colLeft">Download tại đây !</td>
-                <td class="colRight"><asp:HyperLink ID="hplDownload" runat="server"><img src="../App_Themes/images/download_now.png" alt="Tải về ngay!" /></asp:HyperLink></td>
-            </tr>
-        </table>
+        <div style="width: 800px; margin: 5px auto auto 250px;">
+            <center><a href="../Default.aspx" rel="nofollow"><img src="../App_Themes/images/templatemo_logo.png" alt="Công Kỳ Hero" width="160px" height="100px"></a></center>
+            <asp:Label ID="lblMsg" runat="server"></asp:Label><br /><br />
+            <table  class="tblInfo">
+                <tr class="rowOther">
+                    <td class="colLeft">Mã giáo trình</td>
+                    <td class="colRight">
+                        <asp:Label ID="lblPK_iGiaoTrinhID" runat="server" ></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="colLeft">Tên bài học</td>
+                    <td class="colRight">
+                        <asp:Label ID="lblsTenBaiHoc" runat="server" ></asp:Label>
+                    </td>
+                </tr>
+                <tr class="rowOther">
+                    <td class="colLeft">Thông tin bài học</td>
+                    <td class="colRight">
+                        <asp:Label ID="lblsThongTin" runat="server" ></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="colLeft">Ngày cập nhật</td>
+                    <td class="colRight">
+                        <asp:Label ID="lbltNgayCapNhat" runat="server" ></asp:Label>
+                    </td>
+                </tr>
+                <tr class="rowOther">
+                    <td class="colLeft">Trạng thái</td>
+                    <td class="colRight">
+                        <asp:Label ID="lbliTrangThai" runat="server" ></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="colLeft">Download tại đây !</td>
+                    <td class="colRight"><asp:HyperLink ID="hplDownload" runat="server"><img src="../App_Themes/images/download_now.png" alt="Tải về ngay!" /></asp:HyperLink></td>
+                </tr>
+            </table>
+        </div>
+        <center>
         <asp:Panel ID="pnlVideo" runat="server" Visible="false">
             <uc2:VideoUC ID="VideoUC1" runat="server" />
         </asp:Panel>
         <asp:Panel ID="pnlPdf" runat="server" Visible="false">
             <uc1:PdfUC ID="PdfUC1" runat="server" />
         </asp:Panel>
+        </center>
     </div>
     </form>
 </body>

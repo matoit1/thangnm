@@ -1,20 +1,20 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VideoUC.ascx.cs" Inherits="CongKy.UserControl.VideoUC" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
     <%-- Begin Thư viện CSS - JAVASCRIPT Video mp4/ogg/webm--%>
-    <link href="http://vjs.zencdn.net/4.5/video-js.css" rel="stylesheet" />
-    <script src="http://vjs.zencdn.net/4.5/video.js" type="text/javascript"></script>
+    <link href="../../App_Themes/video-js.css" rel="stylesheet" />
+    <script src="../../Scripts/video.js" type="text/javascript"></script>
     <%-- End Thư viện CSS - JAVASCRIPT Video mp4/ogg/webm--%>
 
 <asp:MultiView ID="mtvVideo" runat="server" ActiveViewIndex ="0">
     <asp:View ID="vFLV_MP4" runat="server">
-        <video id="video_flv_mp4" class="video-js vjs-default-skin" controls preload="auto" width="755" height="400" poster="../Images/Avatar/default.png"
+        <video id="video_flv_mp4" class="video-js vjs-default-skin" controls preload="auto" width="755" height="400" poster="../Upload/Avatar/default.png"
         data-setup='{"controls" : true, "autoplay" : false, "preload" : "auto"}'>
         <source src='<%=sLinkVideo%>' type="video/x-flv">
         Trình duyệt của bạn không hỗ trợ xem video này!</video>
         <i style="font-size: 10px; text-align: right">FLV_MP4_3G2</i>
     </asp:View>
     <asp:View ID="vOGG_WEBM_F4V_MKV" runat="server">
-        <video id="video_ogg_webm_f4v_mkv" class="video-js vjs-default-skin" controls preload="auto" width="755" height="400" poster="../Images/Avatar/default.png"
+        <video id="video_ogg_webm_f4v_mkv" class="video-js vjs-default-skin" controls preload="auto" width="755" height="400" poster="../Upload/Avatar/default.png"
             data-setup='{"controls" : true, "autoplay" : false, "preload" : "auto"}'>
              <source src='<%=sLinkVideo%>' type="video/ogg">
               Trình duyệt của bạn không hỗ trợ xem video này!</video>

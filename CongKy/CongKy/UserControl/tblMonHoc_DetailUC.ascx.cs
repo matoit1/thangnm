@@ -8,6 +8,7 @@ using CongKy.EntityObject;
 using CongKy.SharedLibraries;
 using CongKy.DataAccessObject;
 using CongKy.SharedLibraries.Constants;
+using System.Data;
 
 namespace CongKy.UserControl
 {
@@ -31,9 +32,14 @@ namespace CongKy.UserControl
 
         public void BindDataDetail(tblMonHocEO _tblMonHocEO)
         {
+            tblDangKyDayHocEO _tblDangKyDayHocEO = new tblDangKyDayHocEO();
+            _tblDangKyDayHocEO.FK_iMonHocID = _tblMonHocEO.PK_iMonHocID;
+            DataSet ds = tblDangKyDayHocDAO.DangKyDayHoc_SelectByFK_iMonHocID(_tblDangKyDayHocEO);
             txtPK_iMonHocID.Text = Convert.ToString(_tblMonHocEO.PK_iMonHocID);
             txtsTenMonHoc.Text = Convert.ToString(_tblMonHocEO.sTenMonHoc);
             txtsLinkImage.Text = Convert.ToString(_tblMonHocEO.sLinkImage);
+            try { ddlFK_iTaiKhoanID.SelectedValue = ds.Tables[0].Rows[0]["FK_iTaiKhoanID"].ToString(); }
+            catch { ddlFK_iTaiKhoanID.SelectedIndex = 0; }
             try { ddliTrangThai.SelectedValue = _tblMonHocEO.iTrangThai.ToString(); }
             catch { ddliTrangThai.SelectedIndex = 0; }
         }
@@ -59,6 +65,13 @@ namespace CongKy.UserControl
 
         public void loadDataToDropDownList()
         {
+            tblTaiKhoanEO _tblTaiKhoanEO = new tblTaiKhoanEO();
+            _tblTaiKhoanEO.iQuyenHan = TaiKhoan_iQuyenHan_C.GiangVien;
+            ddlFK_iTaiKhoanID.DataSource = tblTaiKhoanDAO.TaiKhoan_SelectListByiQuyenHan(_tblTaiKhoanEO);
+            ddlFK_iTaiKhoanID.DataTextField = "sHoTen";
+            ddlFK_iTaiKhoanID.DataValueField = "PK_iTaiKhoanID";
+            ddlFK_iTaiKhoanID.DataBind();
+
             ddliTrangThai.DataSource = GetListConstants.MonHoc_iTrangThai_GLC();
             ddliTrangThai.DataTextField = "Value";
             ddliTrangThai.DataValueField = "Key";
@@ -94,7 +107,7 @@ namespace CongKy.UserControl
             {  
               if (CheckInput() == true)
                {
-                if (tblMonHocDAO.MonHoc_Insert(getObject()) == true)
+                if (tblMonHocDAO.MonHoc_Insert(getObject(), Convert.ToInt32(ddlFK_iTaiKhoanID.SelectedValue)) == true)
                 {
                     lblMsg.Text = Messages.Them_Thanh_Cong;
                     ClearMessages();
@@ -121,7 +134,7 @@ namespace CongKy.UserControl
             {
               if (CheckInput() == true)
                {
-                if (tblMonHocDAO.MonHoc_Update(getObject()) == true)
+                   if (tblMonHocDAO.MonHoc_Update(getObject(), Convert.ToInt32(ddlFK_iTaiKhoanID.SelectedValue)) == true)
                 {
                     lblMsg.Text = Messages.Sua_Thanh_Cong;
                     ClearMessages();
@@ -245,6 +258,9 @@ namespace CongKy.UserControl
 
             txtsLinkImage.Enabled = false;
             lblsLinkImage.Enabled = false;
+
+            ddlFK_iTaiKhoanID.Enabled = false;
+            lblFK_iTaiKhoanID.Enabled = false;
 
             ddliTrangThai.Visible = false;
             lbliTrangThai.Visible = false;
