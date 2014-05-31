@@ -67,7 +67,6 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <asp:Label ID="lblName" runat="server"></asp:Label> <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="../QuanTri/ThongTinCaNhan.aspx"><i class="fa fa-user"></i> Thông tin cá nhân</a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i> Thông báo mới <span class="badge">7</span></a></li>
                 <li class="divider"></li>
                 <li><asp:LinkButton ID="lbtnLogout" runat="server" onclick="lbtnLogout_Click"><i class="fa fa-power-off"></i>Thoát</asp:LinkButton> </li>
               </ul>
