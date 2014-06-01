@@ -191,7 +191,7 @@ namespace HaMy.DataAccessObject
         /// <summary> 6. NguoiDung_SelectItemPK_iNguoiDungID </summary>
         /// <param name="_tblNguoiDungEO"></param>
         /// <returns></returns>
-        public static tblNguoiDungEO NguoiDung_SelectItemPK_iNguoiDung(String PK_iNguoiDung)
+        public static tblNguoiDungEO NguoiDung_SelectItemPK_iNguoiDung(Int32 PK_iNguoiDung)
         {
             tblNguoiDungEO oOutput = new tblNguoiDungEO();
             DataSet ds = null;
@@ -200,9 +200,9 @@ namespace HaMy.DataAccessObject
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("tblNguoiDung_SelectItemByPK_iNguoiDung", conn);
+                    SqlDataAdapter da = new SqlDataAdapter("tblNguoiDung_SelectItem", conn);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iNguoiDungI", PK_iNguoiDung));
+                    da.SelectCommand.Parameters.Add(new SqlParameter("@PK_iNguoiDung", PK_iNguoiDung));
                     ds = new DataSet();
                     da.Fill(ds);
                     conn.Close();
