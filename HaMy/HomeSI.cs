@@ -10,6 +10,7 @@ using HaMy.DataAccessObject;
 using HaMy.EntityObject;
 using HaMy.Properties;
 using System.Media;
+using HaMy.Report;
 
 
 namespace HaMy
@@ -78,9 +79,9 @@ namespace HaMy
         private void tsmiBaoCao_Click(object sender, EventArgs e)
         {
             CloseAllWindowsChild();
-            //frmBaoCao_CuocHen _frmBaoCao_CuocHen = new frmBaoCao_CuocHen();
-            //_frmBaoCao_CuocHen.MdiParent = this;
-            //_frmBaoCao_CuocHen.Show();
+            frmBaoCao_CuocHen _frmBaoCao_CuocHen = new frmBaoCao_CuocHen();
+            _frmBaoCao_CuocHen.MdiParent = this;
+            _frmBaoCao_CuocHen.Show();
         }
 
         private void HomeSI_Load(object sender, EventArgs e)
@@ -97,8 +98,8 @@ namespace HaMy
 
                //this.Show();
 
-                Resources.ResourceManager.GetStream("Virus", Resources.Culture);
-                System.IO.Stream s = Resources.ResourceManager.GetStream("Virus", Resources.Culture);
+                Resources.ResourceManager.GetStream("c4_beep", Resources.Culture);
+                System.IO.Stream s = Resources.ResourceManager.GetStream("c4_beep", Resources.Culture);
                 SoundPlayer player = new SoundPlayer(s);
                 player.Play();
                 if (_frmThongBao.Visible == false)
