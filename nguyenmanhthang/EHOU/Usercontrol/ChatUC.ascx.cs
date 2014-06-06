@@ -53,11 +53,6 @@ namespace EHOU.UserControl
             {
                 if (!IsPostBack)
                 {
-                    //objtblPartEO = new tblPartEO();
-                    //objtblPartEO.FK_sMaPCCT = "PCCT000001";
-                    //objtblPartEO.FK_sMalop = "LH00010B1";
-                    //objtblPartEO.iCaHoc = 2;
-                    //objtblPartEO = tblPartDAO.tblPart_SelectItem(objtblPartEO);
                     sColor = "#000000";
                     loadDataToDropDownList();
                     DataSet ds = tblMessageDAO.Message_SelectByFK_sRoom(objtblMessageEO);
@@ -114,8 +109,6 @@ namespace EHOU.UserControl
                 {
                     iSumMessage = ds.Tables[0].Rows.Count;
                     tblAccountEO _tblAccountEO = new tblAccountEO();
-                    //_tblAccountEO.FK_sMaLop = objtblPartEO.FK_sSubject;
-                    //lblSumOnline.Text = _tblAccountEO.SinhVien_SelectByFK_sMaLop(_SinhVienEO).Tables[0].Rows.Count.ToString();
                     rptDialog.DataSource = ds;
                     rptDialog.DataBind();
                 }
@@ -151,7 +144,6 @@ namespace EHOU.UserControl
         {
             try
             {
-                //string sAccountDisabe;
                 HiddenField hfFK_sNguoiGui = (HiddenField)e.Item.FindControl("hfFK_sNguoiGui");
                 switch (e.CommandName)
                 {
@@ -170,7 +162,6 @@ namespace EHOU.UserControl
                         break;
                     case "ibntHideAcc":
                         iSumMessage = 0;
-                        //sAccountDisabe = lblFK_sNguoiGui;
                         objtblPartEO.sBlackList = objtblPartEO.sBlackList + hfFK_sNguoiGui.Value + ",";
                         tblPartDAO.Part_Update_sLinkVideo_sBlackList(objtblPartEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
@@ -178,7 +169,6 @@ namespace EHOU.UserControl
                         break;
                     case "ibntShowAcc":
                         iSumMessage = 0;
-                       // sAccountDisabe = lblFK_sNguoiGui;
                         objtblPartEO.sBlackList = objtblPartEO.sBlackList.Replace("," + hfFK_sNguoiGui.Value + ",", ",");
                         tblPartDAO.Part_Update_sLinkVideo_sBlackList(objtblPartEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
@@ -195,13 +185,7 @@ namespace EHOU.UserControl
         protected void rptDialog_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             try{
-                //string sAccountDisabe;
-                //if (iTypeUser == Messages.ChatRoom_TypeUser_GiangVien)
-                //{
                     tblPartEO _tblPartEO = new tblPartEO();
-                    //_tblPartEO.FK_sMaPCCT = "PCCT000001";
-                    //_tblPartEO.FK_sMalop = "LH00010B1";
-                    //_tblPartEO.iCaHoc = 2;
                     _tblPartEO = tblPartDAO.Part_SelectItem(objtblPartEO);
                     HiddenField hfFK_sNguoiGui = (HiddenField)e.Item.FindControl("hfFK_sNguoiGui");
                     Label lblFK_sNguoiGui = (Label)e.Item.FindControl("lblFK_sNguoiGui");
@@ -216,38 +200,27 @@ namespace EHOU.UserControl
                     if (ibntShowAcc != null && iTypeUser == tblAccount_iType_C.Giang_Vien) { ibntShowAcc.Visible = true; } else { ibntShowAcc.Visible = false; }
                     if (hfFK_sNguoiGui != null)
                     {
-                        //SinhVienEO _SinhVienEO = new SinhVienEO();
-                        //_SinhVienEO.sTendangnhapSV = lblFK_sNguoiGui.Text;
-                        //string PK_sMaSV = SinhVienDAO.SinhVien_SelectBysTendangnhapSV(_SinhVienEO).PK_sMaSV;
-
                         List<string> lstAcc = _tblPartEO.sBlackList.Split(',').ToList<string>();
                         if ((lstAcc.Any(s => s.Contains(hfFK_sNguoiGui.Value))) == true)
                         {
-                           // sAccountDisabe = lblFK_sNguoiGui.Text;
                             ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                             ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
                         }
                         else
                         {
-                            //sAccountDisabe = lblFK_sNguoiGui.Text;
                             ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                             ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
                         }
                     }
+                    tblAccountEO _tblAccountEO = new tblAccountEO();
+                    _tblAccountEO.PK_sUsername = lblFK_sNguoiGui.Text;
+                    _tblAccountEO = tblAccountDAO.Account_SelectItem(_tblAccountEO);
                     if (lblFK_sNguoiGui != null)
                     {
-                        tblAccountEO _tblAccountEO = new tblAccountEO();
-                        _tblAccountEO.PK_sUsername = lblFK_sNguoiGui.Text;
-                        _tblAccountEO = tblAccountDAO.Account_SelectItem(_tblAccountEO);
-
-                        //SinhVienEO _SinhVienEO = new SinhVienEO();
-                        //_SinhVienEO.PK_sMaSV = lblFK_sNguoiGui.Text;
-                        //_SinhVienEO = SinhVienDAO.SinhVien_SelectItem(_SinhVienEO);
-
                         if (_tblAccountEO.PK_sUsername != null)
                         {
                             lblFK_sNguoiGui.Text = _tblAccountEO.sName;
-                            if (_tblAccountEO.PK_sUsername != objtblMessageEO.FK_sUsername)
+                            if (_tblAccountEO.iType == tblAccount_iType_C.Giang_Vien)
                             {
                                 lblFK_sNguoiGui.Font.Underline = true;
                                 lblFK_sNguoiGui.ForeColor = System.Drawing.Color.Blue;
@@ -272,7 +245,7 @@ namespace EHOU.UserControl
                     }
                     if (lblFK_sNguoiGui != null && objtblMessageEO.FK_sUsername == hfFK_sNguoiGui.Value)
                     {
-                        if (iTypeUser == tblAccount_iType_C.Giang_Vien)
+                        if (_tblAccountEO.iType == tblAccount_iType_C.Giang_Vien)
                         {
                             lblFK_sNguoiGui.ForeColor = System.Drawing.Color.Blue;
                             lblFK_sNguoiGui.ToolTip = Messages.ChatRoom_GiangVien;
@@ -282,7 +255,6 @@ namespace EHOU.UserControl
                             lblFK_sNguoiGui.ForeColor = System.Drawing.Color.LightSkyBlue;
                         }
                     }
-                //}
             }
             catch{
             }
