@@ -6,11 +6,11 @@
     }
     .colLeft
     {
-        width: 155px;
+        width: 200px;
     }
     .colRight
     {
-        width: 600px;
+        width: 500px;
     }
     .rowOther
     {
@@ -21,16 +21,16 @@
     <legend>Thông tin lớp học</legend>
     <table class="tblInfo">
         <tr class="rowOther">
-            <td class="colLeft">Tên lớp học:</td>
-            <td class="colRight"><asp:Label ID="lblsTenlop" runat="server"></asp:Label></td>
+            <td class="colLeft">Tên bài học:</td>
+            <td class="colRight"><asp:Label ID="lblsTitle" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td class="colLeft">Tên môn học:</td>
-            <td class="colRight"><asp:Label ID="lblsTenMonhoc" runat="server"></asp:Label></td>
+            <td class="colRight"><asp:Label ID="lblsName" runat="server"></asp:Label></td>
         </tr>
         <tr class="rowOther">
             <td class="colLeft">Giảng viên giảng dạy:</td>
-            <td class="colRight"><asp:Label ID="lblsHoTenGV" runat="server"></asp:Label></td>
+            <td class="colRight"><asp:Label ID="lblFK_sTeacher" runat="server"></asp:Label></td>
         </tr>
         <tr>
             <td class="colLeft">Sĩ số lớp:</td>
@@ -45,16 +45,16 @@
             <td class="colRight"><asp:Label ID="lbliSoTietDay" runat="server"></asp:Label></td>
         </tr>
         <tr class="rowOther">
-            <td class="colLeft">Ngày bắt đầu môn học:</td>
-            <td class="colRight"><asp:Label ID="lbltNgayBatDau" runat="server"></asp:Label></td>
+            <td class="colLeft">Ngày giờ bắt đầu môn học:</td>
+            <td class="colRight"><asp:Label ID="lbltDateTimeStart" runat="server"></asp:Label></td>
         </tr>
         <tr>
-            <td class="colLeft">Ngày kết thúc môn học:</td>
-            <td class="colRight"><asp:Label ID="lbltNgayKetThuc" runat="server"></asp:Label></td>
+            <td class="colLeft">Ngày giờ kết thúc môn học:</td>
+            <td class="colRight"><asp:Label ID="lbltDateTimeEnd" runat="server"></asp:Label></td>
         </tr>
         <tr class="rowOther">
             <td class="colLeft">Trạng thái:</td>
-            <td class="colRight"><asp:Label ID="lbliTrangThai" runat="server"></asp:Label></td>
+            <td class="colRight"><asp:Label ID="lbliStatus" runat="server"></asp:Label></td>
         </tr>
     </table>
 </fieldset>

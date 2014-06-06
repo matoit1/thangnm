@@ -35,7 +35,7 @@
     <div class="ebook">
         <asp:UpdatePanel ID="udpSync" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
-                <asp:Timer ID="tSync" runat="server" Interval="5000" ontick="tSync_Tick"></asp:Timer>
+                <asp:Timer ID="tSync" runat="server" Interval="5000"  ontick="tSync_Tick"></asp:Timer>
                 <uc4:hoc_lieuuc ID="Hoc_LieuUC1" runat="server" />
             </ContentTemplate>
         </asp:UpdatePanel>

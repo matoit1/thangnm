@@ -12,14 +12,11 @@
 <fieldset style="width: 270px; height:240px">
     <legend>Học liệu giảng viên cung cấp</legend>
     <div style="width: 270px; height:185px; overflow: scroll;">
-    <asp:TreeView ID="trvFileUpload" runat="server" ImageSet="Events" Width="250px" 
-        ShowCheckBoxes="All" 
-        ontreenodecheckchanged="trvFileUpload_TreeNodeCheckChanged" >
-        <ParentNodeStyle Font-Bold="False" Width="250px" />
-        <HoverNodeStyle Font-Underline="False" ForeColor="Red" Width="250px" />
-        <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px" Width="250px" />
-        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px"  Width="250px"/>
-    </asp:TreeView>
+        <asp:Repeater ID="rptMaterial" runat="server">
+            <ItemTemplate>
+                <a href='<%#"../Preview.aspx?PK_lMaterial="+ Eval("PK_lMaterial")%>' target="_blank"><%#Eval("sDescription")%></a><br />
+            </ItemTemplate>
+        </asp:Repeater>
     </div>
     <asp:Label ID="lblMsg" runat="server"></asp:Label><br />
     <asp:Button ID="btnDelete" runat="server" Text="Xóa" onclick="btnDelete_Click" />

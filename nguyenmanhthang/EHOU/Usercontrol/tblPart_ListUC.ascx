@@ -58,7 +58,10 @@
                         <asp:BoundField  DataField="PK_iPart"  HeaderText="Mã buổi học" SortExpression="PK_iPart">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
-                        <asp:BoundField  DataField="FK_sSubject"  HeaderText="Môn học" SortExpression="FK_sSubject">
+                        <asp:BoundField  DataField="FK_sSubject"  HeaderText="Môn học" SortExpression="FK_sSubject" Visible="false">
+                            <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
+                        </asp:BoundField>
+                        <asp:BoundField  DataField="FK_sSubject_Text"  HeaderText="Môn học" SortExpression="FK_sSubject_Text">
                             <ItemStyle Wrap="true" CssClass="GridItemNumber"/>
                         </asp:BoundField>
                         <asp:BoundField DataField="sTitle" HeaderText="Tiêu đề" SortExpression="sTitle">

@@ -77,6 +77,24 @@ namespace Shared_Libraries.Constants
         public const string Icon_9 = ":(";
     }
 
+    /// <summary> I.5. tblMaterial_iStatus_C (Trạng Thái Học Liệu) </summary>
+    /// 
+    public class tblMaterial_iStatus_C
+    {
+        public const Int16 Mo = 1;
+        public const Int16 Tam_Khoa = 2;
+        public const Int16 Khoa = 3;
+    }
+
+
+    /// <summary> I.5. tblMaterial_iType_C (Loại Học Liệu) </summary>
+    /// 
+    public class tblMaterial_iType_C
+    {
+        public const Int16 Video = 1;
+        public const Int16 Pdf = 2;
+        public const Int16 Other = 3;
+    }
 
     #region "II. Định dạng"
     /// <summary> II.1. DateTimeFomat (Định dạng ngày giờ) </summary>

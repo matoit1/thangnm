@@ -65,8 +65,10 @@ namespace EHOU.UserControl
             try
             {
                 dsBaiViet = tblPartDAO.Part_SelectList();
+                dsBaiViet.Tables[0].Columns.Add(new DataColumn("FK_sSubject_Text", Type.GetType("System.String")));
                 foreach (DataRow dr in dsBaiViet.Tables[0].Rows)
                 {
+                    dr["FK_sSubject_Text"] = tblSubjectDAO.Subject_SelectItem_By_PK_sSubject(Convert.ToString(dr["FK_sSubject"])).sName;
                     if (string.IsNullOrEmpty(dr["tDateTimeStart"].ToString()))
                     {
                         dr["tDateTimeStart"] = DateTime.MinValue;
@@ -83,7 +85,7 @@ namespace EHOU.UserControl
                 {
                     PK_iPart = topic.Field<Int16>("PK_iPart"),
                     FK_sSubject = topic.Field<string>("FK_sSubject"),
-                   // FK_sSubject = tblSubjectDAO.Subject_SelectItem(topic.Field<Int32>("FK_sSubject")).sHoTen,
+                    FK_sSubject_Text = topic.Field<string>("FK_sSubject_Text"),
                     sTitle = topic.Field<string>("sTitle"),
                     sLinkVideo = topic.Field<string>("sLinkVideo"),
                     sBlackList = topic.Field<string>("sBlackList"),

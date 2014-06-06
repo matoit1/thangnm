@@ -122,5 +122,36 @@ namespace Shared_Libraries
             return output;
         }
 
+        /// <summary> I.5.  tblMaterial_iStatus_GTC (Trạng Thái Chi Tiết Giáo Trình) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string tblMaterial_iStatus_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Mở"; break;
+                case 2: output = "Khóa"; break;
+                default: output = "N/A"; break;
+            }
+            return output;
+        }
+
+        /// <summary> I.5.  tblMaterial_iType_GTC (Loại Chi Tiết Giáo Trình) </summary>
+        /// <param name="input"></param>
+        /// <returns>output</returns>
+        public static string tblMaterial_iType_GTC(Int16 input)
+        {
+            string output = "";
+            switch (input)
+            {
+                case 1: output = "Video"; break;
+                case 2: output = "Tài liệu Pdf"; break;
+                case 3: output = "Loại khác"; break;
+                default: output = "N/A"; break;
+            }
+            return output;
+        }
+
     }
 }

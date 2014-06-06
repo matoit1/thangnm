@@ -115,5 +115,30 @@ namespace DataAccessObject
                 throw;
             }
         }
+
+        public static tblMaterialEO Material(DataSet input)
+        {
+            try
+            {
+                tblMaterialEO output = new tblMaterialEO();
+                foreach (DataRow dr in input.Tables[0].Rows)
+                {
+                    output.PK_lMaterial = Convert.ToInt64(dr["PK_lMaterial"]);
+                    output.FK_sSubject = Convert.ToString(dr["FK_sSubject"]);
+                    output.FK_sUsername = Convert.ToString(dr["FK_sUsername"]);
+                    output.sDescription = Convert.ToString(dr["sDescription"]);
+                    output.sLinkDownload = Convert.ToString(dr["sLinkDownload"]);
+                    output.tLastUpdate = Convert.ToDateTime(dr["tLastUpdate"]);
+                    output.iSize = Convert.ToInt64(dr["iSize"]);
+                    output.iType = Convert.ToInt16(dr["iType"]);
+                    output.iStatus = Convert.ToInt16(dr["iStatus"]);
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
