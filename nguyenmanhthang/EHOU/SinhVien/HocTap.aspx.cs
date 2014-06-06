@@ -38,8 +38,8 @@ namespace EHOU.SinhVien
 
                         tblSubject_StudentEO _tblSubject_StudentEO = new tblSubject_StudentEO();
                         _tblSubject_StudentEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
-                        _tblSubject_StudentEO.FK_sStudent = "ducnd";
-                        //_tblSubject_StudentEO.FK_sStudent = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
+                        //_tblSubject_StudentEO.FK_sStudent = "ducnd";
+                        _tblSubject_StudentEO.FK_sStudent = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
                         if (tblSubject_StudentDAO.Subject_Student_CheckExists(_tblSubject_StudentEO) != true)
                         {
                             Response.Redirect("~/Access_Denied.aspx");

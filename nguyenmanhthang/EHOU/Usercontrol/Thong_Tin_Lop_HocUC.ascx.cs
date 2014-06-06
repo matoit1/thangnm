@@ -29,7 +29,7 @@ namespace EHOU.UserControl
             lbliSiso.Text = tblSubject_StudentDAO.Subject_Student_SelectByFK_sSubject(_tblSubject_StudentEO).Tables[0].Rows.Count.ToString();
             lbltDateTimeStart.Text = _tblPartEO.tDateTimeStart.ToString();
             lbltDateTimeEnd.Text = _tblPartEO.tDateTimeEnd.ToString();
-            lbliStatus.Text = GetTextConstants.tblPart_iStatus_GTC(_tblSubjectEO.iStatus);
+            lbliStatus.Text = GetTextConstants.tblPart_iStatus_GTC(_tblPartEO.iStatus);
         }
     }
 }

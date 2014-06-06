@@ -14,52 +14,52 @@ namespace EHOU.Share_Interface
     {
         public void Page_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (Request.Cookies["LOGINID"] != null) //Chưa Đăng nhập
-            //    {
-            //        if (Session["LOGINID"] == null || Session["LOGINID"].ToString().Substring(1).Equals(Request.Cookies["LOGINID"].Value) == false) //Chưa tạo session hoặc lỗi
-            //        {
-            //            JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
-            //            if (objAcc["username"] != null)
-            //            {
-            //                Session["LOGINID"] = objAcc["type"].ToString() + Request.Cookies["LOGINID"].Value;
-            //                if (Convert.ToInt16(Session["LOGINID"].ToString().Substring(0, 1)) != tblAccount_iType_C.Giang_Vien) //Kiểm tra quyền truy cập trang
-            //                {
-            //                    Response.Write("<script>alert('ERROR: Bạn không có quyền truy cập.')</script>");
-            //                }
-            //                else
-            //                {
-            //                    Response.Write("<script>alert('SUCCESS: Xác thực + tạo session thành công.')</script>");
-            //                }
-            //            }
-            //            else
-            //            {
-            //                Response.Write("<script>alert('ERROR: Tài khoản chưa xác thực.')</script>");
-            //            }
-            //        }
-            //        else
-            //        {
-            //            if (Convert.ToInt16(Session["LOGINID"].ToString().Substring(0, 1)) != tblAccount_iType_C.Giang_Vien) //Kiểm tra quyền truy cập trang
-            //            {
-            //                Response.Write("<script>alert('ERROR: Bạn không có quyền truy cập.')</script>");
-            //            }
-            //            else
-            //            {
-            //                Response.Write("<script>alert('SUCCESS: Đã tạo xác thực.')</script>");
-            //            }
-            //        }
-            //    }
-            //    else
-            //    {
-            //        Response.Write("<script>alert('ERROR: Chưa đăng nhập.')</script>");
-            //        Response.Redirect("https://account.dev.ehou.edu.vn/auth");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
-            //}
+            try
+            {
+                if (Request.Cookies["LOGINID"] != null) //Chưa Đăng nhập
+                {
+                    if (Session["LOGINID"] == null || Session["LOGINID"].ToString().Substring(1).Equals(Request.Cookies["LOGINID"].Value) == false) //Chưa tạo session hoặc lỗi
+                    {
+                        JObject objAcc = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value);
+                        if (objAcc["username"] != null)
+                        {
+                            Session["LOGINID"] = objAcc["type"].ToString() + Request.Cookies["LOGINID"].Value;
+                            if (Convert.ToInt16(Session["LOGINID"].ToString().Substring(0, 1)) != tblAccount_iType_C.Giang_Vien) //Kiểm tra quyền truy cập trang
+                            {
+                                //Response.Write("<script>alert('ERROR: Bạn không có quyền truy cập.')</script>");
+                            }
+                            else
+                            {
+                                //Response.Write("<script>alert('SUCCESS: Xác thực + tạo session thành công.')</script>");
+                            }
+                        }
+                        else
+                        {
+                            //Response.Write("<script>alert('ERROR: Tài khoản chưa xác thực.')</script>");
+                        }
+                    }
+                    else
+                    {
+                        if (Convert.ToInt16(Session["LOGINID"].ToString().Substring(0, 1)) != tblAccount_iType_C.Giang_Vien) //Kiểm tra quyền truy cập trang
+                        {
+                            //Response.Write("<script>alert('ERROR: Bạn không có quyền truy cập.')</script>");
+                        }
+                        else
+                        {
+                            //Response.Write("<script>alert('SUCCESS: Đã tạo xác thực.')</script>");
+                        }
+                    }
+                }
+                else
+                {
+                    //Response.Write("<script>alert('ERROR: Chưa đăng nhập.')</script>");
+                    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+            }
         }
 
         protected void lbtnLogout_Click(object sender, EventArgs e)
