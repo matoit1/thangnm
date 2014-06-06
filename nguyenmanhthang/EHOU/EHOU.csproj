@@ -83,6 +83,7 @@
     <Content Include="App_Themes\popup.css" />
     <Content Include="App_Themes\public.css" />
     <Content Include="App_Themes\Toolbar.css" />
+    <Content Include="App_Themes\video-js.css" />
     <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\CKEditor.NET.dll" />
     <Content Include="bin\EHOU.dll" />
@@ -272,6 +273,7 @@
     <Content Include="Scripts\New\dockbar.js" />
     <Content Include="Scripts\New\jquery-1.9.1.min.js" />
     <Content Include="Scripts\popup.js" />
+    <Content Include="Scripts\video.js" />
     <Content Include="SinhVien\ChonLopHoc.aspx" />
     <Content Include="SinhVien\Default.aspx" />
     <Content Include="SinhVien\HocTap.aspx" />
@@ -701,6 +703,7 @@
     <Folder Include="Images\Temp\" />
     <Folder Include="QuanTri\Accounts\" />
     <Folder Include="SinhVien\Accounts\" />
+    <Folder Include="Upload\" />
     <Folder Include="Usercontrol\Search\" />
   </ItemGroup>
   <ItemGroup>

@@ -372,10 +372,6 @@ namespace Shared_Libraries
 
         #region "Upload"
         public const string Dinh_Dang_File_Khong_Ho_Tro_Xem_Truoc = "Định dạng file này không hỗ trợ xem trước. Bạn có thể tải về!";
-        public const string Video = "Video/";
-        public const string Ebook = "Ebook/";
-        public const string Example = "Example/";
-        public const string Other = "Other/";
         public const string Upload_Hoc_Lieu = "Upload học liệu";
         public const string UpLoad_Video_Giang_Day = "Upload video giảng dạy";
         public const string Upload_Bai_Kiem_Tra = "Upload bài kiểm tra";

@@ -44,10 +44,10 @@ namespace EHOU.GiangVien
                         tblSubjectEO _tblSubjectEO = new tblSubjectEO();
                         _tblSubjectEO.PK_sSubject = Request.QueryString["PK_sSubject"];
                         _tblSubjectEO = tblSubjectDAO.Subject_SelectItem(_tblSubjectEO);
-                        //if (Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString() != _tblSubjectEO.FK_sTeacher)
-                        //{
-                        //    Response.Redirect("~/Access_Denied.aspx");
-                        //}
+                        if (Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString() != _tblSubjectEO.FK_sTeacher)
+                        {
+                            Response.Redirect("~/Access_Denied.aspx");
+                        }
 
                             tblMessageEO _tblMessageEO = new tblMessageEO();
                             _tblMessageEO.FK_sRoom = _tblSubjectEO.PK_sSubject;
@@ -69,7 +69,7 @@ namespace EHOU.GiangVien
                             DanhSachLopHocUC1.BindData(_tblSubject_StudentEO);
 
                             //Kiểm tra trạng thái buổi học Online / Offline
-                            switch (_tblSubjectEO.iStatus)
+                            switch (_tblPartEO.iStatus)
                             {
                                 case tblPart_iStatus_C.Hoc: vLiveStream.ActiveViewIndex = 0;
                                                                             UploadFileUC1.Visible = true; 
@@ -88,7 +88,7 @@ namespace EHOU.GiangVien
                                 default: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Chua_Den_Thoi_Gian_Hoc; break;
                             }
                             Thong_Tin_Lop_HocUC1.BinData(_tblSubjectEO, _tblPartEO);
-                            LoadInfo(_tblSubjectEO);
+                            LoadInfo(_tblSubjectEO, _tblPartEO);
                     }
                 }
             }
@@ -98,17 +98,20 @@ namespace EHOU.GiangVien
             }
         }
 
-        private void LoadInfo(tblSubjectEO _tblSubjectEO)
+        private void LoadInfo(tblSubjectEO _tblSubjectEO, tblPartEO _tblPartEO)
         {
             try
             {
                 UploadFileUC1.objtblSubjectEO = _tblSubjectEO;
-                UploadFileUC1.sTypeUpload = Messages.Ebook;
+                UploadFileUC1.objtblPartEO = _tblPartEO;
+                UploadFileUC1.iTypeUpload = 1;
                 UploadFileUC1.lblTitle.Text = Messages.Upload_Hoc_Lieu;
 
                 UploadFileUC2.objtblSubjectEO = _tblSubjectEO;
-                UploadFileUC2.sTypeUpload = Messages.Video;
+                UploadFileUC2.objtblPartEO = _tblPartEO;
+                UploadFileUC2.iTypeUpload = 2;
                 UploadFileUC2.lblTitle.Text = Messages.UpLoad_Video_Giang_Day;
+
                 Hoc_LieuUC1.BindData_HocLieu(_tblSubjectEO.PK_sSubject);
             }
             catch (Exception ex)
@@ -124,13 +127,7 @@ namespace EHOU.GiangVien
 
         protected void Refresh2_Click(object sender, EventArgs e)
         {
-            //LichDayVaHocEO _LichDayVaHocEO = new LichDayVaHocEO();
-            //_LichDayVaHocEO.FK_sMaPCCT = Request.QueryString["FK_sMaPCCT"];
-            //_LichDayVaHocEO.FK_sMalop = Request.QueryString["PK_sMalop"];
-            //_LichDayVaHocEO.iCaHoc = Convert.ToInt16(Request.QueryString["iCaHoc"]);
-            //_LichDayVaHocEO.sLinkVideo = UploadFileUC2.linkfilevideo.Substring(1);
-            //LichDayVaHocDAO.LichDayVaHoc_Update_sSinhVienNghi_sSinhVienChan_sLinkVideo(_LichDayVaHocEO);
-            //Response.Redirect(Request.Url.ToString());
+            Response.Redirect(Request.Url.ToString());
         }
     }
 }

@@ -123,7 +123,7 @@ namespace DataAccessObject
                     cmd.Parameters.Add(new SqlParameter("@FK_sSubject", _tblPartEO.FK_sSubject));
                     cmd.Parameters.Add(new SqlParameter("@sLinkVideo", (_tblPartEO.sLinkVideo == null) ? (object)DBNull.Value : _tblPartEO.sLinkVideo));
                     cmd.Parameters.Add(new SqlParameter("@sBlackList", (_tblPartEO.sBlackList == null) ? (object)DBNull.Value : _tblPartEO.sBlackList));
-
+                    cmd.Parameters.Add(new SqlParameter("@iStatus", (_tblPartEO.iStatus == 0) ? (object)DBNull.Value : _tblPartEO.iStatus));
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return true;

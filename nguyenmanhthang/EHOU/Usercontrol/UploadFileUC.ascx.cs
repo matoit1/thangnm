@@ -24,16 +24,20 @@ namespace EHOU.UserControl
             get { return (tblSubjectEO)ViewState["objtblSubjectEO"]; }
             set { ViewState["objtblSubjectEO"] = value; }
         }
-        public string sTypeUpload
+        public tblPartEO objtblPartEO
         {
-            get { return (string)ViewState["sTypeUpload"]; }
-            set { ViewState["sTypeUpload"] = value; }
+            get { return (tblPartEO)ViewState["objtblPartEO"]; }
+            set { ViewState["objtblPartEO"] = value; }
+        }
+        public Int16 iTypeUpload
+        {
+            get { return (Int16)ViewState["iTypeUpload"]; }
+            set { ViewState["iTypeUpload"] = value; }
         }
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            objtblSubjectEO = tblSubjectDAO.Subject_SelectItem_By_PK_sSubject("CRP2020");
         }
 
         public Int16 getTypeFile(string input){
@@ -50,7 +54,14 @@ namespace EHOU.UserControl
 
         protected void UploadFile_Click(object sender, EventArgs e)
         {
-            string PathUpload = Server.MapPath("~/App_Data/Upload/");
+            string pathsavefile = "App_Data/Upload/";
+            switch (iTypeUpload)
+            {
+                case 1: pathsavefile = "App_Data/Upload/"; break;
+                case 2: pathsavefile = "Upload/"; break;
+            }
+
+            string PathUpload = Server.MapPath("~/" + pathsavefile);
             if (String.IsNullOrEmpty(txtsDescription.Text))
             {
                 lblMsg.Text = Messages.Field_Empty;
@@ -65,19 +76,34 @@ namespace EHOU.UserControl
                 }
                 else
                 {
-                    tblMaterialEO _tblMaterialEO = new tblMaterialEO();
-                    _tblMaterialEO.FK_sSubject = objtblSubjectEO.PK_sSubject;
-                    _tblMaterialEO.FK_sUsername = objtblSubjectEO.FK_sTeacher;
-                    _tblMaterialEO.sDescription = txtsDescription.Text;
-                    _tblMaterialEO.sLinkDownload = "../App_Data/Upload/" + fuMaterial.PostedFile.FileName;
-                    _tblMaterialEO.iSize = fuMaterial.PostedFile.ContentLength;
-                    _tblMaterialEO.iType = getTypeFile(fuMaterial.PostedFile.FileName);
-                    _tblMaterialEO.iStatus = tblMaterial_iStatus_C.Mo;
-                    tblMaterialDAO.Material_Insert(_tblMaterialEO);
                     lblMsg.Text = "";
                     try
                     {
+                        string link = "../" + pathsavefile + fuMaterial.PostedFile.FileName;
                         fuMaterial.PostedFile.SaveAs(PathUpload + fuMaterial.PostedFile.FileName);
+                        switch (iTypeUpload)
+                        {
+                            case 1:
+                            tblMaterialEO _tblMaterialEO = new tblMaterialEO();
+                            _tblMaterialEO.FK_sSubject = objtblSubjectEO.PK_sSubject;
+                            _tblMaterialEO.FK_sUsername = objtblSubjectEO.FK_sTeacher;
+                            _tblMaterialEO.sDescription = txtsDescription.Text;
+                            _tblMaterialEO.sLinkDownload = link;
+                            _tblMaterialEO.iSize = fuMaterial.PostedFile.ContentLength;
+                            _tblMaterialEO.iType = getTypeFile(fuMaterial.PostedFile.FileName);
+                            _tblMaterialEO.iStatus = tblMaterial_iStatus_C.Mo;
+                            tblMaterialDAO.Material_Insert(_tblMaterialEO);
+                            break;
+
+                            case 2:                    
+                                tblPartEO _tblPartEO = new tblPartEO();
+                                _tblPartEO.PK_iPart =objtblPartEO.PK_iPart;
+                                _tblPartEO.FK_sSubject = objtblPartEO.FK_sSubject;
+                                _tblPartEO.iStatus = tblPart_iStatus_C.Day_Offline;
+                                _tblPartEO.sLinkVideo = link;
+                                tblPartDAO.Part_Update_sLinkVideo_sBlackList(_tblPartEO);
+                            break;
+                        }
                         lblMsg.Text = Messages.Tai_Len_Thanh_Cong;
                         if (Refresh != null)
                         {

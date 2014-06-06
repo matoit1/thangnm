@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VideoUC.ascx.cs" Inherits="EHOU.UserControl.VideoUC" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
     <%-- Begin Thư viện CSS - JAVASCRIPT Video mp4/ogg/webm--%>
-    <link href="http://vjs.zencdn.net/4.5/video-js.css" rel="stylesheet" />
-    <script src="http://vjs.zencdn.net/4.5/video.js" type="text/javascript"></script>
+    <link href="../App_Themes/video-js.css" rel="stylesheet" />
+    <script src="../Scripts/video.js" type="text/javascript"></script>
     <%-- End Thư viện CSS - JAVASCRIPT Video mp4/ogg/webm--%>
 
 <asp:MultiView ID="mtvVideo" runat="server" ActiveViewIndex ="0">
