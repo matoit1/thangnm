@@ -37,14 +37,6 @@
             <td class="colRight"><asp:Label ID="lbliSiso" runat="server"></asp:Label></td>
         </tr>
         <tr class="rowOther">
-            <td class="colLeft">Ca học:</td>
-            <td class="colRight"><asp:Label ID="lbliCaHoc" runat="server"></asp:Label></td>
-        </tr>
-        <tr>
-            <td class="colLeft">Số tiết dạy:</td>
-            <td class="colRight"><asp:Label ID="lbliSoTietDay" runat="server"></asp:Label></td>
-        </tr>
-        <tr class="rowOther">
             <td class="colLeft">Ngày giờ bắt đầu môn học:</td>
             <td class="colRight"><asp:Label ID="lbltDateTimeStart" runat="server"></asp:Label></td>
         </tr>

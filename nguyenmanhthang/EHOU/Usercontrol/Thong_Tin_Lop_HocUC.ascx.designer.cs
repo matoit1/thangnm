@@ -49,24 +49,6 @@ namespace EHOU.UserControl {
         protected global::System.Web.UI.WebControls.Label lbliSiso;
         
         /// <summary>
-        /// lbliCaHoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliCaHoc;
-        
-        /// <summary>
-        /// lbliSoTietDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliSoTietDay;
-        
-        /// <summary>
         /// lbltDateTimeStart control.
         /// </summary>
         /// <remarks>

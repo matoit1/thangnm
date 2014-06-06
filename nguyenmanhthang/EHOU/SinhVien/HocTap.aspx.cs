@@ -38,19 +38,18 @@ namespace EHOU.SinhVien
 
                         tblSubject_StudentEO _tblSubject_StudentEO = new tblSubject_StudentEO();
                         _tblSubject_StudentEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
-                        _tblSubject_StudentEO.FK_sStudent = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
-                        //_tblSubject_StudentEO.PK_lCaHoc = Convert.ToInt64(Request.QueryString["PK_iPart"].ToString());
+                        _tblSubject_StudentEO.FK_sStudent = "ducnd";
+                        //_tblSubject_StudentEO.FK_sStudent = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
                         if (tblSubject_StudentDAO.Subject_Student_CheckExists(_tblSubject_StudentEO) != true)
                         {
                             Response.Redirect("~/Access_Denied.aspx");
                         }
                         tblMessageEO _tblMessageEO = new tblMessageEO();
                         _tblMessageEO.FK_sRoom = _tblSubjectEO.PK_sSubject;
-                        _tblMessageEO.FK_sUsername = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
+                        _tblMessageEO.FK_sUsername = _tblSubject_StudentEO.FK_sStudent;
                         _tblMessageEO.iStatus = 1;
 
-                        //sTendangnhapGV = _GiangVienEO.sTendangnhapGV;
-                        Hoc_LieuUC1.BindData_HocLieu(_tblSubjectEO.FK_sTeacher);
+                        Hoc_LieuUC1.BindData_HocLieu(_tblSubjectEO.PK_sSubject);
                         tblPartEO _tblPartEO = new tblPartEO();
                         _tblPartEO.PK_iPart = Convert.ToInt16(Request.QueryString["PK_iPart"]);
                         _tblPartEO.FK_sSubject = _tblSubjectEO.PK_sSubject;
@@ -82,7 +81,7 @@ namespace EHOU.SinhVien
 
         protected void tSync_Tick(object sender, EventArgs e)
         {
-            Hoc_LieuUC1.BindData_HocLieu(sTendangnhapGV);
+            //Hoc_LieuUC1.BindData_HocLieu(sTendangnhapGV);
             //ChatUC1.tAutoUpdateMessage_Tick(sender, e);
         }
     }
