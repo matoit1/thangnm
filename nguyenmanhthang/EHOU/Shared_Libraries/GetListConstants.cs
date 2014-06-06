@@ -93,5 +93,26 @@ namespace Shared_Libraries
             output.Add(Emoticons_C.Icon_9, GetTextConstants.Emoticons_GTC(Emoticons_C.Icon_9));
             return output;
         }
+
+        /// <summary> I.5.  ChiTietGiaoTrinh_iTrangThai_GLC (Trạng Thái Chi Tiết Giáo Trình) </summary>
+        /// <returns></returns>
+        public static SortedList ChiTietGiaoTrinh_iTrangThai_GLC()
+        {
+            SortedList output = new SortedList();
+            output.Add(tblMaterial_iStatus_C.Mo, GetTextConstants.tblMaterial_iStatus_GTC(tblMaterial_iStatus_C.Mo));
+            output.Add(tblMaterial_iStatus_C.Khoa, GetTextConstants.tblMaterial_iStatus_GTC(tblMaterial_iStatus_C.Khoa));
+            return output;
+        }
+
+        /// <summary> I.5.  ChiTietGiaoTrinh_iType_GLC (Loại Chi Tiết Giáo Trình) </summary>
+        /// <returns></returns>
+        public static SortedList ChiTietGiaoTrinh_iType_GLC()
+        {
+            SortedList output = new SortedList();
+            output.Add(tblMaterial_iType_C.Video, GetTextConstants.tblMaterial_iType_GTC(tblMaterial_iType_C.Video));
+            output.Add(tblMaterial_iType_C.Pdf, GetTextConstants.tblMaterial_iType_GTC(tblMaterial_iType_C.Pdf));
+            output.Add(tblMaterial_iType_C.Other, GetTextConstants.tblMaterial_iType_GTC(tblMaterial_iType_C.Other));
+            return output;
+        }
     }
 }

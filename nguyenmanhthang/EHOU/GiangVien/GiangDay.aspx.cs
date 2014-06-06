@@ -87,10 +87,10 @@ namespace EHOU.GiangVien
                                                                             UploadFileUC2.Visible = false; break;
                                 default: vLiveStream.ActiveViewIndex = 2; lblNotify.Text = Messages.Chua_Den_Thoi_Gian_Hoc; break;
                             }
-                            Thong_Tin_Lop_HocUC1.BinData(_tblSubjectEO);
+                            Thong_Tin_Lop_HocUC1.BinData(_tblSubjectEO, _tblPartEO);
+                            LoadInfo(_tblSubjectEO);
                     }
                 }
-                LoadInfo();
             }
             catch(Exception ex)
             {
@@ -98,17 +98,18 @@ namespace EHOU.GiangVien
             }
         }
 
-        private void LoadInfo(){
+        private void LoadInfo(tblSubjectEO _tblSubjectEO)
+        {
             try
             {
-                UploadFileUC1.sTendangnhapGV = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
+                UploadFileUC1.objtblSubjectEO = _tblSubjectEO;
                 UploadFileUC1.sTypeUpload = Messages.Ebook;
                 UploadFileUC1.lblTitle.Text = Messages.Upload_Hoc_Lieu;
 
-                UploadFileUC2.sTendangnhapGV = Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString();
+                UploadFileUC2.objtblSubjectEO = _tblSubjectEO;
                 UploadFileUC2.sTypeUpload = Messages.Video;
                 UploadFileUC2.lblTitle.Text = Messages.UpLoad_Video_Giang_Day;
-                Hoc_LieuUC1.BindData_HocLieu(Common.RequestInforByLoginID(Request.Cookies["LOGINID"].Value)["username"].ToString());
+                Hoc_LieuUC1.BindData_HocLieu(_tblSubjectEO.PK_sSubject);
             }
             catch (Exception ex)
             {
@@ -118,7 +119,7 @@ namespace EHOU.GiangVien
 
         protected void Refresh1_Click(object sender, EventArgs e)
         {
-            LoadInfo();
+         //   LoadInfo();
         }
 
         protected void Refresh2_Click(object sender, EventArgs e)

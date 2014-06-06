@@ -13,31 +13,31 @@ namespace EHOU.UserControl {
     public partial class Thong_Tin_Lop_HocUC {
         
         /// <summary>
-        /// lblsTenlop control.
+        /// lblsTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsTenlop;
+        protected global::System.Web.UI.WebControls.Label lblsTitle;
         
         /// <summary>
-        /// lblsTenMonhoc control.
+        /// lblsName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsTenMonhoc;
+        protected global::System.Web.UI.WebControls.Label lblsName;
         
         /// <summary>
-        /// lblsHoTenGV control.
+        /// lblFK_sTeacher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsHoTenGV;
+        protected global::System.Web.UI.WebControls.Label lblFK_sTeacher;
         
         /// <summary>
         /// lbliSiso control.
@@ -67,30 +67,30 @@ namespace EHOU.UserControl {
         protected global::System.Web.UI.WebControls.Label lbliSoTietDay;
         
         /// <summary>
-        /// lbltNgayBatDau control.
+        /// lbltDateTimeStart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltNgayBatDau;
+        protected global::System.Web.UI.WebControls.Label lbltDateTimeStart;
         
         /// <summary>
-        /// lbltNgayKetThuc control.
+        /// lbltDateTimeEnd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbltNgayKetThuc;
+        protected global::System.Web.UI.WebControls.Label lbltDateTimeEnd;
         
         /// <summary>
-        /// lbliTrangThai control.
+        /// lbliStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbliTrangThai;
+        protected global::System.Web.UI.WebControls.Label lbliStatus;
     }
 }

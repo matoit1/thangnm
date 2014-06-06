@@ -10,14 +10,14 @@
         <video id="video_flv_mp4" class="video-js vjs-default-skin" controls preload="auto" width="755" height="400" poster="../Images/Avatar/default.png"
         data-setup='{"controls" : true, "autoplay" : false, "preload" : "auto"}'>
         <source src='<%=sLinkVideo%>' type="video/x-flv">
-        Trình duyệt của bạn không hỗ trợ xem video này!</video>
+        Trình duyệt của bạn không hỗ trợ xem video này!</video><br />
         <i style="font-size: 10px; text-align: right">FLV_MP4_3G2</i>
     </asp:View>
     <asp:View ID="vOGG_WEBM_F4V_MKV" runat="server">
         <video id="video_ogg_webm_f4v_mkv" class="video-js vjs-default-skin" controls preload="auto" width="755" height="400" poster="../Images/Avatar/default.png"
             data-setup='{"controls" : true, "autoplay" : false, "preload" : "auto"}'>
              <source src='<%=sLinkVideo%>' type="video/ogg">
-              Trình duyệt của bạn không hỗ trợ xem video này!</video>
+              Trình duyệt của bạn không hỗ trợ xem video này!</video><br />
         <i style="font-size: 10px; text-align: right">OGG_WEBM_F4V_MKV</i>
     </asp:View>
     <asp:View ID="vAVI_3G2_MOV_MPG_WMV" runat="server">
@@ -38,7 +38,7 @@
                 showdisplay='0' showstatusbar='-1' videoborder3d='-1' width="755" height="400"
                 src='<%=sLinkVideo%>' autostart="false" designtimesp='5311' loop="true">
             </embed>
-        </object>
+        </object><br />
         <i style="font-size: 10px; text-align: right">AVI_3G2_MOV_MPG_WMV</i>
     </asp:View>
     <asp:View ID="vNoSupport" runat="server">

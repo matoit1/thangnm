@@ -309,9 +309,6 @@ namespace Shared_Libraries
         public const string ChatRoom_BlackList_Fail = "Chặn không thành công !";
         public const string ChatRoom_BlackList_Success = "Chặn thành công !";
         public const string ChatRoom_GiangVien = "Giảng Viên";
-        public const int ChatRoom_MaxRooms = 10;
-        public const int ChatRoom_SessionTimeout = 5;
-        public const int ChatRoom_MaxUsers = 50;
         public const string Chat_An_Danh = "Ẩn danh! ";
         #endregion
 
@@ -335,6 +332,7 @@ namespace Shared_Libraries
         public const string Xoa_That_Bai = "Xóa thất bại, vui lòng kiểm tra lại!";
         public const string Ngay_Day_Khong_Hop_Le = "Ngày dạy phải nằm trong khoảng: ";
         public const string Mat_Khau_Empty = "Mật khẩu không được bỏ trống !";
+        public const string Field_Empty = "Trường này không được bỏ trống !";
         #endregion
 
         #region "Information"
@@ -373,6 +371,7 @@ namespace Shared_Libraries
         #endregion
 
         #region "Upload"
+        public const string Dinh_Dang_File_Khong_Ho_Tro_Xem_Truoc = "Định dạng file này không hỗ trợ xem trước. Bạn có thể tải về!";
         public const string Video = "Video/";
         public const string Ebook = "Ebook/";
         public const string Example = "Example/";

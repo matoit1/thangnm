@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Online.aspx.cs" Inherits="EHOU.Online" %>
 
+<%@ Register src="Usercontrol/UploadFileUC.ascx" tagname="UploadFileUC" tagprefix="uc1" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,7 +10,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-      <h3>User List</h3>
+
+
+      <h3>
+          <uc1:UploadFileUC ID="UploadFileUC1" runat="server" />
+          User List</h3>
 
   Number of Users Online: <asp:Label id="UsersOnlineLabel" runat="Server" /><br />
 
