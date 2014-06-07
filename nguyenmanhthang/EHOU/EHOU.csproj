@@ -96,6 +96,7 @@
     <Content Include="GiangVien\ChonLopDay.aspx" />
     <Content Include="GiangVien\Default.aspx" />
     <Content Include="GiangVien\GiangDay.aspx" />
+    <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Avatar\default.png" />
@@ -250,6 +251,7 @@
     <Content Include="Other\VideoUC.ascx" />
     <Content Include="Preview.aspx" />
     <Content Include="QuanTri\tblAccount.aspx" />
+    <Content Include="QuanTri\tblMaterial.aspx" />
     <Content Include="QuanTri\tblMessage.aspx" />
     <Content Include="QuanTri\tblPart.aspx" />
     <Content Include="QuanTri\tblSubject.aspx" />
@@ -284,6 +286,8 @@
     <Content Include="Usercontrol\ChatUC.ascx" />
     <Content Include="Usercontrol\ChonBaiHocUC.ascx" />
     <Content Include="Usercontrol\ChonMonHocUC.ascx" />
+    <Content Include="Usercontrol\tblMaterial_DetailUC.ascx" />
+    <Content Include="Usercontrol\tblMaterial_ListUC.ascx" />
     <Content Include="Usercontrol\UploadFileUC.ascx" />
     <Content Include="Usercontrol\PdfUC.ascx" />
     <Content Include="Usercontrol\tblAccount_ListUC.ascx" />
@@ -362,6 +366,13 @@
     <Compile Include="GiangVien\GiangDay.aspx.designer.cs">
       <DependentUpon>GiangDay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GiangVien\MonHoc.aspx.cs">
+      <DependentUpon>MonHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiangVien\MonHoc.aspx.designer.cs">
+      <DependentUpon>MonHoc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GiangVien\ThongTinCaNhan.aspx.cs">
       <DependentUpon>ThongTinCaNhan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -399,6 +410,13 @@
     </Compile>
     <Compile Include="QuanTri\tblAccount.aspx.designer.cs">
       <DependentUpon>tblAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\tblMaterial.aspx.cs">
+      <DependentUpon>tblMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri\tblMaterial.aspx.designer.cs">
+      <DependentUpon>tblMaterial.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\tblMessage.aspx.cs">
       <DependentUpon>tblMessage.aspx</DependentUpon>
@@ -561,6 +579,20 @@
     </Compile>
     <Compile Include="Usercontrol\ChonMonHocUC.ascx.designer.cs">
       <DependentUpon>ChonMonHocUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblMaterial_DetailUC.ascx.cs">
+      <DependentUpon>tblMaterial_DetailUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblMaterial_DetailUC.ascx.designer.cs">
+      <DependentUpon>tblMaterial_DetailUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblMaterial_ListUC.ascx.cs">
+      <DependentUpon>tblMaterial_ListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblMaterial_ListUC.ascx.designer.cs">
+      <DependentUpon>tblMaterial_ListUC.ascx</DependentUpon>
     </Compile>
     <Compile Include="Usercontrol\UploadFileUC.ascx.cs">
       <DependentUpon>UploadFileUC.ascx</DependentUpon>

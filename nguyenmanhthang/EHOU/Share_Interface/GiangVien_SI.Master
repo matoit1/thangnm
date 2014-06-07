@@ -53,7 +53,6 @@
 					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
 					    <li><a href="http://mail.ehou.edu.vn/" target="_blank" title="Hòm thư">Email</a></li>
 					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
-					    <li><asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click"><i class="icon-signout"></i>Thoát</asp:LinkButton></li>
 				    </ul>
 			    </div>
 		    </div>
@@ -64,14 +63,14 @@
             </div> 
             <div class="menu">
                 <div class="menuleft">                                                                                                                                                                                                                                                                                                                                                                                                                             <ul id="css3menu1" class="topmenu">
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="https://account.dev.ehou.edu.vn/course/teacher">
                         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/home.png" AlternateText="Trang chủ" /> </asp:HyperLink>
                     </li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/GiangVien/ChonLopDay.aspx">Chọn lớp dạy</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/GiangVien/MonHoc.aspx">Môn Học</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/GiangVien/LichDay.aspx">Lịch Dậy Học</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx">Thông Tin Cá Nhân</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/GiangVien/ThongTinCaNhan.aspx">Trợ giúp</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="https://account.dev.ehou.edu.vn/course/teacher">Lịch Dậy Học</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="https://account.dev.ehou.edu.vn/user/setting">Thông Tin Cá Nhân</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://support.ehou.edu.vn">Trợ giúp</asp:HyperLink></li>
                 </ul>
                 </div>
             </div>

@@ -7,81 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EHOU.UserControl {
+namespace EHOU.QuanTri {
     
     
-    public partial class tblSubject_ListUC {
+    public partial class tblMaterial {
         
         /// <summary>
-        /// btnRefresh control.
+        /// mtvMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRefresh;
+        protected global::System.Web.UI.WebControls.MultiView mtvMain;
         
         /// <summary>
-        /// btnAddNew control.
+        /// vList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Button btnAddNew;
+        protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
-        /// pnlSearch control.
+        /// tblMaterial_ListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlSearch;
+        protected global::EHOU.Usercontrol.tblMaterial_ListUC tblMaterial_ListUC1;
         
         /// <summary>
-        /// txtTextSearch control.
+        /// vDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTextSearch;
+        protected global::System.Web.UI.WebControls.View vDetail;
         
         /// <summary>
-        /// ddlTypeSearch control.
+        /// lbtnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTypeSearch;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
         
         /// <summary>
-        /// btnSearch control.
+        /// tblMaterial_DetailUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
-        
-        /// <summary>
-        /// grvListBaiViet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvListBaiViet;
-        
-        /// <summary>
-        /// lblTongSoBanGhi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTongSoBanGhi;
+        protected global::EHOU.Usercontrol.tblMaterial_DetailUC tblMaterial_DetailUC1;
     }
 }

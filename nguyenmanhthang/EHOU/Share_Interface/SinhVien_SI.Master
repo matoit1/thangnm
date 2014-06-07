@@ -53,7 +53,6 @@
 					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
 					    <li><a href="http://mail.ehou.edu.vn/" target="_blank" title="Hòm thư">Email</a></li>
 					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
-					    <li><asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click"><i class="icon-signout"></i>Thoát</asp:LinkButton></li>
 				    </ul>
 			    </div>
 		    </div>
@@ -69,11 +68,11 @@
                             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/home.png" AlternateText="Trang chủ" /></asp:HyperLink>
                         </li>
                         <li class="topmenu"><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/SinhVien/ChonLopHoc.aspx">Chọn lớp học</asp:HyperLink></li>
-                        <li class="topmenu"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/SinhVien/LichHoc.aspx">Lịch Học - Lịch Thi</asp:HyperLink></li>
-                        <li class="topmenu"><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/SinhVien/DiemThi.aspx">Kết quả học tập</asp:HyperLink></li>
-                        <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/SinhVien/ThongTinCaNhan.aspx">Thông tin cá nhân</asp:HyperLink></li>
-                        <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/FAQ.aspx">Sinh viên cần biết</asp:HyperLink></li>
-                        <li class="topmenu"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/FAQ.aspx">Trợ giúp</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="http://account.dev.ehou.edu.vn/course/student">Lịch Học - Lịch Thi</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://account.dev.ehou.edu.vn/student/courseresult">Kết quả học tập</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="http://account.dev.ehou.edu.vn/user/setting">Thông tin cá nhân</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://elc.ehou.edu.vn/thong-tin-chung-vdhmhn">Sinh viên cần biết</asp:HyperLink></li>
+                        <li class="topmenu"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://support.ehou.edu.vn/">Trợ giúp</asp:HyperLink></li>
                     </ul>
                 </div>
             </div>

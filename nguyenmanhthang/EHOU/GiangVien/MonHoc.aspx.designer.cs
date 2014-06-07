@@ -31,13 +31,13 @@ namespace EHOU.GiangVien {
         protected global::System.Web.UI.WebControls.View vList;
         
         /// <summary>
-        /// MonHoc_ListUC1 control.
+        /// tblSubject_ListUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EHOU.UserControl.MonHoc_ListUC MonHoc_ListUC1;
+        protected global::EHOU.UserControl.tblSubject_ListUC tblSubject_ListUC1;
         
         /// <summary>
         /// vDetail control.
@@ -58,12 +58,12 @@ namespace EHOU.GiangVien {
         protected global::System.Web.UI.WebControls.LinkButton lbtnBack;
         
         /// <summary>
-        /// MonHoc_DetailUC1 control.
+        /// tblSubject_DetailUC1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EHOU.UserControl.MonHoc_DetailUC MonHoc_DetailUC1;
+        protected global::EHOU.UserControl.tblSubject_DetailUC tblSubject_DetailUC1;
     }
 }
