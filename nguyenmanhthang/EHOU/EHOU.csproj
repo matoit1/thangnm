@@ -281,6 +281,7 @@
     <Content Include="SinhVien\HocTap.aspx" />
     <Content Include="SinhVien\ThongTinCaNhan.aspx" />
     <Content Include="SinhVien\User.aspx" />
+    <Content Include="Upload\movie.mp4" />
     <Content Include="Usercontrol\ASM_ClientUC.ascx" />
     <Content Include="Usercontrol\ASM_ServerUC.ascx" />
     <Content Include="Usercontrol\ChatUC.ascx" />
@@ -729,17 +730,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="GiangVien\Accounts\" />
     <Folder Include="Images\Smileys\" />
     <Folder Include="Images\Temp\" />
     <Folder Include="QuanTri\Accounts\" />
     <Folder Include="SinhVien\Accounts\" />
-    <Folder Include="Upload\" />
     <Folder Include="Usercontrol\Search\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="KeepAlive.ashx" />
+    <None Include="App_Data\Upload\FITHOU.xlsx" />
+    <None Include="App_Data\Upload\Java_Core_1.pdf" />
+    <None Include="App_Data\Upload\Java_Core_2.pdf" />
+    <None Include="App_Data\Upload\Java_Core_5.pdf" />
+    <None Include="App_Data\Upload\MaNguonMo_Ubuntu.pdf" />
+    <None Include="App_Data\Upload\SQLServer_DeCuongMonHoc.pdf" />
     <None Include="Flash\LiveSample_Final_Perfect.rar" />
     <Content Include="DownloadFile.ashx" />
     <None Include="Other\ProjectManagement\General.xlsx" />
