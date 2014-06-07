@@ -26,6 +26,7 @@ namespace EHOU.Share_Interface
                             Session["LOGINID"] = objAcc["type"].ToString() + Request.Cookies["LOGINID"].Value;
                             if (Convert.ToInt16(Session["LOGINID"].ToString().Substring(0, 1)) != tblAccount_iType_C.Giang_Vien) //Kiểm tra quyền truy cập trang
                             {
+                                Response.Redirect("~/Access_Denied.aspx");
                                 //Response.Write("<script>alert('ERROR: Bạn không có quyền truy cập.')</script>");
                             }
                             else
@@ -35,6 +36,7 @@ namespace EHOU.Share_Interface
                         }
                         else
                         {
+                            Response.Redirect("https://account.dev.ehou.edu.vn");
                             //Response.Write("<script>alert('ERROR: Tài khoản chưa xác thực.')</script>");
                         }
                     }
@@ -42,6 +44,7 @@ namespace EHOU.Share_Interface
                     {
                         if (Convert.ToInt16(Session["LOGINID"].ToString().Substring(0, 1)) != tblAccount_iType_C.Giang_Vien) //Kiểm tra quyền truy cập trang
                         {
+                            Response.Redirect("~/Access_Denied.aspx");
                             //Response.Write("<script>alert('ERROR: Bạn không có quyền truy cập.')</script>");
                         }
                         else
@@ -53,12 +56,12 @@ namespace EHOU.Share_Interface
                 else
                 {
                     //Response.Write("<script>alert('ERROR: Chưa đăng nhập.')</script>");
-                    Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+                    Response.Redirect("https://account.dev.ehou.edu.vn");
                 }
             }
             catch (Exception ex)
             {
-                Response.Redirect("https://account.dev.ehou.edu.vn/auth");
+                Response.Redirect("https://account.dev.ehou.edu.vn");
             }
         }
 

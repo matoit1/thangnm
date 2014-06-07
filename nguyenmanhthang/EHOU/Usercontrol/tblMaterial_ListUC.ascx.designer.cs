@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EHOU.UserControl {
+namespace EHOU.Usercontrol {
     
     
-    public partial class tblSubject_ListUC {
+    public partial class tblMaterial_ListUC {
         
         /// <summary>
         /// btnRefresh control.
@@ -28,7 +28,7 @@ namespace EHOU.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        public global::System.Web.UI.WebControls.Button btnAddNew;
+        protected global::System.Web.UI.WebControls.Button btnAddNew;
         
         /// <summary>
         /// pnlSearch control.

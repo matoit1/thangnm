@@ -51,7 +51,6 @@
 					    <li><a href="https://www.facebook.com/VienDaiHocMoHaNoiTrungTamDaoTaoElearning" target="_blank" title="Trang Facebook">Facebook</a></li>
 					    <li><a href="http://mail.ehou.edu.vn/" title="Hòm thư" target="_blank">Email</a></li>
 					    <li><a href="http://www.youtube.com/user/ehouchannel" target="_blank" title="Kênh Youtube">You Tube</a></li>
-					    <li><asp:LinkButton ID="lbtnLogout" runat="server" OnClick="lbtnLogout_Click"><i class="icon-signout"></i>Thoát</asp:LinkButton></li>
 				    </ul>
 			    </div>
 		    </div>
@@ -62,14 +61,15 @@
             </div> 
             <div class="menu">
                 <div class="menuleft">                                                                                                                                                                                                                                                                                                                                                                                                                             <ul id="css3menu1" class="topmenu">
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Default.aspx">
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="http://account.dev.ehou.edu.vn/course/student">
                         <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/New/home.png" AlternateText="Trang chủ" /> </asp:HyperLink>
                     </li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/QuanTri/tblAccount.aspx">Tài khoản</asp:HyperLink></li>
-                    <li class="topmenu"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/QuanTri/tblMessage.aspx">Tin nhắn</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/QuanTri/tblPart.aspx">Buổi học</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink32" runat="server" NavigateUrl="~/QuanTri/tblSubject.aspx">Môn học</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink35" runat="server" NavigateUrl="~/QuanTri/tblSubject_Student.aspx">Sinh viên đăng ký môn học</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/QuanTri/tblMaterial.aspx">Học liệu</asp:HyperLink></li>
+                    <li class="topmenu"><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/QuanTri/tblMessage.aspx">Tin nhắn</asp:HyperLink></li>
                     <li class="topmenu"><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/QuanTri/Database.aspx">Cơ sở dữ liệu</asp:HyperLink></li>
                 </ul>
                 </div>
