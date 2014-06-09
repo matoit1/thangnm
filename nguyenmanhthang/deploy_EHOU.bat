@@ -4,6 +4,7 @@ Xcopy /s /i /y "EHOU\*.Master" "C:\inetpub\wwwroot\EHOU\"
 Xcopy /s /i /y "EHOU\*.ascx" "C:\inetpub\wwwroot\EHOU\"
 Xcopy /s /i /y "EHOU\*.aspx" "C:\inetpub\wwwroot\EHOU\"
 Xcopy /s /i /y "EHOU\*.asax" "C:\inetpub\wwwroot\EHOU\"
+Xcopy /s /i /y "EHOU\*.ashx" "C:\inetpub\wwwroot\EHOU\"
 Xcopy /s /i /y "EHOU\*.rpt" "C:\inetpub\wwwroot\EHOU\"
 Xcopy /s /i /y "EHOU\*.xsd" "C:\inetpub\wwwroot\EHOU\"
 
