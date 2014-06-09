@@ -9,7 +9,7 @@ namespace DataAccessObject
 {
     public static class ConnectionDAO
     {
-        private static string connStr = ConfigurationManager.ConnectionStrings["connectdb_x84"].ConnectionString;
+        private static string connStr = ConfigurationManager.ConnectionStrings["connectdb"].ConnectionString;
         public static SqlConnection getConnection()
         {
             try
