@@ -46,10 +46,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Other\DLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="OnlineActiveUsers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Other\DLL\OnlineActiveUsers.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,19 +66,16 @@
     <Content Include="Access_Denied.aspx" />
     <Content Include="App_Themes\calendar.css" />
     <Content Include="App_Themes\Chat.css" />
-    <Content Include="App_Themes\layout.css" />
     <Content Include="App_Themes\login.css" />
-    <Content Include="App_Themes\New\ChatRoom.css" />
-    <Content Include="App_Themes\New\DA.css" />
-    <Content Include="App_Themes\New\dockbar.css" />
-    <Content Include="App_Themes\New\footer_bg.png" />
-    <Content Include="App_Themes\New\footer_ship.png" />
-    <Content Include="App_Themes\New\menucss3.css" />
-    <Content Include="App_Themes\New\wave_back.png" />
-    <Content Include="App_Themes\New\wave_front.png" />
+    <Content Include="App_Themes\DA.css" />
+    <Content Include="App_Themes\dockbar.css" />
+    <Content Include="App_Themes\footer_bg.png" />
+    <Content Include="App_Themes\footer_ship.png" />
+    <Content Include="App_Themes\menucss3.css" />
+    <Content Include="App_Themes\wave_back.png" />
+    <Content Include="App_Themes\wave_front.png" />
     <Content Include="App_Themes\popup.css" />
     <Content Include="App_Themes\public.css" />
-    <Content Include="App_Themes\Toolbar.css" />
     <Content Include="App_Themes\video-js.css" />
     <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\CKEditor.NET.dll" />
@@ -90,8 +83,7 @@
     <Content Include="bin\EHOU.pdb" />
     <Content Include="bin\Newtonsoft.Json.dll" />
     <Content Include="Default.aspx" />
-    <Content Include="Flash\FlashVideoPlayer.swf" />
-    <Content Include="Flash\LiveSample1.swf" />
+    <Content Include="Flash\LiveSample.swf" />
     <Content Include="Flash\SampleMediaPlayback.swf" />
     <Content Include="GiangVien\ChonLopDay.aspx" />
     <Content Include="GiangVien\Default.aspx" />
@@ -99,6 +91,7 @@
     <Content Include="GiangVien\MonHoc.aspx" />
     <Content Include="GiangVien\ThongTinCaNhan.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Avatar\default.jpg" />
     <Content Include="Images\Avatar\default.png" />
     <Content Include="Images\change.jpg" />
     <Content Include="Images\Icon\add_reviewer.gif" />
@@ -229,7 +222,6 @@
     <Content Include="Images\New\unpin.png" />
     <Content Include="Images\New\up.png" />
     <Content Include="Media\Virus.WAV" />
-    <Content Include="Online.aspx" />
     <Content Include="Other\DLL\AjaxControlToolkit1.dll" />
     <Content Include="Other\DLL\AjaxControlToolkit.dll" />
     <Content Include="Other\DLL\CKEditor.NET.dll" />
@@ -245,10 +237,6 @@
     <Content Include="Other\DLL\SCS.Web.UI.WebControls.Toolbar.dll" />
     <Content Include="Other\ProjectManagement\note.txt" />
     <Content Include="Other\ProjectManagement\relationship.png" />
-    <Content Include="Other\SQL_Query\DoAn_LopHocAo.sql" />
-    <Content Include="Other\SQL_Query\Function.sql" />
-    <Content Include="Other\SQL_Query\Store_Procedure.sql" />
-    <Content Include="Other\VideoUC.ascx" />
     <Content Include="Preview.aspx" />
     <Content Include="QuanTri\tblAccount.aspx" />
     <Content Include="QuanTri\tblMaterial.aspx" />
@@ -259,21 +247,15 @@
     <Content Include="QuanTri\Database.aspx" />
     <Content Include="QuanTri\Default.aspx" />
     <Content Include="QuanTri\ThongTinCaNhan.aspx" />
-    <Content Include="Scripts\AutoCallBackServer.js" />
     <Content Include="Scripts\calendar1.js" />
     <Content Include="Scripts\calendar2.js" />
     <Content Include="Scripts\chat.js" />
-    <Content Include="Scripts\chatroom.js" />
-    <Content Include="Scripts\hideshow.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\jquery-1.5.2.min.js" />
-    <Content Include="Scripts\jquery.equalHeight.js" />
-    <Content Include="Scripts\jquery.tablesorter.min.js" />
-    <Content Include="Scripts\New\ChatRoom.js" />
-    <Content Include="Scripts\New\dockbar.js" />
-    <Content Include="Scripts\New\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\dockbar.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\popup.js" />
     <Content Include="Scripts\video.js" />
     <Content Include="SinhVien\ChonLopHoc.aspx" />
@@ -384,18 +366,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="KeepAlive.ashx.cs">
-      <DependentUpon>KeepAlive.ashx</DependentUpon>
-    </Compile>
     <Compile Include="DownloadFile.ashx.cs">
       <DependentUpon>DownloadFile.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="Online.aspx.cs">
-      <DependentUpon>Online.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Online.aspx.designer.cs">
-      <DependentUpon>Online.aspx</DependentUpon>
     </Compile>
     <Compile Include="Preview.aspx.cs">
       <DependentUpon>Preview.aspx</DependentUpon>
@@ -733,25 +705,20 @@
     <Folder Include="GiangVien\Accounts\" />
     <Folder Include="Images\Smileys\" />
     <Folder Include="Images\Temp\" />
+    <Folder Include="Other\SQL_Query\" />
     <Folder Include="QuanTri\Accounts\" />
     <Folder Include="SinhVien\Accounts\" />
     <Folder Include="Usercontrol\Search\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="KeepAlive.ashx" />
     <None Include="App_Data\Upload\FITHOU.xlsx" />
     <None Include="App_Data\Upload\Java_Core_1.pdf" />
     <None Include="App_Data\Upload\Java_Core_2.pdf" />
     <None Include="App_Data\Upload\Java_Core_5.pdf" />
     <None Include="App_Data\Upload\MaNguonMo_Ubuntu.pdf" />
     <None Include="App_Data\Upload\SQLServer_DeCuongMonHoc.pdf" />
-    <None Include="Flash\LiveSample_Final_Perfect.rar" />
     <Content Include="DownloadFile.ashx" />
     <None Include="Other\ProjectManagement\General.xlsx" />
-    <None Include="Other\SQL_Query\Backup_Database_SQL_2005_08_04_2014.rar" />
-    <None Include="Other\SQL_Query\DoAn_LopHocAo__03-04-2014__16-45-09.bak" />
-    <None Include="Other\SQL_Query\DoAn_LopHocAo__12-04-2014__10-43-43.bak" />
-    <None Include="Other\SQL_Query\SQL_Query.rar" />
     <None Include="Other\wmpChrome.crx" />
     <Content Include="Share_Interface\GiangVien_SI.Master" />
     <Content Include="Share_Interface\Home_SI.Master" />
