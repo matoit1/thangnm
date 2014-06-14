@@ -122,7 +122,7 @@ namespace EHOU.GiangVien
 
         protected void Refresh1_Click(object sender, EventArgs e)
         {
-         //   LoadInfo();
+            Response.Redirect(Request.Url.ToString());
         }
 
         protected void Refresh2_Click(object sender, EventArgs e)
