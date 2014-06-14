@@ -163,6 +163,7 @@ namespace EHOU.UserControl
                     case "ibntHideAcc":
                         iSumMessage = 0;
                         objtblPartEO.sBlackList = objtblPartEO.sBlackList + hfFK_sNguoiGui.Value + ",";
+                        objtblPartEO.iStatus = 0;
                         tblPartDAO.Part_Update_sLinkVideo_sBlackList(objtblPartEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = false;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = true;
@@ -170,6 +171,7 @@ namespace EHOU.UserControl
                     case "ibntShowAcc":
                         iSumMessage = 0;
                         objtblPartEO.sBlackList = objtblPartEO.sBlackList.Replace("," + hfFK_sNguoiGui.Value + ",", ",");
+                        objtblPartEO.iStatus = 0;
                         tblPartDAO.Part_Update_sLinkVideo_sBlackList(objtblPartEO);
                         ((ImageButton)e.Item.FindControl("ibntHideAcc")).Visible = true;
                         ((ImageButton)e.Item.FindControl("ibntShowAcc")).Visible = false;
