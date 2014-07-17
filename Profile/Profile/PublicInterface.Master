@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PublicInterface.master.cs" Inherits="Profile.PublicInterface" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="Shortcut Icon" href="http://thangnm.googlecode.com/svn/images/logo.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="App_Themes/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="App_Themes/bootstrap.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+     <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="App_Themes/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- start plugins -->
+    <script type="text/javascript" src="Scripts/jquery.min.js"></script>
+	<script type="text/javascript" >
+	    $(function () {
+	        var pull = $('#pull');
+	        menu = $('nav ul');
+	        menuHeight = menu.height();
+	        $(pull).on('click', function (e) {
+	            e.preventDefault();
+	            menu.slideToggle();
+	        });
+	        $(window).resize(function () {
+	            var w = $(window).width();
+	            if (w > 320 && menu.is(':hidden')) {
+	                menu.removeAttr('style');
+	            }
+	        });
+	    });
+	</script>
+<!----font-Awesome----->
+   	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+<!----font-Awesome----->
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+     <script src="Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('form ~ div').hide();
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header_bg" id="home"><!-- start header -->
+            <div class="container">
+	            <div class="row header text-center specials">
+		            <div class="h_logo">
+			            <a href="Default.aspx"><img src="https://thangnm.googlecode.com/svn/profile/images/logo.png" alt="" class="responsive"/></a>
+		            </div>
+		            <nav class="top-nav">
+			            <ul class="top-nav nav_list">
+				            <li><a href="portfolio.aspx">Dự án</a></li>
+				            <li class="page-scroll"><a href="#about">Thông tin</a></li>
+				            <li class="logo page-scroll"><a title="hexa" href="Default.aspx"><img src="https://thangnm.googlecode.com/svn/profile/images/logo.png" alt="" class="responsive"/></a></li>
+			                <li class="page-scroll"><a href="Category.aspx">Bài viết</a></li>
+				            <li class="page-scroll"><a href="#contact">Liên hệ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+			            </ul>
+			            <a href="#" id="pull"><img src="https://thangnm.googlecode.com/svn/profile/images/nav-icon.png" title="menu" /></a>
+		            </nav>
+		            <div class="clearfix"></div>
+	            </div>
+            </div>
+            </div>
+        <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+        <div class="footer_bg" id="contact"><!-- start footer -->
+        <div class="container">
+	        <div class="row footer">
+		        <div class="col-md-8 contact_left">
+			        <h3>Liên hệ qua email</h3>
+			        <%--<form method="post" action="contact-post.html">--%>
+				        <input type="text" value="Họ và Tên (*)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Họ và Tên (*)';}" />
+				        <input type="text" value="Email (*)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email (*)';}" />
+				        <input type="text" value="Tiêu đề" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tiêu đề';}" />
+				        <textarea onfocus="if(this.value == 'Nội dung ....') this.value='';" onblur="if(this.value == '') this.value='Nội dung ....;" rows="3" cols="50" >Nội dung ....</textarea>
+				        <span class="pull-right"><input type="submit" value="Gửi đi"/></span>
+			        <%--</form>--%>
+		        </div>
+		        <div class="col-md-4  contact_right">
+			        <p><span>Thông tin liên hệ</span></p>
+			        <ul class="list-unstyled address">
+				        <li><i class="fa fa-pagelines"></i><a href="http://fithou.edu.vn" target="_blank">Tốt nghiệp Đại học tại FITHOU</a></li>
+				        <li><i class="fa fa-foursquare"></i><a href="http://fis.com.vn" target="_blank">Đang làm tại FSE FIS-HN</a></li>
+				        <li><i class="fa fa-map-marker"></i><span>5 - 10/177 Định Công - Hoàng Mai - Hà Nội</span></li>
+				        <li><i class="fa fa-phone"></i><span>(+84) 167 527 9562</span></li>
+				        <li><i class="fa fa-globe"></i><a href="http://nguyenmanhthang.site44.com" target="_blank">nguyenmanhthang.site44.com</a></li>
+				        <li><i class="fa fa-envelope"></i><a href="mailto:thang.991992@gmail.com">thang.991992@gmail.com</a></li>
+				        <li><i class="fa fa-skype"></i><a href="skype:thang_991992?chat">thang_991992</a></li>
+			        </ul>
+		        </div>		
+	        </div>
+        </div>
+        </div>
+        <div class="footer1_bg"><!-- start footer1 -->
+	        <div class="container">
+		        <div class="row  footer">
+			        <div class="copy text-center">
+				        <p class="link"><span>&#169; All rights reserved | Design by <a href="https://plus.google.com/u/0/109664385150832451485" target="_blank"> ThangNM</a></span></p>
+				        <a href="#home" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"> </span></a>
+			        </div>
+		        </div>
+		        <script type="text/javascript">
+		            $(function () {
+		                $('a[href*=#]:not([href=#])').click(function () {
+		                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+		                        var target = $(this.hash);
+		                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		                        if (target.length) {
+		                            $('html,body').animate({
+		                                scrollTop: target.offset().top
+		                            }, 1000);
+		                            return false;
+		                        }
+		                    }
+		                });
+		            });
+		        </script>
+		        <!---- start-smoth-scrolling---->		
+	        </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
