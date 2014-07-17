@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3A5A6D6-9C8D-40A9-A327-3FEBF0371238}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Profile</RootNamespace>
+    <AssemblyName>Profile</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevNET.URLRewriter, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Other\DLL\DevNET.URLRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\bootstrap.css" />
+    <Content Include="App_Themes\bootstrap.min.css" />
+    <Content Include="App_Themes\jquery.fancybox.css" />
+    <Content Include="App_Themes\style.css" />
+    <Content Include="Blog.aspx" />
+    <Content Include="Calendar.aspx" />
+    <Content Include="Category.aspx" />
+    <Content Include="Member.aspx" />
+    <Content Include="Tag.aspx" />
+    <Content Include="Topic.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Fonts\css\font-awesome.css" />
+    <Content Include="Fonts\css\font-awesome.min.css" />
+    <Content Include="Fonts\fonts\fontawesome-webfont.svg" />
+    <Content Include="Other\DLL\AjaxControlToolkit.dll" />
+    <Content Include="Other\DLL\CKEditor.NET.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.ClientDoc.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.CommLayer.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.Controllers.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportAppServer.DataDefModel.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.ReportSource.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.Shared.dll" />
+    <Content Include="Other\DLL\CrystalDecisions.Web.dll" />
+    <Content Include="Other\DLL\DevNET.URLRewriter.dll" />
+    <Content Include="Other\DLL\log4net.dll" />
+    <Content Include="Portfolio.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.fancybox-1.2.1.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.wmuSlider.js" />
+    <Content Include="SinglePage.aspx" />
+    <Content Include="sitemap.xml" />
+    <Content Include="Usercontrol\tblAccountUI.aspx" />
+    <Content Include="Usercontrol\tblCategoryUI.aspx" />
+    <Content Include="Usercontrol\tblCommentUI.aspx" />
+    <Content Include="Usercontrol\tblErrorUI.aspx" />
+    <Content Include="Usercontrol\tblTagUI.aspx" />
+    <Content Include="Usercontrol\tblTopicUI.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member.aspx.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member.aspx.designer.cs">
+      <DependentUpon>Member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.aspx.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tag.aspx.designer.cs">
+      <DependentUpon>Tag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topic.aspx.cs">
+      <DependentUpon>Topic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topic.aspx.designer.cs">
+      <DependentUpon>Topic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessObject\SqlDataProvider.cs" />
+    <Compile Include="DataAccessObject\tblCategoryDAO.cs" />
+    <Compile Include="DataAccessObject\tblCommentDAO.cs" />
+    <Compile Include="DataAccessObject\tblErrorDAO.cs" />
+    <Compile Include="DataAccessObject\tblTagDAO.cs" />
+    <Compile Include="DataAccessObject\tblTopicDAO.cs" />
+    <Compile Include="DataAccessObject\tblAccountDAO.cs" />
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityObject\tblAccountEO.cs" />
+    <Compile Include="EntityObject\tblCategoryEO.cs" />
+    <Compile Include="EntityObject\tblCommentEO.cs" />
+    <Compile Include="EntityObject\tblErrorEO.cs" />
+    <Compile Include="EntityObject\tblTopicEO.cs" />
+    <Compile Include="EntityObject\tblTagEO.cs" />
+    <Compile Include="Portfolio.aspx.cs">
+      <DependentUpon>Portfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Portfolio.aspx.designer.cs">
+      <DependentUpon>Portfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicInterface.Master.cs">
+      <DependentUpon>PublicInterface.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicInterface.Master.designer.cs">
+      <DependentUpon>PublicInterface.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SharedLibraries\CaptchaProvider.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SharedLibraries\Commons.cs" />
+    <Compile Include="SharedLibraries\Constants.cs" />
+    <Compile Include="SharedLibraries\GetListConstants.cs" />
+    <Compile Include="SharedLibraries\GetTextConstants.cs" />
+    <Compile Include="SharedLibraries\RewriteUrl.cs" />
+    <Compile Include="SharedLibraries\Security.cs" />
+    <Compile Include="SinglePage.aspx.cs">
+      <DependentUpon>SinglePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinglePage.aspx.designer.cs">
+      <DependentUpon>SinglePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblAccountUI.aspx.cs">
+      <DependentUpon>tblAccountUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblAccountUI.aspx.designer.cs">
+      <DependentUpon>tblAccountUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblCategoryUI.aspx.cs">
+      <DependentUpon>tblCategoryUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblCategoryUI.aspx.designer.cs">
+      <DependentUpon>tblCategoryUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblCommentUI.aspx.cs">
+      <DependentUpon>tblCommentUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblCommentUI.aspx.designer.cs">
+      <DependentUpon>tblCommentUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblErrorUI.aspx.cs">
+      <DependentUpon>tblErrorUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblErrorUI.aspx.designer.cs">
+      <DependentUpon>tblErrorUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblTagUI.aspx.cs">
+      <DependentUpon>tblTagUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblTagUI.aspx.designer.cs">
+      <DependentUpon>tblTagUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\tblTopicUI.aspx.cs">
+      <DependentUpon>tblTopicUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\tblTopicUI.aspx.designer.cs">
+      <DependentUpon>tblTopicUI.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PublicInterface.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fonts\fonts\fontawesome-webfont.eot" />
+    <None Include="Fonts\fonts\fontawesome-webfont.ttf" />
+    <None Include="Fonts\fonts\fontawesome-webfont.woff" />
+    <None Include="Fonts\fonts\FontAwesome.otf" />
+    <None Include="Fonts\less\bordered-pulled.less" />
+    <None Include="Fonts\less\core.less" />
+    <None Include="Fonts\less\fixed-width.less" />
+    <None Include="Fonts\less\font-awesome.less" />
+    <None Include="Fonts\less\icons.less" />
+    <None Include="Fonts\less\larger.less" />
+    <None Include="Fonts\less\list.less" />
+    <None Include="Fonts\less\mixins.less" />
+    <None Include="Fonts\less\path.less" />
+    <None Include="Fonts\less\rotated-flipped.less" />
+    <None Include="Fonts\less\spinning.less" />
+    <None Include="Fonts\less\stacked.less" />
+    <None Include="Fonts\less\variables.less" />
+    <None Include="Fonts\OpenSans-Regular-webfont.ttf" />
+    <None Include="Fonts\scss\font-awesome.scss" />
+    <None Include="Fonts\scss\_bordered-pulled.scss" />
+    <None Include="Fonts\scss\_core.scss" />
+    <None Include="Fonts\scss\_fixed-width.scss" />
+    <None Include="Fonts\scss\_icons.scss" />
+    <None Include="Fonts\scss\_larger.scss" />
+    <None Include="Fonts\scss\_list.scss" />
+    <None Include="Fonts\scss\_mixins.scss" />
+    <None Include="Fonts\scss\_path.scss" />
+    <None Include="Fonts\scss\_rotated-flipped.scss" />
+    <None Include="Fonts\scss\_spinning.scss" />
+    <None Include="Fonts\scss\_stacked.scss" />
+    <None Include="Fonts\scss\_variables.scss" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50333</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

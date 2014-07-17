@@ -1,0 +1,6 @@
+D:\Project_ASP.NET\Profile\Profile\bin\Profile.dll
+D:\Project_ASP.NET\Profile\Profile\bin\Profile.pdb
+D:\Project_ASP.NET\Profile\Profile\bin\DevNET.URLRewriter.dll
+D:\Project_ASP.NET\Profile\Profile\obj\Debug\Profile.dll
+D:\Project_ASP.NET\Profile\Profile\obj\Debug\Profile.pdb
+D:\Project_ASP.NET\Profile\Profile\obj\Debug\Profile.csprojResolveAssemblyReference.cache
