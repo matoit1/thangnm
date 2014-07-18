@@ -98,7 +98,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblTag_SelectByPK_sTagID", GetConnection());
+                cmd = new SqlCommand("tblTag_SelectBy_PK_sTagID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@PK_sTagID", _tblTagEO.PK_sTagID));
                 return GetData(cmd);
@@ -113,7 +113,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblTag_SelectByFK_lTopicID", GetConnection());
+                cmd = new SqlCommand("tblTag_SelectBy_FK_lTopicID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@FK_lTopicID", _tblTagEO.FK_lTopicID));
                 return GetData(cmd);
@@ -130,7 +130,7 @@ namespace DataAccessObject
             {
                 foreach (DataRow dr in input.Rows)
                 {
-                    output.PK_sTagID = (dr["PK_sTagID"] == DBNull.Value) ? Convert.ToInt16(0) : Convert.ToInt16(dr["PK_sTagID"]);
+                    output.PK_sTagID = (dr["PK_sTagID"] == DBNull.Value) ? "" : Convert.ToString(dr["PK_sTagID"]);
                     output.FK_lTopicID = (dr["FK_lTopicID"] == DBNull.Value) ? Convert.ToInt64(0) : Convert.ToInt64(dr["FK_lTopicID"]);
                     output.sName = (dr["sName"] == DBNull.Value) ? "" : Convert.ToString(dr["sName"]);
                 }

@@ -107,7 +107,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblError_SelectByPK_lErrorID", GetConnection());
+                cmd = new SqlCommand("tblError_SelectBy_PK_lErrorID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@PK_lErrorID", _tblErrorEO.PK_lErrorID));
                 return GetData(cmd);

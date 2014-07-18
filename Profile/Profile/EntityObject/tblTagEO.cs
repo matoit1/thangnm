@@ -8,11 +8,11 @@ namespace EntityObject
     [Serializable()]
     public class tblTagEO
     {
-        private int _PK_sTagID;
+        private string _PK_sTagID;
         private Int64 _FK_lTopicID;
         private string _sName;
 
-        public int PK_sTagID
+        public string PK_sTagID
         {
             get { return this._PK_sTagID; }
             set { this._PK_sTagID = value; }

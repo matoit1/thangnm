@@ -22,6 +22,69 @@ namespace Profile {
         protected global::System.Web.UI.WebControls.Label lblsTitle;
         
         /// <summary>
+        /// lbltLastUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltLastUpdate;
+        
+        /// <summary>
+        /// hplPK_lTopicID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplPK_lTopicID;
+        
+        /// <summary>
+        /// hplFK_iAccountsID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplFK_iAccountsID;
+        
+        /// <summary>
+        /// lblFK_iAccountsID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFK_iAccountsID;
+        
+        /// <summary>
+        /// hplPK_lTopicID1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplPK_lTopicID1;
+        
+        /// <summary>
+        /// lbliVisit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbliVisit;
+        
+        /// <summary>
+        /// lbtniLike control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtniLike;
+        
+        /// <summary>
         /// lblsContent control.
         /// </summary>
         /// <remarks>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Text.RegularExpressions;
 
-namespace HaBa
+namespace SharedLibraries
 {
     public class RewriteUrl
     {

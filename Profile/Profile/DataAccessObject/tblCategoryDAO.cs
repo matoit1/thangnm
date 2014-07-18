@@ -100,7 +100,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblCategory_SelectByPK_iCategoryID", GetConnection());
+                cmd = new SqlCommand("tblCategory_SelectBy_PK_iCategoryID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@PK_iCategoryID", _tblCategoryEO.PK_iCategoryID));
                 return GetData(cmd);

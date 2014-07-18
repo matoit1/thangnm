@@ -121,7 +121,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblAccount_SelectByPK_iAccountsID", GetConnection());
+                cmd = new SqlCommand("tblAccount_SelectBy_PK_iAccountsID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@PK_iAccountsID", _tblAccountEO.PK_iAccountsID));
                 return GetData(cmd);
