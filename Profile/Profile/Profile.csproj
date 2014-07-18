@@ -59,6 +59,8 @@
     <Content Include="App_Themes\jquery.fancybox.css" />
     <Content Include="App_Themes\style.css" />
     <Content Include="App_Themes\topic.css" />
+    <Content Include="bin\Profile.dll" />
+    <Content Include="bin\Profile.pdb" />
     <Content Include="Blog.aspx" />
     <Content Include="Calendar.aspx" />
     <Content Include="Category.aspx" />
