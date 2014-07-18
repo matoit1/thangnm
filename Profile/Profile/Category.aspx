@@ -22,14 +22,14 @@
                     <div class="blog_main">
 					    <a href='<%#"../Topic.aspx?PK_lTopicID="+Eval("PK_lTopicID")%>'><img src='<%# Eval("sLinkImage")%>' alt="" class="blog_img img-responsive"/></a>
 					    <h4><a href='<%#"../Topic.aspx?PK_lTopicID="+Eval("PK_lTopicID")%>'><%# Eval("sTitle")%></a></h4>
-						    <div class="blog_list pull-left">
-							      <ul class="list-unstyled">
-								    <li><i class="fa fa-calendar-o"></i><span><%# Eval("tLastUpdate")%></span></li>
-								    <li><a href='<%#"../Topic.aspx?PK_lTopicID="+Eval("PK_lTopicID") +"#comment"%>'><i class="fa fa-comment"></i><span>Comments</span></a></li>
-						  		    <li><a href='<%#"../Member.aspx?PK_iAccountsID="+Eval("FK_iAccountsID")%>'><i class="fa fa-user"></i><span><%# Eval("FK_iAccountsID")%></span></a></li>
-						  		    <li><a href='<%#"../Topic.aspx?PK_lTopicID="+Eval("PK_lTopicID")%>'><i class="fa fa-eye"></i><span><%# Eval("iVisit")%> views</span></a></li>
-							      </ul>
-						    </div>
+						<div class="blog_list pull-left">
+						    <ul class="list-unstyled">
+						        <li><i class="fa fa-calendar-o"></i><span><%# Eval("tLastUpdate")%></span></li>
+						        <li><a href='<%#"../Topic.aspx?PK_lTopicID="+Eval("PK_lTopicID") +"#comment"%>'><i class="fa fa-comment"></i><span>Comments</span></a></li>
+						        <li><a href='<%#"../Member.aspx?PK_iAccountsID="+Eval("FK_iAccountsID")%>'><i class="fa fa-user"></i><span><%# Eval("FK_iAccountsID")%></span></a></li>
+						        <li><a href='<%#"../Topic.aspx?PK_lTopicID="+Eval("PK_lTopicID")%>'><i class="fa fa-eye"></i><span><%# Eval("iVisit")%> views</span></a></li>
+						    </ul>
+						</div>
 					    <div class="b_left pull-right">
                             <asp:LinkButton ID="lbtniLike" runat="server" CommandName="Like"><i class="fa fa-heart"></i><span><%# Eval("iLike")%></span></asp:LinkButton>
 					    </div>

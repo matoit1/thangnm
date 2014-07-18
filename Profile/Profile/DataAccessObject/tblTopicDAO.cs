@@ -130,7 +130,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblTopic_SelectByPK_lTopicID", GetConnection());
+                cmd = new SqlCommand("tblTopic_SelectBy_PK_lTopicID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@PK_lTopicID", _tblTopicEO.PK_lTopicID));
                 return GetData(cmd);
@@ -145,7 +145,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblTopic_SelectByFK_iCategoryID", GetConnection());
+                cmd = new SqlCommand("tblTopic_SelectBy_FK_iCategoryID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@FK_iCategoryID", _tblTopicEO.FK_iCategoryID));
                 return GetData(cmd);
@@ -160,7 +160,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblTopic_SelectByFK_iAccountsID", GetConnection());
+                cmd = new SqlCommand("tblTopic_SelectBy_FK_iAccountsID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@FK_iAccountsID", _tblTopicEO.FK_iAccountsID));
                 return GetData(cmd);

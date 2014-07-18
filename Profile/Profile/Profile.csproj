@@ -52,14 +52,19 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\NguyenManhThang_Data.mdf" />
+    <Content Include="App_Data\NguyenManhThang_Log.ldf" />
     <Content Include="App_Themes\bootstrap.css" />
     <Content Include="App_Themes\bootstrap.min.css" />
     <Content Include="App_Themes\jquery.fancybox.css" />
     <Content Include="App_Themes\style.css" />
+    <Content Include="App_Themes\topic.css" />
     <Content Include="Blog.aspx" />
     <Content Include="Calendar.aspx" />
     <Content Include="Category.aspx" />
     <Content Include="Member.aspx" />
+    <Content Include="Label.aspx" />
+    <Content Include="SlideShow.aspx" />
     <Content Include="Tag.aspx" />
     <Content Include="Topic.aspx" />
     <Content Include="Default.aspx" />
@@ -135,6 +140,29 @@
     <Compile Include="Member.aspx.designer.cs">
       <DependentUpon>Member.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Label.aspx.cs">
+      <DependentUpon>Label.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Label.aspx.designer.cs">
+      <DependentUpon>Label.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SharedLibraries\CaptchaProvider.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SharedLibraries\Commons.cs" />
+    <Compile Include="SharedLibraries\Constants.cs" />
+    <Compile Include="SharedLibraries\GetListConstants.cs" />
+    <Compile Include="SharedLibraries\GetTextConstants.cs" />
+    <Compile Include="SharedLibraries\RewriteUrl.cs" />
+    <Compile Include="SharedLibraries\Security.cs" />
+    <Compile Include="SlideShow.aspx.cs">
+      <DependentUpon>SlideShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SlideShow.aspx.designer.cs">
+      <DependentUpon>SlideShow.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tag.aspx.cs">
       <DependentUpon>Tag.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,15 +212,6 @@
     <Compile Include="PublicInterface.Master.designer.cs">
       <DependentUpon>PublicInterface.Master</DependentUpon>
     </Compile>
-    <Compile Include="SharedLibraries\CaptchaProvider.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SharedLibraries\Commons.cs" />
-    <Compile Include="SharedLibraries\Constants.cs" />
-    <Compile Include="SharedLibraries\GetListConstants.cs" />
-    <Compile Include="SharedLibraries\GetTextConstants.cs" />
-    <Compile Include="SharedLibraries\RewriteUrl.cs" />
-    <Compile Include="SharedLibraries\Security.cs" />
     <Compile Include="SinglePage.aspx.cs">
       <DependentUpon>SinglePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,9 +262,7 @@
       <DependentUpon>tblTopicUI.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="PublicInterface.Master" />
   </ItemGroup>

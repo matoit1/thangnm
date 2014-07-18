@@ -107,7 +107,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblComment_SelectByPK_lComment_ID", GetConnection());
+                cmd = new SqlCommand("tblComment_SelectBy_PK_lComment_ID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@PK_lComment_ID", _tblCommentEO.PK_lComment_ID));
                 return GetData(cmd);
@@ -122,7 +122,7 @@ namespace DataAccessObject
             DataTable dt = new DataTable();
             try
             {
-                cmd = new SqlCommand("tblComment_SelectByFK_lTopicID", GetConnection());
+                cmd = new SqlCommand("tblComment_SelectBy_FK_lTopicID", GetConnection());
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@FK_lTopicID", _tblCommentEO.FK_lTopicID));
                 return GetData(cmd);

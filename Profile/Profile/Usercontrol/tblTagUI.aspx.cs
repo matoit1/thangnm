@@ -136,7 +136,7 @@ namespace Profile
             tblTagEO _tblTagEO = new tblTagEO();
             try
             {
-                _tblTagEO.PK_sTagID = Convert.ToInt16(this.txtPK_sTagID.Text);
+                _tblTagEO.PK_sTagID = Convert.ToString(this.txtPK_sTagID.Text);
                 _tblTagEO.FK_lTopicID = Convert.ToInt64(this.ddlFK_lTopicID.SelectedValue);
                 _tblTagEO.sName = Convert.ToString(this.txtsName.Text);
                 return _tblTagEO;
@@ -154,7 +154,7 @@ namespace Profile
                 GridViewRow row = this.grvList.SelectedRow;
                 int index = Convert.ToInt16(e.CommandArgument) % grvList.PageSize;
                 objtblTagEO = new tblTagEO();
-                objtblTagEO.PK_sTagID = Convert.ToInt16(grvList.DataKeys[index].Values["PK_sTagID"]);
+                objtblTagEO.PK_sTagID = Convert.ToString(grvList.DataKeys[index].Values["PK_sTagID"]);
                 objtblTagEO = tblTagDAO.SelectItem(objtblTagEO);
                 BindDataDetail(objtblTagEO);
                 mtvMain.ActiveViewIndex = 1;
